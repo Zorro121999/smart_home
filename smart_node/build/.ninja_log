@@ -1,3 +1,7 @@
 # ninja log v6
-77	41932	8084235574534862	CMakeFiles/menuconfig	7020282dda15ea96
-77	41932	8084235574534862	C:/Espressif/smart_home/smart_node/build/CMakeFiles/menuconfig	7020282dda15ea96
+78	152752	8087008730907150	CMakeFiles/menuconfig	7020282dda15ea96
+78	152752	8087008730907150	C:/Espressif/smart_home/smart_node/build/CMakeFiles/menuconfig	7020282dda15ea96
+97	19035	8087012323057337	build.ninja	7c392ac1c2e45ed9
+63	20134	8087012323057337	build.ninja	7c392ac1c2e45ed9
+62	152151	8087012325055735	CMakeFiles/menuconfig	7020282dda15ea96
+62	152151	8087012325055735	C:/Espressif/smart_home/smart_node/build/CMakeFiles/menuconfig	7020282dda15ea96
