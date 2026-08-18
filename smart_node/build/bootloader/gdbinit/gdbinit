@@ -1,0 +1,2 @@
+source C:/Espressif/smart_home/smart_node/build/bootloader/gdbinit/symbols
+source C:/Espressif/smart_home/smart_node/build/bootloader/gdbinit/connect

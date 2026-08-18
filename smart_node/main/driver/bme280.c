@@ -1,5 +1,7 @@
 #include "bme280.h"
 #include "driver/spi_master.h"
+#include "esp_log.h"
+#include <string.h>
 
 static const char* TAG = "BME280";
 
@@ -15,24 +17,26 @@ void bme280_init(spi_device_handle_t spi) {
         .rx_buffer = id
     };
     ret = spi_device_polling_transmit(spi, &t); 
+    if(ret != ESP_OK) {
+        ESP_LOGE(TAG,
+             "Failed SPI communication");     
+        esp_restart();    
+    }
     if(*(uint8_t*)(t.rx_buffer) != DEV_ID) {
         ESP_LOGE(TAG, "device id invalid");
     }
-
+    memset(&t, 0, sizeof(t));
     //enable temperature and humidity reading and set to forced mode
     reg_t[0] = MOD_REG;
     reg_t[1] = 0x21;
-    spi_transaction_t t = {
-        .length = 16,
-        .tx_buffer = &reg_t
-    };
+    t.length = 16;
+    t.tx_buffer = &reg_t;
     ret = spi_device_polling_transmit(spi, &t); 
     reg_t[0] = ENABLE_HUM_REG;
     reg_t[1] = 0x01;
-    spi_transaction_t t = {
-        .length = 16,
-        .tx_buffer = &reg_t
-    };
+    memset(&t, 0, sizeof(t));
+    t.length = 16;
+    t.tx_buffer = &reg_t;
     ret = spi_device_polling_transmit(spi, &t); 
 }
 
