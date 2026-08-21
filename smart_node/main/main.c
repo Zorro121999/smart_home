@@ -95,42 +95,23 @@ static const char* TAG = "main";
 void zigbee_send_measurement_callback(void *ctx) {
     sensor_data_t *sensor_data = (sensor_data_t*)ctx;
     ezb_zcl_status_t state;
-    state = ezb_zcl_set_attr_value(ENDPOINT0, EZB_ZCL_CLUSTER_CLIENT, EZB_ZCL_CLUSTER_CLIENT,ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->temp), false);
-    state = ezb_zcl_set_attr_value(ENDPOINT0, EZB_ZCL_CLUSTER_CLIENT, EZB_ZCL_CLUSTER_CLIENT,ATTR_HUMIDITY_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->humidity), false);
-    state = ezb_zcl_set_attr_value(ENDPOINT0, EZB_ZCL_CLUSTER_CLIENT, EZB_ZCL_CLUSTER_CLIENT,ATTR_SOIL_MOISTURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->moisture), false);
-    state = ezb_zcl_set_attr_value(ENDPOINT0, EZB_ZCL_CLUSTER_CLIENT, EZB_ZCL_CLUSTER_CLIENT,ATTR_SOC_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->soc), false);
+    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->temp), false);
+    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_HUMIDITY_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->humidity), false);
+    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_SOIL_MOISTURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->moisture), false);
+    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_SOC_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->soc), false);
 }
 
 
 void esp_zb_task(void *arg) {
-    ezb_zcl_custom_cluster_config_t sensor_cluster_config = {
-        .cluster_id = SENSOR_CLUSTER_ID,
-        .init_func = NULL,
-        .deinit_func = NULL
-    };
-    ezb_af_ep_config_t sensor_endpoint_config = {
-        .ep_id = ENDPOINT0,
-        .app_profile_id = 0x0104U,
-        .app_device_id = 1,
-        .app_device_version = 1
-    };
 
     bool lock = esp_zigbee_lock_acquire(pdMS_TO_TICKS(1000));
-    ret = esp_zigbee_init(&zigbee_config);
     ret = esp_zigbee_start(true);
     if(ret != ESP_OK) {
         ESP_LOGE(TAG,
              "Failed starting zigbee stack");     
         esp_restart();    
     }
-    
-    ezb_af_device_desc_t sensor_device = ezb_af_create_device_desc();
-    ezb_af_ep_desc_t sensor_endpoint = ezb_af_create_endpoint_desc(&sensor_endpoint_config);
-    ezb_zcl_cluster_desc_t sensor_cluster = ezb_zcl_custom_create_cluster_desc(&sensor_cluster_config, EZB_ZCL_CLUSTER_CLIENT);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &temperature);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_HUMIDITY_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &humidity);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soil_moisture);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soc);
+     
     esp_zigbee_lock_release();
     esp_zigbee_launch_mainloop();
 }
@@ -190,7 +171,30 @@ void app_main(void)
         timer_callback
     );
 
+    ezb_zcl_custom_cluster_config_t sensor_cluster_config = {
+        .cluster_id = SENSOR_CLUSTER_ID,
+        .init_func = NULL,
+        .deinit_func = NULL
+    };
+    ezb_af_ep_config_t sensor_endpoint_config = {
+        .ep_id = ENDPOINT0,
+        .app_profile_id = 0x0104U,
+        .app_device_id = LIVING_ROOM,
+        .app_device_version = 1
+    };
+
+    bool lock = esp_zigbee_lock_acquire(pdMS_TO_TICKS(1000));
+    ret = esp_zigbee_init(&zigbee_config);
+    ezb_af_device_desc_t sensor_device = ezb_af_create_device_desc();
+    ezb_af_ep_desc_t sensor_endpoint = ezb_af_create_endpoint_desc(&sensor_endpoint_config);
+    ezb_zcl_cluster_desc_t sensor_cluster = ezb_zcl_custom_create_cluster_desc(&sensor_cluster_config, EZB_ZCL_CLUSTER_SERVER);
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &temperature);
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_HUMIDITY_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &humidity);
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soil_moisture);
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soc);
+
     ezb_app_signal_add_handler(zigbee_signal_callback);
+    esp_zigbee_lock_release();
 
     xTaskCreate(esp_zb_task, "zigbee_task", 4096, NULL, 10, NULL);
     xTaskCreate(meas_task, "measurement_task", 4096, NULL, 5, &sensor_task_handle);
