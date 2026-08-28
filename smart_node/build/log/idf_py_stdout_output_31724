@@ -1,0 +1,89 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40018420
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 18 2026 12:00:34[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=105b8h ( 67000) map[0m
+[0;32mI (99) esp_image: segment 1: paddr=000205e0 vaddr=40800000 size=07a38h ( 31288) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=61e3ch (400956) map[0m
+[0;32mI (208) esp_image: segment 3: paddr=00089e64 vaddr=40807a38 size=09610h ( 38416) load[0m
+[0;32mI (220) esp_image: segment 4: paddr=0009347c vaddr=40811050 size=02084h (  8324) load[0m
+[0;32mI (224) esp_image: segment 5: paddr=00095508 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (230) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (231) boot: Disabling RNG early entropy source...[0m
+[0;32mI (246) cpu_start: Unicore app[0m
+[0;32mI (255) cpu_start: Pro cpu start user code[0m
+[0;32mI (255) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (255) app_init: Application information:[0m
+[0;32mI (256) app_init: Project name:     hello_world[0m
+[0;32mI (259) app_init: App version:      6498100-dirty[0m
+[0;32mI (263) app_init: Compile time:     Aug 24 2026 18:15:15[0m
+[0;32mI (268) app_init: ELF file SHA256:  59abdb550...[0m
+[0;32mI (273) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (277) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (281) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (285) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (289) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (295) heap_init: At 408159E0 len 000379A0 (222 KiB): RAM[0m
+[0;32mI (300) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (305) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (314) spi_flash: flash io: dio[0m
+[0;33mW (317) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (330) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (336) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (354) main_task: Started on CPU0[0m
+[0;32mI (354) main_task: Calling app_main()[0m
+[1;31mE (354) main: hello[0m
+[1;31mE (354) BME280: device id invalid[0m
+[1;31mE (354) BME280: device ID: 128[0m
+[1;31mE (354) BME280: device ID: 128[0m
+[1;31mE (354) adc_oneshot: adc_oneshot_config_channel(159): invalid bitwidth[0m
+[1;31mE (364) adc_oneshot: adc_oneshot_config_channel(159): invalid bitwidth[0m
+[0;32mI (384) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
+[0;32mI (384) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+
+abort() was called at PC 0x4202ec85 on core 0
+Core  0 register dump:
+MEPC    : 0x408008ac  RA      : 0x4080950c  SP      : 0x408186b0  GP      : 0x40811854  
+TP      : 0x408187e0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x40818714  A0      : 0x408186dc  A1      : 0x40818712  
+A2      : 0x00000000  A3      : 0x40818709  A4      : 0x00000001  A5      : 0x40815000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000001  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+
+ELF file SHA256: 59abdb550
+
+Rebooting...
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40003318
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04

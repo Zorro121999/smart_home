@@ -7,5 +7,5 @@ void measure_moisture(adc_oneshot_unit_handle_t adc, adc_channel_t channel, floa
     float voltage;
     ret = adc_oneshot_read(adc, channel, &value_raw);
     assert(ret == ESP_OK);
-    *value_moisture = value_raw/10;
+    *value_moisture = (value_raw/(2^12))*100;
 }

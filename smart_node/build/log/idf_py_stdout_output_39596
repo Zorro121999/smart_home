@@ -1,0 +1,91 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_node/build/bootloader/bootloader.bin"
+Bootloader binary size 0x54c0 bytes. 0x2b40 bytes (34%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/driver/bme280.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/driver/bme280.c.obj 
+ccache C:\Espressif\tools\riscv32-esp-elf\esp-14.2.0_20241119\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.4.1-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IC:/Espressif/smart_home/smart_node/build/config -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/newlib/platform_include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/include/freertos -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/riscv/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/esp_additions/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/include/soc -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/include/soc/esp32h2 -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/dma/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/ldo/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/debug_probe/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/port/esp32h2/. -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/port/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/port/esp32h2/private_include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/tlsf -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/log/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/esp32h2 -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/esp32h2/register -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/hal/platform_port/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/hal/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/hal/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/include/esp32h2 -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2 -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_common/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/include/riscv -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/include/private -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/include/apps -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/include/apps/sntp -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/lwip/src/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/freertos/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/esp32xx/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/esp32xx/include/arch -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/esp32xx/include/sys -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/spi_flash/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc/interface -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc/deprecated/include -IC:/Espressif/smart_home/smart_node/managed_components/espressif__esp-zigbee-lib/include -IC:/Espressif/smart_home/smart_node/managed_components/espressif__esp-zigbee-lib/include/compat -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/driver/deprecated -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/driver/i2c/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/driver/touch_sensor/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/driver/twai/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_pm/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_ringbuf/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_gpio/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_pcnt/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_gptimer/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_spi/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_mcpwm/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_ana_cmpr/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_i2s/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdmmc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/sdmmc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdspi/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdio/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_dac/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_rmt/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_tsens/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdm/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_i2c/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_uart/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/vfs/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_ledc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_parlio/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_usb_serial_jtag/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/ieee802154/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_coex/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/port/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/library -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/esp_crt_bundle/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/3rdparty/everest/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/3rdparty/p256-m -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_netif/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_event/include -march=rv32imac_zicsr_zifencei  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=C:/Espressif/smart_home/smart_node=. -fmacro-prefix-map=C:/Espressif/frameworks/esp-idf-v5.4.1=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/driver/bme280.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\driver\bme280.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/driver/bme280.c.obj -c C:/Espressif/smart_home/smart_node/main/driver/bme280.c
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'bme280_measure_temp':
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:63:32: error: passing argument 2 of 'get_temperature_calib' from incompatible pointer type [-Wincompatible-pointer-types]
+   63 |     get_temperature_calib(spi, &calib);
+      |                                ^~~~~~
+      |                                |
+      |                                uint8_t (*)[6] {aka unsigned char (*)[6]}
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:10:69: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
+   10 | static void get_temperature_calib(spi_device_handle_t spi, uint8_t *calib_value);
+      |                                                            ~~~~~~~~~^~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:64:21: warning: passing argument 1 of 'transduce_temp' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   64 |     transduce_temp(t.tx_buffer, &calib, value);
+      |                    ~^~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:8:37: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const void *'
+    8 | static void transduce_temp(uint8_t *byte_value, uint8_t *calib_value, float *value);
+      |                            ~~~~~~~~~^~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:64:33: error: passing argument 2 of 'transduce_temp' from incompatible pointer type [-Wincompatible-pointer-types]
+   64 |     transduce_temp(t.tx_buffer, &calib, value);
+      |                                 ^~~~~~
+      |                                 |
+      |                                 uint8_t (*)[6] {aka unsigned char (*)[6]}
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:8:58: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[6]' {aka 'unsigned char (*)[6]'}
+    8 | static void transduce_temp(uint8_t *byte_value, uint8_t *calib_value, float *value);
+      |                                                 ~~~~~~~~~^~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:52:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   52 |     esp_err_t ret;
+      |               ^~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'bme280_measure_humidity':
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:80:29: error: passing argument 2 of 'get_humidity_calib' from incompatible pointer type [-Wincompatible-pointer-types]
+   80 |     get_humidity_calib(spi, &calib1, &calib2);
+      |                             ^~~~~~~
+      |                             |
+      |                             uint8_t (*)[1] {aka unsigned char (*)[1]}
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:11:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[1]' {aka 'unsigned char (*)[1]'}
+   11 | static void get_humidity_calib(spi_device_handle_t spi, uint8_t *calib_value1, uint8_t *calib_value2);
+      |                                                         ~~~~~~~~~^~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:80:38: error: passing argument 3 of 'get_humidity_calib' from incompatible pointer type [-Wincompatible-pointer-types]
+   80 |     get_humidity_calib(spi, &calib1, &calib2);
+      |                                      ^~~~~~~
+      |                                      |
+      |                                      uint8_t (*)[8] {aka unsigned char (*)[8]}
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:11:89: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+   11 | static void get_humidity_calib(spi_device_handle_t spi, uint8_t *calib_value1, uint8_t *calib_value2);
+      |                                                                                ~~~~~~~~~^~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:81:25: warning: passing argument 1 of 'transduce_humidity' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   81 |     transduce_humidity(t.tx_buffer, &calib1, &calib2, value);
+      |                        ~^~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:9:41: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const void *'
+    9 | static void transduce_humidity(uint8_t *byte_value, uint8_t *calib_value1, uint8_t *calib_value2, float *value);
+      |                                ~~~~~~~~~^~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:81:37: error: passing argument 2 of 'transduce_humidity' from incompatible pointer type [-Wincompatible-pointer-types]
+   81 |     transduce_humidity(t.tx_buffer, &calib1, &calib2, value);
+      |                                     ^~~~~~~
+      |                                     |
+      |                                     uint8_t (*)[1] {aka unsigned char (*)[1]}
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:9:62: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[1]' {aka 'unsigned char (*)[1]'}
+    9 | static void transduce_humidity(uint8_t *byte_value, uint8_t *calib_value1, uint8_t *calib_value2, float *value);
+      |                                                     ~~~~~~~~~^~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:81:46: error: passing argument 3 of 'transduce_humidity' from incompatible pointer type [-Wincompatible-pointer-types]
+   81 |     transduce_humidity(t.tx_buffer, &calib1, &calib2, value);
+      |                                              ^~~~~~~
+      |                                              |
+      |                                              uint8_t (*)[8] {aka unsigned char (*)[8]}
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:9:85: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t (*)[8]' {aka 'unsigned char (*)[8]'}
+    9 | static void transduce_humidity(uint8_t *byte_value, uint8_t *calib_value1, uint8_t *calib_value2, float *value);
+      |                                                                            ~~~~~~~~~^~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:68:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   68 |     esp_err_t ret;
+      |               ^~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'get_temperature_calib':
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:100:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  100 |     esp_err_t ret;
+      |               ^~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'get_humidity_calib':
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:122:13: error: conflicting types for 'reg_t'; have 'uint8_t[9]' {aka 'unsigned char[9]'}
+  122 |     uint8_t reg_t[9] = {HUM_COMP_REG2, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+      |             ^~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:113:13: note: previous definition of 'reg_t' with type 'uint8_t[2]' {aka 'unsigned char[2]'}
+  113 |     uint8_t reg_t[2] = {HUM_COMP_REG1, 0x00};
+      |             ^~~~~
+C:/Espressif/smart_home/smart_node/main/driver/bme280.c:112:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  112 |     esp_err_t ret;
+      |               ^~~
+ninja: build stopped: subcommand failed.

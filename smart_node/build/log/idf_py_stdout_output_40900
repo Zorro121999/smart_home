@@ -1,0 +1,266 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4000bd66
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=10960h ( 67936) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=00020988 vaddr=40800000 size=07690h ( 30352) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=63e48h (409160) map[0m
+[0;32mI (223) esp_image: segment 3: paddr=0008be70 vaddr=40807690 size=0a298h ( 41624) load[0m
+[0;32mI (236) esp_image: segment 4: paddr=00096110 vaddr=40811930 size=0217ch (  8572) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=00098294 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (246) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (247) boot: Disabling RNG early entropy source...[0m
+[0;32mI (262) cpu_start: Unicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (271) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (271) app_init: Application information:[0m
+[0;32mI (272) app_init: Project name:     hello_world[0m
+[0;32mI (275) app_init: App version:      6498100-dirty[0m
+[0;32mI (279) app_init: Compile time:     Aug 26 2026 16:37:49[0m
+[0;32mI (284) app_init: ELF file SHA256:  6ceaa150e...[0m
+[0;32mI (289) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (293) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (297) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (301) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (305) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (311) heap_init: At 408163C0 len 00036FC0 (219 KiB): RAM[0m
+[0;32mI (316) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (321) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (328) spi_flash: detected chip: generic[0m
+[0;32mI (330) spi_flash: flash io: dio[0m
+[0;33mW (333) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (346) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (352) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (370) main_task: Calling app_main()[0m
+[1;31mE (370) main: hello[0m
+[1;31mE (370) BME280: device ID: 96[0m
+[0;32mI (370) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (380) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (400) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
+[0;32mI (400) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (410) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:33:57 UTC[0m
+[1;31mE (420) main: hello_zb[0m
+[1;31mE (420) main: hello_zb[0m
+[0;32mI (420) main_task: Returned from app_main()[0m
+[1;31mE (10380) main: temp: 25.54[0m
+[1;31mE (20380) main: temp: 25.55[0m
+[1;31mE (30380) main: temp: 25.57[0m
+[1;31mE (40380) main: temp: 25.58[0m
+[1;31mE (50380) main: temp: 25.57[0m
+[1;31mE (60380) main: temp: 25.58[0m
+[1;31mE (70380) main: temp: 25.60[0m
+[1;31mE (80380) main: temp: 25.61[0m
+[1;31mE (90380) main: temp: 25.61[0m
+[1;31mE (100380) main: temp: 25.61[0m
+[1;31mE (110380) main: temp: 25.61[0m
+[1;31mE (120380) main: temp: 25.62[0m
+[1;31mE (130380) main: temp: 25.64[0m
+[1;31mE (140380) main: temp: 25.63[0m
+[1;31mE (150380) main: temp: 25.63[0m
+[1;31mE (160380) main: temp: 25.66[0m
+[1;31mE (170380) main: temp: 25.65[0m
+[1;31mE (180380) main: temp: 25.64[0m
+[1;31mE (190380) main: temp: 25.64[0m
+[1;31mE (200380) main: temp: 25.63[0m
+[1;31mE (210380) main: temp: 25.63[0m
+[1;31mE (220380) main: temp: 25.63[0m
+[1;31mE (230380) main: temp: 25.65[0m
+[1;31mE (240380) main: temp: 25.63[0m
+[1;31mE (250380) main: temp: 25.63[0m
+[1;31mE (260380) main: temp: 25.62[0m
+[1;31mE (270380) main: temp: 25.61[0m
+[1;31mE (280380) main: temp: 25.61[0m
+[1;31mE (290380) main: temp: 25.62[0m
+[1;31mE (300380) main: temp: 25.63[0m
+[1;31mE (310380) main: temp: 25.63[0m
+[1;31mE (320380) main: temp: 25.64[0m
+[1;31mE (330380) main: temp: 25.62[0m
+[1;31mE (340380) main: temp: 25.61[0m
+[1;31mE (350380) main: temp: 25.60[0m
+[1;31mE (360380) main: temp: 25.62[0m
+[1;31mE (370380) main: temp: 25.63[0m
+[1;31mE (380380) main: temp: 25.65[0m
+[1;31mE (390380) main: temp: 25.63[0m
+[1;31mE (400380) main: temp: 25.63[0m
+[1;31mE (410380) main: temp: 25.62[0m
+[1;31mE (420380) main: temp: 25.63[0m
+[1;31mE (430380) main: temp: 25.61[0m
+[1;31mE (440380) main: temp: 25.63[0m
+[1;31mE (450380) main: temp: 25.62[0m
+[1;31mE (460380) main: temp: 25.60[0m
+[1;31mE (470380) main: temp: 25.59[0m
+[1;31mE (480380) main: temp: 25.58[0m
+[1;31mE (490380) main: temp: 25.54[0m
+[1;31mE (500380) main: temp: 25.54[0m
+[1;31mE (510380) main: temp: 25.52[0m
+[1;31mE (520380) main: temp: 25.52[0m
+[1;31mE (530380) main: temp: 25.52[0m
+[1;31mE (540380) main: temp: 25.51[0m
+[1;31mE (550380) main: temp: 25.49[0m
+[1;31mE (560380) main: temp: 25.51[0m
+[1;31mE (570380) main: temp: 25.52[0m
+[1;31mE (580380) main: temp: 25.52[0m
+[1;31mE (590380) main: temp: 25.51[0m
+[1;31mE (600380) main: temp: 25.51[0m
+[1;31mE (610380) main: temp: 25.51[0m
+[1;31mE (620380) main: temp: 25.51[0m
+[1;31mE (630380) main: temp: 25.49[0m
+[1;31mE (640380) main: temp: 25.49[0m
+[1;31mE (650380) main: temp: 25.48[0m
+[1;31mE (660380) main: temp: 25.47[0m
+[1;31mE (670380) main: temp: 25.44[0m
+[1;31mE (680380) main: temp: 25.45[0m
+[1;31mE (690380) main: temp: 25.45[0m
+[1;31mE (700380) main: temp: 25.47[0m
+[1;31mE (710380) main: temp: 25.47[0m
+[1;31mE (720380) main: temp: 25.46[0m
+[1;31mE (730380) main: temp: 25.44[0m
+[1;31mE (740380) main: temp: 25.44[0m
+[1;31mE (750380) main: temp: 25.45[0m
+[1;31mE (760380) main: temp: 25.45[0m
+[1;31mE (770380) main: temp: 25.45[0m
+[1;31mE (780380) main: temp: 25.45[0m
+[1;31mE (790380) main: temp: 25.45[0m
+[1;31mE (800380) main: temp: 25.46[0m
+[1;31mE (810380) main: temp: 25.44[0m
+[1;31mE (820380) main: temp: 25.45[0m
+[1;31mE (830380) main: temp: 25.45[0m
+[1;31mE (840380) main: temp: 25.45[0m
+[1;31mE (850380) main: temp: 25.44[0m
+[1;31mE (860380) main: temp: 25.44[0m
+[1;31mE (870380) main: temp: 25.44[0m
+[1;31mE (880380) main: temp: 25.40[0m
+[1;31mE (890380) main: temp: 25.41[0m
+[1;31mE (900380) main: temp: 25.41[0m
+[1;31mE (910380) main: temp: 25.41[0m
+[1;31mE (920380) main: temp: 25.40[0m
+[1;31mE (930380) main: temp: 25.38[0m
+[1;31mE (940380) main: temp: 25.38[0m
+[1;31mE (950380) main: temp: 25.38[0m
+[1;31mE (960380) main: temp: 25.37[0m
+[1;31mE (970380) main: temp: 25.37[0m
+[1;31mE (980380) main: temp: 25.37[0m
+[1;31mE (990380) main: temp: 25.38[0m
+[1;31mE (1000380) main: temp: 25.38[0m
+[1;31mE (1010380) main: temp: 25.38[0m
+[1;31mE (1020380) main: temp: 25.37[0m
+[1;31mE (1030380) main: temp: 25.37[0m
+[1;31mE (1040380) main: temp: 25.36[0m
+[1;31mE (1050380) main: temp: 25.35[0m
+[1;31mE (1060380) main: temp: 25.34[0m
+[1;31mE (1070380) main: temp: 25.35[0m
+[1;31mE (1080380) main: temp: 25.36[0m
+[1;31mE (1090380) main: temp: 25.35[0m
+[1;31mE (1100380) main: temp: 25.34[0m
+[1;31mE (1110380) main: temp: 25.34[0m
+[1;31mE (1120380) main: temp: 25.35[0m
+[1;31mE (1130380) main: temp: 25.34[0m
+[1;31mE (1140380) main: temp: 25.34[0m
+[1;31mE (1150380) main: temp: 25.35[0m
+[1;31mE (1160380) main: temp: 25.34[0m
+[1;31mE (1170380) main: temp: 25.36[0m
+[1;31mE (1180380) main: temp: 25.35[0m
+[1;31mE (1190380) main: temp: 25.35[0m
+[1;31mE (1200380) main: temp: 25.35[0m
+[1;31mE (1210380) main: temp: 25.36[0m
+[1;31mE (1220380) main: temp: 25.34[0m
+[1;31mE (1230380) main: temp: 25.34[0m
+[1;31mE (1240380) main: temp: 25.35[0m
+[1;31mE (1250380) main: temp: 25.34[0m
+[1;31mE (1260380) main: temp: 25.35[0m
+[1;31mE (1270380) main: temp: 25.34[0m
+[1;31mE (1280380) main: temp: 25.33[0m
+[1;31mE (1290380) main: temp: 25.34[0m
+[1;31mE (1300380) main: temp: 25.33[0m
+[1;31mE (1310380) main: temp: 25.34[0m
+[1;31mE (1320380) main: temp: 25.34[0m
+[1;31mE (1330380) main: temp: 25.33[0m
+[1;31mE (1340380) main: temp: 25.32[0m
+[1;31mE (1350380) main: temp: 25.32[0m
+[1;31mE (1360380) main: temp: 25.33[0m
+[1;31mE (1370380) main: temp: 25.33[0m
+[1;31mE (1380380) main: temp: 25.32[0m
+[1;31mE (1390380) main: temp: 25.32[0m
+[1;31mE (1400380) main: temp: 25.33[0m
+[1;31mE (1410380) main: temp: 25.31[0m
+[1;31mE (1420380) main: temp: 25.31[0m
+[1;31mE (1430380) main: temp: 25.31[0m
+[1;31mE (1440380) main: temp: 25.30[0m
+[1;31mE (1450380) main: temp: 25.31[0m
+[1;31mE (1460380) main: temp: 25.29[0m
+[1;31mE (1470380) main: temp: 25.29[0m
+[1;31mE (1480380) main: temp: 25.30[0m
+[1;31mE (1490380) main: temp: 25.31[0m
+[1;31mE (1500380) main: temp: 25.29[0m
+[1;31mE (1510380) main: temp: 25.30[0m
+[1;31mE (1520380) main: temp: 25.29[0m
+[1;31mE (1530380) main: temp: 25.31[0m
+[1;31mE (1540380) main: temp: 25.29[0m
+[1;31mE (1550380) main: temp: 25.29[0m
+[1;31mE (1560380) main: temp: 25.28[0m
+[1;31mE (1570380) main: temp: 25.30[0m
+[1;31mE (1580380) main: temp: 25.30[0m
+[1;31mE (1590380) main: temp: 25.29[0m
+[1;31mE (1600380) main: temp: 25.29[0m
+[1;31mE (1610380) main: temp: 25.29[0m
+[1;31mE (1620380) main: temp: 25.30[0m
+[1;31mE (1630380) main: temp: 25.28[0m
+[1;31mE (1640380) main: temp: 25.28[0m
+[1;31mE (1650380) main: temp: 25.28[0m
+[1;31mE (1660380) main: temp: 25.28[0m
+[1;31mE (1670380) main: temp: 25.28[0m
+[1;31mE (1680380) main: temp: 25.28[0m
+[1;31mE (1690380) main: temp: 25.29[0m
+[1;31mE (1700380) main: temp: 25.29[0m
+[1;31mE (1710380) main: temp: 25.30[0m
+[1;31mE (1720380) main: temp: 25.30[0m
+[1;31mE (1730380) main: temp: 25.29[0m
+[1;31mE (1740380) main: temp: 25.29[0m
+[1;31mE (1750380) main: temp: 25.29[0m
+[1;31mE (1760380) main: temp: 25.29[0m
+[1;31mE (1770380) main: temp: 25.29[0m
+[1;31mE (1780380) main: temp: 25.29[0m
+[1;31mE (1790380) main: temp: 25.29[0m
+[1;31mE (1800380) main: temp: 25.30[0m
+[1;31mE (1810380) main: temp: 25.30[0m
+[1;31mE (1820380) main: temp: 25.29[0m
+[1;31mE (1830380) main: temp: 25.31[0m
+[1;31mE (1840380) main: temp: 25.32[0m
+[1;31mE (1850380) main: temp: 25.31[0m
+[1;31mE (1860380) main: temp: 25.30[0m
+[1;31mE (1870380) main: temp: 25.32[0m
+[1;31mE (45070380) main: temp: 23.04[0m
+[1;31mE (20405) main: temp: 24.11[0m
+[1;31mE (30405) main: temp: 24.18[0m
+[1;31mE (40405) main: temp: 24.20[0m
+[1;31mE (50405) main: temp: 24.23[0m
+[1;31mE (60405) main: temp: 24.24[0m
+[1;31mE (70405) main: temp: 24.25[0m
+[1;31mE (80405) main: temp: 24.25[0m
+[1;31mE (90405) main: temp: 24.27[0m
+[1;31mE (100405) main: temp: 24.28[0m
+[1;31mE (110405) main: temp: 24.30[0m
+[1;31mE (120405) main: temp: 24.55[0m

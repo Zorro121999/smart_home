@@ -1,0 +1,64 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4000bd6e: UartSecureDwnLdProc in ROM
+[0m
+[0;33m--- 0x4200e426: app_main at C:/Espressif/smart_home/smart_node/main/main.c:161 (discriminator 1)
+[0m
+[0;33m--- 0x40809501: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x4080950c: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- 0x4200e426: app_main at C:/Espressif/smart_home/smart_node/main/main.c:161 (discriminator 1)
+[0m
+[0;33m--- 0x40809501: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x4080950c: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- 0x4200e426: app_main at C:/Espressif/smart_home/smart_node/main/main.c:161 (discriminator 1)
+[0m
+[0;33m--- 0x40809501: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x4080950c: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- 0x4200e426: app_main at C:/Espressif/smart_home/smart_node/main/main.c:161 (discriminator 1)
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- 0x4200e426: app_main at C:/Espressif/smart_home/smart_node/main/main.c:161 (discriminator 1)
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Espressif\frameworks\esp-idf-v5.4.1\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

@@ -1,0 +1,242 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4000bcbe: hal_mac_get_txq_complete in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpk0bnf39u"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpk0bnf39u': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpgxpy9xj_"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpgxpy9xj_': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpivkftx9u"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpivkftx9u': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpapx_ik1l"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpapx_ik1l': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpuctpcxml"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpuctpcxml': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp3lqj1prm"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp3lqj1prm': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpmxmengvv"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpmxmengvv': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmph_wz46x1"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmph_wz46x1': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpue7b7cwl"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpue7b7cwl': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp_r3_0452"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp_r3_0452': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x40003318: phy_chan_filt_set_rom in ROM
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 5cc6d6867d3e3257a0b52bf17d471d79809bf1275a9b38677a1ef097e9932be4[0m
+[0;33m--- 0x4200e3fc: zdo_initiate_commissioning at ??:?
+[0m
+[0;33m--- 0x40809501: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc/esp32c6/system_internal.c:78
+--- 0x4080950c: xTaskIncrementTick at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/tasks.c:3298
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Espressif\frameworks\esp-idf-v5.4.1\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

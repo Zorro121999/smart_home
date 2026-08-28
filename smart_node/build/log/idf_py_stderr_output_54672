@@ -1,0 +1,35 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4000b6b2: uart_serial_div_modify in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x42034668: spi_bus_deinit_lock at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/spi_bus_lock.c:606
+--- 0x4203893a: spi_bus_free at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_spi/src/gpspi/spi_common.c:996
+[0m
+[0;33m--- 0x400117f6: spi_slave_rom_init_hw in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x42034668: spi_bus_deinit_lock at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/spi_bus_lock.c:606
+--- 0x4203893a: spi_bus_free at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_spi/src/gpspi/spi_common.c:996
+[0m
+[0;33m--- 0x400117f6: spi_slave_rom_init_hw in ROM
+--- 0x40000000: _start in ROM
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Espressif\frameworks\esp-idf-v5.4.1\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

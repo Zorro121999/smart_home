@@ -19,8 +19,9 @@
 #include "freertos/timers.h"
 #include "esp_zigbee.h"
 #include "driver/sensor_cluster.h"
+#include "esp_log.h"
 
-static const char *TAG = "example";
+static const char *TAG = "main";
 
 typedef struct {
     float moisture;
@@ -195,10 +196,24 @@ static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, v
                     printf("Attribute ID: 0x%04x\n", attr->attr_id);
                     printf("Type: 0x%02x\n", attr->attr_type);
 
+                    //iterate through all the connected nodes to determine the end device that the message belongs to
                     for(int i=0; i<nodes_index; i++) {
                         if (rsp->in.header->src_addr.u.extended_addr.u64 == joined_nodes_id[i].network_addr_ieee) {
                             if (attr->attr_id == ATTR_TEMPERATURE_ID) {
-                                joined_nodes_id[i].data.temp = *(uint16_t *)attr->attr_value;
+                                joined_nodes_id[i].data.temp = *(float *)attr->attr_value;
+                                ESP_LOGE(TAG, "receiver temp: %.2f", joined_nodes_id[i].data.temp);
+                            }
+                            else if (attr->attr_id == ATTR_HUMIDITY_ID) {
+                                joined_nodes_id[i].data.humidity = *(float *)attr->attr_value;
+                                ESP_LOGE(TAG, "receiver temp: %.2f", joined_nodes_id[i].data.humidity);
+                            }
+                            else if (attr->attr_id == ATTR_SOIL_MOISTURE_ID) {
+                                joined_nodes_id[i].data.moisture = *(float *)attr->attr_value;
+                                ESP_LOGE(TAG,"receiver temp: %.2f", joined_nodes_id[i].data.moisture);
+                            }
+                            else if (attr->attr_id == ATTR_SOC_ID) {
+                                joined_nodes_id[i].data.soc = *(float *)attr->attr_value;
+                                ESP_LOGE(TAG,"receiver temp: %.2f", joined_nodes_id[i].data.soc);
                             }
                         }
                     }
