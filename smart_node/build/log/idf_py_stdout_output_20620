@@ -1,0 +1,178 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40018420
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=109f0h ( 68080) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=00020a18 vaddr=40800000 size=07600h ( 30208) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=63fa0h (409504) map[0m
+[0;32mI (224) esp_image: segment 3: paddr=0008bfc8 vaddr=40807600 size=0a328h ( 41768) load[0m
+[0;32mI (236) esp_image: segment 4: paddr=000962f8 vaddr=40811930 size=0217ch (  8572) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=0009847c vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (246) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (247) boot: Disabling RNG early entropy source...[0m
+[0;32mI (262) cpu_start: Unicore app[0m
+[0;32mI (271) cpu_start: Pro cpu start user code[0m
+[0;32mI (271) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (271) app_init: Application information:[0m
+[0;32mI (272) app_init: Project name:     hello_world[0m
+[0;32mI (275) app_init: App version:      5836d83-dirty[0m
+[0;32mI (279) app_init: Compile time:     Aug 28 2026 13:14:08[0m
+[0;32mI (284) app_init: ELF file SHA256:  87bcef746...[0m
+[0;32mI (289) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (293) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (297) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (301) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (305) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (311) heap_init: At 408163D0 len 00036FB0 (219 KiB): RAM[0m
+[0;32mI (316) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (321) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (328) spi_flash: detected chip: generic[0m
+[0;32mI (330) spi_flash: flash io: dio[0m
+[0;33mW (333) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (346) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (352) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (370) main_task: Calling app_main()[0m
+[1;31mE (370) main: hello[0m
+[1;31mE (370) BME280: device ID: 96[0m
+[0;32mI (370) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (380) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (400) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
+[0;32mI (400) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (410) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:33:57 UTC[0m
+[1;31mE (420) main: hello_zb[0m
+[0;32mI (420) main_task: Returned from app_main()[0m
+[1;31mE (10380) BME280: raw value: 128[0m
+[1;31mE (10380) BME280: raw value: 221[0m
+[1;31mE (10380) BME280: calib value: 255[0m
+[1;31mE (10380) BME280: raw value: 32989[0m
+[1;31mE (10380) BME280: raw value: 126728[0m
+[1;31mE (10380) main: temp: 24.75[0m
+[1;31mE (10380) main: hum: 96.92[0m
+[1;31mE (20380) BME280: raw value: 128[0m
+[1;31mE (20380) BME280: raw value: 168[0m
+[1;31mE (20380) BME280: calib value: 255[0m
+[1;31mE (20380) BME280: raw value: 32936[0m
+[1;31mE (20380) BME280: raw value: 126937[0m
+[1;31mE (20380) main: temp: 24.79[0m
+[1;31mE (20380) main: hum: 100.00[0m
+[1;31mE (30380) BME280: raw value: 128[0m
+[1;31mE (30380) BME280: raw value: 142[0m
+[1;31mE (30380) BME280: calib value: 255[0m
+[1;31mE (30380) BME280: raw value: 32910[0m
+[1;31mE (30380) BME280: raw value: 127172[0m
+[1;31mE (30380) main: temp: 24.84[0m
+[1;31mE (30380) main: hum: 100.00[0m
+[1;31mE (40380) BME280: raw value: 128[0m
+[1;31mE (40380) BME280: raw value: 166[0m
+[1;31mE (40380) BME280: calib value: 255[0m
+[1;31mE (40380) BME280: raw value: 32934[0m
+[1;31mE (40380) BME280: raw value: 127433[0m
+[1;31mE (40380) main: temp: 24.89[0m
+[1;31mE (40380) main: hum: 100.00[0m
+[1;31mE (50380) BME280: raw value: 128[0m
+[1;31mE (50380) BME280: raw value: 85[0m
+[1;31mE (50380) BME280: calib value: 255[0m
+[1;31mE (50380) BME280: raw value: 32853[0m
+[1;31mE (50380) BME280: raw value: 127616[0m
+[1;31mE (50380) main: temp: 24.93[0m
+[1;31mE (50380) main: hum: 100.00[0m
+[1;31mE (60380) BME280: raw value: 128[0m
+[1;31mE (60380) BME280: raw value: 80[0m
+[1;31mE (60380) BME280: calib value: 255[0m
+[1;31mE (60380) BME280: raw value: 32848[0m
+[1;31mE (60380) BME280: raw value: 127407[0m
+[1;31mE (60380) main: temp: 24.88[0m
+[1;31mE (60380) main: hum: 0.00[0m
+[1;31mE (70380) BME280: raw value: 128[0m
+[1;31mE (70380) BME280: raw value: 116[0m
+[1;31mE (70380) BME280: calib value: 255[0m
+[1;31mE (70380) BME280: raw value: 32884[0m
+[1;31mE (70380) BME280: raw value: 127198[0m
+[1;31mE (70380) main: temp: 24.84[0m
+[1;31mE (70380) main: hum: 100.00[0m
+[1;31mE (80380) BME280: raw value: 128[0m
+[1;31mE (80380) BME280: raw value: 137[0m
+[1;31mE (80380) BME280: calib value: 255[0m
+[1;31mE (80380) BME280: raw value: 32905[0m
+[1;31mE (80380) BME280: raw value: 127067[0m
+[1;31mE (80380) main: temp: 24.82[0m
+[1;31mE (80380) main: hum: 0.00[0m
+[1;31mE (90380) BME280: raw value: 128[0m
+[1;31mE (90380) BME280: raw value: 147[0m
+[1;31mE (90380) BME280: calib value: 255[0m
+[1;31mE (90380) BME280: raw value: 32915[0m
+[1;31mE (90380) BME280: raw value: 127041[0m
+[1;31mE (90380) main: temp: 24.81[0m
+[1;31mE (90380) main: hum: 0.00[0m
+[1;31mE (100380) BME280: raw value: 128[0m
+[1;31mE (100380) BME280: raw value: 109[0m
+[1;31mE (100380) BME280: calib value: 255[0m
+[1;31mE (100380) BME280: raw value: 32877[0m
+[1;31mE (100380) BME280: raw value: 126937[0m
+[1;31mE (100380) main: temp: 24.79[0m
+[1;31mE (100380) main: hum: 100.00[0m
+[1;31mE (110380) BME280: raw value: 128[0m
+[1;31mE (110380) BME280: raw value: 138[0m
+[1;31mE (110380) BME280: calib value: 255[0m
+[1;31mE (110380) BME280: raw value: 32906[0m
+[1;31mE (110380) BME280: raw value: 126858[0m
+[1;31mE (110380) main: temp: 24.78[0m
+[1;31mE (110380) main: hum: 100.00[0m
+[1;31mE (120380) BME280: raw value: 128[0m
+[1;31mE (120380) BME280: raw value: 133[0m
+[1;31mE (120380) BME280: calib value: 255[0m
+[1;31mE (120380) BME280: raw value: 32901[0m
+[1;31mE (120380) BME280: raw value: 127015[0m
+[1;31mE (120380) main: temp: 24.81[0m
+[1;31mE (120380) main: hum: 0.00[0m
+[1;31mE (130380) BME280: raw value: 128[0m
+[1;31mE (130380) BME280: raw value: 141[0m
+[1;31mE (130380) BME280: calib value: 255[0m
+[1;31mE (130380) BME280: raw value: 32909[0m
+[1;31mE (130380) BME280: raw value: 127119[0m
+[1;31mE (130380) main: temp: 24.83[0m
+[1;31mE (130380) main: hum: 100.00[0m
+[1;31mE (140380) BME280: raw value: 128[0m
+[1;31mE (140380) BME280: raw value: 159[0m
+[1;31mE (140380) BME280: calib value: 255[0m
+[1;31mE (140380) BME280: raw value: 32927[0m
+[1;31mE (140380) BME280: raw value: 127380[0m
+[1;31mE (140380) main: temp: 24.88[0m
+[1;31mE (140380) main: hum: 100.00[0m
+[1;31mE (150380) BME280: raw value: 128[0m
+[1;31mE (150380) BME280: raw value: 95[0m
+[1;31mE (150380) BME280: calib value: 255[0m
+[1;31mE (150380) BME280: raw value: 32863[0m
+[1;31mE (150380) BME280: raw value: 127407[0m
+[1;31mE (150380) main: temp: 24.88[0m
+[1;31mE (150380) main: hum: 0.00[0m
+[1;31mE (160380) BME280: raw value: 128[0m
+[1;31mE (160380) BME280: raw value: 73[0m
+[1;31mE (160380) BME280: calib value: 255[0m
+[1;31mE (160380) BME280: raw value: 32841[0m
+[1;31mE (160380) BME280: raw value: 127537[0m
+[1;31mE (160380) main: temp: 24.91[0m
+[1;31mE (160380) main: hum: 0.00[0m

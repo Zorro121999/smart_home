@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "hello_world",
-    "project_version":    "6498100-dirty",
+    "project_version":    "5836d83-dirty",
     "project_path":       "C:/Espressif/smart_home/smart_node",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.4.1",
     "build_dir":          "C:/Espressif/smart_home/smart_node/build",

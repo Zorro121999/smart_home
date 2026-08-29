@@ -1,0 +1,3031 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4000b6c4
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=10b08h ( 68360) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=00020b30 vaddr=40800000 size=074e8h ( 29928) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=64230h (410160) map[0m
+[0;32mI (224) esp_image: segment 3: paddr=0008c258 vaddr=408074e8 size=0a440h ( 42048) load[0m
+[0;32mI (237) esp_image: segment 4: paddr=000966a0 vaddr=40811930 size=0217ch (  8572) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=00098824 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (247) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (247) boot: Disabling RNG early entropy source...[0m
+[0;32mI (262) cpu_start: Unicore app[0m
+[0;32mI (271) cpu_start: Pro cpu start user code[0m
+[0;32mI (271) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (272) app_init: Application information:[0m
+[0;32mI (272) app_init: Project name:     hello_world[0m
+[0;32mI (275) app_init: App version:      5836d83-dirty[0m
+[0;32mI (280) app_init: Compile time:     Aug 28 2026 13:14:08[0m
+[0;32mI (285) app_init: ELF file SHA256:  0e7f5cf07...[0m
+[0;32mI (289) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (293) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (297) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (301) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (305) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (311) heap_init: At 408163D0 len 00036FB0 (219 KiB): RAM[0m
+[0;32mI (316) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (322) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (328) spi_flash: detected chip: generic[0m
+[0;32mI (331) spi_flash: flash io: dio[0m
+[0;33mW (333) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (346) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (352) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (370) main_task: Calling app_main()[0m
+[1;31mE (370) main: hello[0m
+[1;31mE (370) BME280: device ID: 96[0m
+[1;31mE (370) BME280: calib value: 75[0m
+[0;32mI (370) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (380) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (410) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
+[0;32mI (410) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (420) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:33:57 UTC[0m
+[1;31mE (420) main: hello_zb[0m
+[0;32mI (420) main_task: Returned from app_main()[0m
+[1;31mE (10390) BME280: raw value: 126[0m
+[1;31mE (10390) BME280: raw value: 175[0m
+[1;31mE (10390) BME280: raw value: 32431[0m
+[1;31mE (10390) BME280: raw value: 129627[0m
+[1;31mE (10390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (10390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (10390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (10400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (10400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (10400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (10410) main: temp: 25.32[0m
+[1;31mE (10410) main: hum: 69.98[0m
+[1;31mE (20390) BME280: raw value: 126[0m
+[1;31mE (20390) BME280: raw value: 170[0m
+[1;31mE (20390) BME280: raw value: 32426[0m
+[1;31mE (20390) BME280: raw value: 129732[0m
+[1;31mE (20390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (20390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (20390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (20400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (20400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (20400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (20410) main: temp: 25.34[0m
+[1;31mE (20410) main: hum: 69.95[0m
+[1;31mE (30390) BME280: raw value: 126[0m
+[1;31mE (30390) BME280: raw value: 153[0m
+[1;31mE (30390) BME280: raw value: 32409[0m
+[1;31mE (30390) BME280: raw value: 129810[0m
+[1;31mE (30390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (30390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (30390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (30400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (30400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (30400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (30410) main: temp: 25.35[0m
+[1;31mE (30410) main: hum: 69.85[0m
+[1;31mE (40390) BME280: raw value: 127[0m
+[1;31mE (40390) BME280: raw value: 37[0m
+[1;31mE (40390) BME280: raw value: 32549[0m
+[1;31mE (40390) BME280: raw value: 129810[0m
+[1;31mE (40390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (40390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (40390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (40400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (40400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (40400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (40410) main: temp: 25.35[0m
+[1;31mE (40410) main: hum: 70.64[0m
+[1;31mE (50390) BME280: raw value: 126[0m
+[1;31mE (50390) BME280: raw value: 186[0m
+[1;31mE (50390) BME280: raw value: 32442[0m
+[1;31mE (50390) BME280: raw value: 129862[0m
+[1;31mE (50390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (50390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (50390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (50400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (50400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (50400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (50410) main: temp: 25.36[0m
+[1;31mE (50410) main: hum: 70.04[0m
+[1;31mE (60390) BME280: raw value: 126[0m
+[1;31mE (60390) BME280: raw value: 150[0m
+[1;31mE (60390) BME280: raw value: 32406[0m
+[1;31mE (60390) BME280: raw value: 129784[0m
+[1;31mE (60390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (60390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (60390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (60400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (60400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (60400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (60410) main: temp: 25.35[0m
+[1;31mE (60410) main: hum: 69.84[0m
+[1;31mE (70390) BME280: raw value: 126[0m
+[1;31mE (70390) BME280: raw value: 171[0m
+[1;31mE (70390) BME280: raw value: 32427[0m
+[1;31mE (70390) BME280: raw value: 129654[0m
+[1;31mE (70390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (70390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (70390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (70400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (70400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (70400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (70410) main: temp: 25.32[0m
+[1;31mE (70410) main: hum: 69.95[0m
+[1;31mE (80390) BME280: raw value: 126[0m
+[1;31mE (80390) BME280: raw value: 176[0m
+[1;31mE (80390) BME280: raw value: 32432[0m
+[1;31mE (80390) BME280: raw value: 129497[0m
+[1;31mE (80390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (80390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (80390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (80400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (80400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (80400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (80410) main: temp: 25.29[0m
+[1;31mE (80410) main: hum: 69.98[0m
+[1;31mE (90390) BME280: raw value: 126[0m
+[1;31mE (90390) BME280: raw value: 184[0m
+[1;31mE (90390) BME280: raw value: 32440[0m
+[1;31mE (90390) BME280: raw value: 129340[0m
+[1;31mE (90390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (90390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (90390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (90400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (90400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (90400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (90410) main: temp: 25.26[0m
+[1;31mE (90410) main: hum: 70.02[0m
+[1;31mE (100390) BME280: raw value: 126[0m
+[1;31mE (100390) BME280: raw value: 180[0m
+[1;31mE (100390) BME280: raw value: 32436[0m
+[1;31mE (100390) BME280: raw value: 129236[0m
+[1;31mE (100390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (100390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (100390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (100400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (100400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (100410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (100410) main: temp: 25.24[0m
+[1;31mE (100410) main: hum: 70.00[0m
+[1;31mE (110390) BME280: raw value: 126[0m
+[1;31mE (110390) BME280: raw value: 187[0m
+[1;31mE (110390) BME280: raw value: 32443[0m
+[1;31mE (110390) BME280: raw value: 129183[0m
+[1;31mE (110390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (110390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (110390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (110400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (110400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (110410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (110410) main: temp: 25.23[0m
+[1;31mE (110410) main: hum: 70.04[0m
+[1;31mE (120390) BME280: raw value: 126[0m
+[1;31mE (120390) BME280: raw value: 209[0m
+[1;31mE (120390) BME280: raw value: 32465[0m
+[1;31mE (120390) BME280: raw value: 129079[0m
+[1;31mE (120390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (120390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (120390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (120400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (120400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (120410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (120410) main: temp: 25.21[0m
+[1;31mE (120410) main: hum: 70.16[0m
+[1;31mE (130390) BME280: raw value: 126[0m
+[1;31mE (130390) BME280: raw value: 216[0m
+[1;31mE (130390) BME280: raw value: 32472[0m
+[1;31mE (130390) BME280: raw value: 129079[0m
+[1;31mE (130390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (130390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (130390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (130400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (130400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (130410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (130410) main: temp: 25.21[0m
+[1;31mE (130410) main: hum: 70.20[0m
+[1;31mE (140390) BME280: raw value: 126[0m
+[1;31mE (140390) BME280: raw value: 223[0m
+[1;31mE (140390) BME280: raw value: 32479[0m
+[1;31mE (140390) BME280: raw value: 128922[0m
+[1;31mE (140390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (140390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (140390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (140400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (140400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (140410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (140410) main: temp: 25.18[0m
+[1;31mE (140410) main: hum: 70.23[0m
+[1;31mE (150390) BME280: raw value: 126[0m
+[1;31mE (150390) BME280: raw value: 236[0m
+[1;31mE (150390) BME280: raw value: 32492[0m
+[1;31mE (150390) BME280: raw value: 128896[0m
+[1;31mE (150390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (150390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (150390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (150400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (150400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (150410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (150410) main: temp: 25.18[0m
+[1;31mE (150410) main: hum: 70.31[0m
+[1;31mE (160390) BME280: raw value: 126[0m
+[1;31mE (160390) BME280: raw value: 231[0m
+[1;31mE (160390) BME280: raw value: 32487[0m
+[1;31mE (160390) BME280: raw value: 128792[0m
+[1;31mE (160390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (160390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (160390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (160400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (160400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (160410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (160410) main: temp: 25.15[0m
+[1;31mE (160410) main: hum: 70.28[0m
+[1;31mE (170390) BME280: raw value: 126[0m
+[1;31mE (170390) BME280: raw value: 240[0m
+[1;31mE (170390) BME280: raw value: 32496[0m
+[1;31mE (170390) BME280: raw value: 128713[0m
+[1;31mE (170390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (170390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (170390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (170400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (170400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (170410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (170410) main: temp: 25.14[0m
+[1;31mE (170410) main: hum: 70.33[0m
+[1;31mE (180390) BME280: raw value: 126[0m
+[1;31mE (180390) BME280: raw value: 244[0m
+[1;31mE (180390) BME280: raw value: 32500[0m
+[1;31mE (180390) BME280: raw value: 128661[0m
+[1;31mE (180390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (180390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (180390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (180400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (180400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (180410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (180410) main: temp: 25.13[0m
+[1;31mE (180410) main: hum: 70.35[0m
+[1;31mE (190390) BME280: raw value: 126[0m
+[1;31mE (190390) BME280: raw value: 244[0m
+[1;31mE (190390) BME280: raw value: 32500[0m
+[1;31mE (190390) BME280: raw value: 128766[0m
+[1;31mE (190390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (190390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (190390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (190400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (190400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (190410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (190410) main: temp: 25.15[0m
+[1;31mE (190410) main: hum: 70.35[0m
+[1;31mE (200390) BME280: raw value: 126[0m
+[1;31mE (200390) BME280: raw value: 209[0m
+[1;31mE (200390) BME280: raw value: 32465[0m
+[1;31mE (200390) BME280: raw value: 128792[0m
+[1;31mE (200390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (200390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (200390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (200400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (200400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (200410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (200410) main: temp: 25.15[0m
+[1;31mE (200410) main: hum: 70.15[0m
+[1;31mE (210390) BME280: raw value: 126[0m
+[1;31mE (210390) BME280: raw value: 221[0m
+[1;31mE (210390) BME280: raw value: 32477[0m
+[1;31mE (210390) BME280: raw value: 128844[0m
+[1;31mE (210390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (210390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (210390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (210400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (210400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (210410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (210410) main: temp: 25.16[0m
+[1;31mE (210410) main: hum: 70.22[0m
+[1;31mE (220390) BME280: raw value: 126[0m
+[1;31mE (220390) BME280: raw value: 233[0m
+[1;31mE (220390) BME280: raw value: 32489[0m
+[1;31mE (220390) BME280: raw value: 128766[0m
+[1;31mE (220390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (220390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (220390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (220400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (220400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (220410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (220410) main: temp: 25.15[0m
+[1;31mE (220410) main: hum: 70.29[0m
+[1;31mE (230390) BME280: raw value: 126[0m
+[1;31mE (230390) BME280: raw value: 233[0m
+[1;31mE (230390) BME280: raw value: 32489[0m
+[1;31mE (230390) BME280: raw value: 128818[0m
+[1;31mE (230390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (230390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (230390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (230400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (230400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (230410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (230410) main: temp: 25.16[0m
+[1;31mE (230410) main: hum: 70.29[0m
+[1;31mE (240390) BME280: raw value: 126[0m
+[1;31mE (240390) BME280: raw value: 242[0m
+[1;31mE (240390) BME280: raw value: 32498[0m
+[1;31mE (240390) BME280: raw value: 128896[0m
+[1;31mE (240390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (240390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (240390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (240400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (240400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (240410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (240410) main: temp: 25.18[0m
+[1;31mE (240410) main: hum: 70.34[0m
+[1;31mE (250390) BME280: raw value: 127[0m
+[1;31mE (250390) BME280: raw value: 7[0m
+[1;31mE (250390) BME280: raw value: 32519[0m
+[1;31mE (250390) BME280: raw value: 128844[0m
+[1;31mE (250390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (250390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (250390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (250400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (250400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (250400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (250410) main: temp: 25.16[0m
+[1;31mE (250410) main: hum: 70.46[0m
+[1;31mE (260390) BME280: raw value: 126[0m
+[1;31mE (260390) BME280: raw value: 219[0m
+[1;31mE (260390) BME280: raw value: 32475[0m
+[1;31mE (260390) BME280: raw value: 128922[0m
+[1;31mE (260390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (260390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (260390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (260400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (260400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (260410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (260410) main: temp: 25.18[0m
+[1;31mE (260410) main: hum: 70.21[0m
+[1;31mE (270390) BME280: raw value: 126[0m
+[1;31mE (270390) BME280: raw value: 214[0m
+[1;31mE (270390) BME280: raw value: 32470[0m
+[1;31mE (270390) BME280: raw value: 128844[0m
+[1;31mE (270390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (270390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (270390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (270400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (270400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (270410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (270410) main: temp: 25.16[0m
+[1;31mE (270410) main: hum: 70.18[0m
+[1;31mE (280390) BME280: raw value: 126[0m
+[1;31mE (280390) BME280: raw value: 217[0m
+[1;31mE (280390) BME280: raw value: 32473[0m
+[1;31mE (280390) BME280: raw value: 128922[0m
+[1;31mE (280390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (280390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (280390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (280400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (280400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (280410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (280410) main: temp: 25.18[0m
+[1;31mE (280410) main: hum: 70.20[0m
+[1;31mE (290390) BME280: raw value: 126[0m
+[1;31mE (290390) BME280: raw value: 216[0m
+[1;31mE (290390) BME280: raw value: 32472[0m
+[1;31mE (290390) BME280: raw value: 128896[0m
+[1;31mE (290390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (290390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (290390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (290400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (290400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (290410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (290410) main: temp: 25.18[0m
+[1;31mE (290410) main: hum: 70.20[0m
+[1;31mE (300390) BME280: raw value: 126[0m
+[1;31mE (300390) BME280: raw value: 207[0m
+[1;31mE (300390) BME280: raw value: 32463[0m
+[1;31mE (300390) BME280: raw value: 128818[0m
+[1;31mE (300390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (300390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (300390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (300400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (300400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (300410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (300410) main: temp: 25.16[0m
+[1;31mE (300410) main: hum: 70.14[0m
+[1;31mE (310390) BME280: raw value: 126[0m
+[1;31mE (310390) BME280: raw value: 226[0m
+[1;31mE (310390) BME280: raw value: 32482[0m
+[1;31mE (310390) BME280: raw value: 128792[0m
+[1;31mE (310390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (310390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (310390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (310400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (310400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (310410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (310410) main: temp: 25.15[0m
+[1;31mE (310410) main: hum: 70.25[0m
+[1;31mE (320390) BME280: raw value: 126[0m
+[1;31mE (320390) BME280: raw value: 217[0m
+[1;31mE (320390) BME280: raw value: 32473[0m
+[1;31mE (320390) BME280: raw value: 128818[0m
+[1;31mE (320390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (320390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (320390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (320400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (320400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (320410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (320410) main: temp: 25.16[0m
+[1;31mE (320410) main: hum: 70.20[0m
+[1;31mE (330390) BME280: raw value: 126[0m
+[1;31mE (330390) BME280: raw value: 214[0m
+[1;31mE (330390) BME280: raw value: 32470[0m
+[1;31mE (330390) BME280: raw value: 128818[0m
+[1;31mE (330390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (330390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (330390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (330400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (330400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (330410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (330410) main: temp: 25.16[0m
+[1;31mE (330410) main: hum: 70.18[0m
+[1;31mE (340390) BME280: raw value: 126[0m
+[1;31mE (340390) BME280: raw value: 218[0m
+[1;31mE (340390) BME280: raw value: 32474[0m
+[1;31mE (340390) BME280: raw value: 128818[0m
+[1;31mE (340390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (340390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (340390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (340400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (340400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (340410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (340410) main: temp: 25.16[0m
+[1;31mE (340410) main: hum: 70.21[0m
+[1;31mE (350390) BME280: raw value: 126[0m
+[1;31mE (350390) BME280: raw value: 220[0m
+[1;31mE (350390) BME280: raw value: 32476[0m
+[1;31mE (350390) BME280: raw value: 128844[0m
+[1;31mE (350390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (350390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (350390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (350400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (350400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (350410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (350410) main: temp: 25.16[0m
+[1;31mE (350410) main: hum: 70.22[0m
+[1;31mE (360390) BME280: raw value: 127[0m
+[1;31mE (360390) BME280: raw value: 18[0m
+[1;31mE (360390) BME280: raw value: 32530[0m
+[1;31mE (360390) BME280: raw value: 128922[0m
+[1;31mE (360390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (360390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (360390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (360400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (360400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (360410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (360410) main: temp: 25.18[0m
+[1;31mE (360410) main: hum: 70.52[0m
+[1;31mE (370390) BME280: raw value: 127[0m
+[1;31mE (370390) BME280: raw value: 8[0m
+[1;31mE (370390) BME280: raw value: 32520[0m
+[1;31mE (370390) BME280: raw value: 129131[0m
+[1;31mE (370390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (370390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (370390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (370400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (370400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (370400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (370410) main: temp: 25.22[0m
+[1;31mE (370410) main: hum: 70.47[0m
+[1;31mE (380390) BME280: raw value: 126[0m
+[1;31mE (380390) BME280: raw value: 227[0m
+[1;31mE (380390) BME280: raw value: 32483[0m
+[1;31mE (380390) BME280: raw value: 129262[0m
+[1;31mE (380390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (380390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (380390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (380400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (380400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (380410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (380410) main: temp: 25.25[0m
+[1;31mE (380410) main: hum: 70.26[0m
+[1;31mE (390390) BME280: raw value: 126[0m
+[1;31mE (390390) BME280: raw value: 219[0m
+[1;31mE (390390) BME280: raw value: 32475[0m
+[1;31mE (390390) BME280: raw value: 129340[0m
+[1;31mE (390390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (390390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (390390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (390400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (390400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (390410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (390410) main: temp: 25.26[0m
+[1;31mE (390410) main: hum: 70.22[0m
+[1;31mE (400390) BME280: raw value: 126[0m
+[1;31mE (400390) BME280: raw value: 216[0m
+[1;31mE (400390) BME280: raw value: 32472[0m
+[1;31mE (400390) BME280: raw value: 129392[0m
+[1;31mE (400390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (400390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (400390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (400400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (400400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (400410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (400410) main: temp: 25.27[0m
+[1;31mE (400410) main: hum: 70.20[0m
+[1;31mE (410390) BME280: raw value: 126[0m
+[1;31mE (410390) BME280: raw value: 210[0m
+[1;31mE (410390) BME280: raw value: 32466[0m
+[1;31mE (410390) BME280: raw value: 129366[0m
+[1;31mE (410390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (410390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (410390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (410400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (410400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (410410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (410410) main: temp: 25.27[0m
+[1;31mE (410410) main: hum: 70.17[0m
+[1;31mE (420390) BME280: raw value: 126[0m
+[1;31mE (420390) BME280: raw value: 232[0m
+[1;31mE (420390) BME280: raw value: 32488[0m
+[1;31mE (420390) BME280: raw value: 129183[0m
+[1;31mE (420390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (420390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (420390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (420400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (420400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (420410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (420410) main: temp: 25.23[0m
+[1;31mE (420410) main: hum: 70.29[0m
+[1;31mE (430390) BME280: raw value: 126[0m
+[1;31mE (430390) BME280: raw value: 233[0m
+[1;31mE (430390) BME280: raw value: 32489[0m
+[1;31mE (430390) BME280: raw value: 129079[0m
+[1;31mE (430390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (430390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (430390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (430400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (430400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (430410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (430410) main: temp: 25.21[0m
+[1;31mE (430410) main: hum: 70.29[0m
+[1;31mE (440390) BME280: raw value: 126[0m
+[1;31mE (440390) BME280: raw value: 247[0m
+[1;31mE (440390) BME280: raw value: 32503[0m
+[1;31mE (440390) BME280: raw value: 129053[0m
+[1;31mE (440390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (440390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (440390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (440400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (440400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (440410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (440410) main: temp: 25.21[0m
+[1;31mE (440410) main: hum: 70.37[0m
+[1;31mE (450390) BME280: raw value: 126[0m
+[1;31mE (450390) BME280: raw value: 238[0m
+[1;31mE (450390) BME280: raw value: 32494[0m
+[1;31mE (450390) BME280: raw value: 128922[0m
+[1;31mE (450390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (450390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (450390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (450400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (450400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (450410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (450410) main: temp: 25.18[0m
+[1;31mE (450410) main: hum: 70.32[0m
+[1;31mE (460390) BME280: raw value: 126[0m
+[1;31mE (460390) BME280: raw value: 241[0m
+[1;31mE (460390) BME280: raw value: 32497[0m
+[1;31mE (460390) BME280: raw value: 129001[0m
+[1;31mE (460390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (460390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (460390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (460400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (460400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (460410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (460410) main: temp: 25.20[0m
+[1;31mE (460410) main: hum: 70.34[0m
+[1;31mE (470390) BME280: raw value: 126[0m
+[1;31mE (470390) BME280: raw value: 250[0m
+[1;31mE (470390) BME280: raw value: 32506[0m
+[1;31mE (470390) BME280: raw value: 129001[0m
+[1;31mE (470390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (470390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (470390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (470400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (470400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (470410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (470410) main: temp: 25.20[0m
+[1;31mE (470410) main: hum: 70.39[0m
+[1;31mE (480390) BME280: raw value: 127[0m
+[1;31mE (480390) BME280: raw value: 22[0m
+[1;31mE (480390) BME280: raw value: 32534[0m
+[1;31mE (480390) BME280: raw value: 128818[0m
+[1;31mE (480390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (480390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (480390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (480400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (480400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (480410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (480410) main: temp: 25.16[0m
+[1;31mE (480410) main: hum: 70.54[0m
+[1;31mE (490390) BME280: raw value: 127[0m
+[1;31mE (490390) BME280: raw value: 17[0m
+[1;31mE (490390) BME280: raw value: 32529[0m
+[1;31mE (490390) BME280: raw value: 128844[0m
+[1;31mE (490390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (490390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (490390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (490400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (490400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (490410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (490410) main: temp: 25.16[0m
+[1;31mE (490410) main: hum: 70.51[0m
+[1;31mE (500390) BME280: raw value: 127[0m
+[1;31mE (500390) BME280: raw value: 35[0m
+[1;31mE (500390) BME280: raw value: 32547[0m
+[1;31mE (500390) BME280: raw value: 128818[0m
+[1;31mE (500390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (500390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (500390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (500400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (500400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (500410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (500410) main: temp: 25.16[0m
+[1;31mE (500410) main: hum: 70.61[0m
+[1;31mE (510390) BME280: raw value: 127[0m
+[1;31mE (510390) BME280: raw value: 21[0m
+[1;31mE (510390) BME280: raw value: 32533[0m
+[1;31mE (510390) BME280: raw value: 128766[0m
+[1;31mE (510390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (510390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (510390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (510400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (510400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (510410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (510410) main: temp: 25.15[0m
+[1;31mE (510410) main: hum: 70.54[0m
+[1;31mE (520390) BME280: raw value: 127[0m
+[1;31mE (520390) BME280: raw value: 10[0m
+[1;31mE (520390) BME280: raw value: 32522[0m
+[1;31mE (520390) BME280: raw value: 128739[0m
+[1;31mE (520390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (520390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (520390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (520400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (520400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (520410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (520410) main: temp: 25.14[0m
+[1;31mE (520410) main: hum: 70.47[0m
+[1;31mE (530390) BME280: raw value: 127[0m
+[1;31mE (530390) BME280: raw value: 29[0m
+[1;31mE (530390) BME280: raw value: 32541[0m
+[1;31mE (530390) BME280: raw value: 128661[0m
+[1;31mE (530390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (530390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (530390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (530400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (530400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (530410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (530410) main: temp: 25.13[0m
+[1;31mE (530410) main: hum: 70.58[0m
+[1;31mE (540390) BME280: raw value: 127[0m
+[1;31mE (540390) BME280: raw value: 28[0m
+[1;31mE (540390) BME280: raw value: 32540[0m
+[1;31mE (540390) BME280: raw value: 128687[0m
+[1;31mE (540390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (540390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (540390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (540400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (540400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (540410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (540410) main: temp: 25.13[0m
+[1;31mE (540410) main: hum: 70.57[0m
+[1;31mE (550390) BME280: raw value: 127[0m
+[1;31mE (550390) BME280: raw value: 34[0m
+[1;31mE (550390) BME280: raw value: 32546[0m
+[1;31mE (550390) BME280: raw value: 128635[0m
+[1;31mE (550390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (550390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (550390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (550400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (550400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (550410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (550410) main: temp: 25.12[0m
+[1;31mE (550410) main: hum: 70.61[0m
+[1;31mE (560390) BME280: raw value: 127[0m
+[1;31mE (560390) BME280: raw value: 9[0m
+[1;31mE (560390) BME280: raw value: 32521[0m
+[1;31mE (560390) BME280: raw value: 128818[0m
+[1;31mE (560390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (560390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (560390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (560400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (560400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (560400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (560410) main: temp: 25.16[0m
+[1;31mE (560410) main: hum: 70.47[0m
+[1;31mE (570390) BME280: raw value: 127[0m
+[1;31mE (570390) BME280: raw value: 4[0m
+[1;31mE (570390) BME280: raw value: 32516[0m
+[1;31mE (570390) BME280: raw value: 128766[0m
+[1;31mE (570390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (570390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (570390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (570400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (570400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (570400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (570410) main: temp: 25.15[0m
+[1;31mE (570410) main: hum: 70.44[0m
+[1;31mE (580390) BME280: raw value: 127[0m
+[1;31mE (580390) BME280: raw value: 1[0m
+[1;31mE (580390) BME280: raw value: 32513[0m
+[1;31mE (580390) BME280: raw value: 128818[0m
+[1;31mE (580390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (580390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (580390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (580400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (580400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (580400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (580410) main: temp: 25.16[0m
+[1;31mE (580410) main: hum: 70.42[0m
+[1;31mE (590390) BME280: raw value: 126[0m
+[1;31mE (590390) BME280: raw value: 242[0m
+[1;31mE (590390) BME280: raw value: 32498[0m
+[1;31mE (590390) BME280: raw value: 128948[0m
+[1;31mE (590390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (590390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (590390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (590400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (590400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (590410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (590410) main: temp: 25.19[0m
+[1;31mE (590410) main: hum: 70.34[0m
+[1;31mE (600390) BME280: raw value: 126[0m
+[1;31mE (600390) BME280: raw value: 242[0m
+[1;31mE (600390) BME280: raw value: 32498[0m
+[1;31mE (600390) BME280: raw value: 128922[0m
+[1;31mE (600390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (600390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (600390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (600400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (600400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (600410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (600410) main: temp: 25.18[0m
+[1;31mE (600410) main: hum: 70.34[0m
+[1;31mE (610390) BME280: raw value: 126[0m
+[1;31mE (610390) BME280: raw value: 234[0m
+[1;31mE (610390) BME280: raw value: 32490[0m
+[1;31mE (610390) BME280: raw value: 128975[0m
+[1;31mE (610390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (610390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (610390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (610400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (610400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (610410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (610410) main: temp: 25.19[0m
+[1;31mE (610410) main: hum: 70.30[0m
+[1;31mE (620390) BME280: raw value: 126[0m
+[1;31mE (620390) BME280: raw value: 228[0m
+[1;31mE (620390) BME280: raw value: 32484[0m
+[1;31mE (620390) BME280: raw value: 128948[0m
+[1;31mE (620390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (620390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (620390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (620400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (620400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (620410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (620410) main: temp: 25.19[0m
+[1;31mE (620410) main: hum: 70.26[0m
+[1;31mE (630390) BME280: raw value: 126[0m
+[1;31mE (630390) BME280: raw value: 213[0m
+[1;31mE (630390) BME280: raw value: 32469[0m
+[1;31mE (630390) BME280: raw value: 128975[0m
+[1;31mE (630390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (630390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (630390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (630400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (630400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (630410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (630410) main: temp: 25.19[0m
+[1;31mE (630410) main: hum: 70.18[0m
+[1;31mE (640390) BME280: raw value: 126[0m
+[1;31mE (640390) BME280: raw value: 222[0m
+[1;31mE (640390) BME280: raw value: 32478[0m
+[1;31mE (640390) BME280: raw value: 128948[0m
+[1;31mE (640390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (640390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (640390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (640400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (640400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (640410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (640410) main: temp: 25.19[0m
+[1;31mE (640410) main: hum: 70.23[0m
+[1;31mE (650390) BME280: raw value: 126[0m
+[1;31mE (650390) BME280: raw value: 219[0m
+[1;31mE (650390) BME280: raw value: 32475[0m
+[1;31mE (650390) BME280: raw value: 128975[0m
+[1;31mE (650390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (650390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (650390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (650400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (650400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (650410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (650410) main: temp: 25.19[0m
+[1;31mE (650410) main: hum: 70.21[0m
+[1;31mE (660390) BME280: raw value: 126[0m
+[1;31mE (660390) BME280: raw value: 224[0m
+[1;31mE (660390) BME280: raw value: 32480[0m
+[1;31mE (660390) BME280: raw value: 128922[0m
+[1;31mE (660390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (660390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (660390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (660400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (660400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (660410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (660410) main: temp: 25.18[0m
+[1;31mE (660410) main: hum: 70.24[0m
+[1;31mE (670390) BME280: raw value: 126[0m
+[1;31mE (670390) BME280: raw value: 227[0m
+[1;31mE (670390) BME280: raw value: 32483[0m
+[1;31mE (670390) BME280: raw value: 128870[0m
+[1;31mE (670390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (670390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (670390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (670400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (670400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (670410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (670410) main: temp: 25.17[0m
+[1;31mE (670410) main: hum: 70.26[0m
+[1;31mE (680390) BME280: raw value: 126[0m
+[1;31mE (680390) BME280: raw value: 237[0m
+[1;31mE (680390) BME280: raw value: 32493[0m
+[1;31mE (680390) BME280: raw value: 128713[0m
+[1;31mE (680390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (680390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (680390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (680400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (680400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (680410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (680410) main: temp: 25.14[0m
+[1;31mE (680410) main: hum: 70.31[0m
+[1;31mE (690390) BME280: raw value: 126[0m
+[1;31mE (690390) BME280: raw value: 228[0m
+[1;31mE (690390) BME280: raw value: 32484[0m
+[1;31mE (690390) BME280: raw value: 128661[0m
+[1;31mE (690390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (690390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (690390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (690400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (690400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (690410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (690410) main: temp: 25.13[0m
+[1;31mE (690410) main: hum: 70.26[0m
+[1;31mE (700390) BME280: raw value: 126[0m
+[1;31mE (700390) BME280: raw value: 246[0m
+[1;31mE (700390) BME280: raw value: 32502[0m
+[1;31mE (700390) BME280: raw value: 128531[0m
+[1;31mE (700390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (700390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (700390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (700400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (700400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (700410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (700410) main: temp: 25.10[0m
+[1;31mE (700410) main: hum: 70.36[0m
+[1;31mE (710390) BME280: raw value: 127[0m
+[1;31mE (710390) BME280: raw value: 8[0m
+[1;31mE (710390) BME280: raw value: 32520[0m
+[1;31mE (710390) BME280: raw value: 128504[0m
+[1;31mE (710390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (710390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (710390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (710400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (710400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (710400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (710410) main: temp: 25.10[0m
+[1;31mE (710410) main: hum: 70.46[0m
+[1;31mE (720390) BME280: raw value: 126[0m
+[1;31mE (720390) BME280: raw value: 236[0m
+[1;31mE (720390) BME280: raw value: 32492[0m
+[1;31mE (720390) BME280: raw value: 128635[0m
+[1;31mE (720390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (720390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (720390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (720400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (720400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (720410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (720410) main: temp: 25.12[0m
+[1;31mE (720410) main: hum: 70.30[0m
+[1;31mE (730390) BME280: raw value: 126[0m
+[1;31mE (730390) BME280: raw value: 255[0m
+[1;31mE (730390) BME280: raw value: 32511[0m
+[1;31mE (730390) BME280: raw value: 128557[0m
+[1;31mE (730390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (730390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (730390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (730400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (730400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (730410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (730410) main: temp: 25.11[0m
+[1;31mE (730410) main: hum: 70.41[0m
+[1;31mE (740390) BME280: raw value: 127[0m
+[1;31mE (740390) BME280: raw value: 8[0m
+[1;31mE (740390) BME280: raw value: 32520[0m
+[1;31mE (740390) BME280: raw value: 128792[0m
+[1;31mE (740390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (740390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (740390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (740400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (740400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (740400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (740410) main: temp: 25.15[0m
+[1;31mE (740410) main: hum: 70.46[0m
+[1;31mE (750390) BME280: raw value: 126[0m
+[1;31mE (750390) BME280: raw value: 234[0m
+[1;31mE (750390) BME280: raw value: 32490[0m
+[1;31mE (750390) BME280: raw value: 128792[0m
+[1;31mE (750390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (750390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (750390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (750400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (750400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (750410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (750410) main: temp: 25.15[0m
+[1;31mE (750410) main: hum: 70.29[0m
+[1;31mE (760390) BME280: raw value: 126[0m
+[1;31mE (760390) BME280: raw value: 240[0m
+[1;31mE (760390) BME280: raw value: 32496[0m
+[1;31mE (760390) BME280: raw value: 128687[0m
+[1;31mE (760390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (760390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (760390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (760400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (760400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (760410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (760410) main: temp: 25.13[0m
+[1;31mE (760410) main: hum: 70.33[0m
+[1;31mE (770390) BME280: raw value: 127[0m
+[1;31mE (770390) BME280: raw value: 0[0m
+[1;31mE (770390) BME280: raw value: 32512[0m
+[1;31mE (770390) BME280: raw value: 128661[0m
+[1;31mE (770390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (770390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (770390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (770400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (770400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (770400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (770410) main: temp: 25.13[0m
+[1;31mE (770410) main: hum: 70.42[0m
+[1;31mE (780390) BME280: raw value: 126[0m
+[1;31mE (780390) BME280: raw value: 229[0m
+[1;31mE (780390) BME280: raw value: 32485[0m
+[1;31mE (780390) BME280: raw value: 128870[0m
+[1;31mE (780390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (780390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (780390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (780400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (780400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (780410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (780410) main: temp: 25.17[0m
+[1;31mE (780410) main: hum: 70.27[0m
+[1;31mE (790390) BME280: raw value: 126[0m
+[1;31mE (790390) BME280: raw value: 228[0m
+[1;31mE (790390) BME280: raw value: 32484[0m
+[1;31mE (790390) BME280: raw value: 128870[0m
+[1;31mE (790390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (790390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (790390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (790400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (790400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (790410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (790410) main: temp: 25.17[0m
+[1;31mE (790410) main: hum: 70.26[0m
+[1;31mE (800390) BME280: raw value: 126[0m
+[1;31mE (800390) BME280: raw value: 222[0m
+[1;31mE (800390) BME280: raw value: 32478[0m
+[1;31mE (800390) BME280: raw value: 128975[0m
+[1;31mE (800390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (800390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (800390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (800400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (800400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (800410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (800410) main: temp: 25.19[0m
+[1;31mE (800410) main: hum: 70.23[0m
+[1;31mE (810390) BME280: raw value: 126[0m
+[1;31mE (810390) BME280: raw value: 217[0m
+[1;31mE (810390) BME280: raw value: 32473[0m
+[1;31mE (810390) BME280: raw value: 129027[0m
+[1;31mE (810390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (810390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (810390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (810400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (810400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (810410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (810410) main: temp: 25.20[0m
+[1;31mE (810410) main: hum: 70.20[0m
+[1;31mE (820390) BME280: raw value: 126[0m
+[1;31mE (820390) BME280: raw value: 240[0m
+[1;31mE (820390) BME280: raw value: 32496[0m
+[1;31mE (820390) BME280: raw value: 128948[0m
+[1;31mE (820390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (820390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (820390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (820400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (820400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (820410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (820410) main: temp: 25.19[0m
+[1;31mE (820410) main: hum: 70.33[0m
+[1;31mE (830390) BME280: raw value: 126[0m
+[1;31mE (830390) BME280: raw value: 247[0m
+[1;31mE (830390) BME280: raw value: 32503[0m
+[1;31mE (830390) BME280: raw value: 128792[0m
+[1;31mE (830390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (830390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (830390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (830400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (830400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (830410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (830410) main: temp: 25.15[0m
+[1;31mE (830410) main: hum: 70.37[0m
+[1;31mE (840390) BME280: raw value: 126[0m
+[1;31mE (840390) BME280: raw value: 242[0m
+[1;31mE (840390) BME280: raw value: 32498[0m
+[1;31mE (840390) BME280: raw value: 128818[0m
+[1;31mE (840390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (840390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (840390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (840400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (840400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (840410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (840410) main: temp: 25.16[0m
+[1;31mE (840410) main: hum: 70.34[0m
+[1;31mE (850390) BME280: raw value: 126[0m
+[1;31mE (850390) BME280: raw value: 239[0m
+[1;31mE (850390) BME280: raw value: 32495[0m
+[1;31mE (850390) BME280: raw value: 128739[0m
+[1;31mE (850390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (850390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (850390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (850400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (850400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (850410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (850410) main: temp: 25.14[0m
+[1;31mE (850410) main: hum: 70.32[0m
+[1;31mE (860390) BME280: raw value: 126[0m
+[1;31mE (860390) BME280: raw value: 246[0m
+[1;31mE (860390) BME280: raw value: 32502[0m
+[1;31mE (860390) BME280: raw value: 128792[0m
+[1;31mE (860390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (860390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (860390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (860400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (860400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (860410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (860410) main: temp: 25.15[0m
+[1;31mE (860410) main: hum: 70.36[0m
+[1;31mE (870390) BME280: raw value: 126[0m
+[1;31mE (870390) BME280: raw value: 236[0m
+[1;31mE (870390) BME280: raw value: 32492[0m
+[1;31mE (870390) BME280: raw value: 128818[0m
+[1;31mE (870390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (870390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (870390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (870400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (870400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (870410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (870410) main: temp: 25.16[0m
+[1;31mE (870410) main: hum: 70.31[0m
+[1;31mE (880390) BME280: raw value: 127[0m
+[1;31mE (880390) BME280: raw value: 4[0m
+[1;31mE (880390) BME280: raw value: 32516[0m
+[1;31mE (880390) BME280: raw value: 128766[0m
+[1;31mE (880390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (880390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (880390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (880400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (880400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (880400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (880410) main: temp: 25.15[0m
+[1;31mE (880410) main: hum: 70.44[0m
+[1;31mE (890390) BME280: raw value: 126[0m
+[1;31mE (890390) BME280: raw value: 237[0m
+[1;31mE (890390) BME280: raw value: 32493[0m
+[1;31mE (890390) BME280: raw value: 128687[0m
+[1;31mE (890390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (890390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (890390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (890400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (890400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (890410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (890410) main: temp: 25.13[0m
+[1;31mE (890410) main: hum: 70.31[0m
+[1;31mE (900390) BME280: raw value: 126[0m
+[1;31mE (900390) BME280: raw value: 241[0m
+[1;31mE (900390) BME280: raw value: 32497[0m
+[1;31mE (900390) BME280: raw value: 128687[0m
+[1;31mE (900390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (900390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (900390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (900400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (900400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (900410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (900410) main: temp: 25.13[0m
+[1;31mE (900410) main: hum: 70.33[0m
+[1;31mE (910390) BME280: raw value: 126[0m
+[1;31mE (910390) BME280: raw value: 232[0m
+[1;31mE (910390) BME280: raw value: 32488[0m
+[1;31mE (910390) BME280: raw value: 128713[0m
+[1;31mE (910390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (910390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (910390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (910400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (910400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (910410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (910410) main: temp: 25.14[0m
+[1;31mE (910410) main: hum: 70.28[0m
+[1;31mE (920390) BME280: raw value: 126[0m
+[1;31mE (920390) BME280: raw value: 235[0m
+[1;31mE (920390) BME280: raw value: 32491[0m
+[1;31mE (920390) BME280: raw value: 128739[0m
+[1;31mE (920390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (920390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (920390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (920400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (920400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (920410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (920410) main: temp: 25.14[0m
+[1;31mE (920410) main: hum: 70.30[0m
+[1;31mE (930390) BME280: raw value: 126[0m
+[1;31mE (930390) BME280: raw value: 243[0m
+[1;31mE (930390) BME280: raw value: 32499[0m
+[1;31mE (930390) BME280: raw value: 128713[0m
+[1;31mE (930390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (930390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (930390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (930400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (930400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (930410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (930410) main: temp: 25.14[0m
+[1;31mE (930410) main: hum: 70.34[0m
+[1;31mE (940390) BME280: raw value: 127[0m
+[1;31mE (940390) BME280: raw value: 13[0m
+[1;31mE (940390) BME280: raw value: 32525[0m
+[1;31mE (940390) BME280: raw value: 128557[0m
+[1;31mE (940390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (940390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (940390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (940400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (940400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (940410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (940410) main: temp: 25.11[0m
+[1;31mE (940410) main: hum: 70.49[0m
+[1;31mE (950390) BME280: raw value: 126[0m
+[1;31mE (950390) BME280: raw value: 247[0m
+[1;31mE (950390) BME280: raw value: 32503[0m
+[1;31mE (950390) BME280: raw value: 128635[0m
+[1;31mE (950390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (950390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (950390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (950400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (950400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (950410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (950410) main: temp: 25.12[0m
+[1;31mE (950410) main: hum: 70.37[0m
+[1;31mE (960390) BME280: raw value: 127[0m
+[1;31mE (960390) BME280: raw value: 7[0m
+[1;31mE (960390) BME280: raw value: 32519[0m
+[1;31mE (960390) BME280: raw value: 128531[0m
+[1;31mE (960390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (960390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (960390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (960400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (960400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (960400) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (960410) main: temp: 25.10[0m
+[1;31mE (960410) main: hum: 70.45[0m
+[1;31mE (970390) BME280: raw value: 127[0m
+[1;31mE (970390) BME280: raw value: 25[0m
+[1;31mE (970390) BME280: raw value: 32537[0m
+[1;31mE (970390) BME280: raw value: 128504[0m
+[1;31mE (970390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (970390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (970390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (970400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (970400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (970410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (970410) main: temp: 25.10[0m
+[1;31mE (970410) main: hum: 70.55[0m
+[1;31mE (980390) BME280: raw value: 127[0m
+[1;31mE (980390) BME280: raw value: 30[0m
+[1;31mE (980390) BME280: raw value: 32542[0m
+[1;31mE (980390) BME280: raw value: 128452[0m
+[1;31mE (980390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (980390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (980390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (980400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (980400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (980410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (980410) main: temp: 25.09[0m
+[1;31mE (980410) main: hum: 70.58[0m
+[1;31mE (990390) BME280: raw value: 127[0m
+[1;31mE (990390) BME280: raw value: 11[0m
+[1;31mE (990390) BME280: raw value: 32523[0m
+[1;31mE (990390) BME280: raw value: 128504[0m
+[1;31mE (990390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (990390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (990390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (990400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (990400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (990410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (990410) main: temp: 25.10[0m
+[1;31mE (990410) main: hum: 70.48[0m
+[1;31mE (1000390) BME280: raw value: 127[0m
+[1;31mE (1000390) BME280: raw value: 4[0m
+[1;31mE (1000390) BME280: raw value: 32516[0m
+[1;31mE (1000390) BME280: raw value: 128504[0m
+[1;31mE (1000390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1000390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1000390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1000400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1000400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1000410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1000410) main: temp: 25.10[0m
+[1;31mE (1000410) main: hum: 70.44[0m
+[1;31mE (1010390) BME280: raw value: 126[0m
+[1;31mE (1010390) BME280: raw value: 244[0m
+[1;31mE (1010390) BME280: raw value: 32500[0m
+[1;31mE (1010390) BME280: raw value: 128583[0m
+[1;31mE (1010390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1010390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1010400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1010400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1010400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1010410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1010410) main: temp: 25.11[0m
+[1;31mE (1010410) main: hum: 70.35[0m
+[1;31mE (1020390) BME280: raw value: 126[0m
+[1;31mE (1020390) BME280: raw value: 245[0m
+[1;31mE (1020390) BME280: raw value: 32501[0m
+[1;31mE (1020390) BME280: raw value: 128531[0m
+[1;31mE (1020390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1020390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1020400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1020400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1020400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1020410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1020410) main: temp: 25.10[0m
+[1;31mE (1020410) main: hum: 70.35[0m
+[1;31mE (1030390) BME280: raw value: 126[0m
+[1;31mE (1030390) BME280: raw value: 240[0m
+[1;31mE (1030390) BME280: raw value: 32496[0m
+[1;31mE (1030390) BME280: raw value: 128478[0m
+[1;31mE (1030390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1030390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1030400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1030400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1030400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1030410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1030410) main: temp: 25.09[0m
+[1;31mE (1030410) main: hum: 70.32[0m
+[1;31mE (1040390) BME280: raw value: 127[0m
+[1;31mE (1040390) BME280: raw value: 1[0m
+[1;31mE (1040390) BME280: raw value: 32513[0m
+[1;31mE (1040390) BME280: raw value: 128531[0m
+[1;31mE (1040390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1040390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1040390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1040400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1040400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1040410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1040410) main: temp: 25.10[0m
+[1;31mE (1040410) main: hum: 70.42[0m
+[1;31mE (1050390) BME280: raw value: 126[0m
+[1;31mE (1050390) BME280: raw value: 238[0m
+[1;31mE (1050390) BME280: raw value: 32494[0m
+[1;31mE (1050390) BME280: raw value: 128452[0m
+[1;31mE (1050390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1050390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1050400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1050400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1050400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1050410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1050410) main: temp: 25.09[0m
+[1;31mE (1050410) main: hum: 70.31[0m
+[1;31mE (1060390) BME280: raw value: 126[0m
+[1;31mE (1060390) BME280: raw value: 233[0m
+[1;31mE (1060390) BME280: raw value: 32489[0m
+[1;31mE (1060390) BME280: raw value: 128504[0m
+[1;31mE (1060390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1060390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1060400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1060400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1060400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1060410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1060410) main: temp: 25.10[0m
+[1;31mE (1060410) main: hum: 70.29[0m
+[1;31mE (1070390) BME280: raw value: 126[0m
+[1;31mE (1070390) BME280: raw value: 222[0m
+[1;31mE (1070390) BME280: raw value: 32478[0m
+[1;31mE (1070390) BME280: raw value: 128661[0m
+[1;31mE (1070390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1070390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1070400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1070400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1070400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1070410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1070410) main: temp: 25.13[0m
+[1;31mE (1070410) main: hum: 70.23[0m
+[1;31mE (1080390) BME280: raw value: 127[0m
+[1;31mE (1080390) BME280: raw value: 7[0m
+[1;31mE (1080390) BME280: raw value: 32519[0m
+[1;31mE (1080390) BME280: raw value: 128609[0m
+[1;31mE (1080390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1080390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1080390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1080400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1080400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1080410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1080410) main: temp: 25.12[0m
+[1;31mE (1080410) main: hum: 70.45[0m
+[1;31mE (1090390) BME280: raw value: 127[0m
+[1;31mE (1090390) BME280: raw value: 75[0m
+[1;31mE (1090390) BME280: raw value: 32587[0m
+[1;31mE (1090390) BME280: raw value: 128190[0m
+[1;31mE (1090390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1090390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1090400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1090400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1090400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1090410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1090410) main: temp: 25.04[0m
+[1;31mE (1090410) main: hum: 70.83[0m
+[1;31mE (1100390) BME280: raw value: 127[0m
+[1;31mE (1100390) BME280: raw value: 107[0m
+[1;31mE (1100390) BME280: raw value: 32619[0m
+[1;31mE (1100390) BME280: raw value: 127851[0m
+[1;31mE (1100390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1100390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1100400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1100400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1100400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1100410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1100410) main: temp: 24.97[0m
+[1;31mE (1100410) main: hum: 71.00[0m
+[1;31mE (1110390) BME280: raw value: 127[0m
+[1;31mE (1110390) BME280: raw value: 110[0m
+[1;31mE (1110390) BME280: raw value: 32622[0m
+[1;31mE (1110390) BME280: raw value: 127851[0m
+[1;31mE (1110390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1110390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1110400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1110400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1110400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1110410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1110410) main: temp: 24.97[0m
+[1;31mE (1110410) main: hum: 71.02[0m
+[1;31mE (1120390) BME280: raw value: 127[0m
+[1;31mE (1120390) BME280: raw value: 157[0m
+[1;31mE (1120390) BME280: raw value: 32669[0m
+[1;31mE (1120390) BME280: raw value: 127459[0m
+[1;31mE (1120390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1120390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1120400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1120400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1120400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1120410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1120410) main: temp: 24.89[0m
+[1;31mE (1120410) main: hum: 71.28[0m
+[1;31mE (1130390) BME280: raw value: 127[0m
+[1;31mE (1130390) BME280: raw value: 217[0m
+[1;31mE (1130390) BME280: raw value: 32729[0m
+[1;31mE (1130390) BME280: raw value: 126832[0m
+[1;31mE (1130390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1130390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1130400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1130400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1130400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1130410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1130410) main: temp: 24.77[0m
+[1;31mE (1130410) main: hum: 71.61[0m
+[1;31mE (1140390) BME280: raw value: 127[0m
+[1;31mE (1140390) BME280: raw value: 252[0m
+[1;31mE (1140390) BME280: raw value: 32764[0m
+[1;31mE (1140390) BME280: raw value: 126623[0m
+[1;31mE (1140390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1140390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1140400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1140400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1140400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1140410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1140410) main: temp: 24.73[0m
+[1;31mE (1140410) main: hum: 71.80[0m
+[1;31mE (1150390) BME280: raw value: 128[0m
+[1;31mE (1150390) BME280: raw value: 40[0m
+[1;31mE (1150390) BME280: raw value: 32808[0m
+[1;31mE (1150390) BME280: raw value: 126231[0m
+[1;31mE (1150390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1150390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1150400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1150400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1150400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1150410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1150410) main: temp: 24.65[0m
+[1;31mE (1150410) main: hum: 72.04[0m
+[1;31mE (1160390) BME280: raw value: 128[0m
+[1;31mE (1160390) BME280: raw value: 98[0m
+[1;31mE (1160390) BME280: raw value: 32866[0m
+[1;31mE (1160390) BME280: raw value: 125657[0m
+[1;31mE (1160390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1160390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1160400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1160400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1160400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1160410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1160410) main: temp: 24.54[0m
+[1;31mE (1160410) main: hum: 72.35[0m
+[1;31mE (1170390) BME280: raw value: 128[0m
+[1;31mE (1170390) BME280: raw value: 142[0m
+[1;31mE (1170390) BME280: raw value: 32910[0m
+[1;31mE (1170390) BME280: raw value: 125161[0m
+[1;31mE (1170390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1170390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1170400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1170400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1170400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1170410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1170410) main: temp: 24.45[0m
+[1;31mE (1170410) main: hum: 72.59[0m
+[1;31mE (1180390) BME280: raw value: 128[0m
+[1;31mE (1180390) BME280: raw value: 150[0m
+[1;31mE (1180390) BME280: raw value: 32918[0m
+[1;31mE (1180390) BME280: raw value: 125108[0m
+[1;31mE (1180390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1180390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1180400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1180400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1180400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1180410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1180410) main: temp: 24.44[0m
+[1;31mE (1180410) main: hum: 72.64[0m
+[1;31mE (1190390) BME280: raw value: 128[0m
+[1;31mE (1190390) BME280: raw value: 152[0m
+[1;31mE (1190390) BME280: raw value: 32920[0m
+[1;31mE (1190390) BME280: raw value: 125082[0m
+[1;31mE (1190390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1190390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1190400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1190400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1190400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1190410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1190410) main: temp: 24.43[0m
+[1;31mE (1190410) main: hum: 72.65[0m
+[1;31mE (1200390) BME280: raw value: 128[0m
+[1;31mE (1200390) BME280: raw value: 199[0m
+[1;31mE (1200390) BME280: raw value: 32967[0m
+[1;31mE (1200390) BME280: raw value: 124559[0m
+[1;31mE (1200390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1200390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1200400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1200400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1200400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1200410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1200410) main: temp: 24.33[0m
+[1;31mE (1200410) main: hum: 72.90[0m
+[1;31mE (1210390) BME280: raw value: 128[0m
+[1;31mE (1210390) BME280: raw value: 230[0m
+[1;31mE (1210390) BME280: raw value: 32998[0m
+[1;31mE (1210390) BME280: raw value: 124376[0m
+[1;31mE (1210390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1210390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1210400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1210400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1210400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1210410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1210410) main: temp: 24.29[0m
+[1;31mE (1210410) main: hum: 73.07[0m
+[1;31mE (1220390) BME280: raw value: 128[0m
+[1;31mE (1220390) BME280: raw value: 238[0m
+[1;31mE (1220390) BME280: raw value: 33006[0m
+[1;31mE (1220390) BME280: raw value: 124428[0m
+[1;31mE (1220390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1220390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1220400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1220400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1220400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1220410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1220410) main: temp: 24.30[0m
+[1;31mE (1220410) main: hum: 73.12[0m
+[1;31mE (1230390) BME280: raw value: 128[0m
+[1;31mE (1230390) BME280: raw value: 229[0m
+[1;31mE (1230390) BME280: raw value: 32997[0m
+[1;31mE (1230390) BME280: raw value: 124559[0m
+[1;31mE (1230390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1230390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1230400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1230400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1230400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1230410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1230410) main: temp: 24.33[0m
+[1;31mE (1230410) main: hum: 73.07[0m
+[1;31mE (1240390) BME280: raw value: 128[0m
+[1;31mE (1240390) BME280: raw value: 229[0m
+[1;31mE (1240390) BME280: raw value: 32997[0m
+[1;31mE (1240390) BME280: raw value: 124637[0m
+[1;31mE (1240390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1240390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1240400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1240400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1240400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1240410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1240410) main: temp: 24.34[0m
+[1;31mE (1240410) main: hum: 73.07[0m
+[1;31mE (1250390) BME280: raw value: 128[0m
+[1;31mE (1250390) BME280: raw value: 247[0m
+[1;31mE (1250390) BME280: raw value: 33015[0m
+[1;31mE (1250390) BME280: raw value: 124428[0m
+[1;31mE (1250390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1250390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1250400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1250400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1250400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1250410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1250410) main: temp: 24.30[0m
+[1;31mE (1250410) main: hum: 73.17[0m
+[1;31mE (1260390) BME280: raw value: 128[0m
+[1;31mE (1260390) BME280: raw value: 243[0m
+[1;31mE (1260390) BME280: raw value: 33011[0m
+[1;31mE (1260390) BME280: raw value: 124376[0m
+[1;31mE (1260390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1260390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1260400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1260400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1260400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1260410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1260410) main: temp: 24.29[0m
+[1;31mE (1260410) main: hum: 73.15[0m
+[1;31mE (1270390) BME280: raw value: 128[0m
+[1;31mE (1270390) BME280: raw value: 241[0m
+[1;31mE (1270390) BME280: raw value: 33009[0m
+[1;31mE (1270390) BME280: raw value: 124481[0m
+[1;31mE (1270390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1270390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1270400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1270400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1270400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1270410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1270410) main: temp: 24.31[0m
+[1;31mE (1270410) main: hum: 73.14[0m
+[1;31mE (1280390) BME280: raw value: 128[0m
+[1;31mE (1280390) BME280: raw value: 230[0m
+[1;31mE (1280390) BME280: raw value: 32998[0m
+[1;31mE (1280390) BME280: raw value: 124637[0m
+[1;31mE (1280390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1280390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1280400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1280400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1280400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1280410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1280410) main: temp: 24.34[0m
+[1;31mE (1280410) main: hum: 73.08[0m
+[1;31mE (1290390) BME280: raw value: 128[0m
+[1;31mE (1290390) BME280: raw value: 226[0m
+[1;31mE (1290390) BME280: raw value: 32994[0m
+[1;31mE (1290390) BME280: raw value: 124664[0m
+[1;31mE (1290390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1290390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1290400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1290400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1290400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1290410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1290410) main: temp: 24.35[0m
+[1;31mE (1290410) main: hum: 73.06[0m
+[1;31mE (1300390) BME280: raw value: 128[0m
+[1;31mE (1300390) BME280: raw value: 243[0m
+[1;31mE (1300390) BME280: raw value: 33011[0m
+[1;31mE (1300390) BME280: raw value: 124533[0m
+[1;31mE (1300390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1300390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1300400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1300400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1300400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1300410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1300410) main: temp: 24.32[0m
+[1;31mE (1300410) main: hum: 73.15[0m
+[1;31mE (1310390) BME280: raw value: 129[0m
+[1;31mE (1310390) BME280: raw value: 11[0m
+[1;31mE (1310390) BME280: raw value: 33035[0m
+[1;31mE (1310390) BME280: raw value: 124272[0m
+[1;31mE (1310390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1310390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1310400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1310400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1310400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1310410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1310410) main: temp: 24.27[0m
+[1;31mE (1310410) main: hum: 73.28[0m
+[1;31mE (1320390) BME280: raw value: 128[0m
+[1;31mE (1320390) BME280: raw value: 240[0m
+[1;31mE (1320390) BME280: raw value: 33008[0m
+[1;31mE (1320390) BME280: raw value: 124324[0m
+[1;31mE (1320390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1320390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1320400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1320400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1320400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1320410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1320410) main: temp: 24.28[0m
+[1;31mE (1320410) main: hum: 73.13[0m
+[1;31mE (1330390) BME280: raw value: 128[0m
+[1;31mE (1330390) BME280: raw value: 254[0m
+[1;31mE (1330390) BME280: raw value: 33022[0m
+[1;31mE (1330390) BME280: raw value: 124350[0m
+[1;31mE (1330390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1330390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1330400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1330400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1330400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1330410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1330410) main: temp: 24.29[0m
+[1;31mE (1330410) main: hum: 73.21[0m
+[1;31mE (1340390) BME280: raw value: 128[0m
+[1;31mE (1340390) BME280: raw value: 254[0m
+[1;31mE (1340390) BME280: raw value: 33022[0m
+[1;31mE (1340390) BME280: raw value: 124376[0m
+[1;31mE (1340390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1340390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1340400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1340400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1340400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1340410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1340410) main: temp: 24.29[0m
+[1;31mE (1340410) main: hum: 73.21[0m
+[1;31mE (1350390) BME280: raw value: 129[0m
+[1;31mE (1350390) BME280: raw value: 21[0m
+[1;31mE (1350390) BME280: raw value: 33045[0m
+[1;31mE (1350390) BME280: raw value: 124167[0m
+[1;31mE (1350390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1350390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1350400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1350400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1350400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1350410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1350410) main: temp: 24.25[0m
+[1;31mE (1350410) main: hum: 73.33[0m
+[1;31mE (1360390) BME280: raw value: 129[0m
+[1;31mE (1360390) BME280: raw value: 12[0m
+[1;31mE (1360390) BME280: raw value: 33036[0m
+[1;31mE (1360390) BME280: raw value: 124246[0m
+[1;31mE (1360390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1360390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1360400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1360400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1360400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1360410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1360410) main: temp: 24.27[0m
+[1;31mE (1360410) main: hum: 73.28[0m
+[1;31mE (1370390) BME280: raw value: 129[0m
+[1;31mE (1370390) BME280: raw value: 9[0m
+[1;31mE (1370390) BME280: raw value: 33033[0m
+[1;31mE (1370390) BME280: raw value: 124350[0m
+[1;31mE (1370390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1370390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1370390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1370400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1370400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1370410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1370410) main: temp: 24.29[0m
+[1;31mE (1370410) main: hum: 73.27[0m
+[1;31mE (1380390) BME280: raw value: 128[0m
+[1;31mE (1380390) BME280: raw value: 248[0m
+[1;31mE (1380390) BME280: raw value: 33016[0m
+[1;31mE (1380390) BME280: raw value: 124533[0m
+[1;31mE (1380390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1380390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1380400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1380400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1380400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1380410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1380410) main: temp: 24.32[0m
+[1;31mE (1380410) main: hum: 73.18[0m
+[1;31mE (1390390) BME280: raw value: 128[0m
+[1;31mE (1390390) BME280: raw value: 234[0m
+[1;31mE (1390390) BME280: raw value: 33002[0m
+[1;31mE (1390390) BME280: raw value: 124559[0m
+[1;31mE (1390390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1390390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1390400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1390400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1390400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1390410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1390410) main: temp: 24.33[0m
+[1;31mE (1390410) main: hum: 73.10[0m
+[1;31mE (1400390) BME280: raw value: 128[0m
+[1;31mE (1400390) BME280: raw value: 229[0m
+[1;31mE (1400390) BME280: raw value: 32997[0m
+[1;31mE (1400390) BME280: raw value: 124611[0m
+[1;31mE (1400390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1400390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1400400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1400400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1400400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1400410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1400410) main: temp: 24.34[0m
+[1;31mE (1400410) main: hum: 73.07[0m
+[1;31mE (1410390) BME280: raw value: 128[0m
+[1;31mE (1410390) BME280: raw value: 229[0m
+[1;31mE (1410390) BME280: raw value: 32997[0m
+[1;31mE (1410390) BME280: raw value: 124585[0m
+[1;31mE (1410390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1410390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1410400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1410400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1410400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1410410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1410410) main: temp: 24.33[0m
+[1;31mE (1410410) main: hum: 73.07[0m
+[1;31mE (1420390) BME280: raw value: 128[0m
+[1;31mE (1420390) BME280: raw value: 212[0m
+[1;31mE (1420390) BME280: raw value: 32980[0m
+[1;31mE (1420390) BME280: raw value: 124664[0m
+[1;31mE (1420390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1420390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1420400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1420400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1420400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1420410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1420410) main: temp: 24.35[0m
+[1;31mE (1420410) main: hum: 72.98[0m
+[1;31mE (1430390) BME280: raw value: 128[0m
+[1;31mE (1430390) BME280: raw value: 186[0m
+[1;31mE (1430390) BME280: raw value: 32954[0m
+[1;31mE (1430390) BME280: raw value: 124821[0m
+[1;31mE (1430390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1430390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1430400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1430400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1430400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1430410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1430410) main: temp: 24.38[0m
+[1;31mE (1430410) main: hum: 72.83[0m
+[1;31mE (1440390) BME280: raw value: 128[0m
+[1;31mE (1440390) BME280: raw value: 178[0m
+[1;31mE (1440390) BME280: raw value: 32946[0m
+[1;31mE (1440390) BME280: raw value: 124978[0m
+[1;31mE (1440390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1440390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1440400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1440400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1440400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1440410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1440410) main: temp: 24.41[0m
+[1;31mE (1440410) main: hum: 72.79[0m
+[1;31mE (1450390) BME280: raw value: 128[0m
+[1;31mE (1450390) BME280: raw value: 189[0m
+[1;31mE (1450390) BME280: raw value: 32957[0m
+[1;31mE (1450390) BME280: raw value: 124952[0m
+[1;31mE (1450390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1450390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1450400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1450400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1450400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1450410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1450410) main: temp: 24.40[0m
+[1;31mE (1450410) main: hum: 72.85[0m
+[1;31mE (1460390) BME280: raw value: 128[0m
+[1;31mE (1460390) BME280: raw value: 152[0m
+[1;31mE (1460390) BME280: raw value: 32920[0m
+[1;31mE (1460390) BME280: raw value: 125082[0m
+[1;31mE (1460390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1460390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1460400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1460400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1460400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1460410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1460410) main: temp: 24.43[0m
+[1;31mE (1460410) main: hum: 72.65[0m
+[1;31mE (1470390) BME280: raw value: 128[0m
+[1;31mE (1470390) BME280: raw value: 146[0m
+[1;31mE (1470390) BME280: raw value: 32914[0m
+[1;31mE (1470390) BME280: raw value: 125187[0m
+[1;31mE (1470390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1470390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1470400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1470400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1470400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1470410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1470410) main: temp: 24.45[0m
+[1;31mE (1470410) main: hum: 72.62[0m
+[1;31mE (1480390) BME280: raw value: 128[0m
+[1;31mE (1480390) BME280: raw value: 157[0m
+[1;31mE (1480390) BME280: raw value: 32925[0m
+[1;31mE (1480390) BME280: raw value: 125291[0m
+[1;31mE (1480390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1480390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1480400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1480400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1480400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1480410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1480410) main: temp: 24.47[0m
+[1;31mE (1480410) main: hum: 72.68[0m
+[1;31mE (1490390) BME280: raw value: 128[0m
+[1;31mE (1490390) BME280: raw value: 140[0m
+[1;31mE (1490390) BME280: raw value: 32908[0m
+[1;31mE (1490390) BME280: raw value: 125370[0m
+[1;31mE (1490390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1490390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1490400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1490400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1490400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1490410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1490410) main: temp: 24.49[0m
+[1;31mE (1490410) main: hum: 72.58[0m
+[1;31mE (1500390) BME280: raw value: 128[0m
+[1;31mE (1500390) BME280: raw value: 153[0m
+[1;31mE (1500390) BME280: raw value: 32921[0m
+[1;31mE (1500390) BME280: raw value: 125344[0m
+[1;31mE (1500390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1500390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1500400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1500400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1500400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1500410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1500410) main: temp: 24.48[0m
+[1;31mE (1500410) main: hum: 72.66[0m
+[1;31mE (1510390) BME280: raw value: 128[0m
+[1;31mE (1510390) BME280: raw value: 167[0m
+[1;31mE (1510390) BME280: raw value: 32935[0m
+[1;31mE (1510390) BME280: raw value: 125213[0m
+[1;31mE (1510390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1510390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1510400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1510400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1510400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1510410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1510410) main: temp: 24.46[0m
+[1;31mE (1510410) main: hum: 72.73[0m
+[1;31mE (1520390) BME280: raw value: 128[0m
+[1;31mE (1520390) BME280: raw value: 175[0m
+[1;31mE (1520390) BME280: raw value: 32943[0m
+[1;31mE (1520390) BME280: raw value: 125056[0m
+[1;31mE (1520390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1520390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1520400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1520400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1520400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1520410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1520410) main: temp: 24.43[0m
+[1;31mE (1520410) main: hum: 72.78[0m
+[1;31mE (1530390) BME280: raw value: 128[0m
+[1;31mE (1530390) BME280: raw value: 190[0m
+[1;31mE (1530390) BME280: raw value: 32958[0m
+[1;31mE (1530390) BME280: raw value: 125004[0m
+[1;31mE (1530390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1530390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1530400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1530400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1530400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1530410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1530410) main: temp: 24.41[0m
+[1;31mE (1530410) main: hum: 72.86[0m
+[1;31mE (1540390) BME280: raw value: 128[0m
+[1;31mE (1540390) BME280: raw value: 193[0m
+[1;31mE (1540390) BME280: raw value: 32961[0m
+[1;31mE (1540390) BME280: raw value: 124847[0m
+[1;31mE (1540390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1540390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1540400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1540400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1540400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1540410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1540410) main: temp: 24.38[0m
+[1;31mE (1540410) main: hum: 72.87[0m
+[1;31mE (1550390) BME280: raw value: 128[0m
+[1;31mE (1550390) BME280: raw value: 194[0m
+[1;31mE (1550390) BME280: raw value: 32962[0m
+[1;31mE (1550390) BME280: raw value: 124926[0m
+[1;31mE (1550390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1550390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1550400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1550400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1550400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1550410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1550410) main: temp: 24.40[0m
+[1;31mE (1550410) main: hum: 72.88[0m
+[1;31mE (1560390) BME280: raw value: 128[0m
+[1;31mE (1560390) BME280: raw value: 209[0m
+[1;31mE (1560390) BME280: raw value: 32977[0m
+[1;31mE (1560390) BME280: raw value: 124926[0m
+[1;31mE (1560390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1560390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1560400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1560400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1560400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1560410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1560410) main: temp: 24.40[0m
+[1;31mE (1560410) main: hum: 72.96[0m
+[1;31mE (1570390) BME280: raw value: 128[0m
+[1;31mE (1570390) BME280: raw value: 186[0m
+[1;31mE (1570390) BME280: raw value: 32954[0m
+[1;31mE (1570390) BME280: raw value: 124952[0m
+[1;31mE (1570390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1570390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1570400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1570400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1570400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1570410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1570410) main: temp: 24.40[0m
+[1;31mE (1570410) main: hum: 72.84[0m
+[1;31mE (1580390) BME280: raw value: 128[0m
+[1;31mE (1580390) BME280: raw value: 173[0m
+[1;31mE (1580390) BME280: raw value: 32941[0m
+[1;31mE (1580390) BME280: raw value: 125161[0m
+[1;31mE (1580390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1580390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1580400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1580400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1580400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1580410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1580410) main: temp: 24.45[0m
+[1;31mE (1580410) main: hum: 72.77[0m
+[1;31mE (1590390) BME280: raw value: 128[0m
+[1;31mE (1590390) BME280: raw value: 168[0m
+[1;31mE (1590390) BME280: raw value: 32936[0m
+[1;31mE (1590390) BME280: raw value: 125265[0m
+[1;31mE (1590390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1590390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1590400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1590400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1590400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1590410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1590410) main: temp: 24.47[0m
+[1;31mE (1590410) main: hum: 72.74[0m
+[1;31mE (1600390) BME280: raw value: 128[0m
+[1;31mE (1600390) BME280: raw value: 177[0m
+[1;31mE (1600390) BME280: raw value: 32945[0m
+[1;31mE (1600390) BME280: raw value: 125161[0m
+[1;31mE (1600390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1600390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1600400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1600400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1600400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1600410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1600410) main: temp: 24.45[0m
+[1;31mE (1600410) main: hum: 72.79[0m
+[1;31mE (1610390) BME280: raw value: 128[0m
+[1;31mE (1610390) BME280: raw value: 159[0m
+[1;31mE (1610390) BME280: raw value: 32927[0m
+[1;31mE (1610390) BME280: raw value: 125396[0m
+[1;31mE (1610390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1610390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1610400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1610400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1610400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1610410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1610410) main: temp: 24.49[0m
+[1;31mE (1610410) main: hum: 72.69[0m
+[1;31mE (1620390) BME280: raw value: 128[0m
+[1;31mE (1620390) BME280: raw value: 158[0m
+[1;31mE (1620390) BME280: raw value: 32926[0m
+[1;31mE (1620390) BME280: raw value: 125500[0m
+[1;31mE (1620390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1620390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1620400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1620400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1620400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1620410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1620410) main: temp: 24.51[0m
+[1;31mE (1620410) main: hum: 72.69[0m
+[1;31mE (1630390) BME280: raw value: 128[0m
+[1;31mE (1630390) BME280: raw value: 154[0m
+[1;31mE (1630390) BME280: raw value: 32922[0m
+[1;31mE (1630390) BME280: raw value: 125579[0m
+[1;31mE (1630390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1630390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1630400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1630400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1630400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1630410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1630410) main: temp: 24.53[0m
+[1;31mE (1630410) main: hum: 72.67[0m
+[1;31mE (1640390) BME280: raw value: 128[0m
+[1;31mE (1640390) BME280: raw value: 177[0m
+[1;31mE (1640390) BME280: raw value: 32945[0m
+[1;31mE (1640390) BME280: raw value: 125422[0m
+[1;31mE (1640390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1640390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1640400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1640400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1640400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1640410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1640410) main: temp: 24.50[0m
+[1;31mE (1640410) main: hum: 72.79[0m
+[1;31mE (1650390) BME280: raw value: 128[0m
+[1;31mE (1650390) BME280: raw value: 177[0m
+[1;31mE (1650390) BME280: raw value: 32945[0m
+[1;31mE (1650390) BME280: raw value: 125474[0m
+[1;31mE (1650390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1650390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1650400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1650400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1650400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1650410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1650410) main: temp: 24.51[0m
+[1;31mE (1650410) main: hum: 72.79[0m
+[1;31mE (1660390) BME280: raw value: 128[0m
+[1;31mE (1660390) BME280: raw value: 190[0m
+[1;31mE (1660390) BME280: raw value: 32958[0m
+[1;31mE (1660390) BME280: raw value: 125370[0m
+[1;31mE (1660390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1660390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1660400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1660400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1660400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1660410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1660410) main: temp: 24.49[0m
+[1;31mE (1660410) main: hum: 72.86[0m
+[1;31mE (1670390) BME280: raw value: 128[0m
+[1;31mE (1670390) BME280: raw value: 206[0m
+[1;31mE (1670390) BME280: raw value: 32974[0m
+[1;31mE (1670390) BME280: raw value: 125213[0m
+[1;31mE (1670390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1670390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1670400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1670400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1670400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1670410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1670410) main: temp: 24.46[0m
+[1;31mE (1670410) main: hum: 72.95[0m
+[1;31mE (1680390) BME280: raw value: 128[0m
+[1;31mE (1680390) BME280: raw value: 222[0m
+[1;31mE (1680390) BME280: raw value: 32990[0m
+[1;31mE (1680390) BME280: raw value: 125056[0m
+[1;31mE (1680390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1680390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1680400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1680400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1680400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1680410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1680410) main: temp: 24.43[0m
+[1;31mE (1680410) main: hum: 73.04[0m
+[1;31mE (1690390) BME280: raw value: 128[0m
+[1;31mE (1690390) BME280: raw value: 251[0m
+[1;31mE (1690390) BME280: raw value: 33019[0m
+[1;31mE (1690390) BME280: raw value: 124900[0m
+[1;31mE (1690390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1690390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1690400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1690400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1690400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1690410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1690410) main: temp: 24.39[0m
+[1;31mE (1690410) main: hum: 73.20[0m
+[1;31mE (1700390) BME280: raw value: 129[0m
+[1;31mE (1700390) BME280: raw value: 3[0m
+[1;31mE (1700390) BME280: raw value: 33027[0m
+[1;31mE (1700390) BME280: raw value: 124716[0m
+[1;31mE (1700390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1700390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1700390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1700400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1700400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1700410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1700410) main: temp: 24.36[0m
+[1;31mE (1700410) main: hum: 73.24[0m
+[1;31mE (1710390) BME280: raw value: 129[0m
+[1;31mE (1710390) BME280: raw value: 12[0m
+[1;31mE (1710390) BME280: raw value: 33036[0m
+[1;31mE (1710390) BME280: raw value: 124611[0m
+[1;31mE (1710390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1710390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1710400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1710400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1710400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1710410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1710410) main: temp: 24.34[0m
+[1;31mE (1710410) main: hum: 73.29[0m
+[1;31mE (1720390) BME280: raw value: 129[0m
+[1;31mE (1720390) BME280: raw value: 17[0m
+[1;31mE (1720390) BME280: raw value: 33041[0m
+[1;31mE (1720390) BME280: raw value: 124637[0m
+[1;31mE (1720390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1720390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1720400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1720400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1720400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1720410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1720410) main: temp: 24.34[0m
+[1;31mE (1720410) main: hum: 73.32[0m
+[1;31mE (1730390) BME280: raw value: 129[0m
+[1;31mE (1730390) BME280: raw value: 2[0m
+[1;31mE (1730390) BME280: raw value: 33026[0m
+[1;31mE (1730390) BME280: raw value: 124664[0m
+[1;31mE (1730390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1730390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1730390) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1730400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1730400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1730410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1730410) main: temp: 24.35[0m
+[1;31mE (1730410) main: hum: 73.23[0m
+[1;31mE (1740390) BME280: raw value: 128[0m
+[1;31mE (1740390) BME280: raw value: 255[0m
+[1;31mE (1740390) BME280: raw value: 33023[0m
+[1;31mE (1740390) BME280: raw value: 124637[0m
+[1;31mE (1740390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1740390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1740400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1740400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1740400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1740410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1740410) main: temp: 24.34[0m
+[1;31mE (1740410) main: hum: 73.22[0m
+[1;31mE (1750390) BME280: raw value: 128[0m
+[1;31mE (1750390) BME280: raw value: 250[0m
+[1;31mE (1750390) BME280: raw value: 33018[0m
+[1;31mE (1750390) BME280: raw value: 124690[0m
+[1;31mE (1750390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1750390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1750400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1750400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1750400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1750410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1750410) main: temp: 24.35[0m
+[1;31mE (1750410) main: hum: 73.19[0m
+[1;31mE (1760390) BME280: raw value: 128[0m
+[1;31mE (1760390) BME280: raw value: 243[0m
+[1;31mE (1760390) BME280: raw value: 33011[0m
+[1;31mE (1760390) BME280: raw value: 124795[0m
+[1;31mE (1760390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1760390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1760400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1760400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1760400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1760410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1760410) main: temp: 24.37[0m
+[1;31mE (1760410) main: hum: 73.15[0m
+[1;31mE (1770390) BME280: raw value: 128[0m
+[1;31mE (1770390) BME280: raw value: 240[0m
+[1;31mE (1770390) BME280: raw value: 33008[0m
+[1;31mE (1770390) BME280: raw value: 124873[0m
+[1;31mE (1770390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1770390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1770400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1770400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1770400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1770410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1770410) main: temp: 24.39[0m
+[1;31mE (1770410) main: hum: 73.14[0m
+[1;31mE (1780390) BME280: raw value: 128[0m
+[1;31mE (1780390) BME280: raw value: 239[0m
+[1;31mE (1780390) BME280: raw value: 33007[0m
+[1;31mE (1780390) BME280: raw value: 124873[0m
+[1;31mE (1780390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1780390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1780400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1780400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1780400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1780410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1780410) main: temp: 24.39[0m
+[1;31mE (1780410) main: hum: 73.13[0m
+[1;31mE (1790390) BME280: raw value: 128[0m
+[1;31mE (1790390) BME280: raw value: 214[0m
+[1;31mE (1790390) BME280: raw value: 32982[0m
+[1;31mE (1790390) BME280: raw value: 125004[0m
+[1;31mE (1790390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1790390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1790400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1790400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1790400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1790410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1790410) main: temp: 24.41[0m
+[1;31mE (1790410) main: hum: 72.99[0m
+[1;31mE (1800390) BME280: raw value: 128[0m
+[1;31mE (1800390) BME280: raw value: 212[0m
+[1;31mE (1800390) BME280: raw value: 32980[0m
+[1;31mE (1800390) BME280: raw value: 125056[0m
+[1;31mE (1800390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1800390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1800400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1800400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1800400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1800410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1800410) main: temp: 24.43[0m
+[1;31mE (1800410) main: hum: 72.98[0m
+[1;31mE (1810390) BME280: raw value: 128[0m
+[1;31mE (1810390) BME280: raw value: 184[0m
+[1;31mE (1810390) BME280: raw value: 32952[0m
+[1;31mE (1810390) BME280: raw value: 125161[0m
+[1;31mE (1810390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1810390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1810400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1810400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1810400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1810410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1810410) main: temp: 24.45[0m
+[1;31mE (1810410) main: hum: 72.83[0m
+[1;31mE (1820390) BME280: raw value: 128[0m
+[1;31mE (1820390) BME280: raw value: 184[0m
+[1;31mE (1820390) BME280: raw value: 32952[0m
+[1;31mE (1820390) BME280: raw value: 125344[0m
+[1;31mE (1820390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1820390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1820400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1820400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1820400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1820410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1820410) main: temp: 24.48[0m
+[1;31mE (1820410) main: hum: 72.83[0m
+[1;31mE (1830390) BME280: raw value: 128[0m
+[1;31mE (1830390) BME280: raw value: 169[0m
+[1;31mE (1830390) BME280: raw value: 32937[0m
+[1;31mE (1830390) BME280: raw value: 125370[0m
+[1;31mE (1830390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1830390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1830400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1830400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1830400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1830410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1830410) main: temp: 24.49[0m
+[1;31mE (1830410) main: hum: 72.75[0m
+[1;31mE (1840390) BME280: raw value: 128[0m
+[1;31mE (1840390) BME280: raw value: 175[0m
+[1;31mE (1840390) BME280: raw value: 32943[0m
+[1;31mE (1840390) BME280: raw value: 125448[0m
+[1;31mE (1840390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1840390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1840400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1840400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1840400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1840410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1840410) main: temp: 24.50[0m
+[1;31mE (1840410) main: hum: 72.78[0m
+[1;31mE (1850390) BME280: raw value: 128[0m
+[1;31mE (1850390) BME280: raw value: 161[0m
+[1;31mE (1850390) BME280: raw value: 32929[0m
+[1;31mE (1850390) BME280: raw value: 125448[0m
+[1;31mE (1850390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1850390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1850400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1850400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1850400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1850410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1850410) main: temp: 24.50[0m
+[1;31mE (1850410) main: hum: 72.70[0m
+[1;31mE (1860390) BME280: raw value: 128[0m
+[1;31mE (1860390) BME280: raw value: 142[0m
+[1;31mE (1860390) BME280: raw value: 32910[0m
+[1;31mE (1860390) BME280: raw value: 125526[0m
+[1;31mE (1860390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1860390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1860400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1860400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1860400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1860410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1860410) main: temp: 24.52[0m
+[1;31mE (1860410) main: hum: 72.60[0m
+[1;31mE (1870390) BME280: raw value: 128[0m
+[1;31mE (1870390) BME280: raw value: 137[0m
+[1;31mE (1870390) BME280: raw value: 32905[0m
+[1;31mE (1870390) BME280: raw value: 125631[0m
+[1;31mE (1870390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1870390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1870400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1870400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1870400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1870410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1870410) main: temp: 24.54[0m
+[1;31mE (1870410) main: hum: 72.57[0m
+[1;31mE (1880390) BME280: raw value: 128[0m
+[1;31mE (1880390) BME280: raw value: 136[0m
+[1;31mE (1880390) BME280: raw value: 32904[0m
+[1;31mE (1880390) BME280: raw value: 125683[0m
+[1;31mE (1880390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1880390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1880400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1880400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1880400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1880410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1880410) main: temp: 24.55[0m
+[1;31mE (1880410) main: hum: 72.57[0m
+[1;31mE (1890390) BME280: raw value: 128[0m
+[1;31mE (1890390) BME280: raw value: 124[0m
+[1;31mE (1890390) BME280: raw value: 32892[0m
+[1;31mE (1890390) BME280: raw value: 125709[0m
+[1;31mE (1890390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1890390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1890400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1890400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1890400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1890410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1890410) main: temp: 24.55[0m
+[1;31mE (1890410) main: hum: 72.50[0m
+[1;31mE (1900390) BME280: raw value: 128[0m
+[1;31mE (1900390) BME280: raw value: 117[0m
+[1;31mE (1900390) BME280: raw value: 32885[0m
+[1;31mE (1900390) BME280: raw value: 125840[0m
+[1;31mE (1900390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1900390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1900400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1900400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1900400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1900410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1900410) main: temp: 24.58[0m
+[1;31mE (1900410) main: hum: 72.46[0m
+[1;31mE (1910390) BME280: raw value: 128[0m
+[1;31mE (1910390) BME280: raw value: 99[0m
+[1;31mE (1910390) BME280: raw value: 32867[0m
+[1;31mE (1910390) BME280: raw value: 125866[0m
+[1;31mE (1910390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1910390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1910400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1910400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1910400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1910410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1910410) main: temp: 24.58[0m
+[1;31mE (1910410) main: hum: 72.36[0m
+[1;31mE (1920390) BME280: raw value: 128[0m
+[1;31mE (1920390) BME280: raw value: 96[0m
+[1;31mE (1920390) BME280: raw value: 32864[0m
+[1;31mE (1920390) BME280: raw value: 126023[0m
+[1;31mE (1920390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1920390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1920400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1920400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1920400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1920410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1920410) main: temp: 24.61[0m
+[1;31mE (1920410) main: hum: 72.35[0m
+[1;31mE (1930390) BME280: raw value: 128[0m
+[1;31mE (1930390) BME280: raw value: 71[0m
+[1;31mE (1930390) BME280: raw value: 32839[0m
+[1;31mE (1930390) BME280: raw value: 126153[0m
+[1;31mE (1930390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1930390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1930400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1930400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1930400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1930410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1930410) main: temp: 24.64[0m
+[1;31mE (1930410) main: hum: 72.21[0m
+[1;31mE (1940390) BME280: raw value: 128[0m
+[1;31mE (1940390) BME280: raw value: 52[0m
+[1;31mE (1940390) BME280: raw value: 32820[0m
+[1;31mE (1940390) BME280: raw value: 126179[0m
+[1;31mE (1940390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1940390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1940400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1940400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1940400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1940410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1940410) main: temp: 24.64[0m
+[1;31mE (1940410) main: hum: 72.10[0m
+[1;31mE (1950390) BME280: raw value: 128[0m
+[1;31mE (1950390) BME280: raw value: 66[0m
+[1;31mE (1950390) BME280: raw value: 32834[0m
+[1;31mE (1950390) BME280: raw value: 126231[0m
+[1;31mE (1950390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1950390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1950400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1950400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1950400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1950410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1950410) main: temp: 24.65[0m
+[1;31mE (1950410) main: hum: 72.18[0m
+[1;31mE (1960390) BME280: raw value: 128[0m
+[1;31mE (1960390) BME280: raw value: 37[0m
+[1;31mE (1960390) BME280: raw value: 32805[0m
+[1;31mE (1960390) BME280: raw value: 126336[0m
+[1;31mE (1960390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1960390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1960400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1960400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1960400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1960410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1960410) main: temp: 24.68[0m
+[1;31mE (1960410) main: hum: 72.02[0m
+[1;31mE (1970390) BME280: raw value: 128[0m
+[1;31mE (1970390) BME280: raw value: 33[0m
+[1;31mE (1970390) BME280: raw value: 32801[0m
+[1;31mE (1970390) BME280: raw value: 126362[0m
+[1;31mE (1970390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1970390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1970400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1970400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1970400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1970410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1970410) main: temp: 24.68[0m
+[1;31mE (1970410) main: hum: 72.00[0m
+[1;31mE (1980390) BME280: raw value: 128[0m
+[1;31mE (1980390) BME280: raw value: 36[0m
+[1;31mE (1980390) BME280: raw value: 32804[0m
+[1;31mE (1980390) BME280: raw value: 126362[0m
+[1;31mE (1980390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1980390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1980400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1980400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1980400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1980410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1980410) main: temp: 24.68[0m
+[1;31mE (1980410) main: hum: 72.02[0m
+[1;31mE (1990390) BME280: raw value: 128[0m
+[1;31mE (1990390) BME280: raw value: 12[0m
+[1;31mE (1990390) BME280: raw value: 32780[0m
+[1;31mE (1990390) BME280: raw value: 126466[0m
+[1;31mE (1990390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (1990390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (1990400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (1990400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (1990400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (1990410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (1990410) main: temp: 24.70[0m
+[1;31mE (1990410) main: hum: 71.89[0m
+[1;31mE (2000390) BME280: raw value: 127[0m
+[1;31mE (2000390) BME280: raw value: 251[0m
+[1;31mE (2000390) BME280: raw value: 32763[0m
+[1;31mE (2000390) BME280: raw value: 126597[0m
+[1;31mE (2000390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2000390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2000400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2000400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2000400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2000410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2000410) main: temp: 24.73[0m
+[1;31mE (2000410) main: hum: 71.79[0m
+[1;31mE (2010390) BME280: raw value: 127[0m
+[1;31mE (2010390) BME280: raw value: 252[0m
+[1;31mE (2010390) BME280: raw value: 32764[0m
+[1;31mE (2010390) BME280: raw value: 126545[0m
+[1;31mE (2010390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2010390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2010400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2010400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2010400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2010410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2010410) main: temp: 24.72[0m
+[1;31mE (2010410) main: hum: 71.80[0m
+[1;31mE (2020390) BME280: raw value: 127[0m
+[1;31mE (2020390) BME280: raw value: 249[0m
+[1;31mE (2020390) BME280: raw value: 32761[0m
+[1;31mE (2020390) BME280: raw value: 126649[0m
+[1;31mE (2020390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2020390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2020400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2020400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2020400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2020410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2020410) main: temp: 24.74[0m
+[1;31mE (2020410) main: hum: 71.78[0m
+[1;31mE (2030390) BME280: raw value: 127[0m
+[1;31mE (2030390) BME280: raw value: 241[0m
+[1;31mE (2030390) BME280: raw value: 32753[0m
+[1;31mE (2030390) BME280: raw value: 126545[0m
+[1;31mE (2030390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2030390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2030400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2030400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2030400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2030410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2030410) main: temp: 24.72[0m
+[1;31mE (2030410) main: hum: 71.74[0m
+[1;31mE (2040390) BME280: raw value: 127[0m
+[1;31mE (2040390) BME280: raw value: 228[0m
+[1;31mE (2040390) BME280: raw value: 32740[0m
+[1;31mE (2040390) BME280: raw value: 126597[0m
+[1;31mE (2040390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2040390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2040400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2040400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2040400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2040410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2040410) main: temp: 24.73[0m
+[1;31mE (2040410) main: hum: 71.66[0m
+[1;31mE (2050390) BME280: raw value: 127[0m
+[1;31mE (2050390) BME280: raw value: 204[0m
+[1;31mE (2050390) BME280: raw value: 32716[0m
+[1;31mE (2050390) BME280: raw value: 126597[0m
+[1;31mE (2050390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2050390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2050400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2050400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2050400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2050410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2050410) main: temp: 24.73[0m
+[1;31mE (2050410) main: hum: 71.53[0m
+[1;31mE (2060390) BME280: raw value: 127[0m
+[1;31mE (2060390) BME280: raw value: 208[0m
+[1;31mE (2060390) BME280: raw value: 32720[0m
+[1;31mE (2060390) BME280: raw value: 126597[0m
+[1;31mE (2060390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2060390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2060400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2060400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2060400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2060410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2060410) main: temp: 24.73[0m
+[1;31mE (2060410) main: hum: 71.55[0m
+[1;31mE (2070390) BME280: raw value: 127[0m
+[1;31mE (2070390) BME280: raw value: 217[0m
+[1;31mE (2070390) BME280: raw value: 32729[0m
+[1;31mE (2070390) BME280: raw value: 126728[0m
+[1;31mE (2070390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2070390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2070400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2070400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2070400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2070410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2070410) main: temp: 24.75[0m
+[1;31mE (2070410) main: hum: 71.60[0m
+[1;31mE (2080390) BME280: raw value: 127[0m
+[1;31mE (2080390) BME280: raw value: 209[0m
+[1;31mE (2080390) BME280: raw value: 32721[0m
+[1;31mE (2080390) BME280: raw value: 126675[0m
+[1;31mE (2080390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2080390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2080400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2080400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2080400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2080410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2080410) main: temp: 24.74[0m
+[1;31mE (2080410) main: hum: 71.56[0m
+[1;31mE (2090390) BME280: raw value: 127[0m
+[1;31mE (2090390) BME280: raw value: 204[0m
+[1;31mE (2090390) BME280: raw value: 32716[0m
+[1;31mE (2090390) BME280: raw value: 126623[0m
+[1;31mE (2090390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2090390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2090400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2090400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2090400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2090410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2090410) main: temp: 24.73[0m
+[1;31mE (2090410) main: hum: 71.53[0m
+[1;31mE (2100390) BME280: raw value: 127[0m
+[1;31mE (2100390) BME280: raw value: 218[0m
+[1;31mE (2100390) BME280: raw value: 32730[0m
+[1;31mE (2100390) BME280: raw value: 126623[0m
+[1;31mE (2100390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2100390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2100400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2100400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2100400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2100410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2100410) main: temp: 24.73[0m
+[1;31mE (2100410) main: hum: 71.61[0m
+[1;31mE (2110390) BME280: raw value: 127[0m
+[1;31mE (2110390) BME280: raw value: 184[0m
+[1;31mE (2110390) BME280: raw value: 32696[0m
+[1;31mE (2110390) BME280: raw value: 126702[0m
+[1;31mE (2110390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2110390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2110400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2110400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2110400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2110410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2110410) main: temp: 24.75[0m
+[1;31mE (2110410) main: hum: 71.42[0m
+[1;31mE (2120390) BME280: raw value: 127[0m
+[1;31mE (2120390) BME280: raw value: 186[0m
+[1;31mE (2120390) BME280: raw value: 32698[0m
+[1;31mE (2120390) BME280: raw value: 126780[0m
+[1;31mE (2120390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2120390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2120400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2120400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2120400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2120410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2120410) main: temp: 24.76[0m
+[1;31mE (2120410) main: hum: 71.43[0m
+[1;31mE (2130390) BME280: raw value: 127[0m
+[1;31mE (2130390) BME280: raw value: 165[0m
+[1;31mE (2130390) BME280: raw value: 32677[0m
+[1;31mE (2130390) BME280: raw value: 126780[0m
+[1;31mE (2130390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2130390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2130400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2130400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2130400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2130410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2130410) main: temp: 24.76[0m
+[1;31mE (2130410) main: hum: 71.31[0m
+[1;31mE (2140390) BME280: raw value: 127[0m
+[1;31mE (2140390) BME280: raw value: 173[0m
+[1;31mE (2140390) BME280: raw value: 32685[0m
+[1;31mE (2140390) BME280: raw value: 126780[0m
+[1;31mE (2140390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2140390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2140400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2140400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2140400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2140410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2140410) main: temp: 24.76[0m
+[1;31mE (2140410) main: hum: 71.36[0m
+[1;31mE (2150390) BME280: raw value: 127[0m
+[1;31mE (2150390) BME280: raw value: 163[0m
+[1;31mE (2150390) BME280: raw value: 32675[0m
+[1;31mE (2150390) BME280: raw value: 126806[0m
+[1;31mE (2150390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2150390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2150400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2150400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2150400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2150410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2150410) main: temp: 24.77[0m
+[1;31mE (2150410) main: hum: 71.30[0m
+[1;31mE (2160390) BME280: raw value: 127[0m
+[1;31mE (2160390) BME280: raw value: 155[0m
+[1;31mE (2160390) BME280: raw value: 32667[0m
+[1;31mE (2160390) BME280: raw value: 126858[0m
+[1;31mE (2160390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2160390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2160400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2160400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2160400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2160410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2160410) main: temp: 24.78[0m
+[1;31mE (2160410) main: hum: 71.26[0m
+[1;31mE (2170390) BME280: raw value: 127[0m
+[1;31mE (2170390) BME280: raw value: 153[0m
+[1;31mE (2170390) BME280: raw value: 32665[0m
+[1;31mE (2170390) BME280: raw value: 126858[0m
+[1;31mE (2170390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2170390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2170400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2170400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2170400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2170410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2170410) main: temp: 24.78[0m
+[1;31mE (2170410) main: hum: 71.25[0m
+[1;31mE (2180390) BME280: raw value: 127[0m
+[1;31mE (2180390) BME280: raw value: 146[0m
+[1;31mE (2180390) BME280: raw value: 32658[0m
+[1;31mE (2180390) BME280: raw value: 126858[0m
+[1;31mE (2180390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2180390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2180400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2180400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2180400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2180410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2180410) main: temp: 24.78[0m
+[1;31mE (2180410) main: hum: 71.21[0m
+[1;31mE (2190390) BME280: raw value: 127[0m
+[1;31mE (2190390) BME280: raw value: 142[0m
+[1;31mE (2190390) BME280: raw value: 32654[0m
+[1;31mE (2190390) BME280: raw value: 126963[0m
+[1;31mE (2190390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2190390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2190400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2190400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2190400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2190410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2190410) main: temp: 24.80[0m
+[1;31mE (2190410) main: hum: 71.19[0m
+[1;31mE (2200390) BME280: raw value: 127[0m
+[1;31mE (2200390) BME280: raw value: 140[0m
+[1;31mE (2200390) BME280: raw value: 32652[0m
+[1;31mE (2200390) BME280: raw value: 126937[0m
+[1;31mE (2200390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2200390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2200400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2200400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2200400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2200410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2200410) main: temp: 24.79[0m
+[1;31mE (2200410) main: hum: 71.18[0m
+[1;31mE (2210390) BME280: raw value: 127[0m
+[1;31mE (2210390) BME280: raw value: 144[0m
+[1;31mE (2210390) BME280: raw value: 32656[0m
+[1;31mE (2210390) BME280: raw value: 127093[0m
+[1;31mE (2210390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2210390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2210400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2210400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2210400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2210410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2210410) main: temp: 24.82[0m
+[1;31mE (2210410) main: hum: 71.20[0m
+[1;31mE (2220390) BME280: raw value: 127[0m
+[1;31mE (2220390) BME280: raw value: 151[0m
+[1;31mE (2220390) BME280: raw value: 32663[0m
+[1;31mE (2220390) BME280: raw value: 126963[0m
+[1;31mE (2220390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2220390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2220400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2220400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2220400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2220410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2220410) main: temp: 24.80[0m
+[1;31mE (2220410) main: hum: 71.24[0m
+[1;31mE (2230390) BME280: raw value: 127[0m
+[1;31mE (2230390) BME280: raw value: 146[0m
+[1;31mE (2230390) BME280: raw value: 32658[0m
+[1;31mE (2230390) BME280: raw value: 126937[0m
+[1;31mE (2230390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2230390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2230400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2230400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2230400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2230410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2230410) main: temp: 24.79[0m
+[1;31mE (2230410) main: hum: 71.21[0m
+[1;31mE (2240390) BME280: raw value: 127[0m
+[1;31mE (2240390) BME280: raw value: 134[0m
+[1;31mE (2240390) BME280: raw value: 32646[0m
+[1;31mE (2240390) BME280: raw value: 126937[0m
+[1;31mE (2240390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2240390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2240400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2240400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2240400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2240410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2240410) main: temp: 24.79[0m
+[1;31mE (2240410) main: hum: 71.14[0m
+[1;31mE (2250390) BME280: raw value: 127[0m
+[1;31mE (2250390) BME280: raw value: 128[0m
+[1;31mE (2250390) BME280: raw value: 32640[0m
+[1;31mE (2250390) BME280: raw value: 127015[0m
+[1;31mE (2250390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2250390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2250400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2250400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2250400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2250410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2250410) main: temp: 24.81[0m
+[1;31mE (2250410) main: hum: 71.11[0m
+[1;31mE (2260390) BME280: raw value: 127[0m
+[1;31mE (2260390) BME280: raw value: 136[0m
+[1;31mE (2260390) BME280: raw value: 32648[0m
+[1;31mE (2260390) BME280: raw value: 127015[0m
+[1;31mE (2260390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2260390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2260400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2260400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2260400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2260410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2260410) main: temp: 24.81[0m
+[1;31mE (2260410) main: hum: 71.15[0m
+[1;31mE (2270390) BME280: raw value: 127[0m
+[1;31mE (2270390) BME280: raw value: 130[0m
+[1;31mE (2270390) BME280: raw value: 32642[0m
+[1;31mE (2270390) BME280: raw value: 126989[0m
+[1;31mE (2270390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2270390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2270400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2270400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2270400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2270410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2270410) main: temp: 24.80[0m
+[1;31mE (2270410) main: hum: 71.12[0m
+[1;31mE (2280390) BME280: raw value: 127[0m
+[1;31mE (2280390) BME280: raw value: 133[0m
+[1;31mE (2280390) BME280: raw value: 32645[0m
+[1;31mE (2280390) BME280: raw value: 126989[0m
+[1;31mE (2280390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2280390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2280400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2280400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2280400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2280410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2280410) main: temp: 24.80[0m
+[1;31mE (2280410) main: hum: 71.14[0m
+[1;31mE (2290390) BME280: raw value: 127[0m
+[1;31mE (2290390) BME280: raw value: 129[0m
+[1;31mE (2290390) BME280: raw value: 32641[0m
+[1;31mE (2290390) BME280: raw value: 126937[0m
+[1;31mE (2290390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2290390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2290400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2290400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2290400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2290410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2290410) main: temp: 24.79[0m
+[1;31mE (2290410) main: hum: 71.11[0m
+[1;31mE (2300390) BME280: raw value: 127[0m
+[1;31mE (2300390) BME280: raw value: 131[0m
+[1;31mE (2300390) BME280: raw value: 32643[0m
+[1;31mE (2300390) BME280: raw value: 126937[0m
+[1;31mE (2300390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2300390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2300400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2300400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2300400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2300410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2300410) main: temp: 24.79[0m
+[1;31mE (2300410) main: hum: 71.13[0m
+[1;31mE (2310390) BME280: raw value: 127[0m
+[1;31mE (2310390) BME280: raw value: 123[0m
+[1;31mE (2310390) BME280: raw value: 32635[0m
+[1;31mE (2310390) BME280: raw value: 126989[0m
+[1;31mE (2310390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2310390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2310400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2310400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2310400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2310410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2310410) main: temp: 24.80[0m
+[1;31mE (2310410) main: hum: 71.08[0m
+[1;31mE (2320390) BME280: raw value: 127[0m
+[1;31mE (2320390) BME280: raw value: 127[0m
+[1;31mE (2320390) BME280: raw value: 32639[0m
+[1;31mE (2320390) BME280: raw value: 126989[0m
+[1;31mE (2320390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2320390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2320400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2320400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2320400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2320410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2320410) main: temp: 24.80[0m
+[1;31mE (2320410) main: hum: 71.10[0m
+[1;31mE (2330390) BME280: raw value: 127[0m
+[1;31mE (2330390) BME280: raw value: 125[0m
+[1;31mE (2330390) BME280: raw value: 32637[0m
+[1;31mE (2330390) BME280: raw value: 126989[0m
+[1;31mE (2330390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2330390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2330400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2330400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2330400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2330410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2330410) main: temp: 24.80[0m
+[1;31mE (2330410) main: hum: 71.09[0m
+[1;31mE (2340390) BME280: raw value: 127[0m
+[1;31mE (2340390) BME280: raw value: 143[0m
+[1;31mE (2340390) BME280: raw value: 32655[0m
+[1;31mE (2340390) BME280: raw value: 126937[0m
+[1;31mE (2340390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2340390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2340400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2340400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2340400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2340410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2340410) main: temp: 24.79[0m
+[1;31mE (2340410) main: hum: 71.19[0m
+[1;31mE (2350390) BME280: raw value: 127[0m
+[1;31mE (2350390) BME280: raw value: 127[0m
+[1;31mE (2350390) BME280: raw value: 32639[0m
+[1;31mE (2350390) BME280: raw value: 126937[0m
+[1;31mE (2350390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2350390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2350400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2350400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2350400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2350410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2350410) main: temp: 24.79[0m
+[1;31mE (2350410) main: hum: 71.10[0m
+[1;31mE (2360390) BME280: raw value: 127[0m
+[1;31mE (2360390) BME280: raw value: 121[0m
+[1;31mE (2360390) BME280: raw value: 32633[0m
+[1;31mE (2360390) BME280: raw value: 126963[0m
+[1;31mE (2360390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2360390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2360400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2360400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2360400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2360410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2360410) main: temp: 24.80[0m
+[1;31mE (2360410) main: hum: 71.07[0m
+[1;31mE (2370390) BME280: raw value: 127[0m
+[1;31mE (2370390) BME280: raw value: 116[0m
+[1;31mE (2370390) BME280: raw value: 32628[0m
+[1;31mE (2370390) BME280: raw value: 127015[0m
+[1;31mE (2370390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2370390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2370400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2370400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2370400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2370410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2370410) main: temp: 24.81[0m
+[1;31mE (2370410) main: hum: 71.04[0m
+[1;31mE (2380390) BME280: raw value: 127[0m
+[1;31mE (2380390) BME280: raw value: 121[0m
+[1;31mE (2380390) BME280: raw value: 32633[0m
+[1;31mE (2380390) BME280: raw value: 126989[0m
+[1;31mE (2380390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2380390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2380400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2380400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2380400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2380410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2380410) main: temp: 24.80[0m
+[1;31mE (2380410) main: hum: 71.07[0m
+[1;31mE (2390390) BME280: raw value: 127[0m
+[1;31mE (2390390) BME280: raw value: 101[0m
+[1;31mE (2390390) BME280: raw value: 32613[0m
+[1;31mE (2390390) BME280: raw value: 127015[0m
+[1;31mE (2390390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2390390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2390400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2390400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2390400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2390410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2390410) main: temp: 24.81[0m
+[1;31mE (2390410) main: hum: 70.96[0m
+[1;31mE (2400390) BME280: raw value: 127[0m
+[1;31mE (2400390) BME280: raw value: 116[0m
+[1;31mE (2400390) BME280: raw value: 32628[0m
+[1;31mE (2400390) BME280: raw value: 126963[0m
+[1;31mE (2400390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2400390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2400400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2400400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2400400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2400410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2400410) main: temp: 24.80[0m
+[1;31mE (2400410) main: hum: 71.04[0m
+[1;31mE (2410390) BME280: raw value: 127[0m
+[1;31mE (2410390) BME280: raw value: 110[0m
+[1;31mE (2410390) BME280: raw value: 32622[0m
+[1;31mE (2410390) BME280: raw value: 127015[0m
+[1;31mE (2410390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2410390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2410400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2410400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2410400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2410410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2410410) main: temp: 24.81[0m
+[1;31mE (2410410) main: hum: 71.01[0m
+[1;31mE (2420390) BME280: raw value: 127[0m
+[1;31mE (2420390) BME280: raw value: 104[0m
+[1;31mE (2420390) BME280: raw value: 32616[0m
+[1;31mE (2420390) BME280: raw value: 127067[0m
+[1;31mE (2420390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2420390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2420400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2420400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2420400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2420410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2420410) main: temp: 24.82[0m
+[1;31mE (2420410) main: hum: 70.98[0m
+[1;31mE (2430390) BME280: raw value: 127[0m
+[1;31mE (2430390) BME280: raw value: 113[0m
+[1;31mE (2430390) BME280: raw value: 32625[0m
+[1;31mE (2430390) BME280: raw value: 127041[0m
+[1;31mE (2430390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2430390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2430400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2430400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2430400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2430410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2430410) main: temp: 24.81[0m
+[1;31mE (2430410) main: hum: 71.03[0m
+[1;31mE (2440390) BME280: raw value: 127[0m
+[1;31mE (2440390) BME280: raw value: 108[0m
+[1;31mE (2440390) BME280: raw value: 32620[0m
+[1;31mE (2440390) BME280: raw value: 127041[0m
+[1;31mE (2440390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2440390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2440400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2440400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2440400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2440410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2440410) main: temp: 24.81[0m
+[1;31mE (2440410) main: hum: 71.00[0m
+[1;31mE (2450390) BME280: raw value: 127[0m
+[1;31mE (2450390) BME280: raw value: 123[0m
+[1;31mE (2450390) BME280: raw value: 32635[0m
+[1;31mE (2450390) BME280: raw value: 126989[0m
+[1;31mE (2450390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2450390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2450400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2450400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2450400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2450410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2450410) main: temp: 24.80[0m
+[1;31mE (2450410) main: hum: 71.08[0m
+[1;31mE (2460390) BME280: raw value: 127[0m
+[1;31mE (2460390) BME280: raw value: 127[0m
+[1;31mE (2460390) BME280: raw value: 32639[0m
+[1;31mE (2460390) BME280: raw value: 127067[0m
+[1;31mE (2460390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2460390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2460400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2460400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2460400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2460410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2460410) main: temp: 24.82[0m
+[1;31mE (2460410) main: hum: 71.11[0m
+[1;31mE (2470390) BME280: raw value: 127[0m
+[1;31mE (2470390) BME280: raw value: 128[0m
+[1;31mE (2470390) BME280: raw value: 32640[0m
+[1;31mE (2470390) BME280: raw value: 127250[0m
+[1;31mE (2470390) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (2470390) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (2470400) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (2470400) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (2470400) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (2470410) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (2470410) main: temp: 24.85[0m
+[1;31mE (2470410) main: hum: 71.11[0m

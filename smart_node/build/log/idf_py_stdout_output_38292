@@ -1,89 +1,454 @@
-[1/10] Performing build step for 'bootloader'
-[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_node/build/bootloader/bootloader.bin"
-Bootloader binary size 0x54c0 bytes. 0x2b40 bytes (34%) free.
-[2/10] No install step for 'bootloader'
-[3/10] Completed 'bootloader'
-[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/driver/bme280.c.obj
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'bme280_measure_temp':
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c:56:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
-   56 |     esp_err_t ret;
-      |               ^~~
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'bme280_measure_humidity':
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c:85:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
-   85 |     esp_err_t ret;
-      |               ^~~
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'get_temperature_calib':
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c:129:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
-  129 |     esp_err_t ret;
-      |               ^~~
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'get_humidity_calib':
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c:140:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
-  140 |     esp_err_t ret;
-      |               ^~~
-[5/10] Linking C static library esp-idf\main\libmain.a
-[6/10] Generating ld/sections.ld
-[7/10] Linking CXX executable hello_world.elf
-[8/10] Generating binary image from built executable
-esptool.py v4.9.0
-Creating esp32h2 image...
-Merged 2 ELF sections
-Successfully created esp32h2 image.
-Generated C:/Espressif/smart_home/smart_node/build/hello_world.bin
-[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/smart_home/smart_node/build/partition_table/partition-table.bin C:/Espressif/smart_home/smart_node/build/hello_world.bin"
-hello_world.bin binary size 0x883c0 bytes. Smallest app partition is 0x15e000 bytes. 0xd5c40 bytes (61%) free.
-[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.4.1\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.4.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/esptool/esptool.py;--chip;esp32h2 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Espressif/smart_home/smart_node/build -P C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/run_serial_tool.cmake"
-esptool.py --chip esp32h2 -p COM6 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 48m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.9.0
-Serial port COM6
-Connecting...
-Chip is ESP32-H2 (revision v1.2)
-Features: BLE, IEEE802.15.4
-Crystal is 32MHz
-USB mode: USB-Serial/JTAG
-MAC: 10:51:db:ff:fe:69:11:f0
-BASE MAC: 10:51:db:69:11:f0
-MAC_EXT: ff:fe
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00000000 to 0x00005fff...
-Flash will be erased from 0x00010000 to 0x00098fff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-SHA digest in image updated
-Compressed 21696 bytes to 13423...
-Writing at 0x00000000... (100 %)
-Wrote 21696 bytes (13423 compressed) at 0x00000000 in 0.3 seconds (effective 521.8 kbit/s)...
-Hash of data verified.
-Compressed 558016 bytes to 314413...
-Writing at 0x00010000... (5 %)
-Writing at 0x0001c00a... (10 %)
-Writing at 0x00023021... (15 %)
-Writing at 0x00029bf1... (20 %)
-Writing at 0x0003110a... (25 %)
-Writing at 0x000381dc... (30 %)
-Writing at 0x0003e416... (35 %)
-Writing at 0x00044dbf... (40 %)
-Writing at 0x0004b02b... (45 %)
-Writing at 0x00051305... (50 %)
-Writing at 0x00057a17... (55 %)
-Writing at 0x0005eff1... (60 %)
-Writing at 0x00065d6d... (65 %)
-Writing at 0x0006c1d3... (70 %)
-Writing at 0x000729d9... (75 %)
-Writing at 0x00079900... (80 %)
-Writing at 0x0007f6df... (85 %)
-Writing at 0x00087b13... (90 %)
-Writing at 0x0008f0ea... (95 %)
-Writing at 0x00096164... (100 %)
-Wrote 558016 bytes (314413 compressed) at 0x00010000 in 3.3 seconds (effective 1366.6 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 140...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (140 compressed) at 0x00008000 in 0.1 seconds (effective 218.8 kbit/s)...
-Hash of data verified.
-
-Leaving...
-Hard resetting via RTS pin...
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4000bd6e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=109b8h ( 68024) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=000209e0 vaddr=40800000 size=07638h ( 30264) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=63f0ch (409356) map[0m
+[0;32mI (224) esp_image: segment 3: paddr=0008bf34 vaddr=40807638 size=0a2f0h ( 41712) load[0m
+[0;32mI (236) esp_image: segment 4: paddr=0009622c vaddr=40811930 size=0217ch (  8572) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=000983b0 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (246) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (247) boot: Disabling RNG early entropy source...[0m
+[1;31mE (10410) BME280: raw value: 128[0m
+[1;31mE (10410) BME280: raw value: 106[0m
+[1;31mE (10410) BME280: calib value: 255[0m
+[1;31mE (10410) main: temp: 24.70[0m
+[1;31mE (10410) main: hum: 786.00[0m
+[1;31mE (20410) BME280: raw value: 128[0m
+[1;31mE (20410) BME280: raw value: 103[0m
+[1;31mE (20410) BME280: calib value: 255[0m
+[1;31mE (20410) main: temp: 24.77[0m
+[1;31mE (20410) main: hum: 770.00[0m
+[1;31mE (30410) BME280: raw value: 128[0m
+[1;31mE (30410) BME280: raw value: 107[0m
+[1;31mE (30410) BME280: calib value: 255[0m
+[1;31mE (30410) main: temp: 24.80[0m
+[1;31mE (30410) main: hum: 770.00[0m
+[1;31mE (40410) BME280: raw value: 128[0m
+[1;31mE (40410) BME280: raw value: 108[0m
+[1;31mE (40410) BME280: calib value: 255[0m
+[1;31mE (40410) main: temp: 24.79[0m
+[1;31mE (40410) main: hum: 770.00[0m
+[1;31mE (50410) BME280: raw value: 128[0m
+[1;31mE (50410) BME280: raw value: 72[0m
+[1;31mE (50410) BME280: calib value: 255[0m
+[1;31mE (50410) main: temp: 24.81[0m
+[1;31mE (50410) main: hum: 754.00[0m
+[1;31mE (60410) BME280: raw value: 128[0m
+[1;31mE (60410) BME280: raw value: 89[0m
+[1;31mE (60410) BME280: calib value: 255[0m
+[1;31mE (60410) main: temp: 24.83[0m
+[1;31mE (60410) main: hum: 754.00[0m
+[1;31mE (70410) BME280: raw value: 128[0m
+[1;31mE (70410) BME280: raw value: 56[0m
+[1;31mE (70410) BME280: calib value: 255[0m
+[1;31mE (70410) main: temp: 24.83[0m
+[1;31mE (70410) main: hum: 753.00[0m
+[1;31mE (80410) BME280: raw value: 128[0m
+[1;31mE (80410) BME280: raw value: 109[0m
+[1;31mE (80410) BME280: calib value: 255[0m
+[1;31mE (80410) main: temp: 24.80[0m
+[1;31mE (80410) main: hum: 754.00[0m
+[1;31mE (90410) BME280: raw value: 128[0m
+[1;31mE (90410) BME280: raw value: 91[0m
+[1;31mE (90410) BME280: calib value: 255[0m
+[1;31mE (90410) main: temp: 24.80[0m
+[1;31mE (90410) main: hum: 754.00[0m
+[1;31mE (100410) BME280: raw value: 128[0m
+[1;31mE (100410) BME280: raw value: 53[0m
+[1;31mE (100410) BME280: calib value: 255[0m
+[1;31mE (100410) main: temp: 24.81[0m
+[1;31mE (100410) main: hum: 753.00[0m
+[1;31mE (110410) BME280: raw value: 128[0m
+[1;31mE (110410) BME280: raw value: 48[0m
+[1;31mE (110410) BME280: calib value: 255[0m
+[1;31mE (110410) main: temp: 24.83[0m
+[1;31mE (110410) main: hum: 753.00[0m
+[1;31mE (120410) BME280: raw value: 128[0m
+[1;31mE (120410) BME280: raw value: 117[0m
+[1;31mE (120410) BME280: calib value: 255[0m
+[1;31mE (120410) main: temp: 24.85[0m
+[1;31mE (120410) main: hum: 754.00[0m
+[1;31mE (130410) BME280: raw value: 128[0m
+[1;31mE (130410) BME280: raw value: 58[0m
+[1;31mE (130410) BME280: calib value: 255[0m
+[1;31mE (130410) main: temp: 24.86[0m
+[1;31mE (130410) main: hum: 737.00[0m
+[1;31mE (140410) BME280: raw value: 128[0m
+[1;31mE (140410) BME280: raw value: 78[0m
+[1;31mE (140410) BME280: calib value: 255[0m
+[1;31mE (140410) main: temp: 24.85[0m
+[1;31mE (140410) main: hum: 738.00[0m
+[1;31mE (150410) BME280: raw value: 128[0m
+[1;31mE (150410) BME280: raw value: 133[0m
+[1;31mE (150410) BME280: calib value: 255[0m
+[1;31mE (150410) main: temp: 24.85[0m
+[1;31mE (150410) main: hum: 739.00[0m
+[1;31mE (160410) BME280: raw value: 128[0m
+[1;31mE (160410) BME280: raw value: 83[0m
+[1;31mE (160410) BME280: calib value: 255[0m
+[1;31mE (160410) main: temp: 24.87[0m
+[1;31mE (160410) main: hum: 738.00[0m
+[1;31mE (170410) BME280: raw value: 128[0m
+[1;31mE (170410) BME280: raw value: 77[0m
+[1;31mE (170410) BME280: calib value: 255[0m
+[1;31mE (170410) main: temp: 24.87[0m
+[1;31mE (170410) main: hum: 738.00[0m
+[1;31mE (180410) BME280: raw value: 128[0m
+[1;31mE (180410) BME280: raw value: 104[0m
+[1;31mE (180410) BME280: calib value: 255[0m
+[1;31mE (180410) main: temp: 24.86[0m
+[1;31mE (180410) main: hum: 738.00[0m
+[1;31mE (190410) BME280: raw value: 128[0m
+[1;31mE (190410) BME280: raw value: 60[0m
+[1;31mE (190410) BME280: calib value: 255[0m
+[1;31mE (190410) main: temp: 24.87[0m
+[1;31mE (190410) main: hum: 737.00[0m
+[1;31mE (200410) BME280: raw value: 128[0m
+[1;31mE (200410) BME280: raw value: 108[0m
+[1;31mE (200410) BME280: calib value: 255[0m
+[1;31mE (200410) main: temp: 24.89[0m
+[1;31mE (200410) main: hum: 738.00[0m
+[1;31mE (210410) BME280: raw value: 127[0m
+[1;31mE (210410) BME280: raw value: 198[0m
+[1;31mE (210410) BME280: calib value: 255[0m
+[1;31mE (210410) main: temp: 24.88[0m
+[1;31mE (210410) main: hum: 736.00[0m
+[1;31mE (220410) BME280: raw value: 127[0m
+[1;31mE (220410) BME280: raw value: 236[0m
+[1;31mE (220410) BME280: calib value: 255[0m
+[1;31mE (220410) main: temp: 24.87[0m
+[1;31mE (220410) main: hum: 736.00[0m
+[1;31mE (230410) BME280: raw value: 128[0m
+[1;31mE (230410) BME280: raw value: 30[0m
+[1;31mE (230410) BME280: calib value: 255[0m
+[1;31mE (230410) main: temp: 24.90[0m
+[1;31mE (230410) main: hum: 737.00[0m
+[1;31mE (240410) BME280: raw value: 128[0m
+[1;31mE (240410) BME280: raw value: 32[0m
+[1;31mE (240410) BME280: calib value: 255[0m
+[1;31mE (240410) main: temp: 24.90[0m
+[1;31mE (240410) main: hum: 737.00[0m
+[1;31mE (250410) BME280: raw value: 128[0m
+[1;31mE (250410) BME280: raw value: 48[0m
+[1;31mE (250410) BME280: calib value: 255[0m
+[1;31mE (250410) main: temp: 24.93[0m
+[1;31mE (250410) main: hum: 721.00[0m
+[1;31mE (260410) BME280: raw value: 127[0m
+[1;31mE (260410) BME280: raw value: 126[0m
+[1;31mE (260410) BME280: calib value: 255[0m
+[1;31mE (260410) main: temp: 24.93[0m
+[1;31mE (260410) main: hum: 718.00[0m
+[1;31mE (270410) BME280: raw value: 127[0m
+[1;31mE (270410) BME280: raw value: 181[0m
+[1;31mE (270410) BME280: calib value: 255[0m
+[1;31mE (270410) main: temp: 24.96[0m
+[1;31mE (270410) main: hum: 703.00[0m
+[1;31mE (280410) BME280: raw value: 127[0m
+[1;31mE (280410) BME280: raw value: 142[0m
+[1;31mE (280410) BME280: calib value: 255[0m
+[1;31mE (280410) main: temp: 24.99[0m
+[1;31mE (280410) main: hum: 703.00[0m
+[1;31mE (290410) BME280: raw value: 127[0m
+[1;31mE (290410) BME280: raw value: 173[0m
+[1;31mE (290410) BME280: calib value: 255[0m
+[1;31mE (290410) main: temp: 25.01[0m
+[1;31mE (290410) main: hum: 687.00[0m
+[1;31mE (300410) BME280: raw value: 127[0m
+[1;31mE (300410) BME280: raw value: 137[0m
+[1;31mE (300410) BME280: calib value: 255[0m
+[1;31mE (300410) main: temp: 25.05[0m
+[1;31mE (300410) main: hum: 687.00[0m
+[1;31mE (310410) BME280: raw value: 127[0m
+[1;31mE (310410) BME280: raw value: 91[0m
+[1;31mE (310410) BME280: calib value: 255[0m
+[1;31mE (310410) main: temp: 25.07[0m
+[1;31mE (310410) main: hum: 670.00[0m
+[1;31mE (320410) BME280: raw value: 127[0m
+[1;31mE (320410) BME280: raw value: 121[0m
+[1;31mE (320410) BME280: calib value: 255[0m
+[1;31mE (320410) main: temp: 25.06[0m
+[1;31mE (320410) main: hum: 670.00[0m
+[1;31mE (330410) BME280: raw value: 127[0m
+[1;31mE (330410) BME280: raw value: 115[0m
+[1;31mE (330410) BME280: calib value: 255[0m
+[1;31mE (330410) main: temp: 25.05[0m
+[1;31mE (330410) main: hum: 670.00[0m
+[1;31mE (340410) BME280: raw value: 127[0m
+[1;31mE (340410) BME280: raw value: 87[0m
+[1;31mE (340410) BME280: calib value: 255[0m
+[1;31mE (340410) main: temp: 25.09[0m
+[1;31mE (340410) main: hum: 670.00[0m
+[1;31mE (350410) BME280: raw value: 127[0m
+[1;31mE (350410) BME280: raw value: 10[0m
+[1;31mE (350410) BME280: calib value: 255[0m
+[1;31mE (350410) main: temp: 25.10[0m
+[1;31mE (350410) main: hum: 653.00[0m
+[1;31mE (360410) BME280: raw value: 127[0m
+[1;31mE (360410) BME280: raw value: 5[0m
+[1;31mE (360410) BME280: calib value: 255[0m
+[1;31mE (360410) main: temp: 25.11[0m
+[1;31mE (360410) main: hum: 653.00[0m
+[1;31mE (370410) BME280: raw value: 127[0m
+[1;31mE (370410) BME280: raw value: 11[0m
+[1;31mE (370410) BME280: calib value: 255[0m
+[1;31mE (370410) main: temp: 25.13[0m
+[1;31mE (370410) main: hum: 653.00[0m
+[1;31mE (380410) BME280: raw value: 127[0m
+[1;31mE (380410) BME280: raw value: 40[0m
+[1;31mE (380410) BME280: calib value: 255[0m
+[1;31mE (380410) main: temp: 25.15[0m
+[1;31mE (380410) main: hum: 653.00[0m
+[1;31mE (390410) BME280: raw value: 127[0m
+[1;31mE (390410) BME280: raw value: 38[0m
+[1;31mE (390410) BME280: calib value: 255[0m
+[1;31mE (390410) main: temp: 25.13[0m
+[1;31mE (390410) main: hum: 653.00[0m
+[1;31mE (400410) BME280: raw value: 127[0m
+[1;31mE (400410) BME280: raw value: 59[0m
+[1;31mE (400410) BME280: calib value: 255[0m
+[1;31mE (400410) main: temp: 25.10[0m
+[1;31mE (400410) main: hum: 653.00[0m
+[1;31mE (410410) BME280: raw value: 127[0m
+[1;31mE (410410) BME280: raw value: 77[0m
+[1;31mE (410410) BME280: calib value: 255[0m
+[1;31mE (410410) main: temp: 25.09[0m
+[1;31mE (410410) main: hum: 670.00[0m
+[1;31mE (420410) BME280: raw value: 127[0m
+[1;31mE (420410) BME280: raw value: 91[0m
+[1;31mE (420410) BME280: calib value: 255[0m
+[1;31mE (420410) main: temp: 25.07[0m
+[1;31mE (420410) main: hum: 670.00[0m
+[1;31mE (430410) BME280: raw value: 127[0m
+[1;31mE (430410) BME280: raw value: 95[0m
+[1;31mE (430410) BME280: calib value: 255[0m
+[1;31mE (430410) main: temp: 25.04[0m
+[1;31mE (430410) main: hum: 686.00[0m
+[1;31mE (440410) BME280: raw value: 127[0m
+[1;31mE (440410) BME280: raw value: 70[0m
+[1;31mE (440410) BME280: calib value: 255[0m
+[1;31mE (440410) main: temp: 25.01[0m
+[1;31mE (440410) main: hum: 686.00[0m
+[1;31mE (450410) BME280: raw value: 127[0m
+[1;31mE (450410) BME280: raw value: 111[0m
+[1;31mE (450410) BME280: calib value: 255[0m
+[1;31mE (450410) main: temp: 24.98[0m
+[1;31mE (450410) main: hum: 702.00[0m
+[1;31mE (460410) BME280: raw value: 127[0m
+[1;31mE (460410) BME280: raw value: 151[0m
+[1;31mE (460410) BME280: calib value: 255[0m
+[1;31mE (460410) main: temp: 24.93[0m
+[1;31mE (460410) main: hum: 719.00[0m
+[1;31mE (470410) BME280: raw value: 127[0m
+[1;31mE (470410) BME280: raw value: 178[0m
+[1;31mE (470410) BME280: calib value: 255[0m
+[1;31mE (470410) main: temp: 24.89[0m
+[1;31mE (470410) main: hum: 735.00[0m
+[1;31mE (480410) BME280: raw value: 127[0m
+[1;31mE (480410) BME280: raw value: 166[0m
+[1;31mE (480410) BME280: calib value: 255[0m
+[1;31mE (480410) main: temp: 24.89[0m
+[1;31mE (480410) main: hum: 735.00[0m
+[1;31mE (490410) BME280: raw value: 127[0m
+[1;31mE (490410) BME280: raw value: 175[0m
+[1;31mE (490410) BME280: calib value: 255[0m
+[1;31mE (490410) main: temp: 24.88[0m
+[1;31mE (490410) main: hum: 735.00[0m
+[1;31mE (500410) BME280: raw value: 127[0m
+[1;31mE (500410) BME280: raw value: 163[0m
+[1;31mE (500410) BME280: calib value: 255[0m
+[1;31mE (500410) main: temp: 24.88[0m
+[1;31mE (500410) main: hum: 735.00[0m
+[1;31mE (510410) BME280: raw value: 127[0m
+[1;31mE (510410) BME280: raw value: 100[0m
+[1;31mE (510410) BME280: calib value: 255[0m
+[1;31mE (510410) main: temp: 24.89[0m
+[1;31mE (510410) main: hum: 734.00[0m
+[1;31mE (520410) BME280: raw value: 127[0m
+[1;31mE (520410) BME280: raw value: 78[0m
+[1;31mE (520410) BME280: calib value: 255[0m
+[1;31mE (520410) main: temp: 24.90[0m
+[1;31mE (520410) main: hum: 718.00[0m
+[1;31mE (530410) BME280: raw value: 127[0m
+[1;31mE (530410) BME280: raw value: 82[0m
+[1;31mE (530410) BME280: calib value: 255[0m
+[1;31mE (530410) main: temp: 24.90[0m
+[1;31mE (530410) main: hum: 718.00[0m
+[1;31mE (540410) BME280: raw value: 127[0m
+[1;31mE (540410) BME280: raw value: 127[0m
+[1;31mE (540410) BME280: calib value: 255[0m
+[1;31mE (540410) main: temp: 24.92[0m
+[1;31mE (540410) main: hum: 718.00[0m
+[1;31mE (550410) BME280: raw value: 127[0m
+[1;31mE (550410) BME280: raw value: 135[0m
+[1;31mE (550410) BME280: calib value: 255[0m
+[1;31mE (550410) main: temp: 24.96[0m
+[1;31mE (550410) main: hum: 703.00[0m
+[1;31mE (560410) BME280: raw value: 127[0m
+[1;31mE (560410) BME280: raw value: 127[0m
+[1;31mE (560410) BME280: calib value: 255[0m
+[1;31mE (560410) main: temp: 24.99[0m
+[1;31mE (560410) main: hum: 702.00[0m
+[1;31mE (570410) BME280: raw value: 127[0m
+[1;31mE (570410) BME280: raw value: 143[0m
+[1;31mE (570410) BME280: calib value: 255[0m
+[1;31mE (570410) main: temp: 24.94[0m
+[1;31mE (570410) main: hum: 719.00[0m
+[1;31mE (580410) BME280: raw value: 127[0m
+[1;31mE (580410) BME280: raw value: 165[0m
+[1;31mE (580410) BME280: calib value: 255[0m
+[1;31mE (580410) main: temp: 24.90[0m
+[1;31mE (580410) main: hum: 719.00[0m
+[1;31mE (590410) BME280: raw value: 129[0m
+[1;31mE (590410) BME280: raw value: 99[0m
+[1;31mE (590410) BME280: calib value: 255[0m
+[1;31mE (590410) main: temp: 24.93[0m
+[1;31mE (590410) main: hum: 726.00[0m
+[1;31mE (600410) BME280: raw value: 128[0m
+[1;31mE (600410) BME280: raw value: 52[0m
+[1;31mE (600410) BME280: calib value: 255[0m
+[1;31mE (600410) main: temp: 24.93[0m
+[1;31mE (600410) main: hum: 721.00[0m
+[1;31mE (610410) BME280: raw value: 127[0m
+[1;31mE (610410) BME280: raw value: 234[0m
+[1;31mE (610410) BME280: calib value: 255[0m
+[1;31mE (610410) main: temp: 24.93[0m
+[1;31mE (610410) main: hum: 720.00[0m
+[1;31mE (620410) BME280: raw value: 127[0m
+[1;31mE (620410) BME280: raw value: 108[0m
+[1;31mE (620410) BME280: calib value: 255[0m
+[1;31mE (620410) main: temp: 24.93[0m
+[1;31mE (620410) main: hum: 718.00[0m
+[1;31mE (630410) BME280: raw value: 127[0m
+[1;31mE (630410) BME280: raw value: 154[0m
+[1;31mE (630410) BME280: calib value: 255[0m
+[1;31mE (630410) main: temp: 24.93[0m
+[1;31mE (630410) main: hum: 719.00[0m
+[1;31mE (640410) BME280: raw value: 127[0m
+[1;31mE (640410) BME280: raw value: 245[0m
+[1;31mE (640410) BME280: calib value: 255[0m
+[1;31mE (640410) main: temp: 24.91[0m
+[1;31mE (640410) main: hum: 720.00[0m
+[1;31mE (650410) BME280: raw value: 127[0m
+[1;31mE (650410) BME280: raw value: 218[0m
+[1;31mE (650410) BME280: calib value: 255[0m
+[1;31mE (650410) main: temp: 24.93[0m
+[1;31mE (650410) main: hum: 720.00[0m
+[1;31mE (660410) BME280: raw value: 127[0m
+[1;31mE (660410) BME280: raw value: 118[0m
+[1;31mE (660410) BME280: calib value: 255[0m
+[1;31mE (660410) main: temp: 24.94[0m
+[1;31mE (660410) main: hum: 718.00[0m
+[1;31mE (670410) BME280: raw value: 127[0m
+[1;31mE (670410) BME280: raw value: 144[0m
+[1;31mE (670410) BME280: calib value: 255[0m
+[1;31mE (670410) main: temp: 24.96[0m
+[1;31mE (670410) main: hum: 703.00[0m
+[1;31mE (680410) BME280: raw value: 127[0m
+[1;31mE (680410) BME280: raw value: 126[0m
+[1;31mE (680410) BME280: calib value: 255[0m
+[1;31mE (680410) main: temp: 24.96[0m
+[1;31mE (680410) main: hum: 702.00[0m
+[1;31mE (690410) BME280: raw value: 127[0m
+[1;31mE (690410) BME280: raw value: 109[0m
+[1;31mE (690410) BME280: calib value: 255[0m
+[1;31mE (690410) main: temp: 24.99[0m
+[1;31mE (690410) main: hum: 702.00[0m
+[1;31mE (700410) BME280: raw value: 127[0m
+[1;31mE (700410) BME280: raw value: 120[0m
+[1;31mE (700410) BME280: calib value: 255[0m
+[1;31mE (700410) main: temp: 24.97[0m
+[1;31mE (700410) main: hum: 702.00[0m
+[1;31mE (710410) BME280: raw value: 127[0m
+[1;31mE (710410) BME280: raw value: 103[0m
+[1;31mE (710410) BME280: calib value: 255[0m
+[1;31mE (710410) main: temp: 24.98[0m
+[1;31mE (710410) main: hum: 702.00[0m
+[1;31mE (720410) BME280: raw value: 127[0m
+[1;31mE (720410) BME280: raw value: 77[0m
+[1;31mE (720410) BME280: calib value: 255[0m
+[1;31mE (720410) main: temp: 24.99[0m
+[1;31mE (720410) main: hum: 702.00[0m
+[1;31mE (730410) BME280: raw value: 127[0m
+[1;31mE (730410) BME280: raw value: 139[0m
+[1;31mE (730410) BME280: calib value: 255[0m
+[1;31mE (730410) main: temp: 25.05[0m
+[1;31mE (730410) main: hum: 687.00[0m
+[1;31mE (740410) BME280: raw value: 127[0m
+[1;31mE (740410) BME280: raw value: 54[0m
+[1;31mE (740410) BME280: calib value: 255[0m
+[1;31mE (740410) main: temp: 25.07[0m
+[1;31mE (740410) main: hum: 669.00[0m
+[1;31mE (750410) BME280: raw value: 127[0m
+[1;31mE (750410) BME280: raw value: 21[0m
+[1;31mE (750410) BME280: calib value: 255[0m
+[1;31mE (750410) main: temp: 25.08[0m
+[1;31mE (750410) main: hum: 669.00[0m
+[1;31mE (760410) BME280: raw value: 127[0m
+[1;31mE (760410) BME280: raw value: 52[0m
+[1;31mE (760410) BME280: calib value: 255[0m
+[1;31mE (760410) main: temp: 25.07[0m
+[1;31mE (760410) main: hum: 669.00[0m
+[1;31mE (770410) BME280: raw value: 127[0m
+[1;31mE (770410) BME280: raw value: 69[0m
+[1;31mE (770410) BME280: calib value: 255[0m
+[1;31mE (770410) main: temp: 25.08[0m
+[1;31mE (770410) main: hum: 670.00[0m
+[1;31mE (780410) BME280: raw value: 127[0m
+[1;31mE (780410) BME280: raw value: 31[0m
+[1;31mE (780410) BME280: calib value: 255[0m
+[1;31mE (780410) main: temp: 25.09[0m
+[1;31mE (780410) main: hum: 669.00[0m
+[1;31mE (790410) BME280: raw value: 127[0m
+[1;31mE (790410) BME280: raw value: 39[0m
+[1;31mE (790410) BME280: calib value: 255[0m
+[1;31mE (790410) main: temp: 25.13[0m
+[1;31mE (790410) main: hum: 653.00[0m
+[1;31mE (800410) BME280: raw value: 127[0m
+[1;31mE (800410) BME280: raw value: 47[0m
+[1;31mE (800410) BME280: calib value: 255[0m
+[1;31mE (800410) main: temp: 25.14[0m
+[1;31mE (800410) main: hum: 653.00[0m
+[1;31mE (810410) BME280: raw value: 127[0m
+[1;31mE (810410) BME280: raw value: 110[0m
+[1;31mE (810410) BME280: calib value: 255[0m
+[1;31mE (810410) main: temp: 25.12[0m
+[1;31mE (810410) main: hum: 654.00[0m
+[1;31mE (820410) BME280: raw value: 127[0m
+[1;31mE (820410) BME280: raw value: 103[0m
+[1;31mE (820410) BME280: calib value: 255[0m
+[1;31mE (820410) main: temp: 25.13[0m
+[1;31mE (820410) main: hum: 654.00[0m
+[1;31mE (830410) BME280: raw value: 126[0m
+[1;31mE (830410) BME280: raw value: 243[0m
+[1;31mE (830410) BME280: calib value: 255[0m
+[1;31mE (830410) main: temp: 25.14[0m
+[1;31mE (830410) main: hum: 652.00[0m
+[1;31mE (840410) BME280: raw value: 126[0m
+[1;31mE (840410) BME280: raw value: 255[0m
+[1;31mE (840410) BME280: calib value: 255[0m
+[1;31mE (840410) main: temp: 25.12[0m
+[1;31mE (840410) main: hum: 652.00[0m

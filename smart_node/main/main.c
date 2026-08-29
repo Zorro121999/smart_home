@@ -144,10 +144,7 @@ void esp_zb_task(void *arg) {
     ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soc);
 
     ezb_app_signal_add_handler(zigbee_signal_callback);
-    // esp_zigbee_lock_release();
-
-    // lock = esp_zigbee_lock_acquire(pdMS_TO_TICKS(1000));
-    ESP_LOGE(TAG, "hello_zb");
+  
     ret = esp_zigbee_start(true);
     if(ret != ESP_OK) {
         ESP_LOGE(TAG,
@@ -167,16 +164,17 @@ void esp_zb_task(void *arg) {
 void meas_task(void *arg) { 
     while(1) {
         ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-        ///if(device_connected) {
+        if(device_connected) {
             measure_moisture(adc1_handle, ADC_CHANNEL_1, &(data.moisture));
             measure_soc(adc1_handle, ADC_CHANNEL_2, &(data.soc));
-            bme280_measure_temp(spi, (&(bme_cal))->temp_cal, &(data.temp));
-            bme280_measure_humidity(spi, (&(bme_cal))->hum_cal1, (&(bme_cal))->hum_cal2, &(data.humidity));   
+            bme280_measure_temp(spi, (&(bme_cal))->temp_cal, &(bme_cal.t_fine), &(data.temp));
+            bme280_measure_humidity(spi, (&(bme_cal))->hum_cal1, (&(bme_cal))->hum_cal2, &(bme_cal.t_fine), &(data.humidity));   
             ESP_LOGE(TAG, "temp: %.2f",data.temp);
+            ESP_LOGE(TAG, "hum: %.2f",data.humidity);
             ret = esp_zigbee_task_queue_post(
             &zigbee_send_measurement_callback,
             &data); 
-        //}
+        }
     }
 }
 

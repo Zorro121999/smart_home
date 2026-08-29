@@ -14,10 +14,11 @@
 
 typedef struct {
     uint8_t temp_cal[7];
-    uint8_t hum_cal1[9];
-    uint8_t hum_cal2[2];
+    uint8_t hum_cal1[2];
+    uint8_t hum_cal2[8];
+    int32_t t_fine;
 } bme_cal_t;
 
 void bme280_init(spi_device_handle_t spi, bme_cal_t *calib);
-void bme280_measure_temp(spi_device_handle_t spi, uint8_t *temp_cal, float *value);
-void bme280_measure_humidity(spi_device_handle_t spi, uint8_t *hum_cal1, uint8_t *hum_cal2, float *value);
+void bme280_measure_temp(spi_device_handle_t spi, uint8_t *temp_cal, int32_t *t_fine, float *value);
+void bme280_measure_humidity(spi_device_handle_t spi, uint8_t *hum_cal1, uint8_t *hum_cal2, int32_t *t_fine, float *value);
