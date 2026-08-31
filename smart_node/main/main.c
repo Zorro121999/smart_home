@@ -104,6 +104,8 @@ esp_zigbee_config_t zigbee_config = {
 }
 };
 
+uint32_t channel_mask = (1UL << 20);
+
 ezb_zcl_custom_cluster_config_t sensor_cluster_config = {
         .cluster_id = SENSOR_CLUSTER_ID,
         .init_func = NULL,
@@ -131,7 +133,7 @@ void zigbee_send_measurement_callback(void *ctx) {
 void esp_zb_task(void *arg) {
     ret = esp_zigbee_init(&zigbee_config);
 
-    bool lock = esp_zigbee_lock_acquire(pdMS_TO_TICKS(1000));
+    //bool lock = esp_zigbee_lock_acquire(pdMS_TO_TICKS(1000));
     ESP_LOGE("ZIGBEE", "ESP Zigbee SDK: %s",
          esp_zigbee_get_version_string());
     
@@ -143,19 +145,20 @@ void esp_zb_task(void *arg) {
     ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soil_moisture);
     ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soc);
 
+    ESP_ERROR_CHECK(ezb_bdb_set_primary_channel_set(channel_mask));
     ezb_app_signal_add_handler(zigbee_signal_callback);
   
-    ret = esp_zigbee_start(true);
+    ret = esp_zigbee_start(false);
     if(ret != ESP_OK) {
         ESP_LOGE(TAG,
              "Failed starting zigbee stack");     
         esp_restart();    
     }
-    if (!lock) {
-        ESP_LOGE("ZB", "Lock was NOT acquired!");
-        return;
-    }
-    esp_zigbee_lock_release();
+    // if (!lock) {
+    //     ESP_LOGE("ZB", "Lock was NOT acquired!");
+    //     return;
+    // }
+    //esp_zigbee_lock_release();
     ESP_LOGE(TAG, "hello_zb");
 
     esp_zigbee_launch_mainloop();
@@ -164,7 +167,7 @@ void esp_zb_task(void *arg) {
 void meas_task(void *arg) { 
     while(1) {
         ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-        if(device_connected) {
+        //if(device_connected) {
             measure_moisture(adc1_handle, ADC_CHANNEL_1, &(data.moisture));
             measure_soc(adc1_handle, ADC_CHANNEL_2, &(data.soc));
             bme280_measure_temp(spi, (&(bme_cal))->temp_cal, &(bme_cal.t_fine), &(data.temp));
@@ -174,7 +177,7 @@ void meas_task(void *arg) {
             ret = esp_zigbee_task_queue_post(
             &zigbee_send_measurement_callback,
             &data); 
-        }
+       // }
     }
 }
 
@@ -182,18 +185,76 @@ void timer_callback(TimerHandle_t timer){
     xTaskNotifyGive(sensor_task_handle);
 }
 
-bool zigbee_signal_callback(const ezb_app_signal_t *signal_type) {
-    ezb_app_signal_type_t signal = ezb_app_signal_get_type(signal_type);
-    ezb_bdb_comm_status_t status = ezb_bdb_get_commissioning_status();
-    if (signal == EZB_BDB_SIGNAL_DEVICE_REBOOT && device_connected == false) {
-        if(status == EZB_BDB_STATUS_SUCCESS) {
-            device_connected = true;
+bool zigbee_signal_callback(const ezb_app_signal_t *app_signal) {
+    ezb_app_signal_type_t signal_type = ezb_app_signal_get_type(app_signal);
+
+    switch (signal_type) {
+    case EZB_ZDO_SIGNAL_SKIP_STARTUP:
+        ESP_LOGI(TAG, "Initialize Zigbee stack");
+        ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_INITIALIZATION);
+        break;
+    case EZB_BDB_SIGNAL_DEVICE_FIRST_START:
+    case EZB_BDB_SIGNAL_DEVICE_REBOOT: {
+        ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
+        if (status == EZB_BDB_STATUS_SUCCESS) {
+            //ESP_LOGI(TAG, "Deferred driver initialization %s", deferred_driver_init() ? "failed" : "successful");
+            ESP_LOGI(TAG, "Device started up in%s factory-reset mode", ezb_bdb_is_factory_new() ? "" : " non");
+            if (ezb_bdb_is_factory_new()) {
+                ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_NETWORK_STEERING);
+            } else {
+                ESP_LOGI(TAG, "Device reboot");
+            }
+        } else {
+            ESP_LOGW(TAG, "%s failed with status(0x%02x), please retry", ezb_app_signal_to_string(signal_type), status);
+            //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_INITIALIZATION, 1000);
         }
-    else if(signal == EZB_BDB_SIGNAL_DEVICE_REBOOT && device_connected == true) {
-        device_connected = false;
+    } break;
+    case EZB_BDB_SIGNAL_STEERING: {
+        ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
+        if (status == EZB_BDB_STATUS_SUCCESS) {
+            ezb_extpanid_t extended_pan_id;
+            ezb_shortaddr_t address;
+            address = ezb_nwk_get_short_address();
+            ESP_LOGE(TAG, "end node network address:%" PRIu16, address);
+            ezb_nwk_get_extended_panid(&extended_pan_id);
+            ESP_LOGI(TAG, "Joined network successfully: PAN ID(0x%04hx, EXT: 0x%llx), Channel(%d), Short Address(0x%04hx)",
+                     ezb_nwk_get_panid(), extended_pan_id.u64, ezb_nwk_get_current_channel(), ezb_nwk_get_short_address());
+            //zdo_find_ha_light_device();
+        } else {
+            ESP_LOGW(TAG, "Failed to join network with status(0x%02x)", status);
+            //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_NETWORK_STEERING, 1000);
         }
+    } break;
+    case EZB_ZDO_SIGNAL_LEAVE: {
+        const ezb_zdo_signal_leave_params_t *leave_params = ezb_app_signal_get_params(app_signal);
+        ESP_LOGI(TAG, "Left network successfully with type(0x%02x)", leave_params->leave_type);
+    } break;
+    case EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS: {
+        uint8_t duration = *(uint8_t *)ezb_app_signal_get_params(app_signal);
+        if (duration) {
+            ESP_LOGI(TAG, "Network(0x%04hx) is open for %d seconds", ezb_nwk_get_panid(), duration);
+        } else {
+            ESP_LOGW(TAG, "Network(0x%04hx) closed, devices joining not allowed.", ezb_nwk_get_panid());
+        }
+    } break;
+    default:
+        ESP_LOGI(TAG, "Zigbee APP Signal: %s(type: 0x%02x)", ezb_app_signal_to_string(signal_type), signal_type);
+        break;
     }
     return true;
+}
+
+static void esp_zigbee_zcl_core_action_handler(ezb_zcl_core_action_callback_id_t callback_id, void *message)
+{
+    switch (callback_id) {
+    case EZB_ZCL_CORE_DEFAULT_RSP_CB_ID: {
+        ezb_zcl_cmd_default_rsp_message_t *default_rsp = (ezb_zcl_cmd_default_rsp_message_t *)message;
+        ESP_LOGI(TAG, "Received ZCL Default Response with status(0x%02x)", default_rsp->in.status_code);
+    } break;
+    default:
+        ESP_LOGW(TAG, "ZCL Core Action: ID(0x%04lx)", callback_id);
+        break;
+    }
 }
 
 void app_main(void)
@@ -229,4 +290,3 @@ void app_main(void)
     xTaskCreate(esp_zb_task, "zigbee_task", 4096, NULL, 10, NULL);
     xTaskCreate(meas_task, "measurement_task", 4096, NULL, 5, &sensor_task_handle);
 }   
-

@@ -1,0 +1,90 @@
+uild:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807422
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (28) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (30) boot: chip revision: v1.2[0m
+[0;32mI (30) boot: efuse block revision: v0.3[0m
+[0;32mI (32) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (36) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (77) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (83) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=10b08h ( 68360) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=00020b30 vaddr=40800000 size=074e8h ( 29928) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=64230h (410160) map[0m
+[0;32mI (229) esp_image: segment 3: paddr=0008c258 vaddr=408074e8 size=0a440h ( 42048) load[0m
+[0;32mI (242) esp_image: segment 4: paddr=000966a0 vaddr=40811930 size=0217ch (  8572) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=00098824 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (267) cpu_start: Unicore app[0m
+[0;32mI (276) cpu_start: Pro cpu start user code[0m
+[0;32mI (276) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (277) app_init: Project name:     hello_world[0m
+[0;32mI (280) app_init: App version:      5836d83-dirty[0m
+[0;32mI (284) app_init: Compile time:     Aug 28 2026 13:14:08[0m
+[0;32mI (290) app_init: ELF file SHA256:  0e7f5cf07...[0m
+[0;32mI (294) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (298) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (302) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (306) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (310) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (316) heap_init: At 408163D0 len 00036FB0 (219 KiB): RAM[0m
+[0;32mI (321) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (326) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (333) spi_flash: detected chip: generic[0m
+[0;32mI (335) spi_flash: flash io: dio[0m
+[0;33mW (338) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (351) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (357) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (375) main_task: Started on CPU0[0m
+[0;32mI (375) main_task: Calling app_main()[0m
+[1;31mE (375) main: hello[0m
+[1;31mE (375) BME280: device ID: 96[0m
+[1;31mE (375) BME280: calib value: 75[0m
+[0;32mI (375) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (385) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (405) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
+[0;32mI (415) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (425) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:33:57 UTC[0m
+[1;31mE (425) main: hello_zb[0m
+[0;32mI (425) main_task: Returned from app_main()[0m
+[1;31mE (10395) BME280: raw value: 120[0m
+[1;31mE (10395) BME280: raw value: 22[0m
+[1;31mE (10395) BME280: raw value: 30742[0m
+[1;31mE (10395) BME280: raw value: 128138[0m
+[1;31mE (10395) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (10395) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (10395) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (10405) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (10405) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (10405) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (10415) main: temp: 25.03[0m
+[1;31mE (10415) main: hum: 60.49[0m
+[1;31mE (20395) BME280: raw value: 120[0m
+[1;31mE (20395) BME280: raw value: 49[0m
+[1;31mE (20395) BME280: raw value: 30769[0m
+[1;31mE (20395) BME280: raw value: 128138[0m
+[1;31mE (20395) BME280: dig_h1 = 75 (0x4B)[0m
+[1;31mE (20395) BME280: dig_h2 = 366 (0x016E)[0m
+[1;31mE (20395) BME280: dig_h3 = 0 (0x00)[0m
+[1;31mE (20405) BME280: dig_h4 = 311 (0x0137)[0m
+[1;31mE (20405) BME280: dig_h5 = 50 (0x0032)[0m
+[1;31mE (20405) BME280: dig_h6 = 30 (0x1E)[0m
+[1;31mE (20415) main: temp: 25.03[0m
+[1;31mE (20415) main: hum: 60.64[0m
