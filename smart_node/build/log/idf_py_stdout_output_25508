@@ -1,0 +1,378 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807422
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=11128h ( 69928) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00021150 vaddr=40800000 size=06ec8h ( 28360) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=64a60h (412256) map[0m
+[0;32mI (224) esp_image: segment 3: paddr=0008ca88 vaddr=40806ec8 size=0aa60h ( 43616) load[0m
+[0;32mI (237) esp_image: segment 4: paddr=000974f0 vaddr=40811930 size=0217ch (  8572) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00099674 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (247) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (248) boot: Disabling RNG early entropy source...[0m
+[0;32mI (263) cpu_start: Unicore app[0m
+[0;32mI (272) cpu_start: Pro cpu start user code[0m
+[0;32mI (272) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (272) app_init: Application information:[0m
+[0;32mI (273) app_init: Project name:     hello_world[0m
+[0;32mI (276) app_init: App version:      e302085-dirty[0m
+[0;32mI (280) app_init: Compile time:     Aug 31 2026 18:11:40[0m
+[0;32mI (285) app_init: ELF file SHA256:  0a9b3982a...[0m
+[0;32mI (290) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (294) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (298) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (302) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (306) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (312) heap_init: At 408163C0 len 00036FC0 (219 KiB): RAM[0m
+[0;32mI (317) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (322) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (331) spi_flash: flash io: dio[0m
+[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (347) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (353) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (371) main_task: Started on CPU0[0m
+[0;32mI (371) main_task: Calling app_main()[0m
+[1;31mE (381) main: hello[0m
+[1;31mE (381) BME280: device ID: 96[0m
+[0;32mI (381) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (411) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
+[0;32mI (411) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (421) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:33:57 UTC[0m
+[0;32mI (421) main_task: Returned from app_main()[0m
+[0;32mI (471) main: Initialize Zigbee stack[0m
+[1;31mE (481) main: hello_zb[0m
+[0;33mW (1421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (1881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (2821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (3761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;32mI (4661) main: Device started up in non factory-reset mode[0m
+[0;32mI (4661) main: Device reboot[0m
+[1;31mE (10391) main: temp: 26.78[0m
+[1;31mE (10391) main: hum: 56.79[0m
+[1;31mE (10391) main: end node network address:10415[0m
+[0;32mI (10391) main: Temperature report sent[0m
+[1;31mE (20391) main: temp: 26.78[0m
+[1;31mE (20391) main: hum: 56.70[0m
+[1;31mE (20391) main: end node network address:10415[0m
+[0;32mI (20391) main: Temperature report sent[0m
+[1;31mE (30391) main: temp: 26.78[0m
+[1;31mE (30391) main: hum: 56.74[0m
+[1;31mE (30391) main: end node network address:10415[0m
+[0;32mI (30391) main: Temperature report sent[0m
+[1;31mE (40391) main: temp: 26.78[0m
+[1;31mE (40391) main: hum: 56.70[0m
+[1;31mE (40391) main: end node network address:10415[0m
+[0;32mI (40391) main: Temperature report sent[0m
+[1;31mE (50391) main: temp: 26.78[0m
+[1;31mE (50391) main: hum: 56.67[0m
+[1;31mE (50391) main: end node network address:10415[0m
+[0;32mI (50391) main: Temperature report sent[0m
+[0;32mI (59201) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (60391) main: temp: 26.77[0m
+[1;31mE (60391) main: hum: 56.75[0m
+[1;31mE (60391) main: end node network address:10415[0m
+[0;32mI (60391) main: Temperature report sent[0m
+[0;32mI (69721) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (70391) main: temp: 26.77[0m
+[1;31mE (70391) main: hum: 56.75[0m
+[1;31mE (70391) main: end node network address:10415[0m
+[0;32mI (70391) main: Temperature report sent[0m
+[0;32mI (73821) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (80391) main: temp: 26.77[0m
+[1;31mE (80391) main: hum: 56.73[0m
+[1;31mE (80391) main: end node network address:10415[0m
+[0;32mI (80391) main: Temperature report sent[0m
+[1;31mE (90391) main: temp: 26.78[0m
+[1;31mE (90391) main: hum: 56.73[0m
+[1;31mE (90391) main: end node network address:10415[0m
+[0;32mI (90391) main: Temperature report sent[0m
+[1;31mE (100391) main: temp: 26.78[0m
+[1;31mE (100391) main: hum: 56.74[0m
+[1;31mE (100391) main: end node network address:10415[0m
+[0;32mI (100391) main: Temperature report sent[0m
+[1;31mE (110391) main: temp: 26.79[0m
+[1;31mE (110391) main: hum: 56.71[0m
+[1;31mE (110391) main: end node network address:10415[0m
+[0;32mI (110391) main: Temperature report sent[0m
+[1;31mE (120391) main: temp: 26.79[0m
+[1;31mE (120391) main: hum: 56.71[0m
+[1;31mE (120391) main: end node network address:10415[0m
+[0;32mI (120391) main: Temperature report sent[0m
+[1;31mE (130391) main: temp: 26.78[0m
+[1;31mE (130391) main: hum: 56.83[0m
+[1;31mE (130391) main: end node network address:10415[0m
+[0;32mI (130391) main: Temperature report sent[0m
+[1;31mE (140391) main: temp: 26.79[0m
+[1;31mE (140391) main: hum: 56.71[0m
+[1;31mE (140391) main: end node network address:10415[0m
+[0;32mI (140391) main: Temperature report sent[0m
+[1;31mE (150391) main: temp: 26.78[0m
+[1;31mE (150391) main: hum: 56.80[0m
+[1;31mE (150391) main: end node network address:10415[0m
+[0;32mI (150391) main: Temperature report sent[0m
+[1;31mE (160391) main: temp: 26.79[0m
+[1;31mE (160391) main: hum: 56.72[0m
+[1;31mE (160391) main: end node network address:10415[0m
+[0;32mI (160391) main: Temperature report sent[0m
+[1;31mE (170391) main: temp: 26.79[0m
+[1;31mE (170391) main: hum: 56.74[0m
+[1;31mE (170391) main: end node network address:10415[0m
+[0;32mI (170391) main: Temperature report sent[0m
+[1;31mE (180391) main: temp: 26.78[0m
+[1;31mE (180391) main: hum: 56.72[0m
+[1;31mE (180391) main: end node network address:10415[0m
+[0;32mI (180391) main: Temperature report sent[0m
+[1;31mE (190391) main: temp: 26.77[0m
+[1;31mE (190391) main: hum: 56.87[0m
+[1;31mE (190391) main: end node network address:10415[0m
+[0;32mI (190391) main: Temperature report sent[0m
+[0;32mI (190441) main: Left network successfully with type(0x01)[0m
+[0;32mI (191641) main: Device started up in non factory-reset mode[0m
+[0;32mI (191641) main: Device reboot[0m
+[1;31mE (200391) main: temp: 26.78[0m
+[1;31mE (200391) main: hum: 56.88[0m
+[1;31mE (200391) main: end node network address:10415[0m
+[0;32mI (200391) main: Temperature report sent[0m
+[1;31mE (210391) main: temp: 26.77[0m
+[1;31mE (210391) main: hum: 56.89[0m
+[1;31mE (210391) main: end node network address:10415[0m
+[0;32mI (210391) main: Temperature report sent[0m
+[0;32mI (213951) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (220391) main: temp: 26.79[0m
+[1;31mE (220391) main: hum: 57.01[0m
+[1;31mE (220391) main: end node network address:10415[0m
+[0;32mI (220391) main: Temperature report sent[0m
+[1;31mE (230391) main: temp: 26.78[0m
+[1;31mE (230391) main: hum: 58.29[0m
+[1;31mE (230391) main: end node network address:10415[0m
+[0;32mI (230391) main: Temperature report sent[0m
+[1;31mE (240391) main: temp: 26.79[0m
+[1;31mE (240391) main: hum: 57.25[0m
+[1;31mE (240391) main: end node network address:10415[0m
+[0;32mI (240391) main: Temperature report sent[0m
+[1;31mE (250391) main: temp: 26.79[0m
+[1;31mE (250391) main: hum: 57.02[0m
+[1;31mE (250391) main: end node network address:10415[0m
+[0;32mI (250391) main: Temperature report sent[0m
+[1;31mE (260391) main: temp: 26.74[0m
+[1;31mE (260391) main: hum: 58.74[0m
+[1;31mE (260391) main: end node network address:10415[0m
+[0;32mI (260391) main: Temperature report sent[0m
+[1;31mE (270391) main: temp: 26.70[0m
+[1;31mE (270391) main: hum: 58.89[0m
+[1;31mE (270391) main: end node network address:10415[0m
+[0;32mI (270391) main: Temperature report sent[0m
+[1;31mE (280391) main: temp: 26.66[0m
+[1;31mE (280391) main: hum: 58.99[0m
+[1;31mE (280391) main: end node network address:10415[0m
+[0;32mI (280391) main: Temperature report sent[0m
+[1;31mE (290391) main: temp: 26.66[0m
+[1;31mE (290391) main: hum: 58.03[0m
+[1;31mE (290391) main: end node network address:10415[0m
+[0;32mI (290391) main: Temperature report sent[0m
+[0;32mI (298141) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (300391) main: temp: 26.67[0m
+[1;31mE (300391) main: hum: 57.20[0m
+[1;31mE (300391) main: end node network address:10415[0m
+[0;32mI (300391) main: Temperature report sent[0m
+[1;31mE (310391) main: temp: 26.69[0m
+[1;31mE (310391) main: hum: 57.47[0m
+[1;31mE (310391) main: end node network address:10415[0m
+[0;32mI (310391) main: Temperature report sent[0m
+[1;31mE (320391) main: temp: 26.72[0m
+[1;31mE (320391) main: hum: 57.22[0m
+[1;31mE (320391) main: end node network address:10415[0m
+[0;32mI (320391) main: Temperature report sent[0m
+[1;31mE (330391) main: temp: 26.71[0m
+[1;31mE (330391) main: hum: 56.95[0m
+[1;31mE (330391) main: end node network address:10415[0m
+[0;32mI (330391) main: Temperature report sent[0m
+[1;31mE (340391) main: temp: 26.71[0m
+[1;31mE (340391) main: hum: 56.91[0m
+[1;31mE (340391) main: end node network address:10415[0m
+[0;32mI (340391) main: Temperature report sent[0m
+[1;31mE (350391) main: temp: 26.71[0m
+[1;31mE (350391) main: hum: 56.89[0m
+[1;31mE (350391) main: end node network address:10415[0m
+[0;32mI (350391) main: Temperature report sent[0m
+[1;31mE (360391) main: temp: 26.70[0m
+[1;31mE (360391) main: hum: 56.94[0m
+[1;31mE (360391) main: end node network address:10415[0m
+[0;32mI (360391) main: Temperature report sent[0m
+[0;32mI (363001) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (370391) main: temp: 26.69[0m
+[1;31mE (370391) main: hum: 56.90[0m
+[1;31mE (370391) main: end node network address:10415[0m
+[0;32mI (370391) main: Temperature report sent[0m
+[1;31mE (380391) main: temp: 26.71[0m
+[1;31mE (380391) main: hum: 56.88[0m
+[1;31mE (380391) main: end node network address:10415[0m
+[0;32mI (380391) main: Temperature report sent[0m
+[0;32mI (384971) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (390391) main: temp: 26.71[0m
+[1;31mE (390391) main: hum: 56.93[0m
+[1;31mE (390391) main: end node network address:10415[0m
+[0;32mI (390391) main: Temperature report sent[0m
+[0;32mI (398221) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (400391) main: temp: 26.71[0m
+[1;31mE (400391) main: hum: 56.93[0m
+[1;31mE (400391) main: end node network address:10415[0m
+[0;32mI (400391) main: Temperature report sent[0m
+[1;31mE (410391) main: temp: 26.70[0m
+[1;31mE (410391) main: hum: 56.89[0m
+[1;31mE (410391) main: end node network address:10415[0m
+[0;32mI (410391) main: Temperature report sent[0m
+[1;31mE (420391) main: temp: 26.69[0m
+[1;31mE (420391) main: hum: 56.92[0m
+[1;31mE (420391) main: end node network address:10415[0m
+[0;32mI (420391) main: Temperature report sent[0m
+[1;31mE (430391) main: temp: 26.69[0m
+[1;31mE (430391) main: hum: 56.92[0m
+[1;31mE (430391) main: end node network address:10415[0m
+[0;32mI (430391) main: Temperature report sent[0m
+[1;31mE (440391) main: temp: 26.69[0m
+[1;31mE (440391) main: hum: 56.91[0m
+[1;31mE (440391) main: end node network address:10415[0m
+[0;32mI (440391) main: Temperature report sent[0m
+[1;31mE (450391) main: temp: 26.69[0m
+[1;31mE (450391) main: hum: 56.88[0m
+[1;31mE (450391) main: end node network address:10415[0m
+[0;32mI (450391) main: Temperature report sent[0m
+[1;31mE (460391) main: temp: 26.70[0m
+[1;31mE (460391) main: hum: 56.85[0m
+[1;31mE (460391) main: end node network address:10415[0m
+[0;32mI (460391) main: Temperature report sent[0m
+[0;32mI (461681) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (470391) main: temp: 26.71[0m
+[1;31mE (470391) main: hum: 56.81[0m
+[1;31mE (470391) main: end node network address:10415[0m
+[0;32mI (470391) main: Temperature report sent[0m
+[1;31mE (480391) main: temp: 26.71[0m
+[1;31mE (480391) main: hum: 56.80[0m
+[1;31mE (480391) main: end node network address:10415[0m
+[0;32mI (480391) main: Temperature report sent[0m
+[0;32mI (483861) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (490391) main: temp: 26.70[0m
+[1;31mE (490391) main: hum: 56.89[0m
+[1;31mE (490391) main: end node network address:10415[0m
+[0;32mI (490391) main: Temperature report sent[0m
+[1;31mE (500391) main: temp: 26.71[0m
+[1;31mE (500391) main: hum: 56.84[0m
+[1;31mE (500391) main: end node network address:10415[0m
+[0;32mI (500391) main: Temperature report sent[0m
+[1;31mE (510391) main: temp: 26.71[0m
+[1;31mE (510391) main: hum: 56.86[0m
+[1;31mE (510391) main: end node network address:10415[0m
+[0;32mI (510391) main: Temperature report sent[0m
+[1;31mE (520391) main: temp: 26.72[0m
+[1;31mE (520391) main: hum: 57.18[0m
+[1;31mE (520391) main: end node network address:10415[0m
+[0;32mI (520391) main: Temperature report sent[0m
+[1;31mE (530391) main: temp: 26.74[0m
+[1;31mE (530391) main: hum: 56.96[0m
+[1;31mE (530391) main: end node network address:10415[0m
+[0;32mI (530391) main: Temperature report sent[0m
+[0;32mI (536541) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (540391) main: temp: 26.75[0m
+[1;31mE (540391) main: hum: 57.24[0m
+[1;31mE (540391) main: end node network address:10415[0m
+[0;32mI (540391) main: Temperature report sent[0m
+[1;31mE (550391) main: temp: 26.75[0m
+[1;31mE (550391) main: hum: 57.11[0m
+[1;31mE (550391) main: end node network address:10415[0m
+[0;32mI (550391) main: Temperature report sent[0m
+[0;32mI (557631) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[0;32mI (560121) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (560391) main: temp: 26.74[0m
+[1;31mE (560391) main: hum: 56.98[0m
+[1;31mE (560391) main: end node network address:10415[0m
+[0;32mI (560391) main: Temperature report sent[0m
+[1;31mE (570391) main: temp: 26.74[0m
+[1;31mE (570391) main: hum: 57.17[0m
+[1;31mE (570391) main: end node network address:10415[0m
+[0;32mI (570391) main: Temperature report sent[0m
+[1;31mE (580391) main: temp: 26.72[0m
+[1;31mE (580391) main: hum: 59.49[0m
+[1;31mE (580391) main: end node network address:10415[0m
+[0;32mI (580391) main: Temperature report sent[0m
+[1;31mE (590391) main: temp: 26.69[0m
+[1;31mE (590391) main: hum: 59.03[0m
+[1;31mE (590391) main: end node network address:10415[0m
+[0;32mI (590391) main: Temperature report sent[0m
+[1;31mE (600391) main: temp: 26.66[0m
+[1;31mE (600391) main: hum: 58.54[0m
+[1;31mE (600391) main: end node network address:10415[0m
+[0;32mI (600391) main: Temperature report sent[0m
+[1;31mE (610391) main: temp: 26.66[0m
+[1;31mE (610391) main: hum: 57.49[0m
+[1;31mE (610391) main: end node network address:10415[0m
+[0;32mI (610391) main: Temperature report sent[0m
+[1;31mE (620391) main: temp: 26.69[0m
+[1;31mE (620391) main: hum: 57.28[0m
+[1;31mE (620391) main: end node network address:10415[0m
+[0;32mI (620391) main: Temperature report sent[0m
+[1;31mE (630391) main: temp: 26.70[0m
+[1;31mE (630391) main: hum: 57.13[0m
+[1;31mE (630391) main: end node network address:10415[0m
+[0;32mI (630391) main: Temperature report sent[0m
+[1;31mE (640391) main: temp: 26.72[0m
+[1;31mE (640391) main: hum: 57.03[0m
+[1;31mE (640391) main: end node network address:10415[0m
+[0;32mI (640391) main: Temperature report sent[0m
+[1;31mE (650391) main: temp: 26.73[0m
+[1;31mE (650391) main: hum: 56.97[0m
+[1;31mE (650391) main: end node network address:10415[0m
+[0;32mI (650391) main: Temperature report sent[0m
+[1;31mE (660391) main: temp: 26.72[0m
+[1;31mE (660391) main: hum: 56.92[0m
+[1;31mE (660391) main: end node network address:10415[0m
+[0;32mI (660391) main: Temperature report sent[0m
+[1;31mE (670391) main: temp: 26.72[0m
+[1;31mE (670391) main: hum: 56.96[0m
+[1;31mE (670391) main: end node network address:10415[0m
+[0;32mI (670391) main: Temperature report sent[0m
+[0;32mI (670981) main: Left network successfully with type(0x01)[0m
+[0;33mW (671151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (672001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (672931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (673831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (674721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (675731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (676591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (677481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (677881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (678041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;32mI (678441) main: Device started up in non factory-reset mode[0m
+[0;32mI (678441) main: Device reboot[0m
+[1;31mE (680391) main: temp: 26.72[0m
+[1;31mE (680391) main: hum: 56.93[0m
+[1;31mE (680391) main: end node network address:10415[0m
+[0;32mI (680391) main: Temperature report sent[0m
+[1;31mE (690391) main: temp: 26.73[0m
+[1;31mE (690391) main: hum: 56.94[0m
+[1;31mE (690391) main: end node network address:10415[0m
+[0;32mI (690391) main: Temperature report sent[0m

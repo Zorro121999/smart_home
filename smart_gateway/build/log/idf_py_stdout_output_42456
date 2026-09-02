@@ -1,0 +1,5 @@
+esptool.py v4.9.0
+Serial port COM6
+Connecting...
+
+A fatal error occurred: This chip is ESP32-H2, not ESP32-C6. Wrong --chip argument?

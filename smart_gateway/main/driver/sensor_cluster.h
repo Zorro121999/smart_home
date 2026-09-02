@@ -1,6 +1,10 @@
 #define SENSOR_EP                   0x01
+#define COORDINATOR_EP              0x0A
+
+#define COORDINATOR_ID             0x0A
 
 #define SENSOR_CLUSTER_ID          0xFC00
+#define COORDINATOR_CLUSTER_ID     0xFC00
 
 #define ATTR_TEMPERATURE_ID        0x0000
 #define ATTR_HUMIDITY_ID           0x0001

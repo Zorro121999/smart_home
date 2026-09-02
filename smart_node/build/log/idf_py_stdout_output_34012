@@ -1,0 +1,119 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807410
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=17060h ( 94304) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00027088 vaddr=40800000 size=00f90h (  3984) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6eeach (454316) map[0m
+[0;32mI (234) esp_image: segment 3: paddr=00096ed4 vaddr=40800f90 size=10984h ( 67972) load[0m
+[0;32mI (254) esp_image: segment 4: paddr=000a7860 vaddr=40811920 size=0217ch (  8572) load[0m
+[0;32mI (258) esp_image: segment 5: paddr=000a99e4 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (264) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (280) cpu_start: Unicore app[0m
+[0;32mI (288) cpu_start: Pro cpu start user code[0m
+[0;32mI (289) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (289) app_init: Application information:[0m
+[0;32mI (290) app_init: Project name:     hello_world[0m
+[0;32mI (293) app_init: App version:      e302085-dirty[0m
+[0;32mI (297) app_init: Compile time:     Sep  2 2026 10:08:02[0m
+[0;32mI (302) app_init: ELF file SHA256:  5f0c69c73...[0m
+[0;32mI (306) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (311) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (315) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (319) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (323) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (329) heap_init: At 408163B0 len 00036FD0 (219 KiB): RAM[0m
+[0;32mI (334) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (339) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (364) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (388) main_task: Calling app_main()[0m
+[1;31mE (398) main: hello[0m
+[1;31mE (398) BME280: device ID: 96[0m
+[0;32mI (398) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (398) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+SDK Version: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTClight sleap enabledI (418) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11
+[0;32mI (428) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (438) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTC[0m
+[0;32mI (448) main_task: Returned from app_main()[0m
+[0;32mI (528) main: Initialize Zigbee stack[0m
+[1;31mE (528) main: hello_zb[0m
+[0;33mW(1278) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (1278) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(2178) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (2178) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3058) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (3058) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3728) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x2c3)[0m
+[0;33mW (3728) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(4478) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (4478) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5288) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5288) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(6278) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (6278) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(7198) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (7198) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8178) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8178) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8988) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8988) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9848) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9848) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (10408) main: temp: 26.05[0m
+[1;31mE (10408) main: hum: 53.73[0m
+[1;31mE (10408) main: end node network address:29018[0m
+[1;31mE (10408) main: set attr state = 0[0m
+[0;33mW(10668) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (10668) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(11148) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x2c3)[0m
+[0;33mW (11148) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(12028) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (12028) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(15638) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x2e1)[0m
+[0;33mW (15638) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(16598) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (16598) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(17408) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (17408) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(18308) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (18308) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (20408) main: temp: 26.05[0m
+[1;31mE (20408) main: hum: 53.81[0m
+[1;31mE (20408) main: end node network address:29018[0m
+[1;31mE (20408) main: set attr state = 0[0m
+[0;33mW(22288) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x2e1)[0m
+[0;33mW (22288) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(23178) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (23178) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(23968) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (23968) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(24718) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (24718) main: BDB Device Reboot failed with status(0x03), please retry[0m

@@ -118,16 +118,164 @@ ezb_af_ep_config_t sensor_endpoint_config = {
     .app_device_version = 1
 };
 
+// ezb_af_simple_desc_t af_node_desc = {
+//     .ep_id = ENDPOINT0,
+//     .app_profile_id = 0x0104U,
+//     .app_device_id = LIVING_ROOM,
+//     .app_device_version = 1
+// };
+
 static const char* TAG = "main";
 
 void zigbee_send_measurement_callback(void *ctx) {
+    // ezb_af_simple_desc_t *af_desc = ezb_af_get_simple_desc(0x01);
+    // uint16_t device_id = af_desc->app_device_id;
+    //
+    ezb_shortaddr_t address;
+    address = ezb_nwk_get_short_address();
+    ESP_LOGE(TAG, "end node network address:%" PRIu16, address);
     sensor_data_t *sensor_data = (sensor_data_t*)ctx;
     ezb_zcl_status_t state;
-    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->temp), false);
-    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_HUMIDITY_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->humidity), false);
-    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_SOIL_MOISTURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->moisture), false);
-    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_SOC_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->soc), false);
+    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->temp), true);
+    ESP_LOGE(TAG, "set attr state = %" PRIu8, state);
+    // state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_HUMIDITY_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->humidity), false);
+    // state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_SOIL_MOISTURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->moisture), false);
+    // state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_SOC_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->soc), false);
+    
+    // ezb_zcl_report_attr_cmd_t report_cmd = {
+    //     .cmd_ctrl = {
+    //         .fc.direction       = EZB_ZCL_CMD_DIRECTION_TO_CLI,
+    //         .dst_addr = {
+    //             .addr_mode = EZB_ADDR_MODE_SHORT,
+    //             .u.short_addr = 0x0000,
+    //         },
+    //         .src_ep = ENDPOINT0,
+    //         .dst_ep = COORDINATOR_EP,
+    //         .cluster_id = SENSOR_CLUSTER_ID,
+    //     },
+    //     .payload = {
+    //         .attr_id = ATTR_TEMPERATURE_ID,
+    //     },
+    // };
+
+    // esp_zigbee_lock_acquire(portMAX_DELAY);
+
+    // ezb_err_t ret = ezb_zcl_report_attr_cmd_req(&report_cmd);
+
+    // esp_zigbee_lock_release();
+
+    // if (ret != EZB_ERR_NONE) {
+    //     ESP_LOGE(TAG,
+    //              "Failed to send temperature report: 0x%04x",
+    //              ret);
+    // } else {
+    //     ESP_LOGI(TAG, "Temperature report sent");
+    // }
+
 }
+
+static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, void *message) {
+    ESP_LOGE(TAG, "zcl callback");
+    ESP_LOGE(TAG, "callback_id = %" PRIu32, callback_id);
+    switch (callback_id) {
+
+        case EZB_ZCL_CORE_CONFIG_REPORT_RSP_CB_ID:
+            ESP_LOGI(TAG, "Configure Reporting Response received!");
+            break;
+
+        case EZB_ZCL_CORE_REPORT_ATTR_CB_ID:
+            ESP_LOGI(TAG, "Report Attributes received!");
+            break;
+    
+    case EZB_ZCL_CORE_DEFAULT_RSP_CB_ID:
+    {
+        ezb_zcl_cmd_default_rsp_message_t *msg =
+            (ezb_zcl_cmd_default_rsp_message_t *)message;
+
+        ESP_LOGI(TAG, "========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========");
+
+        /* ---------------------------------------------------------
+        * Common message information
+        * --------------------------------------------------------- */
+        ESP_LOGI(TAG, "info:");
+        ESP_LOGI(TAG, " status = 0x%02X", msg->info.status);
+
+        ESP_LOGI(TAG, " dst_ep = %u", msg->info.dst_ep);
+
+        ESP_LOGI(TAG, " cluster_id = 0x%04X", msg->info.cluster_id);
+
+        ESP_LOGI(TAG, " cluster_role = 0x%02X", msg->info.cluster_role);
+
+
+        /* ---------------------------------------------------------
+        * Default Response input
+        * --------------------------------------------------------- */
+        ESP_LOGI(TAG, "in:");
+        ESP_LOGI(TAG, "  rsp_to_cmd      = 0x%02X",
+                msg->in.rsp_to_cmd);
+
+        ESP_LOGI(TAG, "  status_code     = 0x%02X",
+                msg->in.status_code);
+
+        /* ---------------------------------------------------------
+        * ZCL command header
+        * --------------------------------------------------------- */
+        const ezb_zcl_cmd_hdr_t *hdr = msg->in.header;
+
+        if (hdr != NULL) {
+
+            ESP_LOGI(TAG, "header:");
+
+            ESP_LOGI(TAG, "addr type = %" PRIu8, hdr->src_addr.addr_mode);
+
+            ESP_LOGI(TAG, "  src_addr        = 0x%04X",
+                    hdr->src_addr.u.short_addr);
+
+            ESP_LOGI(TAG, "  dst_addr        = 0x%04X",
+                    hdr->dst_addr.u.short_addr);
+
+            ESP_LOGI(TAG, "  src_ep          = %u",
+                    hdr->src_ep);
+
+            ESP_LOGI(TAG, "  dst_ep          = %u",
+                    hdr->dst_ep);
+
+            ESP_LOGI(TAG, "  cluster_id      = 0x%04X",
+                    hdr->cluster_id);
+
+            ESP_LOGI(TAG, "  profile_id      = 0x%04X",
+                    hdr->profile_id);
+
+            ESP_LOGI(TAG, "  frame_control   = 0x%02X",
+                    hdr->fc);
+
+            ESP_LOGI(TAG, "  manuf_code      = 0x%04X",
+                    hdr->manuf_code);
+
+            ESP_LOGI(TAG, "  tsn             = 0x%02X",
+                    hdr->tsn);
+
+            ESP_LOGI(TAG, "  rssi            = %d dBm",
+                    hdr->rssi);
+
+            ESP_LOGI(TAG, "  cmd_id          = 0x%02X",
+                    hdr->cmd_id);
+        } else {
+            ESP_LOGW(TAG, "header = NULL");
+        }
+
+    
+
+    break;
+    }
+
+        default:
+            ESP_LOGI(TAG, "Other ZCL callback: %" PRIu32, callback_id);
+            break;
+    }
+}
+
+
 
 
 void esp_zb_task(void *arg) {
@@ -140,13 +288,46 @@ void esp_zb_task(void *arg) {
     ezb_af_device_desc_t sensor_device = ezb_af_create_device_desc();
     ezb_af_ep_desc_t sensor_endpoint = ezb_af_create_endpoint_desc(&sensor_endpoint_config);
     ezb_zcl_cluster_desc_t sensor_cluster = ezb_zcl_custom_create_cluster_desc(&sensor_cluster_config, EZB_ZCL_CLUSTER_SERVER);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &temperature);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_HUMIDITY_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &humidity);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soil_moisture);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE, &soc);
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.temp));
+    if(ret != EZB_ERR_NONE) {
+        ESP_LOGE(TAG,
+             "Failed adding temp attribute"); 
+    }
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_HUMIDITY_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.humidity));
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.moisture));
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.soc));
+    ESP_ERROR_CHECK(ezb_af_endpoint_add_cluster_desc(sensor_endpoint, sensor_cluster));
+    ESP_ERROR_CHECK(ezb_af_device_add_endpoint_desc(sensor_device, sensor_endpoint));
+    ESP_ERROR_CHECK(ezb_af_device_desc_register(sensor_device));
+    ezb_zcl_report_attr_cmd_t report_cmd = {
+    .cmd_ctrl = {
+        .fc.direction = EZB_ZCL_CMD_DIRECTION_TO_CLI,
+
+        .dst_addr = {
+            .addr_mode = EZB_ADDR_MODE_SHORT,
+            .u.short_addr = 0x0000,
+        },
+
+        .src_ep = ENDPOINT0,
+        .dst_ep = COORDINATOR_EP,
+        .cluster_id = SENSOR_CLUSTER_ID,
+    },
+
+    .payload = {
+        .attr_id = ATTR_TEMPERATURE_ID,
+    },
+    };
+    esp_zigbee_lock_acquire(portMAX_DELAY);
+
+    ezb_err_t ret = ezb_zcl_report_attr_cmd_req(&report_cmd);
+
+    esp_zigbee_lock_release();
+
+    ESP_LOGI(TAG, "manual report ret = 0x%04X", ret);
 
     ESP_ERROR_CHECK(ezb_bdb_set_primary_channel_set(channel_mask));
     ezb_app_signal_add_handler(zigbee_signal_callback);
+    ezb_zcl_core_action_handler_register(zigbee_zcl_callback);
   
     ret = esp_zigbee_start(false);
     if(ret != ESP_OK) {
@@ -187,13 +368,39 @@ void timer_callback(TimerHandle_t timer){
 
 bool zigbee_signal_callback(const ezb_app_signal_t *app_signal) {
     ezb_app_signal_type_t signal_type = ezb_app_signal_get_type(app_signal);
-
+    
     switch (signal_type) {
     case EZB_ZDO_SIGNAL_SKIP_STARTUP:
         ESP_LOGI(TAG, "Initialize Zigbee stack");
         ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_INITIALIZATION);
         break;
     case EZB_BDB_SIGNAL_DEVICE_FIRST_START:
+    {
+    ezb_bdb_comm_status_t status =
+        *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
+
+    ESP_LOGI(TAG,
+             "DEVICE_FIRST_START status=0x%02X factory_new=%d",
+             status,
+             ezb_bdb_is_factory_new());
+
+    if (status == EZB_BDB_STATUS_SUCCESS) {
+
+        if (ezb_bdb_is_factory_new()) {
+
+            ESP_LOGI(TAG, "Starting NETWORK_STEERING");
+
+            ezb_err_t ret =
+                ezb_bdb_start_top_level_commissioning(
+                    EZB_BDB_MODE_NETWORK_STEERING);
+
+            ESP_LOGI(TAG,
+                     "NETWORK_STEERING ret=0x%04X",
+                     ret);
+        }
+    }
+    break;
+    }
     case EZB_BDB_SIGNAL_DEVICE_REBOOT: {
         ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
         if (status == EZB_BDB_STATUS_SUCCESS) {
@@ -206,16 +413,17 @@ bool zigbee_signal_callback(const ezb_app_signal_t *app_signal) {
             }
         } else {
             ESP_LOGW(TAG, "%s failed with status(0x%02x), please retry", ezb_app_signal_to_string(signal_type), status);
+            ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_INITIALIZATION);
             //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_INITIALIZATION, 1000);
         }
     } break;
     case EZB_BDB_SIGNAL_STEERING: {
+        ezb_shortaddr_t address;
+        address = ezb_nwk_get_short_address();
+        ESP_LOGE(TAG, "end node network address:%" PRIu16, address);
         ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
         if (status == EZB_BDB_STATUS_SUCCESS) {
             ezb_extpanid_t extended_pan_id;
-            ezb_shortaddr_t address;
-            address = ezb_nwk_get_short_address();
-            ESP_LOGE(TAG, "end node network address:%" PRIu16, address);
             ezb_nwk_get_extended_panid(&extended_pan_id);
             ESP_LOGI(TAG, "Joined network successfully: PAN ID(0x%04hx, EXT: 0x%llx), Channel(%d), Short Address(0x%04hx)",
                      ezb_nwk_get_panid(), extended_pan_id.u64, ezb_nwk_get_current_channel(), ezb_nwk_get_short_address());

@@ -1,0 +1,80 @@
+ESP-ROM:esp32c6-20220919
+BPOWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 29 2026 17:18:01[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42060020 size=0e7a4h ( 59300) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001e7cc vaddr=40800000 size=0184ch (  6220) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=5d6a4h (382628) map[0m
+[0;32mI (181) esp_image: segment 3: paddr=0007d6cc vaddr=4080184c size=0ce88h ( 52872) load[0m
+[0;32mI (193) esp_image: segment 4: paddr=0008a55c vaddr=4080e6e0 size=02444h (  9284) load[0m
+[0;32mI (199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (211) cpu_start: Unicore app[0m
+[0;32mI (219) cpu_start: Pro cpu start user code[0m
+[0;32mI (219) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) app_init: Application information:[0m
+[0;32mI (220) app_init: Project name:     smart_gateway[0m
+[0;32mI (224) app_init: App version:      e302085-dirty[0m
+[0;32mI (228) app_init: Compile time:     Aug 31 2026 18:55:38[0m
+[0;32mI (233) app_init: ELF file SHA256:  b3e8c5d92...[0m
+[0;32mI (238) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 408131B0 len 00069460 (421 KiB): RAM[0m
+[0;32mI (265) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (270) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (276) spi_flash: detected chip: generic[0m
+[0;32mI (279) spi_flash: flash io: dio[0m
+[0;33mW (282) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (307) coexist: coex firmware version: e727207[0m
+[0;32mI (326) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (326) main_task: Started on CPU0[0m
+[0;32mI (326) main_task: Calling app_main()[0m
+[0;32mI (326) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;33mW (326) phy_init: failed to load RF calibration data (0x110f), falling back to full calibration[0m
+[0;32mI (376) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (376) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[1;31mE (386) main: ezb_app_signal_add_handler: ret=0x0[0m
+[1;31mE (386) main: node signal callback[0m
+[1;31mE (386) main: Initialize Zigbee stack[0m
+[1;31mE (386) main: start zigbee ok[0m
+[1;31mE (396) main: hello_zb[0m
+[1;31mE (396) main: node signal callback[0m
+[1;31mE (396) main: Device started up in non factory-reset mode[0m
+[1;31mE (406) main: coordinator node network address:0[0m
+[1;31mE (406) main: PAN ID: 0xB666[0m
+[1;31mE (406) main: Device reboot[0m
+[0;32mI (416) main_task: Returned from app_main()[0m
+[1;31mE (1636) main: node signal callback[0m
+[0;32mI (1636) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (1636) main:   duration = 4 seconds[0m
+[0;32mI (1636) main:   Network is OPEN for joining[0m

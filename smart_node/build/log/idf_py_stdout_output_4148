@@ -1,0 +1,93 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_node/build/bootloader/bootloader.bin"
+Bootloader binary size 0x54c0 bytes. 0x2b40 bytes (34%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Espressif/smart_home/smart_node/main/main.c: In function 'zigbee_send_measurement_callback':
+C:/Espressif/smart_home/smart_node/main/main.c:138:22: warning: variable 'state' set but not used [-Wunused-but-set-variable]
+  138 |     ezb_zcl_status_t state;
+      |                      ^~~~~
+C:/Espressif/smart_home/smart_node/main/main.c: At top level:
+C:/Espressif/smart_home/smart_node/main/main.c:282:13: warning: 'esp_zigbee_zcl_core_action_handler' defined but not used [-Wunused-function]
+  282 | static void esp_zigbee_zcl_core_action_handler(ezb_zcl_core_action_callback_id_t callback_id, void *message)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/main.c:64:14: warning: 'soc' defined but not used [-Wunused-variable]
+   64 | static float soc = 0;
+      |              ^~~
+C:/Espressif/smart_home/smart_node/main/main.c:63:14: warning: 'soil_moisture' defined but not used [-Wunused-variable]
+   63 | static float soil_moisture = 0;
+      |              ^~~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/main.c:62:14: warning: 'humidity' defined but not used [-Wunused-variable]
+   62 | static float humidity = 0;
+      |              ^~~~~~~~
+C:/Espressif/smart_home/smart_node/main/main.c:61:14: warning: 'temperature' defined but not used [-Wunused-variable]
+   61 | static float temperature = 0;
+      |              ^~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable hello_world.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32h2 image...
+Merged 2 ELF sections
+Successfully created esp32h2 image.
+Generated C:/Espressif/smart_home/smart_node/build/hello_world.bin
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/smart_home/smart_node/build/partition_table/partition-table.bin C:/Espressif/smart_home/smart_node/build/hello_world.bin"
+hello_world.bin binary size 0x894d0 bytes. Smallest app partition is 0x15e000 bytes. 0xd4b30 bytes (61%) free.
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.4.1\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.4.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/esptool/esptool.py;--chip;esp32h2 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Espressif/smart_home/smart_node/build -P C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32h2 -p COM6 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 48m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.0
+Serial port COM6
+Connecting...
+Chip is ESP32-H2 (revision v1.2)
+Features: BLE, IEEE802.15.4
+Crystal is 32MHz
+USB mode: USB-Serial/JTAG
+MAC: 10:51:db:ff:fe:69:11:f0
+BASE MAC: 10:51:db:69:11:f0
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00099fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21696 bytes to 13423...
+Writing at 0x00000000... (100 %)
+Wrote 21696 bytes (13423 compressed) at 0x00000000 in 0.4 seconds (effective 494.5 kbit/s)...
+Hash of data verified.
+Compressed 562384 bytes to 316672...
+Writing at 0x00010000... (5 %)
+Writing at 0x0001c085... (10 %)
+Writing at 0x00023367... (15 %)
+Writing at 0x00029ed4... (20 %)
+Writing at 0x000313f2... (25 %)
+Writing at 0x0003856a... (30 %)
+Writing at 0x0003e7af... (35 %)
+Writing at 0x00045072... (40 %)
+Writing at 0x0004b360... (45 %)
+Writing at 0x00051536... (50 %)
+Writing at 0x00057d6b... (55 %)
+Writing at 0x0005f1d1... (60 %)
+Writing at 0x00066076... (65 %)
+Writing at 0x0006c53e... (70 %)
+Writing at 0x00072c75... (75 %)
+Writing at 0x00079cfc... (80 %)
+Writing at 0x0007fa54... (85 %)
+Writing at 0x00087fd9... (90 %)
+Writing at 0x0008f353... (95 %)
+Writing at 0x00096382... (100 %)
+Wrote 562384 bytes (316672 compressed) at 0x00010000 in 3.3 seconds (effective 1377.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 140...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (140 compressed) at 0x00008000 in 0.1 seconds (effective 238.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

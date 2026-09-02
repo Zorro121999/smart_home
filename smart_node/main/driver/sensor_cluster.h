@@ -1,6 +1,7 @@
 #define LIVING_ROOM               0x01
 
 #define ENDPOINT0                   0x01
+#define COORDINATOR_EP              0x0A
 
 #define SENSOR_CLUSTER_ID          0xFC00
 

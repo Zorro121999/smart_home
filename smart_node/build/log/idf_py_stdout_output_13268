@@ -1,0 +1,742 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807422
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=11128h ( 69928) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00021150 vaddr=40800000 size=06ec8h ( 28360) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=64a60h (412256) map[0m
+[0;32mI (224) esp_image: segment 3: paddr=0008ca88 vaddr=40806ec8 size=0aa60h ( 43616) load[0m
+[0;32mI (237) esp_image: segment 4: paddr=000974f0 vaddr=40811930 size=0217ch (  8572) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00099674 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (247) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (248) boot: Disabling RNG early entropy source...[0m
+[0;32mI (263) cpu_start: Unicore app[0m
+[0;32mI (272) cpu_start: Pro cpu start user code[0m
+[0;32mI (272) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (272) app_init: Application information:[0m
+[0;32mI (273) app_init: Project name:     hello_world[0m
+[0;32mI (276) app_init: App version:      e302085-dirty[0m
+[0;32mI (280) app_init: Compile time:     Aug 31 2026 18:11:40[0m
+[0;32mI (285) app_init: ELF file SHA256:  4f5c56cd1...[0m
+[0;32mI (290) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (294) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (298) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (302) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (306) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (312) heap_init: At 408163C0 len 00036FC0 (219 KiB): RAM[0m
+[0;32mI (317) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (322) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (331) spi_flash: flash io: dio[0m
+[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (347) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (353) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (371) main_task: Started on CPU0[0m
+[0;32mI (371) main_task: Calling app_main()[0m
+[1;31mE (381) main: hello[0m
+[1;31mE (381) BME280: device ID: 96[0m
+[0;32mI (381) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (411) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
+[0;32mI (411) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (421) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:33:57 UTC[0m
+[0;32mI (421) main_task: Returned from app_main()[0m
+[0;32mI (481) main: Initialize Zigbee stack[0m
+[1;31mE (481) main: hello_zb[0m
+[0;32mI (701) main: Device started up in non factory-reset mode[0m
+[0;32mI (711) main: Device reboot[0m
+[1;31mE (10391) main: temp: 26.70[0m
+[1;31mE (10391) main: hum: 57.22[0m
+[1;31mE (10391) main: end node network address:10415[0m
+[0;32mI (10391) main: Temperature report sent[0m
+[1;31mE (10461) main: zcl callback[0m
+[0;32mI (10461) main: Other ZCL callback: 8[0m
+[1;31mE (20391) main: temp: 26.70[0m
+[1;31mE (20391) main: hum: 56.87[0m
+[1;31mE (20391) main: end node network address:10415[0m
+[0;32mI (20391) main: Temperature report sent[0m
+[1;31mE (20441) main: zcl callback[0m
+[0;32mI (20441) main: Other ZCL callback: 8[0m
+[1;31mE (30391) main: temp: 26.71[0m
+[1;31mE (30391) main: hum: 56.79[0m
+[1;31mE (30391) main: end node network address:10415[0m
+[0;32mI (30391) main: Temperature report sent[0m
+[1;31mE (30441) main: zcl callback[0m
+[0;32mI (30441) main: Other ZCL callback: 8[0m
+[1;31mE (40391) main: temp: 26.71[0m
+[1;31mE (40391) main: hum: 56.78[0m
+[1;31mE (40391) main: end node network address:10415[0m
+[0;32mI (40391) main: Temperature report sent[0m
+[1;31mE (40441) main: zcl callback[0m
+[0;32mI (40441) main: Other ZCL callback: 8[0m
+[1;31mE (50391) main: temp: 26.72[0m
+[1;31mE (50391) main: hum: 57.08[0m
+[1;31mE (50391) main: end node network address:10415[0m
+[0;32mI (50391) main: Temperature report sent[0m
+[1;31mE (50451) main: zcl callback[0m
+[0;32mI (50451) main: Other ZCL callback: 8[0m
+[1;31mE (60391) main: temp: 26.72[0m
+[1;31mE (60391) main: hum: 56.98[0m
+[1;31mE (60391) main: end node network address:10415[0m
+[0;32mI (60391) main: Temperature report sent[0m
+[1;31mE (60451) main: zcl callback[0m
+[0;32mI (60451) main: Other ZCL callback: 8[0m
+[1;31mE (70391) main: temp: 26.72[0m
+[1;31mE (70391) main: hum: 56.89[0m
+[1;31mE (70391) main: end node network address:10415[0m
+[0;32mI (70391) main: Temperature report sent[0m
+[1;31mE (70451) main: zcl callback[0m
+[0;32mI (70451) main: Other ZCL callback: 8[0m
+[1;31mE (80391) main: temp: 26.71[0m
+[1;31mE (80391) main: hum: 56.88[0m
+[1;31mE (80391) main: end node network address:10415[0m
+[0;32mI (80391) main: Temperature report sent[0m
+[1;31mE (80451) main: zcl callback[0m
+[0;32mI (80461) main: Other ZCL callback: 8[0m
+[1;31mE (90391) main: temp: 26.72[0m
+[1;31mE (90391) main: hum: 57.91[0m
+[1;31mE (90391) main: end node network address:10415[0m
+[0;32mI (90391) main: Temperature report sent[0m
+[1;31mE (90431) main: zcl callback[0m
+[0;32mI (90441) main: Other ZCL callback: 8[0m
+[1;31mE (100391) main: temp: 26.71[0m
+[1;31mE (100391) main: hum: 57.01[0m
+[1;31mE (100391) main: end node network address:10415[0m
+[0;32mI (100391) main: Temperature report sent[0m
+[1;31mE (100451) main: zcl callback[0m
+[0;32mI (100451) main: Other ZCL callback: 8[0m
+[1;31mE (110391) main: temp: 26.71[0m
+[1;31mE (110391) main: hum: 56.92[0m
+[1;31mE (110391) main: end node network address:10415[0m
+[0;32mI (110391) main: Temperature report sent[0m
+[1;31mE (110461) main: zcl callback[0m
+[0;32mI (110461) main: Other ZCL callback: 8[0m
+[1;31mE (120391) main: temp: 26.72[0m
+[1;31mE (120391) main: hum: 56.86[0m
+[1;31mE (120391) main: end node network address:10415[0m
+[0;32mI (120391) main: Temperature report sent[0m
+[1;31mE (120461) main: zcl callback[0m
+[0;32mI (120461) main: Other ZCL callback: 8[0m
+[1;31mE (130391) main: temp: 26.71[0m
+[1;31mE (130391) main: hum: 56.88[0m
+[1;31mE (130391) main: end node network address:10415[0m
+[0;32mI (130391) main: Temperature report sent[0m
+[1;31mE (130461) main: zcl callback[0m
+[0;32mI (130461) main: Other ZCL callback: 8[0m
+[1;31mE (140391) main: temp: 26.66[0m
+[1;31mE (140391) main: hum: 56.95[0m
+[1;31mE (140391) main: end node network address:10415[0m
+[0;32mI (140391) main: Temperature report sent[0m
+[1;31mE (140461) main: zcl callback[0m
+[0;32mI (140461) main: Other ZCL callback: 8[0m
+[1;31mE (150391) main: temp: 26.68[0m
+[1;31mE (150391) main: hum: 57.11[0m
+[1;31mE (150391) main: end node network address:10415[0m
+[0;32mI (150391) main: Temperature report sent[0m
+[1;31mE (150461) main: zcl callback[0m
+[0;32mI (150461) main: Other ZCL callback: 8[0m
+[1;31mE (160391) main: temp: 26.67[0m
+[1;31mE (160391) main: hum: 56.99[0m
+[1;31mE (160391) main: end node network address:10415[0m
+[0;32mI (160391) main: Temperature report sent[0m
+[1;31mE (160451) main: zcl callback[0m
+[0;32mI (160451) main: Other ZCL callback: 8[0m
+[1;31mE (170391) main: temp: 26.64[0m
+[1;31mE (170391) main: hum: 57.00[0m
+[1;31mE (170391) main: end node network address:10415[0m
+[0;32mI (170391) main: Temperature report sent[0m
+[1;31mE (170461) main: zcl callback[0m
+[0;32mI (170461) main: Other ZCL callback: 8[0m
+[1;31mE (180391) main: temp: 26.66[0m
+[1;31mE (180391) main: hum: 58.25[0m
+[1;31mE (180391) main: end node network address:10415[0m
+[0;32mI (180391) main: Temperature report sent[0m
+[1;31mE (180461) main: zcl callback[0m
+[0;32mI (180461) main: Other ZCL callback: 8[0m
+[1;31mE (190391) main: temp: 26.64[0m
+[1;31mE (190391) main: hum: 59.71[0m
+[1;31mE (190391) main: end node network address:10415[0m
+[0;32mI (190391) main: Temperature report sent[0m
+[1;31mE (190461) main: zcl callback[0m
+[0;32mI (190461) main: Other ZCL callback: 8[0m
+[1;31mE (200391) main: temp: 26.64[0m
+[1;31mE (200391) main: hum: 58.94[0m
+[1;31mE (200391) main: end node network address:10415[0m
+[0;32mI (200391) main: Temperature report sent[0m
+[1;31mE (200441) main: zcl callback[0m
+[0;32mI (200441) main: Other ZCL callback: 8[0m
+[1;31mE (210391) main: temp: 26.64[0m
+[1;31mE (210391) main: hum: 57.37[0m
+[1;31mE (210391) main: end node network address:10415[0m
+[0;32mI (210391) main: Temperature report sent[0m
+[1;31mE (210461) main: zcl callback[0m
+[0;32mI (210461) main: Other ZCL callback: 8[0m
+[1;31mE (220391) main: temp: 26.64[0m
+[1;31mE (220391) main: hum: 57.41[0m
+[1;31mE (220391) main: end node network address:10415[0m
+[0;32mI (220391) main: Temperature report sent[0m
+[1;31mE (220441) main: zcl callback[0m
+[0;32mI (220441) main: Other ZCL callback: 8[0m
+[1;31mE (230391) main: temp: 26.65[0m
+[1;31mE (230391) main: hum: 57.86[0m
+[1;31mE (230391) main: end node network address:10415[0m
+[0;32mI (230391) main: Temperature report sent[0m
+[1;31mE (230461) main: zcl callback[0m
+[0;32mI (230461) main: Other ZCL callback: 8[0m
+[1;31mE (240391) main: temp: 26.68[0m
+[1;31mE (240391) main: hum: 57.19[0m
+[1;31mE (240391) main: end node network address:10415[0m
+[0;32mI (240391) main: Temperature report sent[0m
+[1;31mE (240441) main: zcl callback[0m
+[0;32mI (240441) main: Other ZCL callback: 8[0m
+[1;31mE (250391) main: temp: 26.68[0m
+[1;31mE (250391) main: hum: 57.05[0m
+[1;31mE (250391) main: end node network address:10415[0m
+[0;32mI (250391) main: Temperature report sent[0m
+[1;31mE (250441) main: zcl callback[0m
+[0;32mI (250441) main: Other ZCL callback: 8[0m
+[1;31mE (260391) main: temp: 26.69[0m
+[1;31mE (260391) main: hum: 57.03[0m
+[1;31mE (260391) main: end node network address:10415[0m
+[0;32mI (260391) main: Temperature report sent[0m
+[1;31mE (260451) main: zcl callback[0m
+[0;32mI (260451) main: Other ZCL callback: 8[0m
+[1;31mE (270391) main: temp: 26.69[0m
+[1;31mE (270391) main: hum: 56.98[0m
+[1;31mE (270391) main: end node network address:10415[0m
+[0;32mI (270391) main: Temperature report sent[0m
+[1;31mE (270461) main: zcl callback[0m
+[0;32mI (270461) main: Other ZCL callback: 8[0m
+[1;31mE (280391) main: temp: 26.68[0m
+[1;31mE (280391) main: hum: 56.97[0m
+[1;31mE (280391) main: end node network address:10415[0m
+[0;32mI (280391) main: Temperature report sent[0m
+[1;31mE (280441) main: zcl callback[0m
+[0;32mI (280441) main: Other ZCL callback: 8[0m
+[1;31mE (290391) main: temp: 26.67[0m
+[1;31mE (290391) main: hum: 56.99[0m
+[1;31mE (290391) main: end node network address:10415[0m
+[0;32mI (290391) main: Temperature report sent[0m
+[1;31mE (290441) main: zcl callback[0m
+[0;32mI (290441) main: Other ZCL callback: 8[0m
+[1;31mE (300391) main: temp: 26.68[0m
+[1;31mE (300391) main: hum: 56.97[0m
+[1;31mE (300391) main: end node network address:10415[0m
+[0;32mI (300391) main: Temperature report sent[0m
+[1;31mE (300451) main: zcl callback[0m
+[0;32mI (300451) main: Other ZCL callback: 8[0m
+[1;31mE (310391) main: temp: 26.68[0m
+[1;31mE (310391) main: hum: 56.98[0m
+[1;31mE (310391) main: end node network address:10415[0m
+[0;32mI (310391) main: Temperature report sent[0m
+[1;31mE (310451) main: zcl callback[0m
+[0;32mI (310451) main: Other ZCL callback: 8[0m
+[1;31mE (320391) main: temp: 26.67[0m
+[1;31mE (320391) main: hum: 56.98[0m
+[1;31mE (320391) main: end node network address:10415[0m
+[0;32mI (320391) main: Temperature report sent[0m
+[1;31mE (320431) main: zcl callback[0m
+[0;32mI (320431) main: Other ZCL callback: 8[0m
+[1;31mE (330391) main: temp: 26.69[0m
+[1;31mE (330391) main: hum: 56.97[0m
+[1;31mE (330391) main: end node network address:10415[0m
+[0;32mI (330391) main: Temperature report sent[0m
+[1;31mE (330461) main: zcl callback[0m
+[0;32mI (330461) main: Other ZCL callback: 8[0m
+[1;31mE (340391) main: temp: 26.69[0m
+[1;31mE (340391) main: hum: 56.95[0m
+[1;31mE (340391) main: end node network address:10415[0m
+[0;32mI (340391) main: Temperature report sent[0m
+[1;31mE (340461) main: zcl callback[0m
+[0;32mI (340461) main: Other ZCL callback: 8[0m
+[1;31mE (350391) main: temp: 26.68[0m
+[1;31mE (350391) main: hum: 56.96[0m
+[1;31mE (350391) main: end node network address:10415[0m
+[0;32mI (350391) main: Temperature report sent[0m
+[1;31mE (350461) main: zcl callback[0m
+[0;32mI (350461) main: Other ZCL callback: 8[0m
+[1;31mE (360391) main: temp: 26.68[0m
+[1;31mE (360391) main: hum: 56.97[0m
+[1;31mE (360391) main: end node network address:10415[0m
+[0;32mI (360391) main: Temperature report sent[0m
+[1;31mE (360451) main: zcl callback[0m
+[0;32mI (360451) main: Other ZCL callback: 8[0m
+[1;31mE (370391) main: temp: 26.66[0m
+[1;31mE (370391) main: hum: 56.99[0m
+[1;31mE (370391) main: end node network address:10415[0m
+[0;32mI (370391) main: Temperature report sent[0m
+[1;31mE (370451) main: zcl callback[0m
+[0;32mI (370451) main: Other ZCL callback: 8[0m
+[1;31mE (380391) main: temp: 26.67[0m
+[1;31mE (380391) main: hum: 58.57[0m
+[1;31mE (380391) main: end node network address:10415[0m
+[0;32mI (380391) main: Temperature report sent[0m
+[1;31mE (380441) main: zcl callback[0m
+[0;32mI (380441) main: Other ZCL callback: 8[0m
+[1;31mE (390391) main: temp: 26.64[0m
+[1;31mE (390391) main: hum: 57.62[0m
+[1;31mE (390391) main: end node network address:10415[0m
+[0;32mI (390391) main: Temperature report sent[0m
+[1;31mE (390441) main: zcl callback[0m
+[0;32mI (390441) main: Other ZCL callback: 8[0m
+[1;31mE (400391) main: temp: 26.66[0m
+[1;31mE (400391) main: hum: 57.35[0m
+[1;31mE (400391) main: end node network address:10415[0m
+[0;32mI (400391) main: Temperature report sent[0m
+[1;31mE (400451) main: zcl callback[0m
+[0;32mI (400451) main: Other ZCL callback: 8[0m
+[1;31mE (410391) main: temp: 26.64[0m
+[1;31mE (410391) main: hum: 57.09[0m
+[1;31mE (410391) main: end node network address:10415[0m
+[0;32mI (410391) main: Temperature report sent[0m
+[1;31mE (410441) main: zcl callback[0m
+[0;32mI (410441) main: Other ZCL callback: 8[0m
+[1;31mE (420391) main: temp: 26.62[0m
+[1;31mE (420391) main: hum: 57.06[0m
+[1;31mE (420391) main: end node network address:10415[0m
+[0;32mI (420391) main: Temperature report sent[0m
+[1;31mE (420451) main: zcl callback[0m
+[0;32mI (420451) main: Other ZCL callback: 8[0m
+[1;31mE (430391) main: temp: 26.63[0m
+[1;31mE (430391) main: hum: 57.04[0m
+[1;31mE (430391) main: end node network address:10415[0m
+[0;32mI (430391) main: Temperature report sent[0m
+[1;31mE (430441) main: zcl callback[0m
+[0;32mI (430441) main: Other ZCL callback: 8[0m
+[1;31mE (440391) main: temp: 26.63[0m
+[1;31mE (440391) main: hum: 57.07[0m
+[1;31mE (440391) main: end node network address:10415[0m
+[0;32mI (440391) main: Temperature report sent[0m
+[1;31mE (440451) main: zcl callback[0m
+[0;32mI (440451) main: Other ZCL callback: 8[0m
+[1;31mE (450391) main: temp: 26.64[0m
+[1;31mE (450391) main: hum: 57.04[0m
+[1;31mE (450391) main: end node network address:10415[0m
+[0;32mI (450391) main: Temperature report sent[0m
+[1;31mE (450451) main: zcl callback[0m
+[0;32mI (450451) main: Other ZCL callback: 8[0m
+[1;31mE (460391) main: temp: 26.63[0m
+[1;31mE (460391) main: hum: 57.02[0m
+[1;31mE (460391) main: end node network address:10415[0m
+[0;32mI (460391) main: Temperature report sent[0m
+[1;31mE (460441) main: zcl callback[0m
+[0;32mI (460441) main: Other ZCL callback: 8[0m
+[1;31mE (470391) main: temp: 26.65[0m
+[1;31mE (470391) main: hum: 57.02[0m
+[1;31mE (470391) main: end node network address:10415[0m
+[0;32mI (470391) main: Temperature report sent[0m
+[1;31mE (470441) main: zcl callback[0m
+[0;32mI (470441) main: Other ZCL callback: 8[0m
+[1;31mE (480391) main: temp: 26.64[0m
+[1;31mE (480391) main: hum: 57.01[0m
+[1;31mE (480391) main: end node network address:10415[0m
+[0;32mI (480391) main: Temperature report sent[0m
+[1;31mE (480451) main: zcl callback[0m
+[0;32mI (480451) main: Other ZCL callback: 8[0m
+[1;31mE (490391) main: temp: 26.64[0m
+[1;31mE (490391) main: hum: 56.99[0m
+[1;31mE (490391) main: end node network address:10415[0m
+[0;32mI (490391) main: Temperature report sent[0m
+[1;31mE (490451) main: zcl callback[0m
+[0;32mI (490451) main: Other ZCL callback: 8[0m
+[1;31mE (500391) main: temp: 26.65[0m
+[1;31mE (500391) main: hum: 59.06[0m
+[1;31mE (500391) main: end node network address:10415[0m
+[0;32mI (500391) main: Temperature report sent[0m
+[1;31mE (500441) main: zcl callback[0m
+[0;32mI (500441) main: Other ZCL callback: 8[0m
+[1;31mE (510391) main: temp: 26.66[0m
+[1;31mE (510391) main: hum: 57.48[0m
+[1;31mE (510391) main: end node network address:10415[0m
+[0;32mI (510391) main: Temperature report sent[0m
+[1;31mE (510431) main: zcl callback[0m
+[0;32mI (510431) main: Other ZCL callback: 8[0m
+[1;31mE (520391) main: temp: 26.67[0m
+[1;31mE (520391) main: hum: 58.11[0m
+[1;31mE (520391) main: end node network address:10415[0m
+[0;32mI (520391) main: Temperature report sent[0m
+[1;31mE (520431) main: zcl callback[0m
+[0;32mI (520431) main: Other ZCL callback: 8[0m
+[1;31mE (530391) main: temp: 26.66[0m
+[1;31mE (530391) main: hum: 57.26[0m
+[1;31mE (530391) main: end node network address:10415[0m
+[0;32mI (530391) main: Temperature report sent[0m
+[1;31mE (530451) main: zcl callback[0m
+[0;32mI (530461) main: Other ZCL callback: 8[0m
+[1;31mE (540391) main: temp: 26.65[0m
+[1;31mE (540391) main: hum: 57.14[0m
+[1;31mE (540391) main: end node network address:10415[0m
+[0;32mI (540391) main: Temperature report sent[0m
+[1;31mE (540451) main: zcl callback[0m
+[0;32mI (540461) main: Other ZCL callback: 8[0m
+[1;31mE (550391) main: temp: 26.66[0m
+[1;31mE (550391) main: hum: 57.08[0m
+[1;31mE (550391) main: end node network address:10415[0m
+[0;32mI (550391) main: Temperature report sent[0m
+[1;31mE (550451) main: zcl callback[0m
+[0;32mI (550451) main: Other ZCL callback: 8[0m
+[1;31mE (560391) main: temp: 26.64[0m
+[1;31mE (560391) main: hum: 57.02[0m
+[1;31mE (560391) main: end node network address:10415[0m
+[0;32mI (560391) main: Temperature report sent[0m
+[1;31mE (560451) main: zcl callback[0m
+[0;32mI (560451) main: Other ZCL callback: 8[0m
+[1;31mE (570391) main: temp: 26.63[0m
+[1;31mE (570391) main: hum: 56.99[0m
+[1;31mE (570391) main: end node network address:10415[0m
+[0;32mI (570391) main: Temperature report sent[0m
+[1;31mE (570461) main: zcl callback[0m
+[0;32mI (570461) main: Other ZCL callback: 8[0m
+[1;31mE (580391) main: temp: 26.66[0m
+[1;31mE (580391) main: hum: 57.01[0m
+[1;31mE (580391) main: end node network address:10415[0m
+[0;32mI (580391) main: Temperature report sent[0m
+[1;31mE (580451) main: zcl callback[0m
+[0;32mI (580451) main: Other ZCL callback: 8[0m
+[1;31mE (590391) main: temp: 26.65[0m
+[1;31mE (590391) main: hum: 57.31[0m
+[1;31mE (590391) main: end node network address:10415[0m
+[0;32mI (590391) main: Temperature report sent[0m
+[1;31mE (590461) main: zcl callback[0m
+[0;32mI (590461) main: Other ZCL callback: 8[0m
+[1;31mE (600391) main: temp: 26.64[0m
+[1;31mE (600391) main: hum: 57.25[0m
+[1;31mE (600391) main: end node network address:10415[0m
+[0;32mI (600391) main: Temperature report sent[0m
+[1;31mE (600431) main: zcl callback[0m
+[0;32mI (600431) main: Other ZCL callback: 8[0m
+[1;31mE (610391) main: temp: 26.65[0m
+[1;31mE (610391) main: hum: 57.07[0m
+[1;31mE (610391) main: end node network address:10415[0m
+[0;32mI (610391) main: Temperature report sent[0m
+[1;31mE (610461) main: zcl callback[0m
+[0;32mI (610461) main: Other ZCL callback: 8[0m
+[1;31mE (620391) main: temp: 26.66[0m
+[1;31mE (620391) main: hum: 56.97[0m
+[1;31mE (620391) main: end node network address:10415[0m
+[0;32mI (620391) main: Temperature report sent[0m
+[1;31mE (620481) main: zcl callback[0m
+[0;32mI (620481) main: Other ZCL callback: 8[0m
+[1;31mE (630391) main: temp: 26.66[0m
+[1;31mE (630391) main: hum: 56.96[0m
+[1;31mE (630391) main: end node network address:10415[0m
+[0;32mI (630391) main: Temperature report sent[0m
+[1;31mE (630461) main: zcl callback[0m
+[0;32mI (630461) main: Other ZCL callback: 8[0m
+[1;31mE (640391) main: temp: 26.66[0m
+[1;31mE (640391) main: hum: 56.93[0m
+[1;31mE (640391) main: end node network address:10415[0m
+[0;32mI (640391) main: Temperature report sent[0m
+[1;31mE (640441) main: zcl callback[0m
+[0;32mI (640441) main: Other ZCL callback: 8[0m
+[1;31mE (650391) main: temp: 26.65[0m
+[1;31mE (650391) main: hum: 56.92[0m
+[1;31mE (650391) main: end node network address:10415[0m
+[0;32mI (650391) main: Temperature report sent[0m
+[1;31mE (650451) main: zcl callback[0m
+[0;32mI (650451) main: Other ZCL callback: 8[0m
+[1;31mE (660391) main: temp: 26.66[0m
+[1;31mE (660391) main: hum: 56.92[0m
+[1;31mE (660391) main: end node network address:10415[0m
+[0;32mI (660391) main: Temperature report sent[0m
+[1;31mE (660441) main: zcl callback[0m
+[0;32mI (660441) main: Other ZCL callback: 8[0m
+[1;31mE (670391) main: temp: 26.66[0m
+[1;31mE (670391) main: hum: 56.93[0m
+[1;31mE (670391) main: end node network address:10415[0m
+[0;32mI (670391) main: Temperature report sent[0m
+[1;31mE (670461) main: zcl callback[0m
+[0;32mI (670461) main: Other ZCL callback: 8[0m
+[1;31mE (680391) main: temp: 26.65[0m
+[1;31mE (680391) main: hum: 56.92[0m
+[1;31mE (680391) main: end node network address:10415[0m
+[0;32mI (680391) main: Temperature report sent[0m
+[0;32mI (686041) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[0;32mI (686041) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (690391) main: temp: 26.64[0m
+[1;31mE (690391) main: hum: 58.99[0m
+[1;31mE (690391) main: end node network address:10415[0m
+[0;32mI (690391) main: Temperature report sent[0m
+[1;31mE (700391) main: temp: 26.65[0m
+[1;31mE (700391) main: hum: 57.74[0m
+[1;31mE (700391) main: end node network address:10415[0m
+[0;32mI (700391) main: Temperature report sent[0m
+[1;31mE (710391) main: temp: 26.65[0m
+[1;31mE (710391) main: hum: 57.14[0m
+[1;31mE (710391) main: end node network address:10415[0m
+[0;32mI (710391) main: Temperature report sent[0m
+[1;31mE (720391) main: temp: 26.66[0m
+[1;31mE (720391) main: hum: 57.04[0m
+[1;31mE (720391) main: end node network address:10415[0m
+[0;32mI (720391) main: Temperature report sent[0m
+[1;31mE (730391) main: temp: 26.67[0m
+[1;31mE (730391) main: hum: 56.97[0m
+[1;31mE (730391) main: end node network address:10415[0m
+[0;32mI (730391) main: Temperature report sent[0m
+[1;31mE (740391) main: temp: 26.69[0m
+[1;31mE (740391) main: hum: 56.97[0m
+[1;31mE (740391) main: end node network address:10415[0m
+[0;32mI (740391) main: Temperature report sent[0m
+[1;31mE (750391) main: temp: 26.70[0m
+[1;31mE (750391) main: hum: 56.91[0m
+[1;31mE (750391) main: end node network address:10415[0m
+[0;32mI (750391) main: Temperature report sent[0m
+[1;31mE (760391) main: temp: 26.71[0m
+[1;31mE (760391) main: hum: 56.85[0m
+[1;31mE (760391) main: end node network address:10415[0m
+[0;32mI (760391) main: Temperature report sent[0m
+[1;31mE (770391) main: temp: 26.72[0m
+[1;31mE (770391) main: hum: 56.83[0m
+[1;31mE (770391) main: end node network address:10415[0m
+[0;32mI (770391) main: Temperature report sent[0m
+[1;31mE (780391) main: temp: 26.73[0m
+[1;31mE (780391) main: hum: 56.82[0m
+[1;31mE (780391) main: end node network address:10415[0m
+[0;32mI (780391) main: Temperature report sent[0m
+[1;31mE (790391) main: temp: 26.72[0m
+[1;31mE (790391) main: hum: 56.80[0m
+[1;31mE (790391) main: end node network address:10415[0m
+[0;32mI (790391) main: Temperature report sent[0m
+[1;31mE (800391) main: temp: 26.73[0m
+[1;31mE (800391) main: hum: 56.82[0m
+[1;31mE (800391) main: end node network address:10415[0m
+[0;32mI (800391) main: Temperature report sent[0m
+[1;31mE (810391) main: temp: 26.72[0m
+[1;31mE (810391) main: hum: 56.84[0m
+[1;31mE (810391) main: end node network address:10415[0m
+[0;32mI (810391) main: Temperature report sent[0m
+[1;31mE (820391) main: temp: 26.73[0m
+[1;31mE (820391) main: hum: 56.85[0m
+[1;31mE (820391) main: end node network address:10415[0m
+[0;32mI (820391) main: Temperature report sent[0m
+[1;31mE (830391) main: temp: 26.71[0m
+[1;31mE (830391) main: hum: 56.81[0m
+[1;31mE (830391) main: end node network address:10415[0m
+[0;32mI (830391) main: Temperature report sent[0m
+[1;31mE (840391) main: temp: 26.72[0m
+[1;31mE (840391) main: hum: 56.77[0m
+[1;31mE (840391) main: end node network address:10415[0m
+[0;32mI (840391) main: Temperature report sent[0m
+[1;31mE (850391) main: temp: 26.71[0m
+[1;31mE (850391) main: hum: 56.79[0m
+[1;31mE (850391) main: end node network address:10415[0m
+[0;32mI (850391) main: Temperature report sent[0m
+[1;31mE (860391) main: temp: 26.71[0m
+[1;31mE (860391) main: hum: 56.86[0m
+[1;31mE (860391) main: end node network address:10415[0m
+[0;32mI (860391) main: Temperature report sent[0m
+[1;31mE (870391) main: temp: 26.71[0m
+[1;31mE (870391) main: hum: 56.81[0m
+[1;31mE (870391) main: end node network address:10415[0m
+[0;32mI (870391) main: Temperature report sent[0m
+[1;31mE (880391) main: temp: 26.68[0m
+[1;31mE (880391) main: hum: 56.84[0m
+[1;31mE (880391) main: end node network address:10415[0m
+[0;32mI (880391) main: Temperature report sent[0m
+[1;31mE (890391) main: temp: 26.67[0m
+[1;31mE (890391) main: hum: 56.86[0m
+[1;31mE (890391) main: end node network address:10415[0m
+[0;32mI (890391) main: Temperature report sent[0m
+[1;31mE (900391) main: temp: 26.64[0m
+[1;31mE (900391) main: hum: 56.97[0m
+[1;31mE (900391) main: end node network address:10415[0m
+[0;32mI (900391) main: Temperature report sent[0m
+[1;31mE (900441) main: zcl callback[0m
+[0;32mI (900441) main: Other ZCL callback: 8[0m
+[1;31mE (910391) main: temp: 26.65[0m
+[1;31mE (910391) main: hum: 56.88[0m
+[1;31mE (910391) main: end node network address:10415[0m
+[0;32mI (910391) main: Temperature report sent[0m
+[1;31mE (910441) main: zcl callback[0m
+[0;32mI (910441) main: Other ZCL callback: 8[0m
+[1;31mE (920391) main: temp: 26.65[0m
+[1;31mE (920391) main: hum: 56.85[0m
+[1;31mE (920391) main: end node network address:10415[0m
+[0;32mI (920391) main: Temperature report sent[0m
+[1;31mE (920441) main: zcl callback[0m
+[0;32mI (920441) main: Other ZCL callback: 8[0m
+[1;31mE (930391) main: temp: 26.66[0m
+[1;31mE (930391) main: hum: 56.82[0m
+[1;31mE (930391) main: end node network address:10415[0m
+[0;32mI (930391) main: Temperature report sent[0m
+[1;31mE (930441) main: zcl callback[0m
+[0;32mI (930441) main: Other ZCL callback: 8[0m
+[1;31mE (940391) main: temp: 26.67[0m
+[1;31mE (940391) main: hum: 56.80[0m
+[1;31mE (940391) main: end node network address:10415[0m
+[0;32mI (940391) main: Temperature report sent[0m
+[1;31mE (940461) main: zcl callback[0m
+[0;32mI (940461) main: Other ZCL callback: 8[0m
+[1;31mE (950391) main: temp: 26.66[0m
+[1;31mE (950391) main: hum: 56.85[0m
+[1;31mE (950391) main: end node network address:10415[0m
+[0;32mI (950391) main: Temperature report sent[0m
+[1;31mE (950461) main: zcl callback[0m
+[0;32mI (950461) main: Other ZCL callback: 8[0m
+[1;31mE (960391) main: temp: 26.65[0m
+[1;31mE (960391) main: hum: 56.83[0m
+[1;31mE (960391) main: end node network address:10415[0m
+[0;32mI (960391) main: Temperature report sent[0m
+[1;31mE (960481) main: zcl callback[0m
+[0;32mI (960481) main: Other ZCL callback: 8[0m
+[1;31mE (970391) main: temp: 26.65[0m
+[1;31mE (970391) main: hum: 57.64[0m
+[1;31mE (970391) main: end node network address:10415[0m
+[0;32mI (970391) main: Temperature report sent[0m
+[1;31mE (970451) main: zcl callback[0m
+[0;32mI (970451) main: Other ZCL callback: 8[0m
+[1;31mE (980391) main: temp: 26.64[0m
+[1;31mE (980391) main: hum: 56.96[0m
+[1;31mE (980391) main: end node network address:10415[0m
+[0;32mI (980391) main: Temperature report sent[0m
+[1;31mE (980441) main: zcl callback[0m
+[0;32mI (980441) main: Other ZCL callback: 8[0m
+[1;31mE (990391) main: temp: 26.63[0m
+[1;31mE (990391) main: hum: 59.32[0m
+[1;31mE (990391) main: end node network address:10415[0m
+[0;32mI (990391) main: Temperature report sent[0m
+[1;31mE (990461) main: zcl callback[0m
+[0;32mI (990461) main: Other ZCL callback: 8[0m
+[1;31mE (1000391) main: temp: 26.60[0m
+[1;31mE (1000391) main: hum: 58.39[0m
+[1;31mE (1000391) main: end node network address:10415[0m
+[0;32mI (1000391) main: Temperature report sent[0m
+[1;31mE (1000441) main: zcl callback[0m
+[0;32mI (1000441) main: Other ZCL callback: 8[0m
+[1;31mE (1010391) main: temp: 26.61[0m
+[1;31mE (1010391) main: hum: 58.23[0m
+[1;31mE (1010391) main: end node network address:10415[0m
+[0;32mI (1010391) main: Temperature report sent[0m
+[1;31mE (1010441) main: zcl callback[0m
+[0;32mI (1010441) main: Other ZCL callback: 8[0m
+[1;31mE (1020391) main: temp: 26.62[0m
+[1;31mE (1020391) main: hum: 57.85[0m
+[1;31mE (1020391) main: end node network address:10415[0m
+[0;32mI (1020391) main: Temperature report sent[0m
+[1;31mE (1020441) main: zcl callback[0m
+[0;32mI (1020441) main: Other ZCL callback: 8[0m
+[1;31mE (1030391) main: temp: 26.60[0m
+[1;31mE (1030391) main: hum: 57.30[0m
+[1;31mE (1030391) main: end node network address:10415[0m
+[0;32mI (1030391) main: Temperature report sent[0m
+[1;31mE (1030441) main: zcl callback[0m
+[0;32mI (1030441) main: Other ZCL callback: 8[0m
+[1;31mE (1040391) main: temp: 26.59[0m
+[1;31mE (1040391) main: hum: 57.45[0m
+[1;31mE (1040391) main: end node network address:10415[0m
+[0;32mI (1040391) main: Temperature report sent[0m
+[0;32mI (1040441) main: Left network successfully with type(0x01)[0m
+[0;32mI (1040651) main: Device started up in non factory-reset mode[0m
+[0;32mI (1040661) main: Device reboot[0m
+[1;31mE (1050391) main: temp: 26.59[0m
+[1;31mE (1050391) main: hum: 57.29[0m
+[1;31mE (1050391) main: end node network address:10415[0m
+[0;32mI (1050391) main: Temperature report sent[0m
+[1;31mE (1050441) main: zcl callback[0m
+[0;32mI (1050441) main: Other ZCL callback: 8[0m
+[1;31mE (1060391) main: temp: 26.60[0m
+[1;31mE (1060391) main: hum: 57.15[0m
+[1;31mE (1060391) main: end node network address:10415[0m
+[0;32mI (1060391) main: Temperature report sent[0m
+[1;31mE (1060451) main: zcl callback[0m
+[0;32mI (1060451) main: Other ZCL callback: 8[0m
+[1;31mE (1070391) main: temp: 26.59[0m
+[1;31mE (1070391) main: hum: 57.04[0m
+[1;31mE (1070391) main: end node network address:10415[0m
+[0;32mI (1070391) main: Temperature report sent[0m
+[1;31mE (1070431) main: zcl callback[0m
+[0;32mI (1070431) main: Other ZCL callback: 8[0m
+[1;31mE (1080391) main: temp: 26.61[0m
+[1;31mE (1080391) main: hum: 57.03[0m
+[1;31mE (1080391) main: end node network address:10415[0m
+[0;32mI (1080391) main: Temperature report sent[0m
+[1;31mE (1080441) main: zcl callback[0m
+[0;32mI (1080441) main: Other ZCL callback: 8[0m
+[1;31mE (1090391) main: temp: 26.61[0m
+[1;31mE (1090391) main: hum: 56.95[0m
+[1;31mE (1090391) main: end node network address:10415[0m
+[0;32mI (1090391) main: Temperature report sent[0m
+[1;31mE (1090451) main: zcl callback[0m
+[0;32mI (1090451) main: Other ZCL callback: 8[0m
+[1;31mE (1100391) main: temp: 26.60[0m
+[1;31mE (1100391) main: hum: 56.93[0m
+[1;31mE (1100391) main: end node network address:10415[0m
+[0;32mI (1100391) main: Temperature report sent[0m
+[1;31mE (1100451) main: zcl callback[0m
+[0;32mI (1100451) main: Other ZCL callback: 8[0m
+[1;31mE (1110391) main: temp: 26.61[0m
+[1;31mE (1110391) main: hum: 56.92[0m
+[1;31mE (1110391) main: end node network address:10415[0m
+[0;32mI (1110391) main: Temperature report sent[0m
+[1;31mE (1110451) main: zcl callback[0m
+[0;32mI (1110451) main: Other ZCL callback: 8[0m
+[1;31mE (1120391) main: temp: 26.62[0m
+[1;31mE (1120391) main: hum: 56.90[0m
+[1;31mE (1120391) main: end node network address:10415[0m
+[0;32mI (1120391) main: Temperature report sent[0m
+[1;31mE (1120441) main: zcl callback[0m
+[0;32mI (1120441) main: Other ZCL callback: 8[0m
+[1;31mE (1130391) main: temp: 26.63[0m
+[1;31mE (1130391) main: hum: 56.84[0m
+[1;31mE (1130391) main: end node network address:10415[0m
+[0;32mI (1130391) main: Temperature report sent[0m
+[1;31mE (1130451) main: zcl callback[0m
+[0;32mI (1130451) main: Other ZCL callback: 8[0m
+[1;31mE (1140391) main: temp: 26.63[0m
+[1;31mE (1140391) main: hum: 56.94[0m
+[1;31mE (1140391) main: end node network address:10415[0m
+[0;32mI (1140391) main: Temperature report sent[0m
+[1;31mE (1140451) main: zcl callback[0m
+[0;32mI (1140451) main: Other ZCL callback: 8[0m
+[1;31mE (1150391) main: temp: 26.62[0m
+[1;31mE (1150391) main: hum: 56.87[0m
+[1;31mE (1150391) main: end node network address:10415[0m
+[0;32mI (1150391) main: Temperature report sent[0m
+[1;31mE (1150421) main: zcl callback[0m
+[0;32mI (1150421) main: Other ZCL callback: 8[0m
+[1;31mE (1160391) main: temp: 26.65[0m
+[1;31mE (1160391) main: hum: 57.47[0m
+[1;31mE (1160391) main: end node network address:10415[0m
+[0;32mI (1160391) main: Temperature report sent[0m
+[1;31mE (1160441) main: zcl callback[0m
+[0;32mI (1160441) main: Other ZCL callback: 8[0m
+[1;31mE (1170391) main: temp: 26.65[0m
+[1;31mE (1170391) main: hum: 59.32[0m
+[1;31mE (1170391) main: end node network address:10415[0m
+[0;32mI (1170391) main: Temperature report sent[0m
+[1;31mE (1170441) main: zcl callback[0m
+[0;32mI (1170441) main: Other ZCL callback: 8[0m
+[1;31mE (1180391) main: temp: 26.61[0m
+[1;31mE (1180391) main: hum: 59.67[0m
+[1;31mE (1180391) main: end node network address:10415[0m
+[0;32mI (1180391) main: Temperature report sent[0m
+[1;31mE (1180441) main: zcl callback[0m
+[0;32mI (1180451) main: Other ZCL callback: 8[0m
+[1;31mE (1190391) main: temp: 26.60[0m
+[1;31mE (1190391) main: hum: 58.13[0m
+[1;31mE (1190391) main: end node network address:10415[0m
+[0;32mI (1190391) main: Temperature report sent[0m
+[1;31mE (1190451) main: zcl callback[0m
+[0;32mI (1190461) main: Other ZCL callback: 8[0m

@@ -858,6 +858,7 @@
 #define CONFIG_ZB_SDK_1xx 1
 #define CONFIG_ZB_ZED 1
 #define CONFIG_ZB_RADIO_NATIVE 1
+#define CONFIG_ZB_DEBUG_MODE 1
 
 /* List of deprecated options */
 #define CONFIG_BROWNOUT_DET CONFIG_ESP_BROWNOUT_DET

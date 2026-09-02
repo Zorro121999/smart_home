@@ -1,0 +1,338 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807410
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=16cf8h ( 93432) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00026d20 vaddr=40800000 size=012f8h (  4856) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6eae0h (453344) map[0m
+[0;32mI (234) esp_image: segment 3: paddr=00096b08 vaddr=408012f8 size=1061ch ( 67100) load[0m
+[0;32mI (253) esp_image: segment 4: paddr=000a712c vaddr=40811920 size=0217ch (  8572) load[0m
+[0;32mI (257) esp_image: segment 5: paddr=000a92b0 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (263) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (264) boot: Disabling RNG early entropy source...[0m
+[1;31mE (10429) main: temp: 26.09[0m
+[1;31mE (10429) main: hum: 54.33[0m
+[1;31mE (10429) main: end node network address:29018[0m
+[1;31mE (20429) main: temp: 26.11[0m
+[1;31mE (20429) main: hum: 54.58[0m
+[1;31mE (20429) main: end node network address:29018[0m
+[1;31mE (30429) main: temp: 26.12[0m
+[1;31mE (30429) main: hum: 54.50[0m
+[1;31mE (30429) main: end node network address:29018[0m
+[1;31mE (40429) main: temp: 26.13[0m
+[1;31mE (40429) main: hum: 54.20[0m
+[1;31mE (40429) main: end node network address:29018[0m
+[1;31mE (50429) main: temp: 26.13[0m
+[1;31mE (50429) main: hum: 54.01[0m
+[1;31mE (50429) main: end node network address:29018[0m
+[1;31mE (60429) main: temp: 26.12[0m
+[1;31mE (60429) main: hum: 54.42[0m
+[1;31mE (60429) main: end node network address:29018[0m
+[1;31mE (70429) main: temp: 26.13[0m
+[1;31mE (70429) main: hum: 54.58[0m
+[1;31mE (70429) main: end node network address:29018[0m
+[1;31mE (80429) main: temp: 26.13[0m
+[1;31mE (80429) main: hum: 54.18[0m
+[1;31mE (80429) main: end node network address:29018[0m
+[1;31mE (90429) main: temp: 26.14[0m
+[1;31mE (90429) main: hum: 54.27[0m
+[1;31mE (90429) main: end node network address:29018[0m
+[1;31mE (100429) main: temp: 26.15[0m
+[1;31mE (100429) main: hum: 54.20[0m
+[1;31mE (100429) main: end node network address:29018[0m
+[1;31mE (110429) main: temp: 26.14[0m
+[1;31mE (110429) main: hum: 54.51[0m
+[1;31mE (110429) main: end node network address:29018[0m
+[1;31mE (120429) main: temp: 26.14[0m
+[1;31mE (120429) main: hum: 54.65[0m
+[1;31mE (120429) main: end node network address:29018[0m
+[1;31mE (130429) main: temp: 26.13[0m
+[1;31mE (130429) main: hum: 54.38[0m
+[1;31mE (130429) main: end node network address:29018[0m
+[1;31mE (140429) main: temp: 26.14[0m
+[1;31mE (140429) main: hum: 54.27[0m
+[1;31mE (140429) main: end node network address:29018[0m
+[1;31mE (150429) main: temp: 26.14[0m
+[1;31mE (150429) main: hum: 54.42[0m
+[1;31mE (150429) main: end node network address:29018[0m
+[1;31mE (160429) main: temp: 26.14[0m
+[1;31mE (160429) main: hum: 54.30[0m
+[1;31mE (160429) main: end node network address:29018[0m
+[1;31mE (170429) main: temp: 26.14[0m
+[1;31mE (170429) main: hum: 54.28[0m
+[1;31mE (170429) main: end node network address:29018[0m
+[1;31mE (180429) main: temp: 26.14[0m
+[1;31mE (180429) main: hum: 54.56[0m
+[1;31mE (180429) main: end node network address:29018[0m
+[1;31mE (190429) main: temp: 26.15[0m
+[1;31mE (190429) main: hum: 54.66[0m
+[1;31mE (190429) main: end node network address:29018[0m
+[1;31mE (200429) main: temp: 26.16[0m
+[1;31mE (200429) main: hum: 54.66[0m
+[1;31mE (200429) main: end node network address:29018[0m
+[1;31mE (210429) main: temp: 26.16[0m
+[1;31mE (210429) main: hum: 54.53[0m
+[1;31mE (210429) main: end node network address:29018[0m
+[1;31mE (220429) main: temp: 26.18[0m
+[1;31mE (220429) main: hum: 54.14[0m
+[1;31mE (220429) main: end node network address:29018[0m
+[1;31mE (230429) main: temp: 26.18[0m
+[1;31mE (230429) main: hum: 54.46[0m
+[1;31mE (230429) main: end node network address:29018[0m
+[1;31mE (240429) main: temp: 26.19[0m
+[1;31mE (240429) main: hum: 54.56[0m
+[1;31mE (240429) main: end node network address:29018[0m
+[1;31mE (250429) main: temp: 26.19[0m
+[1;31mE (250429) main: hum: 54.44[0m
+[1;31mE (250429) main: end node network address:29018[0m
+[1;31mE (260429) main: temp: 26.19[0m
+[1;31mE (260429) main: hum: 53.88[0m
+[1;31mE (260429) main: end node network address:29018[0m
+[1;31mE (270429) main: temp: 26.19[0m
+[1;31mE (270429) main: hum: 53.89[0m
+[1;31mE (270429) main: end node network address:29018[0m
+[1;31mE (280429) main: temp: 26.19[0m
+[1;31mE (280429) main: hum: 53.80[0m
+[1;31mE (280429) main: end node network address:29018[0m
+[1;31mE (290429) main: temp: 26.19[0m
+[1;31mE (290429) main: hum: 53.76[0m
+[1;31mE (290429) main: end node network address:29018[0m
+[1;31mE (300429) main: temp: 26.17[0m
+[1;31mE (300429) main: hum: 54.18[0m
+[1;31mE (300429) main: end node network address:29018[0m
+[1;31mE (310429) main: temp: 26.18[0m
+[1;31mE (310429) main: hum: 54.30[0m
+[1;31mE (310429) main: end node network address:29018[0m
+[1;31mE (320429) main: temp: 26.19[0m
+[1;31mE (320429) main: hum: 54.00[0m
+[1;31mE (320429) main: end node network address:29018[0m
+[1;31mE (330429) main: temp: 26.19[0m
+[1;31mE (330429) main: hum: 54.00[0m
+[1;31mE (330429) main: end node network address:29018[0m
+[1;31mE (340429) main: temp: 26.18[0m
+[1;31mE (340429) main: hum: 53.97[0m
+[1;31mE (340429) main: end node network address:29018[0m
+[1;31mE (350429) main: temp: 26.18[0m
+[1;31mE (350429) main: hum: 54.26[0m
+[1;31mE (350429) main: end node network address:29018[0m
+[1;31mE (360429) main: temp: 26.18[0m
+[1;31mE (360429) main: hum: 54.36[0m
+[1;31mE (360429) main: end node network address:29018[0m
+[1;31mE (370429) main: temp: 26.19[0m
+[1;31mE (370429) main: hum: 54.32[0m
+[1;31mE (370429) main: end node network address:29018[0m
+[1;31mE (380429) main: temp: 26.18[0m
+[1;31mE (380429) main: hum: 54.33[0m
+[1;31mE (380429) main: end node network address:29018[0m
+[1;31mE (390429) main: temp: 26.17[0m
+[1;31mE (390429) main: hum: 54.21[0m
+[1;31mE (390429) main: end node network address:29018[0m
+[1;31mE (400429) main: temp: 26.18[0m
+[1;31mE (400429) main: hum: 54.51[0m
+[1;31mE (400429) main: end node network address:29018[0m
+[1;31mE (410429) main: temp: 26.18[0m
+[1;31mE (410429) main: hum: 54.67[0m
+[1;31mE (410429) main: end node network address:29018[0m
+[1;31mE (420429) main: temp: 26.19[0m
+[1;31mE (420429) main: hum: 54.27[0m
+[1;31mE (420429) main: end node network address:29018[0m
+[1;31mE (430429) main: temp: 26.19[0m
+[1;31mE (430429) main: hum: 54.05[0m
+[1;31mE (430429) main: end node network address:29018[0m
+[1;31mE (440429) main: temp: 26.19[0m
+[1;31mE (440429) main: hum: 54.07[0m
+[1;31mE (440429) main: end node network address:29018[0m
+[1;31mE (450429) main: temp: 26.19[0m
+[1;31mE (450429) main: hum: 54.35[0m
+[1;31mE (450429) main: end node network address:29018[0m
+[1;31mE (460429) main: temp: 26.18[0m
+[1;31mE (460429) main: hum: 54.37[0m
+[1;31mE (460429) main: end node network address:29018[0m
+[1;31mE (470429) main: temp: 26.19[0m
+[1;31mE (470429) main: hum: 54.08[0m
+[1;31mE (470429) main: end node network address:29018[0m
+[1;31mE (480429) main: temp: 26.17[0m
+[1;31mE (480429) main: hum: 54.10[0m
+[1;31mE (480429) main: end node network address:29018[0m
+[1;31mE (490429) main: temp: 26.18[0m
+[1;31mE (490429) main: hum: 53.83[0m
+[1;31mE (490429) main: end node network address:29018[0m
+[1;31mE (500429) main: temp: 26.18[0m
+[1;31mE (500429) main: hum: 53.55[0m
+[1;31mE (500429) main: end node network address:29018[0m
+[1;31mE (510429) main: temp: 26.19[0m
+[1;31mE (510429) main: hum: 53.97[0m
+[1;31mE (510429) main: end node network address:29018[0m
+[1;31mE (520429) main: temp: 26.17[0m
+[1;31mE (520429) main: hum: 53.97[0m
+[1;31mE (520429) main: end node network address:29018[0m
+[1;31mE (530429) main: temp: 26.17[0m
+[1;31mE (530429) main: hum: 54.06[0m
+[1;31mE (530429) main: end node network address:29018[0m
+[1;31mE (540429) main: temp: 26.17[0m
+[1;31mE (540429) main: hum: 53.96[0m
+[1;31mE (540429) main: end node network address:29018[0m
+[1;31mE (550429) main: temp: 26.18[0m
+[1;31mE (550429) main: hum: 53.98[0m
+[1;31mE (550429) main: end node network address:29018[0m
+[1;31mE (560429) main: temp: 26.16[0m
+[1;31mE (560429) main: hum: 54.20[0m
+[1;31mE (560429) main: end node network address:29018[0m
+[1;31mE (570429) main: temp: 26.19[0m
+[1;31mE (570429) main: hum: 54.35[0m
+[1;31mE (570429) main: end node network address:29018[0m
+[1;31mE (580429) main: temp: 26.18[0m
+[1;31mE (580429) main: hum: 54.24[0m
+[1;31mE (580429) main: end node network address:29018[0m
+[1;31mE (590429) main: temp: 26.19[0m
+[1;31mE (590429) main: hum: 53.91[0m
+[1;31mE (590429) main: end node network address:29018[0m
+[1;31mE (600429) main: temp: 26.18[0m
+[1;31mE (600429) main: hum: 53.73[0m
+[1;31mE (600429) main: end node network address:29018[0m
+[1;31mE (610429) main: temp: 26.17[0m
+[1;31mE (610429) main: hum: 53.65[0m
+[1;31mE (610429) main: end node network address:29018[0m
+[1;31mE (620429) main: temp: 26.18[0m
+[1;31mE (620429) main: hum: 53.56[0m
+[1;31mE (620429) main: end node network address:29018[0m
+[1;31mE (630429) main: temp: 26.19[0m
+[1;31mE (630429) main: hum: 53.88[0m
+[1;31mE (630429) main: end node network address:29018[0m
+[1;31mE (640429) main: temp: 26.18[0m
+[1;31mE (640429) main: hum: 53.87[0m
+[1;31mE (640429) main: end node network address:29018[0m
+[1;31mE (650429) main: temp: 26.18[0m
+[1;31mE (650429) main: hum: 54.26[0m
+[1;31mE (650429) main: end node network address:29018[0m
+[1;31mE (660429) main: temp: 26.18[0m
+[1;31mE (660429) main: hum: 54.33[0m
+[1;31mE (660429) main: end node network address:29018[0m
+[1;31mE (670429) main: temp: 26.17[0m
+[1;31mE (670429) main: hum: 54.13[0m
+[1;31mE (670429) main: end node network address:29018[0m
+[1;31mE (680429) main: temp: 26.18[0m
+[1;31mE (680429) main: hum: 54.15[0m
+[1;31mE (680429) main: end node network address:29018[0m
+[1;31mE (690429) main: temp: 26.18[0m
+[1;31mE (690429) main: hum: 54.15[0m
+[1;31mE (690429) main: end node network address:29018[0m
+[1;31mE (700429) main: temp: 26.16[0m
+[1;31mE (700429) main: hum: 54.05[0m
+[1;31mE (700429) main: end node network address:29018[0m
+[1;31mE (710429) main: temp: 26.16[0m
+[1;31mE (710429) main: hum: 54.15[0m
+[1;31mE (710429) main: end node network address:29018[0m
+[1;31mE (720429) main: temp: 26.18[0m
+[1;31mE (720429) main: hum: 54.33[0m
+[1;31mE (720429) main: end node network address:29018[0m
+[1;31mE (730429) main: temp: 26.18[0m
+[1;31mE (730429) main: hum: 54.23[0m
+[1;31mE (730429) main: end node network address:29018[0m
+[1;31mE (740429) main: temp: 26.18[0m
+[1;31mE (740429) main: hum: 54.01[0m
+[1;31mE (740429) main: end node network address:29018[0m
+[1;31mE (750429) main: temp: 26.17[0m
+[1;31mE (750429) main: hum: 53.82[0m
+[1;31mE (750429) main: end node network address:29018[0m
+[1;31mE (760429) main: temp: 26.18[0m
+[1;31mE (760429) main: hum: 53.89[0m
+[1;31mE (760429) main: end node network address:29018[0m
+[1;31mE (770429) main: temp: 26.18[0m
+[1;31mE (770429) main: hum: 53.92[0m
+[1;31mE (770429) main: end node network address:29018[0m
+[1;31mE (780429) main: temp: 26.18[0m
+[1;31mE (780429) main: hum: 53.85[0m
+[1;31mE (780429) main: end node network address:29018[0m
+[1;31mE (790429) main: temp: 26.19[0m
+[1;31mE (790429) main: hum: 53.96[0m
+[1;31mE (790429) main: end node network address:29018[0m
+[1;31mE (800429) main: temp: 26.19[0m
+[1;31mE (800429) main: hum: 53.96[0m
+[1;31mE (800429) main: end node network address:29018[0m
+[1;31mE (810429) main: temp: 26.18[0m
+[1;31mE (810429) main: hum: 53.67[0m
+[1;31mE (810429) main: end node network address:29018[0m
+[1;31mE (820429) main: temp: 26.17[0m
+[1;31mE (820429) main: hum: 53.35[0m
+[1;31mE (820429) main: end node network address:29018[0m
+[1;31mE (830429) main: temp: 26.17[0m
+[1;31mE (830429) main: hum: 53.67[0m
+[1;31mE (830429) main: end node network address:29018[0m
+[1;31mE (840429) main: temp: 26.16[0m
+[1;31mE (840429) main: hum: 53.83[0m
+[1;31mE (840429) main: end node network address:29018[0m
+[1;31mE (850429) main: temp: 26.15[0m
+[1;31mE (850429) main: hum: 53.95[0m
+[1;31mE (850429) main: end node network address:29018[0m
+[1;31mE (860429) main: temp: 26.16[0m
+[1;31mE (860429) main: hum: 54.04[0m
+[1;31mE (860429) main: end node network address:29018[0m
+[1;31mE (870429) main: temp: 26.16[0m
+[1;31mE (870429) main: hum: 54.05[0m
+[1;31mE (870429) main: end node network address:29018[0m
+[1;31mE (880429) main: temp: 26.16[0m
+[1;31mE (880429) main: hum: 54.19[0m
+[1;31mE (880429) main: end node network address:29018[0m
+[1;31mE (890429) main: temp: 26.16[0m
+[1;31mE (890429) main: hum: 54.05[0m
+[1;31mE (890429) main: end node network address:29018[0m
+[1;31mE (900429) main: temp: 26.16[0m
+[1;31mE (900429) main: hum: 54.06[0m
+[1;31mE (900429) main: end node network address:29018[0m
+[1;31mE (910429) main: temp: 26.16[0m
+[1;31mE (910429) main: hum: 54.13[0m
+[1;31mE (910429) main: end node network address:29018[0m
+[1;31mE (920429) main: temp: 26.18[0m
+[1;31mE (920429) main: hum: 54.28[0m
+[1;31mE (920429) main: end node network address:29018[0m
+[1;31mE (930429) main: temp: 26.17[0m
+[1;31mE (930429) main: hum: 54.25[0m
+[1;31mE (930429) main: end node network address:29018[0m
+[1;31mE (940429) main: temp: 26.16[0m
+[1;31mE (940429) main: hum: 54.44[0m
+[1;31mE (940429) main: end node network address:29018[0m
+[1;31mE (950429) main: temp: 26.16[0m
+[1;31mE (950429) main: hum: 54.47[0m
+[1;31mE (950429) main: end node network address:29018[0m
+[1;31mE (960429) main: temp: 26.18[0m
+[1;31mE (960429) main: hum: 54.44[0m
+[1;31mE (960429) main: end node network address:29018[0m
+[1;31mE (970429) main: temp: 26.17[0m
+[1;31mE (970429) main: hum: 54.19[0m
+[1;31mE (970429) main: end node network address:29018[0m
+[0;32mI (977459) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (980429) main: temp: 26.15[0m
+[1;31mE (980429) main: hum: 54.50[0m
+[1;31mE (980429) main: end node network address:29018[0m
+[1;31mE (990429) main: temp: 26.16[0m
+[1;31mE (990429) main: hum: 54.38[0m
+[1;31mE (990429) main: end node network address:29018[0m
+[1;31mE (1000429) main: temp: 26.15[0m
+[1;31mE (1000429) main: hum: 54.32[0m
+[1;31mE (1000429) main: end node network address:29018[0m
+[1;31mE (1010429) main: temp: 26.15[0m
+[1;31mE (1010429) main: hum: 54.50[0m
+[1;31mE (1010429) main: end node network address:29018[0m

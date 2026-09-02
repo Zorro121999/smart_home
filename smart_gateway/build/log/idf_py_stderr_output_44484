@@ -1,0 +1,8 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40807422: rtc_time_us_to_slowclk at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/port/esp32c6/rtc_time.c:251
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 2b9ed343dbb784f9ac3bb70305ea0f2f563c105c37403054d7649aa3667f8960[0m
+[0m

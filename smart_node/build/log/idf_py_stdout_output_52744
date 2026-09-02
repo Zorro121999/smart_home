@@ -1,69 +1,120 @@
-ESP-ROM:esp32h2-eco5-20240613
-Build:Jun 13 2024
-rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
-Saved PC:0x40807422
-SPIWP:0xee
-mode:DIO, clock div:1
-load:0x408460e0,len:0x1674
-load:0x4083cad0,len:0xf04
-load:0x4083efd0,len:0x2ef0
-entry 0x4083cada
-[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
-[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
-[0;32mI (25) boot: chip revision: v1.2[0m
-[0;32mI (25) boot: efuse block revision: v0.3[0m
-[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
-[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
-[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
-[0;32mI (39) boot: Enabling RNG early entropy source...[0m
-[0;32mI (43) boot: Partition Table:[0m
-[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
-[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
-[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
-[0;32mI (85) boot: End of partition table[0m
-[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=10eb0h ( 69296) map[0m
-[0;32mI (113) esp_image: segment 1: paddr=00020ed8 vaddr=40800000 size=07140h ( 28992) load[0m
-[0;32mI (122) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=64310h (410384) map[0m
-[0;32mI (224) esp_image: segment 3: paddr=0008c338 vaddr=40807140 size=0a7e8h ( 42984) load[0m
-[0;32mI (237) esp_image: segment 4: paddr=00096b28 vaddr=40811930 size=0217ch (  8572) load[0m
-[0;32mI (241) esp_image: segment 5: paddr=00098cac vaddr=50000000 size=00070h (   112) load[0m
-[0;32mI (247) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (248) boot: Disabling RNG early entropy source...[0m
-[0;32mI (262) cpu_start: Unicore app[0m
-[0;32mI (271) cpu_start: Pro cpu start user code[0m
-[0;32mI (272) cpu_start: cpu freq: 96000000 Hz[0m
-[0;32mI (272) app_init: Application information:[0m
-[0;32mI (272) app_init: Project name:     hello_world[0m
-[0;32mI (275) app_init: App version:      c730acb-dirty[0m
-[0;32mI (280) app_init: Compile time:     Aug 29 2026 18:57:52[0m
-[0;32mI (285) app_init: ELF file SHA256:  42ab7e2bb...[0m
-[0;32mI (289) app_init: ESP-IDF:          v5.4.1-dirty[0m
-[0;32mI (294) efuse_init: Min chip rev:     v0.0[0m
-[0;32mI (297) efuse_init: Max chip rev:     v1.99 [0m
-[0;32mI (301) efuse_init: Chip rev:         v1.2[0m
-[0;32mI (305) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (312) heap_init: At 408163D0 len 00036FB0 (219 KiB): RAM[0m
-[0;32mI (317) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
-[0;32mI (322) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
-[0;32mI (328) spi_flash: detected chip: generic[0m
-[0;32mI (331) spi_flash: flash io: dio[0m
-[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (347) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
-[0;32mI (352) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
-[0;32mI (371) main_task: Started on CPU0[0m
-[0;32mI (371) main_task: Calling app_main()[0m
-[1;31mE (371) main: hello[0m
-[1;31mE (371) BME280: device ID: 96[0m
-[0;32mI (371) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
-[0;32mI (381) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
-[0;32mI (401) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
-[0;32mI (401) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
-[1;31mE (411) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:33:57 UTC[0m
-[0;32mI (421) main: Initialize Zigbee stack[0m
-[1;31mE (421) main: hello_zb[0m
-[0;32mI (421) main: Device started up in factory-reset mode[0m
-[0;32mI (421) main_task: Returned from app_main()[0m
-[0;32mI (2691) main: Joined network successfully: PAN ID(0xb666, EXT: 0xe4b323fffea28198), Channel(20), Short Address(0x3c4f)[0m
+[0/1] Re-running CMake...
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32h2
+NOTICE: 
+Following dependencies have new versions available:
+Dependency "espressif/esp-zigbee-lib": "2.0.3" -> "2.0.4"
+Consider running "idf.py update-dependencies" to update your lock file.
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] espressif/esp-zigbee-lib (2.0.3)
+NOTICE: [2/2] idf (5.4.1)
+-- Project sdkconfig file C:/Espressif/smart_home/smart_node/sdkconfig
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/ld/rom.api.ld
+-- App "hello_world" version: e302085-dirty
+-- Adding linker script C:/Espressif/smart_home/smart_node/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script C:/Espressif/smart_home/smart_node/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/ld/esp32h2.rom.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/ld/esp32h2.rom.api.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/ld/esp32h2.rom.libgcc.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/ld/esp32h2.rom.wdt.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/ld/esp32h2.rom.systimer.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/ld/esp32h2.rom.version.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/ld/esp32h2.rom.newlib.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/ld/esp32h2.rom.heap.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/esp32h2/ld/esp32h2.peripherals.ld
+-- Component idf::espressif__esp-zigbee-lib will be linked with -Wl,--whole-archive
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi espcoredump espressif__esp-zigbee-lib esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table protobuf-c protocomm pthread riscv rt sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant
+-- Component paths: C:/Espressif/frameworks/esp-idf-v5.4.1/components/app_trace C:/Espressif/frameworks/esp-idf-v5.4.1/components/app_update C:/Espressif/frameworks/esp-idf-v5.4.1/components/bootloader C:/Espressif/frameworks/esp-idf-v5.4.1/components/bootloader_support C:/Espressif/frameworks/esp-idf-v5.4.1/components/bt C:/Espressif/frameworks/esp-idf-v5.4.1/components/cmock C:/Espressif/frameworks/esp-idf-v5.4.1/components/console C:/Espressif/frameworks/esp-idf-v5.4.1/components/cxx C:/Espressif/frameworks/esp-idf-v5.4.1/components/driver C:/Espressif/frameworks/esp-idf-v5.4.1/components/efuse C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp-tls C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_app_format C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_bootloader_format C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_coex C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_common C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_ana_cmpr C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_cam C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_dac C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_gpio C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_gptimer C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_i2c C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_i2s C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_isp C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_jpeg C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_ledc C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_mcpwm C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_parlio C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_pcnt C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_ppa C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_rmt C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdio C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdm C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdmmc C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdspi C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_spi C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_touch_sens C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_tsens C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_uart C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_usb_serial_jtag C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_eth C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_event C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_gdbstub C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hid C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_http_client C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_http_server C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_https_ota C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_https_server C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_lcd C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_local_ctrl C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_mm C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_netif C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_netif_stack C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_partition C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_phy C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_pm C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_psram C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_ringbuf C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_security C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_timer C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_vfs_console C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_wifi C:/Espressif/frameworks/esp-idf-v5.4.1/components/espcoredump C:/Espressif/smart_home/smart_node/managed_components/espressif__esp-zigbee-lib C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py C:/Espressif/frameworks/esp-idf-v5.4.1/components/fatfs C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos C:/Espressif/frameworks/esp-idf-v5.4.1/components/hal C:/Espressif/frameworks/esp-idf-v5.4.1/components/heap C:/Espressif/frameworks/esp-idf-v5.4.1/components/http_parser C:/Espressif/frameworks/esp-idf-v5.4.1/components/idf_test C:/Espressif/frameworks/esp-idf-v5.4.1/components/ieee802154 C:/Espressif/frameworks/esp-idf-v5.4.1/components/json C:/Espressif/frameworks/esp-idf-v5.4.1/components/log C:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip C:/Espressif/smart_home/smart_node/main C:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls C:/Espressif/frameworks/esp-idf-v5.4.1/components/mqtt C:/Espressif/frameworks/esp-idf-v5.4.1/components/newlib C:/Espressif/frameworks/esp-idf-v5.4.1/components/nvs_flash C:/Espressif/frameworks/esp-idf-v5.4.1/components/nvs_sec_provider C:/Espressif/frameworks/esp-idf-v5.4.1/components/openthread C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table C:/Espressif/frameworks/esp-idf-v5.4.1/components/protobuf-c C:/Espressif/frameworks/esp-idf-v5.4.1/components/protocomm C:/Espressif/frameworks/esp-idf-v5.4.1/components/pthread C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv C:/Espressif/frameworks/esp-idf-v5.4.1/components/rt C:/Espressif/frameworks/esp-idf-v5.4.1/components/sdmmc C:/Espressif/frameworks/esp-idf-v5.4.1/components/soc C:/Espressif/frameworks/esp-idf-v5.4.1/components/spi_flash C:/Espressif/frameworks/esp-idf-v5.4.1/components/spiffs C:/Espressif/frameworks/esp-idf-v5.4.1/components/tcp_transport C:/Espressif/frameworks/esp-idf-v5.4.1/components/ulp C:/Espressif/frameworks/esp-idf-v5.4.1/components/unity C:/Espressif/frameworks/esp-idf-v5.4.1/components/usb C:/Espressif/frameworks/esp-idf-v5.4.1/components/vfs C:/Espressif/frameworks/esp-idf-v5.4.1/components/wear_levelling C:/Espressif/frameworks/esp-idf-v5.4.1/components/wifi_provisioning C:/Espressif/frameworks/esp-idf-v5.4.1/components/wpa_supplicant
+-- Configuring done (18.7s)
+-- Generating done (2.4s)
+-- Build files have been written to: C:/Espressif/smart_home/smart_node/build
+[1/13] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_node/build/bootloader/bootloader.bin"
+Bootloader binary size 0x54c0 bytes. 0x2b40 bytes (34%) free.
+[2/13] No install step for 'bootloader'
+[3/13] Completed 'bootloader'
+[4/13] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[5/13] Linking C static library esp-idf\esp_app_format\libesp_app_format.a
+[6/13] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Espressif/smart_home/smart_node/main/main.c: In function 'zigbee_send_measurement_callback':
+C:/Espressif/smart_home/smart_node/main/main.c:128:22: warning: variable 'state' set but not used [-Wunused-but-set-variable]
+  128 |     ezb_zcl_status_t state;
+      |                      ^~~~~
+C:/Espressif/smart_home/smart_node/main/main.c: In function 'esp_zb_task':
+C:/Espressif/smart_home/smart_node/main/main.c:144:22: warning: unused variable 'sensor_endpoint' [-Wunused-variable]
+  144 |     ezb_af_ep_desc_t sensor_endpoint = ezb_af_create_endpoint_desc(&sensor_endpoint_config);
+      |                      ^~~~~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/main.c:143:26: warning: unused variable 'sensor_device' [-Wunused-variable]
+  143 |     ezb_af_device_desc_t sensor_device = ezb_af_create_device_desc();
+      |                          ^~~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/main.c: At top level:
+C:/Espressif/smart_home/smart_node/main/main.c:250:13: warning: 'esp_zigbee_zcl_core_action_handler' defined but not used [-Wunused-function]
+  250 | static void esp_zigbee_zcl_core_action_handler(ezb_zcl_core_action_callback_id_t callback_id, void *message)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[7/13] Linking C static library esp-idf\main\libmain.a
+[8/13] Generating ld/sections.ld
+[9/13] Linking CXX executable hello_world.elf
+[10/13] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32h2 image...
+Merged 2 ELF sections
+Successfully created esp32h2 image.
+Generated C:/Espressif/smart_home/smart_node/build/hello_world.bin
+[11/13] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/smart_home/smart_node/build/partition_table/partition-table.bin C:/Espressif/smart_home/smart_node/build/hello_world.bin"
+hello_world.bin binary size 0x88dd0 bytes. Smallest app partition is 0x15e000 bytes. 0xd5230 bytes (61%) free.
+[11/13] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.4.1\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.4.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/esptool/esptool.py;--chip;esp32h2 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Espressif/smart_home/smart_node/build -P C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32h2 -p COM6 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 48m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.0
+Serial port COM6
+Connecting...
+Chip is ESP32-H2 (revision v1.2)
+Features: BLE, IEEE802.15.4
+Crystal is 32MHz
+USB mode: USB-Serial/JTAG
+MAC: 10:51:db:ff:fe:69:11:f0
+BASE MAC: 10:51:db:69:11:f0
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00098fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21696 bytes to 13423...
+Writing at 0x00000000... (100 %)
+Wrote 21696 bytes (13423 compressed) at 0x00000000 in 0.3 seconds (effective 496.6 kbit/s)...
+Hash of data verified.
+Compressed 560592 bytes to 315718...
+Writing at 0x00010000... (5 %)
+Writing at 0x0001c092... (10 %)
+Writing at 0x000232f3... (15 %)
+Writing at 0x00029e26... (20 %)
+Writing at 0x0003136e... (25 %)
+Writing at 0x000383de... (30 %)
+Writing at 0x0003e671... (35 %)
+Writing at 0x00044fc2... (40 %)
+Writing at 0x0004b25e... (45 %)
+Writing at 0x000514e2... (50 %)
+Writing at 0x00057c30... (55 %)
+Writing at 0x0005f0ec... (60 %)
+Writing at 0x00065faa... (65 %)
+Writing at 0x0006c3e9... (70 %)
+Writing at 0x00072bb8... (75 %)
+Writing at 0x00079bab... (80 %)
+Writing at 0x0007f9ab... (85 %)
+Writing at 0x00087df7... (90 %)
+Writing at 0x0008f24b... (95 %)
+Writing at 0x000963cc... (100 %)
+Wrote 560592 bytes (315718 compressed) at 0x00010000 in 3.3 seconds (effective 1362.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 140...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (140 compressed) at 0x00008000 in 0.1 seconds (effective 220.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

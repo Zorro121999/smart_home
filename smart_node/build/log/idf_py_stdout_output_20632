@@ -1,0 +1,1133 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807410
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=16cf8h ( 93432) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00026d20 vaddr=40800000 size=012f8h (  4856) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6eae0h (453344) map[0m
+[0;32mI (234) esp_image: segment 3: paddr=00096b08 vaddr=408012f8 size=1061ch ( 67100) load[0m
+[0;32mI (253) esp_image: segment 4: paddr=000a712c vaddr=40811920 size=0217ch (  8572) load[0m
+[0;32mI (257) esp_image: segment 5: paddr=000a92b0 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (263) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (264) boot: Disabling RNG early entropy source...[0m
+[0;32mI (279) cpu_start: Unicore app[0m
+[0;32mI (288) cpu_start: Pro cpu start user code[0m
+[0;32mI (288) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (288) app_init: Application information:[0m
+[0;32mI (289) app_init: Project name:     hello_world[0m
+[0;32mI (292) app_init: App version:      e302085-dirty[0m
+[0;32mI (296) app_init: Compile time:     Sep  2 2026 10:08:02[0m
+[0;32mI (301) app_init: ELF file SHA256:  22f823efd...[0m
+[0;32mI (306) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (310) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (314) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (318) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (322) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (328) heap_init: At 408163B0 len 00036FD0 (219 KiB): RAM[0m
+[0;32mI (333) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (338) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (345) spi_flash: detected chip: generic[0m
+[0;32mI (347) spi_flash: flash io: dio[0m
+[0;33mW (350) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (363) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (369) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (387) main_task: Started on CPU0[0m
+[0;32mI (387) main_task: Calling app_main()[0m
+[1;31mE (397) main: hello[0m
+[1;31mE (397) BME280: device ID: 96[0m
+[0;32mI (397) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (397) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+SDK Version: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTClight sleap enabledI (427) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11
+[0;32mI (427) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (447) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTC[0m
+[0;32mI (447) main_task: Returned from app_main()[0m
+[0;32mI (527) main: Initialize Zigbee stack[0m
+[1;31mE (527) main: hello_zb[0m
+[0;33mW(697) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x2c3)[0m
+[0;33mW (697) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;32mI (937) main: Device started up in non factory-reset mode[0m
+[0;32mI (937) main: Device reboot[0m
+[1;31mE (10407) main: temp: 26.15[0m
+[1;31mE (10407) main: hum: 54.35[0m
+[1;31mE (10407) main: end node network address:29018[0m
+[1;31mE (10477) main: zcl callback[0m
+[1;31mE (10477) main: callback_id = 8[0m
+[0;32mI (10477) main: Other ZCL callback: 8[0m
+[1;31mE (10507) main: zcl callback[0m
+[1;31mE (10507) main: callback_id = 8[0m
+[0;32mI (10507) main: Other ZCL callback: 8[0m
+[1;31mE (10537) main: zcl callback[0m
+[1;31mE (10537) main: callback_id = 8[0m
+[0;32mI (10537) main: Other ZCL callback: 8[0m
+[1;31mE (10567) main: zcl callback[0m
+[1;31mE (10567) main: callback_id = 8[0m
+[0;32mI (10567) main: Other ZCL callback: 8[0m
+[1;31mE (20407) main: temp: 26.13[0m
+[1;31mE (20407) main: hum: 54.49[0m
+[1;31mE (20407) main: end node network address:29018[0m
+[1;31mE (20467) main: zcl callback[0m
+[1;31mE (20467) main: callback_id = 8[0m
+[0;32mI (20467) main: Other ZCL callback: 8[0m
+[1;31mE (20507) main: zcl callback[0m
+[1;31mE (20507) main: callback_id = 8[0m
+[0;32mI (20507) main: Other ZCL callback: 8[0m
+[1;31mE (20527) main: zcl callback[0m
+[1;31mE (20527) main: callback_id = 8[0m
+[0;32mI (20527) main: Other ZCL callback: 8[0m
+[1;31mE (30407) main: temp: 26.13[0m
+[1;31mE (30407) main: hum: 54.28[0m
+[1;31mE (30407) main: end node network address:29018[0m
+[1;31mE (30457) main: zcl callback[0m
+[1;31mE (30457) main: callback_id = 8[0m
+[0;32mI (30457) main: Other ZCL callback: 8[0m
+[1;31mE (30507) main: zcl callback[0m
+[1;31mE (30507) main: callback_id = 8[0m
+[0;32mI (30507) main: Other ZCL callback: 8[0m
+[1;31mE (40407) main: temp: 26.13[0m
+[1;31mE (40407) main: hum: 54.08[0m
+[1;31mE (40407) main: end node network address:29018[0m
+[1;31mE (40487) main: zcl callback[0m
+[1;31mE (40487) main: callback_id = 8[0m
+[0;32mI (40487) main: Other ZCL callback: 8[0m
+[1;31mE (50407) main: temp: 26.14[0m
+[1;31mE (50407) main: hum: 54.41[0m
+[1;31mE (50407) main: end node network address:29018[0m
+[1;31mE (50497) main: zcl callback[0m
+[1;31mE (50497) main: callback_id = 8[0m
+[0;32mI (50497) main: Other ZCL callback: 8[0m
+[1;31mE (50517) main: zcl callback[0m
+[1;31mE (50517) main: callback_id = 8[0m
+[0;32mI (50517) main: Other ZCL callback: 8[0m
+[1;31mE (50537) main: zcl callback[0m
+[1;31mE (50537) main: callback_id = 8[0m
+[0;32mI (50537) main: Other ZCL callback: 8[0m
+[1;31mE (60407) main: temp: 26.15[0m
+[1;31mE (60407) main: hum: 54.45[0m
+[1;31mE (60407) main: end node network address:29018[0m
+[1;31mE (60457) main: zcl callback[0m
+[1;31mE (60457) main: callback_id = 8[0m
+[0;32mI (60457) main: Other ZCL callback: 8[0m
+[1;31mE (60477) main: zcl callback[0m
+[1;31mE (60477) main: callback_id = 8[0m
+[0;32mI (60477) main: Other ZCL callback: 8[0m
+[1;31mE (60507) main: zcl callback[0m
+[1;31mE (60507) main: callback_id = 8[0m
+[0;32mI (60507) main: Other ZCL callback: 8[0m
+[1;31mE (70407) main: temp: 26.15[0m
+[1;31mE (70407) main: hum: 54.42[0m
+[1;31mE (70407) main: end node network address:29018[0m
+[1;31mE (70497) main: zcl callback[0m
+[1;31mE (70497) main: callback_id = 8[0m
+[0;32mI (70497) main: Other ZCL callback: 8[0m
+[1;31mE (70537) main: zcl callback[0m
+[1;31mE (70537) main: callback_id = 8[0m
+[0;32mI (70537) main: Other ZCL callback: 8[0m
+[1;31mE (80407) main: temp: 26.15[0m
+[1;31mE (80407) main: hum: 54.50[0m
+[1;31mE (80407) main: end node network address:29018[0m
+[1;31mE (80467) main: zcl callback[0m
+[1;31mE (80467) main: callback_id = 8[0m
+[0;32mI (80467) main: Other ZCL callback: 8[0m
+[1;31mE (80497) main: zcl callback[0m
+[1;31mE (80497) main: callback_id = 8[0m
+[0;32mI (80497) main: Other ZCL callback: 8[0m
+[1;31mE (90407) main: temp: 26.16[0m
+[1;31mE (90407) main: hum: 54.44[0m
+[1;31mE (90407) main: end node network address:29018[0m
+[1;31mE (90467) main: zcl callback[0m
+[1;31mE (90467) main: callback_id = 8[0m
+[0;32mI (90467) main: Other ZCL callback: 8[0m
+[1;31mE (90487) main: zcl callback[0m
+[1;31mE (90487) main: callback_id = 8[0m
+[0;32mI (90487) main: Other ZCL callback: 8[0m
+[1;31mE (90497) main: zcl callback[0m
+[1;31mE (90497) main: callback_id = 8[0m
+[0;32mI (90497) main: Other ZCL callback: 8[0m
+[1;31mE (100407) main: temp: 26.16[0m
+[1;31mE (100407) main: hum: 54.42[0m
+[1;31mE (100407) main: end node network address:29018[0m
+[1;31mE (100477) main: zcl callback[0m
+[1;31mE (100477) main: callback_id = 8[0m
+[0;32mI (100477) main: Other ZCL callback: 8[0m
+[1;31mE (100497) main: zcl callback[0m
+[1;31mE (100497) main: callback_id = 8[0m
+[0;32mI (100497) main: Other ZCL callback: 8[0m
+[1;31mE (110407) main: temp: 26.16[0m
+[1;31mE (110407) main: hum: 54.49[0m
+[1;31mE (110407) main: end node network address:29018[0m
+[1;31mE (110477) main: zcl callback[0m
+[1;31mE (110477) main: callback_id = 8[0m
+[0;32mI (110477) main: Other ZCL callback: 8[0m
+[1;31mE (110517) main: zcl callback[0m
+[1;31mE (110517) main: callback_id = 8[0m
+[0;32mI (110517) main: Other ZCL callback: 8[0m
+[1;31mE (120407) main: temp: 26.15[0m
+[1;31mE (120407) main: hum: 54.55[0m
+[1;31mE (120407) main: end node network address:29018[0m
+[1;31mE (120467) main: zcl callback[0m
+[1;31mE (120467) main: callback_id = 8[0m
+[0;32mI (120467) main: Other ZCL callback: 8[0m
+[1;31mE (120477) main: zcl callback[0m
+[1;31mE (120477) main: callback_id = 8[0m
+[0;32mI (120477) main: Other ZCL callback: 8[0m
+[1;31mE (120527) main: zcl callback[0m
+[1;31mE (120527) main: callback_id = 8[0m
+[0;32mI (120527) main: Other ZCL callback: 8[0m
+[1;31mE (130407) main: temp: 26.17[0m
+[1;31mE (130407) main: hum: 54.56[0m
+[1;31mE (130407) main: end node network address:29018[0m
+[1;31mE (130497) main: zcl callback[0m
+[1;31mE (130497) main: callback_id = 8[0m
+[0;32mI (130497) main: Other ZCL callback: 8[0m
+[1;31mE (130517) main: zcl callback[0m
+[1;31mE (130517) main: callback_id = 8[0m
+[0;32mI (130517) main: Other ZCL callback: 8[0m
+[1;31mE (140407) main: temp: 26.16[0m
+[1;31mE (140407) main: hum: 54.19[0m
+[1;31mE (140407) main: end node network address:29018[0m
+[1;31mE (140467) main: zcl callback[0m
+[1;31mE (140467) main: callback_id = 8[0m
+[0;32mI (140467) main: Other ZCL callback: 8[0m
+[1;31mE (140487) main: zcl callback[0m
+[1;31mE (140487) main: callback_id = 8[0m
+[0;32mI (140487) main: Other ZCL callback: 8[0m
+[1;31mE (140517) main: zcl callback[0m
+[1;31mE (140517) main: callback_id = 8[0m
+[0;32mI (140517) main: Other ZCL callback: 8[0m
+[1;31mE (150407) main: temp: 26.16[0m
+[1;31mE (150407) main: hum: 53.80[0m
+[1;31mE (150407) main: end node network address:29018[0m
+[1;31mE (150497) main: zcl callback[0m
+[1;31mE (150497) main: callback_id = 8[0m
+[0;32mI (150497) main: Other ZCL callback: 8[0m
+[1;31mE (150507) main: zcl callback[0m
+[1;31mE (150507) main: callback_id = 8[0m
+[0;32mI (150507) main: Other ZCL callback: 8[0m
+[1;31mE (160407) main: temp: 26.18[0m
+[1;31mE (160407) main: hum: 54.12[0m
+[1;31mE (160407) main: end node network address:29018[0m
+[1;31mE (160497) main: zcl callback[0m
+[1;31mE (160497) main: callback_id = 8[0m
+[0;32mI (160497) main: Other ZCL callback: 8[0m
+[1;31mE (160527) main: zcl callback[0m
+[1;31mE (160527) main: callback_id = 8[0m
+[0;32mI (160527) main: Other ZCL callback: 8[0m
+[1;31mE (170407) main: temp: 26.16[0m
+[1;31mE (170407) main: hum: 54.06[0m
+[1;31mE (170407) main: end node network address:29018[0m
+[1;31mE (170467) main: zcl callback[0m
+[1;31mE (170467) main: callback_id = 8[0m
+[0;32mI (170467) main: Other ZCL callback: 8[0m
+[1;31mE (170497) main: zcl callback[0m
+[1;31mE (170497) main: callback_id = 8[0m
+[0;32mI (170497) main: Other ZCL callback: 8[0m
+[1;31mE (170537) main: zcl callback[0m
+[1;31mE (170537) main: callback_id = 8[0m
+[0;32mI (170537) main: Other ZCL callback: 8[0m
+[1;31mE (180407) main: temp: 26.17[0m
+[1;31mE (180407) main: hum: 53.82[0m
+[1;31mE (180407) main: end node network address:29018[0m
+[1;31mE (180497) main: zcl callback[0m
+[1;31mE (180497) main: callback_id = 8[0m
+[0;32mI (180497) main: Other ZCL callback: 8[0m
+[1;31mE (180507) main: zcl callback[0m
+[1;31mE (180507) main: callback_id = 8[0m
+[0;32mI (180507) main: Other ZCL callback: 8[0m
+[1;31mE (180547) main: zcl callback[0m
+[1;31mE (180547) main: callback_id = 8[0m
+[0;32mI (180547) main: Other ZCL callback: 8[0m
+[1;31mE (190407) main: temp: 26.15[0m
+[1;31mE (190407) main: hum: 54.12[0m
+[1;31mE (190407) main: end node network address:29018[0m
+[1;31mE (190477) main: zcl callback[0m
+[1;31mE (190477) main: callback_id = 8[0m
+[0;32mI (190477) main: Other ZCL callback: 8[0m
+[1;31mE (190517) main: zcl callback[0m
+[1;31mE (190517) main: callback_id = 8[0m
+[0;32mI (190517) main: Other ZCL callback: 8[0m
+[1;31mE (190547) main: zcl callback[0m
+[1;31mE (190547) main: callback_id = 8[0m
+[0;32mI (190547) main: Other ZCL callback: 8[0m
+[1;31mE (200407) main: temp: 26.17[0m
+[1;31mE (200407) main: hum: 54.07[0m
+[1;31mE (200407) main: end node network address:29018[0m
+[1;31mE (200497) main: zcl callback[0m
+[1;31mE (200497) main: callback_id = 8[0m
+[0;32mI (200497) main: Other ZCL callback: 8[0m
+[1;31mE (200537) main: zcl callback[0m
+[1;31mE (200537) main: callback_id = 8[0m
+[0;32mI (200537) main: Other ZCL callback: 8[0m
+[1;31mE (210407) main: temp: 26.16[0m
+[1;31mE (210407) main: hum: 54.02[0m
+[1;31mE (210407) main: end node network address:29018[0m
+[1;31mE (210497) main: zcl callback[0m
+[1;31mE (210497) main: callback_id = 8[0m
+[0;32mI (210497) main: Other ZCL callback: 8[0m
+[1;31mE (210527) main: zcl callback[0m
+[1;31mE (210527) main: callback_id = 8[0m
+[0;32mI (210527) main: Other ZCL callback: 8[0m
+[1;31mE (220407) main: temp: 26.16[0m
+[1;31mE (220407) main: hum: 54.07[0m
+[1;31mE (220407) main: end node network address:29018[0m
+[1;31mE (220477) main: zcl callback[0m
+[1;31mE (220477) main: callback_id = 8[0m
+[0;32mI (220477) main: Other ZCL callback: 8[0m
+[1;31mE (230407) main: temp: 26.17[0m
+[1;31mE (230407) main: hum: 54.31[0m
+[1;31mE (230407) main: end node network address:29018[0m
+[1;31mE (230467) main: zcl callback[0m
+[1;31mE (230467) main: callback_id = 8[0m
+[0;32mI (230467) main: Other ZCL callback: 8[0m
+[1;31mE (230497) main: zcl callback[0m
+[1;31mE (230497) main: callback_id = 8[0m
+[0;32mI (230497) main: Other ZCL callback: 8[0m
+[1;31mE (240407) main: temp: 26.18[0m
+[1;31mE (240407) main: hum: 54.31[0m
+[1;31mE (240407) main: end node network address:29018[0m
+[1;31mE (240447) main: zcl callback[0m
+[1;31mE (240447) main: callback_id = 8[0m
+[0;32mI (240447) main: Other ZCL callback: 8[0m
+[1;31mE (240467) main: zcl callback[0m
+[1;31mE (240467) main: callback_id = 8[0m
+[0;32mI (240467) main: Other ZCL callback: 8[0m
+[1;31mE (240497) main: zcl callback[0m
+[1;31mE (240497) main: callback_id = 8[0m
+[0;32mI (240497) main: Other ZCL callback: 8[0m
+[1;31mE (250407) main: temp: 26.18[0m
+[1;31mE (250407) main: hum: 54.09[0m
+[1;31mE (250407) main: end node network address:29018[0m
+[1;31mE (250477) main: zcl callback[0m
+[1;31mE (250477) main: callback_id = 8[0m
+[0;32mI (250477) main: Other ZCL callback: 8[0m
+[1;31mE (250517) main: zcl callback[0m
+[1;31mE (250517) main: callback_id = 8[0m
+[0;32mI (250517) main: Other ZCL callback: 8[0m
+[1;31mE (260407) main: temp: 26.19[0m
+[1;31mE (260407) main: hum: 53.89[0m
+[1;31mE (260407) main: end node network address:29018[0m
+[1;31mE (260467) main: zcl callback[0m
+[1;31mE (260467) main: callback_id = 8[0m
+[0;32mI (260467) main: Other ZCL callback: 8[0m
+[1;31mE (260497) main: zcl callback[0m
+[1;31mE (260497) main: callback_id = 8[0m
+[0;32mI (260497) main: Other ZCL callback: 8[0m
+[1;31mE (260537) main: zcl callback[0m
+[1;31mE (260537) main: callback_id = 8[0m
+[0;32mI (260537) main: Other ZCL callback: 8[0m
+[1;31mE (270407) main: temp: 26.18[0m
+[1;31mE (270407) main: hum: 54.22[0m
+[1;31mE (270407) main: end node network address:29018[0m
+[1;31mE (270467) main: zcl callback[0m
+[1;31mE (270467) main: callback_id = 8[0m
+[0;32mI (270467) main: Other ZCL callback: 8[0m
+[1;31mE (270507) main: zcl callback[0m
+[1;31mE (270507) main: callback_id = 8[0m
+[0;32mI (270507) main: Other ZCL callback: 8[0m
+[1;31mE (270547) main: zcl callback[0m
+[1;31mE (270547) main: callback_id = 8[0m
+[0;32mI (270547) main: Other ZCL callback: 8[0m
+[1;31mE (280407) main: temp: 26.19[0m
+[1;31mE (280407) main: hum: 54.24[0m
+[1;31mE (280407) main: end node network address:29018[0m
+[1;31mE (280467) main: zcl callback[0m
+[1;31mE (280467) main: callback_id = 8[0m
+[0;32mI (280467) main: Other ZCL callback: 8[0m
+[1;31mE (280497) main: zcl callback[0m
+[1;31mE (280497) main: callback_id = 8[0m
+[0;32mI (280497) main: Other ZCL callback: 8[0m
+[1;31mE (280527) main: zcl callback[0m
+[1;31mE (280527) main: callback_id = 8[0m
+[0;32mI (280527) main: Other ZCL callback: 8[0m
+[1;31mE (290407) main: temp: 26.19[0m
+[1;31mE (290407) main: hum: 54.21[0m
+[1;31mE (290407) main: end node network address:29018[0m
+[1;31mE (290457) main: zcl callback[0m
+[1;31mE (290457) main: callback_id = 8[0m
+[0;32mI (290457) main: Other ZCL callback: 8[0m
+[1;31mE (290487) main: zcl callback[0m
+[1;31mE (290487) main: callback_id = 8[0m
+[0;32mI (290487) main: Other ZCL callback: 8[0m
+[1;31mE (300407) main: temp: 26.19[0m
+[1;31mE (300407) main: hum: 54.21[0m
+[1;31mE (300407) main: end node network address:29018[0m
+[1;31mE (300467) main: zcl callback[0m
+[1;31mE (300467) main: callback_id = 8[0m
+[0;32mI (300467) main: Other ZCL callback: 8[0m
+[1;31mE (300507) main: zcl callback[0m
+[1;31mE (300507) main: callback_id = 8[0m
+[0;32mI (300507) main: Other ZCL callback: 8[0m
+[1;31mE (310407) main: temp: 26.17[0m
+[1;31mE (310407) main: hum: 54.16[0m
+[1;31mE (310407) main: end node network address:29018[0m
+[1;31mE (310447) main: zcl callback[0m
+[1;31mE (310447) main: callback_id = 8[0m
+[0;32mI (310447) main: Other ZCL callback: 8[0m
+[1;31mE (310487) main: zcl callback[0m
+[1;31mE (310487) main: callback_id = 8[0m
+[0;32mI (310487) main: Other ZCL callback: 8[0m
+[1;31mE (320407) main: temp: 26.16[0m
+[1;31mE (320407) main: hum: 53.99[0m
+[1;31mE (320407) main: end node network address:29018[0m
+[1;31mE (320507) main: zcl callback[0m
+[1;31mE (320507) main: callback_id = 8[0m
+[0;32mI (320507) main: Other ZCL callback: 8[0m
+[1;31mE (320607) main: zcl callback[0m
+[1;31mE (320607) main: callback_id = 8[0m
+[0;32mI (320607) main: Other ZCL callback: 8[0m
+[1;31mE (320647) main: zcl callback[0m
+[1;31mE (320647) main: callback_id = 8[0m
+[0;32mI (320647) main: Other ZCL callback: 8[0m
+[1;31mE (330407) main: temp: 26.15[0m
+[1;31mE (330407) main: hum: 54.03[0m
+[1;31mE (330407) main: end node network address:29018[0m
+[1;31mE (330507) main: zcl callback[0m
+[1;31mE (330507) main: callback_id = 8[0m
+[0;32mI (330507) main: Other ZCL callback: 8[0m
+[1;31mE (330547) main: zcl callback[0m
+[1;31mE (330547) main: callback_id = 8[0m
+[0;32mI (330547) main: Other ZCL callback: 8[0m
+[1;31mE (330587) main: zcl callback[0m
+[1;31mE (330587) main: callback_id = 8[0m
+[0;32mI (330587) main: Other ZCL callback: 8[0m
+[1;31mE (340407) main: temp: 26.16[0m
+[1;31mE (340407) main: hum: 54.28[0m
+[1;31mE (340407) main: end node network address:29018[0m
+[1;31mE (340497) main: zcl callback[0m
+[1;31mE (340497) main: callback_id = 8[0m
+[0;32mI (340497) main: Other ZCL callback: 8[0m
+[1;31mE (340537) main: zcl callback[0m
+[1;31mE (340537) main: callback_id = 8[0m
+[0;32mI (340537) main: Other ZCL callback: 8[0m
+[1;31mE (340577) main: zcl callback[0m
+[1;31mE (340577) main: callback_id = 8[0m
+[0;32mI (340577) main: Other ZCL callback: 8[0m
+[1;31mE (350407) main: temp: 26.16[0m
+[1;31mE (350407) main: hum: 54.40[0m
+[1;31mE (350407) main: end node network address:29018[0m
+[1;31mE (350447) main: zcl callback[0m
+[1;31mE (350447) main: callback_id = 8[0m
+[0;32mI (350447) main: Other ZCL callback: 8[0m
+[1;31mE (360407) main: temp: 26.16[0m
+[1;31mE (360407) main: hum: 54.22[0m
+[1;31mE (360407) main: end node network address:29018[0m
+[1;31mE (360477) main: zcl callback[0m
+[1;31mE (360477) main: callback_id = 8[0m
+[0;32mI (360477) main: Other ZCL callback: 8[0m
+[1;31mE (360517) main: zcl callback[0m
+[1;31mE (360517) main: callback_id = 8[0m
+[0;32mI (360517) main: Other ZCL callback: 8[0m
+[1;31mE (370407) main: temp: 26.16[0m
+[1;31mE (370407) main: hum: 54.08[0m
+[1;31mE (370407) main: end node network address:29018[0m
+[1;31mE (370467) main: zcl callback[0m
+[1;31mE (370467) main: callback_id = 8[0m
+[0;32mI (370467) main: Other ZCL callback: 8[0m
+[1;31mE (370487) main: zcl callback[0m
+[1;31mE (370487) main: callback_id = 8[0m
+[0;32mI (370487) main: Other ZCL callback: 8[0m
+[1;31mE (380407) main: temp: 26.15[0m
+[1;31mE (380407) main: hum: 54.11[0m
+[1;31mE (380407) main: end node network address:29018[0m
+[1;31mE (380467) main: zcl callback[0m
+[1;31mE (380467) main: callback_id = 8[0m
+[0;32mI (380467) main: Other ZCL callback: 8[0m
+[1;31mE (380487) main: zcl callback[0m
+[1;31mE (380487) main: callback_id = 8[0m
+[0;32mI (380487) main: Other ZCL callback: 8[0m
+[1;31mE (380527) main: zcl callback[0m
+[1;31mE (380527) main: callback_id = 8[0m
+[0;32mI (380527) main: Other ZCL callback: 8[0m
+[1;31mE (390407) main: temp: 26.15[0m
+[1;31mE (390407) main: hum: 54.32[0m
+[1;31mE (390407) main: end node network address:29018[0m
+[1;31mE (390487) main: zcl callback[0m
+[1;31mE (390487) main: callback_id = 8[0m
+[0;32mI (390487) main: Other ZCL callback: 8[0m
+[1;31mE (390527) main: zcl callback[0m
+[1;31mE (390527) main: callback_id = 8[0m
+[0;32mI (390527) main: Other ZCL callback: 8[0m
+[1;31mE (400407) main: temp: 26.16[0m
+[1;31mE (400407) main: hum: 54.38[0m
+[1;31mE (400407) main: end node network address:29018[0m
+[1;31mE (400457) main: zcl callback[0m
+[1;31mE (400457) main: callback_id = 8[0m
+[0;32mI (400457) main: Other ZCL callback: 8[0m
+[1;31mE (400497) main: zcl callback[0m
+[1;31mE (400497) main: callback_id = 8[0m
+[0;32mI (400497) main: Other ZCL callback: 8[0m
+[1;31mE (410407) main: temp: 26.15[0m
+[1;31mE (410407) main: hum: 54.36[0m
+[1;31mE (410407) main: end node network address:29018[0m
+[1;31mE (410487) main: zcl callback[0m
+[1;31mE (410487) main: callback_id = 8[0m
+[0;32mI (410497) main: Other ZCL callback: 8[0m
+[1;31mE (410537) main: zcl callback[0m
+[1;31mE (410537) main: callback_id = 8[0m
+[0;32mI (410537) main: Other ZCL callback: 8[0m
+[1;31mE (410577) main: zcl callback[0m
+[1;31mE (410577) main: callback_id = 8[0m
+[0;32mI (410577) main: Other ZCL callback: 8[0m
+[1;31mE (420407) main: temp: 26.14[0m
+[1;31mE (420407) main: hum: 54.29[0m
+[1;31mE (420407) main: end node network address:29018[0m
+[1;31mE (420457) main: zcl callback[0m
+[1;31mE (420457) main: callback_id = 8[0m
+[0;32mI (420457) main: Other ZCL callback: 8[0m
+[1;31mE (420487) main: zcl callback[0m
+[1;31mE (420487) main: callback_id = 8[0m
+[0;32mI (420497) main: Other ZCL callback: 8[0m
+[1;31mE (420527) main: zcl callback[0m
+[1;31mE (420527) main: callback_id = 8[0m
+[0;32mI (420537) main: Other ZCL callback: 8[0m
+[1;31mE (430407) main: temp: 26.14[0m
+[1;31mE (430407) main: hum: 54.14[0m
+[1;31mE (430407) main: end node network address:29018[0m
+[1;31mE (430477) main: zcl callback[0m
+[1;31mE (430477) main: callback_id = 8[0m
+[0;32mI (430487) main: Other ZCL callback: 8[0m
+[1;31mE (440407) main: temp: 26.13[0m
+[1;31mE (440407) main: hum: 53.99[0m
+[1;31mE (440407) main: end node network address:29018[0m
+[1;31mE (440487) main: zcl callback[0m
+[1;31mE (440487) main: callback_id = 8[0m
+[0;32mI (440487) main: Other ZCL callback: 8[0m
+[1;31mE (440517) main: zcl callback[0m
+[1;31mE (440527) main: callback_id = 8[0m
+[0;32mI (440527) main: Other ZCL callback: 8[0m
+[1;31mE (440547) main: zcl callback[0m
+[1;31mE (440557) main: callback_id = 8[0m
+[0;32mI (440557) main: Other ZCL callback: 8[0m
+[1;31mE (450407) main: temp: 26.14[0m
+[1;31mE (450407) main: hum: 53.83[0m
+[1;31mE (450407) main: end node network address:29018[0m
+[1;31mE (450457) main: zcl callback[0m
+[1;31mE (450467) main: callback_id = 8[0m
+[0;32mI (450467) main: Other ZCL callback: 8[0m
+[1;31mE (450517) main: zcl callback[0m
+[1;31mE (450517) main: callback_id = 8[0m
+[0;32mI (450517) main: Other ZCL callback: 8[0m
+[1;31mE (450537) main: zcl callback[0m
+[1;31mE (450537) main: callback_id = 8[0m
+[0;32mI (450537) main: Other ZCL callback: 8[0m
+[1;31mE (460407) main: temp: 26.14[0m
+[1;31mE (460407) main: hum: 53.19[0m
+[1;31mE (460407) main: end node network address:29018[0m
+[1;31mE (460457) main: zcl callback[0m
+[1;31mE (460457) main: callback_id = 8[0m
+[0;32mI (460457) main: Other ZCL callback: 8[0m
+[1;31mE (460507) main: zcl callback[0m
+[1;31mE (460507) main: callback_id = 8[0m
+[0;32mI (460507) main: Other ZCL callback: 8[0m
+[1;31mE (470407) main: temp: 26.14[0m
+[1;31mE (470407) main: hum: 53.93[0m
+[1;31mE (470407) main: end node network address:29018[0m
+[1;31mE (470487) main: zcl callback[0m
+[1;31mE (470487) main: callback_id = 8[0m
+[0;32mI (470487) main: Other ZCL callback: 8[0m
+[1;31mE (470527) main: zcl callback[0m
+[1;31mE (470527) main: callback_id = 8[0m
+[0;32mI (470527) main: Other ZCL callback: 8[0m
+[1;31mE (480407) main: temp: 26.15[0m
+[1;31mE (480407) main: hum: 53.96[0m
+[1;31mE (480407) main: end node network address:29018[0m
+[1;31mE (480477) main: zcl callback[0m
+[1;31mE (480477) main: callback_id = 8[0m
+[0;32mI (480477) main: Other ZCL callback: 8[0m
+[1;31mE (480507) main: zcl callback[0m
+[1;31mE (480507) main: callback_id = 8[0m
+[0;32mI (480507) main: Other ZCL callback: 8[0m
+[1;31mE (480537) main: zcl callback[0m
+[1;31mE (480537) main: callback_id = 8[0m
+[0;32mI (480537) main: Other ZCL callback: 8[0m
+[1;31mE (490407) main: temp: 26.15[0m
+[1;31mE (490407) main: hum: 53.93[0m
+[1;31mE (490407) main: end node network address:29018[0m
+[1;31mE (490487) main: zcl callback[0m
+[1;31mE (490487) main: callback_id = 8[0m
+[0;32mI (490487) main: Other ZCL callback: 8[0m
+[1;31mE (500407) main: temp: 26.16[0m
+[1;31mE (500407) main: hum: 54.03[0m
+[1;31mE (500407) main: end node network address:29018[0m
+[1;31mE (500487) main: zcl callback[0m
+[1;31mE (500487) main: callback_id = 8[0m
+[0;32mI (500487) main: Other ZCL callback: 8[0m
+[1;31mE (500527) main: zcl callback[0m
+[1;31mE (500527) main: callback_id = 8[0m
+[0;32mI (500527) main: Other ZCL callback: 8[0m
+[1;31mE (500567) main: zcl callback[0m
+[1;31mE (500567) main: callback_id = 8[0m
+[0;32mI (500567) main: Other ZCL callback: 8[0m
+[1;31mE (510407) main: temp: 26.16[0m
+[1;31mE (510407) main: hum: 54.16[0m
+[1;31mE (510407) main: end node network address:29018[0m
+[1;31mE (510487) main: zcl callback[0m
+[1;31mE (510487) main: callback_id = 8[0m
+[0;32mI (510487) main: Other ZCL callback: 8[0m
+[1;31mE (510507) main: zcl callback[0m
+[1;31mE (510507) main: callback_id = 8[0m
+[0;32mI (510507) main: Other ZCL callback: 8[0m
+[1;31mE (520407) main: temp: 26.17[0m
+[1;31mE (520407) main: hum: 54.10[0m
+[1;31mE (520407) main: end node network address:29018[0m
+[1;31mE (520497) main: zcl callback[0m
+[1;31mE (520497) main: callback_id = 8[0m
+[0;32mI (520497) main: Other ZCL callback: 8[0m
+[1;31mE (520537) main: zcl callback[0m
+[1;31mE (520537) main: callback_id = 8[0m
+[0;32mI (520537) main: Other ZCL callback: 8[0m
+[1;31mE (530407) main: temp: 26.18[0m
+[1;31mE (530407) main: hum: 54.20[0m
+[1;31mE (530407) main: end node network address:29018[0m
+[1;31mE (530497) main: zcl callback[0m
+[1;31mE (530497) main: callback_id = 8[0m
+[0;32mI (530497) main: Other ZCL callback: 8[0m
+[1;31mE (530537) main: zcl callback[0m
+[1;31mE (530537) main: callback_id = 8[0m
+[0;32mI (530537) main: Other ZCL callback: 8[0m
+[1;31mE (540407) main: temp: 26.18[0m
+[1;31mE (540407) main: hum: 54.21[0m
+[1;31mE (540407) main: end node network address:29018[0m
+[1;31mE (540477) main: zcl callback[0m
+[1;31mE (540477) main: callback_id = 8[0m
+[0;32mI (540477) main: Other ZCL callback: 8[0m
+[1;31mE (540517) main: zcl callback[0m
+[1;31mE (540517) main: callback_id = 8[0m
+[0;32mI (540517) main: Other ZCL callback: 8[0m
+[1;31mE (550407) main: temp: 26.17[0m
+[1;31mE (550407) main: hum: 53.79[0m
+[1;31mE (550407) main: end node network address:29018[0m
+[1;31mE (550477) main: zcl callback[0m
+[1;31mE (550477) main: callback_id = 8[0m
+[0;32mI (550477) main: Other ZCL callback: 8[0m
+[1;31mE (550497) main: zcl callback[0m
+[1;31mE (550497) main: callback_id = 8[0m
+[0;32mI (550497) main: Other ZCL callback: 8[0m
+[1;31mE (550547) main: zcl callback[0m
+[1;31mE (550547) main: callback_id = 8[0m
+[0;32mI (550547) main: Other ZCL callback: 8[0m
+[1;31mE (560407) main: temp: 26.16[0m
+[1;31mE (560407) main: hum: 54.04[0m
+[1;31mE (560407) main: end node network address:29018[0m
+[1;31mE (560467) main: zcl callback[0m
+[1;31mE (560467) main: callback_id = 8[0m
+[0;32mI (560467) main: Other ZCL callback: 8[0m
+[1;31mE (560487) main: zcl callback[0m
+[1;31mE (560497) main: callback_id = 8[0m
+[0;32mI (560497) main: Other ZCL callback: 8[0m
+[1;31mE (560537) main: zcl callback[0m
+[1;31mE (560537) main: callback_id = 8[0m
+[0;32mI (560537) main: Other ZCL callback: 8[0m
+[1;31mE (570407) main: temp: 26.15[0m
+[1;31mE (570407) main: hum: 53.87[0m
+[1;31mE (570407) main: end node network address:29018[0m
+[1;31mE (570477) main: zcl callback[0m
+[1;31mE (570477) main: callback_id = 8[0m
+[0;32mI (570477) main: Other ZCL callback: 8[0m
+[1;31mE (570497) main: zcl callback[0m
+[1;31mE (570497) main: callback_id = 8[0m
+[0;32mI (570507) main: Other ZCL callback: 8[0m
+[1;31mE (570537) main: zcl callback[0m
+[1;31mE (570537) main: callback_id = 8[0m
+[0;32mI (570537) main: Other ZCL callback: 8[0m
+[1;31mE (580407) main: temp: 26.14[0m
+[1;31mE (580407) main: hum: 53.69[0m
+[1;31mE (580407) main: end node network address:29018[0m
+[1;31mE (580497) main: zcl callback[0m
+[1;31mE (580497) main: callback_id = 8[0m
+[0;32mI (580497) main: Other ZCL callback: 8[0m
+[1;31mE (580517) main: zcl callback[0m
+[1;31mE (580517) main: callback_id = 8[0m
+[0;32mI (580517) main: Other ZCL callback: 8[0m
+[1;31mE (580527) main: zcl callback[0m
+[1;31mE (580527) main: callback_id = 8[0m
+[0;32mI (580527) main: Other ZCL callback: 8[0m
+[1;31mE (590407) main: temp: 26.13[0m
+[1;31mE (590407) main: hum: 53.90[0m
+[1;31mE (590407) main: end node network address:29018[0m
+[1;31mE (590477) main: zcl callback[0m
+[1;31mE (590477) main: callback_id = 8[0m
+[0;32mI (590477) main: Other ZCL callback: 8[0m
+[1;31mE (590497) main: zcl callback[0m
+[1;31mE (590507) main: callback_id = 8[0m
+[0;32mI (590507) main: Other ZCL callback: 8[0m
+[1;31mE (590547) main: zcl callback[0m
+[1;31mE (590547) main: callback_id = 8[0m
+[0;32mI (590547) main: Other ZCL callback: 8[0m
+[1;31mE (600407) main: temp: 26.14[0m
+[1;31mE (600407) main: hum: 53.70[0m
+[1;31mE (600407) main: end node network address:29018[0m
+[1;31mE (600477) main: zcl callback[0m
+[1;31mE (600477) main: callback_id = 8[0m
+[0;32mI (600477) main: Other ZCL callback: 8[0m
+[1;31mE (600497) main: zcl callback[0m
+[1;31mE (600497) main: callback_id = 8[0m
+[0;32mI (600497) main: Other ZCL callback: 8[0m
+[1;31mE (600527) main: zcl callback[0m
+[1;31mE (600527) main: callback_id = 8[0m
+[0;32mI (600527) main: Other ZCL callback: 8[0m
+[1;31mE (610407) main: temp: 26.14[0m
+[1;31mE (610407) main: hum: 54.06[0m
+[1;31mE (610407) main: end node network address:29018[0m
+[1;31mE (610497) main: zcl callback[0m
+[1;31mE (610497) main: callback_id = 8[0m
+[0;32mI (610497) main: Other ZCL callback: 8[0m
+[1;31mE (610537) main: zcl callback[0m
+[1;31mE (610537) main: callback_id = 8[0m
+[0;32mI (610537) main: Other ZCL callback: 8[0m
+[1;31mE (620407) main: temp: 26.14[0m
+[1;31mE (620407) main: hum: 54.14[0m
+[1;31mE (620407) main: end node network address:29018[0m
+[1;31mE (620477) main: zcl callback[0m
+[1;31mE (620477) main: callback_id = 8[0m
+[0;32mI (620477) main: Other ZCL callback: 8[0m
+[1;31mE (620517) main: zcl callback[0m
+[1;31mE (620517) main: callback_id = 8[0m
+[0;32mI (620517) main: Other ZCL callback: 8[0m
+[1;31mE (630407) main: temp: 26.13[0m
+[1;31mE (630407) main: hum: 53.85[0m
+[1;31mE (630407) main: end node network address:29018[0m
+[1;31mE (630457) main: zcl callback[0m
+[1;31mE (630457) main: callback_id = 8[0m
+[0;32mI (630457) main: Other ZCL callback: 8[0m
+[1;31mE (630487) main: zcl callback[0m
+[1;31mE (630487) main: callback_id = 8[0m
+[0;32mI (630487) main: Other ZCL callback: 8[0m
+[1;31mE (630527) main: zcl callback[0m
+[1;31mE (630527) main: callback_id = 8[0m
+[0;32mI (630527) main: Other ZCL callback: 8[0m
+[1;31mE (640407) main: temp: 26.14[0m
+[1;31mE (640407) main: hum: 54.11[0m
+[1;31mE (640407) main: end node network address:29018[0m
+[1;31mE (640497) main: zcl callback[0m
+[1;31mE (640497) main: callback_id = 8[0m
+[0;32mI (640497) main: Other ZCL callback: 8[0m
+[1;31mE (640537) main: zcl callback[0m
+[1;31mE (640537) main: callback_id = 8[0m
+[0;32mI (640537) main: Other ZCL callback: 8[0m
+[1;31mE (640577) main: zcl callback[0m
+[1;31mE (640577) main: callback_id = 8[0m
+[0;32mI (640577) main: Other ZCL callback: 8[0m
+[1;31mE (650407) main: temp: 26.13[0m
+[1;31mE (650407) main: hum: 54.63[0m
+[1;31mE (650407) main: end node network address:29018[0m
+[1;31mE (650467) main: zcl callback[0m
+[1;31mE (650467) main: callback_id = 8[0m
+[0;32mI (650467) main: Other ZCL callback: 8[0m
+[1;31mE (650487) main: zcl callback[0m
+[1;31mE (650487) main: callback_id = 8[0m
+[0;32mI (650487) main: Other ZCL callback: 8[0m
+[1;31mE (650507) main: zcl callback[0m
+[1;31mE (650507) main: callback_id = 8[0m
+[0;32mI (650507) main: Other ZCL callback: 8[0m
+[1;31mE (660407) main: temp: 26.14[0m
+[1;31mE (660407) main: hum: 54.18[0m
+[1;31mE (660407) main: end node network address:29018[0m
+[1;31mE (660497) main: zcl callback[0m
+[1;31mE (660497) main: callback_id = 8[0m
+[0;32mI (660497) main: Other ZCL callback: 8[0m
+[1;31mE (660537) main: zcl callback[0m
+[1;31mE (660537) main: callback_id = 8[0m
+[0;32mI (660537) main: Other ZCL callback: 8[0m
+[1;31mE (670407) main: temp: 26.14[0m
+[1;31mE (670407) main: hum: 54.15[0m
+[1;31mE (670407) main: end node network address:29018[0m
+[1;31mE (670487) main: zcl callback[0m
+[1;31mE (670487) main: callback_id = 8[0m
+[0;32mI (670487) main: Other ZCL callback: 8[0m
+[1;31mE (670517) main: zcl callback[0m
+[1;31mE (670517) main: callback_id = 8[0m
+[0;32mI (670517) main: Other ZCL callback: 8[0m
+[1;31mE (680407) main: temp: 26.15[0m
+[1;31mE (680407) main: hum: 54.55[0m
+[1;31mE (680407) main: end node network address:29018[0m
+[1;31mE (680467) main: zcl callback[0m
+[1;31mE (680467) main: callback_id = 8[0m
+[0;32mI (680467) main: Other ZCL callback: 8[0m
+[1;31mE (680507) main: zcl callback[0m
+[1;31mE (680507) main: callback_id = 8[0m
+[0;32mI (680507) main: Other ZCL callback: 8[0m
+[1;31mE (680547) main: zcl callback[0m
+[1;31mE (680547) main: callback_id = 8[0m
+[0;32mI (680547) main: Other ZCL callback: 8[0m
+[1;31mE (690407) main: temp: 26.13[0m
+[1;31mE (690407) main: hum: 54.83[0m
+[1;31mE (690407) main: end node network address:29018[0m
+[1;31mE (690467) main: zcl callback[0m
+[1;31mE (690467) main: callback_id = 8[0m
+[0;32mI (690467) main: Other ZCL callback: 8[0m
+[1;31mE (690497) main: zcl callback[0m
+[1;31mE (690497) main: callback_id = 8[0m
+[0;32mI (690497) main: Other ZCL callback: 8[0m
+[1;31mE (690527) main: zcl callback[0m
+[1;31mE (690527) main: callback_id = 8[0m
+[0;32mI (690527) main: Other ZCL callback: 8[0m
+[1;31mE (700407) main: temp: 26.14[0m
+[1;31mE (700407) main: hum: 54.01[0m
+[1;31mE (700407) main: end node network address:29018[0m
+[1;31mE (700477) main: zcl callback[0m
+[1;31mE (700477) main: callback_id = 8[0m
+[0;32mI (700477) main: Other ZCL callback: 8[0m
+[1;31mE (700517) main: zcl callback[0m
+[1;31mE (700517) main: callback_id = 8[0m
+[0;32mI (700517) main: Other ZCL callback: 8[0m
+[1;31mE (700547) main: zcl callback[0m
+[1;31mE (700547) main: callback_id = 8[0m
+[0;32mI (700547) main: Other ZCL callback: 8[0m
+[1;31mE (710407) main: temp: 26.15[0m
+[1;31mE (710407) main: hum: 53.84[0m
+[1;31mE (710407) main: end node network address:29018[0m
+[1;31mE (710487) main: zcl callback[0m
+[1;31mE (710487) main: callback_id = 8[0m
+[0;32mI (710487) main: Other ZCL callback: 8[0m
+[1;31mE (710527) main: zcl callback[0m
+[1;31mE (710527) main: callback_id = 8[0m
+[0;32mI (710527) main: Other ZCL callback: 8[0m
+[1;31mE (720407) main: temp: 26.15[0m
+[1;31mE (720407) main: hum: 53.88[0m
+[1;31mE (720407) main: end node network address:29018[0m
+[1;31mE (720487) main: zcl callback[0m
+[1;31mE (720487) main: callback_id = 8[0m
+[0;32mI (720487) main: Other ZCL callback: 8[0m
+[1;31mE (720517) main: zcl callback[0m
+[1;31mE (720517) main: callback_id = 8[0m
+[0;32mI (720517) main: Other ZCL callback: 8[0m
+[1;31mE (730407) main: temp: 26.16[0m
+[1;31mE (730407) main: hum: 54.09[0m
+[1;31mE (730407) main: end node network address:29018[0m
+[1;31mE (730467) main: zcl callback[0m
+[1;31mE (730467) main: callback_id = 8[0m
+[0;32mI (730467) main: Other ZCL callback: 8[0m
+[1;31mE (730507) main: zcl callback[0m
+[1;31mE (730507) main: callback_id = 8[0m
+[0;32mI (730507) main: Other ZCL callback: 8[0m
+[1;31mE (740407) main: temp: 26.18[0m
+[1;31mE (740407) main: hum: 54.10[0m
+[1;31mE (740407) main: end node network address:29018[0m
+[1;31mE (740467) main: zcl callback[0m
+[1;31mE (740467) main: callback_id = 8[0m
+[0;32mI (740467) main: Other ZCL callback: 8[0m
+[1;31mE (740507) main: zcl callback[0m
+[1;31mE (740507) main: callback_id = 8[0m
+[0;32mI (740507) main: Other ZCL callback: 8[0m
+[1;31mE (740537) main: zcl callback[0m
+[1;31mE (740537) main: callback_id = 8[0m
+[0;32mI (740537) main: Other ZCL callback: 8[0m
+[1;31mE (750407) main: temp: 26.19[0m
+[1;31mE (750407) main: hum: 54.09[0m
+[1;31mE (750407) main: end node network address:29018[0m
+[1;31mE (750507) main: zcl callback[0m
+[1;31mE (750507) main: callback_id = 8[0m
+[0;32mI (750507) main: Other ZCL callback: 8[0m
+[1;31mE (750547) main: zcl callback[0m
+[1;31mE (750547) main: callback_id = 8[0m
+[0;32mI (750547) main: Other ZCL callback: 8[0m
+[1;31mE (750567) main: zcl callback[0m
+[1;31mE (750567) main: callback_id = 8[0m
+[0;32mI (750567) main: Other ZCL callback: 8[0m
+[1;31mE (760407) main: temp: 26.20[0m
+[1;31mE (760407) main: hum: 53.91[0m
+[1;31mE (760407) main: end node network address:29018[0m
+[1;31mE (760487) main: zcl callback[0m
+[1;31mE (760487) main: callback_id = 8[0m
+[0;32mI (760487) main: Other ZCL callback: 8[0m
+[1;31mE (760517) main: zcl callback[0m
+[1;31mE (760517) main: callback_id = 8[0m
+[0;32mI (760517) main: Other ZCL callback: 8[0m
+[1;31mE (760567) main: zcl callback[0m
+[1;31mE (760567) main: callback_id = 8[0m
+[0;32mI (760567) main: Other ZCL callback: 8[0m
+[1;31mE (770407) main: temp: 26.21[0m
+[1;31mE (770407) main: hum: 54.05[0m
+[1;31mE (770407) main: end node network address:29018[0m
+[1;31mE (770567) main: zcl callback[0m
+[1;31mE (770567) main: callback_id = 8[0m
+[0;32mI (770567) main: Other ZCL callback: 8[0m
+[1;31mE (770627) main: zcl callback[0m
+[1;31mE (770627) main: callback_id = 8[0m
+[0;32mI (770627) main: Other ZCL callback: 8[0m
+[1;31mE (770647) main: zcl callback[0m
+[1;31mE (770647) main: callback_id = 8[0m
+[0;32mI (770647) main: Other ZCL callback: 8[0m
+[1;31mE (780407) main: temp: 26.20[0m
+[1;31mE (780407) main: hum: 53.98[0m
+[1;31mE (780407) main: end node network address:29018[0m
+[1;31mE (780497) main: zcl callback[0m
+[1;31mE (780497) main: callback_id = 8[0m
+[0;32mI (780497) main: Other ZCL callback: 8[0m
+[1;31mE (780587) main: zcl callback[0m
+[1;31mE (780587) main: callback_id = 8[0m
+[0;32mI (780587) main: Other ZCL callback: 8[0m
+[1;31mE (780627) main: zcl callback[0m
+[1;31mE (780627) main: callback_id = 8[0m
+[0;32mI (780627) main: Other ZCL callback: 8[0m
+[1;31mE (790407) main: temp: 26.22[0m
+[1;31mE (790407) main: hum: 53.85[0m
+[1;31mE (790407) main: end node network address:29018[0m
+[1;31mE (790487) main: zcl callback[0m
+[1;31mE (790487) main: callback_id = 8[0m
+[0;32mI (790487) main: Other ZCL callback: 8[0m
+[1;31mE (790517) main: zcl callback[0m
+[1;31mE (790517) main: callback_id = 8[0m
+[0;32mI (790517) main: Other ZCL callback: 8[0m
+[1;31mE (790577) main: zcl callback[0m
+[1;31mE (790577) main: callback_id = 8[0m
+[0;32mI (790577) main: Other ZCL callback: 8[0m
+[1;31mE (800407) main: temp: 26.20[0m
+[1;31mE (800407) main: hum: 54.23[0m
+[1;31mE (800407) main: end node network address:29018[0m
+[1;31mE (800467) main: zcl callback[0m
+[1;31mE (800467) main: callback_id = 8[0m
+[0;32mI (800467) main: Other ZCL callback: 8[0m
+[1;31mE (800487) main: zcl callback[0m
+[1;31mE (800487) main: callback_id = 8[0m
+[0;32mI (800487) main: Other ZCL callback: 8[0m
+[1;31mE (800517) main: zcl callback[0m
+[1;31mE (800517) main: callback_id = 8[0m
+[0;32mI (800517) main: Other ZCL callback: 8[0m
+[1;31mE (810407) main: temp: 26.22[0m
+[1;31mE (810407) main: hum: 53.68[0m
+[1;31mE (810407) main: end node network address:29018[0m
+[1;31mE (810477) main: zcl callback[0m
+[1;31mE (810477) main: callback_id = 8[0m
+[0;32mI (810477) main: Other ZCL callback: 8[0m
+[1;31mE (810517) main: zcl callback[0m
+[1;31mE (810517) main: callback_id = 8[0m
+[0;32mI (810517) main: Other ZCL callback: 8[0m
+[1;31mE (810547) main: zcl callback[0m
+[1;31mE (810547) main: callback_id = 8[0m
+[0;32mI (810547) main: Other ZCL callback: 8[0m
+[1;31mE (820407) main: temp: 26.20[0m
+[1;31mE (820407) main: hum: 53.71[0m
+[1;31mE (820407) main: end node network address:29018[0m
+[1;31mE (820487) main: zcl callback[0m
+[1;31mE (820487) main: callback_id = 8[0m
+[0;32mI (820487) main: Other ZCL callback: 8[0m
+[1;31mE (820507) main: zcl callback[0m
+[1;31mE (820507) main: callback_id = 8[0m
+[0;32mI (820507) main: Other ZCL callback: 8[0m
+[1;31mE (820547) main: zcl callback[0m
+[1;31mE (820547) main: callback_id = 8[0m
+[0;32mI (820547) main: Other ZCL callback: 8[0m
+[1;31mE (830407) main: temp: 26.20[0m
+[1;31mE (830407) main: hum: 53.77[0m
+[1;31mE (830407) main: end node network address:29018[0m
+[1;31mE (830477) main: zcl callback[0m
+[1;31mE (830477) main: callback_id = 8[0m
+[0;32mI (830477) main: Other ZCL callback: 8[0m
+[1;31mE (830517) main: zcl callback[0m
+[1;31mE (830517) main: callback_id = 8[0m
+[0;32mI (830517) main: Other ZCL callback: 8[0m
+[1;31mE (840407) main: temp: 26.19[0m
+[1;31mE (840407) main: hum: 53.74[0m
+[1;31mE (840407) main: end node network address:29018[0m
+[1;31mE (840477) main: zcl callback[0m
+[1;31mE (840477) main: callback_id = 8[0m
+[0;32mI (840477) main: Other ZCL callback: 8[0m
+[1;31mE (840507) main: zcl callback[0m
+[1;31mE (840507) main: callback_id = 8[0m
+[0;32mI (840507) main: Other ZCL callback: 8[0m
+[1;31mE (840527) main: zcl callback[0m
+[1;31mE (840527) main: callback_id = 8[0m
+[0;32mI (840527) main: Other ZCL callback: 8[0m
+[1;31mE (850407) main: temp: 26.18[0m
+[1;31mE (850407) main: hum: 53.73[0m
+[1;31mE (850407) main: end node network address:29018[0m
+[1;31mE (850457) main: zcl callback[0m
+[1;31mE (850457) main: callback_id = 8[0m
+[0;32mI (850457) main: Other ZCL callback: 8[0m
+[1;31mE (850487) main: zcl callback[0m
+[1;31mE (850487) main: callback_id = 8[0m
+[0;32mI (850487) main: Other ZCL callback: 8[0m
+[1;31mE (850517) main: zcl callback[0m
+[1;31mE (850517) main: callback_id = 8[0m
+[0;32mI (850517) main: Other ZCL callback: 8[0m
+[1;31mE (860407) main: temp: 26.18[0m
+[1;31mE (860407) main: hum: 53.66[0m
+[1;31mE (860407) main: end node network address:29018[0m
+[1;31mE (860477) main: zcl callback[0m
+[1;31mE (860477) main: callback_id = 8[0m
+[0;32mI (860477) main: Other ZCL callback: 8[0m
+[1;31mE (860507) main: zcl callback[0m
+[1;31mE (860507) main: callback_id = 8[0m
+[0;32mI (860507) main: Other ZCL callback: 8[0m
+[1;31mE (870407) main: temp: 26.16[0m
+[1;31mE (870407) main: hum: 53.73[0m
+[1;31mE (870407) main: end node network address:29018[0m
+[1;31mE (870457) main: zcl callback[0m
+[1;31mE (870457) main: callback_id = 8[0m
+[0;32mI (870457) main: Other ZCL callback: 8[0m
+[1;31mE (870487) main: zcl callback[0m
+[1;31mE (870487) main: callback_id = 8[0m
+[0;32mI (870487) main: Other ZCL callback: 8[0m
+[1;31mE (870517) main: zcl callback[0m
+[1;31mE (870517) main: callback_id = 8[0m
+[0;32mI (870527) main: Other ZCL callback: 8[0m
+[1;31mE (880407) main: temp: 26.15[0m
+[1;31mE (880407) main: hum: 53.88[0m
+[1;31mE (880407) main: end node network address:29018[0m
+[1;31mE (880477) main: zcl callback[0m
+[1;31mE (880477) main: callback_id = 8[0m
+[0;32mI (880477) main: Other ZCL callback: 8[0m
+[1;31mE (880507) main: zcl callback[0m
+[1;31mE (880517) main: callback_id = 8[0m
+[0;32mI (880517) main: Other ZCL callback: 8[0m
+[1;31mE (880547) main: zcl callback[0m
+[1;31mE (880557) main: callback_id = 8[0m
+[0;32mI (880557) main: Other ZCL callback: 8[0m
+[1;31mE (890407) main: temp: 26.14[0m
+[1;31mE (890407) main: hum: 53.79[0m
+[1;31mE (890407) main: end node network address:29018[0m
+[1;31mE (890487) main: zcl callback[0m
+[1;31mE (890487) main: callback_id = 8[0m
+[0;32mI (890487) main: Other ZCL callback: 8[0m
+[1;31mE (890517) main: zcl callback[0m
+[1;31mE (890527) main: callback_id = 8[0m
+[0;32mI (890527) main: Other ZCL callback: 8[0m
+[1;31mE (890557) main: zcl callback[0m
+[1;31mE (890567) main: callback_id = 8[0m
+[0;32mI (890567) main: Other ZCL callback: 8[0m
+[1;31mE (900407) main: temp: 26.13[0m
+[1;31mE (900407) main: hum: 53.79[0m
+[1;31mE (900407) main: end node network address:29018[0m
+[1;31mE (900467) main: zcl callback[0m
+[1;31mE (900467) main: callback_id = 8[0m
+[0;32mI (900467) main: Other ZCL callback: 8[0m
+[1;31mE (900497) main: zcl callback[0m
+[1;31mE (900497) main: callback_id = 8[0m
+[0;32mI (900497) main: Other ZCL callback: 8[0m
+[1;31mE (900517) main: zcl callback[0m
+[1;31mE (900517) main: callback_id = 8[0m
+[0;32mI (900517) main: Other ZCL callback: 8[0m
+[1;31mE (910407) main: temp: 26.14[0m
+[1;31mE (910407) main: hum: 53.76[0m
+[1;31mE (910407) main: end node network address:29018[0m
+[1;31mE (910477) main: zcl callback[0m
+[1;31mE (910477) main: callback_id = 8[0m
+[0;32mI (910477) main: Other ZCL callback: 8[0m
+[1;31mE (910517) main: zcl callback[0m
+[1;31mE (910517) main: callback_id = 8[0m
+[0;32mI (910517) main: Other ZCL callback: 8[0m
+[1;31mE (910537) main: zcl callback[0m
+[1;31mE (910537) main: callback_id = 8[0m
+[0;32mI (910537) main: Other ZCL callback: 8[0m
+[1;31mE (920407) main: temp: 26.13[0m
+[1;31mE (920407) main: hum: 53.88[0m
+[1;31mE (920407) main: end node network address:29018[0m
+[1;31mE (920467) main: zcl callback[0m
+[1;31mE (920467) main: callback_id = 8[0m
+[0;32mI (920467) main: Other ZCL callback: 8[0m
+[1;31mE (920497) main: zcl callback[0m
+[1;31mE (920497) main: callback_id = 8[0m
+[0;32mI (920497) main: Other ZCL callback: 8[0m
+[1;31mE (920527) main: zcl callback[0m
+[1;31mE (920527) main: callback_id = 8[0m
+[0;32mI (920527) main: Other ZCL callback: 8[0m
+[1;31mE (930407) main: temp: 26.13[0m
+[1;31mE (930407) main: hum: 54.02[0m
+[1;31mE (930407) main: end node network address:29018[0m
+[1;31mE (930487) main: zcl callback[0m
+[1;31mE (930487) main: callback_id = 8[0m
+[0;32mI (930487) main: Other ZCL callback: 8[0m
+[1;31mE (930527) main: zcl callback[0m
+[1;31mE (930527) main: callback_id = 8[0m
+[0;32mI (930527) main: Other ZCL callback: 8[0m
+[1;31mE (940407) main: temp: 26.11[0m
+[1;31mE (940407) main: hum: 54.01[0m
+[1;31mE (940407) main: end node network address:29018[0m
+[1;31mE (940487) main: zcl callback[0m
+[1;31mE (940487) main: callback_id = 8[0m
+[0;32mI (940487) main: Other ZCL callback: 8[0m
+[1;31mE (940507) main: zcl callback[0m
+[1;31mE (940507) main: callback_id = 8[0m
+[0;32mI (940507) main: Other ZCL callback: 8[0m
+[1;31mE (940547) main: zcl callback[0m
+[1;31mE (940547) main: callback_id = 8[0m
+[0;32mI (940547) main: Other ZCL callback: 8[0m
+[1;31mE (950407) main: temp: 26.11[0m
+[1;31mE (950407) main: hum: 54.14[0m
+[1;31mE (950407) main: end node network address:29018[0m
+[1;31mE (950487) main: zcl callback[0m
+[1;31mE (950487) main: callback_id = 8[0m
+[0;32mI (950487) main: Other ZCL callback: 8[0m
+[1;31mE (950527) main: zcl callback[0m
+[1;31mE (950527) main: callback_id = 8[0m
+[0;32mI (950527) main: Other ZCL callback: 8[0m
+[1;31mE (960407) main: temp: 26.09[0m
+[1;31mE (960407) main: hum: 54.04[0m
+[1;31mE (960407) main: end node network address:29018[0m
+[1;31mE (960477) main: zcl callback[0m
+[1;31mE (960477) main: callback_id = 8[0m
+[0;32mI (960477) main: Other ZCL callback: 8[0m
+[1;31mE (960517) main: zcl callback[0m
+[1;31mE (960517) main: callback_id = 8[0m
+[0;32mI (960517) main: Other ZCL callback: 8[0m
+[1;31mE (960547) main: zcl callback[0m
+[1;31mE (960547) main: callback_id = 8[0m
+[0;32mI (960547) main: Other ZCL callback: 8[0m
+[1;31mE (970407) main: temp: 26.08[0m
+[1;31mE (970407) main: hum: 53.32[0m
+[1;31mE (970407) main: end node network address:29018[0m
+[1;31mE (970457) main: zcl callback[0m
+[1;31mE (970457) main: callback_id = 8[0m
+[0;32mI (970457) main: Other ZCL callback: 8[0m
+[1;31mE (970477) main: zcl callback[0m
+[1;31mE (970477) main: callback_id = 8[0m
+[0;32mI (970477) main: Other ZCL callback: 8[0m
+[1;31mE (970497) main: zcl callback[0m
+[1;31mE (970497) main: callback_id = 8[0m
+[0;32mI (970497) main: Other ZCL callback: 8[0m
+[1;31mE (980407) main: temp: 26.09[0m
+[1;31mE (980407) main: hum: 53.49[0m
+[1;31mE (980407) main: end node network address:29018[0m
+[1;31mE (980477) main: zcl callback[0m
+[1;31mE (980477) main: callback_id = 8[0m
+[0;32mI (980477) main: Other ZCL callback: 8[0m
+[1;31mE (980507) main: zcl callback[0m
+[1;31mE (980507) main: callback_id = 8[0m
+[0;32mI (980507) main: Other ZCL callback: 8[0m
+[1;31mE (980527) main: zcl callback[0m
+[1;31mE (980537) main: callback_id = 8[0m
+[0;32mI (980537) main: Other ZCL callback: 8[0m
+[1;31mE (990407) main: temp: 26.10[0m
+[1;31mE (990407) main: hum: 53.64[0m
+[1;31mE (990407) main: end node network address:29018[0m
+[1;31mE (990467) main: zcl callback[0m
+[1;31mE (990467) main: callback_id = 8[0m
+[0;32mI (990467) main: Other ZCL callback: 8[0m
+[1;31mE (990487) main: zcl callback[0m
+[1;31mE (990487) main: callback_id = 8[0m
+[0;32mI (990487) main: Other ZCL callback: 8[0m
+[1;31mE (990517) main: zcl callback[0m
+[1;31mE (990517) main: callback_id = 8[0m
+[0;32mI (990517) main: Other ZCL callback: 8[0m
+[1;31mE (1000407) main: temp: 26.10[0m
+[1;31mE (1000407) main: hum: 53.61[0m
+[1;31mE (1000407) main: end node network address:29018[0m
+[1;31mE (1000497) main: zcl callback[0m
+[1;31mE (1000497) main: callback_id = 8[0m
+[0;32mI (1000497) main: Other ZCL callback: 8[0m
+[1;31mE (1000527) main: zcl callback[0m
+[1;31mE (1000527) main: callback_id = 8[0m
+[0;32mI (1000527) main: Other ZCL callback: 8[0m

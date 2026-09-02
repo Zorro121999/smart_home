@@ -1,0 +1,1868 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807422
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42068020 size=11128h ( 69928) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00021150 vaddr=40800000 size=06ec8h ( 28360) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=64a60h (412256) map[0m
+[0;32mI (224) esp_image: segment 3: paddr=0008ca88 vaddr=40806ec8 size=0aa60h ( 43616) load[0m
+[0;32mI (237) esp_image: segment 4: paddr=000974f0 vaddr=40811930 size=0217ch (  8572) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00099674 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (247) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (248) boot: Disabling RNG early entropy source...[0m
+[0;32mI (263) cpu_start: Unicore app[0m
+[0;32mI (272) cpu_start: Pro cpu start user code[0m
+[0;32mI (272) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (272) app_init: Application information:[0m
+[0;32mI (273) app_init: Project name:     hello_world[0m
+[0;32mI (276) app_init: App version:      e302085-dirty[0m
+[0;32mI (280) app_init: Compile time:     Aug 31 2026 18:11:40[0m
+[0;32mI (285) app_init: ELF file SHA256:  0a9b3982a...[0m
+[0;32mI (290) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (294) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (298) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (302) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (306) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (312) heap_init: At 408163C0 len 00036FC0 (219 KiB): RAM[0m
+[0;32mI (317) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (322) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (329) spi_flash: detected chip: generic[0m
+[0;32mI (331) spi_flash: flash io: dio[0m
+[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (347) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (353) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (371) main_task: Started on CPU0[0m
+[0;32mI (371) main_task: Calling app_main()[0m
+[1;31mE (381) main: hello[0m
+[1;31mE (381) BME280: device ID: 96[0m
+[0;32mI (381) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (411) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11[0m
+[0;32mI (411) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (421) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:33:57 UTC[0m
+[0;32mI (421) main_task: Returned from app_main()[0m
+[0;32mI (481) main: Initialize Zigbee stack[0m
+[1;31mE (481) main: hello_zb[0m
+[0;33mW (1191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (1891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (2061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (2231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (2401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (3101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (3271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (3971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (4141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (4311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (5011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (5721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (5891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (6591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (7291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (7991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (8681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (9381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (9551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (9721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (10391) main: temp: 26.74[0m
+[1;31mE (10391) main: hum: 56.60[0m
+[1;31mE (10391) main: end node network address:60883[0m
+[0;32mI (10391) main: Temperature report sent[0m
+[0;33mW (10431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (11111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (11811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (11971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (12671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (13371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (13541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (14241) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (14941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (15651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (15821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (15991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (16161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (16861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (17031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (17201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (17361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (18051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (18751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (19451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (19621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (19791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (20391) main: temp: 26.73[0m
+[1;31mE (20391) main: hum: 56.62[0m
+[1;31mE (20391) main: end node network address:60883[0m
+[0;32mI (20391) main: Temperature report sent[0m
+[0;33mW (20491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (20661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (21361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (22041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (22741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (23431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (23601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (23771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (24461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (25141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (25831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (26511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (26681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (26851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (27551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (27721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (28421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (28591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (29291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (29981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (30391) main: temp: 26.73[0m
+[1;31mE (30391) main: hum: 56.54[0m
+[1;31mE (30391) main: end node network address:60883[0m
+[0;32mI (30391) main: Temperature report sent[0m
+[0;33mW (30671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (30841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (31541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (32231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (32401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (33101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (33271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (33971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (34671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (34841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (35541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (36241) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (36941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (37641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (38341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (39041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (39211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (39381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (39551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (40251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (40391) main: temp: 26.73[0m
+[1;31mE (40391) main: hum: 58.70[0m
+[1;31mE (40391) main: end node network address:60883[0m
+[0;32mI (40391) main: Temperature report sent[0m
+[0;33mW (40921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (41641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (41811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (41981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (42671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (43351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (43511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (44211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (44911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (45621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (45791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (45961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (46131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (46831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (47521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (47691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (48391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (49091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (49261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (49961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (50391) main: temp: 26.72[0m
+[1;31mE (50391) main: hum: 58.55[0m
+[1;31mE (50391) main: end node network address:60883[0m
+[0;32mI (50391) main: Temperature report sent[0m
+[0;33mW (50651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (50811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (51511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (51681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (52381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (53081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (53761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (53931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (54631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (55331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (55501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (56201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (56901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (57621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (58311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (59001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (59701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (60391) main: temp: 26.69[0m
+[1;31mE (60391) main: hum: 58.68[0m
+[1;31mE (60391) main: end node network address:60883[0m
+[0;32mI (60391) main: Temperature report sent[0m
+[0;33mW (60391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (60571) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (61271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (61971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (62671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (62841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (63011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (63181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (63881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (64051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (64751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (65451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (66151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (66841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (67011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (67181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (67881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (68561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (68731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (68891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (69061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (69751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (70391) main: temp: 26.69[0m
+[1;31mE (70391) main: hum: 57.69[0m
+[1;31mE (70391) main: end node network address:60883[0m
+[0;32mI (70391) main: Temperature report sent[0m
+[0;33mW (70451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (70621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (70791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (70961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (71121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (71811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (71971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (72141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (72311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (73011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (73181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (73351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (74041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (74211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (74381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (74551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (75251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (75951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (76121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (76291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (76981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (77681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (78371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (79071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (79771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (79931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (80101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (80391) main: temp: 26.69[0m
+[1;31mE (80391) main: hum: 56.95[0m
+[1;31mE (80391) main: end node network address:60883[0m
+[0;32mI (80391) main: Temperature report sent[0m
+[0;33mW (80801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (81491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (81661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (82361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (82521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (83211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (83891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (84061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (84741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (85451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (86151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (86851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (87021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (87721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (87891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (88061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (88221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (88921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (89601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (90301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (90391) main: temp: 26.71[0m
+[1;31mE (90391) main: hum: 56.81[0m
+[1;31mE (90391) main: end node network address:60883[0m
+[0;32mI (90391) main: Temperature report sent[0m
+[0;33mW (90471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (90631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (91331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (92011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (92181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (92351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (92521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (93221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (93381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (94071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (94771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (95461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (95621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (96321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (96491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (97191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (97881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (98561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (99261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (99961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (100391) main: temp: 26.71[0m
+[1;31mE (100391) main: hum: 56.76[0m
+[1;31mE (100391) main: end node network address:60883[0m
+[0;32mI (100391) main: Temperature report sent[0m
+[0;33mW (100661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (100831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (101531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (102231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (102921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (103651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (104331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (105051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (105751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (106451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (106611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (107311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (108031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (108201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (108901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (109071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (109771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (110391) main: temp: 26.74[0m
+[1;31mE (110391) main: hum: 56.67[0m
+[1;31mE (110391) main: end node network address:60883[0m
+[0;32mI (110391) main: Temperature report sent[0m
+[0;33mW (110471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (111171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (111871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (112571) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (113271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (113441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (114141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (114311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (115011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (115181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (115891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (116061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (116761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (117461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (118161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (118861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (119551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (120251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (120391) main: temp: 26.74[0m
+[1;31mE (120391) main: hum: 56.65[0m
+[1;31mE (120391) main: end node network address:60883[0m
+[0;32mI (120391) main: Temperature report sent[0m
+[0;33mW (120941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (121631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (122331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (122501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (123201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (123901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (124061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (124231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (124931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (125101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (125811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (126501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (127201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (127891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (128591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (129291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (129991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (130161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (130391) main: temp: 26.72[0m
+[1;31mE (130391) main: hum: 56.56[0m
+[1;31mE (130391) main: end node network address:60883[0m
+[0;32mI (130391) main: Temperature report sent[0m
+[0;33mW (130861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (131561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (131731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (132421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (133121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (133821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (134521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (135221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (135921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (136601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (136771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (137481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (137651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (138351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (138521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (138691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (139381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (139551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (140231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (140391) main: temp: 26.72[0m
+[1;31mE (140391) main: hum: 58.13[0m
+[1;31mE (140391) main: end node network address:60883[0m
+[0;32mI (140391) main: Temperature report sent[0m
+[0;33mW (140921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (141091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (141791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (142491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (143191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (143891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (144061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (144251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (144421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (145121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (145291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (145981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (146151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (146851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (147531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (147701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (147871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (148561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (148721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (148891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (149061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (149231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (149931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (150391) main: temp: 26.72[0m
+[1;31mE (150391) main: hum: 56.96[0m
+[1;31mE (150391) main: end node network address:60883[0m
+[0;32mI (150391) main: Temperature report sent[0m
+[0;33mW (150651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (151351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (152051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (152751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (152921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (153091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (153791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (154481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (155171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (155871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (156041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (156741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (157441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (157611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (158311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (159011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (159691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (160391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (160391) main: temp: 26.75[0m
+[1;31mE (160391) main: hum: 56.77[0m
+[1;31mE (160391) main: end node network address:60883[0m
+[0;32mI (160391) main: Temperature report sent[0m
+[0;33mW (161081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (161771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (161941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (162111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (162811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (162971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (163671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (164331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (165021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (165711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (166401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (167081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (167231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (167911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (168601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (168761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (169451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (169601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (169761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (170391) main: temp: 26.74[0m
+[1;31mE (170391) main: hum: 56.76[0m
+[1;31mE (170391) main: end node network address:60883[0m
+[0;32mI (170391) main: Temperature report sent[0m
+[0;33mW (170451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (170611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (170771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (171451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (172141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (172831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (173521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (174191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (174871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (175051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (175211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (175361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (175531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (176221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (176911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (177601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (177761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (178441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (178601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (179271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (179431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (180111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (180391) main: temp: 26.74[0m
+[1;31mE (180391) main: hum: 56.69[0m
+[1;31mE (180391) main: end node network address:60883[0m
+[0;32mI (180391) main: Temperature report sent[0m
+[0;33mW (180801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (181491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (182171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (182861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (183021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (183181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (183871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (184561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (185251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (185421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (186141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (186291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (186451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (187141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (187821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (188501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (189191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (189351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (190031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (190391) main: temp: 26.76[0m
+[1;31mE (190391) main: hum: 56.77[0m
+[1;31mE (190391) main: end node network address:60883[0m
+[0;32mI (190391) main: Temperature report sent[0m
+[0;33mW (190721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (191381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (191541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (191701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (192391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (192551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (193241) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (193921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (194611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (195301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (196001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (196161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (196321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (197011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (197701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (198391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (198551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (199231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (199391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (199541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (200231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (200391) main: temp: 26.76[0m
+[1;31mE (200391) main: hum: 56.64[0m
+[1;31mE (200391) main: end node network address:60883[0m
+[0;32mI (200391) main: Temperature report sent[0m
+[0;33mW (200921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (201611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (201801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (201961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (202641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (202791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (202941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (203661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (203821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (203981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (204671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (204831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (204991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (205691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (205851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (206011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (206171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (206331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (207021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (207181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (207871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (208031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (208701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (208861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (209021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (209741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (209901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (210061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (210391) main: temp: 26.78[0m
+[1;31mE (210391) main: hum: 56.74[0m
+[1;31mE (210391) main: end node network address:60883[0m
+[0;32mI (210391) main: Temperature report sent[0m
+[0;33mW (210751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (211441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (211591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (211751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (212441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (213131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (213811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (213961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (214121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (214281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (214441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (215141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (215841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (216001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (216161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (216851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (217011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (217171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (217861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (218551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (219241) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (219931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (220391) main: temp: 26.78[0m
+[1;31mE (220391) main: hum: 56.63[0m
+[1;31mE (220391) main: end node network address:60883[0m
+[0;32mI (220391) main: Temperature report sent[0m
+[0;33mW (220621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (220781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (220961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (221651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (222341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (223031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (223721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (223911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (224591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (225271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (225971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (226661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (226851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (227541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (228231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (228921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (229081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (229781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (230391) main: temp: 26.80[0m
+[1;31mE (230391) main: hum: 56.60[0m
+[1;31mE (230391) main: end node network address:60883[0m
+[0;32mI (230391) main: Temperature report sent[0m
+[0;33mW (230451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (230611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (230771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (230931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (231091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (231781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (232471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (232641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (233331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (233501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (234191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (234891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (235601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (236301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (236471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (237171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (237341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (238041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (238741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (239441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (240141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (240391) main: temp: 26.81[0m
+[1;31mE (240391) main: hum: 56.51[0m
+[1;31mE (240391) main: end node network address:60883[0m
+[0;32mI (240391) main: Temperature report sent[0m
+[0;33mW (240841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (241531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (242231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (242401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (243101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (243801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (244481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (245191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (245891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (246061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (246761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (247461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (248141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (248841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (249011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (249181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (249871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (250041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (250391) main: temp: 26.81[0m
+[1;31mE (250391) main: hum: 56.86[0m
+[1;31mE (250391) main: end node network address:60883[0m
+[0;32mI (250391) main: Temperature report sent[0m
+[0;33mW (250741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (250911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (251591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (251761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (251931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (252101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (252801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (252971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (253671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (253841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (254521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (254691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (255391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (256091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (256261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (256431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (257131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (257301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (257971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (258671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (259371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (260081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (260251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (260391) main: temp: 26.81[0m
+[1;31mE (260391) main: hum: 57.33[0m
+[1;31mE (260391) main: end node network address:60883[0m
+[0;32mI (260391) main: Temperature report sent[0m
+[0;33mW (260951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (261121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (261291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (261981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (262701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (262871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (263031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (263201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (263891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (264591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (265291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (265991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (266681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (267381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (267551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (268251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (268951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (269651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (270341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (270391) main: temp: 26.81[0m
+[1;31mE (270391) main: hum: 56.73[0m
+[1;31mE (270391) main: end node network address:60883[0m
+[0;32mI (270391) main: Temperature report sent[0m
+[0;33mW (271041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (271731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (271901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (272621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (273321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (274011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (274711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (275421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (276121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (276291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (276991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (277691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (277851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (278021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (278721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (279421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (279591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (279761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (280391) main: temp: 26.81[0m
+[1;31mE (280391) main: hum: 56.74[0m
+[1;31mE (280391) main: end node network address:60883[0m
+[0;32mI (280391) main: Temperature report sent[0m
+[0;33mW (280461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (281161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (281851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (282021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (282721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (283441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (284131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (284321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (285021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (285181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (285891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (286581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (287271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (287971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (288671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (289371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (290081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (290251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (290391) main: temp: 26.80[0m
+[1;31mE (290391) main: hum: 56.77[0m
+[1;31mE (290391) main: end node network address:60883[0m
+[0;32mI (290391) main: Temperature report sent[0m
+[0;33mW (290941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (291641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (292341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (293041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (293221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (293901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (294601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (294771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (294941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (295111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (295281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (295981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (296681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (296851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (297021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (297191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (297361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (297531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (298231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (298921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (299091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (299261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (299941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (300101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (300271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (300391) main: temp: 26.82[0m
+[1;31mE (300391) main: hum: 56.65[0m
+[1;31mE (300391) main: end node network address:60883[0m
+[0;32mI (300391) main: Temperature report sent[0m
+[0;33mW (300971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (301671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (301841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (302011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (302181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (302881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (303581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (304281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (304991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (305161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (305331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (305501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (306201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (306901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (307601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (308301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (308471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (309171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (309341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (310031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (310391) main: temp: 26.82[0m
+[1;31mE (310391) main: hum: 56.64[0m
+[1;31mE (310391) main: end node network address:60883[0m
+[0;32mI (310391) main: Temperature report sent[0m
+[0;33mW (310731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (310921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (311091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (311791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (311951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (312651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (313351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (314051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (314221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (314391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (315091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (315781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (315951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (316651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (317381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (318081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (318251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (318951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (319631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (320341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (320391) main: temp: 26.80[0m
+[1;31mE (320391) main: hum: 56.65[0m
+[1;31mE (320391) main: end node network address:60883[0m
+[0;32mI (320391) main: Temperature report sent[0m
+[0;33mW (321041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (321771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (321941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (322111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (322811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (323501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (323671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (324371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (324541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (325241) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (325961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (326661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (326821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (327521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (328221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (328391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (329101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (329801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (330391) main: temp: 26.81[0m
+[1;31mE (330391) main: hum: 56.54[0m
+[1;31mE (330391) main: end node network address:60883[0m
+[0;32mI (330391) main: Temperature report sent[0m
+[0;33mW (330501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (330671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (331371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (332061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (332221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (332391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (332561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (333251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (333421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (333591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (334291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (334451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (335151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (335321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (336021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (336721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (337421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (337581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (338281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (338981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (339151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (339851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (340391) main: temp: 26.80[0m
+[1;31mE (340391) main: hum: 56.53[0m
+[1;31mE (340391) main: end node network address:60883[0m
+[0;32mI (340391) main: Temperature report sent[0m
+[0;33mW (340541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (341241) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (341411) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (342091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (342791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (342961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (343681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (344381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (344551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (345251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (345411) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (345581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (345751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (345921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (346621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (346791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (346961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (347651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (347821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (348521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (349221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (349901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (350071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (350391) main: temp: 26.78[0m
+[1;31mE (350391) main: hum: 59.74[0m
+[1;31mE (350391) main: end node network address:60883[0m
+[0;32mI (350391) main: Temperature report sent[0m
+[0;33mW (350771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (351471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (352171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (352861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (353031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (353731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (354431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (355121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (355831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (356511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (356681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (356841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (357011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (357711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (357881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (358581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (359281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (359451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (360151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (360391) main: temp: 26.76[0m
+[1;31mE (360391) main: hum: 57.32[0m
+[1;31mE (360391) main: end node network address:60883[0m
+[0;32mI (360391) main: Temperature report sent[0m
+[0;33mW (360831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (361521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (362221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (362391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (363091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (363261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (363961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (364661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (365351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (365521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (365691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (365861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (366561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (367291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (367991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (368691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (368861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (369021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (369191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (369891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (370391) main: temp: 26.74[0m
+[1;31mE (370391) main: hum: 57.02[0m
+[1;31mE (370391) main: end node network address:60883[0m
+[0;32mI (370391) main: Temperature report sent[0m
+[0;33mW (370581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (370751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (370921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (371601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (371771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (371941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (372641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (372811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (372981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (373681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (373851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (374541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (375231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (375401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (375571) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (375741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (375911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (376611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (376781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (377451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (377621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (378321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (378491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (378651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (379341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (379501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (380201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (380371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (380391) main: temp: 26.74[0m
+[1;31mE (380391) main: hum: 56.88[0m
+[1;31mE (380391) main: end node network address:60883[0m
+[0;32mI (380391) main: Temperature report sent[0m
+[0;33mW (380541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (381241) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (381921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (382091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (382791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (383481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (383651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (383821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (383991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (384691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (385381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (386081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (386781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (386941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (387621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (387791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (388491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (388651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (388821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (389511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (390211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (390391) main: temp: 26.74[0m
+[1;31mE (390391) main: hum: 56.72[0m
+[1;31mE (390391) main: end node network address:60883[0m
+[0;32mI (390391) main: Temperature report sent[0m
+[0;33mW (390901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (391601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (392301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (392471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (393151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (393851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (394021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (394701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (395401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (396101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (396271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (396431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (396601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (396771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (397471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (398191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (398881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (399581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (399751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (399921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (400391) main: temp: 26.71[0m
+[1;31mE (400391) main: hum: 56.69[0m
+[1;31mE (400391) main: end node network address:60883[0m
+[0;32mI (400391) main: Temperature report sent[0m
+[0;33mW (400621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (401311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (401481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (401651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (402351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (403051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (403741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (404431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (405131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (405321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (406011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (406681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (407371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (408071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (408761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (408931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (409101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (409801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (410391) main: temp: 26.74[0m
+[1;31mE (410391) main: hum: 56.71[0m
+[1;31mE (410391) main: end node network address:60883[0m
+[0;32mI (410391) main: Temperature report sent[0m
+[0;33mW (410501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (411181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (411881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (412571) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (412741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (412911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (413081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (413781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (414481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (414651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (414821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (414991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (415701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (416401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (417101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (417271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (417441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (417601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (418301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (419001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (419681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (420371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (420391) main: temp: 26.75[0m
+[1;31mE (420391) main: hum: 56.61[0m
+[1;31mE (420391) main: end node network address:60883[0m
+[0;32mI (420391) main: Temperature report sent[0m
+[0;33mW (421071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (421771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (421941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (422111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (422811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (423491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (424191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (424891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (425601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (426331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (427031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (427201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (427901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (428581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (429281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (429981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (430391) main: temp: 26.76[0m
+[1;31mE (430391) main: hum: 56.63[0m
+[1;31mE (430391) main: end node network address:60883[0m
+[0;32mI (430391) main: Temperature report sent[0m
+[0;33mW (430671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (431371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (432071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (432751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (433451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (433621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (434311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (434471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (434641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (434811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (434981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (435151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (435861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (436561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (437261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (437431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (437601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (438291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (438991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (439161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (439331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (440031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (440201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (440371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (440391) main: temp: 26.75[0m
+[1;31mE (440391) main: hum: 57.90[0m
+[1;31mE (440391) main: end node network address:60883[0m
+[0;32mI (440391) main: Temperature report sent[0m
+[0;33mW (441051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (441731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (442431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (442601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (443301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (444001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (444171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (444871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (445581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (446271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (446971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (447671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (448361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (449061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (449231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (449931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (450391) main: temp: 26.72[0m
+[1;31mE (450391) main: hum: 57.71[0m
+[1;31mE (450391) main: end node network address:60883[0m
+[0;32mI (450391) main: Temperature report sent[0m
+[0;33mW (450631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (450801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (451491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (452191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (452381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (453061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (453761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (453951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (454121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (454821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (454991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (455701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (456401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (457101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (457271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (457971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (458671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (458841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (459011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (459711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (460391) main: temp: 26.73[0m
+[1;31mE (460391) main: hum: 57.13[0m
+[1;31mE (460391) main: end node network address:60883[0m
+[0;32mI (460391) main: Temperature report sent[0m
+[0;33mW (460411) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (461111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (461281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (461981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (462681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (463381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (464081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (464781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (465491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (465661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (466361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (466531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (467231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (467931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (468101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (468801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (469501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (470201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (470391) main: temp: 26.75[0m
+[1;31mE (470391) main: hum: 56.77[0m
+[1;31mE (470391) main: end node network address:60883[0m
+[0;32mI (470391) main: Temperature report sent[0m
+[0;33mW (470901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (471071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (471231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (471931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (472631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (473331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (473501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (474191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (474891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (475601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (475771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (475941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (476101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (476791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (476961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (477131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (477831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (478531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (479221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (479921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (480391) main: temp: 26.74[0m
+[1;31mE (480391) main: hum: 56.76[0m
+[1;31mE (480391) main: end node network address:60883[0m
+[0;32mI (480391) main: Temperature report sent[0m
+[0;33mW (480621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (480791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (481481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (482181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (482351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (483041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (483211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (483381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (484081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (484781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (484951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (485121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (485831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (486001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (486701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (486871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (487041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (487731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (488431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (489131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (489831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (490391) main: temp: 26.76[0m
+[1;31mE (490391) main: hum: 56.75[0m
+[1;31mE (490391) main: end node network address:60883[0m
+[0;32mI (490391) main: Temperature report sent[0m
+[0;33mW (490531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (491261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (491951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (492121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (492821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (493521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (494221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (494391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (495081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (495821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (496511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (497211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (497911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (498611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (499311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (499481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (499651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (500351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (500391) main: temp: 26.76[0m
+[1;31mE (500391) main: hum: 56.75[0m
+[1;31mE (500391) main: end node network address:60883[0m
+[0;32mI (500391) main: Temperature report sent[0m
+[0;33mW (500521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (501221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (501391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (502091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (502261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (502951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (503641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (503811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (504511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (504681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (504851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (505561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (505731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (506431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (506591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (507281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (507451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (507621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (508301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (509001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (509701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (510391) main: temp: 26.76[0m
+[1;31mE (510391) main: hum: 56.75[0m
+[1;31mE (510391) main: end node network address:60883[0m
+[0;32mI (510391) main: Temperature report sent[0m
+[0;33mW (510431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (511131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (511301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (511991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (512691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (512861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (513021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (513191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (513891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (514591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (514751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (514921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (515091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (515801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (516501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (516671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (516841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (517541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (517711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (517881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (518051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (518751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (519451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (520151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (520321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (520391) main: temp: 26.76[0m
+[1;31mE (520391) main: hum: 56.69[0m
+[1;31mE (520391) main: end node network address:60883[0m
+[0;32mI (520391) main: Temperature report sent[0m
+[0;33mW (521011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (521181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (521881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (522581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (523281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (523451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (524141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (524841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (525011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (525721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (526421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (526581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (527281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (527961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (528121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (528291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (528991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (529161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (529331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (530031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (530391) main: temp: 26.76[0m
+[1;31mE (530391) main: hum: 56.70[0m
+[1;31mE (530391) main: end node network address:60883[0m
+[0;32mI (530391) main: Temperature report sent[0m
+[0;33mW (530731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (531431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (532111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (532281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (532451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (533151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (533321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (534021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (534721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (535421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (536121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (536291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (536461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (536631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (536801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (537501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (538201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (538901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (539071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (539761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (540391) main: temp: 26.77[0m
+[1;31mE (540391) main: hum: 56.71[0m
+[1;31mE (540391) main: end node network address:60883[0m
+[0;32mI (540391) main: Temperature report sent[0m
+[0;33mW (540461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (541151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (541321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (541491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (542191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (542881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (543041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (543211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (543381) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (543551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (544251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (544421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (545111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (545281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (545451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (545611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (546301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (547001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (547701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (548401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (548571) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (548741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (549441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (550131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (550391) main: temp: 26.77[0m
+[1;31mE (550391) main: hum: 56.71[0m
+[1;31mE (550391) main: end node network address:60883[0m
+[0;32mI (550391) main: Temperature report sent[0m
+[0;33mW (550831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (551531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (551701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (552401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (553101) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (553791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (553961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (554661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (554831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (555001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (555171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (555881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (556581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (556751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (557451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (558151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (558321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (559021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (559711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (560391) main: temp: 26.79[0m
+[1;31mE (560391) main: hum: 56.71[0m
+[1;31mE (560391) main: end node network address:60883[0m
+[0;32mI (560391) main: Temperature report sent[0m
+[0;33mW (560411) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (560581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (561281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (561981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (562151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (562321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (563021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (563721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (564421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (565111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (565821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (565991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (566161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (566331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (566501) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (567191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (567881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (568581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (569301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (569471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (570151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (570321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (570391) main: temp: 26.79[0m
+[1;31mE (570391) main: hum: 56.61[0m
+[1;31mE (570391) main: end node network address:60883[0m
+[0;32mI (570391) main: Temperature report sent[0m
+[0;33mW (571021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (571191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (571861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (572561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (573261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (573951) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (574121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (574291) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (574991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (575701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (576401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (576571) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (576741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (577421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (578091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (578791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (578961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (579651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (580351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (580391) main: temp: 26.81[0m
+[1;31mE (580391) main: hum: 56.60[0m
+[1;31mE (580391) main: end node network address:60883[0m
+[0;32mI (580391) main: Temperature report sent[0m
+[0;33mW (581041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (581741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (582441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (583141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (583841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (584541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (585231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (585911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (586081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (586251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (586421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (587121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (587821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (588521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (589221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (589391) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (590091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (590261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (590391) main: temp: 26.80[0m
+[1;31mE (590391) main: hum: 56.79[0m
+[1;31mE (590391) main: end node network address:60883[0m
+[0;32mI (590391) main: Temperature report sent[0m
+[0;33mW (590971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (591661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (592351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (593051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (593751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (594471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (594641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (595341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (596031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (596201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (596901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (597071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (597771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (598471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (599171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (599871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (600391) main: temp: 26.81[0m
+[1;31mE (600391) main: hum: 56.62[0m
+[1;31mE (600391) main: end node network address:60883[0m
+[0;32mI (600391) main: Temperature report sent[0m
+[0;33mW (600571) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (601271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (601961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (602131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (602831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (603001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (603701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (603871) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (604041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (604741) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (604901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (605611) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (606301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (607001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (607161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (607331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (608031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (608731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (608901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (609071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (609771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (610391) main: temp: 26.79[0m
+[1;31mE (610391) main: hum: 56.93[0m
+[1;31mE (610391) main: end node network address:60883[0m
+[0;32mI (610391) main: Temperature report sent[0m
+[0;33mW (610471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (611171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (611861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (612031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (612721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (613411) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (614091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (614261) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (614431) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (615151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (615861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (616031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (616191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (616361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (616531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (617231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (617921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (618081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (618771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (618931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (619621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (619781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (620391) main: temp: 26.80[0m
+[1;31mE (620391) main: hum: 56.58[0m
+[1;31mE (620391) main: end node network address:60883[0m
+[0;32mI (620391) main: Temperature report sent[0m
+[0;33mW (620461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (620621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (620771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (620931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (621091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (621761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (622471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (623161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (623321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (624011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (624701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (624881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (625041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (625201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (625901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (626591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (627281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (627441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (628111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (628801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (629491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (629651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (630341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (630391) main: temp: 26.79[0m
+[1;31mE (630391) main: hum: 56.58[0m
+[1;31mE (630391) main: end node network address:60883[0m
+[0;32mI (630391) main: Temperature report sent[0m
+[0;33mW (630511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (631201) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (631351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (632041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (632731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (633421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (634111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (634271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (634961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (635631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (636331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (637021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (637711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (637861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (638551) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (639241) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (639401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (639561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (639721) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (639881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (640041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (640391) main: temp: 26.81[0m
+[1;31mE (640391) main: hum: 56.62[0m
+[1;31mE (640391) main: end node network address:60883[0m
+[0;32mI (640391) main: Temperature report sent[0m
+[0;33mW (640731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (641421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (642111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (642271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (642961) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (643651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (644331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (644491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (644651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (644811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (644971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (645671) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (645821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (645981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (646661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (646811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (646971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (647131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (647821) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (647981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (648141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (648831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (649521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (649681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (650361) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (650391) main: temp: 26.80[0m
+[1;31mE (650391) main: hum: 56.71[0m
+[1;31mE (650391) main: end node network address:60883[0m
+[0;32mI (650391) main: Temperature report sent[0m
+[0;33mW (650521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (650681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (650841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (651531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (652221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (652901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (653591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (654281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (654471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (655141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (655301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (655471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (656161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (656321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (656471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (656631) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (657321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (658011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (658171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (658321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (659011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (659171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (659331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (660021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (660391) main: temp: 26.77[0m
+[1;31mE (660391) main: hum: 56.57[0m
+[1;31mE (660391) main: end node network address:60883[0m
+[0;32mI (660391) main: Temperature report sent[0m
+[0;33mW (660711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (661401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (661561) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (662251) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (662941) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (663621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (664301) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (664991) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (665681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (666371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (666521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (666681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (666841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (667521) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (667681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (667841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (668001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (668161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (668851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (669011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (669171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (669861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (670391) main: temp: 26.77[0m
+[1;31mE (670391) main: hum: 56.59[0m
+[1;31mE (670391) main: end node network address:60883[0m
+[0;32mI (670391) main: Temperature report sent[0m
+[0;33mW (670571) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (670731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (671421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (672111) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (672801) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (673491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (673651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (674331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (675021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (675181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (675851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (676011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (676681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (677371) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (678071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (678761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (678921) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (679081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (679761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (680391) main: temp: 26.77[0m
+[1;31mE (680391) main: hum: 56.85[0m
+[1;31mE (680391) main: end node network address:60883[0m
+[0;32mI (680391) main: Temperature report sent[0m
+[0;33mW (680451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (681151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (681841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (682531) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (682691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (682851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (683541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (683701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (683861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (684021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (684181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (684331) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (685021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (685181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (685881) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (686041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (686711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (687411) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (687581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (688271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (688441) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (689141) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (689841) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (690391) main: temp: 26.76[0m
+[1;31mE (690391) main: hum: 56.76[0m
+[1;31mE (690391) main: end node network address:60883[0m
+[0;32mI (690391) main: Temperature report sent[0m
+[0;33mW (690541) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (690711) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (691401) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (692091) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (692791) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (693491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (694191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (694891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (695601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (695771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (696471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (697171) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (697861) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (698031) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (698731) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (698901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (699601) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (699761) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (700391) main: temp: 26.73[0m
+[1;31mE (700391) main: hum: 56.72[0m
+[1;31mE (700391) main: end node network address:60883[0m
+[0;32mI (700391) main: Temperature report sent[0m
+[0;33mW (700461) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (701161) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (701321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (702011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (702181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (702351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (703041) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (703211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (703901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (704071) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (704771) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (705481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (705651) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (706351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (707051) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (707221) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (707901) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (708581) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (708751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (709451) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (710151) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (710311) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (710391) main: temp: 26.73[0m
+[1;31mE (710391) main: hum: 56.65[0m
+[1;31mE (710391) main: end node network address:60883[0m
+[0;32mI (710391) main: Temperature report sent[0m
+[0;33mW (711021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (711191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (711911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (712591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (713281) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (714011) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (714691) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (715421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (716121) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (716811) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (716981) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (717681) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (718421) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (718591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (718751) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (719471) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (719641) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (720341) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (720391) main: temp: 26.73[0m
+[1;31mE (720391) main: hum: 56.64[0m
+[1;31mE (720391) main: end node network address:60883[0m
+[0;32mI (720391) main: Temperature report sent[0m
+[0;33mW (720511) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (721211) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (721911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (722081) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (722781) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (723481) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (724181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (724351) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (725021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (725191) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (725891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (726591) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (727271) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (727971) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (728131) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (728831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (729001) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (729701) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (730391) main: temp: 26.74[0m
+[1;31mE (730391) main: hum: 56.65[0m
+[1;31mE (730391) main: end node network address:60883[0m
+[0;32mI (730391) main: Temperature report sent[0m
+[0;33mW (730851) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (731021) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (731181) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (731891) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (732061) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (732231) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (732931) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (733621) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (734321) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (734491) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (734661) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (734831) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW (735531) main: BDB Device Reboot failed with status(0x03), please retry[0m
