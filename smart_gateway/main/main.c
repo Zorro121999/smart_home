@@ -23,6 +23,7 @@
 #include "nvs_flash.h"
 #include <inttypes.h>
 
+
 static const char *TAG = "main";
 
 typedef struct {
@@ -44,6 +45,8 @@ uint64_t new_node_addr_long;
 joined_nodes_id_t joined_nodes_id[MAX_NODES];
 sensor_data_t data[MAX_NODES];
 
+float temperature;
+
 
 esp_err_t ret;
 esp_zigbee_config_t zigbee_config = {
@@ -64,14 +67,57 @@ esp_zigbee_config_t zigbee_config = {
 };
 uint32_t channel_mask = (1UL << 20);
 
+static ezb_zcl_status_t receive_custom_cmd(const ezb_zcl_cmd_hdr_t *header,
+                                            const uint8_t *payload,
+                                            uint16_t payload_length) {
+    ezb_zcl_status_t ret = EZB_ZCL_STATUS_SUCCESS;
+    assert(header);
+    ESP_LOGI(TAG,"entered custom cluster client handler");
+    if (header->cluster_id != COORDINATOR_CLUSTER_ID) {
+        ret = EZB_ZCL_STATUS_UNSUPPORTED_CLUSTER;    
+    }
+    if (!EZB_ZCL_CMD_FC_IS_TO_CLI_DIRECTION(header->fc)) {
+        ret = EZB_ZCL_STATUS_INVALID_FIELD;
+    }
+    ESP_LOGI(TAG, "Custom command received!");
+    ESP_LOGI(TAG, "  cluster_id = 0x%04X", header->cluster_id);
+    ESP_LOGI(TAG, "  cmd_id     = 0x%02X", header->cmd_id);
+    ESP_LOGI(TAG, "  src_ep     = %d", header->src_ep);
+    ESP_LOGI(TAG, "  dst_ep     = %d", header->dst_ep);
+    ESP_LOGI(TAG, "  payload_len = %u", payload_length);
+    if (payload_length == sizeof(float)) {
+        
+
+        temperature = *(const float *)payload;
+
+        ESP_LOGI(TAG, "Temperature = %.2f °C", temperature);
+    }
+
+
+    return ret;
+}
+
+void esp_zigbee_zcl_customized_data_stream_client_init(uint8_t ep_id)
+{
+    ezb_zcl_custom_cluster_handlers_t handlers = {
+        .cluster_id     = COORDINATOR_CLUSTER_ID,
+        .cluster_role   = EZB_ZCL_CLUSTER_CLIENT,
+        .process_cmd_cb = receive_custom_cmd,
+        .check_value_cb = NULL,
+        .write_attr_cb  = NULL,
+        .cmd_disc_cb    = NULL,
+    };
+    ezb_zcl_custom_cluster_handlers_register(&handlers);
+}
+
 ezb_zcl_custom_cluster_config_t coordinator_cluster_config = {
         .cluster_id = COORDINATOR_CLUSTER_ID,
-        .init_func = NULL,
+        .init_func = esp_zigbee_zcl_customized_data_stream_client_init,
         .deinit_func = NULL
     };
 ezb_af_ep_config_t coordinator_endpoint_config = {
     .ep_id = COORDINATOR_EP,
-    .app_profile_id = 0x0105U,
+    .app_profile_id = 0x0104U,
     .app_device_id = COORDINATOR_ID,
     .app_device_version = 1
 };
@@ -130,13 +176,14 @@ static ezb_err_t sensor_node_report_config(uint8_t ep_id, uint16_t network_addr)
         ezb_zcl_config_report_cmd_t report_cmd = {
         .cmd_ctrl =
             {
+                .fc.direction = EZB_ZCL_CMD_DIRECTION_TO_SRV,
                 .dst_addr =
                     {
                         .addr_mode = EZB_ADDR_MODE_SHORT,
                         .u.short_addr = network_addr,
                     },
                 .src_ep = COORDINATOR_EP,
-                .dst_ep = ep_id,
+                .dst_ep = ep_id+1,
                 .cluster_id = SENSOR_CLUSTER_ID,
                 .manuf_code = EZB_ZCL_STD_MANUF_CODE,
             },
@@ -204,6 +251,45 @@ ret = ezb_zdo_bind_req(&bind_req);
 return ret;
 }
 
+static void sensor_node_read_report_config(uint16_t sensor_addr)
+{
+    ezb_zcl_read_report_config_record_t record = {
+        .report_direction = EZB_ZCL_REPORTING_SEND,
+        .attr_id = ATTR_TEMPERATURE_ID,
+    };
+
+    ezb_zcl_read_report_config_cmd_t cmd = {
+        .cmd_ctrl = {
+            .fc.direction = EZB_ZCL_CMD_DIRECTION_TO_SRV,
+
+            .dst_addr = {
+                .addr_mode = EZB_ADDR_MODE_SHORT,
+                .u.short_addr = sensor_addr,
+            },
+
+            .src_ep = COORDINATOR_EP,
+            .dst_ep = SENSOR_EP,
+            .cluster_id = SENSOR_CLUSTER_ID,
+            .manuf_code = EZB_ZCL_STD_MANUF_CODE,
+        },
+
+        .payload = {
+            .record_number = 1,
+            .record_field = &record,
+        },
+    };
+
+    esp_zigbee_lock_acquire(portMAX_DELAY);
+
+    ezb_err_t ret = ezb_zcl_read_report_config_cmd_req(&cmd);
+
+    esp_zigbee_lock_release();
+
+    ESP_LOGI(TAG,
+             "Read Reporting Config request ret=0x%04X",
+             ret);
+}
+
 
 static void simple_desc_callback(const ezb_zdo_simple_desc_req_result_t *result, void *user_ctx) {
     ESP_LOGE(TAG, "set node report config");
@@ -218,7 +304,7 @@ static void simple_desc_callback(const ezb_zdo_simple_desc_req_result_t *result,
     ESP_LOGE(TAG, "ep id:%" PRIu8, result->rsp->desc.ep_id);
     ESP_LOGE(TAG, "app profile id:%" PRIu16, result->rsp->desc.app_profile_id);
     nodes_index++;
-    sensor_node_report_config(result->rsp->desc.ep_id, result->rsp->nwk_addr_of_interest);
+    //sensor_node_report_config(result->rsp->desc.ep_id, result->rsp->nwk_addr_of_interest);
 }
 
 static bool node_signal_callback(const ezb_app_signal_t *app_signal) {
@@ -298,7 +384,7 @@ static bool node_signal_callback(const ezb_app_signal_t *app_signal) {
                 return true;
             }
         }
-        sensor_node_bind(node_info_joined->short_addr, COORDINATOR_EP, SENSOR_EP);
+        //sensor_node_bind(node_info_joined->short_addr, COORDINATOR_EP, SENSOR_EP);
         //only ask for device ID if not already acquired deviceID perviously
         ezb_zdo_simple_desc_req(&node_request);
         break;
@@ -644,6 +730,8 @@ static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, v
     }
 }
 
+
+
 void esp_zb_task(void *arg) {
     // ezb_zcl_custom_cluster_config_t sensor_cluster_config = {
     //     .cluster_id = SENSOR_CLUSTER_ID,
@@ -661,10 +749,11 @@ void esp_zb_task(void *arg) {
     ezb_af_device_desc_t coordinator_device = ezb_af_create_device_desc();
     ezb_af_ep_desc_t coordinator_endpoint = ezb_af_create_endpoint_desc(&coordinator_endpoint_config);
     ezb_zcl_cluster_desc_t coordinator_cluster = ezb_zcl_custom_create_cluster_desc(&coordinator_cluster_config, EZB_ZCL_CLUSTER_CLIENT);
+    ret = ezb_zcl_custom_cluster_desc_add_attr(coordinator_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_WRITE, &(temperature));
     ESP_ERROR_CHECK(ezb_af_endpoint_add_cluster_desc(coordinator_endpoint, coordinator_cluster));
     ESP_ERROR_CHECK(ezb_af_device_add_endpoint_desc(coordinator_device, coordinator_endpoint));
     ESP_ERROR_CHECK(ezb_af_device_desc_register(coordinator_device));
-    
+
     ezb_zcl_core_action_handler_register(zigbee_zcl_callback);
     ESP_ERROR_CHECK(ezb_bdb_set_primary_channel_set(channel_mask));
     ret = ezb_app_signal_add_handler(node_signal_callback);
@@ -701,5 +790,9 @@ void app_main(void)
     );
 
     xTaskCreate(esp_zb_task, "zigbee_task", 4096, NULL, 10, NULL);
+    while(1) {
+        vTaskDelay(pdMS_TO_TICKS(10000));
+        sensor_node_read_report_config(0x715A);
+    }
       
 }

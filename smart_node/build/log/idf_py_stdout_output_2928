@@ -1,0 +1,3891 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807414
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=170e8h ( 94440) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00027110 vaddr=40800000 size=00f08h (  3848) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6ef30h (454448) map[0m
+[0;32mI (234) esp_image: segment 3: paddr=00096f58 vaddr=40800f08 size=10a10h ( 68112) load[0m
+[0;32mI (254) esp_image: segment 4: paddr=000a7970 vaddr=40811920 size=0219ch (  8604) load[0m
+[0;32mI (258) esp_image: segment 5: paddr=000a9b14 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (264) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (280) cpu_start: Unicore app[0m
+[0;32mI (288) cpu_start: Pro cpu start user code[0m
+[0;32mI (289) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (289) app_init: Application information:[0m
+[0;32mI (290) app_init: Project name:     hello_world[0m
+[0;32mI (293) app_init: App version:      a83284f-dirty[0m
+[0;32mI (297) app_init: Compile time:     Sep  3 2026 07:46:08[0m
+[0;32mI (302) app_init: ELF file SHA256:  3fb789e5c...[0m
+[0;32mI (307) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (311) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (315) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (319) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (323) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (329) heap_init: At 408163D0 len 00036FB0 (219 KiB): RAM[0m
+[0;32mI (334) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (339) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (346) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (364) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (388) main_task: Calling app_main()[0m
+[1;31mE (398) main: hello[0m
+[1;31mE (398) BME280: device ID: 96[0m
+[0;32mI (398) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (398) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+SDK Version: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTClight sleap enabledI (428) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11
+[0;32mI (428) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (448) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTC[0m
+[0;32mI (448) main_task: Returned from app_main()[0m
+[0;32mI (538) main: Initialize Zigbee stack[0m
+[1;31mE (538) main: hello_zb[0m
+[0;32mI (768) main: Device started up in non factory-reset mode[0m
+[0;32mI (768) main: Device reboot[0m
+[1;31mE (10408) main: temp: 24.65[0m
+[1;31mE (10408) main: hum: 56.53[0m
+[1;31mE (10408) main: end node network address:29018[0m
+[1;31mE (10408) main: set attr state = 0[0m
+[0;32mI (10408) main: manual report ret = 0x0000[0m
+[1;31mE (10478) main: zcl callback[0m
+[1;31mE (10478) main: callback_id = 8[0m
+[0;32mI (10478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (10478) main: info:[0m
+[0;32mI (10478) main:  status = 0x00[0m
+[0;32mI (10478) main:  dst_ep = 1[0m
+[0;32mI (10478) main:  cluster_id = 0xFC00[0m
+[0;32mI (10488) main:  cluster_role = 0x01[0m
+[0;32mI (10488) main: in:[0m
+[0;32mI (10488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (10498) main:   status_code     = 0x81[0m
+[0;32mI (10498) main: header:[0m
+[0;32mI (10498) main: addr type = 2[0m
+[0;32mI (10508) main:   src_addr        = 0x0000[0m
+[0;32mI (10508) main:   dst_addr        = 0x715A[0m
+[0;32mI (10508) main:   src_ep          = 10[0m
+[0;32mI (10518) main:   dst_ep          = 1[0m
+[0;32mI (10518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (10518) main:   profile_id      = 0x0104[0m
+[0;32mI (10528) main:   frame_control   = 0x10[0m
+[0;32mI (10528) main:   manuf_code      = 0x0000[0m
+[0;32mI (10538) main:   tsn             = 0x00[0m
+[0;32mI (10538) main:   rssi            = -44 dBm[0m
+[0;32mI (10538) main:   cmd_id          = 0x0B[0m
+[0;32mI (10548) main: out:[0m
+[0;32mI (10548) main:  result = 0xFE[0m
+[1;31mE (10558) main: zcl callback[0m
+[1;31mE (10558) main: callback_id = 8[0m
+[0;32mI (10558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (10558) main: info:[0m
+[0;32mI (10558) main:  status = 0x00[0m
+[0;32mI (10568) main:  dst_ep = 1[0m
+[0;32mI (10568) main:  cluster_id = 0xFC00[0m
+[0;32mI (10568) main:  cluster_role = 0x01[0m
+[0;32mI (10578) main: in:[0m
+[0;32mI (10578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (10578) main:   status_code     = 0x81[0m
+[0;32mI (10588) main: header:[0m
+[0;32mI (10588) main: addr type = 2[0m
+[0;32mI (10588) main:   src_addr        = 0x0000[0m
+[0;32mI (10588) main:   dst_addr        = 0x715A[0m
+[0;32mI (10598) main:   src_ep          = 10[0m
+[0;32mI (10598) main:   dst_ep          = 1[0m
+[0;32mI (10598) main:   cluster_id      = 0xFC00[0m
+[0;32mI (10608) main:   profile_id      = 0x0104[0m
+[0;32mI (10608) main:   frame_control   = 0x10[0m
+[0;32mI (10618) main:   manuf_code      = 0x0000[0m
+[0;32mI (10618) main:   tsn             = 0x01[0m
+[0;32mI (10618) main:   rssi            = -43 dBm[0m
+[0;32mI (10628) main:   cmd_id          = 0x0B[0m
+[0;32mI (10628) main: out:[0m
+[0;32mI (10628) main:  result = 0xFE[0m
+[1;31mE (20408) main: temp: 24.64[0m
+[1;31mE (20408) main: hum: 56.63[0m
+[1;31mE (20408) main: end node network address:29018[0m
+[1;31mE (20408) main: set attr state = 0[0m
+[0;32mI (20408) main: manual report ret = 0x0000[0m
+[1;31mE (20478) main: zcl callback[0m
+[1;31mE (20478) main: callback_id = 8[0m
+[0;32mI (20478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (20478) main: info:[0m
+[0;32mI (20478) main:  status = 0x00[0m
+[0;32mI (20478) main:  dst_ep = 1[0m
+[0;32mI (20488) main:  cluster_id = 0xFC00[0m
+[0;32mI (20488) main:  cluster_role = 0x01[0m
+[0;32mI (20488) main: in:[0m
+[0;32mI (20488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (20498) main:   status_code     = 0x81[0m
+[0;32mI (20498) main: header:[0m
+[0;32mI (20498) main: addr type = 2[0m
+[0;32mI (20508) main:   src_addr        = 0x0000[0m
+[0;32mI (20508) main:   dst_addr        = 0x715A[0m
+[0;32mI (20508) main:   src_ep          = 10[0m
+[0;32mI (20518) main:   dst_ep          = 1[0m
+[0;32mI (20518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (20518) main:   profile_id      = 0x0104[0m
+[0;32mI (20528) main:   frame_control   = 0x10[0m
+[0;32mI (20528) main:   manuf_code      = 0x0000[0m
+[0;32mI (20538) main:   tsn             = 0x02[0m
+[0;32mI (20538) main:   rssi            = -46 dBm[0m
+[0;32mI (20538) main:   cmd_id          = 0x0B[0m
+[0;32mI (20548) main: out:[0m
+[0;32mI (20548) main:  result = 0xFE[0m
+[1;31mE (20558) main: zcl callback[0m
+[1;31mE (20558) main: callback_id = 8[0m
+[0;32mI (20558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (20558) main: info:[0m
+[0;32mI (20558) main:  status = 0x00[0m
+[0;32mI (20568) main:  dst_ep = 1[0m
+[0;32mI (20568) main:  cluster_id = 0xFC00[0m
+[0;32mI (20568) main:  cluster_role = 0x01[0m
+[0;32mI (20578) main: in:[0m
+[0;32mI (20578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (20578) main:   status_code     = 0x81[0m
+[0;32mI (20588) main: header:[0m
+[0;32mI (20588) main: addr type = 2[0m
+[0;32mI (20588) main:   src_addr        = 0x0000[0m
+[0;32mI (20588) main:   dst_addr        = 0x715A[0m
+[0;32mI (20598) main:   src_ep          = 10[0m
+[0;32mI (20598) main:   dst_ep          = 1[0m
+[0;32mI (20608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (20608) main:   profile_id      = 0x0104[0m
+[0;32mI (20608) main:   frame_control   = 0x10[0m
+[0;32mI (20618) main:   manuf_code      = 0x0000[0m
+[0;32mI (20618) main:   tsn             = 0x03[0m
+[0;32mI (20618) main:   rssi            = -42 dBm[0m
+[0;32mI (20628) main:   cmd_id          = 0x0B[0m
+[0;32mI (20628) main: out:[0m
+[0;32mI (20628) main:  result = 0xFE[0m
+[1;31mE (30408) main: temp: 24.66[0m
+[1;31mE (30408) main: hum: 56.64[0m
+[1;31mE (30408) main: end node network address:29018[0m
+[1;31mE (30408) main: set attr state = 0[0m
+[0;32mI (30408) main: manual report ret = 0x0000[0m
+[1;31mE (30478) main: zcl callback[0m
+[1;31mE (30478) main: callback_id = 8[0m
+[0;32mI (30478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (30478) main: info:[0m
+[0;32mI (30478) main:  status = 0x00[0m
+[0;32mI (30488) main:  dst_ep = 1[0m
+[0;32mI (30488) main:  cluster_id = 0xFC00[0m
+[0;32mI (30488) main:  cluster_role = 0x01[0m
+[0;32mI (30498) main: in:[0m
+[0;32mI (30498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (30498) main:   status_code     = 0x81[0m
+[0;32mI (30508) main: header:[0m
+[0;32mI (30508) main: addr type = 2[0m
+[0;32mI (30508) main:   src_addr        = 0x0000[0m
+[0;32mI (30508) main:   dst_addr        = 0x715A[0m
+[0;32mI (30518) main:   src_ep          = 10[0m
+[0;32mI (30518) main:   dst_ep          = 1[0m
+[0;32mI (30528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (30528) main:   profile_id      = 0x0104[0m
+[0;32mI (30528) main:   frame_control   = 0x10[0m
+[0;32mI (30538) main:   manuf_code      = 0x0000[0m
+[0;32mI (30538) main:   tsn             = 0x04[0m
+[0;32mI (30538) main:   rssi            = -39 dBm[0m
+[0;32mI (30548) main:   cmd_id          = 0x0B[0m
+[0;32mI (30548) main: out:[0m
+[0;32mI (30548) main:  result = 0xFE[0m
+[1;31mE (30568) main: zcl callback[0m
+[1;31mE (30568) main: callback_id = 8[0m
+[0;32mI (30568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (30568) main: info:[0m
+[0;32mI (30568) main:  status = 0x00[0m
+[0;32mI (30568) main:  dst_ep = 1[0m
+[0;32mI (30568) main:  cluster_id = 0xFC00[0m
+[0;32mI (30578) main:  cluster_role = 0x01[0m
+[0;32mI (30578) main: in:[0m
+[0;32mI (30578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (30588) main:   status_code     = 0x81[0m
+[0;32mI (30588) main: header:[0m
+[0;32mI (30588) main: addr type = 2[0m
+[0;32mI (30598) main:   src_addr        = 0x0000[0m
+[0;32mI (30598) main:   dst_addr        = 0x715A[0m
+[0;32mI (30598) main:   src_ep          = 10[0m
+[0;32mI (30608) main:   dst_ep          = 1[0m
+[0;32mI (30608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (30608) main:   profile_id      = 0x0104[0m
+[0;32mI (30618) main:   frame_control   = 0x10[0m
+[0;32mI (30618) main:   manuf_code      = 0x0000[0m
+[0;32mI (30628) main:   tsn             = 0x05[0m
+[0;32mI (30628) main:   rssi            = -38 dBm[0m
+[0;32mI (30628) main:   cmd_id          = 0x0B[0m
+[0;32mI (30638) main: out:[0m
+[0;32mI (30638) main:  result = 0xFE[0m
+[1;31mE (40408) main: temp: 24.66[0m
+[1;31mE (40408) main: hum: 56.57[0m
+[1;31mE (40408) main: end node network address:29018[0m
+[1;31mE (40408) main: set attr state = 0[0m
+[0;32mI (40408) main: manual report ret = 0x0000[0m
+[1;31mE (40468) main: zcl callback[0m
+[1;31mE (40468) main: callback_id = 8[0m
+[0;32mI (40468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (40468) main: info:[0m
+[0;32mI (40468) main:  status = 0x00[0m
+[0;32mI (40478) main:  dst_ep = 1[0m
+[0;32mI (40478) main:  cluster_id = 0xFC00[0m
+[0;32mI (40478) main:  cluster_role = 0x01[0m
+[0;32mI (40488) main: in:[0m
+[0;32mI (40488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (40488) main:   status_code     = 0x81[0m
+[0;32mI (40498) main: header:[0m
+[0;32mI (40498) main: addr type = 2[0m
+[0;32mI (40498) main:   src_addr        = 0x0000[0m
+[0;32mI (40498) main:   dst_addr        = 0x715A[0m
+[0;32mI (40508) main:   src_ep          = 10[0m
+[0;32mI (40508) main:   dst_ep          = 1[0m
+[0;32mI (40518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (40518) main:   profile_id      = 0x0104[0m
+[0;32mI (40518) main:   frame_control   = 0x10[0m
+[0;32mI (40528) main:   manuf_code      = 0x0000[0m
+[0;32mI (40528) main:   tsn             = 0x06[0m
+[0;32mI (40528) main:   rssi            = -37 dBm[0m
+[0;32mI (40538) main:   cmd_id          = 0x0B[0m
+[0;32mI (40538) main: out:[0m
+[0;32mI (40538) main:  result = 0xFE[0m
+[1;31mE (50408) main: temp: 24.67[0m
+[1;31mE (50408) main: hum: 56.58[0m
+[1;31mE (50408) main: end node network address:29018[0m
+[1;31mE (50408) main: set attr state = 0[0m
+[0;32mI (50408) main: manual report ret = 0x0000[0m
+[1;31mE (50458) main: zcl callback[0m
+[1;31mE (50458) main: callback_id = 8[0m
+[0;32mI (50458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (50458) main: info:[0m
+[0;32mI (50458) main:  status = 0x00[0m
+[0;32mI (50458) main:  dst_ep = 1[0m
+[0;32mI (50468) main:  cluster_id = 0xFC00[0m
+[0;32mI (50468) main:  cluster_role = 0x01[0m
+[0;32mI (50468) main: in:[0m
+[0;32mI (50468) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (50478) main:   status_code     = 0x81[0m
+[0;32mI (50478) main: header:[0m
+[0;32mI (50478) main: addr type = 2[0m
+[0;32mI (50488) main:   src_addr        = 0x0000[0m
+[0;32mI (50488) main:   dst_addr        = 0x715A[0m
+[0;32mI (50488) main:   src_ep          = 10[0m
+[0;32mI (50498) main:   dst_ep          = 1[0m
+[0;32mI (50498) main:   cluster_id      = 0xFC00[0m
+[0;32mI (50498) main:   profile_id      = 0x0104[0m
+[0;32mI (50508) main:   frame_control   = 0x10[0m
+[0;32mI (50508) main:   manuf_code      = 0x0000[0m
+[0;32mI (50518) main:   tsn             = 0x07[0m
+[0;32mI (50518) main:   rssi            = -40 dBm[0m
+[0;32mI (50518) main:   cmd_id          = 0x0B[0m
+[0;32mI (50528) main: out:[0m
+[0;32mI (50528) main:  result = 0xFE[0m
+[1;31mE (50538) main: zcl callback[0m
+[1;31mE (50538) main: callback_id = 8[0m
+[0;32mI (50538) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (50538) main: info:[0m
+[0;32mI (50548) main:  status = 0x00[0m
+[0;32mI (50548) main:  dst_ep = 1[0m
+[0;32mI (50548) main:  cluster_id = 0xFC00[0m
+[0;32mI (50548) main:  cluster_role = 0x01[0m
+[0;32mI (50558) main: in:[0m
+[0;32mI (50558) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (50558) main:   status_code     = 0x81[0m
+[0;32mI (50568) main: header:[0m
+[0;32mI (50568) main: addr type = 2[0m
+[0;32mI (50568) main:   src_addr        = 0x0000[0m
+[0;32mI (50578) main:   dst_addr        = 0x715A[0m
+[0;32mI (50578) main:   src_ep          = 10[0m
+[0;32mI (50578) main:   dst_ep          = 1[0m
+[0;32mI (50588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (50588) main:   profile_id      = 0x0104[0m
+[0;32mI (50588) main:   frame_control   = 0x10[0m
+[0;32mI (50598) main:   manuf_code      = 0x0000[0m
+[0;32mI (50598) main:   tsn             = 0x08[0m
+[0;32mI (50598) main:   rssi            = -39 dBm[0m
+[0;32mI (50608) main:   cmd_id          = 0x0B[0m
+[0;32mI (50608) main: out:[0m
+[0;32mI (50608) main:  result = 0xFE[0m
+[1;31mE (60408) main: temp: 24.66[0m
+[1;31mE (60408) main: hum: 56.54[0m
+[1;31mE (60408) main: end node network address:29018[0m
+[1;31mE (60408) main: set attr state = 0[0m
+[0;32mI (60408) main: manual report ret = 0x0000[0m
+[1;31mE (60448) main: zcl callback[0m
+[1;31mE (60458) main: callback_id = 8[0m
+[0;32mI (60458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (60458) main: info:[0m
+[0;32mI (60458) main:  status = 0x00[0m
+[0;32mI (60458) main:  dst_ep = 1[0m
+[0;32mI (60458) main:  cluster_id = 0xFC00[0m
+[0;32mI (60468) main:  cluster_role = 0x01[0m
+[0;32mI (60468) main: in:[0m
+[0;32mI (60468) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (60478) main:   status_code     = 0x81[0m
+[0;32mI (60478) main: header:[0m
+[0;32mI (60478) main: addr type = 2[0m
+[0;32mI (60478) main:   src_addr        = 0x0000[0m
+[0;32mI (60488) main:   dst_addr        = 0x715A[0m
+[0;32mI (60488) main:   src_ep          = 10[0m
+[0;32mI (60488) main:   dst_ep          = 1[0m
+[0;32mI (60498) main:   cluster_id      = 0xFC00[0m
+[0;32mI (60498) main:   profile_id      = 0x0104[0m
+[0;32mI (60508) main:   frame_control   = 0x10[0m
+[0;32mI (60508) main:   manuf_code      = 0x0000[0m
+[0;32mI (60508) main:   tsn             = 0x09[0m
+[0;32mI (60518) main:   rssi            = -39 dBm[0m
+[0;32mI (60518) main:   cmd_id          = 0x0B[0m
+[0;32mI (60518) main: out:[0m
+[0;32mI (60528) main:  result = 0xFE[0m
+[1;31mE (60538) main: zcl callback[0m
+[1;31mE (60538) main: callback_id = 8[0m
+[0;32mI (60538) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (60538) main: info:[0m
+[0;32mI (60538) main:  status = 0x00[0m
+[0;32mI (60548) main:  dst_ep = 1[0m
+[0;32mI (60548) main:  cluster_id = 0xFC00[0m
+[0;32mI (60548) main:  cluster_role = 0x01[0m
+[0;32mI (60548) main: in:[0m
+[0;32mI (60558) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (60558) main:   status_code     = 0x81[0m
+[0;32mI (60558) main: header:[0m
+[0;32mI (60568) main: addr type = 2[0m
+[0;32mI (60568) main:   src_addr        = 0x0000[0m
+[0;32mI (60568) main:   dst_addr        = 0x715A[0m
+[0;32mI (60578) main:   src_ep          = 10[0m
+[0;32mI (60578) main:   dst_ep          = 1[0m
+[0;32mI (60578) main:   cluster_id      = 0xFC00[0m
+[0;32mI (60588) main:   profile_id      = 0x0104[0m
+[0;32mI (60588) main:   frame_control   = 0x10[0m
+[0;32mI (60588) main:   manuf_code      = 0x0000[0m
+[0;32mI (60598) main:   tsn             = 0x0A[0m
+[0;32mI (60598) main:   rssi            = -39 dBm[0m
+[0;32mI (60608) main:   cmd_id          = 0x0B[0m
+[0;32mI (60608) main: out:[0m
+[0;32mI (60608) main:  result = 0xFE[0m
+[1;31mE (70408) main: temp: 24.64[0m
+[1;31mE (70408) main: hum: 56.54[0m
+[1;31mE (70408) main: end node network address:29018[0m
+[1;31mE (70408) main: set attr state = 0[0m
+[0;32mI (70408) main: manual report ret = 0x0000[0m
+[1;31mE (70468) main: zcl callback[0m
+[1;31mE (70468) main: callback_id = 8[0m
+[0;32mI (70468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (70468) main: info:[0m
+[0;32mI (70468) main:  status = 0x00[0m
+[0;32mI (70468) main:  dst_ep = 1[0m
+[0;32mI (70478) main:  cluster_id = 0xFC00[0m
+[0;32mI (70478) main:  cluster_role = 0x01[0m
+[0;32mI (70478) main: in:[0m
+[0;32mI (70478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (70488) main:   status_code     = 0x81[0m
+[0;32mI (70488) main: header:[0m
+[0;32mI (70488) main: addr type = 2[0m
+[0;32mI (70498) main:   src_addr        = 0x0000[0m
+[0;32mI (70498) main:   dst_addr        = 0x715A[0m
+[0;32mI (70498) main:   src_ep          = 10[0m
+[0;32mI (70508) main:   dst_ep          = 1[0m
+[0;32mI (70508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (70518) main:   profile_id      = 0x0104[0m
+[0;32mI (70518) main:   frame_control   = 0x10[0m
+[0;32mI (70518) main:   manuf_code      = 0x0000[0m
+[0;32mI (70528) main:   tsn             = 0x0B[0m
+[0;32mI (70528) main:   rssi            = -39 dBm[0m
+[0;32mI (70528) main:   cmd_id          = 0x0B[0m
+[0;32mI (70538) main: out:[0m
+[0;32mI (70538) main:  result = 0xFE[0m
+[1;31mE (70548) main: zcl callback[0m
+[1;31mE (70548) main: callback_id = 8[0m
+[0;32mI (70548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (70548) main: info:[0m
+[0;32mI (70558) main:  status = 0x00[0m
+[0;32mI (70558) main:  dst_ep = 1[0m
+[0;32mI (70558) main:  cluster_id = 0xFC00[0m
+[0;32mI (70558) main:  cluster_role = 0x01[0m
+[0;32mI (70568) main: in:[0m
+[0;32mI (70568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (70568) main:   status_code     = 0x81[0m
+[0;32mI (70578) main: header:[0m
+[0;32mI (70578) main: addr type = 2[0m
+[0;32mI (70578) main:   src_addr        = 0x0000[0m
+[0;32mI (70588) main:   dst_addr        = 0x715A[0m
+[0;32mI (70588) main:   src_ep          = 10[0m
+[0;32mI (70588) main:   dst_ep          = 1[0m
+[0;32mI (70598) main:   cluster_id      = 0xFC00[0m
+[0;32mI (70598) main:   profile_id      = 0x0104[0m
+[0;32mI (70598) main:   frame_control   = 0x10[0m
+[0;32mI (70608) main:   manuf_code      = 0x0000[0m
+[0;32mI (70608) main:   tsn             = 0x0C[0m
+[0;32mI (70618) main:   rssi            = -39 dBm[0m
+[0;32mI (70618) main:   cmd_id          = 0x0B[0m
+[0;32mI (70618) main: out:[0m
+[0;32mI (70618) main:  result = 0xFE[0m
+[1;31mE (80408) main: temp: 24.64[0m
+[1;31mE (80408) main: hum: 56.57[0m
+[1;31mE (80408) main: end node network address:29018[0m
+[1;31mE (80408) main: set attr state = 0[0m
+[0;32mI (80408) main: manual report ret = 0x0000[0m
+[1;31mE (80488) main: zcl callback[0m
+[1;31mE (80488) main: callback_id = 8[0m
+[0;32mI (80488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (80488) main: info:[0m
+[0;32mI (80488) main:  status = 0x00[0m
+[0;32mI (80488) main:  dst_ep = 1[0m
+[0;32mI (80498) main:  cluster_id = 0xFC00[0m
+[0;32mI (80498) main:  cluster_role = 0x01[0m
+[0;32mI (80498) main: in:[0m
+[0;32mI (80498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (80508) main:   status_code     = 0x81[0m
+[0;32mI (80508) main: header:[0m
+[0;32mI (80508) main: addr type = 2[0m
+[0;32mI (80518) main:   src_addr        = 0x0000[0m
+[0;32mI (80518) main:   dst_addr        = 0x715A[0m
+[0;32mI (80518) main:   src_ep          = 10[0m
+[0;32mI (80528) main:   dst_ep          = 1[0m
+[0;32mI (80528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (80538) main:   profile_id      = 0x0104[0m
+[0;32mI (80538) main:   frame_control   = 0x10[0m
+[0;32mI (80538) main:   manuf_code      = 0x0000[0m
+[0;32mI (80548) main:   tsn             = 0x0D[0m
+[0;32mI (80548) main:   rssi            = -37 dBm[0m
+[0;32mI (80548) main:   cmd_id          = 0x0B[0m
+[0;32mI (80558) main: out:[0m
+[0;32mI (80558) main:  result = 0xFE[0m
+[1;31mE (90408) main: temp: 24.63[0m
+[1;31mE (90408) main: hum: 56.59[0m
+[1;31mE (90408) main: end node network address:29018[0m
+[1;31mE (90408) main: set attr state = 0[0m
+[0;32mI (90408) main: manual report ret = 0x0000[0m
+[1;31mE (90488) main: zcl callback[0m
+[1;31mE (90488) main: callback_id = 8[0m
+[0;32mI (90488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (90488) main: info:[0m
+[0;32mI (90488) main:  status = 0x00[0m
+[0;32mI (90488) main:  dst_ep = 1[0m
+[0;32mI (90498) main:  cluster_id = 0xFC00[0m
+[0;32mI (90498) main:  cluster_role = 0x01[0m
+[0;32mI (90498) main: in:[0m
+[0;32mI (90508) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (90508) main:   status_code     = 0x81[0m
+[0;32mI (90508) main: header:[0m
+[0;32mI (90508) main: addr type = 2[0m
+[0;32mI (90518) main:   src_addr        = 0x0000[0m
+[0;32mI (90518) main:   dst_addr        = 0x715A[0m
+[0;32mI (90518) main:   src_ep          = 10[0m
+[0;32mI (90528) main:   dst_ep          = 1[0m
+[0;32mI (90528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (90538) main:   profile_id      = 0x0104[0m
+[0;32mI (90538) main:   frame_control   = 0x10[0m
+[0;32mI (90538) main:   manuf_code      = 0x0000[0m
+[0;32mI (90548) main:   tsn             = 0x0E[0m
+[0;32mI (90548) main:   rssi            = -43 dBm[0m
+[0;32mI (90548) main:   cmd_id          = 0x0B[0m
+[0;32mI (90558) main: out:[0m
+[0;32mI (90558) main:  result = 0xFE[0m
+[1;31mE (90568) main: zcl callback[0m
+[1;31mE (90568) main: callback_id = 8[0m
+[0;32mI (90568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (90568) main: info:[0m
+[0;32mI (90578) main:  status = 0x00[0m
+[0;32mI (90578) main:  dst_ep = 1[0m
+[0;32mI (90578) main:  cluster_id = 0xFC00[0m
+[0;32mI (90578) main:  cluster_role = 0x01[0m
+[0;32mI (90588) main: in:[0m
+[0;32mI (90588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (90588) main:   status_code     = 0x81[0m
+[0;32mI (90598) main: header:[0m
+[0;32mI (90598) main: addr type = 2[0m
+[0;32mI (90598) main:   src_addr        = 0x0000[0m
+[0;32mI (90608) main:   dst_addr        = 0x715A[0m
+[0;32mI (90608) main:   src_ep          = 10[0m
+[0;32mI (90608) main:   dst_ep          = 1[0m
+[0;32mI (90618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (90618) main:   profile_id      = 0x0104[0m
+[0;32mI (90618) main:   frame_control   = 0x10[0m
+[0;32mI (90628) main:   manuf_code      = 0x0000[0m
+[0;32mI (90628) main:   tsn             = 0x0F[0m
+[0;32mI (90638) main:   rssi            = -43 dBm[0m
+[0;32mI (90638) main:   cmd_id          = 0x0B[0m
+[0;32mI (90638) main: out:[0m
+[0;32mI (90638) main:  result = 0xFE[0m
+[1;31mE (100408) main: temp: 24.62[0m
+[1;31mE (100408) main: hum: 56.60[0m
+[1;31mE (100408) main: end node network address:29018[0m
+[1;31mE (100408) main: set attr state = 0[0m
+[0;32mI (100408) main: manual report ret = 0x0000[0m
+[1;31mE (100458) main: zcl callback[0m
+[1;31mE (100458) main: callback_id = 8[0m
+[0;32mI (100458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (100458) main: info:[0m
+[0;32mI (100458) main:  status = 0x00[0m
+[0;32mI (100468) main:  dst_ep = 1[0m
+[0;32mI (100468) main:  cluster_id = 0xFC00[0m
+[0;32mI (100468) main:  cluster_role = 0x01[0m
+[0;32mI (100478) main: in:[0m
+[0;32mI (100478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (100478) main:   status_code     = 0x81[0m
+[0;32mI (100488) main: header:[0m
+[0;32mI (100488) main: addr type = 2[0m
+[0;32mI (100488) main:   src_addr        = 0x0000[0m
+[0;32mI (100498) main:   dst_addr        = 0x715A[0m
+[0;32mI (100498) main:   src_ep          = 10[0m
+[0;32mI (100498) main:   dst_ep          = 1[0m
+[0;32mI (100508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (100508) main:   profile_id      = 0x0104[0m
+[0;32mI (100508) main:   frame_control   = 0x10[0m
+[0;32mI (100518) main:   manuf_code      = 0x0000[0m
+[0;32mI (100518) main:   tsn             = 0x10[0m
+[0;32mI (100528) main:   rssi            = -47 dBm[0m
+[0;32mI (100528) main:   cmd_id          = 0x0B[0m
+[0;32mI (100528) main: out:[0m
+[0;32mI (100538) main:  result = 0xFE[0m
+[1;31mE (100548) main: zcl callback[0m
+[1;31mE (100548) main: callback_id = 8[0m
+[0;32mI (100548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (100548) main: info:[0m
+[0;32mI (100548) main:  status = 0x00[0m
+[0;32mI (100548) main:  dst_ep = 1[0m
+[0;32mI (100558) main:  cluster_id = 0xFC00[0m
+[0;32mI (100558) main:  cluster_role = 0x01[0m
+[0;32mI (100558) main: in:[0m
+[0;32mI (100568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (100568) main:   status_code     = 0x81[0m
+[0;32mI (100568) main: header:[0m
+[0;32mI (100578) main: addr type = 2[0m
+[0;32mI (100578) main:   src_addr        = 0x0000[0m
+[0;32mI (100578) main:   dst_addr        = 0x715A[0m
+[0;32mI (100588) main:   src_ep          = 10[0m
+[0;32mI (100588) main:   dst_ep          = 1[0m
+[0;32mI (100588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (100598) main:   profile_id      = 0x0104[0m
+[0;32mI (100598) main:   frame_control   = 0x10[0m
+[0;32mI (100608) main:   manuf_code      = 0x0000[0m
+[0;32mI (100608) main:   tsn             = 0x11[0m
+[0;32mI (100608) main:   rssi            = -45 dBm[0m
+[0;32mI (100618) main:   cmd_id          = 0x0B[0m
+[0;32mI (100618) main: out:[0m
+[0;32mI (100618) main:  result = 0xFE[0m
+[1;31mE (110408) main: temp: 24.62[0m
+[1;31mE (110408) main: hum: 56.61[0m
+[1;31mE (110408) main: end node network address:29018[0m
+[1;31mE (110408) main: set attr state = 0[0m
+[0;32mI (110408) main: manual report ret = 0x0000[0m
+[1;31mE (110488) main: zcl callback[0m
+[1;31mE (110488) main: callback_id = 8[0m
+[0;32mI (110488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (110488) main: info:[0m
+[0;32mI (110488) main:  status = 0x00[0m
+[0;32mI (110488) main:  dst_ep = 1[0m
+[0;32mI (110498) main:  cluster_id = 0xFC00[0m
+[0;32mI (110498) main:  cluster_role = 0x01[0m
+[0;32mI (110498) main: in:[0m
+[0;32mI (110508) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (110508) main:   status_code     = 0x81[0m
+[0;32mI (110508) main: header:[0m
+[0;32mI (110518) main: addr type = 2[0m
+[0;32mI (110518) main:   src_addr        = 0x0000[0m
+[0;32mI (110518) main:   dst_addr        = 0x715A[0m
+[0;32mI (110528) main:   src_ep          = 10[0m
+[0;32mI (110528) main:   dst_ep          = 1[0m
+[0;32mI (110528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (110538) main:   profile_id      = 0x0104[0m
+[0;32mI (110538) main:   frame_control   = 0x10[0m
+[0;32mI (110548) main:   manuf_code      = 0x0000[0m
+[0;32mI (110548) main:   tsn             = 0x12[0m
+[0;32mI (110548) main:   rssi            = -41 dBm[0m
+[0;32mI (110558) main:   cmd_id          = 0x0B[0m
+[0;32mI (110558) main: out:[0m
+[0;32mI (110558) main:  result = 0xFE[0m
+[1;31mE (120408) main: temp: 24.62[0m
+[1;31mE (120408) main: hum: 56.64[0m
+[1;31mE (120408) main: end node network address:29018[0m
+[1;31mE (120408) main: set attr state = 0[0m
+[0;32mI (120408) main: manual report ret = 0x0000[0m
+[1;31mE (120488) main: zcl callback[0m
+[1;31mE (120488) main: callback_id = 8[0m
+[0;32mI (120488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (120488) main: info:[0m
+[0;32mI (120488) main:  status = 0x00[0m
+[0;32mI (120498) main:  dst_ep = 1[0m
+[0;32mI (120498) main:  cluster_id = 0xFC00[0m
+[0;32mI (120498) main:  cluster_role = 0x01[0m
+[0;32mI (120498) main: in:[0m
+[0;32mI (120508) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (120508) main:   status_code     = 0x81[0m
+[0;32mI (120508) main: header:[0m
+[0;32mI (120518) main: addr type = 2[0m
+[0;32mI (120518) main:   src_addr        = 0x0000[0m
+[0;32mI (120518) main:   dst_addr        = 0x715A[0m
+[0;32mI (120528) main:   src_ep          = 10[0m
+[0;32mI (120528) main:   dst_ep          = 1[0m
+[0;32mI (120528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (120538) main:   profile_id      = 0x0104[0m
+[0;32mI (120538) main:   frame_control   = 0x10[0m
+[0;32mI (120548) main:   manuf_code      = 0x0000[0m
+[0;32mI (120548) main:   tsn             = 0x13[0m
+[0;32mI (120548) main:   rssi            = -39 dBm[0m
+[0;32mI (120558) main:   cmd_id          = 0x0B[0m
+[0;32mI (120558) main: out:[0m
+[0;32mI (120558) main:  result = 0xFE[0m
+[1;31mE (130408) main: temp: 24.63[0m
+[1;31mE (130408) main: hum: 56.64[0m
+[1;31mE (130408) main: end node network address:29018[0m
+[1;31mE (130408) main: set attr state = 0[0m
+[0;32mI (130408) main: manual report ret = 0x0000[0m
+[1;31mE (130458) main: zcl callback[0m
+[1;31mE (130458) main: callback_id = 8[0m
+[0;32mI (130458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (130458) main: info:[0m
+[0;32mI (130468) main:  status = 0x00[0m
+[0;32mI (130468) main:  dst_ep = 1[0m
+[0;32mI (130468) main:  cluster_id = 0xFC00[0m
+[0;32mI (130468) main:  cluster_role = 0x01[0m
+[0;32mI (130478) main: in:[0m
+[0;32mI (130478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (130478) main:   status_code     = 0x81[0m
+[0;32mI (130488) main: header:[0m
+[0;32mI (130488) main: addr type = 2[0m
+[0;32mI (130488) main:   src_addr        = 0x0000[0m
+[0;32mI (130498) main:   dst_addr        = 0x715A[0m
+[0;32mI (130498) main:   src_ep          = 10[0m
+[0;32mI (130498) main:   dst_ep          = 1[0m
+[0;32mI (130508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (130508) main:   profile_id      = 0x0104[0m
+[0;32mI (130518) main:   frame_control   = 0x10[0m
+[0;32mI (130518) main:   manuf_code      = 0x0000[0m
+[0;32mI (130518) main:   tsn             = 0x14[0m
+[0;32mI (130528) main:   rssi            = -42 dBm[0m
+[0;32mI (130528) main:   cmd_id          = 0x0B[0m
+[0;32mI (130528) main: out:[0m
+[0;32mI (130538) main:  result = 0xFE[0m
+[1;31mE (130548) main: zcl callback[0m
+[1;31mE (130548) main: callback_id = 8[0m
+[0;32mI (130548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (130548) main: info:[0m
+[0;32mI (130548) main:  status = 0x00[0m
+[0;32mI (130558) main:  dst_ep = 1[0m
+[0;32mI (130558) main:  cluster_id = 0xFC00[0m
+[0;32mI (130558) main:  cluster_role = 0x01[0m
+[0;32mI (130568) main: in:[0m
+[0;32mI (130568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (130568) main:   status_code     = 0x81[0m
+[0;32mI (130568) main: header:[0m
+[0;32mI (130578) main: addr type = 2[0m
+[0;32mI (130578) main:   src_addr        = 0x0000[0m
+[0;32mI (130578) main:   dst_addr        = 0x715A[0m
+[0;32mI (130588) main:   src_ep          = 10[0m
+[0;32mI (130588) main:   dst_ep          = 1[0m
+[0;32mI (130588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (130598) main:   profile_id      = 0x0104[0m
+[0;32mI (130598) main:   frame_control   = 0x10[0m
+[0;32mI (130608) main:   manuf_code      = 0x0000[0m
+[0;32mI (130608) main:   tsn             = 0x15[0m
+[0;32mI (130608) main:   rssi            = -42 dBm[0m
+[0;32mI (130618) main:   cmd_id          = 0x0B[0m
+[0;32mI (130618) main: out:[0m
+[0;32mI (130618) main:  result = 0xFE[0m
+[1;31mE (140408) main: temp: 24.61[0m
+[1;31mE (140408) main: hum: 56.63[0m
+[1;31mE (140408) main: end node network address:29018[0m
+[1;31mE (140408) main: set attr state = 0[0m
+[0;32mI (140408) main: manual report ret = 0x0000[0m
+[1;31mE (140468) main: zcl callback[0m
+[1;31mE (140468) main: callback_id = 8[0m
+[0;32mI (140468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (140468) main: info:[0m
+[0;32mI (140478) main:  status = 0x00[0m
+[0;32mI (140478) main:  dst_ep = 1[0m
+[0;32mI (140478) main:  cluster_id = 0xFC00[0m
+[0;32mI (140478) main:  cluster_role = 0x01[0m
+[0;32mI (140488) main: in:[0m
+[0;32mI (140488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (140488) main:   status_code     = 0x81[0m
+[0;32mI (140498) main: header:[0m
+[0;32mI (140498) main: addr type = 2[0m
+[0;32mI (140498) main:   src_addr        = 0x0000[0m
+[0;32mI (140508) main:   dst_addr        = 0x715A[0m
+[0;32mI (140508) main:   src_ep          = 10[0m
+[0;32mI (140508) main:   dst_ep          = 1[0m
+[0;32mI (140518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (140518) main:   profile_id      = 0x0104[0m
+[0;32mI (140528) main:   frame_control   = 0x10[0m
+[0;32mI (140528) main:   manuf_code      = 0x0000[0m
+[0;32mI (140528) main:   tsn             = 0x16[0m
+[0;32mI (140538) main:   rssi            = -39 dBm[0m
+[0;32mI (140538) main:   cmd_id          = 0x0B[0m
+[0;32mI (140538) main: out:[0m
+[0;32mI (140548) main:  result = 0xFE[0m
+[1;31mE (140558) main: zcl callback[0m
+[1;31mE (140558) main: callback_id = 8[0m
+[0;32mI (140558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (140558) main: info:[0m
+[0;32mI (140558) main:  status = 0x00[0m
+[0;32mI (140568) main:  dst_ep = 1[0m
+[0;32mI (140568) main:  cluster_id = 0xFC00[0m
+[0;32mI (140568) main:  cluster_role = 0x01[0m
+[0;32mI (140578) main: in:[0m
+[0;32mI (140578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (140578) main:   status_code     = 0x81[0m
+[0;32mI (140578) main: header:[0m
+[0;32mI (140588) main: addr type = 2[0m
+[0;32mI (140588) main:   src_addr        = 0x0000[0m
+[0;32mI (140588) main:   dst_addr        = 0x715A[0m
+[0;32mI (140598) main:   src_ep          = 10[0m
+[0;32mI (140598) main:   dst_ep          = 1[0m
+[0;32mI (140598) main:   cluster_id      = 0xFC00[0m
+[0;32mI (140608) main:   profile_id      = 0x0104[0m
+[0;32mI (140608) main:   frame_control   = 0x10[0m
+[0;32mI (140618) main:   manuf_code      = 0x0000[0m
+[0;32mI (140618) main:   tsn             = 0x17[0m
+[0;32mI (140618) main:   rssi            = -39 dBm[0m
+[0;32mI (140628) main:   cmd_id          = 0x0B[0m
+[0;32mI (140628) main: out:[0m
+[0;32mI (140628) main:  result = 0xFE[0m
+[1;31mE (150408) main: temp: 24.62[0m
+[1;31mE (150408) main: hum: 56.64[0m
+[1;31mE (150408) main: end node network address:29018[0m
+[1;31mE (150408) main: set attr state = 0[0m
+[0;32mI (150408) main: manual report ret = 0x0000[0m
+[1;31mE (150468) main: zcl callback[0m
+[1;31mE (150468) main: callback_id = 8[0m
+[0;32mI (150468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (150468) main: info:[0m
+[0;32mI (150478) main:  status = 0x00[0m
+[0;32mI (150478) main:  dst_ep = 1[0m
+[0;32mI (150478) main:  cluster_id = 0xFC00[0m
+[0;32mI (150488) main:  cluster_role = 0x01[0m
+[0;32mI (150488) main: in:[0m
+[0;32mI (150488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (150488) main:   status_code     = 0x81[0m
+[0;32mI (150498) main: header:[0m
+[0;32mI (150498) main: addr type = 2[0m
+[0;32mI (150498) main:   src_addr        = 0x0000[0m
+[0;32mI (150508) main:   dst_addr        = 0x715A[0m
+[0;32mI (150508) main:   src_ep          = 10[0m
+[0;32mI (150508) main:   dst_ep          = 1[0m
+[0;32mI (150518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (150518) main:   profile_id      = 0x0104[0m
+[0;32mI (150528) main:   frame_control   = 0x10[0m
+[0;32mI (150528) main:   manuf_code      = 0x0000[0m
+[0;32mI (150528) main:   tsn             = 0x18[0m
+[0;32mI (150538) main:   rssi            = -42 dBm[0m
+[0;32mI (150538) main:   cmd_id          = 0x0B[0m
+[0;32mI (150538) main: out:[0m
+[0;32mI (150548) main:  result = 0xFE[0m
+[1;31mE (150558) main: zcl callback[0m
+[1;31mE (150558) main: callback_id = 8[0m
+[0;32mI (150558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (150558) main: info:[0m
+[0;32mI (150558) main:  status = 0x00[0m
+[0;32mI (150568) main:  dst_ep = 1[0m
+[0;32mI (150568) main:  cluster_id = 0xFC00[0m
+[0;32mI (150568) main:  cluster_role = 0x01[0m
+[0;32mI (150578) main: in:[0m
+[0;32mI (150578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (150578) main:   status_code     = 0x81[0m
+[0;32mI (150578) main: header:[0m
+[0;32mI (150588) main: addr type = 2[0m
+[0;32mI (150588) main:   src_addr        = 0x0000[0m
+[0;32mI (150588) main:   dst_addr        = 0x715A[0m
+[0;32mI (150598) main:   src_ep          = 10[0m
+[0;32mI (150598) main:   dst_ep          = 1[0m
+[0;32mI (150598) main:   cluster_id      = 0xFC00[0m
+[0;32mI (150608) main:   profile_id      = 0x0104[0m
+[0;32mI (150608) main:   frame_control   = 0x10[0m
+[0;32mI (150618) main:   manuf_code      = 0x0000[0m
+[0;32mI (150618) main:   tsn             = 0x19[0m
+[0;32mI (150618) main:   rssi            = -42 dBm[0m
+[0;32mI (150628) main:   cmd_id          = 0x0B[0m
+[0;32mI (150628) main: out:[0m
+[0;32mI (150628) main:  result = 0xFE[0m
+[0;32mI (152608) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[0;32mI (152608) main: Zigbee APP Signal: Network Status(type: 0x203)[0m
+[1;31mE (160408) main: temp: 24.61[0m
+[1;31mE (160408) main: hum: 56.72[0m
+[1;31mE (160408) main: end node network address:29018[0m
+[1;31mE (160408) main: set attr state = 0[0m
+[0;32mI (160408) main: manual report ret = 0x0000[0m
+[1;31mE (165798) main: zcl callback[0m
+[1;31mE (165798) main: callback_id = 8[0m
+[0;32mI (165798) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (165798) main: info:[0m
+[0;32mI (165798) main:  status = 0x00[0m
+[0;32mI (165798) main:  dst_ep = 1[0m
+[0;32mI (165798) main:  cluster_id = 0xFC00[0m
+[0;32mI (165808) main:  cluster_role = 0x01[0m
+[0;32mI (165808) main: in:[0m
+[0;32mI (165808) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (165818) main:   status_code     = 0x81[0m
+[0;32mI (165818) main: header:[0m
+[0;32mI (165818) main: addr type = 2[0m
+[0;32mI (165818) main:   src_addr        = 0x0000[0m
+[0;32mI (165828) main:   dst_addr        = 0x715A[0m
+[0;32mI (165828) main:   src_ep          = 10[0m
+[0;32mI (165838) main:   dst_ep          = 1[0m
+[0;32mI (165838) main:   cluster_id      = 0xFC00[0m
+[0;32mI (165838) main:   profile_id      = 0x0104[0m
+[0;32mI (165848) main:   frame_control   = 0x10[0m
+[0;32mI (165848) main:   manuf_code      = 0x0000[0m
+[0;32mI (165858) main:   tsn             = 0x1B[0m
+[0;32mI (165858) main:   rssi            = -42 dBm[0m
+[0;32mI (165858) main:   cmd_id          = 0x0B[0m
+[0;32mI (165868) main: out:[0m
+[0;32mI (165868) main:  result = 0xFE[0m
+[1;31mE (165878) main: zcl callback[0m
+[1;31mE (165878) main: callback_id = 8[0m
+[0;32mI (165878) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (165878) main: info:[0m
+[0;32mI (165888) main:  status = 0x00[0m
+[0;32mI (165888) main:  dst_ep = 1[0m
+[0;32mI (165888) main:  cluster_id = 0xFC00[0m
+[0;32mI (165888) main:  cluster_role = 0x01[0m
+[0;32mI (165898) main: in:[0m
+[0;32mI (165898) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (165898) main:   status_code     = 0x81[0m
+[0;32mI (165908) main: header:[0m
+[0;32mI (165908) main: addr type = 2[0m
+[0;32mI (165908) main:   src_addr        = 0x0000[0m
+[0;32mI (165918) main:   dst_addr        = 0x715A[0m
+[0;32mI (165918) main:   src_ep          = 10[0m
+[0;32mI (165918) main:   dst_ep          = 1[0m
+[0;32mI (165928) main:   cluster_id      = 0xFC00[0m
+[0;32mI (165928) main:   profile_id      = 0x0104[0m
+[0;32mI (165928) main:   frame_control   = 0x10[0m
+[0;32mI (165938) main:   manuf_code      = 0x0000[0m
+[0;32mI (165938) main:   tsn             = 0x1A[0m
+[0;32mI (165948) main:   rssi            = -42 dBm[0m
+[0;32mI (165948) main:   cmd_id          = 0x0B[0m
+[0;32mI (165948) main: out:[0m
+[0;32mI (165958) main:  result = 0xFE[0m
+[1;31mE (170408) main: temp: 24.60[0m
+[1;31mE (170408) main: hum: 56.72[0m
+[1;31mE (170408) main: end node network address:29018[0m
+[1;31mE (170408) main: set attr state = 0[0m
+[0;32mI (170408) main: manual report ret = 0x0000[0m
+[1;31mE (170478) main: zcl callback[0m
+[1;31mE (170478) main: callback_id = 8[0m
+[0;32mI (170478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (170478) main: info:[0m
+[0;32mI (170478) main:  status = 0x00[0m
+[0;32mI (170478) main:  dst_ep = 1[0m
+[0;32mI (170478) main:  cluster_id = 0xFC00[0m
+[0;32mI (170488) main:  cluster_role = 0x01[0m
+[0;32mI (170488) main: in:[0m
+[0;32mI (170488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (170498) main:   status_code     = 0x81[0m
+[0;32mI (170498) main: header:[0m
+[0;32mI (170498) main: addr type = 2[0m
+[0;32mI (170498) main:   src_addr        = 0x0000[0m
+[0;32mI (170508) main:   dst_addr        = 0x715A[0m
+[0;32mI (170508) main:   src_ep          = 10[0m
+[0;32mI (170518) main:   dst_ep          = 1[0m
+[0;32mI (170518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (170518) main:   profile_id      = 0x0104[0m
+[0;32mI (170528) main:   frame_control   = 0x10[0m
+[0;32mI (170528) main:   manuf_code      = 0x0000[0m
+[0;32mI (170538) main:   tsn             = 0x1C[0m
+[0;32mI (170538) main:   rssi            = -39 dBm[0m
+[0;32mI (170538) main:   cmd_id          = 0x0B[0m
+[0;32mI (170548) main: out:[0m
+[0;32mI (170548) main:  result = 0xFE[0m
+[1;31mE (170818) main: zcl callback[0m
+[1;31mE (170818) main: callback_id = 8[0m
+[0;32mI (170818) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (170818) main: info:[0m
+[0;32mI (170818) main:  status = 0x00[0m
+[0;32mI (170818) main:  dst_ep = 1[0m
+[0;32mI (170818) main:  cluster_id = 0xFC00[0m
+[0;32mI (170828) main:  cluster_role = 0x01[0m
+[0;32mI (170828) main: in:[0m
+[0;32mI (170828) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (170838) main:   status_code     = 0x81[0m
+[0;32mI (170838) main: header:[0m
+[0;32mI (170838) main: addr type = 2[0m
+[0;32mI (170838) main:   src_addr        = 0x0000[0m
+[0;32mI (170848) main:   dst_addr        = 0x715A[0m
+[0;32mI (170848) main:   src_ep          = 10[0m
+[0;32mI (170858) main:   dst_ep          = 1[0m
+[0;32mI (170858) main:   cluster_id      = 0xFC00[0m
+[0;32mI (170858) main:   profile_id      = 0x0104[0m
+[0;32mI (170868) main:   frame_control   = 0x10[0m
+[0;32mI (170868) main:   manuf_code      = 0x0000[0m
+[0;32mI (170878) main:   tsn             = 0x1D[0m
+[0;32mI (170878) main:   rssi            = -39 dBm[0m
+[0;32mI (170878) main:   cmd_id          = 0x0B[0m
+[0;32mI (170888) main: out:[0m
+[0;32mI (170888) main:  result = 0xFE[0m
+[1;31mE (180408) main: temp: 24.60[0m
+[1;31mE (180408) main: hum: 56.73[0m
+[1;31mE (180408) main: end node network address:29018[0m
+[1;31mE (180408) main: set attr state = 0[0m
+[0;32mI (180408) main: manual report ret = 0x0000[0m
+[1;31mE (180478) main: zcl callback[0m
+[1;31mE (180488) main: callback_id = 8[0m
+[0;32mI (180488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (180488) main: info:[0m
+[0;32mI (180488) main:  status = 0x00[0m
+[0;32mI (180488) main:  dst_ep = 1[0m
+[0;32mI (180488) main:  cluster_id = 0xFC00[0m
+[0;32mI (180498) main:  cluster_role = 0x01[0m
+[0;32mI (180498) main: in:[0m
+[0;32mI (180498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (180508) main:   status_code     = 0x81[0m
+[0;32mI (180508) main: header:[0m
+[0;32mI (180508) main: addr type = 2[0m
+[0;32mI (180508) main:   src_addr        = 0x0000[0m
+[0;32mI (180518) main:   dst_addr        = 0x715A[0m
+[0;32mI (180518) main:   src_ep          = 10[0m
+[0;32mI (180528) main:   dst_ep          = 1[0m
+[0;32mI (180528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (180528) main:   profile_id      = 0x0104[0m
+[0;32mI (180538) main:   frame_control   = 0x10[0m
+[0;32mI (180538) main:   manuf_code      = 0x0000[0m
+[0;32mI (180538) main:   tsn             = 0x1E[0m
+[0;32mI (180548) main:   rssi            = -43 dBm[0m
+[0;32mI (180548) main:   cmd_id          = 0x0B[0m
+[0;32mI (180558) main: out:[0m
+[0;32mI (180558) main:  result = 0xFE[0m
+[1;31mE (190408) main: temp: 24.58[0m
+[1;31mE (190408) main: hum: 56.74[0m
+[1;31mE (190408) main: end node network address:29018[0m
+[1;31mE (190408) main: set attr state = 0[0m
+[0;32mI (190408) main: manual report ret = 0x0000[0m
+[1;31mE (190468) main: zcl callback[0m
+[1;31mE (190478) main: callback_id = 8[0m
+[0;32mI (190478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (190478) main: info:[0m
+[0;32mI (190478) main:  status = 0x00[0m
+[0;32mI (190478) main:  dst_ep = 1[0m
+[0;32mI (190478) main:  cluster_id = 0xFC00[0m
+[0;32mI (190488) main:  cluster_role = 0x01[0m
+[0;32mI (190488) main: in:[0m
+[0;32mI (190488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (190498) main:   status_code     = 0x81[0m
+[0;32mI (190498) main: header:[0m
+[0;32mI (190498) main: addr type = 2[0m
+[0;32mI (190498) main:   src_addr        = 0x0000[0m
+[0;32mI (190508) main:   dst_addr        = 0x715A[0m
+[0;32mI (190508) main:   src_ep          = 10[0m
+[0;32mI (190518) main:   dst_ep          = 1[0m
+[0;32mI (190518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (190518) main:   profile_id      = 0x0104[0m
+[0;32mI (190528) main:   frame_control   = 0x10[0m
+[0;32mI (190528) main:   manuf_code      = 0x0000[0m
+[0;32mI (190538) main:   tsn             = 0x1F[0m
+[0;32mI (190538) main:   rssi            = -43 dBm[0m
+[0;32mI (190538) main:   cmd_id          = 0x0B[0m
+[0;32mI (190548) main: out:[0m
+[0;32mI (190548) main:  result = 0xFE[0m
+[1;31mE (190558) main: zcl callback[0m
+[1;31mE (190558) main: callback_id = 8[0m
+[0;32mI (190558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (190558) main: info:[0m
+[0;32mI (190568) main:  status = 0x00[0m
+[0;32mI (190568) main:  dst_ep = 1[0m
+[0;32mI (190568) main:  cluster_id = 0xFC00[0m
+[0;32mI (190568) main:  cluster_role = 0x01[0m
+[0;32mI (190578) main: in:[0m
+[0;32mI (190578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (190578) main:   status_code     = 0x81[0m
+[0;32mI (190588) main: header:[0m
+[0;32mI (190588) main: addr type = 2[0m
+[0;32mI (190588) main:   src_addr        = 0x0000[0m
+[0;32mI (190598) main:   dst_addr        = 0x715A[0m
+[0;32mI (190598) main:   src_ep          = 10[0m
+[0;32mI (190598) main:   dst_ep          = 1[0m
+[0;32mI (190608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (190608) main:   profile_id      = 0x0104[0m
+[0;32mI (190608) main:   frame_control   = 0x10[0m
+[0;32mI (190618) main:   manuf_code      = 0x0000[0m
+[0;32mI (190618) main:   tsn             = 0x20[0m
+[0;32mI (190628) main:   rssi            = -44 dBm[0m
+[0;32mI (190628) main:   cmd_id          = 0x0B[0m
+[0;32mI (190628) main: out:[0m
+[0;32mI (190638) main:  result = 0xFE[0m
+[1;31mE (200408) main: temp: 24.60[0m
+[1;31mE (200408) main: hum: 56.71[0m
+[1;31mE (200408) main: end node network address:29018[0m
+[1;31mE (200408) main: set attr state = 0[0m
+[0;32mI (200408) main: manual report ret = 0x0000[0m
+[1;31mE (200468) main: zcl callback[0m
+[1;31mE (200468) main: callback_id = 8[0m
+[0;32mI (200468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (200468) main: info:[0m
+[0;32mI (200468) main:  status = 0x00[0m
+[0;32mI (200468) main:  dst_ep = 1[0m
+[0;32mI (200468) main:  cluster_id = 0xFC00[0m
+[0;32mI (200478) main:  cluster_role = 0x01[0m
+[0;32mI (200478) main: in:[0m
+[0;32mI (200478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (200488) main:   status_code     = 0x81[0m
+[0;32mI (200488) main: header:[0m
+[0;32mI (200488) main: addr type = 2[0m
+[0;32mI (200498) main:   src_addr        = 0x0000[0m
+[0;32mI (200498) main:   dst_addr        = 0x715A[0m
+[0;32mI (200498) main:   src_ep          = 10[0m
+[0;32mI (200508) main:   dst_ep          = 1[0m
+[0;32mI (200508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (200508) main:   profile_id      = 0x0104[0m
+[0;32mI (200518) main:   frame_control   = 0x10[0m
+[0;32mI (200518) main:   manuf_code      = 0x0000[0m
+[0;32mI (200528) main:   tsn             = 0x21[0m
+[0;32mI (200528) main:   rssi            = -44 dBm[0m
+[0;32mI (200528) main:   cmd_id          = 0x0B[0m
+[0;32mI (200538) main: out:[0m
+[0;32mI (200538) main:  result = 0xFE[0m
+[1;31mE (200548) main: zcl callback[0m
+[1;31mE (200548) main: callback_id = 8[0m
+[0;32mI (200548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (200548) main: info:[0m
+[0;32mI (200558) main:  status = 0x00[0m
+[0;32mI (200558) main:  dst_ep = 1[0m
+[0;32mI (200558) main:  cluster_id = 0xFC00[0m
+[0;32mI (200558) main:  cluster_role = 0x01[0m
+[0;32mI (200568) main: in:[0m
+[0;32mI (200568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (200568) main:   status_code     = 0x81[0m
+[0;32mI (200578) main: header:[0m
+[0;32mI (200578) main: addr type = 2[0m
+[0;32mI (200578) main:   src_addr        = 0x0000[0m
+[0;32mI (200588) main:   dst_addr        = 0x715A[0m
+[0;32mI (200588) main:   src_ep          = 10[0m
+[0;32mI (200588) main:   dst_ep          = 1[0m
+[0;32mI (200598) main:   cluster_id      = 0xFC00[0m
+[0;32mI (200598) main:   profile_id      = 0x0104[0m
+[0;32mI (200598) main:   frame_control   = 0x10[0m
+[0;32mI (200608) main:   manuf_code      = 0x0000[0m
+[0;32mI (200608) main:   tsn             = 0x22[0m
+[0;32mI (200618) main:   rssi            = -44 dBm[0m
+[0;32mI (200618) main:   cmd_id          = 0x0B[0m
+[0;32mI (200618) main: out:[0m
+[0;32mI (200628) main:  result = 0xFE[0m
+[1;31mE (210408) main: temp: 24.60[0m
+[1;31mE (210408) main: hum: 56.71[0m
+[1;31mE (210408) main: end node network address:29018[0m
+[1;31mE (210408) main: set attr state = 0[0m
+[0;32mI (210408) main: manual report ret = 0x0000[0m
+[1;31mE (210478) main: zcl callback[0m
+[1;31mE (210478) main: callback_id = 8[0m
+[0;32mI (210478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (210478) main: info:[0m
+[0;32mI (210478) main:  status = 0x00[0m
+[0;32mI (210478) main:  dst_ep = 1[0m
+[0;32mI (210478) main:  cluster_id = 0xFC00[0m
+[0;32mI (210488) main:  cluster_role = 0x01[0m
+[0;32mI (210488) main: in:[0m
+[0;32mI (210488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (210498) main:   status_code     = 0x81[0m
+[0;32mI (210498) main: header:[0m
+[0;32mI (210498) main: addr type = 2[0m
+[0;32mI (210508) main:   src_addr        = 0x0000[0m
+[0;32mI (210508) main:   dst_addr        = 0x715A[0m
+[0;32mI (210508) main:   src_ep          = 10[0m
+[0;32mI (210518) main:   dst_ep          = 1[0m
+[0;32mI (210518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (210518) main:   profile_id      = 0x0104[0m
+[0;32mI (210528) main:   frame_control   = 0x10[0m
+[0;32mI (210528) main:   manuf_code      = 0x0000[0m
+[0;32mI (210538) main:   tsn             = 0x23[0m
+[0;32mI (210538) main:   rssi            = -39 dBm[0m
+[0;32mI (210538) main:   cmd_id          = 0x0B[0m
+[0;32mI (210548) main: out:[0m
+[0;32mI (210548) main:  result = 0xFE[0m
+[1;31mE (220408) main: temp: 24.61[0m
+[1;31mE (220408) main: hum: 56.70[0m
+[1;31mE (220408) main: end node network address:29018[0m
+[1;31mE (220408) main: set attr state = 0[0m
+[0;32mI (220408) main: manual report ret = 0x0000[0m
+[1;31mE (220498) main: zcl callback[0m
+[1;31mE (220498) main: callback_id = 8[0m
+[0;32mI (220498) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (220498) main: info:[0m
+[0;32mI (220498) main:  status = 0x00[0m
+[0;32mI (220498) main:  dst_ep = 1[0m
+[0;32mI (220498) main:  cluster_id = 0xFC00[0m
+[0;32mI (220508) main:  cluster_role = 0x01[0m
+[0;32mI (220508) main: in:[0m
+[0;32mI (220508) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (220518) main:   status_code     = 0x81[0m
+[0;32mI (220518) main: header:[0m
+[0;32mI (220518) main: addr type = 2[0m
+[0;32mI (220528) main:   src_addr        = 0x0000[0m
+[0;32mI (220528) main:   dst_addr        = 0x715A[0m
+[0;32mI (220528) main:   src_ep          = 10[0m
+[0;32mI (220538) main:   dst_ep          = 1[0m
+[0;32mI (220538) main:   cluster_id      = 0xFC00[0m
+[0;32mI (220538) main:   profile_id      = 0x0104[0m
+[0;32mI (220548) main:   frame_control   = 0x10[0m
+[0;32mI (220548) main:   manuf_code      = 0x0000[0m
+[0;32mI (220558) main:   tsn             = 0x24[0m
+[0;32mI (220558) main:   rssi            = -44 dBm[0m
+[0;32mI (220558) main:   cmd_id          = 0x0B[0m
+[0;32mI (220568) main: out:[0m
+[0;32mI (220568) main:  result = 0xFE[0m
+[1;31mE (220578) main: zcl callback[0m
+[1;31mE (220578) main: callback_id = 8[0m
+[0;32mI (220578) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (220578) main: info:[0m
+[0;32mI (220588) main:  status = 0x00[0m
+[0;32mI (220588) main:  dst_ep = 1[0m
+[0;32mI (220588) main:  cluster_id = 0xFC00[0m
+[0;32mI (220588) main:  cluster_role = 0x01[0m
+[0;32mI (220598) main: in:[0m
+[0;32mI (220598) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (220598) main:   status_code     = 0x81[0m
+[0;32mI (220608) main: header:[0m
+[0;32mI (220608) main: addr type = 2[0m
+[0;32mI (220608) main:   src_addr        = 0x0000[0m
+[0;32mI (220618) main:   dst_addr        = 0x715A[0m
+[0;32mI (220618) main:   src_ep          = 10[0m
+[0;32mI (220618) main:   dst_ep          = 1[0m
+[0;32mI (220628) main:   cluster_id      = 0xFC00[0m
+[0;32mI (220628) main:   profile_id      = 0x0104[0m
+[0;32mI (220638) main:   frame_control   = 0x10[0m
+[0;32mI (220638) main:   manuf_code      = 0x0000[0m
+[0;32mI (220638) main:   tsn             = 0x25[0m
+[0;32mI (220648) main:   rssi            = -43 dBm[0m
+[0;32mI (220648) main:   cmd_id          = 0x0B[0m
+[0;32mI (220648) main: out:[0m
+[0;32mI (220658) main:  result = 0xFE[0m
+[1;31mE (230408) main: temp: 24.60[0m
+[1;31mE (230408) main: hum: 56.71[0m
+[1;31mE (230408) main: end node network address:29018[0m
+[1;31mE (230408) main: set attr state = 0[0m
+[0;32mI (230408) main: manual report ret = 0x0000[0m
+[1;31mE (230488) main: zcl callback[0m
+[1;31mE (230488) main: callback_id = 8[0m
+[0;32mI (230488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (230488) main: info:[0m
+[0;32mI (230488) main:  status = 0x00[0m
+[0;32mI (230488) main:  dst_ep = 1[0m
+[0;32mI (230488) main:  cluster_id = 0xFC00[0m
+[0;32mI (230498) main:  cluster_role = 0x01[0m
+[0;32mI (230498) main: in:[0m
+[0;32mI (230498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (230508) main:   status_code     = 0x81[0m
+[0;32mI (230508) main: header:[0m
+[0;32mI (230508) main: addr type = 2[0m
+[0;32mI (230518) main:   src_addr        = 0x0000[0m
+[0;32mI (230518) main:   dst_addr        = 0x715A[0m
+[0;32mI (230518) main:   src_ep          = 10[0m
+[0;32mI (230528) main:   dst_ep          = 1[0m
+[0;32mI (230528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (230528) main:   profile_id      = 0x0104[0m
+[0;32mI (230538) main:   frame_control   = 0x10[0m
+[0;32mI (230538) main:   manuf_code      = 0x0000[0m
+[0;32mI (230548) main:   tsn             = 0x26[0m
+[0;32mI (230548) main:   rssi            = -44 dBm[0m
+[0;32mI (230548) main:   cmd_id          = 0x0B[0m
+[0;32mI (230558) main: out:[0m
+[0;32mI (230558) main:  result = 0xFE[0m
+[1;31mE (230568) main: zcl callback[0m
+[1;31mE (230568) main: callback_id = 8[0m
+[0;32mI (230568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (230568) main: info:[0m
+[0;32mI (230578) main:  status = 0x00[0m
+[0;32mI (230578) main:  dst_ep = 1[0m
+[0;32mI (230578) main:  cluster_id = 0xFC00[0m
+[0;32mI (230588) main:  cluster_role = 0x01[0m
+[0;32mI (230588) main: in:[0m
+[0;32mI (230588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (230588) main:   status_code     = 0x81[0m
+[0;32mI (230598) main: header:[0m
+[0;32mI (230598) main: addr type = 2[0m
+[0;32mI (230598) main:   src_addr        = 0x0000[0m
+[0;32mI (230608) main:   dst_addr        = 0x715A[0m
+[0;32mI (230608) main:   src_ep          = 10[0m
+[0;32mI (230608) main:   dst_ep          = 1[0m
+[0;32mI (230618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (230618) main:   profile_id      = 0x0104[0m
+[0;32mI (230628) main:   frame_control   = 0x10[0m
+[0;32mI (230628) main:   manuf_code      = 0x0000[0m
+[0;32mI (230628) main:   tsn             = 0x27[0m
+[0;32mI (230638) main:   rssi            = -44 dBm[0m
+[0;32mI (230638) main:   cmd_id          = 0x0B[0m
+[0;32mI (230638) main: out:[0m
+[0;32mI (230648) main:  result = 0xFE[0m
+[1;31mE (240408) main: temp: 24.60[0m
+[1;31mE (240408) main: hum: 56.69[0m
+[1;31mE (240408) main: end node network address:29018[0m
+[1;31mE (240408) main: set attr state = 0[0m
+[0;32mI (240408) main: manual report ret = 0x0000[0m
+[1;31mE (240488) main: zcl callback[0m
+[1;31mE (240488) main: callback_id = 8[0m
+[0;32mI (240488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (240488) main: info:[0m
+[0;32mI (240488) main:  status = 0x00[0m
+[0;32mI (240488) main:  dst_ep = 1[0m
+[0;32mI (240488) main:  cluster_id = 0xFC00[0m
+[0;32mI (240498) main:  cluster_role = 0x01[0m
+[0;32mI (240498) main: in:[0m
+[0;32mI (240498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (240508) main:   status_code     = 0x81[0m
+[0;32mI (240508) main: header:[0m
+[0;32mI (240508) main: addr type = 2[0m
+[0;32mI (240518) main:   src_addr        = 0x0000[0m
+[0;32mI (240518) main:   dst_addr        = 0x715A[0m
+[0;32mI (240518) main:   src_ep          = 10[0m
+[0;32mI (240528) main:   dst_ep          = 1[0m
+[0;32mI (240528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (240528) main:   profile_id      = 0x0104[0m
+[0;32mI (240538) main:   frame_control   = 0x10[0m
+[0;32mI (240538) main:   manuf_code      = 0x0000[0m
+[0;32mI (240548) main:   tsn             = 0x28[0m
+[0;32mI (240548) main:   rssi            = -39 dBm[0m
+[0;32mI (240548) main:   cmd_id          = 0x0B[0m
+[0;32mI (240558) main: out:[0m
+[0;32mI (240558) main:  result = 0xFE[0m
+[1;31mE (250408) main: temp: 24.62[0m
+[1;31mE (250408) main: hum: 56.70[0m
+[1;31mE (250408) main: end node network address:29018[0m
+[1;31mE (250408) main: set attr state = 0[0m
+[0;32mI (250408) main: manual report ret = 0x0000[0m
+[1;31mE (250478) main: zcl callback[0m
+[1;31mE (250478) main: callback_id = 8[0m
+[0;32mI (250478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (250478) main: info:[0m
+[0;32mI (250478) main:  status = 0x00[0m
+[0;32mI (250478) main:  dst_ep = 1[0m
+[0;32mI (250488) main:  cluster_id = 0xFC00[0m
+[0;32mI (250488) main:  cluster_role = 0x01[0m
+[0;32mI (250488) main: in:[0m
+[0;32mI (250488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (250498) main:   status_code     = 0x81[0m
+[0;32mI (250498) main: header:[0m
+[0;32mI (250498) main: addr type = 2[0m
+[0;32mI (250508) main:   src_addr        = 0x0000[0m
+[0;32mI (250508) main:   dst_addr        = 0x715A[0m
+[0;32mI (250508) main:   src_ep          = 10[0m
+[0;32mI (250518) main:   dst_ep          = 1[0m
+[0;32mI (250518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (250528) main:   profile_id      = 0x0104[0m
+[0;32mI (250528) main:   frame_control   = 0x10[0m
+[0;32mI (250528) main:   manuf_code      = 0x0000[0m
+[0;32mI (250538) main:   tsn             = 0x29[0m
+[0;32mI (250538) main:   rssi            = -39 dBm[0m
+[0;32mI (250538) main:   cmd_id          = 0x0B[0m
+[0;32mI (250548) main: out:[0m
+[0;32mI (250548) main:  result = 0xFE[0m
+[1;31mE (250558) main: zcl callback[0m
+[1;31mE (250558) main: callback_id = 8[0m
+[0;32mI (250558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (250558) main: info:[0m
+[0;32mI (250568) main:  status = 0x00[0m
+[0;32mI (250568) main:  dst_ep = 1[0m
+[0;32mI (250568) main:  cluster_id = 0xFC00[0m
+[0;32mI (250578) main:  cluster_role = 0x01[0m
+[0;32mI (250578) main: in:[0m
+[0;32mI (250578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (250578) main:   status_code     = 0x81[0m
+[0;32mI (250588) main: header:[0m
+[0;32mI (250588) main: addr type = 2[0m
+[0;32mI (250588) main:   src_addr        = 0x0000[0m
+[0;32mI (250598) main:   dst_addr        = 0x715A[0m
+[0;32mI (250598) main:   src_ep          = 10[0m
+[0;32mI (250598) main:   dst_ep          = 1[0m
+[0;32mI (250608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (250608) main:   profile_id      = 0x0104[0m
+[0;32mI (250618) main:   frame_control   = 0x10[0m
+[0;32mI (250618) main:   manuf_code      = 0x0000[0m
+[0;32mI (250618) main:   tsn             = 0x2A[0m
+[0;32mI (250628) main:   rssi            = -39 dBm[0m
+[0;32mI (250628) main:   cmd_id          = 0x0B[0m
+[0;32mI (250638) main: out:[0m
+[0;32mI (250638) main:  result = 0xFE[0m
+[1;31mE (260408) main: temp: 24.61[0m
+[1;31mE (260408) main: hum: 56.66[0m
+[1;31mE (260408) main: end node network address:29018[0m
+[1;31mE (260408) main: set attr state = 0[0m
+[0;32mI (260408) main: manual report ret = 0x0000[0m
+[1;31mE (260488) main: zcl callback[0m
+[1;31mE (260488) main: callback_id = 8[0m
+[0;32mI (260488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (260488) main: info:[0m
+[0;32mI (260488) main:  status = 0x00[0m
+[0;32mI (260488) main:  dst_ep = 1[0m
+[0;32mI (260498) main:  cluster_id = 0xFC00[0m
+[0;32mI (260498) main:  cluster_role = 0x01[0m
+[0;32mI (260498) main: in:[0m
+[0;32mI (260498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (260508) main:   status_code     = 0x81[0m
+[0;32mI (260508) main: header:[0m
+[0;32mI (260508) main: addr type = 2[0m
+[0;32mI (260518) main:   src_addr        = 0x0000[0m
+[0;32mI (260518) main:   dst_addr        = 0x715A[0m
+[0;32mI (260518) main:   src_ep          = 10[0m
+[0;32mI (260528) main:   dst_ep          = 1[0m
+[0;32mI (260528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (260538) main:   profile_id      = 0x0104[0m
+[0;32mI (260538) main:   frame_control   = 0x10[0m
+[0;32mI (260538) main:   manuf_code      = 0x0000[0m
+[0;32mI (260548) main:   tsn             = 0x2B[0m
+[0;32mI (260548) main:   rssi            = -40 dBm[0m
+[0;32mI (260548) main:   cmd_id          = 0x0B[0m
+[0;32mI (260558) main: out:[0m
+[0;32mI (260558) main:  result = 0xFE[0m
+[1;31mE (260568) main: zcl callback[0m
+[1;31mE (260568) main: callback_id = 8[0m
+[0;32mI (260568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (260578) main: info:[0m
+[0;32mI (260578) main:  status = 0x00[0m
+[0;32mI (260578) main:  dst_ep = 1[0m
+[0;32mI (260578) main:  cluster_id = 0xFC00[0m
+[0;32mI (260588) main:  cluster_role = 0x01[0m
+[0;32mI (260588) main: in:[0m
+[0;32mI (260588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (260588) main:   status_code     = 0x81[0m
+[0;32mI (260598) main: header:[0m
+[0;32mI (260598) main: addr type = 2[0m
+[0;32mI (260598) main:   src_addr        = 0x0000[0m
+[0;32mI (260608) main:   dst_addr        = 0x715A[0m
+[0;32mI (260608) main:   src_ep          = 10[0m
+[0;32mI (260608) main:   dst_ep          = 1[0m
+[0;32mI (260618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (260618) main:   profile_id      = 0x0104[0m
+[0;32mI (260628) main:   frame_control   = 0x10[0m
+[0;32mI (260628) main:   manuf_code      = 0x0000[0m
+[0;32mI (260628) main:   tsn             = 0x2C[0m
+[0;32mI (260638) main:   rssi            = -39 dBm[0m
+[0;32mI (260638) main:   cmd_id          = 0x0B[0m
+[0;32mI (260648) main: out:[0m
+[0;32mI (260648) main:  result = 0xFE[0m
+[1;31mE (270408) main: temp: 24.62[0m
+[1;31mE (270408) main: hum: 56.69[0m
+[1;31mE (270408) main: end node network address:29018[0m
+[1;31mE (270408) main: set attr state = 0[0m
+[0;32mI (270408) main: manual report ret = 0x0000[0m
+[1;31mE (270488) main: zcl callback[0m
+[1;31mE (270488) main: callback_id = 8[0m
+[0;32mI (270488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (270488) main: info:[0m
+[0;32mI (270488) main:  status = 0x00[0m
+[0;32mI (270488) main:  dst_ep = 1[0m
+[0;32mI (270498) main:  cluster_id = 0xFC00[0m
+[0;32mI (270498) main:  cluster_role = 0x01[0m
+[0;32mI (270498) main: in:[0m
+[0;32mI (270498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (270508) main:   status_code     = 0x81[0m
+[0;32mI (270508) main: header:[0m
+[0;32mI (270508) main: addr type = 2[0m
+[0;32mI (270518) main:   src_addr        = 0x0000[0m
+[0;32mI (270518) main:   dst_addr        = 0x715A[0m
+[0;32mI (270518) main:   src_ep          = 10[0m
+[0;32mI (270528) main:   dst_ep          = 1[0m
+[0;32mI (270528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (270538) main:   profile_id      = 0x0104[0m
+[0;32mI (270538) main:   frame_control   = 0x10[0m
+[0;32mI (270538) main:   manuf_code      = 0x0000[0m
+[0;32mI (270548) main:   tsn             = 0x2D[0m
+[0;32mI (270548) main:   rssi            = -39 dBm[0m
+[0;32mI (270548) main:   cmd_id          = 0x0B[0m
+[0;32mI (270558) main: out:[0m
+[0;32mI (270558) main:  result = 0xFE[0m
+[1;31mE (270568) main: zcl callback[0m
+[1;31mE (270568) main: callback_id = 8[0m
+[0;32mI (270568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (270578) main: info:[0m
+[0;32mI (270578) main:  status = 0x00[0m
+[0;32mI (270578) main:  dst_ep = 1[0m
+[0;32mI (270578) main:  cluster_id = 0xFC00[0m
+[0;32mI (270588) main:  cluster_role = 0x01[0m
+[0;32mI (270588) main: in:[0m
+[0;32mI (270588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (270598) main:   status_code     = 0x81[0m
+[0;32mI (270598) main: header:[0m
+[0;32mI (270598) main: addr type = 2[0m
+[0;32mI (270598) main:   src_addr        = 0x0000[0m
+[0;32mI (270608) main:   dst_addr        = 0x715A[0m
+[0;32mI (270608) main:   src_ep          = 10[0m
+[0;32mI (270618) main:   dst_ep          = 1[0m
+[0;32mI (270618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (270618) main:   profile_id      = 0x0104[0m
+[0;32mI (270628) main:   frame_control   = 0x10[0m
+[0;32mI (270628) main:   manuf_code      = 0x0000[0m
+[0;32mI (270628) main:   tsn             = 0x2E[0m
+[0;32mI (270638) main:   rssi            = -39 dBm[0m
+[0;32mI (270638) main:   cmd_id          = 0x0B[0m
+[0;32mI (270648) main: out:[0m
+[0;32mI (270648) main:  result = 0xFE[0m
+[1;31mE (280408) main: temp: 24.62[0m
+[1;31mE (280408) main: hum: 56.67[0m
+[1;31mE (280408) main: end node network address:29018[0m
+[1;31mE (280408) main: set attr state = 0[0m
+[0;32mI (280408) main: manual report ret = 0x0000[0m
+[1;31mE (280468) main: zcl callback[0m
+[1;31mE (280468) main: callback_id = 8[0m
+[0;32mI (280468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (280468) main: info:[0m
+[0;32mI (280468) main:  status = 0x00[0m
+[0;32mI (280468) main:  dst_ep = 1[0m
+[0;32mI (280478) main:  cluster_id = 0xFC00[0m
+[0;32mI (280478) main:  cluster_role = 0x01[0m
+[0;32mI (280478) main: in:[0m
+[0;32mI (280478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (280488) main:   status_code     = 0x81[0m
+[0;32mI (280488) main: header:[0m
+[0;32mI (280488) main: addr type = 2[0m
+[0;32mI (280498) main:   src_addr        = 0x0000[0m
+[0;32mI (280498) main:   dst_addr        = 0x715A[0m
+[0;32mI (280498) main:   src_ep          = 10[0m
+[0;32mI (280508) main:   dst_ep          = 1[0m
+[0;32mI (280508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (280518) main:   profile_id      = 0x0104[0m
+[0;32mI (280518) main:   frame_control   = 0x10[0m
+[0;32mI (280518) main:   manuf_code      = 0x0000[0m
+[0;32mI (280528) main:   tsn             = 0x2F[0m
+[0;32mI (280528) main:   rssi            = -47 dBm[0m
+[0;32mI (280528) main:   cmd_id          = 0x0B[0m
+[0;32mI (280538) main: out:[0m
+[0;32mI (280538) main:  result = 0xFE[0m
+[1;31mE (290408) main: temp: 24.62[0m
+[1;31mE (290408) main: hum: 56.65[0m
+[1;31mE (290408) main: end node network address:29018[0m
+[1;31mE (290408) main: set attr state = 0[0m
+[0;32mI (290408) main: manual report ret = 0x0000[0m
+[1;31mE (290468) main: zcl callback[0m
+[1;31mE (290468) main: callback_id = 8[0m
+[0;32mI (290468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (290468) main: info:[0m
+[0;32mI (290468) main:  status = 0x00[0m
+[0;32mI (290468) main:  dst_ep = 1[0m
+[0;32mI (290478) main:  cluster_id = 0xFC00[0m
+[0;32mI (290478) main:  cluster_role = 0x01[0m
+[0;32mI (290478) main: in:[0m
+[0;32mI (290478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (290488) main:   status_code     = 0x81[0m
+[0;32mI (290488) main: header:[0m
+[0;32mI (290488) main: addr type = 2[0m
+[0;32mI (290498) main:   src_addr        = 0x0000[0m
+[0;32mI (290498) main:   dst_addr        = 0x715A[0m
+[0;32mI (290498) main:   src_ep          = 10[0m
+[0;32mI (290508) main:   dst_ep          = 1[0m
+[0;32mI (290508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (290518) main:   profile_id      = 0x0104[0m
+[0;32mI (290518) main:   frame_control   = 0x10[0m
+[0;32mI (290518) main:   manuf_code      = 0x0000[0m
+[0;32mI (290528) main:   tsn             = 0x30[0m
+[0;32mI (290528) main:   rssi            = -40 dBm[0m
+[0;32mI (290538) main:   cmd_id          = 0x0B[0m
+[0;32mI (290538) main: out:[0m
+[0;32mI (290538) main:  result = 0xFE[0m
+[1;31mE (300408) main: temp: 24.62[0m
+[1;31mE (300408) main: hum: 56.69[0m
+[1;31mE (300408) main: end node network address:29018[0m
+[1;31mE (300408) main: set attr state = 0[0m
+[0;32mI (300408) main: manual report ret = 0x0000[0m
+[0;32mI (300478) main: Left network successfully with type(0x01)[0m
+[0;32mI (300668) main: Device started up in non factory-reset mode[0m
+[0;32mI (300668) main: Device reboot[0m
+[1;31mE (310408) main: temp: 24.63[0m
+[1;31mE (310408) main: hum: 56.72[0m
+[1;31mE (310408) main: end node network address:29018[0m
+[1;31mE (310408) main: set attr state = 0[0m
+[0;32mI (310408) main: manual report ret = 0x0000[0m
+[1;31mE (310478) main: zcl callback[0m
+[1;31mE (310478) main: callback_id = 8[0m
+[0;32mI (310478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (310478) main: info:[0m
+[0;32mI (310478) main:  status = 0x00[0m
+[0;32mI (310478) main:  dst_ep = 1[0m
+[0;32mI (310488) main:  cluster_id = 0xFC00[0m
+[0;32mI (310488) main:  cluster_role = 0x01[0m
+[0;32mI (310488) main: in:[0m
+[0;32mI (310498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (310498) main:   status_code     = 0x81[0m
+[0;32mI (310498) main: header:[0m
+[0;32mI (310498) main: addr type = 2[0m
+[0;32mI (310508) main:   src_addr        = 0x0000[0m
+[0;32mI (310508) main:   dst_addr        = 0x715A[0m
+[0;32mI (310518) main:   src_ep          = 10[0m
+[0;32mI (310518) main:   dst_ep          = 1[0m
+[0;32mI (310518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (310528) main:   profile_id      = 0x0104[0m
+[0;32mI (310528) main:   frame_control   = 0x10[0m
+[0;32mI (310528) main:   manuf_code      = 0x0000[0m
+[0;32mI (310538) main:   tsn             = 0x32[0m
+[0;32mI (310538) main:   rssi            = -40 dBm[0m
+[0;32mI (310548) main:   cmd_id          = 0x0B[0m
+[0;32mI (310548) main: out:[0m
+[0;32mI (310548) main:  result = 0xFE[0m
+[1;31mE (310558) main: zcl callback[0m
+[1;31mE (310558) main: callback_id = 8[0m
+[0;32mI (310558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (310568) main: info:[0m
+[0;32mI (310568) main:  status = 0x00[0m
+[0;32mI (310568) main:  dst_ep = 1[0m
+[0;32mI (310568) main:  cluster_id = 0xFC00[0m
+[0;32mI (310578) main:  cluster_role = 0x01[0m
+[0;32mI (310578) main: in:[0m
+[0;32mI (310578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (310588) main:   status_code     = 0x81[0m
+[0;32mI (310588) main: header:[0m
+[0;32mI (310588) main: addr type = 2[0m
+[0;32mI (310588) main:   src_addr        = 0x0000[0m
+[0;32mI (310598) main:   dst_addr        = 0x715A[0m
+[0;32mI (310598) main:   src_ep          = 10[0m
+[0;32mI (310608) main:   dst_ep          = 1[0m
+[0;32mI (310608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (310608) main:   profile_id      = 0x0104[0m
+[0;32mI (310618) main:   frame_control   = 0x10[0m
+[0;32mI (310618) main:   manuf_code      = 0x0000[0m
+[0;32mI (310628) main:   tsn             = 0x33[0m
+[0;32mI (310628) main:   rssi            = -39 dBm[0m
+[0;32mI (310628) main:   cmd_id          = 0x0B[0m
+[0;32mI (310638) main: out:[0m
+[0;32mI (310638) main:  result = 0xFE[0m
+[1;31mE (320408) main: temp: 24.64[0m
+[1;31mE (320408) main: hum: 56.65[0m
+[1;31mE (320408) main: end node network address:29018[0m
+[1;31mE (320408) main: set attr state = 0[0m
+[0;32mI (320408) main: manual report ret = 0x0000[0m
+[1;31mE (320458) main: zcl callback[0m
+[1;31mE (320458) main: callback_id = 8[0m
+[0;32mI (320458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (320458) main: info:[0m
+[0;32mI (320468) main:  status = 0x00[0m
+[0;32mI (320468) main:  dst_ep = 1[0m
+[0;32mI (320468) main:  cluster_id = 0xFC00[0m
+[0;32mI (320468) main:  cluster_role = 0x01[0m
+[0;32mI (320478) main: in:[0m
+[0;32mI (320478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (320478) main:   status_code     = 0x81[0m
+[0;32mI (320488) main: header:[0m
+[0;32mI (320488) main: addr type = 2[0m
+[0;32mI (320488) main:   src_addr        = 0x0000[0m
+[0;32mI (320498) main:   dst_addr        = 0x715A[0m
+[0;32mI (320498) main:   src_ep          = 10[0m
+[0;32mI (320498) main:   dst_ep          = 1[0m
+[0;32mI (320508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (320508) main:   profile_id      = 0x0104[0m
+[0;32mI (320508) main:   frame_control   = 0x10[0m
+[0;32mI (320518) main:   manuf_code      = 0x0000[0m
+[0;32mI (320518) main:   tsn             = 0x34[0m
+[0;32mI (320528) main:   rssi            = -39 dBm[0m
+[0;32mI (320528) main:   cmd_id          = 0x0B[0m
+[0;32mI (320528) main: out:[0m
+[0;32mI (320538) main:  result = 0xFE[0m
+[1;31mE (320548) main: zcl callback[0m
+[1;31mE (320548) main: callback_id = 8[0m
+[0;32mI (320548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (320548) main: info:[0m
+[0;32mI (320548) main:  status = 0x00[0m
+[0;32mI (320558) main:  dst_ep = 1[0m
+[0;32mI (320558) main:  cluster_id = 0xFC00[0m
+[0;32mI (320558) main:  cluster_role = 0x01[0m
+[0;32mI (320558) main: in:[0m
+[0;32mI (320568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (320568) main:   status_code     = 0x81[0m
+[0;32mI (320568) main: header:[0m
+[0;32mI (320578) main: addr type = 2[0m
+[0;32mI (320578) main:   src_addr        = 0x0000[0m
+[0;32mI (320578) main:   dst_addr        = 0x715A[0m
+[0;32mI (320588) main:   src_ep          = 10[0m
+[0;32mI (320588) main:   dst_ep          = 1[0m
+[0;32mI (320588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (320598) main:   profile_id      = 0x0104[0m
+[0;32mI (320598) main:   frame_control   = 0x10[0m
+[0;32mI (320608) main:   manuf_code      = 0x0000[0m
+[0;32mI (320608) main:   tsn             = 0x35[0m
+[0;32mI (320608) main:   rssi            = -39 dBm[0m
+[0;32mI (320618) main:   cmd_id          = 0x0B[0m
+[0;32mI (320618) main: out:[0m
+[0;32mI (320618) main:  result = 0xFE[0m
+[1;31mE (330408) main: temp: 24.65[0m
+[1;31mE (330408) main: hum: 56.62[0m
+[1;31mE (330408) main: end node network address:29018[0m
+[1;31mE (330408) main: set attr state = 0[0m
+[0;32mI (330408) main: manual report ret = 0x0000[0m
+[1;31mE (330478) main: zcl callback[0m
+[1;31mE (330478) main: callback_id = 8[0m
+[0;32mI (330478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (330478) main: info:[0m
+[0;32mI (330478) main:  status = 0x00[0m
+[0;32mI (330478) main:  dst_ep = 1[0m
+[0;32mI (330488) main:  cluster_id = 0xFC00[0m
+[0;32mI (330488) main:  cluster_role = 0x01[0m
+[0;32mI (330488) main: in:[0m
+[0;32mI (330498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (330498) main:   status_code     = 0x81[0m
+[0;32mI (330498) main: header:[0m
+[0;32mI (330508) main: addr type = 2[0m
+[0;32mI (330508) main:   src_addr        = 0x0000[0m
+[0;32mI (330508) main:   dst_addr        = 0x715A[0m
+[0;32mI (330518) main:   src_ep          = 10[0m
+[0;32mI (330518) main:   dst_ep          = 1[0m
+[0;32mI (330518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (330528) main:   profile_id      = 0x0104[0m
+[0;32mI (330528) main:   frame_control   = 0x10[0m
+[0;32mI (330528) main:   manuf_code      = 0x0000[0m
+[0;32mI (330538) main:   tsn             = 0x36[0m
+[0;32mI (330538) main:   rssi            = -42 dBm[0m
+[0;32mI (330548) main:   cmd_id          = 0x0B[0m
+[0;32mI (330548) main: out:[0m
+[0;32mI (330548) main:  result = 0xFE[0m
+[1;31mE (330558) main: zcl callback[0m
+[1;31mE (330558) main: callback_id = 8[0m
+[0;32mI (330558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (330568) main: info:[0m
+[0;32mI (330568) main:  status = 0x00[0m
+[0;32mI (330568) main:  dst_ep = 1[0m
+[0;32mI (330568) main:  cluster_id = 0xFC00[0m
+[0;32mI (330578) main:  cluster_role = 0x01[0m
+[0;32mI (330578) main: in:[0m
+[0;32mI (330578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (330588) main:   status_code     = 0x81[0m
+[0;32mI (330588) main: header:[0m
+[0;32mI (330588) main: addr type = 2[0m
+[0;32mI (330598) main:   src_addr        = 0x0000[0m
+[0;32mI (330598) main:   dst_addr        = 0x715A[0m
+[0;32mI (330598) main:   src_ep          = 10[0m
+[0;32mI (330608) main:   dst_ep          = 1[0m
+[0;32mI (330608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (330608) main:   profile_id      = 0x0104[0m
+[0;32mI (330618) main:   frame_control   = 0x10[0m
+[0;32mI (330618) main:   manuf_code      = 0x0000[0m
+[0;32mI (330628) main:   tsn             = 0x37[0m
+[0;32mI (330628) main:   rssi            = -42 dBm[0m
+[0;32mI (330628) main:   cmd_id          = 0x0B[0m
+[0;32mI (330638) main: out:[0m
+[0;32mI (330638) main:  result = 0xFE[0m
+[1;31mE (340408) main: temp: 24.66[0m
+[1;31mE (340408) main: hum: 56.60[0m
+[1;31mE (340408) main: end node network address:29018[0m
+[1;31mE (340408) main: set attr state = 0[0m
+[0;32mI (340408) main: manual report ret = 0x0000[0m
+[1;31mE (340458) main: zcl callback[0m
+[1;31mE (340458) main: callback_id = 8[0m
+[0;32mI (340458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (340458) main: info:[0m
+[0;32mI (340458) main:  status = 0x00[0m
+[0;32mI (340458) main:  dst_ep = 1[0m
+[0;32mI (340458) main:  cluster_id = 0xFC00[0m
+[0;32mI (340468) main:  cluster_role = 0x01[0m
+[0;32mI (340468) main: in:[0m
+[0;32mI (340468) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (340478) main:   status_code     = 0x81[0m
+[0;32mI (340478) main: header:[0m
+[0;32mI (340478) main: addr type = 2[0m
+[0;32mI (340488) main:   src_addr        = 0x0000[0m
+[0;32mI (340488) main:   dst_addr        = 0x715A[0m
+[0;32mI (340488) main:   src_ep          = 10[0m
+[0;32mI (340498) main:   dst_ep          = 1[0m
+[0;32mI (340498) main:   cluster_id      = 0xFC00[0m
+[0;32mI (340498) main:   profile_id      = 0x0104[0m
+[0;32mI (340508) main:   frame_control   = 0x10[0m
+[0;32mI (340508) main:   manuf_code      = 0x0000[0m
+[0;32mI (340518) main:   tsn             = 0x38[0m
+[0;32mI (340518) main:   rssi            = -41 dBm[0m
+[0;32mI (340518) main:   cmd_id          = 0x0B[0m
+[0;32mI (340528) main: out:[0m
+[0;32mI (340528) main:  result = 0xFE[0m
+[1;31mE (340538) main: zcl callback[0m
+[1;31mE (340538) main: callback_id = 8[0m
+[0;32mI (340538) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (340538) main: info:[0m
+[0;32mI (340548) main:  status = 0x00[0m
+[0;32mI (340548) main:  dst_ep = 1[0m
+[0;32mI (340548) main:  cluster_id = 0xFC00[0m
+[0;32mI (340548) main:  cluster_role = 0x01[0m
+[0;32mI (340558) main: in:[0m
+[0;32mI (340558) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (340558) main:   status_code     = 0x81[0m
+[0;32mI (340568) main: header:[0m
+[0;32mI (340568) main: addr type = 2[0m
+[0;32mI (340568) main:   src_addr        = 0x0000[0m
+[0;32mI (340578) main:   dst_addr        = 0x715A[0m
+[0;32mI (340578) main:   src_ep          = 10[0m
+[0;32mI (340578) main:   dst_ep          = 1[0m
+[0;32mI (340588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (340588) main:   profile_id      = 0x0104[0m
+[0;32mI (340598) main:   frame_control   = 0x10[0m
+[0;32mI (340598) main:   manuf_code      = 0x0000[0m
+[0;32mI (340598) main:   tsn             = 0x39[0m
+[0;32mI (340608) main:   rssi            = -41 dBm[0m
+[0;32mI (340608) main:   cmd_id          = 0x0B[0m
+[0;32mI (340608) main: out:[0m
+[0;32mI (340618) main:  result = 0xFE[0m
+[1;31mE (350408) main: temp: 24.68[0m
+[1;31mE (350408) main: hum: 56.61[0m
+[1;31mE (350408) main: end node network address:29018[0m
+[1;31mE (350408) main: set attr state = 0[0m
+[0;32mI (350408) main: manual report ret = 0x0000[0m
+[1;31mE (350488) main: zcl callback[0m
+[1;31mE (350488) main: callback_id = 8[0m
+[0;32mI (350488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (350488) main: info:[0m
+[0;32mI (350488) main:  status = 0x00[0m
+[0;32mI (350488) main:  dst_ep = 1[0m
+[0;32mI (350498) main:  cluster_id = 0xFC00[0m
+[0;32mI (350498) main:  cluster_role = 0x01[0m
+[0;32mI (350498) main: in:[0m
+[0;32mI (350508) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (350508) main:   status_code     = 0x81[0m
+[0;32mI (350508) main: header:[0m
+[0;32mI (350518) main: addr type = 2[0m
+[0;32mI (350518) main:   src_addr        = 0x0000[0m
+[0;32mI (350518) main:   dst_addr        = 0x715A[0m
+[0;32mI (350528) main:   src_ep          = 10[0m
+[0;32mI (350528) main:   dst_ep          = 1[0m
+[0;32mI (350528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (350538) main:   profile_id      = 0x0104[0m
+[0;32mI (350538) main:   frame_control   = 0x10[0m
+[0;32mI (350538) main:   manuf_code      = 0x0000[0m
+[0;32mI (350548) main:   tsn             = 0x3A[0m
+[0;32mI (350548) main:   rssi            = -41 dBm[0m
+[0;32mI (350558) main:   cmd_id          = 0x0B[0m
+[0;32mI (350558) main: out:[0m
+[0;32mI (350558) main:  result = 0xFE[0m
+[1;31mE (350568) main: zcl callback[0m
+[1;31mE (350568) main: callback_id = 8[0m
+[0;32mI (350568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (350578) main: info:[0m
+[0;32mI (350578) main:  status = 0x00[0m
+[0;32mI (350578) main:  dst_ep = 1[0m
+[0;32mI (350578) main:  cluster_id = 0xFC00[0m
+[0;32mI (350588) main:  cluster_role = 0x01[0m
+[0;32mI (350588) main: in:[0m
+[0;32mI (350588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (350598) main:   status_code     = 0x81[0m
+[0;32mI (350598) main: header:[0m
+[0;32mI (350598) main: addr type = 2[0m
+[0;32mI (350608) main:   src_addr        = 0x0000[0m
+[0;32mI (350608) main:   dst_addr        = 0x715A[0m
+[0;32mI (350608) main:   src_ep          = 10[0m
+[0;32mI (350618) main:   dst_ep          = 1[0m
+[0;32mI (350618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (350618) main:   profile_id      = 0x0104[0m
+[0;32mI (350628) main:   frame_control   = 0x10[0m
+[0;32mI (350628) main:   manuf_code      = 0x0000[0m
+[0;32mI (350638) main:   tsn             = 0x3B[0m
+[0;32mI (350638) main:   rssi            = -42 dBm[0m
+[0;32mI (350638) main:   cmd_id          = 0x0B[0m
+[0;32mI (350648) main: out:[0m
+[0;32mI (350648) main:  result = 0xFE[0m
+[1;31mE (360408) main: temp: 24.67[0m
+[1;31mE (360408) main: hum: 56.60[0m
+[1;31mE (360408) main: end node network address:29018[0m
+[1;31mE (360408) main: set attr state = 0[0m
+[0;32mI (360408) main: manual report ret = 0x0000[0m
+[1;31mE (360488) main: zcl callback[0m
+[1;31mE (360488) main: callback_id = 8[0m
+[0;32mI (360488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (360488) main: info:[0m
+[0;32mI (360488) main:  status = 0x00[0m
+[0;32mI (360488) main:  dst_ep = 1[0m
+[0;32mI (360498) main:  cluster_id = 0xFC00[0m
+[0;32mI (360498) main:  cluster_role = 0x01[0m
+[0;32mI (360498) main: in:[0m
+[0;32mI (360508) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (360508) main:   status_code     = 0x81[0m
+[0;32mI (360508) main: header:[0m
+[0;32mI (360518) main: addr type = 2[0m
+[0;32mI (360518) main:   src_addr        = 0x0000[0m
+[0;32mI (360518) main:   dst_addr        = 0x715A[0m
+[0;32mI (360528) main:   src_ep          = 10[0m
+[0;32mI (360528) main:   dst_ep          = 1[0m
+[0;32mI (360528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (360538) main:   profile_id      = 0x0104[0m
+[0;32mI (360538) main:   frame_control   = 0x10[0m
+[0;32mI (360548) main:   manuf_code      = 0x0000[0m
+[0;32mI (360548) main:   tsn             = 0x3C[0m
+[0;32mI (360548) main:   rssi            = -44 dBm[0m
+[0;32mI (360558) main:   cmd_id          = 0x0B[0m
+[0;32mI (360558) main: out:[0m
+[0;32mI (360558) main:  result = 0xFE[0m
+[1;31mE (360568) main: zcl callback[0m
+[1;31mE (360568) main: callback_id = 8[0m
+[0;32mI (360578) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (360578) main: info:[0m
+[0;32mI (360578) main:  status = 0x00[0m
+[0;32mI (360578) main:  dst_ep = 1[0m
+[0;32mI (360578) main:  cluster_id = 0xFC00[0m
+[0;32mI (360588) main:  cluster_role = 0x01[0m
+[0;32mI (360588) main: in:[0m
+[0;32mI (360588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (360598) main:   status_code     = 0x81[0m
+[0;32mI (360598) main: header:[0m
+[0;32mI (360598) main: addr type = 2[0m
+[0;32mI (360608) main:   src_addr        = 0x0000[0m
+[0;32mI (360608) main:   dst_addr        = 0x715A[0m
+[0;32mI (360608) main:   src_ep          = 10[0m
+[0;32mI (360618) main:   dst_ep          = 1[0m
+[0;32mI (360618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (360618) main:   profile_id      = 0x0104[0m
+[0;32mI (360628) main:   frame_control   = 0x10[0m
+[0;32mI (360628) main:   manuf_code      = 0x0000[0m
+[0;32mI (360638) main:   tsn             = 0x3D[0m
+[0;32mI (360638) main:   rssi            = -43 dBm[0m
+[0;32mI (360638) main:   cmd_id          = 0x0B[0m
+[0;32mI (360648) main: out:[0m
+[0;32mI (360648) main:  result = 0xFE[0m
+[1;31mE (370408) main: temp: 24.68[0m
+[1;31mE (370408) main: hum: 56.61[0m
+[1;31mE (370408) main: end node network address:29018[0m
+[1;31mE (370408) main: set attr state = 0[0m
+[0;32mI (370408) main: manual report ret = 0x0000[0m
+[1;31mE (370478) main: zcl callback[0m
+[1;31mE (370478) main: callback_id = 8[0m
+[0;32mI (370478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (370478) main: info:[0m
+[0;32mI (370478) main:  status = 0x00[0m
+[0;32mI (370488) main:  dst_ep = 1[0m
+[0;32mI (370488) main:  cluster_id = 0xFC00[0m
+[0;32mI (370488) main:  cluster_role = 0x01[0m
+[0;32mI (370488) main: in:[0m
+[0;32mI (370498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (370498) main:   status_code     = 0x81[0m
+[0;32mI (370498) main: header:[0m
+[0;32mI (370508) main: addr type = 2[0m
+[0;32mI (370508) main:   src_addr        = 0x0000[0m
+[0;32mI (370508) main:   dst_addr        = 0x715A[0m
+[0;32mI (370518) main:   src_ep          = 10[0m
+[0;32mI (370518) main:   dst_ep          = 1[0m
+[0;32mI (370518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (370528) main:   profile_id      = 0x0104[0m
+[0;32mI (370528) main:   frame_control   = 0x10[0m
+[0;32mI (370538) main:   manuf_code      = 0x0000[0m
+[0;32mI (370538) main:   tsn             = 0x3E[0m
+[0;32mI (370538) main:   rssi            = -47 dBm[0m
+[0;32mI (370548) main:   cmd_id          = 0x0B[0m
+[0;32mI (370548) main: out:[0m
+[0;32mI (370548) main:  result = 0xFE[0m
+[1;31mE (370558) main: zcl callback[0m
+[1;31mE (370568) main: callback_id = 8[0m
+[0;32mI (370568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (370568) main: info:[0m
+[0;32mI (370568) main:  status = 0x00[0m
+[0;32mI (370568) main:  dst_ep = 1[0m
+[0;32mI (370568) main:  cluster_id = 0xFC00[0m
+[0;32mI (370578) main:  cluster_role = 0x01[0m
+[0;32mI (370578) main: in:[0m
+[0;32mI (370578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (370588) main:   status_code     = 0x81[0m
+[0;32mI (370588) main: header:[0m
+[0;32mI (370588) main: addr type = 2[0m
+[0;32mI (370598) main:   src_addr        = 0x0000[0m
+[0;32mI (370598) main:   dst_addr        = 0x715A[0m
+[0;32mI (370598) main:   src_ep          = 10[0m
+[0;32mI (370608) main:   dst_ep          = 1[0m
+[0;32mI (370608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (370608) main:   profile_id      = 0x0104[0m
+[0;32mI (370618) main:   frame_control   = 0x10[0m
+[0;32mI (370618) main:   manuf_code      = 0x0000[0m
+[0;32mI (370628) main:   tsn             = 0x3F[0m
+[0;32mI (370628) main:   rssi            = -47 dBm[0m
+[0;32mI (370628) main:   cmd_id          = 0x0B[0m
+[0;32mI (370638) main: out:[0m
+[0;32mI (370638) main:  result = 0xFE[0m
+[1;31mE (380408) main: temp: 24.67[0m
+[1;31mE (380408) main: hum: 56.59[0m
+[1;31mE (380408) main: end node network address:29018[0m
+[1;31mE (380408) main: set attr state = 0[0m
+[0;32mI (380408) main: manual report ret = 0x0000[0m
+[1;31mE (380468) main: zcl callback[0m
+[1;31mE (380468) main: callback_id = 8[0m
+[0;32mI (380468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (380468) main: info:[0m
+[0;32mI (380468) main:  status = 0x00[0m
+[0;32mI (380478) main:  dst_ep = 1[0m
+[0;32mI (380478) main:  cluster_id = 0xFC00[0m
+[0;32mI (380478) main:  cluster_role = 0x01[0m
+[0;32mI (380488) main: in:[0m
+[0;32mI (380488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (380488) main:   status_code     = 0x81[0m
+[0;32mI (380498) main: header:[0m
+[0;32mI (380498) main: addr type = 2[0m
+[0;32mI (380498) main:   src_addr        = 0x0000[0m
+[0;32mI (380498) main:   dst_addr        = 0x715A[0m
+[0;32mI (380508) main:   src_ep          = 10[0m
+[0;32mI (380508) main:   dst_ep          = 1[0m
+[0;32mI (380518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (380518) main:   profile_id      = 0x0104[0m
+[0;32mI (380518) main:   frame_control   = 0x10[0m
+[0;32mI (380528) main:   manuf_code      = 0x0000[0m
+[0;32mI (380528) main:   tsn             = 0x40[0m
+[0;32mI (380528) main:   rssi            = -41 dBm[0m
+[0;32mI (380538) main:   cmd_id          = 0x0B[0m
+[0;32mI (380538) main: out:[0m
+[0;32mI (380538) main:  result = 0xFE[0m
+[1;31mE (380558) main: zcl callback[0m
+[1;31mE (380558) main: callback_id = 8[0m
+[0;32mI (380558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (380558) main: info:[0m
+[0;32mI (380558) main:  status = 0x00[0m
+[0;32mI (380558) main:  dst_ep = 1[0m
+[0;32mI (380568) main:  cluster_id = 0xFC00[0m
+[0;32mI (380568) main:  cluster_role = 0x01[0m
+[0;32mI (380568) main: in:[0m
+[0;32mI (380578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (380578) main:   status_code     = 0x81[0m
+[0;32mI (380578) main: header:[0m
+[0;32mI (380578) main: addr type = 2[0m
+[0;32mI (380588) main:   src_addr        = 0x0000[0m
+[0;32mI (380588) main:   dst_addr        = 0x715A[0m
+[0;32mI (380598) main:   src_ep          = 10[0m
+[0;32mI (380598) main:   dst_ep          = 1[0m
+[0;32mI (380598) main:   cluster_id      = 0xFC00[0m
+[0;32mI (380608) main:   profile_id      = 0x0104[0m
+[0;32mI (380608) main:   frame_control   = 0x10[0m
+[0;32mI (380608) main:   manuf_code      = 0x0000[0m
+[0;32mI (380618) main:   tsn             = 0x41[0m
+[0;32mI (380618) main:   rssi            = -41 dBm[0m
+[0;32mI (380628) main:   cmd_id          = 0x0B[0m
+[0;32mI (380628) main: out:[0m
+[0;32mI (380628) main:  result = 0xFE[0m
+[1;31mE (390408) main: temp: 24.67[0m
+[1;31mE (390408) main: hum: 56.61[0m
+[1;31mE (390408) main: end node network address:29018[0m
+[1;31mE (390408) main: set attr state = 0[0m
+[0;32mI (390408) main: manual report ret = 0x0000[0m
+[1;31mE (390478) main: zcl callback[0m
+[1;31mE (390478) main: callback_id = 8[0m
+[0;32mI (390478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (390478) main: info:[0m
+[0;32mI (390478) main:  status = 0x00[0m
+[0;32mI (390488) main:  dst_ep = 1[0m
+[0;32mI (390488) main:  cluster_id = 0xFC00[0m
+[0;32mI (390488) main:  cluster_role = 0x01[0m
+[0;32mI (390488) main: in:[0m
+[0;32mI (390498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (390498) main:   status_code     = 0x81[0m
+[0;32mI (390498) main: header:[0m
+[0;32mI (390508) main: addr type = 2[0m
+[0;32mI (390508) main:   src_addr        = 0x0000[0m
+[0;32mI (390508) main:   dst_addr        = 0x715A[0m
+[0;32mI (390518) main:   src_ep          = 10[0m
+[0;32mI (390518) main:   dst_ep          = 1[0m
+[0;32mI (390518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (390528) main:   profile_id      = 0x0104[0m
+[0;32mI (390528) main:   frame_control   = 0x10[0m
+[0;32mI (390538) main:   manuf_code      = 0x0000[0m
+[0;32mI (390538) main:   tsn             = 0x42[0m
+[0;32mI (390538) main:   rssi            = -39 dBm[0m
+[0;32mI (390548) main:   cmd_id          = 0x0B[0m
+[0;32mI (390548) main: out:[0m
+[0;32mI (390548) main:  result = 0xFE[0m
+[1;31mE (400408) main: temp: 24.64[0m
+[1;31mE (400408) main: hum: 56.64[0m
+[1;31mE (400408) main: end node network address:29018[0m
+[1;31mE (400408) main: set attr state = 0[0m
+[0;32mI (400408) main: manual report ret = 0x0000[0m
+[1;31mE (400458) main: zcl callback[0m
+[1;31mE (400458) main: callback_id = 8[0m
+[0;32mI (400458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (400458) main: info:[0m
+[0;32mI (400458) main:  status = 0x00[0m
+[0;32mI (400458) main:  dst_ep = 1[0m
+[0;32mI (400458) main:  cluster_id = 0xFC00[0m
+[0;32mI (400468) main:  cluster_role = 0x01[0m
+[0;32mI (400468) main: in:[0m
+[0;32mI (400468) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (400478) main:   status_code     = 0x81[0m
+[0;32mI (400478) main: header:[0m
+[0;32mI (400478) main: addr type = 2[0m
+[0;32mI (400488) main:   src_addr        = 0x0000[0m
+[0;32mI (400488) main:   dst_addr        = 0x715A[0m
+[0;32mI (400488) main:   src_ep          = 10[0m
+[0;32mI (400498) main:   dst_ep          = 1[0m
+[0;32mI (400498) main:   cluster_id      = 0xFC00[0m
+[0;32mI (400498) main:   profile_id      = 0x0104[0m
+[0;32mI (400508) main:   frame_control   = 0x10[0m
+[0;32mI (400508) main:   manuf_code      = 0x0000[0m
+[0;32mI (400518) main:   tsn             = 0x43[0m
+[0;32mI (400518) main:   rssi            = -40 dBm[0m
+[0;32mI (400518) main:   cmd_id          = 0x0B[0m
+[0;32mI (400528) main: out:[0m
+[0;32mI (400528) main:  result = 0xFE[0m
+[1;31mE (400538) main: zcl callback[0m
+[1;31mE (400538) main: callback_id = 8[0m
+[0;32mI (400538) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (400538) main: info:[0m
+[0;32mI (400548) main:  status = 0x00[0m
+[0;32mI (400548) main:  dst_ep = 1[0m
+[0;32mI (400548) main:  cluster_id = 0xFC00[0m
+[0;32mI (400548) main:  cluster_role = 0x01[0m
+[0;32mI (400558) main: in:[0m
+[0;32mI (400558) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (400558) main:   status_code     = 0x81[0m
+[0;32mI (400568) main: header:[0m
+[0;32mI (400568) main: addr type = 2[0m
+[0;32mI (400568) main:   src_addr        = 0x0000[0m
+[0;32mI (400578) main:   dst_addr        = 0x715A[0m
+[0;32mI (400578) main:   src_ep          = 10[0m
+[0;32mI (400578) main:   dst_ep          = 1[0m
+[0;32mI (400588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (400588) main:   profile_id      = 0x0104[0m
+[0;32mI (400598) main:   frame_control   = 0x10[0m
+[0;32mI (400598) main:   manuf_code      = 0x0000[0m
+[0;32mI (400598) main:   tsn             = 0x44[0m
+[0;32mI (400608) main:   rssi            = -41 dBm[0m
+[0;32mI (400608) main:   cmd_id          = 0x0B[0m
+[0;32mI (400608) main: out:[0m
+[0;32mI (400618) main:  result = 0xFE[0m
+[1;31mE (410408) main: temp: 24.65[0m
+[1;31mE (410408) main: hum: 56.68[0m
+[1;31mE (410408) main: end node network address:29018[0m
+[1;31mE (410408) main: set attr state = 0[0m
+[0;32mI (410408) main: manual report ret = 0x0000[0m
+[1;31mE (410488) main: zcl callback[0m
+[1;31mE (410488) main: callback_id = 8[0m
+[0;32mI (410488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (410488) main: info:[0m
+[0;32mI (410488) main:  status = 0x00[0m
+[0;32mI (410498) main:  dst_ep = 1[0m
+[0;32mI (410498) main:  cluster_id = 0xFC00[0m
+[0;32mI (410498) main:  cluster_role = 0x01[0m
+[0;32mI (410508) main: in:[0m
+[0;32mI (410508) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (410508) main:   status_code     = 0x81[0m
+[0;32mI (410508) main: header:[0m
+[0;32mI (410518) main: addr type = 2[0m
+[0;32mI (410518) main:   src_addr        = 0x0000[0m
+[0;32mI (410518) main:   dst_addr        = 0x715A[0m
+[0;32mI (410528) main:   src_ep          = 10[0m
+[0;32mI (410528) main:   dst_ep          = 1[0m
+[0;32mI (410528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (410538) main:   profile_id      = 0x0104[0m
+[0;32mI (410538) main:   frame_control   = 0x10[0m
+[0;32mI (410548) main:   manuf_code      = 0x0000[0m
+[0;32mI (410548) main:   tsn             = 0x45[0m
+[0;32mI (410548) main:   rssi            = -41 dBm[0m
+[0;32mI (410558) main:   cmd_id          = 0x0B[0m
+[0;32mI (410558) main: out:[0m
+[0;32mI (410558) main:  result = 0xFE[0m
+[1;31mE (410578) main: zcl callback[0m
+[1;31mE (410578) main: callback_id = 8[0m
+[0;32mI (410578) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (410578) main: info:[0m
+[0;32mI (410578) main:  status = 0x00[0m
+[0;32mI (410578) main:  dst_ep = 1[0m
+[0;32mI (410588) main:  cluster_id = 0xFC00[0m
+[0;32mI (410588) main:  cluster_role = 0x01[0m
+[0;32mI (410588) main: in:[0m
+[0;32mI (410588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (410598) main:   status_code     = 0x81[0m
+[0;32mI (410598) main: header:[0m
+[0;32mI (410598) main: addr type = 2[0m
+[0;32mI (410608) main:   src_addr        = 0x0000[0m
+[0;32mI (410608) main:   dst_addr        = 0x715A[0m
+[0;32mI (410608) main:   src_ep          = 10[0m
+[0;32mI (410618) main:   dst_ep          = 1[0m
+[0;32mI (410618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (410628) main:   profile_id      = 0x0104[0m
+[0;32mI (410628) main:   frame_control   = 0x10[0m
+[0;32mI (410628) main:   manuf_code      = 0x0000[0m
+[0;32mI (410638) main:   tsn             = 0x46[0m
+[0;32mI (410638) main:   rssi            = -41 dBm[0m
+[0;32mI (410648) main:   cmd_id          = 0x0B[0m
+[0;32mI (410648) main: out:[0m
+[0;32mI (410648) main:  result = 0xFE[0m
+[1;31mE (420408) main: temp: 24.67[0m
+[1;31mE (420408) main: hum: 56.85[0m
+[1;31mE (420408) main: end node network address:29018[0m
+[1;31mE (420408) main: set attr state = 0[0m
+[0;32mI (420408) main: manual report ret = 0x0000[0m
+[1;31mE (420478) main: zcl callback[0m
+[1;31mE (420478) main: callback_id = 8[0m
+[0;32mI (420478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (420478) main: info:[0m
+[0;32mI (420478) main:  status = 0x00[0m
+[0;32mI (420488) main:  dst_ep = 1[0m
+[0;32mI (420488) main:  cluster_id = 0xFC00[0m
+[0;32mI (420488) main:  cluster_role = 0x01[0m
+[0;32mI (420498) main: in:[0m
+[0;32mI (420498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (420498) main:   status_code     = 0x81[0m
+[0;32mI (420508) main: header:[0m
+[0;32mI (420508) main: addr type = 2[0m
+[0;32mI (420508) main:   src_addr        = 0x0000[0m
+[0;32mI (420508) main:   dst_addr        = 0x715A[0m
+[0;32mI (420518) main:   src_ep          = 10[0m
+[0;32mI (420518) main:   dst_ep          = 1[0m
+[0;32mI (420518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (420528) main:   profile_id      = 0x0104[0m
+[0;32mI (420528) main:   frame_control   = 0x10[0m
+[0;32mI (420538) main:   manuf_code      = 0x0000[0m
+[0;32mI (420538) main:   tsn             = 0x47[0m
+[0;32mI (420538) main:   rssi            = -39 dBm[0m
+[0;32mI (420548) main:   cmd_id          = 0x0B[0m
+[0;32mI (420548) main: out:[0m
+[0;32mI (420548) main:  result = 0xFE[0m
+[1;31mE (420568) main: zcl callback[0m
+[1;31mE (420568) main: callback_id = 8[0m
+[0;32mI (420568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (420568) main: info:[0m
+[0;32mI (420568) main:  status = 0x00[0m
+[0;32mI (420568) main:  dst_ep = 1[0m
+[0;32mI (420578) main:  cluster_id = 0xFC00[0m
+[0;32mI (420578) main:  cluster_role = 0x01[0m
+[0;32mI (420578) main: in:[0m
+[0;32mI (420578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (420588) main:   status_code     = 0x81[0m
+[0;32mI (420588) main: header:[0m
+[0;32mI (420588) main: addr type = 2[0m
+[0;32mI (420598) main:   src_addr        = 0x0000[0m
+[0;32mI (420598) main:   dst_addr        = 0x715A[0m
+[0;32mI (420608) main:   src_ep          = 10[0m
+[0;32mI (420608) main:   dst_ep          = 1[0m
+[0;32mI (420608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (420618) main:   profile_id      = 0x0104[0m
+[0;32mI (420618) main:   frame_control   = 0x10[0m
+[0;32mI (420618) main:   manuf_code      = 0x0000[0m
+[0;32mI (420628) main:   tsn             = 0x48[0m
+[0;32mI (420628) main:   rssi            = -39 dBm[0m
+[0;32mI (420638) main:   cmd_id          = 0x0B[0m
+[0;32mI (420638) main: out:[0m
+[0;32mI (420638) main:  result = 0xFE[0m
+[1;31mE (430408) main: temp: 24.67[0m
+[1;31mE (430408) main: hum: 56.81[0m
+[1;31mE (430408) main: end node network address:29018[0m
+[1;31mE (430408) main: set attr state = 0[0m
+[0;32mI (430408) main: manual report ret = 0x0000[0m
+[1;31mE (430478) main: zcl callback[0m
+[1;31mE (430478) main: callback_id = 8[0m
+[0;32mI (430478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (430478) main: info:[0m
+[0;32mI (430478) main:  status = 0x00[0m
+[0;32mI (430488) main:  dst_ep = 1[0m
+[0;32mI (430488) main:  cluster_id = 0xFC00[0m
+[0;32mI (430488) main:  cluster_role = 0x01[0m
+[0;32mI (430498) main: in:[0m
+[0;32mI (430498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (430498) main:   status_code     = 0x81[0m
+[0;32mI (430508) main: header:[0m
+[0;32mI (430508) main: addr type = 2[0m
+[0;32mI (430508) main:   src_addr        = 0x0000[0m
+[0;32mI (430508) main:   dst_addr        = 0x715A[0m
+[0;32mI (430518) main:   src_ep          = 10[0m
+[0;32mI (430518) main:   dst_ep          = 1[0m
+[0;32mI (430528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (430528) main:   profile_id      = 0x0104[0m
+[0;32mI (430528) main:   frame_control   = 0x10[0m
+[0;32mI (430538) main:   manuf_code      = 0x0000[0m
+[0;32mI (430538) main:   tsn             = 0x49[0m
+[0;32mI (430538) main:   rssi            = -39 dBm[0m
+[0;32mI (430548) main:   cmd_id          = 0x0B[0m
+[0;32mI (430548) main: out:[0m
+[0;32mI (430548) main:  result = 0xFE[0m
+[1;31mE (440408) main: temp: 24.68[0m
+[1;31mE (440408) main: hum: 56.66[0m
+[1;31mE (440408) main: end node network address:29018[0m
+[1;31mE (440408) main: set attr state = 0[0m
+[0;32mI (440408) main: manual report ret = 0x0000[0m
+[1;31mE (440458) main: zcl callback[0m
+[1;31mE (440458) main: callback_id = 8[0m
+[0;32mI (440458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (440458) main: info:[0m
+[0;32mI (440458) main:  status = 0x00[0m
+[0;32mI (440458) main:  dst_ep = 1[0m
+[0;32mI (440468) main:  cluster_id = 0xFC00[0m
+[0;32mI (440468) main:  cluster_role = 0x01[0m
+[0;32mI (440468) main: in:[0m
+[0;32mI (440478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (440478) main:   status_code     = 0x81[0m
+[0;32mI (440478) main: header:[0m
+[0;32mI (440488) main: addr type = 2[0m
+[0;32mI (440488) main:   src_addr        = 0x0000[0m
+[0;32mI (440488) main:   dst_addr        = 0x715A[0m
+[0;32mI (440498) main:   src_ep          = 10[0m
+[0;32mI (440498) main:   dst_ep          = 1[0m
+[0;32mI (440498) main:   cluster_id      = 0xFC00[0m
+[0;32mI (440508) main:   profile_id      = 0x0104[0m
+[0;32mI (440508) main:   frame_control   = 0x10[0m
+[0;32mI (440508) main:   manuf_code      = 0x0000[0m
+[0;32mI (440518) main:   tsn             = 0x4A[0m
+[0;32mI (440518) main:   rssi            = -40 dBm[0m
+[0;32mI (440528) main:   cmd_id          = 0x0B[0m
+[0;32mI (440528) main: out:[0m
+[0;32mI (440528) main:  result = 0xFE[0m
+[1;31mE (440538) main: zcl callback[0m
+[1;31mE (440538) main: callback_id = 8[0m
+[0;32mI (440538) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (440548) main: info:[0m
+[0;32mI (440548) main:  status = 0x00[0m
+[0;32mI (440548) main:  dst_ep = 1[0m
+[0;32mI (440548) main:  cluster_id = 0xFC00[0m
+[0;32mI (440558) main:  cluster_role = 0x01[0m
+[0;32mI (440558) main: in:[0m
+[0;32mI (440558) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (440568) main:   status_code     = 0x81[0m
+[0;32mI (440568) main: header:[0m
+[0;32mI (440568) main: addr type = 2[0m
+[0;32mI (440578) main:   src_addr        = 0x0000[0m
+[0;32mI (440578) main:   dst_addr        = 0x715A[0m
+[0;32mI (440578) main:   src_ep          = 10[0m
+[0;32mI (440588) main:   dst_ep          = 1[0m
+[0;32mI (440588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (440588) main:   profile_id      = 0x0104[0m
+[0;32mI (440598) main:   frame_control   = 0x10[0m
+[0;32mI (440598) main:   manuf_code      = 0x0000[0m
+[0;32mI (440608) main:   tsn             = 0x4B[0m
+[0;32mI (440608) main:   rssi            = -41 dBm[0m
+[0;32mI (440608) main:   cmd_id          = 0x0B[0m
+[0;32mI (440618) main: out:[0m
+[0;32mI (440618) main:  result = 0xFE[0m
+[1;31mE (450408) main: temp: 24.66[0m
+[1;31mE (450408) main: hum: 56.68[0m
+[1;31mE (450408) main: end node network address:29018[0m
+[1;31mE (450408) main: set attr state = 0[0m
+[0;32mI (450408) main: manual report ret = 0x0000[0m
+[1;31mE (450458) main: zcl callback[0m
+[1;31mE (450458) main: callback_id = 8[0m
+[0;32mI (450458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (450458) main: info:[0m
+[0;32mI (450468) main:  status = 0x00[0m
+[0;32mI (450468) main:  dst_ep = 1[0m
+[0;32mI (450468) main:  cluster_id = 0xFC00[0m
+[0;32mI (450468) main:  cluster_role = 0x01[0m
+[0;32mI (450478) main: in:[0m
+[0;32mI (450478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (450478) main:   status_code     = 0x81[0m
+[0;32mI (450488) main: header:[0m
+[0;32mI (450488) main: addr type = 2[0m
+[0;32mI (450488) main:   src_addr        = 0x0000[0m
+[0;32mI (450498) main:   dst_addr        = 0x715A[0m
+[0;32mI (450498) main:   src_ep          = 10[0m
+[0;32mI (450498) main:   dst_ep          = 1[0m
+[0;32mI (450508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (450508) main:   profile_id      = 0x0104[0m
+[0;32mI (450508) main:   frame_control   = 0x10[0m
+[0;32mI (450518) main:   manuf_code      = 0x0000[0m
+[0;32mI (450518) main:   tsn             = 0x4C[0m
+[0;32mI (450528) main:   rssi            = -44 dBm[0m
+[0;32mI (450528) main:   cmd_id          = 0x0B[0m
+[0;32mI (450528) main: out:[0m
+[0;32mI (450538) main:  result = 0xFE[0m
+[1;31mE (450548) main: zcl callback[0m
+[1;31mE (450548) main: callback_id = 8[0m
+[0;32mI (450548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (450548) main: info:[0m
+[0;32mI (450548) main:  status = 0x00[0m
+[0;32mI (450558) main:  dst_ep = 1[0m
+[0;32mI (450558) main:  cluster_id = 0xFC00[0m
+[0;32mI (450558) main:  cluster_role = 0x01[0m
+[0;32mI (450558) main: in:[0m
+[0;32mI (450568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (450568) main:   status_code     = 0x81[0m
+[0;32mI (450568) main: header:[0m
+[0;32mI (450578) main: addr type = 2[0m
+[0;32mI (450578) main:   src_addr        = 0x0000[0m
+[0;32mI (450578) main:   dst_addr        = 0x715A[0m
+[0;32mI (450588) main:   src_ep          = 10[0m
+[0;32mI (450588) main:   dst_ep          = 1[0m
+[0;32mI (450588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (450598) main:   profile_id      = 0x0104[0m
+[0;32mI (450598) main:   frame_control   = 0x10[0m
+[0;32mI (450608) main:   manuf_code      = 0x0000[0m
+[0;32mI (450608) main:   tsn             = 0x4D[0m
+[0;32mI (450608) main:   rssi            = -44 dBm[0m
+[0;32mI (450618) main:   cmd_id          = 0x0B[0m
+[0;32mI (450618) main: out:[0m
+[0;32mI (450618) main:  result = 0xFE[0m
+[1;31mE (460408) main: temp: 24.69[0m
+[1;31mE (460408) main: hum: 56.66[0m
+[1;31mE (460408) main: end node network address:29018[0m
+[1;31mE (460408) main: set attr state = 0[0m
+[0;32mI (460408) main: manual report ret = 0x0000[0m
+[1;31mE (460448) main: zcl callback[0m
+[1;31mE (460448) main: callback_id = 8[0m
+[0;32mI (460448) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (460448) main: info:[0m
+[0;32mI (460448) main:  status = 0x00[0m
+[0;32mI (460448) main:  dst_ep = 1[0m
+[0;32mI (460458) main:  cluster_id = 0xFC00[0m
+[0;32mI (460458) main:  cluster_role = 0x01[0m
+[0;32mI (460458) main: in:[0m
+[0;32mI (460468) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (460468) main:   status_code     = 0x81[0m
+[0;32mI (460468) main: header:[0m
+[0;32mI (460468) main: addr type = 2[0m
+[0;32mI (460478) main:   src_addr        = 0x0000[0m
+[0;32mI (460478) main:   dst_addr        = 0x715A[0m
+[0;32mI (460488) main:   src_ep          = 10[0m
+[0;32mI (460488) main:   dst_ep          = 1[0m
+[0;32mI (460488) main:   cluster_id      = 0xFC00[0m
+[0;32mI (460498) main:   profile_id      = 0x0104[0m
+[0;32mI (460498) main:   frame_control   = 0x10[0m
+[0;32mI (460498) main:   manuf_code      = 0x0000[0m
+[0;32mI (460508) main:   tsn             = 0x4E[0m
+[0;32mI (460508) main:   rssi            = -43 dBm[0m
+[0;32mI (460518) main:   cmd_id          = 0x0B[0m
+[0;32mI (460518) main: out:[0m
+[0;32mI (460518) main:  result = 0xFE[0m
+[1;31mE (460528) main: zcl callback[0m
+[1;31mE (460528) main: callback_id = 8[0m
+[0;32mI (460528) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (460538) main: info:[0m
+[0;32mI (460538) main:  status = 0x00[0m
+[0;32mI (460538) main:  dst_ep = 1[0m
+[0;32mI (460538) main:  cluster_id = 0xFC00[0m
+[0;32mI (460548) main:  cluster_role = 0x01[0m
+[0;32mI (460548) main: in:[0m
+[0;32mI (460548) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (460558) main:   status_code     = 0x81[0m
+[0;32mI (460558) main: header:[0m
+[0;32mI (460558) main: addr type = 2[0m
+[0;32mI (460558) main:   src_addr        = 0x0000[0m
+[0;32mI (460568) main:   dst_addr        = 0x715A[0m
+[0;32mI (460568) main:   src_ep          = 10[0m
+[0;32mI (460578) main:   dst_ep          = 1[0m
+[0;32mI (460578) main:   cluster_id      = 0xFC00[0m
+[0;32mI (460578) main:   profile_id      = 0x0104[0m
+[0;32mI (460588) main:   frame_control   = 0x10[0m
+[0;32mI (460588) main:   manuf_code      = 0x0000[0m
+[0;32mI (460598) main:   tsn             = 0x4F[0m
+[0;32mI (460598) main:   rssi            = -44 dBm[0m
+[0;32mI (460598) main:   cmd_id          = 0x0B[0m
+[0;32mI (460608) main: out:[0m
+[0;32mI (460608) main:  result = 0xFE[0m
+[1;31mE (470408) main: temp: 24.70[0m
+[1;31mE (470408) main: hum: 56.64[0m
+[1;31mE (470408) main: end node network address:29018[0m
+[1;31mE (470408) main: set attr state = 0[0m
+[0;32mI (470408) main: manual report ret = 0x0000[0m
+[1;31mE (470458) main: zcl callback[0m
+[1;31mE (470458) main: callback_id = 8[0m
+[0;32mI (470458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (470458) main: info:[0m
+[0;32mI (470458) main:  status = 0x00[0m
+[0;32mI (470468) main:  dst_ep = 1[0m
+[0;32mI (470468) main:  cluster_id = 0xFC00[0m
+[0;32mI (470468) main:  cluster_role = 0x01[0m
+[0;32mI (470478) main: in:[0m
+[0;32mI (470478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (470478) main:   status_code     = 0x81[0m
+[0;32mI (470488) main: header:[0m
+[0;32mI (470488) main: addr type = 2[0m
+[0;32mI (470488) main:   src_addr        = 0x0000[0m
+[0;32mI (470498) main:   dst_addr        = 0x715A[0m
+[0;32mI (470498) main:   src_ep          = 10[0m
+[0;32mI (470498) main:   dst_ep          = 1[0m
+[0;32mI (470508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (470508) main:   profile_id      = 0x0104[0m
+[0;32mI (470508) main:   frame_control   = 0x10[0m
+[0;32mI (470518) main:   manuf_code      = 0x0000[0m
+[0;32mI (470518) main:   tsn             = 0x50[0m
+[0;32mI (470528) main:   rssi            = -41 dBm[0m
+[0;32mI (470528) main:   cmd_id          = 0x0B[0m
+[0;32mI (470528) main: out:[0m
+[0;32mI (470538) main:  result = 0xFE[0m
+[1;31mE (470548) main: zcl callback[0m
+[1;31mE (470548) main: callback_id = 8[0m
+[0;32mI (470548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (470548) main: info:[0m
+[0;32mI (470548) main:  status = 0x00[0m
+[0;32mI (470548) main:  dst_ep = 1[0m
+[0;32mI (470558) main:  cluster_id = 0xFC00[0m
+[0;32mI (470558) main:  cluster_role = 0x01[0m
+[0;32mI (470558) main: in:[0m
+[0;32mI (470568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (470568) main:   status_code     = 0x81[0m
+[0;32mI (470568) main: header:[0m
+[0;32mI (470578) main: addr type = 2[0m
+[0;32mI (470578) main:   src_addr        = 0x0000[0m
+[0;32mI (470578) main:   dst_addr        = 0x715A[0m
+[0;32mI (470588) main:   src_ep          = 10[0m
+[0;32mI (470588) main:   dst_ep          = 1[0m
+[0;32mI (470588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (470598) main:   profile_id      = 0x0104[0m
+[0;32mI (470598) main:   frame_control   = 0x10[0m
+[0;32mI (470598) main:   manuf_code      = 0x0000[0m
+[0;32mI (470608) main:   tsn             = 0x51[0m
+[0;32mI (470608) main:   rssi            = -42 dBm[0m
+[0;32mI (470618) main:   cmd_id          = 0x0B[0m
+[0;32mI (470618) main: out:[0m
+[0;32mI (470618) main:  result = 0xFE[0m
+[1;31mE (480408) main: temp: 24.72[0m
+[1;31mE (480408) main: hum: 56.63[0m
+[1;31mE (480408) main: end node network address:29018[0m
+[1;31mE (480408) main: set attr state = 0[0m
+[0;32mI (480408) main: manual report ret = 0x0000[0m
+[1;31mE (480498) main: zcl callback[0m
+[1;31mE (480498) main: callback_id = 8[0m
+[0;32mI (480498) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (480498) main: info:[0m
+[0;32mI (480498) main:  status = 0x00[0m
+[0;32mI (480508) main:  dst_ep = 1[0m
+[0;32mI (480508) main:  cluster_id = 0xFC00[0m
+[0;32mI (480508) main:  cluster_role = 0x01[0m
+[0;32mI (480518) main: in:[0m
+[0;32mI (480518) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (480518) main:   status_code     = 0x81[0m
+[0;32mI (480528) main: header:[0m
+[0;32mI (480528) main: addr type = 2[0m
+[0;32mI (480528) main:   src_addr        = 0x0000[0m
+[0;32mI (480538) main:   dst_addr        = 0x715A[0m
+[0;32mI (480538) main:   src_ep          = 10[0m
+[0;32mI (480538) main:   dst_ep          = 1[0m
+[0;32mI (480548) main:   cluster_id      = 0xFC00[0m
+[0;32mI (480548) main:   profile_id      = 0x0104[0m
+[0;32mI (480548) main:   frame_control   = 0x10[0m
+[0;32mI (480558) main:   manuf_code      = 0x0000[0m
+[0;32mI (480558) main:   tsn             = 0x52[0m
+[0;32mI (480568) main:   rssi            = -39 dBm[0m
+[0;32mI (480568) main:   cmd_id          = 0x0B[0m
+[0;32mI (480568) main: out:[0m
+[0;32mI (480578) main:  result = 0xFE[0m
+[1;31mE (480588) main: zcl callback[0m
+[1;31mE (480588) main: callback_id = 8[0m
+[0;32mI (480588) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (480588) main: info:[0m
+[0;32mI (480588) main:  status = 0x00[0m
+[0;32mI (480588) main:  dst_ep = 1[0m
+[0;32mI (480598) main:  cluster_id = 0xFC00[0m
+[0;32mI (480598) main:  cluster_role = 0x01[0m
+[0;32mI (480598) main: in:[0m
+[0;32mI (480608) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (480608) main:   status_code     = 0x81[0m
+[0;32mI (480608) main: header:[0m
+[0;32mI (480618) main: addr type = 2[0m
+[0;32mI (480618) main:   src_addr        = 0x0000[0m
+[0;32mI (480618) main:   dst_addr        = 0x715A[0m
+[0;32mI (480628) main:   src_ep          = 10[0m
+[0;32mI (480628) main:   dst_ep          = 1[0m
+[0;32mI (480628) main:   cluster_id      = 0xFC00[0m
+[0;32mI (480638) main:   profile_id      = 0x0104[0m
+[0;32mI (480638) main:   frame_control   = 0x10[0m
+[0;32mI (480648) main:   manuf_code      = 0x0000[0m
+[0;32mI (480648) main:   tsn             = 0x53[0m
+[0;32mI (480648) main:   rssi            = -39 dBm[0m
+[0;32mI (480658) main:   cmd_id          = 0x0B[0m
+[0;32mI (480658) main: out:[0m
+[0;32mI (480658) main:  result = 0xFE[0m
+[1;31mE (490408) main: temp: 24.72[0m
+[1;31mE (490408) main: hum: 56.59[0m
+[1;31mE (490408) main: end node network address:29018[0m
+[1;31mE (490408) main: set attr state = 0[0m
+[0;32mI (490408) main: manual report ret = 0x0000[0m
+[1;31mE (490468) main: zcl callback[0m
+[1;31mE (490468) main: callback_id = 8[0m
+[0;32mI (490468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (490468) main: info:[0m
+[0;32mI (490468) main:  status = 0x00[0m
+[0;32mI (490478) main:  dst_ep = 1[0m
+[0;32mI (490478) main:  cluster_id = 0xFC00[0m
+[0;32mI (490478) main:  cluster_role = 0x01[0m
+[0;32mI (490488) main: in:[0m
+[0;32mI (490488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (490488) main:   status_code     = 0x81[0m
+[0;32mI (490498) main: header:[0m
+[0;32mI (490498) main: addr type = 2[0m
+[0;32mI (490498) main:   src_addr        = 0x0000[0m
+[0;32mI (490508) main:   dst_addr        = 0x715A[0m
+[0;32mI (490508) main:   src_ep          = 10[0m
+[0;32mI (490508) main:   dst_ep          = 1[0m
+[0;32mI (490518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (490518) main:   profile_id      = 0x0104[0m
+[0;32mI (490518) main:   frame_control   = 0x10[0m
+[0;32mI (490528) main:   manuf_code      = 0x0000[0m
+[0;32mI (490528) main:   tsn             = 0x54[0m
+[0;32mI (490538) main:   rssi            = -41 dBm[0m
+[0;32mI (490538) main:   cmd_id          = 0x0B[0m
+[0;32mI (490538) main: out:[0m
+[0;32mI (490548) main:  result = 0xFE[0m
+[1;31mE (500408) main: temp: 24.72[0m
+[1;31mE (500408) main: hum: 56.61[0m
+[1;31mE (500408) main: end node network address:29018[0m
+[1;31mE (500408) main: set attr state = 0[0m
+[0;32mI (500408) main: manual report ret = 0x0000[0m
+[1;31mE (500468) main: zcl callback[0m
+[1;31mE (500468) main: callback_id = 8[0m
+[0;32mI (500468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (500468) main: info:[0m
+[0;32mI (500478) main:  status = 0x00[0m
+[0;32mI (500478) main:  dst_ep = 1[0m
+[0;32mI (500478) main:  cluster_id = 0xFC00[0m
+[0;32mI (500478) main:  cluster_role = 0x01[0m
+[0;32mI (500488) main: in:[0m
+[0;32mI (500488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (500488) main:   status_code     = 0x81[0m
+[0;32mI (500498) main: header:[0m
+[0;32mI (500498) main: addr type = 2[0m
+[0;32mI (500498) main:   src_addr        = 0x0000[0m
+[0;32mI (500508) main:   dst_addr        = 0x715A[0m
+[0;32mI (500508) main:   src_ep          = 10[0m
+[0;32mI (500508) main:   dst_ep          = 1[0m
+[0;32mI (500518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (500518) main:   profile_id      = 0x0104[0m
+[0;32mI (500518) main:   frame_control   = 0x10[0m
+[0;32mI (500528) main:   manuf_code      = 0x0000[0m
+[0;32mI (500528) main:   tsn             = 0x55[0m
+[0;32mI (500538) main:   rssi            = -40 dBm[0m
+[0;32mI (500538) main:   cmd_id          = 0x0B[0m
+[0;32mI (500538) main: out:[0m
+[0;32mI (500548) main:  result = 0xFE[0m
+[1;31mE (510408) main: temp: 24.74[0m
+[1;31mE (510408) main: hum: 56.57[0m
+[1;31mE (510408) main: end node network address:29018[0m
+[1;31mE (510408) main: set attr state = 0[0m
+[0;32mI (510408) main: manual report ret = 0x0000[0m
+[1;31mE (510468) main: zcl callback[0m
+[1;31mE (510468) main: callback_id = 8[0m
+[0;32mI (510468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (510468) main: info:[0m
+[0;32mI (510478) main:  status = 0x00[0m
+[0;32mI (510478) main:  dst_ep = 1[0m
+[0;32mI (510478) main:  cluster_id = 0xFC00[0m
+[0;32mI (510478) main:  cluster_role = 0x01[0m
+[0;32mI (510488) main: in:[0m
+[0;32mI (510488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (510488) main:   status_code     = 0x81[0m
+[0;32mI (510498) main: header:[0m
+[0;32mI (510498) main: addr type = 2[0m
+[0;32mI (510498) main:   src_addr        = 0x0000[0m
+[0;32mI (510508) main:   dst_addr        = 0x715A[0m
+[0;32mI (510508) main:   src_ep          = 10[0m
+[0;32mI (510508) main:   dst_ep          = 1[0m
+[0;32mI (510518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (510518) main:   profile_id      = 0x0104[0m
+[0;32mI (510528) main:   frame_control   = 0x10[0m
+[0;32mI (510528) main:   manuf_code      = 0x0000[0m
+[0;32mI (510528) main:   tsn             = 0x56[0m
+[0;32mI (510538) main:   rssi            = -42 dBm[0m
+[0;32mI (510538) main:   cmd_id          = 0x0B[0m
+[0;32mI (510538) main: out:[0m
+[0;32mI (510548) main:  result = 0xFE[0m
+[1;31mE (510558) main: zcl callback[0m
+[1;31mE (510558) main: callback_id = 8[0m
+[0;32mI (510558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (510558) main: info:[0m
+[0;32mI (510558) main:  status = 0x00[0m
+[0;32mI (510568) main:  dst_ep = 1[0m
+[0;32mI (510568) main:  cluster_id = 0xFC00[0m
+[0;32mI (510568) main:  cluster_role = 0x01[0m
+[0;32mI (510578) main: in:[0m
+[0;32mI (510578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (510578) main:   status_code     = 0x81[0m
+[0;32mI (510578) main: header:[0m
+[0;32mI (510588) main: addr type = 2[0m
+[0;32mI (510588) main:   src_addr        = 0x0000[0m
+[0;32mI (510588) main:   dst_addr        = 0x715A[0m
+[0;32mI (510598) main:   src_ep          = 10[0m
+[0;32mI (510598) main:   dst_ep          = 1[0m
+[0;32mI (510598) main:   cluster_id      = 0xFC00[0m
+[0;32mI (510608) main:   profile_id      = 0x0104[0m
+[0;32mI (510608) main:   frame_control   = 0x10[0m
+[0;32mI (510618) main:   manuf_code      = 0x0000[0m
+[0;32mI (510618) main:   tsn             = 0x57[0m
+[0;32mI (510618) main:   rssi            = -42 dBm[0m
+[0;32mI (510628) main:   cmd_id          = 0x0B[0m
+[0;32mI (510628) main: out:[0m
+[0;32mI (510628) main:  result = 0xFE[0m
+[1;31mE (520408) main: temp: 24.75[0m
+[1;31mE (520408) main: hum: 56.56[0m
+[1;31mE (520408) main: end node network address:29018[0m
+[1;31mE (520408) main: set attr state = 0[0m
+[0;32mI (520408) main: manual report ret = 0x0000[0m
+[1;31mE (520498) main: zcl callback[0m
+[1;31mE (520498) main: callback_id = 8[0m
+[0;32mI (520498) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (520498) main: info:[0m
+[0;32mI (520508) main:  status = 0x00[0m
+[0;32mI (520508) main:  dst_ep = 1[0m
+[0;32mI (520508) main:  cluster_id = 0xFC00[0m
+[0;32mI (520508) main:  cluster_role = 0x01[0m
+[0;32mI (520518) main: in:[0m
+[0;32mI (520518) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (520518) main:   status_code     = 0x81[0m
+[0;32mI (520528) main: header:[0m
+[0;32mI (520528) main: addr type = 2[0m
+[0;32mI (520528) main:   src_addr        = 0x0000[0m
+[0;32mI (520538) main:   dst_addr        = 0x715A[0m
+[0;32mI (520538) main:   src_ep          = 10[0m
+[0;32mI (520538) main:   dst_ep          = 1[0m
+[0;32mI (520548) main:   cluster_id      = 0xFC00[0m
+[0;32mI (520548) main:   profile_id      = 0x0104[0m
+[0;32mI (520548) main:   frame_control   = 0x10[0m
+[0;32mI (520558) main:   manuf_code      = 0x0000[0m
+[0;32mI (520558) main:   tsn             = 0x58[0m
+[0;32mI (520568) main:   rssi            = -41 dBm[0m
+[0;32mI (520568) main:   cmd_id          = 0x0B[0m
+[0;32mI (520568) main: out:[0m
+[0;32mI (520578) main:  result = 0xFE[0m
+[1;31mE (520588) main: zcl callback[0m
+[1;31mE (520588) main: callback_id = 8[0m
+[0;32mI (520588) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (520588) main: info:[0m
+[0;32mI (520588) main:  status = 0x00[0m
+[0;32mI (520598) main:  dst_ep = 1[0m
+[0;32mI (520598) main:  cluster_id = 0xFC00[0m
+[0;32mI (520598) main:  cluster_role = 0x01[0m
+[0;32mI (520608) main: in:[0m
+[0;32mI (520608) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (520608) main:   status_code     = 0x81[0m
+[0;32mI (520608) main: header:[0m
+[0;32mI (520618) main: addr type = 2[0m
+[0;32mI (520618) main:   src_addr        = 0x0000[0m
+[0;32mI (520618) main:   dst_addr        = 0x715A[0m
+[0;32mI (520628) main:   src_ep          = 10[0m
+[0;32mI (520628) main:   dst_ep          = 1[0m
+[0;32mI (520628) main:   cluster_id      = 0xFC00[0m
+[0;32mI (520638) main:   profile_id      = 0x0104[0m
+[0;32mI (520638) main:   frame_control   = 0x10[0m
+[0;32mI (520648) main:   manuf_code      = 0x0000[0m
+[0;32mI (520648) main:   tsn             = 0x59[0m
+[0;32mI (520648) main:   rssi            = -41 dBm[0m
+[0;32mI (520658) main:   cmd_id          = 0x0B[0m
+[0;32mI (520658) main: out:[0m
+[0;32mI (520658) main:  result = 0xFE[0m
+[1;31mE (530408) main: temp: 24.75[0m
+[1;31mE (530408) main: hum: 56.56[0m
+[1;31mE (530408) main: end node network address:29018[0m
+[1;31mE (530408) main: set attr state = 0[0m
+[0;32mI (530408) main: manual report ret = 0x0000[0m
+[1;31mE (530478) main: zcl callback[0m
+[1;31mE (530478) main: callback_id = 8[0m
+[0;32mI (530478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (530478) main: info:[0m
+[0;32mI (530488) main:  status = 0x00[0m
+[0;32mI (530488) main:  dst_ep = 1[0m
+[0;32mI (530488) main:  cluster_id = 0xFC00[0m
+[0;32mI (530488) main:  cluster_role = 0x01[0m
+[0;32mI (530498) main: in:[0m
+[0;32mI (530498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (530498) main:   status_code     = 0x81[0m
+[0;32mI (530508) main: header:[0m
+[0;32mI (530508) main: addr type = 2[0m
+[0;32mI (530508) main:   src_addr        = 0x0000[0m
+[0;32mI (530518) main:   dst_addr        = 0x715A[0m
+[0;32mI (530518) main:   src_ep          = 10[0m
+[0;32mI (530518) main:   dst_ep          = 1[0m
+[0;32mI (530528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (530528) main:   profile_id      = 0x0104[0m
+[0;32mI (530538) main:   frame_control   = 0x10[0m
+[0;32mI (530538) main:   manuf_code      = 0x0000[0m
+[0;32mI (530538) main:   tsn             = 0x5A[0m
+[0;32mI (530548) main:   rssi            = -43 dBm[0m
+[0;32mI (530548) main:   cmd_id          = 0x0B[0m
+[0;32mI (530548) main: out:[0m
+[0;32mI (530558) main:  result = 0xFE[0m
+[1;31mE (540408) main: temp: 24.76[0m
+[1;31mE (540408) main: hum: 56.54[0m
+[1;31mE (540408) main: end node network address:29018[0m
+[1;31mE (540408) main: set attr state = 0[0m
+[0;32mI (540408) main: manual report ret = 0x0000[0m
+[1;31mE (540468) main: zcl callback[0m
+[1;31mE (540468) main: callback_id = 8[0m
+[0;32mI (540468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (540468) main: info:[0m
+[0;32mI (540478) main:  status = 0x00[0m
+[0;32mI (540478) main:  dst_ep = 1[0m
+[0;32mI (540478) main:  cluster_id = 0xFC00[0m
+[0;32mI (540488) main:  cluster_role = 0x01[0m
+[0;32mI (540488) main: in:[0m
+[0;32mI (540488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (540488) main:   status_code     = 0x81[0m
+[0;32mI (540498) main: header:[0m
+[0;32mI (540498) main: addr type = 2[0m
+[0;32mI (540498) main:   src_addr        = 0x0000[0m
+[0;32mI (540508) main:   dst_addr        = 0x715A[0m
+[0;32mI (540508) main:   src_ep          = 10[0m
+[0;32mI (540508) main:   dst_ep          = 1[0m
+[0;32mI (540518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (540518) main:   profile_id      = 0x0104[0m
+[0;32mI (540528) main:   frame_control   = 0x10[0m
+[0;32mI (540528) main:   manuf_code      = 0x0000[0m
+[0;32mI (540528) main:   tsn             = 0x5B[0m
+[0;32mI (540538) main:   rssi            = -40 dBm[0m
+[0;32mI (540538) main:   cmd_id          = 0x0B[0m
+[0;32mI (540538) main: out:[0m
+[0;32mI (540548) main:  result = 0xFE[0m
+[1;31mE (540558) main: zcl callback[0m
+[1;31mE (540558) main: callback_id = 8[0m
+[0;32mI (540558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (540558) main: info:[0m
+[0;32mI (540558) main:  status = 0x00[0m
+[0;32mI (540568) main:  dst_ep = 1[0m
+[0;32mI (540568) main:  cluster_id = 0xFC00[0m
+[0;32mI (540568) main:  cluster_role = 0x01[0m
+[0;32mI (540578) main: in:[0m
+[0;32mI (540578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (540578) main:   status_code     = 0x81[0m
+[0;32mI (540588) main: header:[0m
+[0;32mI (540588) main: addr type = 2[0m
+[0;32mI (540588) main:   src_addr        = 0x0000[0m
+[0;32mI (540588) main:   dst_addr        = 0x715A[0m
+[0;32mI (540598) main:   src_ep          = 10[0m
+[0;32mI (540598) main:   dst_ep          = 1[0m
+[0;32mI (540608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (540608) main:   profile_id      = 0x0104[0m
+[0;32mI (540608) main:   frame_control   = 0x10[0m
+[0;32mI (540618) main:   manuf_code      = 0x0000[0m
+[0;32mI (540618) main:   tsn             = 0x5C[0m
+[0;32mI (540628) main:   rssi            = -39 dBm[0m
+[0;32mI (540628) main:   cmd_id          = 0x0B[0m
+[0;32mI (540628) main: out:[0m
+[0;32mI (540628) main:  result = 0xFE[0m
+[1;31mE (550408) main: temp: 24.76[0m
+[1;31mE (550408) main: hum: 56.51[0m
+[1;31mE (550408) main: end node network address:29018[0m
+[1;31mE (550408) main: set attr state = 0[0m
+[0;32mI (550408) main: manual report ret = 0x0000[0m
+[1;31mE (550468) main: zcl callback[0m
+[1;31mE (550468) main: callback_id = 8[0m
+[0;32mI (550468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (550468) main: info:[0m
+[0;32mI (550478) main:  status = 0x00[0m
+[0;32mI (550478) main:  dst_ep = 1[0m
+[0;32mI (550478) main:  cluster_id = 0xFC00[0m
+[0;32mI (550488) main:  cluster_role = 0x01[0m
+[0;32mI (550488) main: in:[0m
+[0;32mI (550488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (550488) main:   status_code     = 0x81[0m
+[0;32mI (550498) main: header:[0m
+[0;32mI (550498) main: addr type = 2[0m
+[0;32mI (550498) main:   src_addr        = 0x0000[0m
+[0;32mI (550508) main:   dst_addr        = 0x715A[0m
+[0;32mI (550508) main:   src_ep          = 10[0m
+[0;32mI (550508) main:   dst_ep          = 1[0m
+[0;32mI (550518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (550518) main:   profile_id      = 0x0104[0m
+[0;32mI (550528) main:   frame_control   = 0x10[0m
+[0;32mI (550528) main:   manuf_code      = 0x0000[0m
+[0;32mI (550528) main:   tsn             = 0x5D[0m
+[0;32mI (550538) main:   rssi            = -37 dBm[0m
+[0;32mI (550538) main:   cmd_id          = 0x0B[0m
+[0;32mI (550538) main: out:[0m
+[0;32mI (550548) main:  result = 0xFE[0m
+[1;31mE (560408) main: temp: 24.78[0m
+[1;31mE (560408) main: hum: 56.49[0m
+[1;31mE (560408) main: end node network address:29018[0m
+[1;31mE (560408) main: set attr state = 0[0m
+[0;32mI (560408) main: manual report ret = 0x0000[0m
+[1;31mE (560458) main: zcl callback[0m
+[1;31mE (560458) main: callback_id = 8[0m
+[0;32mI (560458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (560458) main: info:[0m
+[0;32mI (560458) main:  status = 0x00[0m
+[0;32mI (560468) main:  dst_ep = 1[0m
+[0;32mI (560468) main:  cluster_id = 0xFC00[0m
+[0;32mI (560468) main:  cluster_role = 0x01[0m
+[0;32mI (560478) main: in:[0m
+[0;32mI (560478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (560478) main:   status_code     = 0x81[0m
+[0;32mI (560488) main: header:[0m
+[0;32mI (560488) main: addr type = 2[0m
+[0;32mI (560488) main:   src_addr        = 0x0000[0m
+[0;32mI (560498) main:   dst_addr        = 0x715A[0m
+[0;32mI (560498) main:   src_ep          = 10[0m
+[0;32mI (560498) main:   dst_ep          = 1[0m
+[0;32mI (560508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (560508) main:   profile_id      = 0x0104[0m
+[0;32mI (560508) main:   frame_control   = 0x10[0m
+[0;32mI (560518) main:   manuf_code      = 0x0000[0m
+[0;32mI (560518) main:   tsn             = 0x5E[0m
+[0;32mI (560528) main:   rssi            = -39 dBm[0m
+[0;32mI (560528) main:   cmd_id          = 0x0B[0m
+[0;32mI (560528) main: out:[0m
+[0;32mI (560538) main:  result = 0xFE[0m
+[1;31mE (560548) main: zcl callback[0m
+[1;31mE (560548) main: callback_id = 8[0m
+[0;32mI (560548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (560548) main: info:[0m
+[0;32mI (560548) main:  status = 0x00[0m
+[0;32mI (560548) main:  dst_ep = 1[0m
+[0;32mI (560558) main:  cluster_id = 0xFC00[0m
+[0;32mI (560558) main:  cluster_role = 0x01[0m
+[0;32mI (560558) main: in:[0m
+[0;32mI (560568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (560568) main:   status_code     = 0x81[0m
+[0;32mI (560568) main: header:[0m
+[0;32mI (560578) main: addr type = 2[0m
+[0;32mI (560578) main:   src_addr        = 0x0000[0m
+[0;32mI (560578) main:   dst_addr        = 0x715A[0m
+[0;32mI (560588) main:   src_ep          = 10[0m
+[0;32mI (560588) main:   dst_ep          = 1[0m
+[0;32mI (560588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (560598) main:   profile_id      = 0x0104[0m
+[0;32mI (560598) main:   frame_control   = 0x10[0m
+[0;32mI (560608) main:   manuf_code      = 0x0000[0m
+[0;32mI (560608) main:   tsn             = 0x5F[0m
+[0;32mI (560608) main:   rssi            = -38 dBm[0m
+[0;32mI (560618) main:   cmd_id          = 0x0B[0m
+[0;32mI (560618) main: out:[0m
+[0;32mI (560618) main:  result = 0xFE[0m
+[1;31mE (570408) main: temp: 24.79[0m
+[1;31mE (570408) main: hum: 56.48[0m
+[1;31mE (570408) main: end node network address:29018[0m
+[1;31mE (570408) main: set attr state = 0[0m
+[0;32mI (570408) main: manual report ret = 0x0000[0m
+[1;31mE (570468) main: zcl callback[0m
+[1;31mE (570468) main: callback_id = 8[0m
+[0;32mI (570468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (570468) main: info:[0m
+[0;32mI (570478) main:  status = 0x00[0m
+[0;32mI (570478) main:  dst_ep = 1[0m
+[0;32mI (570478) main:  cluster_id = 0xFC00[0m
+[0;32mI (570488) main:  cluster_role = 0x01[0m
+[0;32mI (570488) main: in:[0m
+[0;32mI (570488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (570488) main:   status_code     = 0x81[0m
+[0;32mI (570498) main: header:[0m
+[0;32mI (570498) main: addr type = 2[0m
+[0;32mI (570498) main:   src_addr        = 0x0000[0m
+[0;32mI (570508) main:   dst_addr        = 0x715A[0m
+[0;32mI (570508) main:   src_ep          = 10[0m
+[0;32mI (570508) main:   dst_ep          = 1[0m
+[0;32mI (570518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (570518) main:   profile_id      = 0x0104[0m
+[0;32mI (570528) main:   frame_control   = 0x10[0m
+[0;32mI (570528) main:   manuf_code      = 0x0000[0m
+[0;32mI (570528) main:   tsn             = 0x60[0m
+[0;32mI (570538) main:   rssi            = -38 dBm[0m
+[0;32mI (570538) main:   cmd_id          = 0x0B[0m
+[0;32mI (570548) main: out:[0m
+[0;32mI (570548) main:  result = 0xFE[0m
+[1;31mE (570558) main: zcl callback[0m
+[1;31mE (570558) main: callback_id = 8[0m
+[0;32mI (570558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (570558) main: info:[0m
+[0;32mI (570558) main:  status = 0x00[0m
+[0;32mI (570568) main:  dst_ep = 1[0m
+[0;32mI (570568) main:  cluster_id = 0xFC00[0m
+[0;32mI (570568) main:  cluster_role = 0x01[0m
+[0;32mI (570578) main: in:[0m
+[0;32mI (570578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (570578) main:   status_code     = 0x81[0m
+[0;32mI (570588) main: header:[0m
+[0;32mI (570588) main: addr type = 2[0m
+[0;32mI (570588) main:   src_addr        = 0x0000[0m
+[0;32mI (570588) main:   dst_addr        = 0x715A[0m
+[0;32mI (570598) main:   src_ep          = 10[0m
+[0;32mI (570598) main:   dst_ep          = 1[0m
+[0;32mI (570608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (570608) main:   profile_id      = 0x0104[0m
+[0;32mI (570608) main:   frame_control   = 0x10[0m
+[0;32mI (570618) main:   manuf_code      = 0x0000[0m
+[0;32mI (570618) main:   tsn             = 0x61[0m
+[0;32mI (570618) main:   rssi            = -39 dBm[0m
+[0;32mI (570628) main:   cmd_id          = 0x0B[0m
+[0;32mI (570628) main: out:[0m
+[0;32mI (570628) main:  result = 0xFE[0m
+[1;31mE (580408) main: temp: 24.80[0m
+[1;31mE (580408) main: hum: 56.44[0m
+[1;31mE (580408) main: end node network address:29018[0m
+[1;31mE (580408) main: set attr state = 0[0m
+[0;32mI (580408) main: manual report ret = 0x0000[0m
+[1;31mE (580478) main: zcl callback[0m
+[1;31mE (580478) main: callback_id = 8[0m
+[0;32mI (580478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (580488) main: info:[0m
+[0;32mI (580488) main:  status = 0x00[0m
+[0;32mI (580488) main:  dst_ep = 1[0m
+[0;32mI (580488) main:  cluster_id = 0xFC00[0m
+[0;32mI (580498) main:  cluster_role = 0x01[0m
+[0;32mI (580498) main: in:[0m
+[0;32mI (580498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (580498) main:   status_code     = 0x81[0m
+[0;32mI (580508) main: header:[0m
+[0;32mI (580508) main: addr type = 2[0m
+[0;32mI (580508) main:   src_addr        = 0x0000[0m
+[0;32mI (580518) main:   dst_addr        = 0x715A[0m
+[0;32mI (580518) main:   src_ep          = 10[0m
+[0;32mI (580528) main:   dst_ep          = 1[0m
+[0;32mI (580528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (580528) main:   profile_id      = 0x0104[0m
+[0;32mI (580538) main:   frame_control   = 0x10[0m
+[0;32mI (580538) main:   manuf_code      = 0x0000[0m
+[0;32mI (580538) main:   tsn             = 0x62[0m
+[0;32mI (580548) main:   rssi            = -44 dBm[0m
+[0;32mI (580548) main:   cmd_id          = 0x0B[0m
+[0;32mI (580558) main: out:[0m
+[0;32mI (580558) main:  result = 0xFE[0m
+[1;31mE (580568) main: zcl callback[0m
+[1;31mE (580568) main: callback_id = 8[0m
+[0;32mI (580568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (580568) main: info:[0m
+[0;32mI (580568) main:  status = 0x00[0m
+[0;32mI (580578) main:  dst_ep = 1[0m
+[0;32mI (580578) main:  cluster_id = 0xFC00[0m
+[0;32mI (580578) main:  cluster_role = 0x01[0m
+[0;32mI (580588) main: in:[0m
+[0;32mI (580588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (580588) main:   status_code     = 0x81[0m
+[0;32mI (580598) main: header:[0m
+[0;32mI (580598) main: addr type = 2[0m
+[0;32mI (580598) main:   src_addr        = 0x0000[0m
+[0;32mI (580598) main:   dst_addr        = 0x715A[0m
+[0;32mI (580608) main:   src_ep          = 10[0m
+[0;32mI (580608) main:   dst_ep          = 1[0m
+[0;32mI (580618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (580618) main:   profile_id      = 0x0104[0m
+[0;32mI (580618) main:   frame_control   = 0x10[0m
+[0;32mI (580628) main:   manuf_code      = 0x0000[0m
+[0;32mI (580628) main:   tsn             = 0x63[0m
+[0;32mI (580628) main:   rssi            = -45 dBm[0m
+[0;32mI (580638) main:   cmd_id          = 0x0B[0m
+[0;32mI (580638) main: out:[0m
+[0;32mI (580638) main:  result = 0xFE[0m
+[1;31mE (590408) main: temp: 24.81[0m
+[1;31mE (590408) main: hum: 56.43[0m
+[1;31mE (590408) main: end node network address:29018[0m
+[1;31mE (590408) main: set attr state = 0[0m
+[0;32mI (590408) main: manual report ret = 0x0000[0m
+[1;31mE (590478) main: zcl callback[0m
+[1;31mE (590478) main: callback_id = 8[0m
+[0;32mI (590478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (590488) main: info:[0m
+[0;32mI (590488) main:  status = 0x00[0m
+[0;32mI (590488) main:  dst_ep = 1[0m
+[0;32mI (590488) main:  cluster_id = 0xFC00[0m
+[0;32mI (590498) main:  cluster_role = 0x01[0m
+[0;32mI (590498) main: in:[0m
+[0;32mI (590498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (590508) main:   status_code     = 0x81[0m
+[0;32mI (590508) main: header:[0m
+[0;32mI (590508) main: addr type = 2[0m
+[0;32mI (590508) main:   src_addr        = 0x0000[0m
+[0;32mI (590518) main:   dst_addr        = 0x715A[0m
+[0;32mI (590518) main:   src_ep          = 10[0m
+[0;32mI (590528) main:   dst_ep          = 1[0m
+[0;32mI (590528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (590528) main:   profile_id      = 0x0104[0m
+[0;32mI (590538) main:   frame_control   = 0x10[0m
+[0;32mI (590538) main:   manuf_code      = 0x0000[0m
+[0;32mI (590538) main:   tsn             = 0x64[0m
+[0;32mI (590548) main:   rssi            = -42 dBm[0m
+[0;32mI (590548) main:   cmd_id          = 0x0B[0m
+[0;32mI (590558) main: out:[0m
+[0;32mI (590558) main:  result = 0xFE[0m
+[1;31mE (590568) main: zcl callback[0m
+[1;31mE (590568) main: callback_id = 8[0m
+[0;32mI (590568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (590568) main: info:[0m
+[0;32mI (590568) main:  status = 0x00[0m
+[0;32mI (590578) main:  dst_ep = 1[0m
+[0;32mI (590578) main:  cluster_id = 0xFC00[0m
+[0;32mI (590578) main:  cluster_role = 0x01[0m
+[0;32mI (590588) main: in:[0m
+[0;32mI (590588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (590588) main:   status_code     = 0x81[0m
+[0;32mI (590598) main: header:[0m
+[0;32mI (590598) main: addr type = 2[0m
+[0;32mI (590598) main:   src_addr        = 0x0000[0m
+[0;32mI (590598) main:   dst_addr        = 0x715A[0m
+[0;32mI (590608) main:   src_ep          = 10[0m
+[0;32mI (590608) main:   dst_ep          = 1[0m
+[0;32mI (590618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (590618) main:   profile_id      = 0x0104[0m
+[0;32mI (590618) main:   frame_control   = 0x10[0m
+[0;32mI (590628) main:   manuf_code      = 0x0000[0m
+[0;32mI (590628) main:   tsn             = 0x65[0m
+[0;32mI (590638) main:   rssi            = -42 dBm[0m
+[0;32mI (590638) main:   cmd_id          = 0x0B[0m
+[0;32mI (590638) main: out:[0m
+[0;32mI (590638) main:  result = 0xFE[0m
+[1;31mE (600408) main: temp: 24.80[0m
+[1;31mE (600408) main: hum: 56.41[0m
+[1;31mE (600408) main: end node network address:29018[0m
+[1;31mE (600408) main: set attr state = 0[0m
+[0;32mI (600408) main: manual report ret = 0x0000[0m
+[1;31mE (600458) main: zcl callback[0m
+[1;31mE (600458) main: callback_id = 8[0m
+[0;32mI (600458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (600458) main: info:[0m
+[0;32mI (600458) main:  status = 0x00[0m
+[0;32mI (600468) main:  dst_ep = 1[0m
+[0;32mI (600468) main:  cluster_id = 0xFC00[0m
+[0;32mI (600468) main:  cluster_role = 0x01[0m
+[0;32mI (600478) main: in:[0m
+[0;32mI (600478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (600478) main:   status_code     = 0x81[0m
+[0;32mI (600488) main: header:[0m
+[0;32mI (600488) main: addr type = 2[0m
+[0;32mI (600488) main:   src_addr        = 0x0000[0m
+[0;32mI (600498) main:   dst_addr        = 0x715A[0m
+[0;32mI (600498) main:   src_ep          = 10[0m
+[0;32mI (600498) main:   dst_ep          = 1[0m
+[0;32mI (600508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (600508) main:   profile_id      = 0x0104[0m
+[0;32mI (600508) main:   frame_control   = 0x10[0m
+[0;32mI (600518) main:   manuf_code      = 0x0000[0m
+[0;32mI (600518) main:   tsn             = 0x66[0m
+[0;32mI (600528) main:   rssi            = -44 dBm[0m
+[0;32mI (600528) main:   cmd_id          = 0x0B[0m
+[0;32mI (600528) main: out:[0m
+[0;32mI (600538) main:  result = 0xFE[0m
+[1;31mE (600548) main: zcl callback[0m
+[1;31mE (600548) main: callback_id = 8[0m
+[0;32mI (600548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (600548) main: info:[0m
+[0;32mI (600548) main:  status = 0x00[0m
+[0;32mI (600548) main:  dst_ep = 1[0m
+[0;32mI (600558) main:  cluster_id = 0xFC00[0m
+[0;32mI (600558) main:  cluster_role = 0x01[0m
+[0;32mI (600558) main: in:[0m
+[0;32mI (600568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (600568) main:   status_code     = 0x81[0m
+[0;32mI (600568) main: header:[0m
+[0;32mI (600578) main: addr type = 2[0m
+[0;32mI (600578) main:   src_addr        = 0x0000[0m
+[0;32mI (600578) main:   dst_addr        = 0x715A[0m
+[0;32mI (600588) main:   src_ep          = 10[0m
+[0;32mI (600588) main:   dst_ep          = 1[0m
+[0;32mI (600588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (600598) main:   profile_id      = 0x0104[0m
+[0;32mI (600598) main:   frame_control   = 0x10[0m
+[0;32mI (600608) main:   manuf_code      = 0x0000[0m
+[0;32mI (600608) main:   tsn             = 0x67[0m
+[0;32mI (600608) main:   rssi            = -44 dBm[0m
+[0;32mI (600618) main:   cmd_id          = 0x0B[0m
+[0;32mI (600618) main: out:[0m
+[0;32mI (600618) main:  result = 0xFE[0m
+[1;31mE (610408) main: temp: 24.80[0m
+[1;31mE (610408) main: hum: 56.40[0m
+[1;31mE (610408) main: end node network address:29018[0m
+[1;31mE (610408) main: set attr state = 0[0m
+[0;32mI (610408) main: manual report ret = 0x0000[0m
+[1;31mE (610478) main: zcl callback[0m
+[1;31mE (610478) main: callback_id = 8[0m
+[0;32mI (610488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (610488) main: info:[0m
+[0;32mI (610488) main:  status = 0x00[0m
+[0;32mI (610488) main:  dst_ep = 1[0m
+[0;32mI (610488) main:  cluster_id = 0xFC00[0m
+[0;32mI (610498) main:  cluster_role = 0x01[0m
+[0;32mI (610498) main: in:[0m
+[0;32mI (610498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (610508) main:   status_code     = 0x81[0m
+[0;32mI (610508) main: header:[0m
+[0;32mI (610508) main: addr type = 2[0m
+[0;32mI (610508) main:   src_addr        = 0x0000[0m
+[0;32mI (610518) main:   dst_addr        = 0x715A[0m
+[0;32mI (610518) main:   src_ep          = 10[0m
+[0;32mI (610528) main:   dst_ep          = 1[0m
+[0;32mI (610528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (610528) main:   profile_id      = 0x0104[0m
+[0;32mI (610538) main:   frame_control   = 0x10[0m
+[0;32mI (610538) main:   manuf_code      = 0x0000[0m
+[0;32mI (610538) main:   tsn             = 0x68[0m
+[0;32mI (610548) main:   rssi            = -44 dBm[0m
+[0;32mI (610548) main:   cmd_id          = 0x0B[0m
+[0;32mI (610558) main: out:[0m
+[0;32mI (610558) main:  result = 0xFE[0m
+[1;31mE (620408) main: temp: 24.82[0m
+[1;31mE (620408) main: hum: 56.40[0m
+[1;31mE (620408) main: end node network address:29018[0m
+[1;31mE (620408) main: set attr state = 0[0m
+[0;32mI (620408) main: manual report ret = 0x0000[0m
+[1;31mE (620458) main: zcl callback[0m
+[1;31mE (620458) main: callback_id = 8[0m
+[0;32mI (620458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (620458) main: info:[0m
+[0;32mI (620468) main:  status = 0x00[0m
+[0;32mI (620468) main:  dst_ep = 1[0m
+[0;32mI (620468) main:  cluster_id = 0xFC00[0m
+[0;32mI (620468) main:  cluster_role = 0x01[0m
+[0;32mI (620478) main: in:[0m
+[0;32mI (620478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (620478) main:   status_code     = 0x81[0m
+[0;32mI (620488) main: header:[0m
+[0;32mI (620488) main: addr type = 2[0m
+[0;32mI (620488) main:   src_addr        = 0x0000[0m
+[0;32mI (620498) main:   dst_addr        = 0x715A[0m
+[0;32mI (620498) main:   src_ep          = 10[0m
+[0;32mI (620498) main:   dst_ep          = 1[0m
+[0;32mI (620508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (620508) main:   profile_id      = 0x0104[0m
+[0;32mI (620508) main:   frame_control   = 0x10[0m
+[0;32mI (620518) main:   manuf_code      = 0x0000[0m
+[0;32mI (620518) main:   tsn             = 0x69[0m
+[0;32mI (620528) main:   rssi            = -44 dBm[0m
+[0;32mI (620528) main:   cmd_id          = 0x0B[0m
+[0;32mI (620528) main: out:[0m
+[0;32mI (620538) main:  result = 0xFE[0m
+[1;31mE (620548) main: zcl callback[0m
+[1;31mE (620548) main: callback_id = 8[0m
+[0;32mI (620548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (620548) main: info:[0m
+[0;32mI (620548) main:  status = 0x00[0m
+[0;32mI (620558) main:  dst_ep = 1[0m
+[0;32mI (620558) main:  cluster_id = 0xFC00[0m
+[0;32mI (620558) main:  cluster_role = 0x01[0m
+[0;32mI (620558) main: in:[0m
+[0;32mI (620568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (620568) main:   status_code     = 0x81[0m
+[0;32mI (620568) main: header:[0m
+[0;32mI (620578) main: addr type = 2[0m
+[0;32mI (620578) main:   src_addr        = 0x0000[0m
+[0;32mI (620578) main:   dst_addr        = 0x715A[0m
+[0;32mI (620588) main:   src_ep          = 10[0m
+[0;32mI (620588) main:   dst_ep          = 1[0m
+[0;32mI (620588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (620598) main:   profile_id      = 0x0104[0m
+[0;32mI (620598) main:   frame_control   = 0x10[0m
+[0;32mI (620608) main:   manuf_code      = 0x0000[0m
+[0;32mI (620608) main:   tsn             = 0x6A[0m
+[0;32mI (620608) main:   rssi            = -44 dBm[0m
+[0;32mI (620618) main:   cmd_id          = 0x0B[0m
+[0;32mI (620618) main: out:[0m
+[0;32mI (620618) main:  result = 0xFE[0m
+[1;31mE (630408) main: temp: 24.80[0m
+[1;31mE (630408) main: hum: 56.35[0m
+[1;31mE (630408) main: end node network address:29018[0m
+[1;31mE (630408) main: set attr state = 0[0m
+[0;32mI (630408) main: manual report ret = 0x0000[0m
+[1;31mE (630468) main: zcl callback[0m
+[1;31mE (630478) main: callback_id = 8[0m
+[0;32mI (630478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (630478) main: info:[0m
+[0;32mI (630478) main:  status = 0x00[0m
+[0;32mI (630478) main:  dst_ep = 1[0m
+[0;32mI (630478) main:  cluster_id = 0xFC00[0m
+[0;32mI (630488) main:  cluster_role = 0x01[0m
+[0;32mI (630488) main: in:[0m
+[0;32mI (630488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (630498) main:   status_code     = 0x81[0m
+[0;32mI (630498) main: header:[0m
+[0;32mI (630498) main: addr type = 2[0m
+[0;32mI (630498) main:   src_addr        = 0x0000[0m
+[0;32mI (630508) main:   dst_addr        = 0x715A[0m
+[0;32mI (630508) main:   src_ep          = 10[0m
+[0;32mI (630518) main:   dst_ep          = 1[0m
+[0;32mI (630518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (630518) main:   profile_id      = 0x0104[0m
+[0;32mI (630528) main:   frame_control   = 0x10[0m
+[0;32mI (630528) main:   manuf_code      = 0x0000[0m
+[0;32mI (630538) main:   tsn             = 0x6B[0m
+[0;32mI (630538) main:   rssi            = -43 dBm[0m
+[0;32mI (630538) main:   cmd_id          = 0x0B[0m
+[0;32mI (630548) main: out:[0m
+[0;32mI (630548) main:  result = 0xFE[0m
+[1;31mE (630558) main: zcl callback[0m
+[1;31mE (630558) main: callback_id = 8[0m
+[0;32mI (630558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (630558) main: info:[0m
+[0;32mI (630568) main:  status = 0x00[0m
+[0;32mI (630568) main:  dst_ep = 1[0m
+[0;32mI (630568) main:  cluster_id = 0xFC00[0m
+[0;32mI (630568) main:  cluster_role = 0x01[0m
+[0;32mI (630578) main: in:[0m
+[0;32mI (630578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (630578) main:   status_code     = 0x81[0m
+[0;32mI (630588) main: header:[0m
+[0;32mI (630588) main: addr type = 2[0m
+[0;32mI (630588) main:   src_addr        = 0x0000[0m
+[0;32mI (630598) main:   dst_addr        = 0x715A[0m
+[0;32mI (630598) main:   src_ep          = 10[0m
+[0;32mI (630598) main:   dst_ep          = 1[0m
+[0;32mI (630608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (630608) main:   profile_id      = 0x0104[0m
+[0;32mI (630608) main:   frame_control   = 0x10[0m
+[0;32mI (630618) main:   manuf_code      = 0x0000[0m
+[0;32mI (630618) main:   tsn             = 0x6C[0m
+[0;32mI (630628) main:   rssi            = -43 dBm[0m
+[0;32mI (630628) main:   cmd_id          = 0x0B[0m
+[0;32mI (630628) main: out:[0m
+[0;32mI (630638) main:  result = 0xFE[0m
+[1;31mE (640408) main: temp: 24.82[0m
+[1;31mE (640408) main: hum: 56.35[0m
+[1;31mE (640408) main: end node network address:29018[0m
+[1;31mE (640408) main: set attr state = 0[0m
+[0;32mI (640408) main: manual report ret = 0x0000[0m
+[1;31mE (640468) main: zcl callback[0m
+[1;31mE (640468) main: callback_id = 8[0m
+[0;32mI (640468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (640468) main: info:[0m
+[0;32mI (640468) main:  status = 0x00[0m
+[0;32mI (640468) main:  dst_ep = 1[0m
+[0;32mI (640468) main:  cluster_id = 0xFC00[0m
+[0;32mI (640478) main:  cluster_role = 0x01[0m
+[0;32mI (640478) main: in:[0m
+[0;32mI (640478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (640488) main:   status_code     = 0x81[0m
+[0;32mI (640488) main: header:[0m
+[0;32mI (640488) main: addr type = 2[0m
+[0;32mI (640498) main:   src_addr        = 0x0000[0m
+[0;32mI (640498) main:   dst_addr        = 0x715A[0m
+[0;32mI (640498) main:   src_ep          = 10[0m
+[0;32mI (640508) main:   dst_ep          = 1[0m
+[0;32mI (640508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (640508) main:   profile_id      = 0x0104[0m
+[0;32mI (640518) main:   frame_control   = 0x10[0m
+[0;32mI (640518) main:   manuf_code      = 0x0000[0m
+[0;32mI (640528) main:   tsn             = 0x6D[0m
+[0;32mI (640528) main:   rssi            = -43 dBm[0m
+[0;32mI (640528) main:   cmd_id          = 0x0B[0m
+[0;32mI (640538) main: out:[0m
+[0;32mI (640538) main:  result = 0xFE[0m
+[1;31mE (640548) main: zcl callback[0m
+[1;31mE (640548) main: callback_id = 8[0m
+[0;32mI (640548) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (640548) main: info:[0m
+[0;32mI (640558) main:  status = 0x00[0m
+[0;32mI (640558) main:  dst_ep = 1[0m
+[0;32mI (640558) main:  cluster_id = 0xFC00[0m
+[0;32mI (640568) main:  cluster_role = 0x01[0m
+[0;32mI (640568) main: in:[0m
+[0;32mI (640568) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (640568) main:   status_code     = 0x81[0m
+[0;32mI (640578) main: header:[0m
+[0;32mI (640578) main: addr type = 2[0m
+[0;32mI (640578) main:   src_addr        = 0x0000[0m
+[0;32mI (640588) main:   dst_addr        = 0x715A[0m
+[0;32mI (640588) main:   src_ep          = 10[0m
+[0;32mI (640588) main:   dst_ep          = 1[0m
+[0;32mI (640598) main:   cluster_id      = 0xFC00[0m
+[0;32mI (640598) main:   profile_id      = 0x0104[0m
+[0;32mI (640608) main:   frame_control   = 0x10[0m
+[0;32mI (640608) main:   manuf_code      = 0x0000[0m
+[0;32mI (640608) main:   tsn             = 0x6E[0m
+[0;32mI (640618) main:   rssi            = -43 dBm[0m
+[0;32mI (640618) main:   cmd_id          = 0x0B[0m
+[0;32mI (640618) main: out:[0m
+[0;32mI (640628) main:  result = 0xFE[0m
+[1;31mE (650408) main: temp: 24.82[0m
+[1;31mE (650408) main: hum: 56.39[0m
+[1;31mE (650408) main: end node network address:29018[0m
+[1;31mE (650408) main: set attr state = 0[0m
+[0;32mI (650408) main: manual report ret = 0x0000[0m
+[1;31mE (650488) main: zcl callback[0m
+[1;31mE (650488) main: callback_id = 8[0m
+[0;32mI (650488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (650488) main: info:[0m
+[0;32mI (650488) main:  status = 0x00[0m
+[0;32mI (650488) main:  dst_ep = 1[0m
+[0;32mI (650488) main:  cluster_id = 0xFC00[0m
+[0;32mI (650498) main:  cluster_role = 0x01[0m
+[0;32mI (650498) main: in:[0m
+[0;32mI (650498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (650508) main:   status_code     = 0x81[0m
+[0;32mI (650508) main: header:[0m
+[0;32mI (650508) main: addr type = 2[0m
+[0;32mI (650518) main:   src_addr        = 0x0000[0m
+[0;32mI (650518) main:   dst_addr        = 0x715A[0m
+[0;32mI (650518) main:   src_ep          = 10[0m
+[0;32mI (650528) main:   dst_ep          = 1[0m
+[0;32mI (650528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (650528) main:   profile_id      = 0x0104[0m
+[0;32mI (650538) main:   frame_control   = 0x10[0m
+[0;32mI (650538) main:   manuf_code      = 0x0000[0m
+[0;32mI (650548) main:   tsn             = 0x6F[0m
+[0;32mI (650548) main:   rssi            = -41 dBm[0m
+[0;32mI (650548) main:   cmd_id          = 0x0B[0m
+[0;32mI (650558) main: out:[0m
+[0;32mI (650558) main:  result = 0xFE[0m
+[1;31mE (660408) main: temp: 24.83[0m
+[1;31mE (660408) main: hum: 56.34[0m
+[1;31mE (660408) main: end node network address:29018[0m
+[1;31mE (660408) main: set attr state = 0[0m
+[0;32mI (660408) main: manual report ret = 0x0000[0m
+[1;31mE (660478) main: zcl callback[0m
+[1;31mE (660478) main: callback_id = 8[0m
+[0;32mI (660478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (660478) main: info:[0m
+[0;32mI (660478) main:  status = 0x00[0m
+[0;32mI (660478) main:  dst_ep = 1[0m
+[0;32mI (660478) main:  cluster_id = 0xFC00[0m
+[0;32mI (660488) main:  cluster_role = 0x01[0m
+[0;32mI (660488) main: in:[0m
+[0;32mI (660488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (660498) main:   status_code     = 0x81[0m
+[0;32mI (660498) main: header:[0m
+[0;32mI (660498) main: addr type = 2[0m
+[0;32mI (660508) main:   src_addr        = 0x0000[0m
+[0;32mI (660508) main:   dst_addr        = 0x715A[0m
+[0;32mI (660508) main:   src_ep          = 10[0m
+[0;32mI (660518) main:   dst_ep          = 1[0m
+[0;32mI (660518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (660518) main:   profile_id      = 0x0104[0m
+[0;32mI (660528) main:   frame_control   = 0x10[0m
+[0;32mI (660528) main:   manuf_code      = 0x0000[0m
+[0;32mI (660538) main:   tsn             = 0x70[0m
+[0;32mI (660538) main:   rssi            = -41 dBm[0m
+[0;32mI (660538) main:   cmd_id          = 0x0B[0m
+[0;32mI (660548) main: out:[0m
+[0;32mI (660548) main:  result = 0xFE[0m
+[1;31mE (660558) main: zcl callback[0m
+[1;31mE (660558) main: callback_id = 8[0m
+[0;32mI (660558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (660558) main: info:[0m
+[0;32mI (660568) main:  status = 0x00[0m
+[0;32mI (660568) main:  dst_ep = 1[0m
+[0;32mI (660568) main:  cluster_id = 0xFC00[0m
+[0;32mI (660568) main:  cluster_role = 0x01[0m
+[0;32mI (660578) main: in:[0m
+[0;32mI (660578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (660578) main:   status_code     = 0x81[0m
+[0;32mI (660588) main: header:[0m
+[0;32mI (660588) main: addr type = 2[0m
+[0;32mI (660588) main:   src_addr        = 0x0000[0m
+[0;32mI (660598) main:   dst_addr        = 0x715A[0m
+[0;32mI (660598) main:   src_ep          = 10[0m
+[0;32mI (660598) main:   dst_ep          = 1[0m
+[0;32mI (660608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (660608) main:   profile_id      = 0x0104[0m
+[0;32mI (660618) main:   frame_control   = 0x10[0m
+[0;32mI (660618) main:   manuf_code      = 0x0000[0m
+[0;32mI (660618) main:   tsn             = 0x71[0m
+[0;32mI (660628) main:   rssi            = -42 dBm[0m
+[0;32mI (660628) main:   cmd_id          = 0x0B[0m
+[0;32mI (660628) main: out:[0m
+[0;32mI (660638) main:  result = 0xFE[0m
+[1;31mE (670408) main: temp: 24.82[0m
+[1;31mE (670408) main: hum: 56.26[0m
+[1;31mE (670408) main: end node network address:29018[0m
+[1;31mE (670408) main: set attr state = 0[0m
+[0;32mI (670408) main: manual report ret = 0x0000[0m
+[1;31mE (670488) main: zcl callback[0m
+[1;31mE (670488) main: callback_id = 8[0m
+[0;32mI (670488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (670488) main: info:[0m
+[0;32mI (670488) main:  status = 0x00[0m
+[0;32mI (670488) main:  dst_ep = 1[0m
+[0;32mI (670488) main:  cluster_id = 0xFC00[0m
+[0;32mI (670498) main:  cluster_role = 0x01[0m
+[0;32mI (670498) main: in:[0m
+[0;32mI (670498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (670508) main:   status_code     = 0x81[0m
+[0;32mI (670508) main: header:[0m
+[0;32mI (670508) main: addr type = 2[0m
+[0;32mI (670518) main:   src_addr        = 0x0000[0m
+[0;32mI (670518) main:   dst_addr        = 0x715A[0m
+[0;32mI (670518) main:   src_ep          = 10[0m
+[0;32mI (670528) main:   dst_ep          = 1[0m
+[0;32mI (670528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (670528) main:   profile_id      = 0x0104[0m
+[0;32mI (670538) main:   frame_control   = 0x10[0m
+[0;32mI (670538) main:   manuf_code      = 0x0000[0m
+[0;32mI (670548) main:   tsn             = 0x72[0m
+[0;32mI (670548) main:   rssi            = -42 dBm[0m
+[0;32mI (670548) main:   cmd_id          = 0x0B[0m
+[0;32mI (670558) main: out:[0m
+[0;32mI (670558) main:  result = 0xFE[0m
+[1;31mE (670568) main: zcl callback[0m
+[1;31mE (670568) main: callback_id = 8[0m
+[0;32mI (670568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (670568) main: info:[0m
+[0;32mI (670578) main:  status = 0x00[0m
+[0;32mI (670578) main:  dst_ep = 1[0m
+[0;32mI (670578) main:  cluster_id = 0xFC00[0m
+[0;32mI (670588) main:  cluster_role = 0x01[0m
+[0;32mI (670588) main: in:[0m
+[0;32mI (670588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (670588) main:   status_code     = 0x81[0m
+[0;32mI (670598) main: header:[0m
+[0;32mI (670598) main: addr type = 2[0m
+[0;32mI (670598) main:   src_addr        = 0x0000[0m
+[0;32mI (670608) main:   dst_addr        = 0x715A[0m
+[0;32mI (670608) main:   src_ep          = 10[0m
+[0;32mI (670608) main:   dst_ep          = 1[0m
+[0;32mI (670618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (670618) main:   profile_id      = 0x0104[0m
+[0;32mI (670628) main:   frame_control   = 0x10[0m
+[0;32mI (670628) main:   manuf_code      = 0x0000[0m
+[0;32mI (670628) main:   tsn             = 0x73[0m
+[0;32mI (670638) main:   rssi            = -41 dBm[0m
+[0;32mI (670638) main:   cmd_id          = 0x0B[0m
+[0;32mI (670638) main: out:[0m
+[0;32mI (670648) main:  result = 0xFE[0m
+[1;31mE (680408) main: temp: 24.81[0m
+[1;31mE (680408) main: hum: 56.12[0m
+[1;31mE (680408) main: end node network address:29018[0m
+[1;31mE (680408) main: set attr state = 0[0m
+[0;32mI (680408) main: manual report ret = 0x0000[0m
+[1;31mE (680478) main: zcl callback[0m
+[1;31mE (680478) main: callback_id = 8[0m
+[0;32mI (680478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (680478) main: info:[0m
+[0;32mI (680478) main:  status = 0x00[0m
+[0;32mI (680478) main:  dst_ep = 1[0m
+[0;32mI (680478) main:  cluster_id = 0xFC00[0m
+[0;32mI (680488) main:  cluster_role = 0x01[0m
+[0;32mI (680488) main: in:[0m
+[0;32mI (680488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (680498) main:   status_code     = 0x81[0m
+[0;32mI (680498) main: header:[0m
+[0;32mI (680498) main: addr type = 2[0m
+[0;32mI (680508) main:   src_addr        = 0x0000[0m
+[0;32mI (680508) main:   dst_addr        = 0x715A[0m
+[0;32mI (680508) main:   src_ep          = 10[0m
+[0;32mI (680518) main:   dst_ep          = 1[0m
+[0;32mI (680518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (680518) main:   profile_id      = 0x0104[0m
+[0;32mI (680528) main:   frame_control   = 0x10[0m
+[0;32mI (680528) main:   manuf_code      = 0x0000[0m
+[0;32mI (680538) main:   tsn             = 0x74[0m
+[0;32mI (680538) main:   rssi            = -42 dBm[0m
+[0;32mI (680538) main:   cmd_id          = 0x0B[0m
+[0;32mI (680548) main: out:[0m
+[0;32mI (680548) main:  result = 0xFE[0m
+[1;31mE (680558) main: zcl callback[0m
+[1;31mE (680558) main: callback_id = 8[0m
+[0;32mI (680558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (680558) main: info:[0m
+[0;32mI (680568) main:  status = 0x00[0m
+[0;32mI (680568) main:  dst_ep = 1[0m
+[0;32mI (680568) main:  cluster_id = 0xFC00[0m
+[0;32mI (680578) main:  cluster_role = 0x01[0m
+[0;32mI (680578) main: in:[0m
+[0;32mI (680578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (680578) main:   status_code     = 0x81[0m
+[0;32mI (680588) main: header:[0m
+[0;32mI (680588) main: addr type = 2[0m
+[0;32mI (680588) main:   src_addr        = 0x0000[0m
+[0;32mI (680598) main:   dst_addr        = 0x715A[0m
+[0;32mI (680598) main:   src_ep          = 10[0m
+[0;32mI (680598) main:   dst_ep          = 1[0m
+[0;32mI (680608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (680608) main:   profile_id      = 0x0104[0m
+[0;32mI (680618) main:   frame_control   = 0x10[0m
+[0;32mI (680618) main:   manuf_code      = 0x0000[0m
+[0;32mI (680618) main:   tsn             = 0x75[0m
+[0;32mI (680628) main:   rssi            = -41 dBm[0m
+[0;32mI (680628) main:   cmd_id          = 0x0B[0m
+[0;32mI (680628) main: out:[0m
+[0;32mI (680638) main:  result = 0xFE[0m
+[1;31mE (690408) main: temp: 24.82[0m
+[1;31mE (690408) main: hum: 56.17[0m
+[1;31mE (690408) main: end node network address:29018[0m
+[1;31mE (690408) main: set attr state = 0[0m
+[0;32mI (690408) main: manual report ret = 0x0000[0m
+[1;31mE (690478) main: zcl callback[0m
+[1;31mE (690478) main: callback_id = 8[0m
+[0;32mI (690478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (690478) main: info:[0m
+[0;32mI (690478) main:  status = 0x00[0m
+[0;32mI (690478) main:  dst_ep = 1[0m
+[0;32mI (690478) main:  cluster_id = 0xFC00[0m
+[0;32mI (690488) main:  cluster_role = 0x01[0m
+[0;32mI (690488) main: in:[0m
+[0;32mI (690488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (690498) main:   status_code     = 0x81[0m
+[0;32mI (690498) main: header:[0m
+[0;32mI (690498) main: addr type = 2[0m
+[0;32mI (690508) main:   src_addr        = 0x0000[0m
+[0;32mI (690508) main:   dst_addr        = 0x715A[0m
+[0;32mI (690508) main:   src_ep          = 10[0m
+[0;32mI (690518) main:   dst_ep          = 1[0m
+[0;32mI (690518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (690518) main:   profile_id      = 0x0104[0m
+[0;32mI (690528) main:   frame_control   = 0x10[0m
+[0;32mI (690528) main:   manuf_code      = 0x0000[0m
+[0;32mI (690538) main:   tsn             = 0x76[0m
+[0;32mI (690538) main:   rssi            = -41 dBm[0m
+[0;32mI (690538) main:   cmd_id          = 0x0B[0m
+[0;32mI (690548) main: out:[0m
+[0;32mI (690548) main:  result = 0xFE[0m
+[1;31mE (690558) main: zcl callback[0m
+[1;31mE (690558) main: callback_id = 8[0m
+[0;32mI (690558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (690558) main: info:[0m
+[0;32mI (690568) main:  status = 0x00[0m
+[0;32mI (690568) main:  dst_ep = 1[0m
+[0;32mI (690568) main:  cluster_id = 0xFC00[0m
+[0;32mI (690578) main:  cluster_role = 0x01[0m
+[0;32mI (690578) main: in:[0m
+[0;32mI (690578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (690578) main:   status_code     = 0x81[0m
+[0;32mI (690588) main: header:[0m
+[0;32mI (690588) main: addr type = 2[0m
+[0;32mI (690588) main:   src_addr        = 0x0000[0m
+[0;32mI (690598) main:   dst_addr        = 0x715A[0m
+[0;32mI (690598) main:   src_ep          = 10[0m
+[0;32mI (690598) main:   dst_ep          = 1[0m
+[0;32mI (690608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (690608) main:   profile_id      = 0x0104[0m
+[0;32mI (690618) main:   frame_control   = 0x10[0m
+[0;32mI (690618) main:   manuf_code      = 0x0000[0m
+[0;32mI (690618) main:   tsn             = 0x77[0m
+[0;32mI (690628) main:   rssi            = -42 dBm[0m
+[0;32mI (690628) main:   cmd_id          = 0x0B[0m
+[0;32mI (690638) main: out:[0m
+[0;32mI (690638) main:  result = 0xFE[0m
+[1;31mE (700408) main: temp: 24.84[0m
+[1;31mE (700408) main: hum: 56.22[0m
+[1;31mE (700408) main: end node network address:29018[0m
+[1;31mE (700408) main: set attr state = 0[0m
+[0;32mI (700408) main: manual report ret = 0x0000[0m
+[1;31mE (700458) main: zcl callback[0m
+[1;31mE (700458) main: callback_id = 8[0m
+[0;32mI (700458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (700458) main: info:[0m
+[0;32mI (700458) main:  status = 0x00[0m
+[0;32mI (700458) main:  dst_ep = 1[0m
+[0;32mI (700468) main:  cluster_id = 0xFC00[0m
+[0;32mI (700468) main:  cluster_role = 0x01[0m
+[0;32mI (700468) main: in:[0m
+[0;32mI (700468) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (700478) main:   status_code     = 0x81[0m
+[0;32mI (700478) main: header:[0m
+[0;32mI (700478) main: addr type = 2[0m
+[0;32mI (700488) main:   src_addr        = 0x0000[0m
+[0;32mI (700488) main:   dst_addr        = 0x715A[0m
+[0;32mI (700488) main:   src_ep          = 10[0m
+[0;32mI (700498) main:   dst_ep          = 1[0m
+[0;32mI (700498) main:   cluster_id      = 0xFC00[0m
+[0;32mI (700508) main:   profile_id      = 0x0104[0m
+[0;32mI (700508) main:   frame_control   = 0x10[0m
+[0;32mI (700508) main:   manuf_code      = 0x0000[0m
+[0;32mI (700518) main:   tsn             = 0x78[0m
+[0;32mI (700518) main:   rssi            = -41 dBm[0m
+[0;32mI (700518) main:   cmd_id          = 0x0B[0m
+[0;32mI (700528) main: out:[0m
+[0;32mI (700528) main:  result = 0xFE[0m
+[1;31mE (700538) main: zcl callback[0m
+[1;31mE (700538) main: callback_id = 8[0m
+[0;32mI (700538) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (700538) main: info:[0m
+[0;32mI (700548) main:  status = 0x00[0m
+[0;32mI (700548) main:  dst_ep = 1[0m
+[0;32mI (700548) main:  cluster_id = 0xFC00[0m
+[0;32mI (700558) main:  cluster_role = 0x01[0m
+[0;32mI (700558) main: in:[0m
+[0;32mI (700558) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (700558) main:   status_code     = 0x81[0m
+[0;32mI (700568) main: header:[0m
+[0;32mI (700568) main: addr type = 2[0m
+[0;32mI (700568) main:   src_addr        = 0x0000[0m
+[0;32mI (700578) main:   dst_addr        = 0x715A[0m
+[0;32mI (700578) main:   src_ep          = 10[0m
+[0;32mI (700578) main:   dst_ep          = 1[0m
+[0;32mI (700588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (700588) main:   profile_id      = 0x0104[0m
+[0;32mI (700598) main:   frame_control   = 0x10[0m
+[0;32mI (700598) main:   manuf_code      = 0x0000[0m
+[0;32mI (700598) main:   tsn             = 0x79[0m
+[0;32mI (700608) main:   rssi            = -40 dBm[0m
+[0;32mI (700608) main:   cmd_id          = 0x0B[0m
+[0;32mI (700618) main: out:[0m
+[0;32mI (700618) main:  result = 0xFE[0m
+[1;31mE (710408) main: temp: 24.84[0m
+[1;31mE (710408) main: hum: 56.25[0m
+[1;31mE (710408) main: end node network address:29018[0m
+[1;31mE (710408) main: set attr state = 0[0m
+[0;32mI (710408) main: manual report ret = 0x0000[0m
+[1;31mE (710488) main: zcl callback[0m
+[1;31mE (710488) main: callback_id = 8[0m
+[0;32mI (710488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (710488) main: info:[0m
+[0;32mI (710488) main:  status = 0x00[0m
+[0;32mI (710488) main:  dst_ep = 1[0m
+[0;32mI (710498) main:  cluster_id = 0xFC00[0m
+[0;32mI (710498) main:  cluster_role = 0x01[0m
+[0;32mI (710498) main: in:[0m
+[0;32mI (710498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (710508) main:   status_code     = 0x81[0m
+[0;32mI (710508) main: header:[0m
+[0;32mI (710508) main: addr type = 2[0m
+[0;32mI (710518) main:   src_addr        = 0x0000[0m
+[0;32mI (710518) main:   dst_addr        = 0x715A[0m
+[0;32mI (710518) main:   src_ep          = 10[0m
+[0;32mI (710528) main:   dst_ep          = 1[0m
+[0;32mI (710528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (710538) main:   profile_id      = 0x0104[0m
+[0;32mI (710538) main:   frame_control   = 0x10[0m
+[0;32mI (710538) main:   manuf_code      = 0x0000[0m
+[0;32mI (710548) main:   tsn             = 0x7A[0m
+[0;32mI (710548) main:   rssi            = -41 dBm[0m
+[0;32mI (710548) main:   cmd_id          = 0x0B[0m
+[0;32mI (710558) main: out:[0m
+[0;32mI (710558) main:  result = 0xFE[0m
+[1;31mE (720408) main: temp: 24.87[0m
+[1;31mE (720408) main: hum: 56.06[0m
+[1;31mE (720408) main: end node network address:29018[0m
+[1;31mE (720408) main: set attr state = 0[0m
+[0;32mI (720408) main: manual report ret = 0x0000[0m
+[1;31mE (720478) main: zcl callback[0m
+[1;31mE (720478) main: callback_id = 8[0m
+[0;32mI (720478) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (720478) main: info:[0m
+[0;32mI (720478) main:  status = 0x00[0m
+[0;32mI (720478) main:  dst_ep = 1[0m
+[0;32mI (720488) main:  cluster_id = 0xFC00[0m
+[0;32mI (720488) main:  cluster_role = 0x01[0m
+[0;32mI (720488) main: in:[0m
+[0;32mI (720488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (720498) main:   status_code     = 0x81[0m
+[0;32mI (720498) main: header:[0m
+[0;32mI (720498) main: addr type = 2[0m
+[0;32mI (720508) main:   src_addr        = 0x0000[0m
+[0;32mI (720508) main:   dst_addr        = 0x715A[0m
+[0;32mI (720508) main:   src_ep          = 10[0m
+[0;32mI (720518) main:   dst_ep          = 1[0m
+[0;32mI (720518) main:   cluster_id      = 0xFC00[0m
+[0;32mI (720528) main:   profile_id      = 0x0104[0m
+[0;32mI (720528) main:   frame_control   = 0x10[0m
+[0;32mI (720528) main:   manuf_code      = 0x0000[0m
+[0;32mI (720538) main:   tsn             = 0x7B[0m
+[0;32mI (720538) main:   rssi            = -41 dBm[0m
+[0;32mI (720538) main:   cmd_id          = 0x0B[0m
+[0;32mI (720548) main: out:[0m
+[0;32mI (720548) main:  result = 0xFE[0m
+[1;31mE (720558) main: zcl callback[0m
+[1;31mE (720558) main: callback_id = 8[0m
+[0;32mI (720558) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (720568) main: info:[0m
+[0;32mI (720568) main:  status = 0x00[0m
+[0;32mI (720568) main:  dst_ep = 1[0m
+[0;32mI (720568) main:  cluster_id = 0xFC00[0m
+[0;32mI (720578) main:  cluster_role = 0x01[0m
+[0;32mI (720578) main: in:[0m
+[0;32mI (720578) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (720588) main:   status_code     = 0x81[0m
+[0;32mI (720588) main: header:[0m
+[0;32mI (720588) main: addr type = 2[0m
+[0;32mI (720588) main:   src_addr        = 0x0000[0m
+[0;32mI (720598) main:   dst_addr        = 0x715A[0m
+[0;32mI (720598) main:   src_ep          = 10[0m
+[0;32mI (720608) main:   dst_ep          = 1[0m
+[0;32mI (720608) main:   cluster_id      = 0xFC00[0m
+[0;32mI (720608) main:   profile_id      = 0x0104[0m
+[0;32mI (720618) main:   frame_control   = 0x10[0m
+[0;32mI (720618) main:   manuf_code      = 0x0000[0m
+[0;32mI (720618) main:   tsn             = 0x7C[0m
+[0;32mI (720628) main:   rssi            = -41 dBm[0m
+[0;32mI (720628) main:   cmd_id          = 0x0B[0m
+[0;32mI (720638) main: out:[0m
+[0;32mI (720638) main:  result = 0xFE[0m
+[1;31mE (730408) main: temp: 24.89[0m
+[1;31mE (730408) main: hum: 55.92[0m
+[1;31mE (730408) main: end node network address:29018[0m
+[1;31mE (730408) main: set attr state = 0[0m
+[0;32mI (730408) main: manual report ret = 0x0000[0m
+[1;31mE (730488) main: zcl callback[0m
+[1;31mE (730488) main: callback_id = 8[0m
+[0;32mI (730488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (730488) main: info:[0m
+[0;32mI (730488) main:  status = 0x00[0m
+[0;32mI (730488) main:  dst_ep = 1[0m
+[0;32mI (730498) main:  cluster_id = 0xFC00[0m
+[0;32mI (730498) main:  cluster_role = 0x01[0m
+[0;32mI (730498) main: in:[0m
+[0;32mI (730498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (730508) main:   status_code     = 0x81[0m
+[0;32mI (730508) main: header:[0m
+[0;32mI (730508) main: addr type = 2[0m
+[0;32mI (730518) main:   src_addr        = 0x0000[0m
+[0;32mI (730518) main:   dst_addr        = 0x715A[0m
+[0;32mI (730518) main:   src_ep          = 10[0m
+[0;32mI (730528) main:   dst_ep          = 1[0m
+[0;32mI (730528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (730538) main:   profile_id      = 0x0104[0m
+[0;32mI (730538) main:   frame_control   = 0x10[0m
+[0;32mI (730538) main:   manuf_code      = 0x0000[0m
+[0;32mI (730548) main:   tsn             = 0x7D[0m
+[0;32mI (730548) main:   rssi            = -40 dBm[0m
+[0;32mI (730558) main:   cmd_id          = 0x0B[0m
+[0;32mI (730558) main: out:[0m
+[0;32mI (730558) main:  result = 0xFE[0m
+[1;31mE (730568) main: zcl callback[0m
+[1;31mE (730568) main: callback_id = 8[0m
+[0;32mI (730568) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (730578) main: info:[0m
+[0;32mI (730578) main:  status = 0x00[0m
+[0;32mI (730578) main:  dst_ep = 1[0m
+[0;32mI (730578) main:  cluster_id = 0xFC00[0m
+[0;32mI (730588) main:  cluster_role = 0x01[0m
+[0;32mI (730588) main: in:[0m
+[0;32mI (730588) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (730598) main:   status_code     = 0x81[0m
+[0;32mI (730598) main: header:[0m
+[0;32mI (730598) main: addr type = 2[0m
+[0;32mI (730598) main:   src_addr        = 0x0000[0m
+[0;32mI (730608) main:   dst_addr        = 0x715A[0m
+[0;32mI (730608) main:   src_ep          = 10[0m
+[0;32mI (730618) main:   dst_ep          = 1[0m
+[0;32mI (730618) main:   cluster_id      = 0xFC00[0m
+[0;32mI (730618) main:   profile_id      = 0x0104[0m
+[0;32mI (730628) main:   frame_control   = 0x10[0m
+[0;32mI (730628) main:   manuf_code      = 0x0000[0m
+[0;32mI (730628) main:   tsn             = 0x7E[0m
+[0;32mI (730638) main:   rssi            = -40 dBm[0m
+[0;32mI (730638) main:   cmd_id          = 0x0B[0m
+[0;32mI (730648) main: out:[0m
+[0;32mI (730648) main:  result = 0xFE[0m
+[1;31mE (740408) main: temp: 24.89[0m
+[1;31mE (740408) main: hum: 55.77[0m
+[1;31mE (740408) main: end node network address:29018[0m
+[1;31mE (740408) main: set attr state = 0[0m
+[0;32mI (740408) main: manual report ret = 0x0000[0m
+[1;31mE (740488) main: zcl callback[0m
+[1;31mE (740488) main: callback_id = 8[0m
+[0;32mI (740488) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (740488) main: info:[0m
+[0;32mI (740488) main:  status = 0x00[0m
+[0;32mI (740488) main:  dst_ep = 1[0m
+[0;32mI (740498) main:  cluster_id = 0xFC00[0m
+[0;32mI (740498) main:  cluster_role = 0x01[0m
+[0;32mI (740498) main: in:[0m
+[0;32mI (740498) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (740508) main:   status_code     = 0x81[0m
+[0;32mI (740508) main: header:[0m
+[0;32mI (740508) main: addr type = 2[0m
+[0;32mI (740518) main:   src_addr        = 0x0000[0m
+[0;32mI (740518) main:   dst_addr        = 0x715A[0m
+[0;32mI (740528) main:   src_ep          = 10[0m
+[0;32mI (740528) main:   dst_ep          = 1[0m
+[0;32mI (740528) main:   cluster_id      = 0xFC00[0m
+[0;32mI (740538) main:   profile_id      = 0x0104[0m
+[0;32mI (740538) main:   frame_control   = 0x10[0m
+[0;32mI (740538) main:   manuf_code      = 0x0000[0m
+[0;32mI (740548) main:   tsn             = 0x7F[0m
+[0;32mI (740548) main:   rssi            = -40 dBm[0m
+[0;32mI (740558) main:   cmd_id          = 0x0B[0m
+[0;32mI (740558) main: out:[0m
+[0;32mI (740558) main:  result = 0xFE[0m
+[1;31mE (750408) main: temp: 24.90[0m
+[1;31mE (750408) main: hum: 55.65[0m
+[1;31mE (750408) main: end node network address:29018[0m
+[1;31mE (750408) main: set attr state = 0[0m
+[0;32mI (750408) main: manual report ret = 0x0000[0m
+[1;31mE (750448) main: zcl callback[0m
+[1;31mE (750448) main: callback_id = 8[0m
+[0;32mI (750448) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (750448) main: info:[0m
+[0;32mI (750448) main:  status = 0x00[0m
+[0;32mI (750458) main:  dst_ep = 1[0m
+[0;32mI (750458) main:  cluster_id = 0xFC00[0m
+[0;32mI (750458) main:  cluster_role = 0x01[0m
+[0;32mI (750468) main: in:[0m
+[0;32mI (750468) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (750468) main:   status_code     = 0x81[0m
+[0;32mI (750478) main: header:[0m
+[0;32mI (750478) main: addr type = 2[0m
+[0;32mI (750478) main:   src_addr        = 0x0000[0m
+[0;32mI (750488) main:   dst_addr        = 0x715A[0m
+[0;32mI (750488) main:   src_ep          = 10[0m
+[0;32mI (750488) main:   dst_ep          = 1[0m
+[0;32mI (750498) main:   cluster_id      = 0xFC00[0m
+[0;32mI (750498) main:   profile_id      = 0x0104[0m
+[0;32mI (750498) main:   frame_control   = 0x10[0m
+[0;32mI (750508) main:   manuf_code      = 0x0000[0m
+[0;32mI (750508) main:   tsn             = 0x80[0m
+[0;32mI (750518) main:   rssi            = -40 dBm[0m
+[0;32mI (750518) main:   cmd_id          = 0x0B[0m
+[0;32mI (750518) main: out:[0m
+[0;32mI (750518) main:  result = 0xFE[0m
+[1;31mE (750538) main: zcl callback[0m
+[1;31mE (750538) main: callback_id = 8[0m
+[0;32mI (750538) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (750538) main: info:[0m
+[0;32mI (750538) main:  status = 0x00[0m
+[0;32mI (750538) main:  dst_ep = 1[0m
+[0;32mI (750548) main:  cluster_id = 0xFC00[0m
+[0;32mI (750548) main:  cluster_role = 0x01[0m
+[0;32mI (750548) main: in:[0m
+[0;32mI (750558) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (750558) main:   status_code     = 0x81[0m
+[0;32mI (750558) main: header:[0m
+[0;32mI (750568) main: addr type = 2[0m
+[0;32mI (750568) main:   src_addr        = 0x0000[0m
+[0;32mI (750568) main:   dst_addr        = 0x715A[0m
+[0;32mI (750578) main:   src_ep          = 10[0m
+[0;32mI (750578) main:   dst_ep          = 1[0m
+[0;32mI (750578) main:   cluster_id      = 0xFC00[0m
+[0;32mI (750588) main:   profile_id      = 0x0104[0m
+[0;32mI (750588) main:   frame_control   = 0x10[0m
+[0;32mI (750588) main:   manuf_code      = 0x0000[0m
+[0;32mI (750598) main:   tsn             = 0x81[0m
+[0;32mI (750598) main:   rssi            = -40 dBm[0m
+[0;32mI (750608) main:   cmd_id          = 0x0B[0m
+[0;32mI (750608) main: out:[0m
+[0;32mI (750608) main:  result = 0xFE[0m
+[1;31mE (760408) main: temp: 24.90[0m
+[1;31mE (760408) main: hum: 55.57[0m
+[1;31mE (760408) main: end node network address:29018[0m
+[1;31mE (760408) main: set attr state = 0[0m
+[0;32mI (760408) main: manual report ret = 0x0000[0m
+[1;31mE (760468) main: zcl callback[0m
+[1;31mE (760468) main: callback_id = 8[0m
+[0;32mI (760468) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (760468) main: info:[0m
+[0;32mI (760468) main:  status = 0x00[0m
+[0;32mI (760468) main:  dst_ep = 1[0m
+[0;32mI (760478) main:  cluster_id = 0xFC00[0m
+[0;32mI (760478) main:  cluster_role = 0x01[0m
+[0;32mI (760478) main: in:[0m
+[0;32mI (760488) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (760488) main:   status_code     = 0x81[0m
+[0;32mI (760488) main: header:[0m
+[0;32mI (760488) main: addr type = 2[0m
+[0;32mI (760498) main:   src_addr        = 0x0000[0m
+[0;32mI (760498) main:   dst_addr        = 0x715A[0m
+[0;32mI (760508) main:   src_ep          = 10[0m
+[0;32mI (760508) main:   dst_ep          = 1[0m
+[0;32mI (760508) main:   cluster_id      = 0xFC00[0m
+[0;32mI (760518) main:   profile_id      = 0x0104[0m
+[0;32mI (760518) main:   frame_control   = 0x10[0m
+[0;32mI (760518) main:   manuf_code      = 0x0000[0m
+[0;32mI (760528) main:   tsn             = 0x82[0m
+[0;32mI (760528) main:   rssi            = -40 dBm[0m
+[0;32mI (760538) main:   cmd_id          = 0x0B[0m
+[0;32mI (760538) main: out:[0m
+[0;32mI (760538) main:  result = 0xFE[0m
+[1;31mE (770408) main: temp: 24.92[0m
+[1;31mE (770408) main: hum: 55.55[0m
+[1;31mE (770408) main: end node network address:29018[0m
+[1;31mE (770408) main: set attr state = 0[0m
+[0;32mI (770408) main: manual report ret = 0x0000[0m
+[1;31mE (770458) main: zcl callback[0m
+[1;31mE (770458) main: callback_id = 8[0m
+[0;32mI (770458) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (770458) main: info:[0m
+[0;32mI (770458) main:  status = 0x00[0m
+[0;32mI (770458) main:  dst_ep = 1[0m
+[0;32mI (770468) main:  cluster_id = 0xFC00[0m
+[0;32mI (770468) main:  cluster_role = 0x01[0m
+[0;32mI (770468) main: in:[0m
+[0;32mI (770478) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (770478) main:   status_code     = 0x81[0m
+[0;32mI (770478) main: header:[0m
+[0;32mI (770488) main: addr type = 2[0m
+[0;32mI (770488) main:   src_addr        = 0x0000[0m
+[0;32mI (770488) main:   dst_addr        = 0x715A[0m
+[0;32mI (770498) main:   src_ep          = 10[0m
+[0;32mI (770498) main:   dst_ep          = 1[0m
+[0;32mI (770498) main:   cluster_id      = 0xFC00[0m
+[0;32mI (770508) main:   profile_id      = 0x0104[0m
+[0;32mI (770508) main:   frame_control   = 0x10[0m
+[0;32mI (770508) main:   manuf_code      = 0x0000[0m
+[0;32mI (770518) main:   tsn             = 0x83[0m
+[0;32mI (770518) main:   rssi            = -36 dBm[0m
+[0;32mI (770528) main:   cmd_id          = 0x0B[0m
+[0;32mI (770528) main: out:[0m
+[0;32mI (770528) main:  result = 0xFE[0m
+[1;31mE (770538) main: zcl callback[0m
+[1;31mE (770538) main: callback_id = 8[0m
+[0;32mI (770538) main: ========== EZB_ZCL_CORE_DEFAULT_RSP_CB_ID ==========[0m
+[0;32mI (770548) main: info:[0m
+[0;32mI (770548) main:  status = 0x00[0m
+[0;32mI (770548) main:  dst_ep = 1[0m
+[0;32mI (770548) main:  cluster_id = 0xFC00[0m
+[0;32mI (770558) main:  cluster_role = 0x01[0m
+[0;32mI (770558) main: in:[0m
+[0;32mI (770558) main:   rsp_to_cmd      = 0x0A[0m
+[0;32mI (770568) main:   status_code     = 0x81[0m
+[0;32mI (770568) main: header:[0m
+[0;32mI (770568) main: addr type = 2[0m
+[0;32mI (770578) main:   src_addr        = 0x0000[0m
+[0;32mI (770578) main:   dst_addr        = 0x715A[0m
+[0;32mI (770578) main:   src_ep          = 10[0m
+[0;32mI (770588) main:   dst_ep          = 1[0m
+[0;32mI (770588) main:   cluster_id      = 0xFC00[0m
+[0;32mI (770588) main:   profile_id      = 0x0104[0m
+[0;32mI (770598) main:   frame_control   = 0x10[0m
+[0;32mI (770598) main:   manuf_code      = 0x0000[0m
+[0;32mI (770608) main:   tsn             = 0x84[0m
+[0;32mI (770608) main:   rssi            = -36 dBm[0m
+[0;32mI (770608) main:   cmd_id          = 0x0B[0m
+[0;32mI (770618) main: out:[0m
+[0;32mI (770618) main:  result = 0xFE[0m

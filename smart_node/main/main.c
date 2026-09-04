@@ -37,6 +37,7 @@
 #define PIN_NUM_CS   1
 
 #define BME280_HOST    SPI2_HOST
+static const char* TAG = "main";
 
 bool zigbee_signal_callback(const ezb_app_signal_t *signal_type);
 
@@ -106,9 +107,43 @@ esp_zigbee_config_t zigbee_config = {
 
 uint32_t channel_mask = (1UL << 20);
 
+static ezb_zcl_status_t customized_data_stream_server_cmd_handler(const ezb_zcl_cmd_hdr_t *header,
+                                                                  const uint8_t           *payload,
+                                                                  uint16_t                 payload_length)
+{
+    ezb_zcl_status_t ret = EZB_ZCL_STATUS_SUCCESS;
+    assert(header);
+    ESP_LOGI(TAG,"entered custom cluster server handler");
+    if (header->cluster_id != SENSOR_CLUSTER_ID) {
+        ret = EZB_ZCL_STATUS_UNSUPPORTED_CLUSTER;
+       
+    }
+
+    if (EZB_ZCL_CMD_FC_IS_TO_CLI_DIRECTION(header->fc)) {
+        ret = EZB_ZCL_STATUS_INVALID_FIELD;
+        
+    }
+    return ret;
+}
+
+
+void esp_zigbee_zcl_customized_data_stream_server_init(uint8_t ep_id)
+{
+    ezb_zcl_custom_cluster_handlers_t handlers = {
+        .cluster_id     = SENSOR_CLUSTER_ID,
+        .cluster_role   = EZB_ZCL_CLUSTER_CLIENT,
+        .process_cmd_cb = customized_data_stream_server_cmd_handler,
+        .check_value_cb = NULL,
+        .write_attr_cb  = NULL,
+        .cmd_disc_cb    = NULL,
+    };
+    ezb_zcl_custom_cluster_handlers_register(&handlers);
+}
+
+
 ezb_zcl_custom_cluster_config_t sensor_cluster_config = {
         .cluster_id = SENSOR_CLUSTER_ID,
-        .init_func = NULL,
+        .init_func = esp_zigbee_zcl_customized_data_stream_server_init,
         .deinit_func = NULL
     };
 ezb_af_ep_config_t sensor_endpoint_config = {
@@ -118,6 +153,25 @@ ezb_af_ep_config_t sensor_endpoint_config = {
     .app_device_version = 1
 };
 
+ezb_zcl_report_attr_cmd_t report_cmd = {
+    .cmd_ctrl = {
+        .fc.direction = EZB_ZCL_CMD_DIRECTION_TO_CLI,
+
+        .dst_addr = {
+            .addr_mode = EZB_ADDR_MODE_SHORT,
+            .u.short_addr = 0x0000,
+        },
+
+        .src_ep = ENDPOINT0,
+        .dst_ep = COORDINATOR_EP,
+        .cluster_id = SENSOR_CLUSTER_ID,
+    },
+
+    .payload = {
+        .attr_id = ATTR_TEMPERATURE_ID,
+    },
+    };
+
 // ezb_af_simple_desc_t af_node_desc = {
 //     .ep_id = ENDPOINT0,
 //     .app_profile_id = 0x0104U,
@@ -125,7 +179,50 @@ ezb_af_ep_config_t sensor_endpoint_config = {
 //     .app_device_version = 1
 // };
 
-static const char* TAG = "main";
+
+
+static void sensor_send_temperature(sensor_data_t *sensor_data)
+{
+    float temperature = sensor_data->temp;
+
+    ezb_zcl_custom_cluster_cmd_t cmd = {
+        .cmd_ctrl = {
+            .dst_addr = {
+                .addr_mode = EZB_ADDR_MODE_SHORT,
+                .u = {
+                    .short_addr = 0x0000,
+                },
+            },
+            .dst_ep = COORDINATOR_EP,
+            .src_ep = ENDPOINT0,
+
+            .cluster_id = SENSOR_CLUSTER_ID,
+
+            .manuf_code = 0,
+
+            .fc = {
+                .manuf_specific = 0,
+                .direction = 1,          // Server -> Client
+                .dis_default_rsp = 1,
+            },
+
+            .cnf_ctx = {
+                // zunächst leer lassen
+            },
+        },
+
+        .cmd_id = 1,
+        .data_length = sizeof(temperature),
+        .data = (uint8_t *)&temperature,
+    };
+
+    ezb_err_t err = ezb_zcl_custom_cluster_cmd_req(&cmd);
+
+    ESP_LOGI(TAG,
+             "Send temperature: %.2f °C, err=0x%02x",
+             temperature,
+             err);
+}
 
 void zigbee_send_measurement_callback(void *ctx) {
     // ezb_af_simple_desc_t *af_desc = ezb_af_get_simple_desc(0x01);
@@ -135,12 +232,30 @@ void zigbee_send_measurement_callback(void *ctx) {
     address = ezb_nwk_get_short_address();
     ESP_LOGE(TAG, "end node network address:%" PRIu16, address);
     sensor_data_t *sensor_data = (sensor_data_t*)ctx;
-    ezb_zcl_status_t state;
-    state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->temp), true);
-    ESP_LOGE(TAG, "set attr state = %" PRIu8, state);
+    // ezb_zcl_status_t state;
+    //state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->temp), true);
+    //ESP_LOGE(TAG, "set attr state = %" PRIu8, state);
     // state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_HUMIDITY_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->humidity), false);
     // state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_SOIL_MOISTURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->moisture), false);
     // state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_SOC_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->soc), false);
+    // esp_zigbee_lock_acquire(portMAX_DELAY);
+
+    // ezb_err_t ret = ezb_zcl_report_attr_cmd_req(&report_cmd);
+    // ESP_LOGI(TAG, "manual report ret = 0x%04X", ret);
+
+    // esp_zigbee_lock_release();
+    sensor_send_temperature(sensor_data);
+    ezb_zcl_reporting_info_t reporting_info = ezb_zcl_reporting_info_find(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER, ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE);
+    if (reporting_info == EZB_ZCL_INVALID_REPORTING_INFO) {
+    ESP_LOGE(TAG,
+             "NO reporting configuration found: ep=%u cluster=0x%04X attr=0x%04X",
+             ENDPOINT0,
+             SENSOR_CLUSTER_ID,
+             ATTR_TEMPERATURE_ID);
+    }
+    else {
+        ESP_LOGI(TAG, "Reporting config found");
+    }
     
     // ezb_zcl_report_attr_cmd_t report_cmd = {
     //     .cmd_ctrl = {
@@ -260,6 +375,8 @@ static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, v
 
             ESP_LOGI(TAG, "  cmd_id          = 0x%02X",
                     hdr->cmd_id);
+            ESP_LOGI(TAG, "out:");
+            ESP_LOGI(TAG, " result = 0x%02X", msg->out.result);
         } else {
             ESP_LOGW(TAG, "header = NULL");
         }
@@ -293,37 +410,15 @@ void esp_zb_task(void *arg) {
         ESP_LOGE(TAG,
              "Failed adding temp attribute"); 
     }
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_HUMIDITY_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.humidity));
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.moisture));
-    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.soc));
+    // ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_HUMIDITY_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.humidity));
+    // ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.moisture));
+    // ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.soc));
     ESP_ERROR_CHECK(ezb_af_endpoint_add_cluster_desc(sensor_endpoint, sensor_cluster));
     ESP_ERROR_CHECK(ezb_af_device_add_endpoint_desc(sensor_device, sensor_endpoint));
     ESP_ERROR_CHECK(ezb_af_device_desc_register(sensor_device));
-    ezb_zcl_report_attr_cmd_t report_cmd = {
-    .cmd_ctrl = {
-        .fc.direction = EZB_ZCL_CMD_DIRECTION_TO_CLI,
+    
 
-        .dst_addr = {
-            .addr_mode = EZB_ADDR_MODE_SHORT,
-            .u.short_addr = 0x0000,
-        },
-
-        .src_ep = ENDPOINT0,
-        .dst_ep = COORDINATOR_EP,
-        .cluster_id = SENSOR_CLUSTER_ID,
-    },
-
-    .payload = {
-        .attr_id = ATTR_TEMPERATURE_ID,
-    },
-    };
-    esp_zigbee_lock_acquire(portMAX_DELAY);
-
-    ezb_err_t ret = ezb_zcl_report_attr_cmd_req(&report_cmd);
-
-    esp_zigbee_lock_release();
-
-    ESP_LOGI(TAG, "manual report ret = 0x%04X", ret);
+    
 
     ESP_ERROR_CHECK(ezb_bdb_set_primary_channel_set(channel_mask));
     ezb_app_signal_add_handler(zigbee_signal_callback);

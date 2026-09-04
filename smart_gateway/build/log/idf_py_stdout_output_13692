@@ -1,0 +1,426 @@
+WERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,le�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 29 2026 17:18:01[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42060020 size=0e8ach ( 59564) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001e8d4 vaddr=40800000 size=01744h (  5956) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=5dd10h (384272) map[0m
+[0;32mI (181) esp_image: segment 3: paddr=0007dd38 vaddr=40801744 size=0cf90h ( 53136) load[0m
+[0;32mI (193) esp_image: segment 4: paddr=0008acd0 vaddr=4080e6e0 size=02444h (  9284) load[0m
+[0;32mI (200) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (200) boot: Disabling RNG early entropy source...[0m
+[0;32mI (211) cpu_start: Unicore app[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) app_init: Application information:[0m
+[0;32mI (220) app_init: Project name:     smart_gateway[0m
+[0;32mI (224) app_init: App version:      a83284f-dirty[0m
+[0;32mI (229) app_init: Compile time:     Sep  3 2026 07:52:26[0m
+[0;32mI (234) app_init: ELF file SHA256:  a33dccd37...[0m
+[0;32mI (238) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 408131B0 len 00069460 (421 KiB): RAM[0m
+[0;32mI (265) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (271) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (277) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (308) coexist: coex firmware version: e727207[0m
+[0;32mI (326) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (327) main_task: Started on CPU0[0m
+[0;32mI (327) main_task: Calling app_main()[0m
+[0;32mI (327) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;33mW (327) phy_init: failed to load RF calibration data (0x110f), falling back to full calibration[0m
+[0;32mI (377) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (377) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[1;31mE (387) main: ezb_app_signal_add_handler: ret=0x0[0m
+[1;31mE (387) main: node signal callback[0m
+[1;31mE (387) main: Initialize Zigbee stack[0m
+[1;31mE (387) main: start zigbee ok[0m
+[1;31mE (397) main: hello_zb[0m
+[1;31mE (397) main: node signal callback[0m
+[1;31mE (397) main: Device started up in non factory-reset mode[0m
+[1;31mE (407) main: coordinator node network address:0[0m
+[1;31mE (407) main: PAN ID: 0x8BB0[0m
+[1;31mE (407) main: Device reboot[0m
+[1;31mE (1577) main: node signal callback[0m
+[1;31mE (1577) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (1577) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (1577) main:   duration = 4 seconds[0m
+[0;32mI (1577) main:   Network is OPEN for joining[0m
+[0;32mI (10417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (20417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (30417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (40417) main: Read Reporting Config request ret=0x0000[0m
+[1;31mE (41327) main: node signal callback[0m
+[0;32mI (41327) main: 0x40817da0   07 00 f0 11 69 fe ff db  51 10 f0 f9 01 00        |....i...Q.....|[0m
+[0;32mI (41327) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (41327) main:   short_addr  = 0x1051[0m
+[0;32mI (41337) main:   ieee_addr   = 0xDBFFFE6911F00007[0m
+[0;32mI (41337) main:   status      = 0xF0[0m
+[0;32mI (41337) main:   tc_action   = 0xF9[0m
+[0;32mI (41347) main:   parent      = 0x0001[0m
+[0;33mW (41347) main:   unknown update status: 0xF0[0m
+[1;31mE (41427) main: node signal callback[0m
+[1;31mE (41427) main: new node joined[0m
+[0;32mI (41487) main: Bind response status: 0x00[0m
+[0;32mI (41487) main: APS binding SUCCESS[0m
+[1;31mE (41517) main: set node report config[0m
+[1;31mE (41517) main: end node device ID:1[0m
+[1;31mE (41517) main: end node network address:63984[0m
+[1;31mE (41517) main: end node network address ieee:1175962870251852272[0m
+[1;31mE (41527) main: node index:0[0m
+[1;31mE (41527) main: ep id:1[0m
+[1;31mE (41527) main: app profile id:260[0m
+[1;31mE (41627) main: node signal callback[0m
+[0;32mI (41627) main: 0x40817d0c   08 00 f0 11 69 fe ff db  51 10 f0 f9              |....i...Q...|[0m
+[0;32mI (41627) main: EZB_ZDO_SIGNAL_DEVICE_AUTHORIZED[0m
+[0;32mI (41627) main:   short_addr = 0x1051[0m
+[0;32mI (41637) main:   ieee_addr  = 0xDBFFFE6911F00008[0m
+[0;32mI (41637) main:   type       = 0xF0[0m
+[0;32mI (41637) main:   status     = 0xF9[0m
+[0;33mW (41647) main:   unknown authorization status[0m
+[1;31mE (41717) main: node signal callback[0m
+[1;31mE (41717) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (41717) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (41717) main:   duration = 4 seconds[0m
+[0;32mI (41717) main:   Network is OPEN for joining[0m
+[0;32mI (50417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (60417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (70417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (80417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (90417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (100417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (110417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (120417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (130417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (140417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (150417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (160417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (170417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (180417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (190417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (200417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (210417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (220417) main: Read Reporting Config request ret=0x0000[0m
+[1;31mE (221507) main: node signal callback[0m
+[1;31mE (221507) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (221507) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (221507) main:   duration = 4 seconds[0m
+[0;32mI (221507) main:   Network is OPEN for joining[0m
+[0;32mI (230417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (240417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (250417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (260417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (270417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (280417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (290417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (300417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (310417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (320417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (330417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (340417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (350417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (360417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (370417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (380417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (390417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (400417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (410417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (420417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (430417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (440417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (450417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (460417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (470417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (480417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (490417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (500417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (510417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (520417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (530417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (540417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (550417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (560417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (570417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (580417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (590417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (600417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (610417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (620417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (630417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (640417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (650417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (660417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (670417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (680417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (690417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (700417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (710417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (720417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (730417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (740417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (750417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (760417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (770417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (780417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (790417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (800417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (810417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (820417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (830417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (840417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (850417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (860417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (870417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (880417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (890417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (900417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (910417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (920417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (930417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (940417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (950417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (960417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (970417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (980417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (990417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1000417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1010417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1020417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1030417) main: Read Reporting Config request ret=0x0000[0m
+919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 29 2026 17:18:01[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42060020 size=0e8ach ( 59564) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001e8d4 vaddr=40800000 size=01744h (  5956) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=5dd10h (384272) map[0m
+[0;32mI (181) esp_image: segment 3: paddr=0007dd38 vaddr=40801744 size=0cf90h ( 53136) load[0m
+[0;32mI (193) esp_image: segment 4: paddr=0008acd0 vaddr=4080e6e0 size=02444h (  9284) load[0m
+[0;32mI (200) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (200) boot: Disabling RNG early entropy source...[0m
+[0;32mI (211) cpu_start: Unicore app[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) app_init: Application information:[0m
+[0;32mI (220) app_init: Project name:     smart_gateway[0m
+[0;32mI (224) app_init: App version:      a83284f-dirty[0m
+[0;32mI (229) app_init: Compile time:     Sep  3 2026 07:52:26[0m
+[0;32mI (234) app_init: ELF file SHA256:  a33dccd37...[0m
+[0;32mI (238) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 408131B0 len 00069460 (421 KiB): RAM[0m
+[0;32mI (265) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (271) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (277) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (308) coexist: coex firmware version: e727207[0m
+[0;32mI (326) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (327) main_task: Started on CPU0[0m
+[0;32mI (327) main_task: Calling app_main()[0m
+[0;32mI (327) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;33mW (327) phy_init: failed to load RF calibration data (0x110f), falling back to full calibration[0m
+[0;32mI (377) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (377) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[1;31mE (387) main: ezb_app_signal_add_handler: ret=0x0[0m
+[1;31mE (387) main: node signal callback[0m
+[1;31mE (387) main: Initialize Zigbee stack[0m
+[1;31mE (387) main: start zigbee ok[0m
+[1;31mE (397) main: hello_zb[0m
+[1;31mE (397) main: node signal callback[0m
+[1;31mE (397) main: Device started up in non factory-reset mode[0m
+[1;31mE (407) main: coordinator node network address:0[0m
+[1;31mE (407) main: PAN ID: 0x8BB0[0m
+[1;31mE (407) main: Device reboot[0m
+[1;31mE (1597) main: node signal callback[0m
+[1;31mE (1597) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (1597) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (1597) main:   duration = 4 seconds[0m
+[0;32mI (1597) main:   Network is OPEN for joining[0m
+[0;32mI (10417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (20417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (30417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (40417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (50417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (60417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (70417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (80417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (90417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (100417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (110417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (120417) main: Read Reporting Config request ret=0x0000[0m
+[1;31mE (127307) main: node signal callback[0m
+[0;32mI (127307) main: 0x40817d00   07 00 f0 11 69 fe ff db  51 10 f0 f9 00 00        |....i...Q.....|[0m
+[0;32mI (127307) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (127307) main:   short_addr  = 0x1051[0m
+[0;32mI (127307) main:   ieee_addr   = 0xDBFFFE6911F00007[0m
+[0;32mI (127317) main:   status      = 0xF0[0m
+[0;32mI (127317) main:   tc_action   = 0xF9[0m
+[0;32mI (127327) main:   parent      = 0x0000[0m
+[0;33mW (127327) main:   unknown update status: 0xF0[0m
+[1;31mE (127337) main: node signal callback[0m
+[1;31mE (127337) main: new node joined[0m
+[0;32mI (127427) main: Bind response status: 0x00[0m
+[0;32mI (127427) main: APS binding SUCCESS[0m
+[1;31mE (127477) main: set node report config[0m
+[1;31mE (127477) main: end node device ID:1[0m
+[1;31mE (127477) main: end node network address:63984[0m
+[1;31mE (127477) main: end node network address ieee:1175962870251852272[0m
+[1;31mE (127477) main: node index:0[0m
+[1;31mE (127477) main: ep id:1[0m
+[1;31mE (127487) main: app profile id:260[0m
+[0;32mI (130417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (140417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (150417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (160417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (170417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (180417) main: Read Reporting Config request ret=0x0000[0m
+[1;31mE (181177) main: node signal callback[0m
+[1;31mE (181177) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (181177) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (181177) main:   duration = 4 seconds[0m
+[0;32mI (181177) main:   Network is OPEN for joining[0m
+[0;32mI (190417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (200417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (210417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (220417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (230417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (240417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (250417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (260417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (270417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (280417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (290417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (300417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (310417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (320417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (330417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (340417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (350417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (360417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (370417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (380417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (390417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (400417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (410417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (420417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (430417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (440417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (450417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (460417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (470417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (480417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (490417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (500417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (510417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (520417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (530417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (540417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (550417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (560417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (570417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (580417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (590417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (600417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (610417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (620417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (630417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (640417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (650417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (660417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (670417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (680417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (690417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (700417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (710417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (720417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (730417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (740417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (750417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (760417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (770417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (780417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (790417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (800417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (810417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (820417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (830417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (840417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (850417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (860417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (870417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (880417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (890417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (900417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (910417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (920417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (930417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (940417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (950417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (960417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (970417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (980417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (990417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1000417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1010417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1020417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1030417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1040417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (1050417) main: Read Reporting Config request ret=0x0000[0m

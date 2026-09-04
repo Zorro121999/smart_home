@@ -1,0 +1,2 @@
+source C:/Espressif/smart_home/zigbee_sniffer/build/gdbinit/symbols
+source C:/Espressif/smart_home/zigbee_sniffer/build/gdbinit/connect

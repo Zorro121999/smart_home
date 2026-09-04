@@ -1,0 +1,235 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 29 2026 17:18:01[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42060020 size=0e91ch ( 59676) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001e944 vaddr=40800000 size=016d4h (  5844) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=5dd80h (384384) map[0m
+[0;32mI (182) esp_image: segment 3: paddr=0007dda8 vaddr=408016d4 size=0d000h ( 53248) load[0m
+[0;32mI (193) esp_image: segment 4: paddr=0008adb0 vaddr=4080e6e0 size=02444h (  9284) load[0m
+[0;32mI (200) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (200) boot: Disabling RNG early entropy source...[0m
+[0;32mI (211) cpu_start: Unicore app[0m
+[0;32mI (220) cpu_start: Pro cpu start user code[0m
+[0;32mI (220) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (220) app_init: Application information:[0m
+[0;32mI (220) app_init: Project name:     smart_gateway[0m
+[0;32mI (224) app_init: App version:      a83284f-dirty[0m
+[0;32mI (229) app_init: Compile time:     Sep  3 2026 07:52:26[0m
+[0;32mI (234) app_init: ELF file SHA256:  397ea3739...[0m
+[0;32mI (238) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 408131B0 len 00069460 (421 KiB): RAM[0m
+[0;32mI (265) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (271) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (277) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (308) coexist: coex firmware version: e727207[0m
+[0;32mI (326) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (327) main_task: Started on CPU0[0m
+[0;32mI (327) main_task: Calling app_main()[0m
+[0;32mI (327) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;33mW (327) phy_init: failed to load RF calibration data (0x110f), falling back to full calibration[0m
+[0;32mI (377) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (377) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[1;31mE (387) main: ezb_app_signal_add_handler: ret=0x0[0m
+[1;31mE (387) main: node signal callback[0m
+[1;31mE (387) main: Initialize Zigbee stack[0m
+[1;31mE (387) main: start zigbee ok[0m
+[1;31mE (397) main: hello_zb[0m
+[1;31mE (397) main: node signal callback[0m
+[1;31mE (397) main: Device started up in non factory-reset mode[0m
+[1;31mE (407) main: coordinator node network address:0[0m
+[1;31mE (407) main: PAN ID: 0xA7F3[0m
+[1;31mE (407) main: Device reboot[0m
+[0;32mI (427) main: entered custom cluster client handler[0m
+[0;32mI (427) main: Custom command received![0m
+[0;32mI (427) main:   cluster_id = 0xFC00[0m
+[0;32mI (427) main:   cmd_id     = 0x01[0m
+[0;32mI (427) main:   src_ep     = 1[0m
+[0;32mI (437) main:   dst_ep     = 10[0m
+[0;32mI (437) main:   payload_len = 4[0m
+[0;32mI (437) main: Temperature = 61.00 °C[0m
+[1;31mE (1597) main: node signal callback[0m
+[1;31mE (1597) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (1597) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (1597) main:   duration = 4 seconds[0m
+[0;32mI (1597) main:   Network is OPEN for joining[0m
+[0;32mI (10297) main: entered custom cluster client handler[0m
+[0;32mI (10297) main: Custom command received![0m
+[0;32mI (10297) main:   cluster_id = 0xFC00[0m
+[0;32mI (10297) main:   cmd_id     = 0x01[0m
+[0;32mI (10297) main:   src_ep     = 1[0m
+[0;32mI (10307) main:   dst_ep     = 10[0m
+[0;32mI (10307) main:   payload_len = 4[0m
+[0;32mI (10307) main: Temperature = 61.00 °C[0m
+[0;32mI (10417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (20297) main: entered custom cluster client handler[0m
+[0;32mI (20297) main: Custom command received![0m
+[0;32mI (20297) main:   cluster_id = 0xFC00[0m
+[0;32mI (20297) main:   cmd_id     = 0x01[0m
+[0;32mI (20297) main:   src_ep     = 1[0m
+[0;32mI (20297) main:   dst_ep     = 10[0m
+[0;32mI (20307) main:   payload_len = 4[0m
+[0;32mI (20307) main: Temperature = 61.00 °C[0m
+[0;32mI (20417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (30297) main: entered custom cluster client handler[0m
+[0;32mI (30297) main: Custom command received![0m
+[0;32mI (30297) main:   cluster_id = 0xFC00[0m
+[0;32mI (30297) main:   cmd_id     = 0x01[0m
+[0;32mI (30297) main:   src_ep     = 1[0m
+[0;32mI (30297) main:   dst_ep     = 10[0m
+[0;32mI (30307) main:   payload_len = 4[0m
+[0;32mI (30307) main: Temperature = 61.00 °C[0m
+[0;32mI (30417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (40287) main: entered custom cluster client handler[0m
+[0;32mI (40287) main: Custom command received![0m
+[0;32mI (40287) main:   cluster_id = 0xFC00[0m
+[0;32mI (40287) main:   cmd_id     = 0x01[0m
+[0;32mI (40287) main:   src_ep     = 1[0m
+[0;32mI (40287) main:   dst_ep     = 10[0m
+[0;32mI (40297) main:   payload_len = 4[0m
+[0;32mI (40297) main: Temperature = 184.00 °C[0m
+[0;32mI (40417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (50297) main: entered custom cluster client handler[0m
+[0;32mI (50297) main: Custom command received![0m
+[0;32mI (50297) main:   cluster_id = 0xFC00[0m
+[0;32mI (50297) main:   cmd_id     = 0x01[0m
+[0;32mI (50297) main:   src_ep     = 1[0m
+[0;32mI (50297) main:   dst_ep     = 10[0m
+[0;32mI (50307) main:   payload_len = 4[0m
+[0;32mI (50307) main: Temperature = 61.00 °C[0m
+[0;32mI (50417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (60297) main: entered custom cluster client handler[0m
+[0;32mI (60297) main: Custom command received![0m
+[0;32mI (60297) main:   cluster_id = 0xFC00[0m
+[0;32mI (60297) main:   cmd_id     = 0x01[0m
+[0;32mI (60297) main:   src_ep     = 1[0m
+[0;32mI (60297) main:   dst_ep     = 10[0m
+[0;32mI (60307) main:   payload_len = 4[0m
+[0;32mI (60307) main: Temperature = 184.00 °C[0m
+[0;32mI (60417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (70297) main: entered custom cluster client handler[0m
+[0;32mI (70297) main: Custom command received![0m
+[0;32mI (70297) main:   cluster_id = 0xFC00[0m
+[0;32mI (70297) main:   cmd_id     = 0x01[0m
+[0;32mI (70297) main:   src_ep     = 1[0m
+[0;32mI (70297) main:   dst_ep     = 10[0m
+[0;32mI (70307) main:   payload_len = 4[0m
+[0;32mI (70307) main: Temperature = 184.00 °C[0m
+[0;32mI (70417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (80287) main: entered custom cluster client handler[0m
+[0;32mI (80287) main: Custom command received![0m
+[0;32mI (80287) main:   cluster_id = 0xFC00[0m
+[0;32mI (80287) main:   cmd_id     = 0x01[0m
+[0;32mI (80287) main:   src_ep     = 1[0m
+[0;32mI (80287) main:   dst_ep     = 10[0m
+[0;32mI (80297) main:   payload_len = 4[0m
+[0;32mI (80297) main: Temperature = 184.00 °C[0m
+[0;32mI (80417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (90297) main: entered custom cluster client handler[0m
+[0;32mI (90297) main: Custom command received![0m
+[0;32mI (90297) main:   cluster_id = 0xFC00[0m
+[0;32mI (90297) main:   cmd_id     = 0x01[0m
+[0;32mI (90297) main:   src_ep     = 1[0m
+[0;32mI (90297) main:   dst_ep     = 10[0m
+[0;32mI (90307) main:   payload_len = 4[0m
+[0;32mI (90307) main: Temperature = 184.00 °C[0m
+[0;32mI (90417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (100297) main: entered custom cluster client handler[0m
+[0;32mI (100297) main: Custom command received![0m
+[0;32mI (100297) main:   cluster_id = 0xFC00[0m
+[0;32mI (100297) main:   cmd_id     = 0x01[0m
+[0;32mI (100297) main:   src_ep     = 1[0m
+[0;32mI (100297) main:   dst_ep     = 10[0m
+[0;32mI (100307) main:   payload_len = 4[0m
+[0;32mI (100307) main: Temperature = 184.00 °C[0m
+[0;32mI (100417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (110287) main: entered custom cluster client handler[0m
+[0;32mI (110287) main: Custom command received![0m
+[0;32mI (110287) main:   cluster_id = 0xFC00[0m
+[0;32mI (110287) main:   cmd_id     = 0x01[0m
+[0;32mI (110287) main:   src_ep     = 1[0m
+[0;32mI (110287) main:   dst_ep     = 10[0m
+[0;32mI (110297) main:   payload_len = 4[0m
+[0;32mI (110297) main: Temperature = 61.00 °C[0m
+[0;32mI (110417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (120297) main: entered custom cluster client handler[0m
+[0;32mI (120297) main: Custom command received![0m
+[0;32mI (120297) main:   cluster_id = 0xFC00[0m
+[0;32mI (120297) main:   cmd_id     = 0x01[0m
+[0;32mI (120297) main:   src_ep     = 1[0m
+[0;32mI (120297) main:   dst_ep     = 10[0m
+[0;32mI (120307) main:   payload_len = 4[0m
+[0;32mI (120307) main: Temperature = 61.00 °C[0m
+[0;32mI (120417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (130417) main: Read Reporting Config request ret=0x0000[0m
+[1;31mE (130717) main: node signal callback[0m
+[0;32mI (130717) main: 0x40817d10   07 00 f0 11 69 fe ff db  51 10 3f ad 00 00        |....i...Q.?...|[0m
+[0;32mI (130717) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (130717) main:   short_addr  = 0x1051[0m
+[0;32mI (130717) main:   ieee_addr   = 0xDBFFFE6911F00007[0m
+[0;32mI (130727) main:   status      = 0x3F[0m
+[0;32mI (130727) main:   tc_action   = 0xAD[0m
+[0;32mI (130737) main:   parent      = 0x0000[0m
+[0;33mW (130737) main:   unknown update status: 0x3F[0m
+[1;31mE (130747) main: node signal callback[0m
+[1;31mE (130747) main: new node joined[0m
+[1;31mE (130837) main: set node report config[0m
+[1;31mE (130837) main: end node device ID:1[0m
+[1;31mE (130837) main: end node network address:44351[0m
+[1;31mE (130837) main: end node network address ieee:1175962870251852272[0m
+[1;31mE (130837) main: node index:0[0m
+[1;31mE (130837) main: ep id:1[0m
+[1;31mE (130847) main: app profile id:260[0m
+[0;32mI (140297) main: entered custom cluster client handler[0m
+[0;32mI (140297) main: Custom command received![0m
+[0;32mI (140297) main:   cluster_id = 0xFC00[0m
+[0;32mI (140297) main:   cmd_id     = 0x01[0m
+[0;32mI (140297) main:   src_ep     = 1[0m
+[0;32mI (140297) main:   dst_ep     = 10[0m
+[0;32mI (140307) main:   payload_len = 4[0m
+[0;32mI (140307) main: Temperature = 61.00 °C[0m
+[0;32mI (140417) main: Read Reporting Config request ret=0x0000[0m
+[0;32mI (150287) main: entered custom cluster client handler[0m
+[0;32mI (150287) main: Custom command received![0m
+[0;32mI (150287) main:   cluster_id = 0xFC00[0m
+[0;32mI (150287) main:   cmd_id     = 0x01[0m
+[0;32mI (150287) main:   src_ep     = 1[0m
+[0;32mI (150287) main:   dst_ep     = 10[0m
+[0;32mI (150297) main:   payload_len = 4[0m
+[0;32mI (150297) main: Temperature = 61.00 °C[0m
+[0;32mI (150417) main: Read Reporting Config request ret=0x0000[0m

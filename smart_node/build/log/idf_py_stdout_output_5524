@@ -1,35 +1,2194 @@
-[1/10] Performing build step for 'bootloader'
-[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_node/build/bootloader/bootloader.bin"
-Bootloader binary size 0x54c0 bytes. 0x2b40 bytes (34%) free.
-[2/10] No install step for 'bootloader'
-[3/10] Completed 'bootloader'
-[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
-FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
-ccache C:\Espressif\tools\riscv32-esp-elf\esp-14.2.0_20241119\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.4.1-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IC:/Espressif/smart_home/smart_node/build/config -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/newlib/platform_include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/include/freertos -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/riscv/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/esp_additions/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/include/soc -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/include/soc/esp32h2 -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/dma/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/ldo/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/debug_probe/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/port/esp32h2/. -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/port/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/port/esp32h2/private_include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/heap/tlsf -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/log/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/esp32h2 -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/soc/esp32h2/register -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/hal/platform_port/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/hal/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/hal/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2/include/esp32h2 -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/esp32h2 -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_common/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/soc -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/include/riscv -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/port/include/private -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/include/apps -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/include/apps/sntp -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/lwip/src/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/freertos/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/esp32xx/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/esp32xx/include/arch -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/lwip/port/esp32xx/include/sys -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/spi_flash/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc/interface -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc/esp32h2/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_adc/deprecated/include -IC:/Espressif/smart_home/smart_node/managed_components/espressif__esp-zigbee-lib/include -IC:/Espressif/smart_home/smart_node/managed_components/espressif__esp-zigbee-lib/include/compat -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/driver/deprecated -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/driver/i2c/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/driver/touch_sensor/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/driver/twai/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_pm/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_ringbuf/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_gpio/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_pcnt/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_gptimer/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_spi/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_mcpwm/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_ana_cmpr/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_i2s/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdmmc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/sdmmc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdspi/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdio/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_dac/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_rmt/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_tsens/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_sdm/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_i2c/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_uart/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/vfs/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_ledc/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_parlio/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_usb_serial_jtag/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/ieee802154/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_coex/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/port/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/library -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/esp_crt_bundle/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/3rdparty/everest/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/3rdparty/p256-m -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_netif/include -IC:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_event/include -march=rv32imac_zicsr_zifencei  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=C:/Espressif/smart_home/smart_node=. -fmacro-prefix-map=C:/Espressif/frameworks/esp-idf-v5.4.1=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c C:/Espressif/smart_home/smart_node/main/main.c
-C:/Espressif/smart_home/smart_node/main/main.c: In function 'zigbee_send_measurement_callback':
-C:/Espressif/smart_home/smart_node/main/main.c:97:22: warning: variable 'state' set but not used [-Wunused-but-set-variable]
-   97 |     ezb_zcl_status_t state;
-      |                      ^~~~~
-C:/Espressif/smart_home/smart_node/main/main.c: In function 'esp_zb_task':
-C:/Espressif/smart_home/smart_node/main/main.c:129:22: warning: unused variable 'sensor_endpoint' [-Wunused-variable]
-  129 |     ezb_af_ep_desc_t sensor_endpoint = ezb_af_create_endpoint_desc(&sensor_endpoint_config);
-      |                      ^~~~~~~~~~~~~~~
-C:/Espressif/smart_home/smart_node/main/main.c:128:26: warning: unused variable 'sensor_device' [-Wunused-variable]
-  128 |     ezb_af_device_desc_t sensor_device = ezb_af_create_device_desc();
-      |                          ^~~~~~~~~~~~~
-C:/Espressif/smart_home/smart_node/main/main.c:119:10: warning: unused variable 'lock' [-Wunused-variable]
-  119 |     bool lock = esp_zigbee_lock_acquire(pdMS_TO_TICKS(1000));
-      |          ^~~~
-C:/Espressif/smart_home/smart_node/main/main.c: In function 'app_main':
-C:/Espressif/smart_home/smart_node/main/main.c:203:32: error: passing argument 1 of 'ezb_app_signal_add_handler' from incompatible pointer type [-Wincompatible-pointer-types]
-  203 |     ezb_app_signal_add_handler(zigbee_signal_callback);
-      |                                ^~~~~~~~~~~~~~~~~~~~~~
-      |                                |
-      |                                void (*)(void **)
-In file included from C:/Espressif/smart_home/smart_node/managed_components/espressif__esp-zigbee-lib/include/ezbee/core.h:13,
-                 from C:/Espressif/smart_home/smart_node/managed_components/espressif__esp-zigbee-lib/include/esp_zigbee.h:18,
-                 from C:/Espressif/smart_home/smart_node/main/main.c:30:
-C:/Espressif/smart_home/smart_node/managed_components/espressif__esp-zigbee-lib/include/ezbee/app_signals.h:550:63: note: expected 'ezb_app_signal_handler_t' {aka '_Bool (*)(void * const*)'} but argument is of type 'void (*)(void **)'
-  550 | ezb_err_t ezb_app_signal_add_handler(ezb_app_signal_handler_t handler);
-      |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
-ninja: build stopped: subcommand failed.
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807410
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=17140h ( 94528) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00027168 vaddr=40800000 size=00eb0h (  3760) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6f034h (454708) map[0m
+[0;32mI (234) esp_image: segment 3: paddr=0009705c vaddr=40800eb0 size=10a64h ( 68196) load[0m
+[0;32mI (254) esp_image: segment 4: paddr=000a7ac8 vaddr=40811920 size=0217ch (  8572) load[0m
+[0;32mI (258) esp_image: segment 5: paddr=000a9c4c vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (264) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (280) cpu_start: Unicore app[0m
+[0;32mI (289) cpu_start: Pro cpu start user code[0m
+[0;32mI (289) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (289) app_init: Application information:[0m
+[0;32mI (290) app_init: Project name:     hello_world[0m
+[0;32mI (293) app_init: App version:      a83284f-dirty[0m
+[0;32mI (297) app_init: Compile time:     Sep  3 2026 07:46:08[0m
+[0;32mI (302) app_init: ELF file SHA256:  96f8b9afd...[0m
+[0;32mI (307) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (311) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (315) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (319) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (323) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (329) heap_init: At 408163B0 len 00036FD0 (219 KiB): RAM[0m
+[0;32mI (334) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (339) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (346) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (364) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (388) main_task: Calling app_main()[0m
+[1;31mE (388) main: hello[0m
+[1;31mE (388) BME280: device ID: 96[0m
+[0;32mI (398) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (398) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+SDK Version: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTClight sleap enabledI (418) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11
+[0;32mI (428) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (438) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTC[0m
+[0;32mI (448) main_task: Returned from app_main()[0m
+[0;32mI (458) main: Initialize Zigbee stack[0m
+[1;31mE (458) main: hello_zb[0m
+[0;32mI (458) main: DEVICE_FIRST_START status=0x00 factory_new=1[0m
+[0;32mI (458) main: Starting NETWORK_STEERING[0m
+[0;32mI (458) main: NETWORK_STEERING ret=0x0000[0m
+[0;33mW(638) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Join (0x1ea)[0m
+[0;33mW(2688) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Join (0x1ea)[0m
+[1;31mE (2688) main: end node network address:65535[0m
+[0;33mW (2688) main: Failed to join network with status(0x03)[0m
+[1;31mE (10398) main: temp: 25.98[0m
+[1;31mE (10398) main: hum: 53.84[0m
+[1;31mE (10398) main: end node network address:65535[0m
+[0;32mI (10398) main: Send temperature: 25.98 °C, err=0x00[0m
+[0;32mI (10398) main: Reporting config found[0m
+[1;31mE (20398) main: temp: 25.98[0m
+[1;31mE (20398) main: hum: 53.91[0m
+[1;31mE (20398) main: end node network address:65535[0m
+[0;32mI (20398) main: Send temperature: 25.98 °C, err=0x00[0m
+[0;32mI (20398) main: Reporting config found[0m
+[1;31mE (30398) main: temp: 25.98[0m
+[1;31mE (30398) main: hum: 53.93[0m
+[1;31mE (30398) main: end node network address:65535[0m
+[0;32mI (30398) main: Send temperature: 25.98 °C, err=0x00[0m
+[0;32mI (30398) main: Reporting config found[0m
+[1;31mE (40398) main: temp: 25.96[0m
+[1;31mE (40398) main: hum: 53.83[0m
+[1;31mE (40398) main: end node network address:65535[0m
+[0;32mI (40398) main: Send temperature: 25.96 °C, err=0x00[0m
+[0;32mI (40398) main: Reporting config found[0m
+[1;31mE (50398) main: temp: 25.96[0m
+[1;31mE (50398) main: hum: 53.73[0m
+[1;31mE (50398) main: end node network address:65535[0m
+[0;32mI (50398) main: Send temperature: 25.96 °C, err=0x00[0m
+[0;32mI (50398) main: Reporting config found[0m
+[1;31mE (60398) main: temp: 25.97[0m
+[1;31mE (60398) main: hum: 53.76[0m
+[1;31mE (60398) main: end node network address:65535[0m
+[0;32mI (60398) main: Send temperature: 25.97 °C, err=0x00[0m
+[0;32mI (60398) main: Reporting config found[0m
+[1;31mE (70398) main: temp: 25.97[0m
+[1;31mE (70398) main: hum: 53.78[0m
+[1;31mE (70398) main: end node network address:65535[0m
+[0;32mI (70398) main: Send temperature: 25.97 °C, err=0x00[0m
+[0;32mI (70398) main: Reporting config found[0m
+[1;31mE (80398) main: temp: 25.99[0m
+[1;31mE (80398) main: hum: 53.72[0m
+[1;31mE (80398) main: end node network address:65535[0m
+[0;32mI (80398) main: Send temperature: 25.99 °C, err=0x00[0m
+[0;32mI (80398) main: Reporting config found[0m
+[1;31mE (90398) main: temp: 25.98[0m
+[1;31mE (90398) main: hum: 53.76[0m
+[1;31mE (90398) main: end node network address:65535[0m
+[0;32mI (90398) main: Send temperature: 25.98 °C, err=0x00[0m
+[0;32mI (90398) main: Reporting config found[0m
+[1;31mE (100398) main: temp: 26.01[0m
+[1;31mE (100398) main: hum: 53.82[0m
+[1;31mE (100398) main: end node network address:65535[0m
+[0;32mI (100398) main: Send temperature: 26.01 °C, err=0x00[0m
+[0;32mI (100398) main: Reporting config found[0m
+[1;31mE (110398) main: temp: 26.01[0m
+[1;31mE (110398) main: hum: 53.78[0m
+[1;31mE (110398) main: end node network address:65535[0m
+[0;32mI (110398) main: Send temperature: 26.01 °C, err=0x00[0m
+[0;32mI (110398) main: Reporting config found[0m
+[1;31mE (120398) main: temp: 26.02[0m
+[1;31mE (120398) main: hum: 53.77[0m
+[1;31mE (120398) main: end node network address:65535[0m
+[0;32mI (120398) main: Send temperature: 26.02 °C, err=0x00[0m
+[0;32mI (120398) main: Reporting config found[0m
+[1;31mE (130398) main: temp: 26.01[0m
+[1;31mE (130398) main: hum: 53.88[0m
+[1;31mE (130398) main: end node network address:65535[0m
+[0;32mI (130398) main: Send temperature: 26.01 °C, err=0x00[0m
+[0;32mI (130398) main: Reporting config found[0m
+[1;31mE (140398) main: temp: 26.03[0m
+[1;31mE (140398) main: hum: 53.88[0m
+[1;31mE (140398) main: end node network address:65535[0m
+[0;32mI (140398) main: Send temperature: 26.03 °C, err=0x00[0m
+[0;32mI (140398) main: Reporting config found[0m
+[1;31mE (150398) main: temp: 26.03[0m
+[1;31mE (150398) main: hum: 53.87[0m
+[1;31mE (150398) main: end node network address:65535[0m
+[0;32mI (150398) main: Send temperature: 26.03 °C, err=0x00[0m
+[0;32mI (150398) main: Reporting config found[0m
+[1;31mE (160398) main: temp: 26.04[0m
+[1;31mE (160398) main: hum: 53.81[0m
+[1;31mE (160398) main: end node network address:65535[0m
+[0;32mI (160398) main: Send temperature: 26.04 °C, err=0x00[0m
+[0;32mI (160398) main: Reporting config found[0m
+[1;31mE (170398) main: temp: 26.04[0m
+[1;31mE (170398) main: hum: 53.79[0m
+[1;31mE (170398) main: end node network address:65535[0m
+[0;32mI (170398) main: Send temperature: 26.04 °C, err=0x00[0m
+[0;32mI (170398) main: Reporting config found[0m
+[1;31mE (180398) main: temp: 26.05[0m
+[1;31mE (180398) main: hum: 53.84[0m
+[1;31mE (180398) main: end node network address:65535[0m
+[0;32mI (180398) main: Send temperature: 26.05 °C, err=0x00[0m
+[0;32mI (180398) main: Reporting config found[0m
+[1;31mE (190398) main: temp: 26.06[0m
+[1;31mE (190398) main: hum: 53.84[0m
+[1;31mE (190398) main: end node network address:65535[0m
+[0;32mI (190398) main: Send temperature: 26.06 °C, err=0x00[0m
+[0;32mI (190398) main: Reporting config found[0m
+[1;31mE (200398) main: temp: 26.07[0m
+[1;31mE (200398) main: hum: 53.77[0m
+[1;31mE (200398) main: end node network address:65535[0m
+[0;32mI (200398) main: Send temperature: 26.07 °C, err=0x00[0m
+[0;32mI (200398) main: Reporting config found[0m
+[1;31mE (210398) main: temp: 26.08[0m
+[1;31mE (210398) main: hum: 53.76[0m
+[1;31mE (210398) main: end node network address:65535[0m
+[0;32mI (210398) main: Send temperature: 26.08 °C, err=0x00[0m
+[0;32mI (210398) main: Reporting config found[0m
+[1;31mE (220398) main: temp: 26.08[0m
+[1;31mE (220398) main: hum: 53.77[0m
+[1;31mE (220398) main: end node network address:65535[0m
+[0;32mI (220398) main: Send temperature: 26.08 °C, err=0x00[0m
+[0;32mI (220398) main: Reporting config found[0m
+[1;31mE (230398) main: temp: 26.08[0m
+[1;31mE (230398) main: hum: 53.81[0m
+[1;31mE (230398) main: end node network address:65535[0m
+[0;32mI (230398) main: Send temperature: 26.08 °C, err=0x00[0m
+[0;32mI (230398) main: Reporting config found[0m
+[1;31mE (240398) main: temp: 26.08[0m
+[1;31mE (240398) main: hum: 53.84[0m
+[1;31mE (240398) main: end node network address:65535[0m
+[0;32mI (240398) main: Send temperature: 26.08 °C, err=0x00[0m
+[0;32mI (240398) main: Reporting config found[0m
+[1;31mE (250398) main: temp: 26.08[0m
+[1;31mE (250398) main: hum: 53.85[0m
+[1;31mE (250398) main: end node network address:65535[0m
+[0;32mI (250398) main: Send temperature: 26.08 °C, err=0x00[0m
+[0;32mI (250398) main: Reporting config found[0m
+[1;31mE (260398) main: temp: 26.08[0m
+[1;31mE (260398) main: hum: 53.75[0m
+[1;31mE (260398) main: end node network address:65535[0m
+[0;32mI (260398) main: Send temperature: 26.08 °C, err=0x00[0m
+[0;32mI (260398) main: Reporting config found[0m
+[1;31mE (270398) main: temp: 26.09[0m
+[1;31mE (270398) main: hum: 53.52[0m
+[1;31mE (270398) main: end node network address:65535[0m
+[0;32mI (270398) main: Send temperature: 26.09 °C, err=0x00[0m
+[0;32mI (270398) main: Reporting config found[0m
+[1;31mE (280398) main: temp: 26.10[0m
+[1;31mE (280398) main: hum: 53.44[0m
+[1;31mE (280398) main: end node network address:65535[0m
+[0;32mI (280398) main: Send temperature: 26.10 °C, err=0x00[0m
+[0;32mI (280398) main: Reporting config found[0m
+[1;31mE (290398) main: temp: 26.10[0m
+[1;31mE (290398) main: hum: 53.46[0m
+[1;31mE (290398) main: end node network address:65535[0m
+[0;32mI (290398) main: Send temperature: 26.10 °C, err=0x00[0m
+[0;32mI (290398) main: Reporting config found[0m
+[1;31mE (300398) main: temp: 26.10[0m
+[1;31mE (300398) main: hum: 53.53[0m
+[1;31mE (300398) main: end node network address:65535[0m
+[0;32mI (300398) main: Send temperature: 26.10 °C, err=0x00[0m
+[0;32mI (300398) main: Reporting config found[0m
+[1;31mE (310398) main: temp: 26.11[0m
+[1;31mE (310398) main: hum: 53.63[0m
+[1;31mE (310398) main: end node network address:65535[0m
+[0;32mI (310398) main: Send temperature: 26.11 °C, err=0x00[0m
+[0;32mI (310398) main: Reporting config found[0m
+[1;31mE (320398) main: temp: 26.09[0m
+[1;31mE (320398) main: hum: 53.69[0m
+[1;31mE (320398) main: end node network address:65535[0m
+[0;32mI (320398) main: Send temperature: 26.09 °C, err=0x00[0m
+[0;32mI (320398) main: Reporting config found[0m
+[1;31mE (330398) main: temp: 26.11[0m
+[1;31mE (330398) main: hum: 53.73[0m
+[1;31mE (330398) main: end node network address:65535[0m
+[0;32mI (330398) main: Send temperature: 26.11 °C, err=0x00[0m
+[0;32mI (330398) main: Reporting config found[0m
+[1;31mE (340398) main: temp: 26.11[0m
+[1;31mE (340398) main: hum: 53.72[0m
+[1;31mE (340398) main: end node network address:65535[0m
+[0;32mI (340398) main: Send temperature: 26.11 °C, err=0x00[0m
+[0;32mI (340398) main: Reporting config found[0m
+[1;31mE (350398) main: temp: 26.11[0m
+[1;31mE (350398) main: hum: 53.72[0m
+[1;31mE (350398) main: end node network address:65535[0m
+[0;32mI (350398) main: Send temperature: 26.11 °C, err=0x00[0m
+[0;32mI (350398) main: Reporting config found[0m
+[1;31mE (360398) main: temp: 26.13[0m
+[1;31mE (360398) main: hum: 53.73[0m
+[1;31mE (360398) main: end node network address:65535[0m
+[0;32mI (360398) main: Send temperature: 26.13 °C, err=0x00[0m
+[0;32mI (360398) main: Reporting config found[0m
+[1;31mE (370398) main: temp: 26.11[0m
+[1;31mE (370398) main: hum: 53.77[0m
+[1;31mE (370398) main: end node network address:65535[0m
+[0;32mI (370398) main: Send temperature: 26.11 °C, err=0x00[0m
+[0;32mI (370398) main: Reporting config found[0m
+[1;31mE (380398) main: temp: 26.12[0m
+[1;31mE (380398) main: hum: 53.77[0m
+[1;31mE (380398) main: end node network address:65535[0m
+[0;32mI (380398) main: Send temperature: 26.12 °C, err=0x00[0m
+[0;32mI (380398) main: Reporting config found[0m
+[1;31mE (390398) main: temp: 26.12[0m
+[1;31mE (390398) main: hum: 53.72[0m
+[1;31mE (390398) main: end node network address:65535[0m
+[0;32mI (390398) main: Send temperature: 26.12 °C, err=0x00[0m
+[0;32mI (390398) main: Reporting config found[0m
+[1;31mE (400398) main: temp: 26.12[0m
+[1;31mE (400398) main: hum: 53.55[0m
+[1;31mE (400398) main: end node network address:65535[0m
+[0;32mI (400398) main: Send temperature: 26.12 °C, err=0x00[0m
+[0;32mI (400398) main: Reporting config found[0m
+[1;31mE (410398) main: temp: 26.12[0m
+[1;31mE (410398) main: hum: 53.53[0m
+[1;31mE (410398) main: end node network address:65535[0m
+[0;32mI (410398) main: Send temperature: 26.12 °C, err=0x00[0m
+[0;32mI (410398) main: Reporting config found[0m
+[1;31mE (420398) main: temp: 26.11[0m
+[1;31mE (420398) main: hum: 53.58[0m
+[1;31mE (420398) main: end node network address:65535[0m
+[0;32mI (420398) main: Send temperature: 26.11 °C, err=0x00[0m
+[0;32mI (420398) main: Reporting config found[0m
+[1;31mE (430398) main: temp: 26.12[0m
+[1;31mE (430398) main: hum: 53.59[0m
+[1;31mE (430398) main: end node network address:65535[0m
+[0;32mI (430398) main: Send temperature: 26.12 °C, err=0x00[0m
+[0;32mI (430398) main: Reporting config found[0m
+[1;31mE (440398) main: temp: 26.13[0m
+[1;31mE (440398) main: hum: 53.57[0m
+[1;31mE (440398) main: end node network address:65535[0m
+[0;32mI (440398) main: Send temperature: 26.13 °C, err=0x00[0m
+[0;32mI (440398) main: Reporting config found[0m
+[1;31mE (450398) main: temp: 26.14[0m
+[1;31mE (450398) main: hum: 53.65[0m
+[1;31mE (450398) main: end node network address:65535[0m
+[0;32mI (450398) main: Send temperature: 26.14 °C, err=0x00[0m
+[0;32mI (450398) main: Reporting config found[0m
+[1;31mE (460398) main: temp: 26.14[0m
+[1;31mE (460398) main: hum: 53.65[0m
+[1;31mE (460398) main: end node network address:65535[0m
+[0;32mI (460398) main: Send temperature: 26.14 °C, err=0x00[0m
+[0;32mI (460398) main: Reporting config found[0m
+[1;31mE (470398) main: temp: 26.15[0m
+[1;31mE (470398) main: hum: 53.60[0m
+[1;31mE (470398) main: end node network address:65535[0m
+[0;32mI (470398) main: Send temperature: 26.15 °C, err=0x00[0m
+[0;32mI (470398) main: Reporting config found[0m
+[1;31mE (480398) main: temp: 26.17[0m
+[1;31mE (480398) main: hum: 53.49[0m
+[1;31mE (480398) main: end node network address:65535[0m
+[0;32mI (480398) main: Send temperature: 26.17 °C, err=0x00[0m
+[0;32mI (480398) main: Reporting config found[0m
+[1;31mE (490398) main: temp: 26.19[0m
+[1;31mE (490398) main: hum: 53.56[0m
+[1;31mE (490398) main: end node network address:65535[0m
+[0;32mI (490398) main: Send temperature: 26.19 °C, err=0x00[0m
+[0;32mI (490398) main: Reporting config found[0m
+[1;31mE (500398) main: temp: 26.18[0m
+[1;31mE (500398) main: hum: 53.57[0m
+[1;31mE (500398) main: end node network address:65535[0m
+[0;32mI (500398) main: Send temperature: 26.18 °C, err=0x00[0m
+[0;32mI (500398) main: Reporting config found[0m
+[1;31mE (510398) main: temp: 26.19[0m
+[1;31mE (510398) main: hum: 53.62[0m
+[1;31mE (510398) main: end node network address:65535[0m
+[0;32mI (510398) main: Send temperature: 26.19 °C, err=0x00[0m
+[0;32mI (510398) main: Reporting config found[0m
+[1;31mE (520398) main: temp: 26.19[0m
+[1;31mE (520398) main: hum: 53.62[0m
+[1;31mE (520398) main: end node network address:65535[0m
+[0;32mI (520398) main: Send temperature: 26.19 °C, err=0x00[0m
+[0;32mI (520398) main: Reporting config found[0m
+[1;31mE (530398) main: temp: 26.18[0m
+[1;31mE (530398) main: hum: 53.56[0m
+[1;31mE (530398) main: end node network address:65535[0m
+[0;32mI (530398) main: Send temperature: 26.18 °C, err=0x00[0m
+[0;32mI (530398) main: Reporting config found[0m
+[1;31mE (540398) main: temp: 26.18[0m
+[1;31mE (540398) main: hum: 53.63[0m
+[1;31mE (540398) main: end node network address:65535[0m
+[0;32mI (540398) main: Send temperature: 26.18 °C, err=0x00[0m
+[0;32mI (540398) main: Reporting config found[0m
+[1;31mE (550398) main: temp: 26.18[0m
+[1;31mE (550398) main: hum: 53.50[0m
+[1;31mE (550398) main: end node network address:65535[0m
+[0;32mI (550398) main: Send temperature: 26.18 °C, err=0x00[0m
+[0;32mI (550398) main: Reporting config found[0m
+[1;31mE (560398) main: temp: 26.19[0m
+[1;31mE (560398) main: hum: 53.64[0m
+[1;31mE (560398) main: end node network address:65535[0m
+[0;32mI (560398) main: Send temperature: 26.19 °C, err=0x00[0m
+[0;32mI (560398) main: Reporting config found[0m
+[1;31mE (570398) main: temp: 26.19[0m
+[1;31mE (570398) main: hum: 53.47[0m
+[1;31mE (570398) main: end node network address:65535[0m
+[0;32mI (570398) main: Send temperature: 26.19 °C, err=0x00[0m
+[0;32mI (570398) main: Reporting config found[0m
+[1;31mE (580398) main: temp: 26.18[0m
+[1;31mE (580398) main: hum: 53.43[0m
+[1;31mE (580398) main: end node network address:65535[0m
+[0;32mI (580398) main: Send temperature: 26.18 °C, err=0x00[0m
+[0;32mI (580398) main: Reporting config found[0m
+[1;31mE (590398) main: temp: 26.20[0m
+[1;31mE (590398) main: hum: 53.31[0m
+[1;31mE (590398) main: end node network address:65535[0m
+[0;32mI (590398) main: Send temperature: 26.20 °C, err=0x00[0m
+[0;32mI (590398) main: Reporting config found[0m
+[1;31mE (600398) main: temp: 26.20[0m
+[1;31mE (600398) main: hum: 53.25[0m
+[1;31mE (600398) main: end node network address:65535[0m
+[0;32mI (600398) main: Send temperature: 26.20 °C, err=0x00[0m
+[0;32mI (600398) main: Reporting config found[0m
+[1;31mE (610398) main: temp: 26.20[0m
+[1;31mE (610398) main: hum: 53.29[0m
+[1;31mE (610398) main: end node network address:65535[0m
+[0;32mI (610398) main: Send temperature: 26.20 °C, err=0x00[0m
+[0;32mI (610398) main: Reporting config found[0m
+[1;31mE (620398) main: temp: 26.21[0m
+[1;31mE (620398) main: hum: 53.31[0m
+[1;31mE (620398) main: end node network address:65535[0m
+[0;32mI (620398) main: Send temperature: 26.21 °C, err=0x00[0m
+[0;32mI (620398) main: Reporting config found[0m
+[1;31mE (630398) main: temp: 26.21[0m
+[1;31mE (630398) main: hum: 53.37[0m
+[1;31mE (630398) main: end node network address:65535[0m
+[0;32mI (630398) main: Send temperature: 26.21 °C, err=0x00[0m
+[0;32mI (630398) main: Reporting config found[0m
+[1;31mE (640398) main: temp: 26.21[0m
+[1;31mE (640398) main: hum: 53.05[0m
+[1;31mE (640398) main: end node network address:65535[0m
+[0;32mI (640398) main: Send temperature: 26.21 °C, err=0x00[0m
+[0;32mI (640398) main: Reporting config found[0m
+[1;31mE (650398) main: temp: 26.21[0m
+[1;31mE (650398) main: hum: 53.09[0m
+[1;31mE (650398) main: end node network address:65535[0m
+[0;32mI (650398) main: Send temperature: 26.21 °C, err=0x00[0m
+[0;32mI (650398) main: Reporting config found[0m
+[1;31mE (660398) main: temp: 26.22[0m
+[1;31mE (660398) main: hum: 53.13[0m
+[1;31mE (660398) main: end node network address:65535[0m
+[0;32mI (660398) main: Send temperature: 26.22 °C, err=0x00[0m
+[0;32mI (660398) main: Reporting config found[0m
+[1;31mE (670398) main: temp: 26.23[0m
+[1;31mE (670398) main: hum: 53.11[0m
+[1;31mE (670398) main: end node network address:65535[0m
+[0;32mI (670398) main: Send temperature: 26.23 °C, err=0x00[0m
+[0;32mI (670398) main: Reporting config found[0m
+[1;31mE (680398) main: temp: 26.23[0m
+[1;31mE (680398) main: hum: 53.26[0m
+[1;31mE (680398) main: end node network address:65535[0m
+[0;32mI (680398) main: Send temperature: 26.23 °C, err=0x00[0m
+[0;32mI (680398) main: Reporting config found[0m
+[1;31mE (690398) main: temp: 26.23[0m
+[1;31mE (690398) main: hum: 53.38[0m
+[1;31mE (690398) main: end node network address:65535[0m
+[0;32mI (690398) main: Send temperature: 26.23 °C, err=0x00[0m
+[0;32mI (690398) main: Reporting config found[0m
+[1;31mE (700398) main: temp: 26.23[0m
+[1;31mE (700398) main: hum: 53.14[0m
+[1;31mE (700398) main: end node network address:65535[0m
+[0;32mI (700398) main: Send temperature: 26.23 °C, err=0x00[0m
+[0;32mI (700398) main: Reporting config found[0m
+[1;31mE (710398) main: temp: 26.25[0m
+[1;31mE (710398) main: hum: 53.21[0m
+[1;31mE (710398) main: end node network address:65535[0m
+[0;32mI (710398) main: Send temperature: 26.25 °C, err=0x00[0m
+[0;32mI (710398) main: Reporting config found[0m
+[1;31mE (720398) main: temp: 26.25[0m
+[1;31mE (720398) main: hum: 53.30[0m
+[1;31mE (720398) main: end node network address:65535[0m
+[0;32mI (720398) main: Send temperature: 26.25 °C, err=0x00[0m
+[0;32mI (720398) main: Reporting config found[0m
+[1;31mE (730398) main: temp: 26.25[0m
+[1;31mE (730398) main: hum: 53.42[0m
+[1;31mE (730398) main: end node network address:65535[0m
+[0;32mI (730398) main: Send temperature: 26.25 °C, err=0x00[0m
+[0;32mI (730398) main: Reporting config found[0m
+[1;31mE (740398) main: temp: 26.24[0m
+[1;31mE (740398) main: hum: 53.12[0m
+[1;31mE (740398) main: end node network address:65535[0m
+[0;32mI (740398) main: Send temperature: 26.24 °C, err=0x00[0m
+[0;32mI (740398) main: Reporting config found[0m
+[1;31mE (750398) main: temp: 26.25[0m
+[1;31mE (750398) main: hum: 52.95[0m
+[1;31mE (750398) main: end node network address:65535[0m
+[0;32mI (750398) main: Send temperature: 26.25 °C, err=0x00[0m
+[0;32mI (750398) main: Reporting config found[0m
+[1;31mE (760398) main: temp: 26.26[0m
+[1;31mE (760398) main: hum: 52.92[0m
+[1;31mE (760398) main: end node network address:65535[0m
+[0;32mI (760398) main: Send temperature: 26.26 °C, err=0x00[0m
+[0;32mI (760398) main: Reporting config found[0m
+[1;31mE (770398) main: temp: 26.27[0m
+[1;31mE (770398) main: hum: 52.95[0m
+[1;31mE (770398) main: end node network address:65535[0m
+[0;32mI (770398) main: Send temperature: 26.27 °C, err=0x00[0m
+[0;32mI (770398) main: Reporting config found[0m
+[1;31mE (780398) main: temp: 26.26[0m
+[1;31mE (780398) main: hum: 53.03[0m
+[1;31mE (780398) main: end node network address:65535[0m
+[0;32mI (780398) main: Send temperature: 26.26 °C, err=0x00[0m
+[0;32mI (780398) main: Reporting config found[0m
+[1;31mE (790398) main: temp: 26.26[0m
+[1;31mE (790398) main: hum: 53.09[0m
+[1;31mE (790398) main: end node network address:65535[0m
+[0;32mI (790398) main: Send temperature: 26.26 °C, err=0x00[0m
+[0;32mI (790398) main: Reporting config found[0m
+[1;31mE (800398) main: temp: 26.26[0m
+[1;31mE (800398) main: hum: 53.18[0m
+[1;31mE (800398) main: end node network address:65535[0m
+[0;32mI (800398) main: Send temperature: 26.26 °C, err=0x00[0m
+[0;32mI (800398) main: Reporting config found[0m
+[1;31mE (810398) main: temp: 26.27[0m
+[1;31mE (810398) main: hum: 53.16[0m
+[1;31mE (810398) main: end node network address:65535[0m
+[0;32mI (810398) main: Send temperature: 26.27 °C, err=0x00[0m
+[0;32mI (810398) main: Reporting config found[0m
+[1;31mE (820398) main: temp: 26.27[0m
+[1;31mE (820398) main: hum: 53.25[0m
+[1;31mE (820398) main: end node network address:65535[0m
+[0;32mI (820398) main: Send temperature: 26.27 °C, err=0x00[0m
+[0;32mI (820398) main: Reporting config found[0m
+[1;31mE (830398) main: temp: 26.28[0m
+[1;31mE (830398) main: hum: 53.36[0m
+[1;31mE (830398) main: end node network address:65535[0m
+[0;32mI (830398) main: Send temperature: 26.28 °C, err=0x00[0m
+[0;32mI (830398) main: Reporting config found[0m
+[1;31mE (840398) main: temp: 26.28[0m
+[1;31mE (840398) main: hum: 53.34[0m
+[1;31mE (840398) main: end node network address:65535[0m
+[0;32mI (840398) main: Send temperature: 26.28 °C, err=0x00[0m
+[0;32mI (840398) main: Reporting config found[0m
+[1;31mE (850398) main: temp: 26.30[0m
+[1;31mE (850398) main: hum: 53.32[0m
+[1;31mE (850398) main: end node network address:65535[0m
+[0;32mI (850398) main: Send temperature: 26.30 °C, err=0x00[0m
+[0;32mI (850398) main: Reporting config found[0m
+[1;31mE (860398) main: temp: 26.32[0m
+[1;31mE (860398) main: hum: 53.13[0m
+[1;31mE (860398) main: end node network address:65535[0m
+[0;32mI (860398) main: Send temperature: 26.32 °C, err=0x00[0m
+[0;32mI (860398) main: Reporting config found[0m
+[1;31mE (870398) main: temp: 26.32[0m
+[1;31mE (870398) main: hum: 53.33[0m
+[1;31mE (870398) main: end node network address:65535[0m
+[0;32mI (870398) main: Send temperature: 26.32 °C, err=0x00[0m
+[0;32mI (870398) main: Reporting config found[0m
+[1;31mE (880398) main: temp: 26.32[0m
+[1;31mE (880398) main: hum: 53.34[0m
+[1;31mE (880398) main: end node network address:65535[0m
+[0;32mI (880398) main: Send temperature: 26.32 °C, err=0x00[0m
+[0;32mI (880398) main: Reporting config found[0m
+[1;31mE (890398) main: temp: 26.32[0m
+[1;31mE (890398) main: hum: 53.35[0m
+[1;31mE (890398) main: end node network address:65535[0m
+[0;32mI (890398) main: Send temperature: 26.32 °C, err=0x00[0m
+[0;32mI (890398) main: Reporting config found[0m
+[1;31mE (900398) main: temp: 26.34[0m
+[1;31mE (900398) main: hum: 53.24[0m
+[1;31mE (900398) main: end node network address:65535[0m
+[0;32mI (900398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (900398) main: Reporting config found[0m
+[1;31mE (910398) main: temp: 26.33[0m
+[1;31mE (910398) main: hum: 53.07[0m
+[1;31mE (910398) main: end node network address:65535[0m
+[0;32mI (910398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (910398) main: Reporting config found[0m
+[1;31mE (920398) main: temp: 26.33[0m
+[1;31mE (920398) main: hum: 53.15[0m
+[1;31mE (920398) main: end node network address:65535[0m
+[0;32mI (920398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (920398) main: Reporting config found[0m
+[1;31mE (930398) main: temp: 26.34[0m
+[1;31mE (930398) main: hum: 53.22[0m
+[1;31mE (930398) main: end node network address:65535[0m
+[0;32mI (930398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (930398) main: Reporting config found[0m
+[1;31mE (940398) main: temp: 26.34[0m
+[1;31mE (940398) main: hum: 53.29[0m
+[1;31mE (940398) main: end node network address:65535[0m
+[0;32mI (940398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (940398) main: Reporting config found[0m
+[1;31mE (950398) main: temp: 26.34[0m
+[1;31mE (950398) main: hum: 53.28[0m
+[1;31mE (950398) main: end node network address:65535[0m
+[0;32mI (950398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (950398) main: Reporting config found[0m
+[1;31mE (960398) main: temp: 26.35[0m
+[1;31mE (960398) main: hum: 53.27[0m
+[1;31mE (960398) main: end node network address:65535[0m
+[0;32mI (960398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (960398) main: Reporting config found[0m
+[1;31mE (970398) main: temp: 26.35[0m
+[1;31mE (970398) main: hum: 53.25[0m
+[1;31mE (970398) main: end node network address:65535[0m
+[0;32mI (970398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (970398) main: Reporting config found[0m
+[1;31mE (980398) main: temp: 26.35[0m
+[1;31mE (980398) main: hum: 53.29[0m
+[1;31mE (980398) main: end node network address:65535[0m
+[0;32mI (980398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (980398) main: Reporting config found[0m
+[1;31mE (990398) main: temp: 26.35[0m
+[1;31mE (990398) main: hum: 53.35[0m
+[1;31mE (990398) main: end node network address:65535[0m
+[0;32mI (990398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (990398) main: Reporting config found[0m
+[1;31mE (1000398) main: temp: 26.35[0m
+[1;31mE (1000398) main: hum: 53.06[0m
+[1;31mE (1000398) main: end node network address:65535[0m
+[0;32mI (1000398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (1000398) main: Reporting config found[0m
+[1;31mE (1010398) main: temp: 26.35[0m
+[1;31mE (1010398) main: hum: 53.11[0m
+[1;31mE (1010398) main: end node network address:65535[0m
+[0;32mI (1010398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (1010398) main: Reporting config found[0m
+[1;31mE (1020398) main: temp: 26.36[0m
+[1;31mE (1020398) main: hum: 53.14[0m
+[1;31mE (1020398) main: end node network address:65535[0m
+[0;32mI (1020398) main: Send temperature: 26.36 °C, err=0x00[0m
+[0;32mI (1020398) main: Reporting config found[0m
+[1;31mE (1030398) main: temp: 26.37[0m
+[1;31mE (1030398) main: hum: 53.08[0m
+[1;31mE (1030398) main: end node network address:65535[0m
+[0;32mI (1030398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (1030398) main: Reporting config found[0m
+[1;31mE (1040398) main: temp: 26.38[0m
+[1;31mE (1040398) main: hum: 53.05[0m
+[1;31mE (1040398) main: end node network address:65535[0m
+[0;32mI (1040398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1040398) main: Reporting config found[0m
+[1;31mE (1050398) main: temp: 26.38[0m
+[1;31mE (1050398) main: hum: 53.05[0m
+[1;31mE (1050398) main: end node network address:65535[0m
+[0;32mI (1050398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1050398) main: Reporting config found[0m
+[1;31mE (1060398) main: temp: 26.38[0m
+[1;31mE (1060398) main: hum: 53.13[0m
+[1;31mE (1060398) main: end node network address:65535[0m
+[0;32mI (1060398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1060398) main: Reporting config found[0m
+[1;31mE (1070398) main: temp: 26.38[0m
+[1;31mE (1070398) main: hum: 53.22[0m
+[1;31mE (1070398) main: end node network address:65535[0m
+[0;32mI (1070398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1070398) main: Reporting config found[0m
+[1;31mE (1080398) main: temp: 26.39[0m
+[1;31mE (1080398) main: hum: 53.13[0m
+[1;31mE (1080398) main: end node network address:65535[0m
+[0;32mI (1080398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (1080398) main: Reporting config found[0m
+[1;31mE (1090398) main: temp: 26.38[0m
+[1;31mE (1090398) main: hum: 53.07[0m
+[1;31mE (1090398) main: end node network address:65535[0m
+[0;32mI (1090398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1090398) main: Reporting config found[0m
+[1;31mE (1100398) main: temp: 26.38[0m
+[1;31mE (1100398) main: hum: 52.95[0m
+[1;31mE (1100398) main: end node network address:65535[0m
+[0;32mI (1100398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1100398) main: Reporting config found[0m
+[1;31mE (1110398) main: temp: 26.37[0m
+[1;31mE (1110398) main: hum: 52.97[0m
+[1;31mE (1110398) main: end node network address:65535[0m
+[0;32mI (1110398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (1110398) main: Reporting config found[0m
+[1;31mE (1120398) main: temp: 26.37[0m
+[1;31mE (1120398) main: hum: 52.94[0m
+[1;31mE (1120398) main: end node network address:65535[0m
+[0;32mI (1120398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (1120398) main: Reporting config found[0m
+[1;31mE (1130398) main: temp: 26.37[0m
+[1;31mE (1130398) main: hum: 52.84[0m
+[1;31mE (1130398) main: end node network address:65535[0m
+[0;32mI (1130398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (1130398) main: Reporting config found[0m
+[1;31mE (1140398) main: temp: 26.38[0m
+[1;31mE (1140398) main: hum: 52.87[0m
+[1;31mE (1140398) main: end node network address:65535[0m
+[0;32mI (1140398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1140398) main: Reporting config found[0m
+[1;31mE (1150398) main: temp: 26.37[0m
+[1;31mE (1150398) main: hum: 52.88[0m
+[1;31mE (1150398) main: end node network address:65535[0m
+[0;32mI (1150398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (1150398) main: Reporting config found[0m
+[1;31mE (1160398) main: temp: 26.38[0m
+[1;31mE (1160398) main: hum: 52.97[0m
+[1;31mE (1160398) main: end node network address:65535[0m
+[0;32mI (1160398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1160398) main: Reporting config found[0m
+[1;31mE (1170398) main: temp: 26.36[0m
+[1;31mE (1170398) main: hum: 52.43[0m
+[1;31mE (1170398) main: end node network address:65535[0m
+[0;32mI (1170398) main: Send temperature: 26.36 °C, err=0x00[0m
+[0;32mI (1170398) main: Reporting config found[0m
+[1;31mE (1180398) main: temp: 26.38[0m
+[1;31mE (1180398) main: hum: 52.57[0m
+[1;31mE (1180398) main: end node network address:65535[0m
+[0;32mI (1180398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1180398) main: Reporting config found[0m
+[1;31mE (1190398) main: temp: 26.38[0m
+[1;31mE (1190398) main: hum: 52.77[0m
+[1;31mE (1190398) main: end node network address:65535[0m
+[0;32mI (1190398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1190398) main: Reporting config found[0m
+[1;31mE (1200398) main: temp: 26.38[0m
+[1;31mE (1200398) main: hum: 52.90[0m
+[1;31mE (1200398) main: end node network address:65535[0m
+[0;32mI (1200398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (1200398) main: Reporting config found[0m
+[1;31mE (1210398) main: temp: 26.40[0m
+[1;31mE (1210398) main: hum: 52.98[0m
+[1;31mE (1210398) main: end node network address:65535[0m
+[0;32mI (1210398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (1210398) main: Reporting config found[0m
+[1;31mE (1220398) main: temp: 26.39[0m
+[1;31mE (1220398) main: hum: 53.12[0m
+[1;31mE (1220398) main: end node network address:65535[0m
+[0;32mI (1220398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (1220398) main: Reporting config found[0m
+[1;31mE (1230398) main: temp: 26.40[0m
+[1;31mE (1230398) main: hum: 52.91[0m
+[1;31mE (1230398) main: end node network address:65535[0m
+[0;32mI (1230398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (1230398) main: Reporting config found[0m
+[1;31mE (1240398) main: temp: 26.40[0m
+[1;31mE (1240398) main: hum: 52.90[0m
+[1;31mE (1240398) main: end node network address:65535[0m
+[0;32mI (1240398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (1240398) main: Reporting config found[0m
+[1;31mE (1250398) main: temp: 26.40[0m
+[1;31mE (1250398) main: hum: 52.90[0m
+[1;31mE (1250398) main: end node network address:65535[0m
+[0;32mI (1250398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (1250398) main: Reporting config found[0m
+[1;31mE (1260398) main: temp: 26.41[0m
+[1;31mE (1260398) main: hum: 53.02[0m
+[1;31mE (1260398) main: end node network address:65535[0m
+[0;32mI (1260398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (1260398) main: Reporting config found[0m
+[1;31mE (1270398) main: temp: 26.42[0m
+[1;31mE (1270398) main: hum: 53.03[0m
+[1;31mE (1270398) main: end node network address:65535[0m
+[0;32mI (1270398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (1270398) main: Reporting config found[0m
+[1;31mE (1280398) main: temp: 26.42[0m
+[1;31mE (1280398) main: hum: 53.07[0m
+[1;31mE (1280398) main: end node network address:65535[0m
+[0;32mI (1280398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (1280398) main: Reporting config found[0m
+[1;31mE (1290398) main: temp: 26.44[0m
+[1;31mE (1290398) main: hum: 53.01[0m
+[1;31mE (1290398) main: end node network address:65535[0m
+[0;32mI (1290398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (1290398) main: Reporting config found[0m
+[1;31mE (1300398) main: temp: 26.44[0m
+[1;31mE (1300398) main: hum: 52.99[0m
+[1;31mE (1300398) main: end node network address:65535[0m
+[0;32mI (1300398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (1300398) main: Reporting config found[0m
+[1;31mE (1310398) main: temp: 26.44[0m
+[1;31mE (1310398) main: hum: 53.05[0m
+[1;31mE (1310398) main: end node network address:65535[0m
+[0;32mI (1310398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (1310398) main: Reporting config found[0m
+[1;31mE (1320398) main: temp: 26.45[0m
+[1;31mE (1320398) main: hum: 53.06[0m
+[1;31mE (1320398) main: end node network address:65535[0m
+[0;32mI (1320398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (1320398) main: Reporting config found[0m
+[1;31mE (1330398) main: temp: 26.44[0m
+[1;31mE (1330398) main: hum: 53.10[0m
+[1;31mE (1330398) main: end node network address:65535[0m
+[0;32mI (1330398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (1330398) main: Reporting config found[0m
+[1;31mE (1340398) main: temp: 26.45[0m
+[1;31mE (1340398) main: hum: 53.10[0m
+[1;31mE (1340398) main: end node network address:65535[0m
+[0;32mI (1340398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (1340398) main: Reporting config found[0m
+[1;31mE (1350398) main: temp: 26.45[0m
+[1;31mE (1350398) main: hum: 53.12[0m
+[1;31mE (1350398) main: end node network address:65535[0m
+[0;32mI (1350398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (1350398) main: Reporting config found[0m
+[1;31mE (1360398) main: temp: 26.45[0m
+[1;31mE (1360398) main: hum: 53.13[0m
+[1;31mE (1360398) main: end node network address:65535[0m
+[0;32mI (1360398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (1360398) main: Reporting config found[0m
+[1;31mE (1370398) main: temp: 26.47[0m
+[1;31mE (1370398) main: hum: 53.05[0m
+[1;31mE (1370398) main: end node network address:65535[0m
+[0;32mI (1370398) main: Send temperature: 26.47 °C, err=0x00[0m
+[0;32mI (1370398) main: Reporting config found[0m
+[1;31mE (1380398) main: temp: 26.46[0m
+[1;31mE (1380398) main: hum: 52.87[0m
+[1;31mE (1380398) main: end node network address:65535[0m
+[0;32mI (1380398) main: Send temperature: 26.46 °C, err=0x00[0m
+[0;32mI (1380398) main: Reporting config found[0m
+[1;31mE (1390398) main: temp: 26.47[0m
+[1;31mE (1390398) main: hum: 52.85[0m
+[1;31mE (1390398) main: end node network address:65535[0m
+[0;32mI (1390398) main: Send temperature: 26.47 °C, err=0x00[0m
+[0;32mI (1390398) main: Reporting config found[0m
+[1;31mE (1400398) main: temp: 26.47[0m
+[1;31mE (1400398) main: hum: 52.92[0m
+[1;31mE (1400398) main: end node network address:65535[0m
+[0;32mI (1400398) main: Send temperature: 26.47 °C, err=0x00[0m
+[0;32mI (1400398) main: Reporting config found[0m
+[1;31mE (1410398) main: temp: 26.48[0m
+[1;31mE (1410398) main: hum: 53.02[0m
+[1;31mE (1410398) main: end node network address:65535[0m
+[0;32mI (1410398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1410398) main: Reporting config found[0m
+[1;31mE (1420398) main: temp: 26.47[0m
+[1;31mE (1420398) main: hum: 53.04[0m
+[1;31mE (1420398) main: end node network address:65535[0m
+[0;32mI (1420398) main: Send temperature: 26.47 °C, err=0x00[0m
+[0;32mI (1420398) main: Reporting config found[0m
+[1;31mE (1430398) main: temp: 26.47[0m
+[1;31mE (1430398) main: hum: 52.85[0m
+[1;31mE (1430398) main: end node network address:65535[0m
+[0;32mI (1430398) main: Send temperature: 26.47 °C, err=0x00[0m
+[0;32mI (1430398) main: Reporting config found[0m
+[1;31mE (1440398) main: temp: 26.45[0m
+[1;31mE (1440398) main: hum: 53.07[0m
+[1;31mE (1440398) main: end node network address:65535[0m
+[0;32mI (1440398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (1440398) main: Reporting config found[0m
+[1;31mE (1450398) main: temp: 26.44[0m
+[1;31mE (1450398) main: hum: 52.90[0m
+[1;31mE (1450398) main: end node network address:65535[0m
+[0;32mI (1450398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (1450398) main: Reporting config found[0m
+[1;31mE (1460398) main: temp: 26.45[0m
+[1;31mE (1460398) main: hum: 52.74[0m
+[1;31mE (1460398) main: end node network address:65535[0m
+[0;32mI (1460398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (1460398) main: Reporting config found[0m
+[1;31mE (1470398) main: temp: 26.47[0m
+[1;31mE (1470398) main: hum: 52.74[0m
+[1;31mE (1470398) main: end node network address:65535[0m
+[0;32mI (1470398) main: Send temperature: 26.47 °C, err=0x00[0m
+[0;32mI (1470398) main: Reporting config found[0m
+[1;31mE (1480398) main: temp: 26.47[0m
+[1;31mE (1480398) main: hum: 52.55[0m
+[1;31mE (1480398) main: end node network address:65535[0m
+[0;32mI (1480398) main: Send temperature: 26.47 °C, err=0x00[0m
+[0;32mI (1480398) main: Reporting config found[0m
+[1;31mE (1490398) main: temp: 26.48[0m
+[1;31mE (1490398) main: hum: 52.50[0m
+[1;31mE (1490398) main: end node network address:65535[0m
+[0;32mI (1490398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1490398) main: Reporting config found[0m
+[1;31mE (1500398) main: temp: 26.48[0m
+[1;31mE (1500398) main: hum: 52.44[0m
+[1;31mE (1500398) main: end node network address:65535[0m
+[0;32mI (1500398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1500398) main: Reporting config found[0m
+[1;31mE (1510398) main: temp: 26.48[0m
+[1;31mE (1510398) main: hum: 52.40[0m
+[1;31mE (1510398) main: end node network address:65535[0m
+[0;32mI (1510398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1510398) main: Reporting config found[0m
+[1;31mE (1520398) main: temp: 26.50[0m
+[1;31mE (1520398) main: hum: 52.45[0m
+[1;31mE (1520398) main: end node network address:65535[0m
+[0;32mI (1520398) main: Send temperature: 26.50 °C, err=0x00[0m
+[0;32mI (1520398) main: Reporting config found[0m
+[1;31mE (1530398) main: temp: 26.50[0m
+[1;31mE (1530398) main: hum: 52.59[0m
+[1;31mE (1530398) main: end node network address:65535[0m
+[0;32mI (1530398) main: Send temperature: 26.50 °C, err=0x00[0m
+[0;32mI (1530398) main: Reporting config found[0m
+[1;31mE (1540398) main: temp: 26.50[0m
+[1;31mE (1540398) main: hum: 52.76[0m
+[1;31mE (1540398) main: end node network address:65535[0m
+[0;32mI (1540398) main: Send temperature: 26.50 °C, err=0x00[0m
+[0;32mI (1540398) main: Reporting config found[0m
+[1;31mE (1550398) main: temp: 26.51[0m
+[1;31mE (1550398) main: hum: 52.82[0m
+[1;31mE (1550398) main: end node network address:65535[0m
+[0;32mI (1550398) main: Send temperature: 26.51 °C, err=0x00[0m
+[0;32mI (1550398) main: Reporting config found[0m
+[1;31mE (1560398) main: temp: 26.52[0m
+[1;31mE (1560398) main: hum: 52.83[0m
+[1;31mE (1560398) main: end node network address:65535[0m
+[0;32mI (1560398) main: Send temperature: 26.52 °C, err=0x00[0m
+[0;32mI (1560398) main: Reporting config found[0m
+[1;31mE (1570398) main: temp: 26.51[0m
+[1;31mE (1570398) main: hum: 52.92[0m
+[1;31mE (1570398) main: end node network address:65535[0m
+[0;32mI (1570398) main: Send temperature: 26.51 °C, err=0x00[0m
+[0;32mI (1570398) main: Reporting config found[0m
+[1;31mE (1580398) main: temp: 26.52[0m
+[1;31mE (1580398) main: hum: 52.90[0m
+[1;31mE (1580398) main: end node network address:65535[0m
+[0;32mI (1580398) main: Send temperature: 26.52 °C, err=0x00[0m
+[0;32mI (1580398) main: Reporting config found[0m
+[1;31mE (1590398) main: temp: 26.52[0m
+[1;31mE (1590398) main: hum: 52.95[0m
+[1;31mE (1590398) main: end node network address:65535[0m
+[0;32mI (1590398) main: Send temperature: 26.52 °C, err=0x00[0m
+[0;32mI (1590398) main: Reporting config found[0m
+[1;31mE (1600398) main: temp: 26.52[0m
+[1;31mE (1600398) main: hum: 52.97[0m
+[1;31mE (1600398) main: end node network address:65535[0m
+[0;32mI (1600398) main: Send temperature: 26.52 °C, err=0x00[0m
+[0;32mI (1600398) main: Reporting config found[0m
+[1;31mE (1610398) main: temp: 26.53[0m
+[1;31mE (1610398) main: hum: 52.96[0m
+[1;31mE (1610398) main: end node network address:65535[0m
+[0;32mI (1610398) main: Send temperature: 26.53 °C, err=0x00[0m
+[0;32mI (1610398) main: Reporting config found[0m
+[1;31mE (1620398) main: temp: 26.50[0m
+[1;31mE (1620398) main: hum: 52.95[0m
+[1;31mE (1620398) main: end node network address:65535[0m
+[0;32mI (1620398) main: Send temperature: 26.50 °C, err=0x00[0m
+[0;32mI (1620398) main: Reporting config found[0m
+[1;31mE (1630398) main: temp: 26.50[0m
+[1;31mE (1630398) main: hum: 52.78[0m
+[1;31mE (1630398) main: end node network address:65535[0m
+[0;32mI (1630398) main: Send temperature: 26.50 °C, err=0x00[0m
+[0;32mI (1630398) main: Reporting config found[0m
+[1;31mE (1640398) main: temp: 26.48[0m
+[1;31mE (1640398) main: hum: 52.53[0m
+[1;31mE (1640398) main: end node network address:65535[0m
+[0;32mI (1640398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1640398) main: Reporting config found[0m
+[1;31mE (1650398) main: temp: 26.48[0m
+[1;31mE (1650398) main: hum: 52.27[0m
+[1;31mE (1650398) main: end node network address:65535[0m
+[0;32mI (1650398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1650398) main: Reporting config found[0m
+[1;31mE (1660398) main: temp: 26.48[0m
+[1;31mE (1660398) main: hum: 52.36[0m
+[1;31mE (1660398) main: end node network address:65535[0m
+[0;32mI (1660398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1660398) main: Reporting config found[0m
+[1;31mE (1670398) main: temp: 26.48[0m
+[1;31mE (1670398) main: hum: 52.35[0m
+[1;31mE (1670398) main: end node network address:65535[0m
+[0;32mI (1670398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1670398) main: Reporting config found[0m
+[1;31mE (1680398) main: temp: 26.48[0m
+[1;31mE (1680398) main: hum: 51.79[0m
+[1;31mE (1680398) main: end node network address:65535[0m
+[0;32mI (1680398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1680398) main: Reporting config found[0m
+[1;31mE (1690398) main: temp: 26.48[0m
+[1;31mE (1690398) main: hum: 51.84[0m
+[1;31mE (1690398) main: end node network address:65535[0m
+[0;32mI (1690398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1690398) main: Reporting config found[0m
+[1;31mE (1700398) main: temp: 26.48[0m
+[1;31mE (1700398) main: hum: 51.95[0m
+[1;31mE (1700398) main: end node network address:65535[0m
+[0;32mI (1700398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (1700398) main: Reporting config found[0m
+[1;31mE (1710398) main: temp: 26.49[0m
+[1;31mE (1710398) main: hum: 52.04[0m
+[1;31mE (1710398) main: end node network address:65535[0m
+[0;32mI (1710398) main: Send temperature: 26.49 °C, err=0x00[0m
+[0;32mI (1710398) main: Reporting config found[0m
+[1;31mE (1720398) main: temp: 26.51[0m
+[1;31mE (1720398) main: hum: 52.03[0m
+[1;31mE (1720398) main: end node network address:65535[0m
+[0;32mI (1720398) main: Send temperature: 26.51 °C, err=0x00[0m
+[0;32mI (1720398) main: Reporting config found[0m
+[1;31mE (1730398) main: temp: 26.50[0m
+[1;31mE (1730398) main: hum: 52.12[0m
+[1;31mE (1730398) main: end node network address:65535[0m
+[0;32mI (1730398) main: Send temperature: 26.50 °C, err=0x00[0m
+[0;32mI (1730398) main: Reporting config found[0m
+[1;31mE (1740398) main: temp: 26.51[0m
+[1;31mE (1740398) main: hum: 52.21[0m
+[1;31mE (1740398) main: end node network address:65535[0m
+[0;32mI (1740398) main: Send temperature: 26.51 °C, err=0x00[0m
+[0;32mI (1740398) main: Reporting config found[0m
+[1;31mE (1750398) main: temp: 26.51[0m
+[1;31mE (1750398) main: hum: 52.28[0m
+[1;31mE (1750398) main: end node network address:65535[0m
+[0;32mI (1750398) main: Send temperature: 26.51 °C, err=0x00[0m
+[0;32mI (1750398) main: Reporting config found[0m
+[1;31mE (1760398) main: temp: 26.51[0m
+[1;31mE (1760398) main: hum: 52.43[0m
+[1;31mE (1760398) main: end node network address:65535[0m
+[0;32mI (1760398) main: Send temperature: 26.51 °C, err=0x00[0m
+[0;32mI (1760398) main: Reporting config found[0m
+[1;31mE (1770398) main: temp: 26.53[0m
+[1;31mE (1770398) main: hum: 52.48[0m
+[1;31mE (1770398) main: end node network address:65535[0m
+[0;32mI (1770398) main: Send temperature: 26.53 °C, err=0x00[0m
+[0;32mI (1770398) main: Reporting config found[0m
+[1;31mE (1780398) main: temp: 26.53[0m
+[1;31mE (1780398) main: hum: 52.05[0m
+[1;31mE (1780398) main: end node network address:65535[0m
+[0;32mI (1780398) main: Send temperature: 26.53 °C, err=0x00[0m
+[0;32mI (1780398) main: Reporting config found[0m
+[1;31mE (1790398) main: temp: 26.53[0m
+[1;31mE (1790398) main: hum: 52.05[0m
+[1;31mE (1790398) main: end node network address:65535[0m
+[0;32mI (1790398) main: Send temperature: 26.53 °C, err=0x00[0m
+[0;32mI (1790398) main: Reporting config found[0m
+[1;31mE (1800398) main: temp: 26.53[0m
+[1;31mE (1800398) main: hum: 52.13[0m
+[1;31mE (1800398) main: end node network address:65535[0m
+[0;32mI (1800398) main: Send temperature: 26.53 °C, err=0x00[0m
+[0;32mI (1800398) main: Reporting config found[0m
+[1;31mE (1810398) main: temp: 26.53[0m
+[1;31mE (1810398) main: hum: 52.35[0m
+[1;31mE (1810398) main: end node network address:65535[0m
+[0;32mI (1810398) main: Send temperature: 26.53 °C, err=0x00[0m
+[0;32mI (1810398) main: Reporting config found[0m
+[1;31mE (1820398) main: temp: 26.54[0m
+[1;31mE (1820398) main: hum: 52.27[0m
+[1;31mE (1820398) main: end node network address:65535[0m
+[0;32mI (1820398) main: Send temperature: 26.54 °C, err=0x00[0m
+[0;32mI (1820398) main: Reporting config found[0m
+[1;31mE (1830398) main: temp: 26.53[0m
+[1;31mE (1830398) main: hum: 52.25[0m
+[1;31mE (1830398) main: end node network address:65535[0m
+[0;32mI (1830398) main: Send temperature: 26.53 °C, err=0x00[0m
+[0;32mI (1830398) main: Reporting config found[0m
+[1;31mE (1840398) main: temp: 26.54[0m
+[1;31mE (1840398) main: hum: 51.99[0m
+[1;31mE (1840398) main: end node network address:65535[0m
+[0;32mI (1840398) main: Send temperature: 26.54 °C, err=0x00[0m
+[0;32mI (1840398) main: Reporting config found[0m
+[1;31mE (1850398) main: temp: 26.54[0m
+[1;31mE (1850398) main: hum: 52.11[0m
+[1;31mE (1850398) main: end node network address:65535[0m
+[0;32mI (1850398) main: Send temperature: 26.54 °C, err=0x00[0m
+[0;32mI (1850398) main: Reporting config found[0m
+[1;31mE (1860398) main: temp: 26.57[0m
+[1;31mE (1860398) main: hum: 52.03[0m
+[1;31mE (1860398) main: end node network address:65535[0m
+[0;32mI (1860398) main: Send temperature: 26.57 °C, err=0x00[0m
+[0;32mI (1860398) main: Reporting config found[0m
+[1;31mE (1870398) main: temp: 26.57[0m
+[1;31mE (1870398) main: hum: 52.01[0m
+[1;31mE (1870398) main: end node network address:65535[0m
+[0;32mI (1870398) main: Send temperature: 26.57 °C, err=0x00[0m
+[0;32mI (1870398) main: Reporting config found[0m
+[1;31mE (1880398) main: temp: 26.58[0m
+[1;31mE (1880398) main: hum: 52.10[0m
+[1;31mE (1880398) main: end node network address:65535[0m
+[0;32mI (1880398) main: Send temperature: 26.58 °C, err=0x00[0m
+[0;32mI (1880398) main: Reporting config found[0m
+[1;31mE (1890398) main: temp: 26.59[0m
+[1;31mE (1890398) main: hum: 52.33[0m
+[1;31mE (1890398) main: end node network address:65535[0m
+[0;32mI (1890398) main: Send temperature: 26.59 °C, err=0x00[0m
+[0;32mI (1890398) main: Reporting config found[0m
+[1;31mE (1900398) main: temp: 26.61[0m
+[1;31mE (1900398) main: hum: 52.19[0m
+[1;31mE (1900398) main: end node network address:65535[0m
+[0;32mI (1900398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (1900398) main: Reporting config found[0m
+[1;31mE (1910398) main: temp: 26.61[0m
+[1;31mE (1910398) main: hum: 52.27[0m
+[1;31mE (1910398) main: end node network address:65535[0m
+[0;32mI (1910398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (1910398) main: Reporting config found[0m
+[1;31mE (1920398) main: temp: 26.61[0m
+[1;31mE (1920398) main: hum: 52.38[0m
+[1;31mE (1920398) main: end node network address:65535[0m
+[0;32mI (1920398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (1920398) main: Reporting config found[0m
+[1;31mE (1930398) main: temp: 26.62[0m
+[1;31mE (1930398) main: hum: 52.53[0m
+[1;31mE (1930398) main: end node network address:65535[0m
+[0;32mI (1930398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (1930398) main: Reporting config found[0m
+[1;31mE (1940398) main: temp: 26.62[0m
+[1;31mE (1940398) main: hum: 52.53[0m
+[1;31mE (1940398) main: end node network address:65535[0m
+[0;32mI (1940398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (1940398) main: Reporting config found[0m
+[1;31mE (1950398) main: temp: 26.64[0m
+[1;31mE (1950398) main: hum: 52.58[0m
+[1;31mE (1950398) main: end node network address:65535[0m
+[0;32mI (1950398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (1950398) main: Reporting config found[0m
+[1;31mE (1960398) main: temp: 26.64[0m
+[1;31mE (1960398) main: hum: 52.58[0m
+[1;31mE (1960398) main: end node network address:65535[0m
+[0;32mI (1960398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (1960398) main: Reporting config found[0m
+[1;31mE (1970398) main: temp: 26.64[0m
+[1;31mE (1970398) main: hum: 52.53[0m
+[1;31mE (1970398) main: end node network address:65535[0m
+[0;32mI (1970398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (1970398) main: Reporting config found[0m
+[1;31mE (1980398) main: temp: 26.65[0m
+[1;31mE (1980398) main: hum: 52.55[0m
+[1;31mE (1980398) main: end node network address:65535[0m
+[0;32mI (1980398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (1980398) main: Reporting config found[0m
+[1;31mE (1990398) main: temp: 26.66[0m
+[1;31mE (1990398) main: hum: 52.43[0m
+[1;31mE (1990398) main: end node network address:65535[0m
+[0;32mI (1990398) main: Send temperature: 26.66 °C, err=0x00[0m
+[0;32mI (1990398) main: Reporting config found[0m
+[1;31mE (2000398) main: temp: 26.65[0m
+[1;31mE (2000398) main: hum: 52.23[0m
+[1;31mE (2000398) main: end node network address:65535[0m
+[0;32mI (2000398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2000398) main: Reporting config found[0m
+[1;31mE (2010398) main: temp: 26.65[0m
+[1;31mE (2010398) main: hum: 52.28[0m
+[1;31mE (2010398) main: end node network address:65535[0m
+[0;32mI (2010398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2010398) main: Reporting config found[0m
+[1;31mE (2020398) main: temp: 26.65[0m
+[1;31mE (2020398) main: hum: 52.37[0m
+[1;31mE (2020398) main: end node network address:65535[0m
+[0;32mI (2020398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2020398) main: Reporting config found[0m
+[1;31mE (2030398) main: temp: 26.65[0m
+[1;31mE (2030398) main: hum: 52.49[0m
+[1;31mE (2030398) main: end node network address:65535[0m
+[0;32mI (2030398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2030398) main: Reporting config found[0m
+[1;31mE (2040398) main: temp: 26.63[0m
+[1;31mE (2040398) main: hum: 52.67[0m
+[1;31mE (2040398) main: end node network address:65535[0m
+[0;32mI (2040398) main: Send temperature: 26.63 °C, err=0x00[0m
+[0;32mI (2040398) main: Reporting config found[0m
+[1;31mE (2050398) main: temp: 26.65[0m
+[1;31mE (2050398) main: hum: 52.63[0m
+[1;31mE (2050398) main: end node network address:65535[0m
+[0;32mI (2050398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2050398) main: Reporting config found[0m
+[1;31mE (2060398) main: temp: 26.64[0m
+[1;31mE (2060398) main: hum: 52.55[0m
+[1;31mE (2060398) main: end node network address:65535[0m
+[0;32mI (2060398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (2060398) main: Reporting config found[0m
+[1;31mE (2070398) main: temp: 26.66[0m
+[1;31mE (2070398) main: hum: 52.46[0m
+[1;31mE (2070398) main: end node network address:65535[0m
+[0;32mI (2070398) main: Send temperature: 26.66 °C, err=0x00[0m
+[0;32mI (2070398) main: Reporting config found[0m
+[1;31mE (2080398) main: temp: 26.66[0m
+[1;31mE (2080398) main: hum: 52.46[0m
+[1;31mE (2080398) main: end node network address:65535[0m
+[0;32mI (2080398) main: Send temperature: 26.66 °C, err=0x00[0m
+[0;32mI (2080398) main: Reporting config found[0m
+[1;31mE (2090398) main: temp: 26.66[0m
+[1;31mE (2090398) main: hum: 52.43[0m
+[1;31mE (2090398) main: end node network address:65535[0m
+[0;32mI (2090398) main: Send temperature: 26.66 °C, err=0x00[0m
+[0;32mI (2090398) main: Reporting config found[0m
+[1;31mE (2100398) main: temp: 26.64[0m
+[1;31mE (2100398) main: hum: 52.27[0m
+[1;31mE (2100398) main: end node network address:65535[0m
+[0;32mI (2100398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (2100398) main: Reporting config found[0m
+[1;31mE (2110398) main: temp: 26.66[0m
+[1;31mE (2110398) main: hum: 52.25[0m
+[1;31mE (2110398) main: end node network address:65535[0m
+[0;32mI (2110398) main: Send temperature: 26.66 °C, err=0x00[0m
+[0;32mI (2110398) main: Reporting config found[0m
+[1;31mE (2120398) main: temp: 26.65[0m
+[1;31mE (2120398) main: hum: 52.36[0m
+[1;31mE (2120398) main: end node network address:65535[0m
+[0;32mI (2120398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2120398) main: Reporting config found[0m
+[1;31mE (2130398) main: temp: 26.65[0m
+[1;31mE (2130398) main: hum: 52.41[0m
+[1;31mE (2130398) main: end node network address:65535[0m
+[0;32mI (2130398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2130398) main: Reporting config found[0m
+[1;31mE (2140398) main: temp: 26.66[0m
+[1;31mE (2140398) main: hum: 52.31[0m
+[1;31mE (2140398) main: end node network address:65535[0m
+[0;32mI (2140398) main: Send temperature: 26.66 °C, err=0x00[0m
+[0;32mI (2140398) main: Reporting config found[0m
+[1;31mE (2150398) main: temp: 26.67[0m
+[1;31mE (2150398) main: hum: 52.43[0m
+[1;31mE (2150398) main: end node network address:65535[0m
+[0;32mI (2150398) main: Send temperature: 26.67 °C, err=0x00[0m
+[0;32mI (2150398) main: Reporting config found[0m
+[1;31mE (2160398) main: temp: 26.67[0m
+[1;31mE (2160398) main: hum: 52.14[0m
+[1;31mE (2160398) main: end node network address:65535[0m
+[0;32mI (2160398) main: Send temperature: 26.67 °C, err=0x00[0m
+[0;32mI (2160398) main: Reporting config found[0m
+[1;31mE (2170398) main: temp: 26.66[0m
+[1;31mE (2170398) main: hum: 52.07[0m
+[1;31mE (2170398) main: end node network address:65535[0m
+[0;32mI (2170398) main: Send temperature: 26.66 °C, err=0x00[0m
+[0;32mI (2170398) main: Reporting config found[0m
+[1;31mE (2180398) main: temp: 26.66[0m
+[1;31mE (2180398) main: hum: 51.75[0m
+[1;31mE (2180398) main: end node network address:65535[0m
+[0;32mI (2180398) main: Send temperature: 26.66 °C, err=0x00[0m
+[0;32mI (2180398) main: Reporting config found[0m
+[1;31mE (2190398) main: temp: 26.67[0m
+[1;31mE (2190398) main: hum: 51.74[0m
+[1;31mE (2190398) main: end node network address:65535[0m
+[0;32mI (2190398) main: Send temperature: 26.67 °C, err=0x00[0m
+[0;32mI (2190398) main: Reporting config found[0m
+[1;31mE (2200398) main: temp: 26.67[0m
+[1;31mE (2200398) main: hum: 51.63[0m
+[1;31mE (2200398) main: end node network address:65535[0m
+[0;32mI (2200398) main: Send temperature: 26.67 °C, err=0x00[0m
+[0;32mI (2200398) main: Reporting config found[0m
+[1;31mE (2210398) main: temp: 26.68[0m
+[1;31mE (2210398) main: hum: 51.38[0m
+[1;31mE (2210398) main: end node network address:65535[0m
+[0;32mI (2210398) main: Send temperature: 26.68 °C, err=0x00[0m
+[0;32mI (2210398) main: Reporting config found[0m
+[1;31mE (2220398) main: temp: 26.69[0m
+[1;31mE (2220398) main: hum: 51.25[0m
+[1;31mE (2220398) main: end node network address:65535[0m
+[0;32mI (2220398) main: Send temperature: 26.69 °C, err=0x00[0m
+[0;32mI (2220398) main: Reporting config found[0m
+[1;31mE (2230398) main: temp: 26.70[0m
+[1;31mE (2230398) main: hum: 51.08[0m
+[1;31mE (2230398) main: end node network address:65535[0m
+[0;32mI (2230398) main: Send temperature: 26.70 °C, err=0x00[0m
+[0;32mI (2230398) main: Reporting config found[0m
+[1;31mE (2240398) main: temp: 26.73[0m
+[1;31mE (2240398) main: hum: 50.98[0m
+[1;31mE (2240398) main: end node network address:65535[0m
+[0;32mI (2240398) main: Send temperature: 26.73 °C, err=0x00[0m
+[0;32mI (2240398) main: Reporting config found[0m
+[1;31mE (2250398) main: temp: 26.74[0m
+[1;31mE (2250398) main: hum: 51.10[0m
+[1;31mE (2250398) main: end node network address:65535[0m
+[0;32mI (2250398) main: Send temperature: 26.74 °C, err=0x00[0m
+[0;32mI (2250398) main: Reporting config found[0m
+[1;31mE (2260398) main: temp: 26.76[0m
+[1;31mE (2260398) main: hum: 51.23[0m
+[1;31mE (2260398) main: end node network address:65535[0m
+[0;32mI (2260398) main: Send temperature: 26.76 °C, err=0x00[0m
+[0;32mI (2260398) main: Reporting config found[0m
+[1;31mE (2270398) main: temp: 26.76[0m
+[1;31mE (2270398) main: hum: 51.44[0m
+[1;31mE (2270398) main: end node network address:65535[0m
+[0;32mI (2270398) main: Send temperature: 26.76 °C, err=0x00[0m
+[0;32mI (2270398) main: Reporting config found[0m
+[1;31mE (2280398) main: temp: 26.78[0m
+[1;31mE (2280398) main: hum: 51.34[0m
+[1;31mE (2280398) main: end node network address:65535[0m
+[0;32mI (2280398) main: Send temperature: 26.78 °C, err=0x00[0m
+[0;32mI (2280398) main: Reporting config found[0m
+[1;31mE (2290398) main: temp: 26.80[0m
+[1;31mE (2290398) main: hum: 51.19[0m
+[1;31mE (2290398) main: end node network address:65535[0m
+[0;32mI (2290398) main: Send temperature: 26.80 °C, err=0x00[0m
+[0;32mI (2290398) main: Reporting config found[0m
+[1;31mE (2300398) main: temp: 26.81[0m
+[1;31mE (2300398) main: hum: 50.80[0m
+[1;31mE (2300398) main: end node network address:65535[0m
+[0;32mI (2300398) main: Send temperature: 26.81 °C, err=0x00[0m
+[0;32mI (2300398) main: Reporting config found[0m
+[1;31mE (2310398) main: temp: 26.83[0m
+[1;31mE (2310398) main: hum: 50.79[0m
+[1;31mE (2310398) main: end node network address:65535[0m
+[0;32mI (2310398) main: Send temperature: 26.83 °C, err=0x00[0m
+[0;32mI (2310398) main: Reporting config found[0m
+[1;31mE (2320398) main: temp: 26.81[0m
+[1;31mE (2320398) main: hum: 51.02[0m
+[1;31mE (2320398) main: end node network address:65535[0m
+[0;32mI (2320398) main: Send temperature: 26.81 °C, err=0x00[0m
+[0;32mI (2320398) main: Reporting config found[0m
+[1;31mE (2330398) main: temp: 26.82[0m
+[1;31mE (2330398) main: hum: 50.93[0m
+[1;31mE (2330398) main: end node network address:65535[0m
+[0;32mI (2330398) main: Send temperature: 26.82 °C, err=0x00[0m
+[0;32mI (2330398) main: Reporting config found[0m
+[1;31mE (2340398) main: temp: 26.82[0m
+[1;31mE (2340398) main: hum: 50.93[0m
+[1;31mE (2340398) main: end node network address:65535[0m
+[0;32mI (2340398) main: Send temperature: 26.82 °C, err=0x00[0m
+[0;32mI (2340398) main: Reporting config found[0m
+[1;31mE (2350398) main: temp: 26.83[0m
+[1;31mE (2350398) main: hum: 51.10[0m
+[1;31mE (2350398) main: end node network address:65535[0m
+[0;32mI (2350398) main: Send temperature: 26.83 °C, err=0x00[0m
+[0;32mI (2350398) main: Reporting config found[0m
+[1;31mE (2360398) main: temp: 26.83[0m
+[1;31mE (2360398) main: hum: 51.43[0m
+[1;31mE (2360398) main: end node network address:65535[0m
+[0;32mI (2360398) main: Send temperature: 26.83 °C, err=0x00[0m
+[0;32mI (2360398) main: Reporting config found[0m
+[1;31mE (2370398) main: temp: 26.81[0m
+[1;31mE (2370398) main: hum: 51.52[0m
+[1;31mE (2370398) main: end node network address:65535[0m
+[0;32mI (2370398) main: Send temperature: 26.81 °C, err=0x00[0m
+[0;32mI (2370398) main: Reporting config found[0m
+[1;31mE (2380398) main: temp: 26.80[0m
+[1;31mE (2380398) main: hum: 53.10[0m
+[1;31mE (2380398) main: end node network address:65535[0m
+[0;32mI (2380398) main: Send temperature: 26.80 °C, err=0x00[0m
+[0;32mI (2380398) main: Reporting config found[0m
+[1;31mE (2390398) main: temp: 26.78[0m
+[1;31mE (2390398) main: hum: 52.35[0m
+[1;31mE (2390398) main: end node network address:65535[0m
+[0;32mI (2390398) main: Send temperature: 26.78 °C, err=0x00[0m
+[0;32mI (2390398) main: Reporting config found[0m
+[1;31mE (2400398) main: temp: 26.78[0m
+[1;31mE (2400398) main: hum: 52.10[0m
+[1;31mE (2400398) main: end node network address:65535[0m
+[0;32mI (2400398) main: Send temperature: 26.78 °C, err=0x00[0m
+[0;32mI (2400398) main: Reporting config found[0m
+[1;31mE (2410398) main: temp: 26.74[0m
+[1;31mE (2410398) main: hum: 52.07[0m
+[1;31mE (2410398) main: end node network address:65535[0m
+[0;32mI (2410398) main: Send temperature: 26.74 °C, err=0x00[0m
+[0;32mI (2410398) main: Reporting config found[0m
+[1;31mE (2420398) main: temp: 26.73[0m
+[1;31mE (2420398) main: hum: 52.12[0m
+[1;31mE (2420398) main: end node network address:65535[0m
+[0;32mI (2420398) main: Send temperature: 26.73 °C, err=0x00[0m
+[0;32mI (2420398) main: Reporting config found[0m
+[1;31mE (2430398) main: temp: 26.71[0m
+[1;31mE (2430398) main: hum: 52.16[0m
+[1;31mE (2430398) main: end node network address:65535[0m
+[0;32mI (2430398) main: Send temperature: 26.71 °C, err=0x00[0m
+[0;32mI (2430398) main: Reporting config found[0m
+[1;31mE (2440398) main: temp: 26.71[0m
+[1;31mE (2440398) main: hum: 52.21[0m
+[1;31mE (2440398) main: end node network address:65535[0m
+[0;32mI (2440398) main: Send temperature: 26.71 °C, err=0x00[0m
+[0;32mI (2440398) main: Reporting config found[0m
+[1;31mE (2450398) main: temp: 26.69[0m
+[1;31mE (2450398) main: hum: 52.32[0m
+[1;31mE (2450398) main: end node network address:65535[0m
+[0;32mI (2450398) main: Send temperature: 26.69 °C, err=0x00[0m
+[0;32mI (2450398) main: Reporting config found[0m
+[1;31mE (2460398) main: temp: 26.67[0m
+[1;31mE (2460398) main: hum: 52.24[0m
+[1;31mE (2460398) main: end node network address:65535[0m
+[0;32mI (2460398) main: Send temperature: 26.67 °C, err=0x00[0m
+[0;32mI (2460398) main: Reporting config found[0m
+[1;31mE (2470398) main: temp: 26.67[0m
+[1;31mE (2470398) main: hum: 52.27[0m
+[1;31mE (2470398) main: end node network address:65535[0m
+[0;32mI (2470398) main: Send temperature: 26.67 °C, err=0x00[0m
+[0;32mI (2470398) main: Reporting config found[0m
+[1;31mE (2480398) main: temp: 26.65[0m
+[1;31mE (2480398) main: hum: 52.29[0m
+[1;31mE (2480398) main: end node network address:65535[0m
+[0;32mI (2480398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2480398) main: Reporting config found[0m
+[1;31mE (2490398) main: temp: 26.65[0m
+[1;31mE (2490398) main: hum: 52.34[0m
+[1;31mE (2490398) main: end node network address:65535[0m
+[0;32mI (2490398) main: Send temperature: 26.65 °C, err=0x00[0m
+[0;32mI (2490398) main: Reporting config found[0m
+[1;31mE (2500398) main: temp: 26.64[0m
+[1;31mE (2500398) main: hum: 52.35[0m
+[1;31mE (2500398) main: end node network address:65535[0m
+[0;32mI (2500398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (2500398) main: Reporting config found[0m
+[1;31mE (2510398) main: temp: 26.63[0m
+[1;31mE (2510398) main: hum: 52.36[0m
+[1;31mE (2510398) main: end node network address:65535[0m
+[0;32mI (2510398) main: Send temperature: 26.63 °C, err=0x00[0m
+[0;32mI (2510398) main: Reporting config found[0m
+[1;31mE (2520398) main: temp: 26.62[0m
+[1;31mE (2520398) main: hum: 52.40[0m
+[1;31mE (2520398) main: end node network address:65535[0m
+[0;32mI (2520398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (2520398) main: Reporting config found[0m
+[1;31mE (2530398) main: temp: 26.62[0m
+[1;31mE (2530398) main: hum: 52.42[0m
+[1;31mE (2530398) main: end node network address:65535[0m
+[0;32mI (2530398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (2530398) main: Reporting config found[0m
+[1;31mE (2540398) main: temp: 26.61[0m
+[1;31mE (2540398) main: hum: 52.40[0m
+[1;31mE (2540398) main: end node network address:65535[0m
+[0;32mI (2540398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2540398) main: Reporting config found[0m
+[1;31mE (2550398) main: temp: 26.61[0m
+[1;31mE (2550398) main: hum: 52.40[0m
+[1;31mE (2550398) main: end node network address:65535[0m
+[0;32mI (2550398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2550398) main: Reporting config found[0m
+[1;31mE (2560398) main: temp: 26.61[0m
+[1;31mE (2560398) main: hum: 52.40[0m
+[1;31mE (2560398) main: end node network address:65535[0m
+[0;32mI (2560398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2560398) main: Reporting config found[0m
+[1;31mE (2570398) main: temp: 26.60[0m
+[1;31mE (2570398) main: hum: 52.39[0m
+[1;31mE (2570398) main: end node network address:65535[0m
+[0;32mI (2570398) main: Send temperature: 26.60 °C, err=0x00[0m
+[0;32mI (2570398) main: Reporting config found[0m
+[1;31mE (2580398) main: temp: 26.61[0m
+[1;31mE (2580398) main: hum: 52.47[0m
+[1;31mE (2580398) main: end node network address:65535[0m
+[0;32mI (2580398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2580398) main: Reporting config found[0m
+[1;31mE (2590398) main: temp: 26.61[0m
+[1;31mE (2590398) main: hum: 52.46[0m
+[1;31mE (2590398) main: end node network address:65535[0m
+[0;32mI (2590398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2590398) main: Reporting config found[0m
+[1;31mE (2600398) main: temp: 26.61[0m
+[1;31mE (2600398) main: hum: 52.45[0m
+[1;31mE (2600398) main: end node network address:65535[0m
+[0;32mI (2600398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2600398) main: Reporting config found[0m
+[1;31mE (2610398) main: temp: 26.61[0m
+[1;31mE (2610398) main: hum: 52.48[0m
+[1;31mE (2610398) main: end node network address:65535[0m
+[0;32mI (2610398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2610398) main: Reporting config found[0m
+[1;31mE (2620398) main: temp: 26.61[0m
+[1;31mE (2620398) main: hum: 52.51[0m
+[1;31mE (2620398) main: end node network address:65535[0m
+[0;32mI (2620398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2620398) main: Reporting config found[0m
+[1;31mE (2630398) main: temp: 26.61[0m
+[1;31mE (2630398) main: hum: 52.52[0m
+[1;31mE (2630398) main: end node network address:65535[0m
+[0;32mI (2630398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2630398) main: Reporting config found[0m
+[1;31mE (2640398) main: temp: 26.61[0m
+[1;31mE (2640398) main: hum: 52.54[0m
+[1;31mE (2640398) main: end node network address:65535[0m
+[0;32mI (2640398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2640398) main: Reporting config found[0m
+[1;31mE (2650398) main: temp: 26.61[0m
+[1;31mE (2650398) main: hum: 52.54[0m
+[1;31mE (2650398) main: end node network address:65535[0m
+[0;32mI (2650398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2650398) main: Reporting config found[0m
+[1;31mE (2660398) main: temp: 26.60[0m
+[1;31mE (2660398) main: hum: 52.56[0m
+[1;31mE (2660398) main: end node network address:65535[0m
+[0;32mI (2660398) main: Send temperature: 26.60 °C, err=0x00[0m
+[0;32mI (2660398) main: Reporting config found[0m
+[1;31mE (2670398) main: temp: 26.61[0m
+[1;31mE (2670398) main: hum: 52.55[0m
+[1;31mE (2670398) main: end node network address:65535[0m
+[0;32mI (2670398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2670398) main: Reporting config found[0m
+[1;31mE (2680398) main: temp: 26.61[0m
+[1;31mE (2680398) main: hum: 52.58[0m
+[1;31mE (2680398) main: end node network address:65535[0m
+[0;32mI (2680398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2680398) main: Reporting config found[0m
+[1;31mE (2690398) main: temp: 26.61[0m
+[1;31mE (2690398) main: hum: 52.59[0m
+[1;31mE (2690398) main: end node network address:65535[0m
+[0;32mI (2690398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2690398) main: Reporting config found[0m
+[1;31mE (2700398) main: temp: 26.61[0m
+[1;31mE (2700398) main: hum: 52.62[0m
+[1;31mE (2700398) main: end node network address:65535[0m
+[0;32mI (2700398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2700398) main: Reporting config found[0m
+[1;31mE (2710398) main: temp: 26.60[0m
+[1;31mE (2710398) main: hum: 52.59[0m
+[1;31mE (2710398) main: end node network address:65535[0m
+[0;32mI (2710398) main: Send temperature: 26.60 °C, err=0x00[0m
+[0;32mI (2710398) main: Reporting config found[0m
+[1;31mE (2720398) main: temp: 26.59[0m
+[1;31mE (2720398) main: hum: 52.52[0m
+[1;31mE (2720398) main: end node network address:65535[0m
+[0;32mI (2720398) main: Send temperature: 26.59 °C, err=0x00[0m
+[0;32mI (2720398) main: Reporting config found[0m
+[1;31mE (2730398) main: temp: 26.60[0m
+[1;31mE (2730398) main: hum: 52.52[0m
+[1;31mE (2730398) main: end node network address:65535[0m
+[0;32mI (2730398) main: Send temperature: 26.60 °C, err=0x00[0m
+[0;32mI (2730398) main: Reporting config found[0m
+[1;31mE (2740398) main: temp: 26.62[0m
+[1;31mE (2740398) main: hum: 52.48[0m
+[1;31mE (2740398) main: end node network address:65535[0m
+[0;32mI (2740398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (2740398) main: Reporting config found[0m
+[1;31mE (2750398) main: temp: 26.62[0m
+[1;31mE (2750398) main: hum: 52.47[0m
+[1;31mE (2750398) main: end node network address:65535[0m
+[0;32mI (2750398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (2750398) main: Reporting config found[0m
+[1;31mE (2760398) main: temp: 26.62[0m
+[1;31mE (2760398) main: hum: 52.53[0m
+[1;31mE (2760398) main: end node network address:65535[0m
+[0;32mI (2760398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (2760398) main: Reporting config found[0m
+[1;31mE (2770398) main: temp: 26.63[0m
+[1;31mE (2770398) main: hum: 52.66[0m
+[1;31mE (2770398) main: end node network address:65535[0m
+[0;32mI (2770398) main: Send temperature: 26.63 °C, err=0x00[0m
+[0;32mI (2770398) main: Reporting config found[0m
+[1;31mE (2780398) main: temp: 26.64[0m
+[1;31mE (2780398) main: hum: 52.67[0m
+[1;31mE (2780398) main: end node network address:65535[0m
+[0;32mI (2780398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (2780398) main: Reporting config found[0m
+[1;31mE (2790398) main: temp: 26.64[0m
+[1;31mE (2790398) main: hum: 52.58[0m
+[1;31mE (2790398) main: end node network address:65535[0m
+[0;32mI (2790398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (2790398) main: Reporting config found[0m
+[1;31mE (2800398) main: temp: 26.64[0m
+[1;31mE (2800398) main: hum: 52.60[0m
+[1;31mE (2800398) main: end node network address:65535[0m
+[0;32mI (2800398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (2800398) main: Reporting config found[0m
+[1;31mE (2810398) main: temp: 26.64[0m
+[1;31mE (2810398) main: hum: 52.46[0m
+[1;31mE (2810398) main: end node network address:65535[0m
+[0;32mI (2810398) main: Send temperature: 26.64 °C, err=0x00[0m
+[0;32mI (2810398) main: Reporting config found[0m
+[1;31mE (2820398) main: temp: 26.61[0m
+[1;31mE (2820398) main: hum: 52.49[0m
+[1;31mE (2820398) main: end node network address:65535[0m
+[0;32mI (2820398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2820398) main: Reporting config found[0m
+[1;31mE (2830398) main: temp: 26.61[0m
+[1;31mE (2830398) main: hum: 52.50[0m
+[1;31mE (2830398) main: end node network address:65535[0m
+[0;32mI (2830398) main: Send temperature: 26.61 °C, err=0x00[0m
+[0;32mI (2830398) main: Reporting config found[0m
+[1;31mE (2840398) main: temp: 26.63[0m
+[1;31mE (2840398) main: hum: 52.60[0m
+[1;31mE (2840398) main: end node network address:65535[0m
+[0;32mI (2840398) main: Send temperature: 26.63 °C, err=0x00[0m
+[0;32mI (2840398) main: Reporting config found[0m
+[1;31mE (2850398) main: temp: 26.62[0m
+[1;31mE (2850398) main: hum: 53.15[0m
+[1;31mE (2850398) main: end node network address:65535[0m
+[0;32mI (2850398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (2850398) main: Reporting config found[0m
+[1;31mE (2860398) main: temp: 26.62[0m
+[1;31mE (2860398) main: hum: 52.78[0m
+[1;31mE (2860398) main: end node network address:65535[0m
+[0;32mI (2860398) main: Send temperature: 26.62 °C, err=0x00[0m
+[0;32mI (2860398) main: Reporting config found[0m
+[1;31mE (2870398) main: temp: 26.60[0m
+[1;31mE (2870398) main: hum: 52.78[0m
+[1;31mE (2870398) main: end node network address:65535[0m
+[0;32mI (2870398) main: Send temperature: 26.60 °C, err=0x00[0m
+[0;32mI (2870398) main: Reporting config found[0m
+[1;31mE (2880398) main: temp: 26.59[0m
+[1;31mE (2880398) main: hum: 52.71[0m
+[1;31mE (2880398) main: end node network address:65535[0m
+[0;32mI (2880398) main: Send temperature: 26.59 °C, err=0x00[0m
+[0;32mI (2880398) main: Reporting config found[0m
+[1;31mE (2890398) main: temp: 26.54[0m
+[1;31mE (2890398) main: hum: 52.94[0m
+[1;31mE (2890398) main: end node network address:65535[0m
+[0;32mI (2890398) main: Send temperature: 26.54 °C, err=0x00[0m
+[0;32mI (2890398) main: Reporting config found[0m
+[1;31mE (2900398) main: temp: 26.54[0m
+[1;31mE (2900398) main: hum: 53.04[0m
+[1;31mE (2900398) main: end node network address:65535[0m
+[0;32mI (2900398) main: Send temperature: 26.54 °C, err=0x00[0m
+[0;32mI (2900398) main: Reporting config found[0m
+[1;31mE (2910398) main: temp: 26.54[0m
+[1;31mE (2910398) main: hum: 53.08[0m
+[1;31mE (2910398) main: end node network address:65535[0m
+[0;32mI (2910398) main: Send temperature: 26.54 °C, err=0x00[0m
+[0;32mI (2910398) main: Reporting config found[0m
+[1;31mE (2920398) main: temp: 26.51[0m
+[1;31mE (2920398) main: hum: 53.02[0m
+[1;31mE (2920398) main: end node network address:65535[0m
+[0;32mI (2920398) main: Send temperature: 26.51 °C, err=0x00[0m
+[0;32mI (2920398) main: Reporting config found[0m
+[1;31mE (2930398) main: temp: 26.51[0m
+[1;31mE (2930398) main: hum: 53.15[0m
+[1;31mE (2930398) main: end node network address:65535[0m
+[0;32mI (2930398) main: Send temperature: 26.51 °C, err=0x00[0m
+[0;32mI (2930398) main: Reporting config found[0m
+[1;31mE (2940398) main: temp: 26.50[0m
+[1;31mE (2940398) main: hum: 53.00[0m
+[1;31mE (2940398) main: end node network address:65535[0m
+[0;32mI (2940398) main: Send temperature: 26.50 °C, err=0x00[0m
+[0;32mI (2940398) main: Reporting config found[0m
+[1;31mE (2950398) main: temp: 26.48[0m
+[1;31mE (2950398) main: hum: 52.93[0m
+[1;31mE (2950398) main: end node network address:65535[0m
+[0;32mI (2950398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (2950398) main: Reporting config found[0m
+[1;31mE (2960398) main: temp: 26.48[0m
+[1;31mE (2960398) main: hum: 52.94[0m
+[1;31mE (2960398) main: end node network address:65535[0m
+[0;32mI (2960398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (2960398) main: Reporting config found[0m
+[1;31mE (2970398) main: temp: 26.48[0m
+[1;31mE (2970398) main: hum: 52.97[0m
+[1;31mE (2970398) main: end node network address:65535[0m
+[0;32mI (2970398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (2970398) main: Reporting config found[0m
+[1;31mE (2980398) main: temp: 26.48[0m
+[1;31mE (2980398) main: hum: 53.00[0m
+[1;31mE (2980398) main: end node network address:65535[0m
+[0;32mI (2980398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (2980398) main: Reporting config found[0m
+[1;31mE (2990398) main: temp: 26.48[0m
+[1;31mE (2990398) main: hum: 53.05[0m
+[1;31mE (2990398) main: end node network address:65535[0m
+[0;32mI (2990398) main: Send temperature: 26.48 °C, err=0x00[0m
+[0;32mI (2990398) main: Reporting config found[0m
+[1;31mE (3000398) main: temp: 26.46[0m
+[1;31mE (3000398) main: hum: 53.03[0m
+[1;31mE (3000398) main: end node network address:65535[0m
+[0;32mI (3000398) main: Send temperature: 26.46 °C, err=0x00[0m
+[0;32mI (3000398) main: Reporting config found[0m
+[1;31mE (3010398) main: temp: 26.45[0m
+[1;31mE (3010398) main: hum: 53.07[0m
+[1;31mE (3010398) main: end node network address:65535[0m
+[0;32mI (3010398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (3010398) main: Reporting config found[0m
+[1;31mE (3020398) main: temp: 26.42[0m
+[1;31mE (3020398) main: hum: 53.03[0m
+[1;31mE (3020398) main: end node network address:65535[0m
+[0;32mI (3020398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3020398) main: Reporting config found[0m
+[1;31mE (3030398) main: temp: 26.40[0m
+[1;31mE (3030398) main: hum: 53.06[0m
+[1;31mE (3030398) main: end node network address:65535[0m
+[0;32mI (3030398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3030398) main: Reporting config found[0m
+[1;31mE (3040398) main: temp: 26.40[0m
+[1;31mE (3040398) main: hum: 53.11[0m
+[1;31mE (3040398) main: end node network address:65535[0m
+[0;32mI (3040398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3040398) main: Reporting config found[0m
+[1;31mE (3050398) main: temp: 26.41[0m
+[1;31mE (3050398) main: hum: 53.19[0m
+[1;31mE (3050398) main: end node network address:65535[0m
+[0;32mI (3050398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3050398) main: Reporting config found[0m
+[1;31mE (3060398) main: temp: 26.39[0m
+[1;31mE (3060398) main: hum: 53.29[0m
+[1;31mE (3060398) main: end node network address:65535[0m
+[0;32mI (3060398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (3060398) main: Reporting config found[0m
+[1;31mE (3070398) main: temp: 26.40[0m
+[1;31mE (3070398) main: hum: 53.13[0m
+[1;31mE (3070398) main: end node network address:65535[0m
+[0;32mI (3070398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3070398) main: Reporting config found[0m
+[1;31mE (3080398) main: temp: 26.38[0m
+[1;31mE (3080398) main: hum: 53.13[0m
+[1;31mE (3080398) main: end node network address:65535[0m
+[0;32mI (3080398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (3080398) main: Reporting config found[0m
+[1;31mE (3090398) main: temp: 26.38[0m
+[1;31mE (3090398) main: hum: 53.08[0m
+[1;31mE (3090398) main: end node network address:65535[0m
+[0;32mI (3090398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (3090398) main: Reporting config found[0m
+[1;31mE (3100398) main: temp: 26.37[0m
+[1;31mE (3100398) main: hum: 53.09[0m
+[1;31mE (3100398) main: end node network address:65535[0m
+[0;32mI (3100398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (3100398) main: Reporting config found[0m
+[1;31mE (3110398) main: temp: 26.35[0m
+[1;31mE (3110398) main: hum: 53.10[0m
+[1;31mE (3110398) main: end node network address:65535[0m
+[0;32mI (3110398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (3110398) main: Reporting config found[0m
+[1;31mE (3120398) main: temp: 26.35[0m
+[1;31mE (3120398) main: hum: 53.16[0m
+[1;31mE (3120398) main: end node network address:65535[0m
+[0;32mI (3120398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (3120398) main: Reporting config found[0m
+[1;31mE (3130398) main: temp: 26.34[0m
+[1;31mE (3130398) main: hum: 53.26[0m
+[1;31mE (3130398) main: end node network address:65535[0m
+[0;32mI (3130398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (3130398) main: Reporting config found[0m
+[1;31mE (3140398) main: temp: 26.33[0m
+[1;31mE (3140398) main: hum: 53.21[0m
+[1;31mE (3140398) main: end node network address:65535[0m
+[0;32mI (3140398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (3140398) main: Reporting config found[0m
+[1;31mE (3150398) main: temp: 26.33[0m
+[1;31mE (3150398) main: hum: 53.23[0m
+[1;31mE (3150398) main: end node network address:65535[0m
+[0;32mI (3150398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (3150398) main: Reporting config found[0m
+[1;31mE (3160398) main: temp: 26.32[0m
+[1;31mE (3160398) main: hum: 53.24[0m
+[1;31mE (3160398) main: end node network address:65535[0m
+[0;32mI (3160398) main: Send temperature: 26.32 °C, err=0x00[0m
+[0;32mI (3160398) main: Reporting config found[0m
+[1;31mE (3170398) main: temp: 26.34[0m
+[1;31mE (3170398) main: hum: 53.26[0m
+[1;31mE (3170398) main: end node network address:65535[0m
+[0;32mI (3170398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (3170398) main: Reporting config found[0m
+[1;31mE (3180398) main: temp: 26.34[0m
+[1;31mE (3180398) main: hum: 53.28[0m
+[1;31mE (3180398) main: end node network address:65535[0m
+[0;32mI (3180398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (3180398) main: Reporting config found[0m
+[1;31mE (3190398) main: temp: 26.34[0m
+[1;31mE (3190398) main: hum: 53.25[0m
+[1;31mE (3190398) main: end node network address:65535[0m
+[0;32mI (3190398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (3190398) main: Reporting config found[0m
+[1;31mE (3200398) main: temp: 26.33[0m
+[1;31mE (3200398) main: hum: 53.39[0m
+[1;31mE (3200398) main: end node network address:65535[0m
+[0;32mI (3200398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (3200398) main: Reporting config found[0m
+[1;31mE (3210398) main: temp: 26.32[0m
+[1;31mE (3210398) main: hum: 53.35[0m
+[1;31mE (3210398) main: end node network address:65535[0m
+[0;32mI (3210398) main: Send temperature: 26.32 °C, err=0x00[0m
+[0;32mI (3210398) main: Reporting config found[0m
+[1;31mE (3220398) main: temp: 26.33[0m
+[1;31mE (3220398) main: hum: 53.31[0m
+[1;31mE (3220398) main: end node network address:65535[0m
+[0;32mI (3220398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (3220398) main: Reporting config found[0m
+[1;31mE (3230398) main: temp: 26.33[0m
+[1;31mE (3230398) main: hum: 53.39[0m
+[1;31mE (3230398) main: end node network address:65535[0m
+[0;32mI (3230398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (3230398) main: Reporting config found[0m
+[1;31mE (3240398) main: temp: 26.34[0m
+[1;31mE (3240398) main: hum: 53.37[0m
+[1;31mE (3240398) main: end node network address:65535[0m
+[0;32mI (3240398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (3240398) main: Reporting config found[0m
+[1;31mE (3250398) main: temp: 26.33[0m
+[1;31mE (3250398) main: hum: 53.43[0m
+[1;31mE (3250398) main: end node network address:65535[0m
+[0;32mI (3250398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (3250398) main: Reporting config found[0m
+[1;31mE (3260398) main: temp: 26.33[0m
+[1;31mE (3260398) main: hum: 53.48[0m
+[1;31mE (3260398) main: end node network address:65535[0m
+[0;32mI (3260398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (3260398) main: Reporting config found[0m
+[1;31mE (3270398) main: temp: 26.34[0m
+[1;31mE (3270398) main: hum: 53.55[0m
+[1;31mE (3270398) main: end node network address:65535[0m
+[0;32mI (3270398) main: Send temperature: 26.34 °C, err=0x00[0m
+[0;32mI (3270398) main: Reporting config found[0m
+[1;31mE (3280398) main: temp: 26.35[0m
+[1;31mE (3280398) main: hum: 53.52[0m
+[1;31mE (3280398) main: end node network address:65535[0m
+[0;32mI (3280398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (3280398) main: Reporting config found[0m
+[1;31mE (3290398) main: temp: 26.35[0m
+[1;31mE (3290398) main: hum: 53.48[0m
+[1;31mE (3290398) main: end node network address:65535[0m
+[0;32mI (3290398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (3290398) main: Reporting config found[0m
+[1;31mE (3300398) main: temp: 26.37[0m
+[1;31mE (3300398) main: hum: 53.43[0m
+[1;31mE (3300398) main: end node network address:65535[0m
+[0;32mI (3300398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (3300398) main: Reporting config found[0m
+[1;31mE (3310398) main: temp: 26.36[0m
+[1;31mE (3310398) main: hum: 53.43[0m
+[1;31mE (3310398) main: end node network address:65535[0m
+[0;32mI (3310398) main: Send temperature: 26.36 °C, err=0x00[0m
+[0;32mI (3310398) main: Reporting config found[0m
+[1;31mE (3320398) main: temp: 26.37[0m
+[1;31mE (3320398) main: hum: 53.44[0m
+[1;31mE (3320398) main: end node network address:65535[0m
+[0;32mI (3320398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (3320398) main: Reporting config found[0m
+[1;31mE (3330398) main: temp: 26.37[0m
+[1;31mE (3330398) main: hum: 53.47[0m
+[1;31mE (3330398) main: end node network address:65535[0m
+[0;32mI (3330398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (3330398) main: Reporting config found[0m
+[1;31mE (3340398) main: temp: 26.37[0m
+[1;31mE (3340398) main: hum: 53.40[0m
+[1;31mE (3340398) main: end node network address:65535[0m
+[0;32mI (3340398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (3340398) main: Reporting config found[0m
+[1;31mE (3350398) main: temp: 26.38[0m
+[1;31mE (3350398) main: hum: 53.47[0m
+[1;31mE (3350398) main: end node network address:65535[0m
+[0;32mI (3350398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (3350398) main: Reporting config found[0m
+[1;31mE (3360398) main: temp: 26.39[0m
+[1;31mE (3360398) main: hum: 53.46[0m
+[1;31mE (3360398) main: end node network address:65535[0m
+[0;32mI (3360398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (3360398) main: Reporting config found[0m
+[1;31mE (3370398) main: temp: 26.39[0m
+[1;31mE (3370398) main: hum: 53.45[0m
+[1;31mE (3370398) main: end node network address:65535[0m
+[0;32mI (3370398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (3370398) main: Reporting config found[0m
+[1;31mE (3380398) main: temp: 26.39[0m
+[1;31mE (3380398) main: hum: 53.33[0m
+[1;31mE (3380398) main: end node network address:65535[0m
+[0;32mI (3380398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (3380398) main: Reporting config found[0m
+[1;31mE (3390398) main: temp: 26.40[0m
+[1;31mE (3390398) main: hum: 53.31[0m
+[1;31mE (3390398) main: end node network address:65535[0m
+[0;32mI (3390398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3390398) main: Reporting config found[0m
+[1;31mE (3400398) main: temp: 26.40[0m
+[1;31mE (3400398) main: hum: 53.41[0m
+[1;31mE (3400398) main: end node network address:65535[0m
+[0;32mI (3400398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3400398) main: Reporting config found[0m
+[1;31mE (3410398) main: temp: 26.41[0m
+[1;31mE (3410398) main: hum: 53.48[0m
+[1;31mE (3410398) main: end node network address:65535[0m
+[0;32mI (3410398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3410398) main: Reporting config found[0m
+[1;31mE (3420398) main: temp: 26.40[0m
+[1;31mE (3420398) main: hum: 53.48[0m
+[1;31mE (3420398) main: end node network address:65535[0m
+[0;32mI (3420398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3420398) main: Reporting config found[0m
+[1;31mE (3430398) main: temp: 26.41[0m
+[1;31mE (3430398) main: hum: 53.41[0m
+[1;31mE (3430398) main: end node network address:65535[0m
+[0;32mI (3430398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3430398) main: Reporting config found[0m
+[1;31mE (3440398) main: temp: 26.43[0m
+[1;31mE (3440398) main: hum: 53.42[0m
+[1;31mE (3440398) main: end node network address:65535[0m
+[0;32mI (3440398) main: Send temperature: 26.43 °C, err=0x00[0m
+[0;32mI (3440398) main: Reporting config found[0m
+[1;31mE (3450398) main: temp: 26.43[0m
+[1;31mE (3450398) main: hum: 53.43[0m
+[1;31mE (3450398) main: end node network address:65535[0m
+[0;32mI (3450398) main: Send temperature: 26.43 °C, err=0x00[0m
+[0;32mI (3450398) main: Reporting config found[0m
+[1;31mE (3460398) main: temp: 26.43[0m
+[1;31mE (3460398) main: hum: 53.39[0m
+[1;31mE (3460398) main: end node network address:65535[0m
+[0;32mI (3460398) main: Send temperature: 26.43 °C, err=0x00[0m
+[0;32mI (3460398) main: Reporting config found[0m
+[1;31mE (3470398) main: temp: 26.44[0m
+[1;31mE (3470398) main: hum: 53.38[0m
+[1;31mE (3470398) main: end node network address:65535[0m
+[0;32mI (3470398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3470398) main: Reporting config found[0m
+[1;31mE (3480398) main: temp: 26.44[0m
+[1;31mE (3480398) main: hum: 53.44[0m
+[1;31mE (3480398) main: end node network address:65535[0m
+[0;32mI (3480398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3480398) main: Reporting config found[0m
+[1;31mE (3490398) main: temp: 26.44[0m
+[1;31mE (3490398) main: hum: 53.45[0m
+[1;31mE (3490398) main: end node network address:65535[0m
+[0;32mI (3490398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3490398) main: Reporting config found[0m
+[1;31mE (3500398) main: temp: 26.42[0m
+[1;31mE (3500398) main: hum: 53.46[0m
+[1;31mE (3500398) main: end node network address:65535[0m
+[0;32mI (3500398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3500398) main: Reporting config found[0m
+[1;31mE (3510398) main: temp: 26.42[0m
+[1;31mE (3510398) main: hum: 53.38[0m
+[1;31mE (3510398) main: end node network address:65535[0m
+[0;32mI (3510398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3510398) main: Reporting config found[0m
+[1;31mE (3520398) main: temp: 26.41[0m
+[1;31mE (3520398) main: hum: 53.41[0m
+[1;31mE (3520398) main: end node network address:65535[0m
+[0;32mI (3520398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3520398) main: Reporting config found[0m
+[1;31mE (3530398) main: temp: 26.41[0m
+[1;31mE (3530398) main: hum: 53.43[0m
+[1;31mE (3530398) main: end node network address:65535[0m
+[0;32mI (3530398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3530398) main: Reporting config found[0m
+[1;31mE (3540398) main: temp: 26.41[0m
+[1;31mE (3540398) main: hum: 53.51[0m
+[1;31mE (3540398) main: end node network address:65535[0m
+[0;32mI (3540398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3540398) main: Reporting config found[0m
+[1;31mE (3550398) main: temp: 26.41[0m
+[1;31mE (3550398) main: hum: 53.50[0m
+[1;31mE (3550398) main: end node network address:65535[0m
+[0;32mI (3550398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3550398) main: Reporting config found[0m
+[1;31mE (3560398) main: temp: 26.42[0m
+[1;31mE (3560398) main: hum: 53.54[0m
+[1;31mE (3560398) main: end node network address:65535[0m
+[0;32mI (3560398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3560398) main: Reporting config found[0m
+[1;31mE (3570398) main: temp: 26.42[0m
+[1;31mE (3570398) main: hum: 53.45[0m
+[1;31mE (3570398) main: end node network address:65535[0m
+[0;32mI (3570398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3570398) main: Reporting config found[0m
+[1;31mE (3580398) main: temp: 26.43[0m
+[1;31mE (3580398) main: hum: 53.41[0m
+[1;31mE (3580398) main: end node network address:65535[0m
+[0;32mI (3580398) main: Send temperature: 26.43 °C, err=0x00[0m
+[0;32mI (3580398) main: Reporting config found[0m
+[1;31mE (3590398) main: temp: 26.44[0m
+[1;31mE (3590398) main: hum: 53.40[0m
+[1;31mE (3590398) main: end node network address:65535[0m
+[0;32mI (3590398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3590398) main: Reporting config found[0m
+[1;31mE (3600398) main: temp: 26.44[0m
+[1;31mE (3600398) main: hum: 53.47[0m
+[1;31mE (3600398) main: end node network address:65535[0m
+[0;32mI (3600398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3600398) main: Reporting config found[0m
+[1;31mE (3610398) main: temp: 26.44[0m
+[1;31mE (3610398) main: hum: 53.48[0m
+[1;31mE (3610398) main: end node network address:65535[0m
+[0;32mI (3610398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3610398) main: Reporting config found[0m
+[1;31mE (3620398) main: temp: 26.43[0m
+[1;31mE (3620398) main: hum: 53.30[0m
+[1;31mE (3620398) main: end node network address:65535[0m
+[0;32mI (3620398) main: Send temperature: 26.43 °C, err=0x00[0m
+[0;32mI (3620398) main: Reporting config found[0m
+[1;31mE (3630398) main: temp: 26.42[0m
+[1;31mE (3630398) main: hum: 53.47[0m
+[1;31mE (3630398) main: end node network address:65535[0m
+[0;32mI (3630398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3630398) main: Reporting config found[0m
+[1;31mE (3640398) main: temp: 26.44[0m
+[1;31mE (3640398) main: hum: 53.46[0m
+[1;31mE (3640398) main: end node network address:65535[0m
+[0;32mI (3640398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3640398) main: Reporting config found[0m
+[1;31mE (3650398) main: temp: 26.44[0m
+[1;31mE (3650398) main: hum: 53.68[0m
+[1;31mE (3650398) main: end node network address:65535[0m
+[0;32mI (3650398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3650398) main: Reporting config found[0m
+[1;31mE (3660398) main: temp: 26.44[0m
+[1;31mE (3660398) main: hum: 53.53[0m
+[1;31mE (3660398) main: end node network address:65535[0m
+[0;32mI (3660398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3660398) main: Reporting config found[0m
+[1;31mE (3670398) main: temp: 26.44[0m
+[1;31mE (3670398) main: hum: 53.55[0m
+[1;31mE (3670398) main: end node network address:65535[0m
+[0;32mI (3670398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3670398) main: Reporting config found[0m
+[1;31mE (3680398) main: temp: 26.44[0m
+[1;31mE (3680398) main: hum: 53.52[0m
+[1;31mE (3680398) main: end node network address:65535[0m
+[0;32mI (3680398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3680398) main: Reporting config found[0m
+[1;31mE (3690398) main: temp: 26.45[0m
+[1;31mE (3690398) main: hum: 53.47[0m
+[1;31mE (3690398) main: end node network address:65535[0m
+[0;32mI (3690398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (3690398) main: Reporting config found[0m
+[1;31mE (3700398) main: temp: 26.44[0m
+[1;31mE (3700398) main: hum: 53.60[0m
+[1;31mE (3700398) main: end node network address:65535[0m
+[0;32mI (3700398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3700398) main: Reporting config found[0m
+[1;31mE (3710398) main: temp: 26.45[0m
+[1;31mE (3710398) main: hum: 53.45[0m
+[1;31mE (3710398) main: end node network address:65535[0m
+[0;32mI (3710398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (3710398) main: Reporting config found[0m
+[1;31mE (3720398) main: temp: 26.45[0m
+[1;31mE (3720398) main: hum: 53.51[0m
+[1;31mE (3720398) main: end node network address:65535[0m
+[0;32mI (3720398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (3720398) main: Reporting config found[0m
+[1;31mE (3730398) main: temp: 26.44[0m
+[1;31mE (3730398) main: hum: 53.52[0m
+[1;31mE (3730398) main: end node network address:65535[0m
+[0;32mI (3730398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3730398) main: Reporting config found[0m
+[1;31mE (3740398) main: temp: 26.45[0m
+[1;31mE (3740398) main: hum: 53.43[0m
+[1;31mE (3740398) main: end node network address:65535[0m
+[0;32mI (3740398) main: Send temperature: 26.45 °C, err=0x00[0m
+[0;32mI (3740398) main: Reporting config found[0m
+[1;31mE (3750398) main: temp: 26.44[0m
+[1;31mE (3750398) main: hum: 53.42[0m
+[1;31mE (3750398) main: end node network address:65535[0m
+[0;32mI (3750398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3750398) main: Reporting config found[0m
+[1;31mE (3760398) main: temp: 26.44[0m
+[1;31mE (3760398) main: hum: 53.38[0m
+[1;31mE (3760398) main: end node network address:65535[0m
+[0;32mI (3760398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3760398) main: Reporting config found[0m
+[1;31mE (3770398) main: temp: 26.42[0m
+[1;31mE (3770398) main: hum: 53.47[0m
+[1;31mE (3770398) main: end node network address:65535[0m
+[0;32mI (3770398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3770398) main: Reporting config found[0m
+[1;31mE (3780398) main: temp: 26.42[0m
+[1;31mE (3780398) main: hum: 53.55[0m
+[1;31mE (3780398) main: end node network address:65535[0m
+[0;32mI (3780398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3780398) main: Reporting config found[0m
+[1;31mE (3790398) main: temp: 26.42[0m
+[1;31mE (3790398) main: hum: 53.59[0m
+[1;31mE (3790398) main: end node network address:65535[0m
+[0;32mI (3790398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3790398) main: Reporting config found[0m
+[1;31mE (3800398) main: temp: 26.43[0m
+[1;31mE (3800398) main: hum: 53.55[0m
+[1;31mE (3800398) main: end node network address:65535[0m
+[0;32mI (3800398) main: Send temperature: 26.43 °C, err=0x00[0m
+[0;32mI (3800398) main: Reporting config found[0m
+[1;31mE (3810398) main: temp: 26.44[0m
+[1;31mE (3810398) main: hum: 53.56[0m
+[1;31mE (3810398) main: end node network address:65535[0m
+[0;32mI (3810398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3810398) main: Reporting config found[0m
+[1;31mE (3820398) main: temp: 26.42[0m
+[1;31mE (3820398) main: hum: 53.59[0m
+[1;31mE (3820398) main: end node network address:65535[0m
+[0;32mI (3820398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3820398) main: Reporting config found[0m
+[1;31mE (3830398) main: temp: 26.42[0m
+[1;31mE (3830398) main: hum: 53.98[0m
+[1;31mE (3830398) main: end node network address:65535[0m
+[0;32mI (3830398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (3830398) main: Reporting config found[0m
+[1;31mE (3840398) main: temp: 26.41[0m
+[1;31mE (3840398) main: hum: 53.68[0m
+[1;31mE (3840398) main: end node network address:65535[0m
+[0;32mI (3840398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3840398) main: Reporting config found[0m
+[1;31mE (3850398) main: temp: 26.44[0m
+[1;31mE (3850398) main: hum: 53.59[0m
+[1;31mE (3850398) main: end node network address:65535[0m
+[0;32mI (3850398) main: Send temperature: 26.44 °C, err=0x00[0m
+[0;32mI (3850398) main: Reporting config found[0m
+[1;31mE (3860398) main: temp: 26.41[0m
+[1;31mE (3860398) main: hum: 53.67[0m
+[1;31mE (3860398) main: end node network address:65535[0m
+[0;32mI (3860398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3860398) main: Reporting config found[0m
+[1;31mE (3870398) main: temp: 26.41[0m
+[1;31mE (3870398) main: hum: 53.69[0m
+[1;31mE (3870398) main: end node network address:65535[0m
+[0;32mI (3870398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3870398) main: Reporting config found[0m
+[1;31mE (3880398) main: temp: 26.41[0m
+[1;31mE (3880398) main: hum: 53.66[0m
+[1;31mE (3880398) main: end node network address:65535[0m
+[0;32mI (3880398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (3880398) main: Reporting config found[0m
+[1;31mE (3890398) main: temp: 26.40[0m
+[1;31mE (3890398) main: hum: 53.65[0m
+[1;31mE (3890398) main: end node network address:65535[0m
+[0;32mI (3890398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3890398) main: Reporting config found[0m
+[1;31mE (3900398) main: temp: 26.39[0m
+[1;31mE (3900398) main: hum: 53.64[0m
+[1;31mE (3900398) main: end node network address:65535[0m
+[0;32mI (3900398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (3900398) main: Reporting config found[0m
+[1;31mE (3910398) main: temp: 26.39[0m
+[1;31mE (3910398) main: hum: 53.68[0m
+[1;31mE (3910398) main: end node network address:65535[0m
+[0;32mI (3910398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (3910398) main: Reporting config found[0m
+[1;31mE (3920398) main: temp: 26.40[0m
+[1;31mE (3920398) main: hum: 53.65[0m
+[1;31mE (3920398) main: end node network address:65535[0m
+[0;32mI (3920398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3920398) main: Reporting config found[0m
+[1;31mE (3930398) main: temp: 26.39[0m
+[1;31mE (3930398) main: hum: 53.57[0m
+[1;31mE (3930398) main: end node network address:65535[0m
+[0;32mI (3930398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (3930398) main: Reporting config found[0m
+[1;31mE (3940398) main: temp: 26.40[0m
+[1;31mE (3940398) main: hum: 53.53[0m
+[1;31mE (3940398) main: end node network address:65535[0m
+[0;32mI (3940398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3940398) main: Reporting config found[0m
+[1;31mE (3950398) main: temp: 26.40[0m
+[1;31mE (3950398) main: hum: 53.64[0m
+[1;31mE (3950398) main: end node network address:65535[0m
+[0;32mI (3950398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3950398) main: Reporting config found[0m
+[1;31mE (3960398) main: temp: 26.38[0m
+[1;31mE (3960398) main: hum: 53.68[0m
+[1;31mE (3960398) main: end node network address:65535[0m
+[0;32mI (3960398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (3960398) main: Reporting config found[0m
+[1;31mE (3970398) main: temp: 26.38[0m
+[1;31mE (3970398) main: hum: 53.73[0m
+[1;31mE (3970398) main: end node network address:65535[0m
+[0;32mI (3970398) main: Send temperature: 26.38 °C, err=0x00[0m
+[0;32mI (3970398) main: Reporting config found[0m
+[1;31mE (3980398) main: temp: 26.40[0m
+[1;31mE (3980398) main: hum: 53.77[0m
+[1;31mE (3980398) main: end node network address:65535[0m
+[0;32mI (3980398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3980398) main: Reporting config found[0m
+[1;31mE (3990398) main: temp: 26.40[0m
+[1;31mE (3990398) main: hum: 53.73[0m
+[1;31mE (3990398) main: end node network address:65535[0m
+[0;32mI (3990398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (3990398) main: Reporting config found[0m
+[1;31mE (4000398) main: temp: 26.43[0m
+[1;31mE (4000398) main: hum: 53.72[0m
+[1;31mE (4000398) main: end node network address:65535[0m
+[0;32mI (4000398) main: Send temperature: 26.43 °C, err=0x00[0m
+[0;32mI (4000398) main: Reporting config found[0m
+[1;31mE (4010398) main: temp: 26.42[0m
+[1;31mE (4010398) main: hum: 53.73[0m
+[1;31mE (4010398) main: end node network address:65535[0m
+[0;32mI (4010398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4010398) main: Reporting config found[0m
+[1;31mE (4020398) main: temp: 26.42[0m
+[1;31mE (4020398) main: hum: 53.74[0m
+[1;31mE (4020398) main: end node network address:65535[0m
+[0;32mI (4020398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4020398) main: Reporting config found[0m
+[1;31mE (4030398) main: temp: 26.42[0m
+[1;31mE (4030398) main: hum: 53.74[0m
+[1;31mE (4030398) main: end node network address:65535[0m
+[0;32mI (4030398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4030398) main: Reporting config found[0m
+[1;31mE (4040398) main: temp: 26.42[0m
+[1;31mE (4040398) main: hum: 53.73[0m
+[1;31mE (4040398) main: end node network address:65535[0m
+[0;32mI (4040398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4040398) main: Reporting config found[0m
+[1;31mE (4050398) main: temp: 26.41[0m
+[1;31mE (4050398) main: hum: 53.70[0m
+[1;31mE (4050398) main: end node network address:65535[0m
+[0;32mI (4050398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (4050398) main: Reporting config found[0m
+[1;31mE (4060398) main: temp: 26.41[0m
+[1;31mE (4060398) main: hum: 53.73[0m
+[1;31mE (4060398) main: end node network address:65535[0m
+[0;32mI (4060398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (4060398) main: Reporting config found[0m
+[1;31mE (4070398) main: temp: 26.40[0m
+[1;31mE (4070398) main: hum: 53.69[0m
+[1;31mE (4070398) main: end node network address:65535[0m
+[0;32mI (4070398) main: Send temperature: 26.40 °C, err=0x00[0m
+[0;32mI (4070398) main: Reporting config found[0m
+[1;31mE (4080398) main: temp: 26.42[0m
+[1;31mE (4080398) main: hum: 53.65[0m
+[1;31mE (4080398) main: end node network address:65535[0m
+[0;32mI (4080398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4080398) main: Reporting config found[0m
+[1;31mE (4090398) main: temp: 26.42[0m
+[1;31mE (4090398) main: hum: 53.69[0m
+[1;31mE (4090398) main: end node network address:65535[0m
+[0;32mI (4090398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4090398) main: Reporting config found[0m
+[1;31mE (4100398) main: temp: 26.42[0m
+[1;31mE (4100398) main: hum: 53.78[0m
+[1;31mE (4100398) main: end node network address:65535[0m
+[0;32mI (4100398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4100398) main: Reporting config found[0m
+[1;31mE (4110398) main: temp: 26.42[0m
+[1;31mE (4110398) main: hum: 53.80[0m
+[1;31mE (4110398) main: end node network address:65535[0m
+[0;32mI (4110398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4110398) main: Reporting config found[0m
+[1;31mE (4120398) main: temp: 26.42[0m
+[1;31mE (4120398) main: hum: 53.78[0m
+[1;31mE (4120398) main: end node network address:65535[0m
+[0;32mI (4120398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4120398) main: Reporting config found[0m
+[1;31mE (4130398) main: temp: 26.42[0m
+[1;31mE (4130398) main: hum: 53.86[0m
+[1;31mE (4130398) main: end node network address:65535[0m
+[0;32mI (4130398) main: Send temperature: 26.42 °C, err=0x00[0m
+[0;32mI (4130398) main: Reporting config found[0m
+[1;31mE (4140398) main: temp: 26.41[0m
+[1;31mE (4140398) main: hum: 53.92[0m
+[1;31mE (4140398) main: end node network address:65535[0m
+[0;32mI (4140398) main: Send temperature: 26.41 °C, err=0x00[0m
+[0;32mI (4140398) main: Reporting config found[0m
+[1;31mE (4150398) main: temp: 26.39[0m
+[1;31mE (4150398) main: hum: 53.83[0m
+[1;31mE (4150398) main: end node network address:65535[0m
+[0;32mI (4150398) main: Send temperature: 26.39 °C, err=0x00[0m
+[0;32mI (4150398) main: Reporting config found[0m
+[1;31mE (4160398) main: temp: 26.37[0m
+[1;31mE (4160398) main: hum: 53.91[0m
+[1;31mE (4160398) main: end node network address:65535[0m
+[0;32mI (4160398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (4160398) main: Reporting config found[0m
+[1;31mE (4170398) main: temp: 26.37[0m
+[1;31mE (4170398) main: hum: 54.03[0m
+[1;31mE (4170398) main: end node network address:65535[0m
+[0;32mI (4170398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (4170398) main: Reporting config found[0m
+[1;31mE (4180398) main: temp: 26.37[0m
+[1;31mE (4180398) main: hum: 54.09[0m
+[1;31mE (4180398) main: end node network address:65535[0m
+[0;32mI (4180398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (4180398) main: Reporting config found[0m
+[1;31mE (4190398) main: temp: 26.37[0m
+[1;31mE (4190398) main: hum: 54.02[0m
+[1;31mE (4190398) main: end node network address:65535[0m
+[0;32mI (4190398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (4190398) main: Reporting config found[0m
+[1;31mE (4200398) main: temp: 26.37[0m
+[1;31mE (4200398) main: hum: 53.97[0m
+[1;31mE (4200398) main: end node network address:65535[0m
+[0;32mI (4200398) main: Send temperature: 26.37 °C, err=0x00[0m
+[0;32mI (4200398) main: Reporting config found[0m
+[1;31mE (4210398) main: temp: 26.33[0m
+[1;31mE (4210398) main: hum: 54.42[0m
+[1;31mE (4210398) main: end node network address:65535[0m
+[0;32mI (4210398) main: Send temperature: 26.33 °C, err=0x00[0m
+[0;32mI (4210398) main: Reporting config found[0m
+[1;31mE (4220398) main: temp: 26.35[0m
+[1;31mE (4220398) main: hum: 54.17[0m
+[1;31mE (4220398) main: end node network address:65535[0m
+[0;32mI (4220398) main: Send temperature: 26.35 °C, err=0x00[0m
+[0;32mI (4220398) main: Reporting config found[0m
+[1;31mE (4230398) main: temp: 26.36[0m
+[1;31mE (4230398) main: hum: 54.26[0m
+[1;31mE (4230398) main: end node network address:65535[0m
+[0;32mI (4230398) main: Send temperature: 26.36 °C, err=0x00[0m
+[0;32mI (4230398) main: Reporting config found[0m
+[1;31mE (4240398) main: temp: 26.36[0m
+[1;31mE (4240398) main: hum: 54.15[0m
+[1;31mE (4240398) main: end node network address:65535[0m
+[0;32mI (4240398) main: Send temperature: 26.36 °C, err=0x00[0m
+[0;32mI (4240398) main: Reporting config found[0m
