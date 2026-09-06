@@ -22,6 +22,12 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 #include <inttypes.h>
+#include "esp_wifi.h"
+
+#define EXAMPLE_ESP_WIFI_SSID      CONFIG_ESP_WIFI_SSID
+#define EXAMPLE_ESP_WIFI_PASS      CONFIG_ESP_WIFI_PASSWORD
+#define EXAMPLE_ESP_WIFI_CHANNEL   CONFIG_ESP_WIFI_CHANNEL
+#define EXAMPLE_MAX_STA_CONN       CONFIG_ESP_MAX_STA_CONN
 
 
 static const char *TAG = "main";
@@ -44,8 +50,6 @@ uint64_t new_node_addr_long;
 
 joined_nodes_id_t joined_nodes_id[MAX_NODES];
 sensor_data_t data[MAX_NODES];
-
-float temperature;
 
 
 esp_err_t ret;
@@ -80,20 +84,25 @@ static ezb_zcl_status_t receive_custom_cmd(const ezb_zcl_cmd_hdr_t *header,
         ret = EZB_ZCL_STATUS_INVALID_FIELD;
     }
     ESP_LOGI(TAG, "Custom command received!");
+    //ESP_LOGI(TAG, "  node_addr  = 0x%04X", header->src_addr.u.short_addr);
     ESP_LOGI(TAG, "  cluster_id = 0x%04X", header->cluster_id);
     ESP_LOGI(TAG, "  cmd_id     = 0x%02X", header->cmd_id);
     ESP_LOGI(TAG, "  src_ep     = %d", header->src_ep);
     ESP_LOGI(TAG, "  dst_ep     = %d", header->dst_ep);
     ESP_LOGI(TAG, "  payload_len = %u", payload_length);
-    if (payload_length == sizeof(float)) {
-        
 
-        temperature = *(const float *)payload;
-
-        ESP_LOGI(TAG, "Temperature = %.2f °C", temperature);
+    for(int i=0; i<nodes_index; i++) {
+        if(header->src_addr.u.short_addr == joined_nodes_id[i].network_addr) {
+            if(header->cmd_id == ATTR_TEMPERATURE_ID) {
+                joined_nodes_id[i].data.temp = *(const float *)payload;
+                ESP_LOGI(TAG, "Temperature = %.2f °C", joined_nodes_id[i].data.temp);
+            }
+            else if(header->cmd_id == ATTR_HUMIDITY_ID) {
+                joined_nodes_id[i].data.humidity = *(const float *)payload;
+                ESP_LOGI(TAG, "Humidity = %.2f ", joined_nodes_id[i].data.humidity);
+            }
+        }
     }
-
-
     return ret;
 }
 
@@ -130,6 +139,7 @@ static void rearrange_joined_nodes_array(uint8_t index) {
     nodes_index--;
 }
 
+// zigbee reporting mode
 static ezb_err_t sensor_node_report_config(uint8_t ep_id, uint16_t network_addr) {
     ezb_err_t ret = ESP_OK;
     if (ep_id == SENSOR_EP) {
@@ -148,30 +158,30 @@ static ezb_err_t sensor_node_report_config(uint8_t ep_id, uint16_t network_addr)
                 .client.max_interval = 60,
                 .client.reportable_change = {.f32 = 0.0f},
             },
-            // {
-            //     .direction = EZB_ZCL_REPORTING_SEND,
-            //     .attr_id = ATTR_HUMIDITY_ID,
-            //     .client.attr_type = EZB_ZCL_ATTR_TYPE_SINGLE,
-            //     .client.min_interval = 10,
-            //     .client.max_interval = 60,
-            //     .client.reportable_change = {.f32 = humidity_change},
-            // },
-            // {
-            //     .direction = EZB_ZCL_REPORTING_SEND,
-            //     .attr_id = ATTR_SOIL_MOISTURE_ID,
-            //     .client.attr_type = EZB_ZCL_ATTR_TYPE_SINGLE,
-            //     .client.min_interval = 10,
-            //     .client.max_interval = 60,
-            //     .client.reportable_change = {.f32 = moisture_change},
-            // },
-            // {
-            //     .direction = EZB_ZCL_REPORTING_SEND,
-            //     .attr_id = ATTR_SOC_ID,
-            //     .client.attr_type = EZB_ZCL_ATTR_TYPE_SINGLE,
-            //     .client.min_interval = 10,
-            //     .client.max_interval = 60,
-            //     .client.reportable_change = {.f32 = soc_change},
-            // },
+            {
+                .direction = EZB_ZCL_REPORTING_SEND,
+                .attr_id = ATTR_HUMIDITY_ID,
+                .client.attr_type = EZB_ZCL_ATTR_TYPE_SINGLE,
+                .client.min_interval = 10,
+                .client.max_interval = 60,
+                .client.reportable_change = {.f32 = humidity_change},
+            },
+            {
+                .direction = EZB_ZCL_REPORTING_SEND,
+                .attr_id = ATTR_SOIL_MOISTURE_ID,
+                .client.attr_type = EZB_ZCL_ATTR_TYPE_SINGLE,
+                .client.min_interval = 10,
+                .client.max_interval = 60,
+                .client.reportable_change = {.f32 = moisture_change},
+            },
+            {
+                .direction = EZB_ZCL_REPORTING_SEND,
+                .attr_id = ATTR_SOC_ID,
+                .client.attr_type = EZB_ZCL_ATTR_TYPE_SINGLE,
+                .client.min_interval = 10,
+                .client.max_interval = 60,
+                .client.reportable_change = {.f32 = soc_change},
+            },
         };
         ezb_zcl_config_report_cmd_t report_cmd = {
         .cmd_ctrl =
@@ -202,93 +212,55 @@ static ezb_err_t sensor_node_report_config(uint8_t ep_id, uint16_t network_addr)
     return ret;
 }
 
-static void bind_result(
-    const ezb_zdp_bind_req_result_t *result,
-    void *user_ctx)
-{
-    if (result->error != EZB_ERR_NONE) {
-        ESP_LOGE(TAG,
-                 "Bind request error: 0x%04X",
-                 result->error);
-        return;
-    }
+// zigbee reporting mode
+// static void bind_result(
+//     const ezb_zdp_bind_req_result_t *result,
+//     void *user_ctx)
+// {
+//     if (result->error != EZB_ERR_NONE) {
+//         ESP_LOGE(TAG,
+//                  "Bind request error: 0x%04X",
+//                  result->error);
+//         return;
+//     }
 
-    if (!result->rsp) {
-        ESP_LOGE(TAG, "Bind response is NULL");
-        return;
-    }
+//     if (!result->rsp) {
+//         ESP_LOGE(TAG, "Bind response is NULL");
+//         return;
+//     }
 
-    ESP_LOGI(TAG,
-             "Bind response status: 0x%02X",
-             result->rsp->status);
+//     ESP_LOGI(TAG,
+//              "Bind response status: 0x%02X",
+//              result->rsp->status);
 
-    if (result->rsp->status == EZB_ZDP_STATUS_SUCCESS) {
-        ESP_LOGI(TAG, "APS binding SUCCESS");
-    } else {
-        ESP_LOGE(TAG,
-                 "APS binding FAILED: 0x%02X",
-                 result->rsp->status);
-    }
-}
+//     if (result->rsp->status == EZB_ZDP_STATUS_SUCCESS) {
+//         ESP_LOGI(TAG, "APS binding SUCCESS");
+//     } else {
+//         ESP_LOGE(TAG,
+//                  "APS binding FAILED: 0x%02X",
+//                  result->rsp->status);
+//     }
+// }
 
-static ezb_err_t sensor_node_bind(uint16_t dst_short_addr, uint8_t dst_ep, uint8_t src_ep) {
-    ezb_err_t ret;
-    ezb_zdo_bind_req_t bind_req = {
-    .dst_nwk_addr = dst_short_addr,
-    .field = {
-        .src_addr.u64 = 0x1051DBFFFE6911F0,
-        .src_ep = src_ep,
-        .cluster_id = SENSOR_CLUSTER_ID,
-        .dst_addr_mode = EZB_ADDR_MODE_EXT,
-        .dst_addr.extended_addr.u64 = 0xE4B323FFFEA28198,
-        .dst_ep = dst_ep,
-    },
-    .cb = bind_result,
-    .user_ctx = NULL,
-};
+// static ezb_err_t sensor_node_bind(uint16_t dst_short_addr, uint8_t dst_ep, uint8_t src_ep) {
+//     ezb_err_t ret;
+//     ezb_zdo_bind_req_t bind_req = {
+//     .dst_nwk_addr = dst_short_addr,
+//     .field = {
+//         .src_addr.u64 = 0x1051DBFFFE6911F0,
+//         .src_ep = src_ep,
+//         .cluster_id = SENSOR_CLUSTER_ID,
+//         .dst_addr_mode = EZB_ADDR_MODE_EXT,
+//         .dst_addr.extended_addr.u64 = 0xE4B323FFFEA28198,
+//         .dst_ep = dst_ep,
+//     },
+//     .cb = bind_result,
+//     .user_ctx = NULL,
+// };
 
-ret = ezb_zdo_bind_req(&bind_req);
-return ret;
-}
-
-static void sensor_node_read_report_config(uint16_t sensor_addr)
-{
-    ezb_zcl_read_report_config_record_t record = {
-        .report_direction = EZB_ZCL_REPORTING_SEND,
-        .attr_id = ATTR_TEMPERATURE_ID,
-    };
-
-    ezb_zcl_read_report_config_cmd_t cmd = {
-        .cmd_ctrl = {
-            .fc.direction = EZB_ZCL_CMD_DIRECTION_TO_SRV,
-
-            .dst_addr = {
-                .addr_mode = EZB_ADDR_MODE_SHORT,
-                .u.short_addr = sensor_addr,
-            },
-
-            .src_ep = COORDINATOR_EP,
-            .dst_ep = SENSOR_EP,
-            .cluster_id = SENSOR_CLUSTER_ID,
-            .manuf_code = EZB_ZCL_STD_MANUF_CODE,
-        },
-
-        .payload = {
-            .record_number = 1,
-            .record_field = &record,
-        },
-    };
-
-    esp_zigbee_lock_acquire(portMAX_DELAY);
-
-    ezb_err_t ret = ezb_zcl_read_report_config_cmd_req(&cmd);
-
-    esp_zigbee_lock_release();
-
-    ESP_LOGI(TAG,
-             "Read Reporting Config request ret=0x%04X",
-             ret);
-}
+// ret = ezb_zdo_bind_req(&bind_req);
+// return ret;
+// }
 
 
 static void simple_desc_callback(const ezb_zdo_simple_desc_req_result_t *result, void *user_ctx) {
@@ -312,92 +284,92 @@ static bool node_signal_callback(const ezb_app_signal_t *app_signal) {
     ezb_app_signal_type_t signal = ezb_app_signal_get_type(app_signal);
     ESP_LOGE(TAG, "node signal callback");
     switch (signal) {
-    case EZB_ZDO_SIGNAL_SKIP_STARTUP:
-        ESP_LOGE(TAG, "Initialize Zigbee stack");
-        ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_INITIALIZATION);
-        break;
-    case EZB_BDB_SIGNAL_DEVICE_FIRST_START:
-    case EZB_BDB_SIGNAL_DEVICE_REBOOT: {
-        ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
-        if (status == EZB_BDB_STATUS_SUCCESS) {
-            //ESP_LOGE(TAG, "Deferred driver initialization %s", deferred_driver_init() ? "failed" : "successful");
-            ESP_LOGE(TAG, "Device started up in%s factory-reset mode", ezb_bdb_is_factory_new() ? "" : " non");
-            if (ezb_bdb_is_factory_new()) {
-                ESP_ERROR_CHECK(ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_NETWORK_FORMATION));
-            } else {
-                ret = ezb_bdb_open_network(180);
-                ezb_shortaddr_t address;
-                address = ezb_nwk_get_short_address();
-                ESP_LOGE(TAG, "coordinator node network address:%" PRIu16, address);
-                //ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_INITIALIZATION);
-                ESP_LOGE(TAG,
-                         "PAN ID: 0x%04X",
-                         ezb_nwk_get_panid());
-                if (ret!=EZB_ERR_NONE) {
-                    ESP_LOGE(TAG, "Open network failed");
+        case EZB_ZDO_SIGNAL_SKIP_STARTUP:
+            ESP_LOGE(TAG, "Initialize Zigbee stack");
+            ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_INITIALIZATION);
+            break;
+        case EZB_BDB_SIGNAL_DEVICE_FIRST_START:
+        case EZB_BDB_SIGNAL_DEVICE_REBOOT: {
+            ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
+            if (status == EZB_BDB_STATUS_SUCCESS) {
+                //ESP_LOGE(TAG, "Deferred driver initialization %s", deferred_driver_init() ? "failed" : "successful");
+                ESP_LOGE(TAG, "Device started up in%s factory-reset mode", ezb_bdb_is_factory_new() ? "" : " non");
+                if (ezb_bdb_is_factory_new()) {
+                    ESP_ERROR_CHECK(ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_NETWORK_FORMATION));
+                } else {
+                    ret = ezb_bdb_open_network(180);
+                    ezb_shortaddr_t address;
+                    address = ezb_nwk_get_short_address();
+                    ESP_LOGE(TAG, "coordinator node network address:%" PRIu16, address);
+                    //ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_INITIALIZATION);
+                    ESP_LOGE(TAG,
+                            "PAN ID: 0x%04X",
+                            ezb_nwk_get_panid());
+                    if (ret!=EZB_ERR_NONE) {
+                        ESP_LOGE(TAG, "Open network failed");
+                    }
+                    ESP_LOGE(TAG, "Device reboot");
                 }
-                ESP_LOGE(TAG, "Device reboot");
+            } else {
+                ESP_LOGW(TAG, "The %s failed with status(0x%02x), please retry", ezb_app_signal_to_string(signal), status);
+                //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_INITIALIZATION, 1000);
             }
-        } else {
-            ESP_LOGW(TAG, "The %s failed with status(0x%02x), please retry", ezb_app_signal_to_string(signal), status);
-            //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_INITIALIZATION, 1000);
+        } break;
+        case EZB_BDB_SIGNAL_FORMATION: {
+            ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
+            if (status == EZB_BDB_STATUS_SUCCESS) {
+                ezb_extpanid_t extended_pan_id;
+                ezb_nwk_get_extended_panid(&extended_pan_id);
+                ESP_LOGE(TAG, "Formed network successfully: PAN ID(0x%04hx, EXT: 0x%llx), Channel(%d), Short Address(0x%04hx)",
+                        ezb_nwk_get_panid(), extended_pan_id.u64, ezb_nwk_get_current_channel(), ezb_nwk_get_short_address());
+                ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_NETWORK_STEERING);
+            } else {
+                ESP_LOGW(TAG, "Failed to form network with status(0x%02x)", status);
+                //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_NETWORK_FORMATION, 1000);
+            }
+        } break;
+        case EZB_BDB_SIGNAL_STEERING: {
+            ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
+            if (status == EZB_BDB_STATUS_SUCCESS) {
+                ESP_LOGI(TAG, "Network steering completed");
+            } else {
+                ESP_LOGW(TAG, "Failed to steering network with status(0x%02x)", status);
+                //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_NETWORK_FORMATION, 1000);
+            }
+        } break;
+        case EZB_ZDO_SIGNAL_DEVICE_ANNCE: {
+            ESP_LOGE(TAG, "new node joined");
+            const ezb_zdo_signal_device_annce_params_t *node_info_joined = (const ezb_zdo_signal_device_annce_params_t *)ezb_app_signal_get_params(app_signal);
+            new_node_addr_long = node_info_joined->device_addr.u64;
+            const ezb_zdo_simple_desc_req_t node_request = {
+                .dst_nwk_addr = node_info_joined->short_addr,
+                .field =
+                    {
+                        .nwk_addr_of_interest = node_info_joined->short_addr,
+                        .endpoint = SENSOR_EP,
+                    },
+                .cb = simple_desc_callback,
+                .user_ctx = &new_node_addr_long
+            };
+            for(uint8_t i=0; i<nodes_index; i++) {
+                if (joined_nodes_id[i].network_addr_ieee == node_info_joined->device_addr.u64) {
+                    return true;
+                }
+            }
+            //sensor_node_bind(node_info_joined->short_addr, COORDINATOR_EP, SENSOR_EP);
+            //only ask for device ID if not already acquired deviceID perviously
+            ezb_zdo_simple_desc_req(&node_request);
+            break;
         }
-    } break;
-    case EZB_BDB_SIGNAL_FORMATION: {
-        ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
-        if (status == EZB_BDB_STATUS_SUCCESS) {
-            ezb_extpanid_t extended_pan_id;
-            ezb_nwk_get_extended_panid(&extended_pan_id);
-            ESP_LOGE(TAG, "Formed network successfully: PAN ID(0x%04hx, EXT: 0x%llx), Channel(%d), Short Address(0x%04hx)",
-                     ezb_nwk_get_panid(), extended_pan_id.u64, ezb_nwk_get_current_channel(), ezb_nwk_get_short_address());
-            ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_NETWORK_STEERING);
-        } else {
-            ESP_LOGW(TAG, "Failed to form network with status(0x%02x)", status);
-            //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_NETWORK_FORMATION, 1000);
-        }
-    } break;
-    case EZB_BDB_SIGNAL_STEERING: {
-        ezb_bdb_comm_status_t status = *((ezb_bdb_comm_status_t *)ezb_app_signal_get_params(app_signal));
-        if (status == EZB_BDB_STATUS_SUCCESS) {
-            ESP_LOGI(TAG, "Network steering completed");
-        } else {
-            ESP_LOGW(TAG, "Failed to steering network with status(0x%02x)", status);
-            //alarm_timer_schedule(esp_zigbee_alarm_bdb_commissioning, EZB_BDB_MODE_NETWORK_FORMATION, 1000);
-        }
-    } break;
-    case EZB_ZDO_SIGNAL_DEVICE_ANNCE: {
-        ESP_LOGE(TAG, "new node joined");
-        const ezb_zdo_signal_device_annce_params_t *node_info_joined = (const ezb_zdo_signal_device_annce_params_t *)ezb_app_signal_get_params(app_signal);
-        new_node_addr_long = node_info_joined->device_addr.u64;
-        const ezb_zdo_simple_desc_req_t node_request = {
-            .dst_nwk_addr = node_info_joined->short_addr,
-            .field =
-                {
-                    .nwk_addr_of_interest = node_info_joined->short_addr,
-                    .endpoint = SENSOR_EP,
-                },
-            .cb = simple_desc_callback,
-            .user_ctx = &new_node_addr_long
-        };
-        for(uint8_t i=0; i<nodes_index; i++) {
-            if (joined_nodes_id[i].network_addr_ieee == node_info_joined->device_addr.u64) {
-                return true;
+        case EZB_ZDO_SIGNAL_DEVICE_UNAVAILABLE: {
+            const ezb_zdo_signal_device_unavailable_params_t *node_info_unavailable = (const ezb_zdo_signal_device_unavailable_params_t *)ezb_app_signal_get_params(app_signal);
+            for(uint8_t i=0; i<nodes_index; i++) {
+                if (joined_nodes_id[i].network_addr_ieee == node_info_unavailable->device_addr.u64) {
+                    rearrange_joined_nodes_array(i);
+                    return true;
+                }
             }
         }
-        //sensor_node_bind(node_info_joined->short_addr, COORDINATOR_EP, SENSOR_EP);
-        //only ask for device ID if not already acquired deviceID perviously
-        ezb_zdo_simple_desc_req(&node_request);
-        break;
-    }
-    case EZB_ZDO_SIGNAL_DEVICE_UNAVAILABLE: {
-        const ezb_zdo_signal_device_unavailable_params_t *node_info_unavailable = (const ezb_zdo_signal_device_unavailable_params_t *)ezb_app_signal_get_params(app_signal);
-        for(uint8_t i=0; i<nodes_index; i++) {
-            if (joined_nodes_id[i].network_addr_ieee == node_info_unavailable->device_addr.u64) {
-                rearrange_joined_nodes_array(i);
-                return true;
-            }
-        }
-    }
      case EZB_ZDO_SIGNAL_ERROR:
         {
             ESP_LOGE(TAG, "EZB_ZDO_SIGNAL_ERROR");
@@ -592,38 +564,6 @@ static bool node_signal_callback(const ezb_app_signal_t *app_signal) {
         }
 
 
-        case EZB_BDB_SIGNAL_FINDING_AND_BINDING_INITIATOR_FINISHED:
-        {
-            const ezb_bdb_signal_simple_params_t *p =
-                (const ezb_bdb_signal_simple_params_t *)app_signal;
-
-            ESP_LOGI(TAG,
-                     "EZB_BDB_SIGNAL_FINDING_AND_BINDING_INITIATOR_FINISHED");
-
-            ESP_LOGI(TAG,
-                     "  status = 0x%02X",
-                     p->status);
-
-            break;
-        }
-
-
-        case EZB_BDB_SIGNAL_FINDING_AND_BINDING_TARGET_FINISHED:
-        {
-            const ezb_bdb_signal_simple_params_t *p =
-                (const ezb_bdb_signal_simple_params_t *)app_signal;
-
-            ESP_LOGI(TAG,
-                     "EZB_BDB_SIGNAL_FINDING_AND_BINDING_TARGET_FINISHED");
-
-            ESP_LOGI(TAG,
-                     "  status = 0x%02X",
-                     p->status);
-
-            break;
-        }
-
-
         case EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS:
         {
             ezb_extaddr_t ieee_address_coordi;
@@ -670,86 +610,16 @@ static bool node_signal_callback(const ezb_app_signal_t *app_signal) {
     
     return true;   
 }
-    
-
-static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, void *message)
-{
-    ESP_LOGE(TAG, "zcl callback");
-    switch (callback_id) {
-
-        case EZB_ZCL_CORE_READ_ATTR_RSP_CB_ID:
-        {
-            ezb_zcl_cmd_read_attr_rsp_message_t *rsp =
-                (ezb_zcl_cmd_read_attr_rsp_message_t *)message;
-
-            if (rsp->info.status != EZB_ZCL_STATUS_SUCCESS) {
-                // Read request ist fehlgeschlagen
-                return;
-            }
-
-            ezb_zcl_read_attr_rsp_variable_t *attr =
-                rsp->in.variables;
-            uint16_t cluster_id = rsp->in.header->cluster_id;
-
-            if (cluster_id == SENSOR_CLUSTER_ID) {
-                while (attr != NULL) {
-
-                    printf("Attribute ID: 0x%04x\n", attr->attr_id);
-                    printf("Type: 0x%02x\n", attr->attr_type);
-
-                    //iterate through all the connected nodes to determine the end device that the message belongs to
-                    for(int i=0; i<nodes_index; i++) {
-                        if (rsp->in.header->src_addr.u.extended_addr.u64 == joined_nodes_id[i].network_addr_ieee) {
-                            if (attr->attr_id == ATTR_TEMPERATURE_ID) {
-                                joined_nodes_id[i].data.temp = *(float *)attr->attr_value;
-                                ESP_LOGE(TAG, "receiver temp: %.2f", joined_nodes_id[i].data.temp);
-                            }
-                            else if (attr->attr_id == ATTR_HUMIDITY_ID) {
-                                joined_nodes_id[i].data.humidity = *(float *)attr->attr_value;
-                                ESP_LOGE(TAG, "receiver temp: %.2f", joined_nodes_id[i].data.humidity);
-                            }
-                            else if (attr->attr_id == ATTR_SOIL_MOISTURE_ID) {
-                                joined_nodes_id[i].data.moisture = *(float *)attr->attr_value;
-                                ESP_LOGE(TAG,"receiver temp: %.2f", joined_nodes_id[i].data.moisture);
-                            }
-                            else if (attr->attr_id == ATTR_SOC_ID) {
-                                joined_nodes_id[i].data.soc = *(float *)attr->attr_value;
-                                ESP_LOGE(TAG,"receiver temp: %.2f", joined_nodes_id[i].data.soc);
-                            }
-                        }
-                    }
-                    attr = attr->next;
-                }
-            }
-
-            break;
-        }
-
-        default:
-            break;
-    }
-}
 
 
 
 void esp_zb_task(void *arg) {
-    // ezb_zcl_custom_cluster_config_t sensor_cluster_config = {
-    //     .cluster_id = SENSOR_CLUSTER_ID,
-    //     .init_func = NULL,
-    //     .deinit_func = NULL
-    // };
-    // ezb_af_ep_config_t sensor_endpoint_config = {
-    //     .ep_id = ENDPOINT0,
-    //     .app_profile_id = 0x0104U,
-    //     .app_device_id = 1,
-    //     .app_device_version = 1
-    // };
     ret = esp_zigbee_init(&zigbee_config);
     
     ezb_af_device_desc_t coordinator_device = ezb_af_create_device_desc();
     ezb_af_ep_desc_t coordinator_endpoint = ezb_af_create_endpoint_desc(&coordinator_endpoint_config);
     ezb_zcl_cluster_desc_t coordinator_cluster = ezb_zcl_custom_create_cluster_desc(&coordinator_cluster_config, EZB_ZCL_CLUSTER_CLIENT);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(coordinator_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_WRITE, &(temperature));
+    ret = ezb_zcl_custom_cluster_desc_add_attr(coordinator_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_WRITE, &(data->temp));
     ESP_ERROR_CHECK(ezb_af_endpoint_add_cluster_desc(coordinator_endpoint, coordinator_cluster));
     ESP_ERROR_CHECK(ezb_af_device_add_endpoint_desc(coordinator_device, coordinator_endpoint));
     ESP_ERROR_CHECK(ezb_af_device_desc_register(coordinator_device));
@@ -792,7 +662,6 @@ void app_main(void)
     xTaskCreate(esp_zb_task, "zigbee_task", 4096, NULL, 10, NULL);
     while(1) {
         vTaskDelay(pdMS_TO_TICKS(10000));
-        sensor_node_read_report_config(0x715A);
     }
       
 }

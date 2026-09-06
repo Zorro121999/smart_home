@@ -172,18 +172,16 @@ ezb_zcl_report_attr_cmd_t report_cmd = {
     },
     };
 
-// ezb_af_simple_desc_t af_node_desc = {
-//     .ep_id = ENDPOINT0,
-//     .app_profile_id = 0x0104U,
-//     .app_device_id = LIVING_ROOM,
-//     .app_device_version = 1
-// };
 
-
-
-static void sensor_send_temperature(sensor_data_t *sensor_data)
+static void send_custom_data(sensor_data_t *sensor_data, uint8_t sensor_selector)
 {
-    float temperature = sensor_data->temp;
+    float data_send;
+    if(sensor_selector == ATTR_TEMPERATURE_ID) {
+        data_send = sensor_data->temp;
+    }
+    else if(sensor_selector == ATTR_HUMIDITY_ID) {
+        data_send = sensor_data->humidity;
+    }
 
     ezb_zcl_custom_cluster_cmd_t cmd = {
         .cmd_ctrl = {
@@ -207,21 +205,17 @@ static void sensor_send_temperature(sensor_data_t *sensor_data)
             },
 
             .cnf_ctx = {
-                // zunächst leer lassen
+               
             },
         },
 
-        .cmd_id = 1,
-        .data_length = sizeof(temperature),
-        .data = (uint8_t *)&temperature,
+        .cmd_id = sensor_selector,
+        .data_length = sizeof(data_send),
+        .data = (uint8_t *)&data_send,
     };
 
     ezb_err_t err = ezb_zcl_custom_cluster_cmd_req(&cmd);
 
-    ESP_LOGI(TAG,
-             "Send temperature: %.2f °C, err=0x%02x",
-             temperature,
-             err);
 }
 
 void zigbee_send_measurement_callback(void *ctx) {
@@ -232,6 +226,8 @@ void zigbee_send_measurement_callback(void *ctx) {
     address = ezb_nwk_get_short_address();
     ESP_LOGE(TAG, "end node network address:%" PRIu16, address);
     sensor_data_t *sensor_data = (sensor_data_t*)ctx;
+
+    // reporting mode
     // ezb_zcl_status_t state;
     //state = ezb_zcl_set_attr_value(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER,ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE, &(sensor_data->temp), true);
     //ESP_LOGE(TAG, "set attr state = %" PRIu8, state);
@@ -242,51 +238,10 @@ void zigbee_send_measurement_callback(void *ctx) {
 
     // ezb_err_t ret = ezb_zcl_report_attr_cmd_req(&report_cmd);
     // ESP_LOGI(TAG, "manual report ret = 0x%04X", ret);
-
-    // esp_zigbee_lock_release();
-    sensor_send_temperature(sensor_data);
-    ezb_zcl_reporting_info_t reporting_info = ezb_zcl_reporting_info_find(ENDPOINT0, SENSOR_CLUSTER_ID, EZB_ZCL_CLUSTER_SERVER, ATTR_TEMPERATURE_ID, EZB_ZCL_STD_MANUF_CODE);
-    if (reporting_info == EZB_ZCL_INVALID_REPORTING_INFO) {
-    ESP_LOGE(TAG,
-             "NO reporting configuration found: ep=%u cluster=0x%04X attr=0x%04X",
-             ENDPOINT0,
-             SENSOR_CLUSTER_ID,
-             ATTR_TEMPERATURE_ID);
-    }
-    else {
-        ESP_LOGI(TAG, "Reporting config found");
-    }
-    
-    // ezb_zcl_report_attr_cmd_t report_cmd = {
-    //     .cmd_ctrl = {
-    //         .fc.direction       = EZB_ZCL_CMD_DIRECTION_TO_CLI,
-    //         .dst_addr = {
-    //             .addr_mode = EZB_ADDR_MODE_SHORT,
-    //             .u.short_addr = 0x0000,
-    //         },
-    //         .src_ep = ENDPOINT0,
-    //         .dst_ep = COORDINATOR_EP,
-    //         .cluster_id = SENSOR_CLUSTER_ID,
-    //     },
-    //     .payload = {
-    //         .attr_id = ATTR_TEMPERATURE_ID,
-    //     },
-    // };
-
-    // esp_zigbee_lock_acquire(portMAX_DELAY);
-
-    // ezb_err_t ret = ezb_zcl_report_attr_cmd_req(&report_cmd);
-
     // esp_zigbee_lock_release();
 
-    // if (ret != EZB_ERR_NONE) {
-    //     ESP_LOGE(TAG,
-    //              "Failed to send temperature report: 0x%04x",
-    //              ret);
-    // } else {
-    //     ESP_LOGI(TAG, "Temperature report sent");
-    // }
-
+    send_custom_data(sensor_data, ATTR_TEMPERATURE_ID);
+    send_custom_data(sensor_data, ATTR_HUMIDITY_ID);
 }
 
 static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, void *message) {
@@ -380,9 +335,6 @@ static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, v
         } else {
             ESP_LOGW(TAG, "header = NULL");
         }
-
-    
-
     break;
     }
 
@@ -410,14 +362,12 @@ void esp_zb_task(void *arg) {
         ESP_LOGE(TAG,
              "Failed adding temp attribute"); 
     }
-    // ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_HUMIDITY_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.humidity));
-    // ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.moisture));
-    // ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.soc));
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_HUMIDITY_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.humidity));
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOIL_MOISTURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.moisture));
+    ret = ezb_zcl_custom_cluster_desc_add_attr(sensor_cluster, ATTR_SOC_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_READ | EZB_ZCL_ATTR_ACCESS_WRITE | EZB_ZCL_ATTR_ACCESS_REPORTING, &(data.soc));
     ESP_ERROR_CHECK(ezb_af_endpoint_add_cluster_desc(sensor_endpoint, sensor_cluster));
     ESP_ERROR_CHECK(ezb_af_device_add_endpoint_desc(sensor_device, sensor_endpoint));
     ESP_ERROR_CHECK(ezb_af_device_desc_register(sensor_device));
-    
-
     
 
     ESP_ERROR_CHECK(ezb_bdb_set_primary_channel_set(channel_mask));
@@ -430,11 +380,6 @@ void esp_zb_task(void *arg) {
              "Failed starting zigbee stack");     
         esp_restart();    
     }
-    // if (!lock) {
-    //     ESP_LOGE("ZB", "Lock was NOT acquired!");
-    //     return;
-    // }
-    //esp_zigbee_lock_release();
     ESP_LOGE(TAG, "hello_zb");
 
     esp_zigbee_launch_mainloop();
@@ -443,17 +388,15 @@ void esp_zb_task(void *arg) {
 void meas_task(void *arg) { 
     while(1) {
         ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-        //if(device_connected) {
-            measure_moisture(adc1_handle, ADC_CHANNEL_1, &(data.moisture));
-            measure_soc(adc1_handle, ADC_CHANNEL_2, &(data.soc));
-            bme280_measure_temp(spi, (&(bme_cal))->temp_cal, &(bme_cal.t_fine), &(data.temp));
-            bme280_measure_humidity(spi, (&(bme_cal))->hum_cal1, (&(bme_cal))->hum_cal2, &(bme_cal.t_fine), &(data.humidity));   
-            ESP_LOGE(TAG, "temp: %.2f",data.temp);
-            ESP_LOGE(TAG, "hum: %.2f",data.humidity);
-            ret = esp_zigbee_task_queue_post(
-            &zigbee_send_measurement_callback,
-            &data); 
-       // }
+        measure_moisture(adc1_handle, ADC_CHANNEL_1, &(data.moisture));
+        measure_soc(adc1_handle, ADC_CHANNEL_2, &(data.soc));
+        bme280_measure_temp(spi, (&(bme_cal))->temp_cal, &(bme_cal.t_fine), &(data.temp));
+        bme280_measure_humidity(spi, (&(bme_cal))->hum_cal1, (&(bme_cal))->hum_cal2, &(bme_cal.t_fine), &(data.humidity));   
+        ESP_LOGE(TAG, "temp: %.2f",data.temp);
+        ESP_LOGE(TAG, "hum: %.2f",data.humidity);
+        ret = esp_zigbee_task_queue_post(
+        &zigbee_send_measurement_callback,
+        &data); 
     }
 }
 
