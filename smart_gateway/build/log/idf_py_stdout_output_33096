@@ -1,0 +1,37 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_gateway\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_gateway/build/bootloader/bootloader.bin"
+Bootloader binary size 0x55f0 bytes. 0x2a10 bytes (33%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Espressif/smart_home/smart_gateway/main/main.c: In function 'wifi_event_handler':
+C:/Espressif/smart_home/smart_gateway/main/main.c:82:39: warning: unused variable 'event' [-Wunused-variable]
+   82 |         wifi_event_ap_staconnected_t* event = (wifi_event_ap_staconnected_t*) event_data;
+      |                                       ^~~~~
+C:/Espressif/smart_home/smart_gateway/main/main.c:85:42: warning: unused variable 'event' [-Wunused-variable]
+   85 |         wifi_event_ap_stadisconnected_t* event = (wifi_event_ap_stadisconnected_t*) event_data;
+      |                                          ^~~~~
+C:/Espressif/smart_home/smart_gateway/main/main.c: In function 'sensor_node_report_config':
+C:/Espressif/smart_home/smart_gateway/main/main.c:211:15: warning: unused variable 'temp_change' [-Wunused-variable]
+  211 |         float temp_change = 0.01;
+      |               ^~~~~~~~~~~
+C:/Espressif/smart_home/smart_gateway/main/main.c: In function 'node_signal_callback':
+C:/Espressif/smart_home/smart_gateway/main/main.c:427:49: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  427 |         case EZB_ZDO_SIGNAL_DEVICE_UNAVAILABLE: {
+      |                                                 ^
+C:/Espressif/smart_home/smart_gateway/main/main.c:436:6: note: here
+  436 |      case EZB_ZDO_SIGNAL_ERROR:
+      |      ^~~~
+C:/Espressif/smart_home/smart_gateway/main/main.c: At top level:
+C:/Espressif/smart_home/smart_gateway/main/main.c:206:18: warning: 'sensor_node_report_config' defined but not used [-Wunused-function]
+  206 | static ezb_err_t sensor_node_report_config(uint8_t ep_id, uint16_t network_addr) {
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable smart_gateway.elf
+FAILED: smart_gateway.elf 
+C:\WINDOWS\system32\cmd.exe /C "cd . && C:\Espressif\tools\riscv32-esp-elf\esp-14.2.0_20241119\riscv32-esp-elf\bin\riscv32-esp-elf-g++.exe -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32C6=0 -Wl,--Map=C:/Espressif/smart_home/smart_gateway/build/smart_gateway.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T rom.api.ld -T esp32c6.peripherals.ld -T esp32c6.rom.ld -T esp32c6.rom.api.ld -T esp32c6.rom.rvfp.ld -T esp32c6.rom.wdt.ld -T esp32c6.rom.systimer.ld -T esp32c6.rom.version.ld -T esp32c6.rom.phy.ld -T esp32c6.rom.coexist.ld -T esp32c6.rom.net80211.ld -T esp32c6.rom.pp.ld -T esp32c6.rom.newlib.ld -T esp32c6.rom.newlib-normal.ld -T esp32c6.rom.heap.ld -T memory.ld -T sections.ld @CMakeFiles\smart_gateway.elf.rsp -o smart_gateway.elf && cd ."
+C:/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.c.obj): in function `wifi_init_softap':
+C:/Espressif/smart_home/smart_gateway/main/main.c:131:(.text.wifi_init_softap+0x1e0): undefined reference to `start_webserver'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

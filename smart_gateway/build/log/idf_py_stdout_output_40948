@@ -1,0 +1,2106 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ES�ESP-ROM:esp32c6-20220919[0m
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 29 2026 17:18:01[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=420d0020 size=20a44h (133700) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=00030a6c vaddr=40800000 size=075ach ( 30124) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=cd950h (842064) map[0m
+[0;32mI (283) esp_image: segment 3: paddr=00105978 vaddr=408075ac size=134d8h ( 79064) load[0m
+[0;32mI (301) esp_image: segment 4: paddr=00118e58 vaddr=4081aa90 size=03f60h ( 16224) load[0m
+[0;32mI (311) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (311) boot: Disabling RNG early entropy source...[0m
+[0;32mI (321) cpu_start: Unicore app[0m
+[0;32mI (330) cpu_start: Pro cpu start user code[0m
+[0;32mI (330) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (330) app_init: Application information:[0m
+[0;32mI (330) app_init: Project name:     smart_gateway[0m
+[0;32mI (334) app_init: App version:      68e2a2d-dirty[0m
+[0;32mI (339) app_init: Compile time:     Sep  6 2026 21:57:26[0m
+[0;32mI (344) app_init: ELF file SHA256:  0779306e8...[0m
+[0;32mI (348) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (353) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (356) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (360) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (364) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (370) heap_init: At 40825460 len 000571B0 (348 KiB): RAM[0m
+[0;32mI (376) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (381) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (387) spi_flash: detected chip: generic[0m
+[0;32mI (390) spi_flash: flash io: dio[0m
+[0;33mW (393) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (405) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (411) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (418) coexist: coex firmware version: e727207[0m
+[0;32mI (436) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (437) main_task: Started on CPU0[0m
+[0;32mI (437) main_task: Calling app_main()[0m
+[0;32mI (447) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;32mI (497) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[1;31mE (497) main: ezb_app_signal_add_handler: ret=0x0[0m
+[1;31mE (507) main: node signal callback[0m
+[1;31mE (507) main: Initialize Zigbee stack[0m
+[1;31mE (507) main: start zigbee ok[0m
+[1;31mE (507) main: hello_zb[0m
+[1;31mE (507) main: node signal callback[0m
+[1;31mE (507) main: Device started up in non factory-reset mode[0m
+[1;31mE (517) main: coordinator node network address:0[0m
+[1;31mE (517) main: PAN ID: 0xA7F3[0m
+[1;31mE (517) main: Device reboot[0m
+[0;32mI (527) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (527) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (547) wifi:wifi driver task: 40837fb8, prio:23, stack:6656, core=0[0m
+[0;32mI (547) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (547) wifi:wifi certification version: v7.0[0m
+[0;32mI (547) wifi:config NVS flash: enabled[0m
+[0;32mI (547) wifi:config nano formatting: disabled[0m
+[0;32mI (557) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (557) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (567) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (567) wifi:Init management short buffer num: 32[0m
+[0;32mI (577) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (577) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (577) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (587) wifi:Init static rx buffer num: 10[0m
+[0;32mI (587) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (597) wifi_init: rx ba win: 6[0m
+[0;32mI (597) wifi_init: accept mbox: 6[0m
+[0;32mI (597) wifi_init: tcpip mbox: 32[0m
+[0;32mI (607) wifi_init: udp mbox: 6[0m
+[0;32mI (607) wifi_init: tcp mbox: 6[0m
+[0;32mI (607) wifi_init: tcp tx win: 5760[0m
+[0;32mI (617) wifi_init: tcp rx win: 5760[0m
+[0;32mI (617) wifi_init: tcp mss: 1440[0m
+[0;32mI (617) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (617) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (627) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (637) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (637) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (647) wifi:(agc)0x600a7128:0xd21f0c20, min.avgNF:0xce->0xd2(dB), RCalCount:0x1f0, min.RRssi:0xc20(-62.00)[0m
+[0;33mW (657) wifi:(TB)WDEV_PWR_TB_MCS0:19[0m
+[0;33mW (657) wifi:(TB)WDEV_PWR_TB_MCS1:19[0m
+[0;33mW (657) wifi:(TB)WDEV_PWR_TB_MCS2:19[0m
+[0;33mW (667) wifi:(TB)WDEV_PWR_TB_MCS3:19[0m
+[0;33mW (667) wifi:(TB)WDEV_PWR_TB_MCS4:19[0m
+[0;33mW (667) wifi:(TB)WDEV_PWR_TB_MCS5:19[0m
+[0;33mW (677) wifi:(TB)WDEV_PWR_TB_MCS6:18[0m
+[0;33mW (677) wifi:(TB)WDEV_PWR_TB_MCS7:18[0m
+[0;33mW (677) wifi:(TB)WDEV_PWR_TB_MCS8:17[0m
+[0;33mW (687) wifi:(TB)WDEV_PWR_TB_MCS9:15[0m
+[0;33mW (687) wifi:(TB)WDEV_PWR_TB_MCS10:15[0m
+[0;33mW (687) wifi:(TB)WDEV_PWR_TB_MCS11:15[0m
+[0;32mI (697) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (707) wifi:mode : softAP (e4:b3:23:a2:81:99)[0m
+[0;32mI (747) wifi:Total power save buffer number: 16[0m
+[0;32mI (747) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (747) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (757) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (757) main: wifi_init_softap finished. SSID:SmartHome password:Zorro_2026 channel:1[0m
+[0;32mI (767) webserver: Starting server on port: '80'[0m
+[0;32mI (777) webserver: Registering URI handlers[0m
+[0;32mI (1097) main: entered custom cluster client handler[0m
+[0;32mI (1097) main: Custom command received![0m
+[0;32mI (1097) main:   cluster_id = 0xFC00[0m
+[0;32mI (1097) main:   cmd_id     = 0x00[0m
+[0;32mI (1097) main:   src_ep     = 1[0m
+[0;32mI (1107) main:   dst_ep     = 10[0m
+[0;32mI (1107) main:   payload_len = 4[0m
+[0;32mI (1117) main: entered custom cluster client handler[0m
+[0;32mI (1117) main: Custom command received![0m
+[0;32mI (1117) main:   cluster_id = 0xFC00[0m
+[0;32mI (1117) main:   cmd_id     = 0x01[0m
+[0;32mI (1127) main:   src_ep     = 1[0m
+[0;32mI (1127) main:   dst_ep     = 10[0m
+[0;32mI (1127) main:   payload_len = 4[0m
+[1;31mE (1707) main: node signal callback[0m
+[1;31mE (1707) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (1707) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (1707) main:   duration = 4 seconds[0m
+[0;32mI (1707) main:   Network is OPEN for joining[0m
+[0;32mI (11077) main: entered custom cluster client handler[0m
+[0;32mI (11077) main: Custom command received![0m
+[0;32mI (11077) main:   cluster_id = 0xFC00[0m
+[0;32mI (11077) main:   cmd_id     = 0x00[0m
+[0;32mI (11077) main:   src_ep     = 1[0m
+[0;32mI (11087) main:   dst_ep     = 10[0m
+[0;32mI (11087) main:   payload_len = 4[0m
+[0;32mI (11117) main: entered custom cluster client handler[0m
+[0;32mI (11117) main: Custom command received![0m
+[0;32mI (11117) main:   cluster_id = 0xFC00[0m
+[0;32mI (11117) main:   cmd_id     = 0x01[0m
+[0;32mI (11117) main:   src_ep     = 1[0m
+[0;32mI (11127) main:   dst_ep     = 10[0m
+[0;32mI (11127) main:   payload_len = 4[0m
+[1;31mE (23067) main: node signal callback[0m
+[0;32mI (23067) main: 0x4082a3f0   07 00 f0 11 69 fe ff db  51 10 3f ad 00 00        |....i...Q.?...|[0m
+[0;32mI (23067) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (23067) main:   short_addr  = 0x1051[0m
+[0;32mI (23077) main:   ieee_addr   = 0xDBFFFE6911F00007[0m
+[0;32mI (23077) main:   status      = 0x3F[0m
+[0;32mI (23077) main:   tc_action   = 0xAD[0m
+[0;32mI (23087) main:   parent      = 0x0000[0m
+[0;33mW (23087) main:   unknown update status: 0x3F[0m
+[1;31mE (23097) main: node signal callback[0m
+[1;31mE (23097) main: new node joined[0m
+[1;31mE (23157) main: set node report config[0m
+[1;31mE (23157) main: end node device ID:1[0m
+[1;31mE (23157) main: end node network address:44351[0m
+[1;31mE (23157) main: end node network address ieee:1175962870251852272[0m
+[1;31mE (23167) main: node index:0[0m
+[1;31mE (23167) main: ep id:1[0m
+[1;31mE (23167) main: app profile id:260[0m
+[0;32mI (32757) main: entered custom cluster client handler[0m
+[0;32mI (32757) main: Custom command received![0m
+[0;32mI (32757) main:   cluster_id = 0xFC00[0m
+[0;32mI (32757) main:   cmd_id     = 0x00[0m
+[0;32mI (32757) main:   src_ep     = 1[0m
+[0;32mI (32767) main:   dst_ep     = 10[0m
+[0;32mI (32767) main:   payload_len = 4[0m
+[0;32mI (32767) main: Temperature = 24.52 °C[0m
+[0;32mI (32777) main: entered custom cluster client handler[0m
+[0;32mI (32777) main: Custom command received![0m
+[0;32mI (32777) main:   cluster_id = 0xFC00[0m
+[0;32mI (32787) main:   cmd_id     = 0x01[0m
+[0;32mI (32787) main:   src_ep     = 1[0m
+[0;32mI (32787) main:   dst_ep     = 10[0m
+[0;32mI (32797) main:   payload_len = 4[0m
+[0;32mI (32797) main: Humidity = 52.17 [0m
+[0;32mI (42767) main: entered custom cluster client handler[0m
+[0;32mI (42767) main: Custom command received![0m
+[0;32mI (42767) main:   cluster_id = 0xFC00[0m
+[0;32mI (42767) main:   cmd_id     = 0x00[0m
+[0;32mI (42767) main:   src_ep     = 1[0m
+[0;32mI (42777) main:   dst_ep     = 10[0m
+[0;32mI (42777) main:   payload_len = 4[0m
+[0;32mI (42777) main: Temperature = 24.55 °C[0m
+[0;32mI (42787) main: entered custom cluster client handler[0m
+[0;32mI (42787) main: Custom command received![0m
+[0;32mI (42787) main:   cluster_id = 0xFC00[0m
+[0;32mI (42797) main:   cmd_id     = 0x01[0m
+[0;32mI (42797) main:   src_ep     = 1[0m
+[0;32mI (42797) main:   dst_ep     = 10[0m
+[0;32mI (42807) main:   payload_len = 4[0m
+[0;32mI (42807) main: Humidity = 51.71 [0m
+[0;32mI (52767) main: entered custom cluster client handler[0m
+[0;32mI (52767) main: Custom command received![0m
+[0;32mI (52767) main:   cluster_id = 0xFC00[0m
+[0;32mI (52767) main:   cmd_id     = 0x00[0m
+[0;32mI (52767) main:   src_ep     = 1[0m
+[0;32mI (52777) main:   dst_ep     = 10[0m
+[0;32mI (52777) main:   payload_len = 4[0m
+[0;32mI (52777) main: Temperature = 24.56 °C[0m
+[0;32mI (52797) main: entered custom cluster client handler[0m
+[0;32mI (52797) main: Custom command received![0m
+[0;32mI (52797) main:   cluster_id = 0xFC00[0m
+[0;32mI (52797) main:   cmd_id     = 0x01[0m
+[0;32mI (52797) main:   src_ep     = 1[0m
+[0;32mI (52807) main:   dst_ep     = 10[0m
+[0;32mI (52807) main:   payload_len = 4[0m
+[0;32mI (52807) main: Humidity = 51.54 [0m
+[0;32mI (62767) main: entered custom cluster client handler[0m
+[0;32mI (62767) main: Custom command received![0m
+[0;32mI (62767) main:   cluster_id = 0xFC00[0m
+[0;32mI (62767) main:   cmd_id     = 0x00[0m
+[0;32mI (62767) main:   src_ep     = 1[0m
+[0;32mI (62777) main:   dst_ep     = 10[0m
+[0;32mI (62777) main:   payload_len = 4[0m
+[0;32mI (62777) main: Temperature = 24.57 °C[0m
+[0;32mI (62787) main: entered custom cluster client handler[0m
+[0;32mI (62787) main: Custom command received![0m
+[0;32mI (62787) main:   cluster_id = 0xFC00[0m
+[0;32mI (62797) main:   cmd_id     = 0x01[0m
+[0;32mI (62797) main:   src_ep     = 1[0m
+[0;32mI (62797) main:   dst_ep     = 10[0m
+[0;32mI (62807) main:   payload_len = 4[0m
+[0;32mI (62807) main: Humidity = 51.43 [0m
+[0;32mI (72767) main: entered custom cluster client handler[0m
+[0;32mI (72767) main: Custom command received![0m
+[0;32mI (72767) main:   cluster_id = 0xFC00[0m
+[0;32mI (72767) main:   cmd_id     = 0x00[0m
+[0;32mI (72767) main:   src_ep     = 1[0m
+[0;32mI (72777) main:   dst_ep     = 10[0m
+[0;32mI (72777) main:   payload_len = 4[0m
+[0;32mI (72777) main: Temperature = 24.58 °C[0m
+[0;32mI (72787) main: entered custom cluster client handler[0m
+[0;32mI (72787) main: Custom command received![0m
+[0;32mI (72787) main:   cluster_id = 0xFC00[0m
+[0;32mI (72797) main:   cmd_id     = 0x01[0m
+[0;32mI (72797) main:   src_ep     = 1[0m
+[0;32mI (72797) main:   dst_ep     = 10[0m
+[0;32mI (72807) main:   payload_len = 4[0m
+[0;32mI (72807) main: Humidity = 51.53 [0m
+[0;32mI (82757) main: entered custom cluster client handler[0m
+[0;32mI (82757) main: Custom command received![0m
+[0;32mI (82757) main:   cluster_id = 0xFC00[0m
+[0;32mI (82757) main:   cmd_id     = 0x00[0m
+[0;32mI (82757) main:   src_ep     = 1[0m
+[0;32mI (82767) main:   dst_ep     = 10[0m
+[0;32mI (82767) main:   payload_len = 4[0m
+[0;32mI (82767) main: Temperature = 24.57 °C[0m
+[0;32mI (82777) main: entered custom cluster client handler[0m
+[0;32mI (82777) main: Custom command received![0m
+[0;32mI (82777) main:   cluster_id = 0xFC00[0m
+[0;32mI (82787) main:   cmd_id     = 0x01[0m
+[0;32mI (82787) main:   src_ep     = 1[0m
+[0;32mI (82787) main:   dst_ep     = 10[0m
+[0;32mI (82797) main:   payload_len = 4[0m
+[0;32mI (82797) main: Humidity = 51.50 [0m
+[0;32mI (92767) main: entered custom cluster client handler[0m
+[0;32mI (92767) main: Custom command received![0m
+[0;32mI (92767) main:   cluster_id = 0xFC00[0m
+[0;32mI (92767) main:   cmd_id     = 0x00[0m
+[0;32mI (92767) main:   src_ep     = 1[0m
+[0;32mI (92767) main:   dst_ep     = 10[0m
+[0;32mI (92777) main:   payload_len = 4[0m
+[0;32mI (92777) main: Temperature = 24.58 °C[0m
+[0;32mI (92787) main: entered custom cluster client handler[0m
+[0;32mI (92787) main: Custom command received![0m
+[0;32mI (92787) main:   cluster_id = 0xFC00[0m
+[0;32mI (92797) main:   cmd_id     = 0x01[0m
+[0;32mI (92797) main:   src_ep     = 1[0m
+[0;32mI (92797) main:   dst_ep     = 10[0m
+[0;32mI (92807) main:   payload_len = 4[0m
+[0;32mI (92807) main: Humidity = 51.53 [0m
+[0;32mI (102767) main: entered custom cluster client handler[0m
+[0;32mI (102767) main: Custom command received![0m
+[0;32mI (102767) main:   cluster_id = 0xFC00[0m
+[0;32mI (102767) main:   cmd_id     = 0x00[0m
+[0;32mI (102767) main:   src_ep     = 1[0m
+[0;32mI (102777) main:   dst_ep     = 10[0m
+[0;32mI (102777) main:   payload_len = 4[0m
+[0;32mI (102777) main: Temperature = 24.58 °C[0m
+[0;32mI (102787) main: entered custom cluster client handler[0m
+[0;32mI (102787) main: Custom command received![0m
+[0;32mI (102787) main:   cluster_id = 0xFC00[0m
+[0;32mI (102797) main:   cmd_id     = 0x01[0m
+[0;32mI (102797) main:   src_ep     = 1[0m
+[0;32mI (102797) main:   dst_ep     = 10[0m
+[0;32mI (102807) main:   payload_len = 4[0m
+[0;32mI (102807) main: Humidity = 51.53 [0m
+[0;32mI (112767) main: entered custom cluster client handler[0m
+[0;32mI (112767) main: Custom command received![0m
+[0;32mI (112767) main:   cluster_id = 0xFC00[0m
+[0;32mI (112767) main:   cmd_id     = 0x00[0m
+[0;32mI (112767) main:   src_ep     = 1[0m
+[0;32mI (112767) main:   dst_ep     = 10[0m
+[0;32mI (112777) main:   payload_len = 4[0m
+[0;32mI (112777) main: Temperature = 24.59 °C[0m
+[0;32mI (112807) main: entered custom cluster client handler[0m
+[0;32mI (112807) main: Custom command received![0m
+[0;32mI (112807) main:   cluster_id = 0xFC00[0m
+[0;32mI (112807) main:   cmd_id     = 0x01[0m
+[0;32mI (112807) main:   src_ep     = 1[0m
+[0;32mI (112807) main:   dst_ep     = 10[0m
+[0;32mI (112817) main:   payload_len = 4[0m
+[0;32mI (112817) main: Humidity = 51.56 [0m
+[0;32mI (122747) main: entered custom cluster client handler[0m
+[0;32mI (122747) main: Custom command received![0m
+[0;32mI (122747) main:   cluster_id = 0xFC00[0m
+[0;32mI (122747) main:   cmd_id     = 0x00[0m
+[0;32mI (122747) main:   src_ep     = 1[0m
+[0;32mI (122757) main:   dst_ep     = 10[0m
+[0;32mI (122757) main:   payload_len = 4[0m
+[0;32mI (122757) main: Temperature = 24.59 °C[0m
+[0;32mI (122767) main: entered custom cluster client handler[0m
+[0;32mI (122767) main: Custom command received![0m
+[0;32mI (122767) main:   cluster_id = 0xFC00[0m
+[0;32mI (122777) main:   cmd_id     = 0x01[0m
+[0;32mI (122777) main:   src_ep     = 1[0m
+[0;32mI (122777) main:   dst_ep     = 10[0m
+[0;32mI (122787) main:   payload_len = 4[0m
+[0;32mI (122787) main: Humidity = 51.46 [0m
+[0;32mI (132767) main: entered custom cluster client handler[0m
+[0;32mI (132767) main: Custom command received![0m
+[0;32mI (132767) main:   cluster_id = 0xFC00[0m
+[0;32mI (132767) main:   cmd_id     = 0x00[0m
+[0;32mI (132767) main:   src_ep     = 1[0m
+[0;32mI (132767) main:   dst_ep     = 10[0m
+[0;32mI (132777) main:   payload_len = 4[0m
+[0;32mI (132777) main: Temperature = 24.63 °C[0m
+[0;32mI (132787) main: entered custom cluster client handler[0m
+[0;32mI (132787) main: Custom command received![0m
+[0;32mI (132787) main:   cluster_id = 0xFC00[0m
+[0;32mI (132797) main:   cmd_id     = 0x01[0m
+[0;32mI (132797) main:   src_ep     = 1[0m
+[0;32mI (132797) main:   dst_ep     = 10[0m
+[0;32mI (132807) main:   payload_len = 4[0m
+[0;32mI (132807) main: Humidity = 51.43 [0m
+[0;32mI (142767) main: entered custom cluster client handler[0m
+[0;32mI (142767) main: Custom command received![0m
+[0;32mI (142767) main:   cluster_id = 0xFC00[0m
+[0;32mI (142767) main:   cmd_id     = 0x00[0m
+[0;32mI (142767) main:   src_ep     = 1[0m
+[0;32mI (142767) main:   dst_ep     = 10[0m
+[0;32mI (142777) main:   payload_len = 4[0m
+[0;32mI (142777) main: Temperature = 24.63 °C[0m
+[0;32mI (142787) main: entered custom cluster client handler[0m
+[0;32mI (142787) main: Custom command received![0m
+[0;32mI (142787) main:   cluster_id = 0xFC00[0m
+[0;32mI (142797) main:   cmd_id     = 0x01[0m
+[0;32mI (142797) main:   src_ep     = 1[0m
+[0;32mI (142797) main:   dst_ep     = 10[0m
+[0;32mI (142807) main:   payload_len = 4[0m
+[0;32mI (142807) main: Humidity = 51.48 [0m
+[0;32mI (152767) main: entered custom cluster client handler[0m
+[0;32mI (152767) main: Custom command received![0m
+[0;32mI (152767) main:   cluster_id = 0xFC00[0m
+[0;32mI (152767) main:   cmd_id     = 0x00[0m
+[0;32mI (152767) main:   src_ep     = 1[0m
+[0;32mI (152767) main:   dst_ep     = 10[0m
+[0;32mI (152777) main:   payload_len = 4[0m
+[0;32mI (152777) main: Temperature = 24.65 °C[0m
+[0;32mI (152787) main: entered custom cluster client handler[0m
+[0;32mI (152787) main: Custom command received![0m
+[0;32mI (152787) main:   cluster_id = 0xFC00[0m
+[0;32mI (152797) main:   cmd_id     = 0x01[0m
+[0;32mI (152797) main:   src_ep     = 1[0m
+[0;32mI (152797) main:   dst_ep     = 10[0m
+[0;32mI (152807) main:   payload_len = 4[0m
+[0;32mI (152807) main: Humidity = 51.52 [0m
+[0;32mI (162767) main: entered custom cluster client handler[0m
+[0;32mI (162767) main: Custom command received![0m
+[0;32mI (162767) main:   cluster_id = 0xFC00[0m
+[0;32mI (162767) main:   cmd_id     = 0x00[0m
+[0;32mI (162767) main:   src_ep     = 1[0m
+[0;32mI (162767) main:   dst_ep     = 10[0m
+[0;32mI (162777) main:   payload_len = 4[0m
+[0;32mI (162777) main: Temperature = 24.68 °C[0m
+[0;32mI (162787) main: entered custom cluster client handler[0m
+[0;32mI (162787) main: Custom command received![0m
+[0;32mI (162787) main:   cluster_id = 0xFC00[0m
+[0;32mI (162797) main:   cmd_id     = 0x01[0m
+[0;32mI (162797) main:   src_ep     = 1[0m
+[0;32mI (162797) main:   dst_ep     = 10[0m
+[0;32mI (162807) main:   payload_len = 4[0m
+[0;32mI (162807) main: Humidity = 51.47 [0m
+[0;32mI (172747) main: entered custom cluster client handler[0m
+[0;32mI (172747) main: Custom command received![0m
+[0;32mI (172747) main:   cluster_id = 0xFC00[0m
+[0;32mI (172747) main:   cmd_id     = 0x00[0m
+[0;32mI (172747) main:   src_ep     = 1[0m
+[0;32mI (172747) main:   dst_ep     = 10[0m
+[0;32mI (172757) main:   payload_len = 4[0m
+[0;32mI (172757) main: Temperature = 24.68 °C[0m
+[0;32mI (172767) main: entered custom cluster client handler[0m
+[0;32mI (172767) main: Custom command received![0m
+[0;32mI (172767) main:   cluster_id = 0xFC00[0m
+[0;32mI (172777) main:   cmd_id     = 0x01[0m
+[0;32mI (172777) main:   src_ep     = 1[0m
+[0;32mI (172777) main:   dst_ep     = 10[0m
+[0;32mI (172787) main:   payload_len = 4[0m
+[0;32mI (172787) main: Humidity = 51.50 [0m
+[1;31mE (181357) main: node signal callback[0m
+[1;31mE (181357) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (181357) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (181357) main:   duration = 4 seconds[0m
+[0;32mI (181357) main:   Network is OPEN for joining[0m
+[0;32mI (182767) main: entered custom cluster client handler[0m
+[0;32mI (182767) main: Custom command received![0m
+[0;32mI (182767) main:   cluster_id = 0xFC00[0m
+[0;32mI (182767) main:   cmd_id     = 0x00[0m
+[0;32mI (182767) main:   src_ep     = 1[0m
+[0;32mI (182767) main:   dst_ep     = 10[0m
+[0;32mI (182777) main:   payload_len = 4[0m
+[0;32mI (182777) main: Temperature = 24.70 °C[0m
+[0;32mI (182787) main: entered custom cluster client handler[0m
+[0;32mI (182787) main: Custom command received![0m
+[0;32mI (182787) main:   cluster_id = 0xFC00[0m
+[0;32mI (182797) main:   cmd_id     = 0x01[0m
+[0;32mI (182797) main:   src_ep     = 1[0m
+[0;32mI (182797) main:   dst_ep     = 10[0m
+[0;32mI (182797) main:   payload_len = 4[0m
+[0;32mI (182807) main: Humidity = 51.64 [0m
+[0;32mI (192767) main: entered custom cluster client handler[0m
+[0;32mI (192767) main: Custom command received![0m
+[0;32mI (192767) main:   cluster_id = 0xFC00[0m
+[0;32mI (192767) main:   cmd_id     = 0x00[0m
+[0;32mI (192767) main:   src_ep     = 1[0m
+[0;32mI (192767) main:   dst_ep     = 10[0m
+[0;32mI (192777) main:   payload_len = 4[0m
+[0;32mI (192777) main: Temperature = 24.71 °C[0m
+[0;32mI (192787) main: entered custom cluster client handler[0m
+[0;32mI (192787) main: Custom command received![0m
+[0;32mI (192787) main:   cluster_id = 0xFC00[0m
+[0;32mI (192797) main:   cmd_id     = 0x01[0m
+[0;32mI (192797) main:   src_ep     = 1[0m
+[0;32mI (192797) main:   dst_ep     = 10[0m
+[0;32mI (192797) main:   payload_len = 4[0m
+[0;32mI (192807) main: Humidity = 51.42 [0m
+[0;32mI (202757) main: entered custom cluster client handler[0m
+[0;32mI (202757) main: Custom command received![0m
+[0;32mI (202757) main:   cluster_id = 0xFC00[0m
+[0;32mI (202757) main:   cmd_id     = 0x00[0m
+[0;32mI (202757) main:   src_ep     = 1[0m
+[0;32mI (202757) main:   dst_ep     = 10[0m
+[0;32mI (202767) main:   payload_len = 4[0m
+[0;32mI (202767) main: Temperature = 24.70 °C[0m
+[0;32mI (202777) main: entered custom cluster client handler[0m
+[0;32mI (202777) main: Custom command received![0m
+[0;32mI (202777) main:   cluster_id = 0xFC00[0m
+[0;32mI (202777) main:   cmd_id     = 0x01[0m
+[0;32mI (202787) main:   src_ep     = 1[0m
+[0;32mI (202787) main:   dst_ep     = 10[0m
+[0;32mI (202787) main:   payload_len = 4[0m
+[0;32mI (202797) main: Humidity = 51.49 [0m
+[0;32mI (212767) main: entered custom cluster client handler[0m
+[0;32mI (212767) main: Custom command received![0m
+[0;32mI (212767) main:   cluster_id = 0xFC00[0m
+[0;32mI (212767) main:   cmd_id     = 0x00[0m
+[0;32mI (212767) main:   src_ep     = 1[0m
+[0;32mI (212767) main:   dst_ep     = 10[0m
+[0;32mI (212777) main:   payload_len = 4[0m
+[0;32mI (212777) main: Temperature = 24.70 °C[0m
+[0;32mI (212787) main: entered custom cluster client handler[0m
+[0;32mI (212787) main: Custom command received![0m
+[0;32mI (212787) main:   cluster_id = 0xFC00[0m
+[0;32mI (212787) main:   cmd_id     = 0x01[0m
+[0;32mI (212797) main:   src_ep     = 1[0m
+[0;32mI (212797) main:   dst_ep     = 10[0m
+[0;32mI (212797) main:   payload_len = 4[0m
+[0;32mI (212807) main: Humidity = 51.39 [0m
+[0;32mI (222747) main: entered custom cluster client handler[0m
+[0;32mI (222757) main: Custom command received![0m
+[0;32mI (222757) main:   cluster_id = 0xFC00[0m
+[0;32mI (222757) main:   cmd_id     = 0x00[0m
+[0;32mI (222757) main:   src_ep     = 1[0m
+[0;32mI (222757) main:   dst_ep     = 10[0m
+[0;32mI (222767) main:   payload_len = 4[0m
+[0;32mI (222767) main: Temperature = 24.70 °C[0m
+[0;32mI (222777) main: entered custom cluster client handler[0m
+[0;32mI (222777) main: Custom command received![0m
+[0;32mI (222777) main:   cluster_id = 0xFC00[0m
+[0;32mI (222777) main:   cmd_id     = 0x01[0m
+[0;32mI (222787) main:   src_ep     = 1[0m
+[0;32mI (222787) main:   dst_ep     = 10[0m
+[0;32mI (222787) main:   payload_len = 4[0m
+[0;32mI (222797) main: Humidity = 51.36 [0m
+[0;32mI (232757) main: entered custom cluster client handler[0m
+[0;32mI (232767) main: Custom command received![0m
+[0;32mI (232767) main:   cluster_id = 0xFC00[0m
+[0;32mI (232767) main:   cmd_id     = 0x00[0m
+[0;32mI (232767) main:   src_ep     = 1[0m
+[0;32mI (232767) main:   dst_ep     = 10[0m
+[0;32mI (232777) main:   payload_len = 4[0m
+[0;32mI (232777) main: Temperature = 24.72 °C[0m
+[0;32mI (232777) main: entered custom cluster client handler[0m
+[0;32mI (232787) main: Custom command received![0m
+[0;32mI (232787) main:   cluster_id = 0xFC00[0m
+[0;32mI (232787) main:   cmd_id     = 0x01[0m
+[0;32mI (232797) main:   src_ep     = 1[0m
+[0;32mI (232797) main:   dst_ep     = 10[0m
+[0;32mI (232797) main:   payload_len = 4[0m
+[0;32mI (232807) main: Humidity = 51.43 [0m
+[0;32mI (242757) main: entered custom cluster client handler[0m
+[0;32mI (242757) main: Custom command received![0m
+[0;32mI (242757) main:   cluster_id = 0xFC00[0m
+[0;32mI (242767) main:   cmd_id     = 0x00[0m
+[0;32mI (242767) main:   src_ep     = 1[0m
+[0;32mI (242767) main:   dst_ep     = 10[0m
+[0;32mI (242777) main:   payload_len = 4[0m
+[0;32mI (242777) main: Temperature = 24.72 °C[0m
+[0;32mI (242777) main: entered custom cluster client handler[0m
+[0;32mI (242787) main: Custom command received![0m
+[0;32mI (242787) main:   cluster_id = 0xFC00[0m
+[0;32mI (242787) main:   cmd_id     = 0x01[0m
+[0;32mI (242797) main:   src_ep     = 1[0m
+[0;32mI (242797) main:   dst_ep     = 10[0m
+[0;32mI (242797) main:   payload_len = 4[0m
+[0;32mI (242807) main: Humidity = 51.51 [0m
+[0;32mI (252757) main: entered custom cluster client handler[0m
+[0;32mI (252757) main: Custom command received![0m
+[0;32mI (252757) main:   cluster_id = 0xFC00[0m
+[0;32mI (252767) main:   cmd_id     = 0x00[0m
+[0;32mI (252767) main:   src_ep     = 1[0m
+[0;32mI (252767) main:   dst_ep     = 10[0m
+[0;32mI (252777) main:   payload_len = 4[0m
+[0;32mI (252777) main: Temperature = 24.73 °C[0m
+[0;32mI (252777) main: entered custom cluster client handler[0m
+[0;32mI (252787) main: Custom command received![0m
+[0;32mI (252787) main:   cluster_id = 0xFC00[0m
+[0;32mI (252787) main:   cmd_id     = 0x01[0m
+[0;32mI (252797) main:   src_ep     = 1[0m
+[0;32mI (252797) main:   dst_ep     = 10[0m
+[0;32mI (252797) main:   payload_len = 4[0m
+[0;32mI (252807) main: Humidity = 51.50 [0m
+[0;32mI (262757) main: entered custom cluster client handler[0m
+[0;32mI (262757) main: Custom command received![0m
+[0;32mI (262757) main:   cluster_id = 0xFC00[0m
+[0;32mI (262767) main:   cmd_id     = 0x00[0m
+[0;32mI (262767) main:   src_ep     = 1[0m
+[0;32mI (262767) main:   dst_ep     = 10[0m
+[0;32mI (262767) main:   payload_len = 4[0m
+[0;32mI (262777) main: Temperature = 24.72 °C[0m
+[0;32mI (262777) main: entered custom cluster client handler[0m
+[0;32mI (262787) main: Custom command received![0m
+[0;32mI (262787) main:   cluster_id = 0xFC00[0m
+[0;32mI (262787) main:   cmd_id     = 0x01[0m
+[0;32mI (262797) main:   src_ep     = 1[0m
+[0;32mI (262797) main:   dst_ep     = 10[0m
+[0;32mI (262797) main:   payload_len = 4[0m
+[0;32mI (262807) main: Humidity = 51.52 [0m
+[0;32mI (272757) main: entered custom cluster client handler[0m
+[0;32mI (272757) main: Custom command received![0m
+[0;32mI (272757) main:   cluster_id = 0xFC00[0m
+[0;32mI (272757) main:   cmd_id     = 0x00[0m
+[0;32mI (272767) main:   src_ep     = 1[0m
+[0;32mI (272767) main:   dst_ep     = 10[0m
+[0;32mI (272767) main:   payload_len = 4[0m
+[0;32mI (272777) main: Temperature = 24.74 °C[0m
+[0;32mI (272777) main: entered custom cluster client handler[0m
+[0;32mI (272787) main: Custom command received![0m
+[0;32mI (272787) main:   cluster_id = 0xFC00[0m
+[0;32mI (272787) main:   cmd_id     = 0x01[0m
+[0;32mI (272797) main:   src_ep     = 1[0m
+[0;32mI (272797) main:   dst_ep     = 10[0m
+[0;32mI (272797) main:   payload_len = 4[0m
+[0;32mI (272807) main: Humidity = 51.47 [0m
+[0;32mI (282737) main: entered custom cluster client handler[0m
+[0;32mI (282747) main: Custom command received![0m
+[0;32mI (282747) main:   cluster_id = 0xFC00[0m
+[0;32mI (282747) main:   cmd_id     = 0x00[0m
+[0;32mI (282747) main:   src_ep     = 1[0m
+[0;32mI (282747) main:   dst_ep     = 10[0m
+[0;32mI (282757) main:   payload_len = 4[0m
+[0;32mI (282757) main: Temperature = 24.74 °C[0m
+[0;32mI (282767) main: entered custom cluster client handler[0m
+[0;32mI (282767) main: Custom command received![0m
+[0;32mI (282767) main:   cluster_id = 0xFC00[0m
+[0;32mI (282767) main:   cmd_id     = 0x01[0m
+[0;32mI (282777) main:   src_ep     = 1[0m
+[0;32mI (282777) main:   dst_ep     = 10[0m
+[0;32mI (282777) main:   payload_len = 4[0m
+[0;32mI (282787) main: Humidity = 51.51 [0m
+[0;32mI (292737) main: entered custom cluster client handler[0m
+[0;32mI (292737) main: Custom command received![0m
+[0;32mI (292747) main:   cluster_id = 0xFC00[0m
+[0;32mI (292747) main:   cmd_id     = 0x00[0m
+[0;32mI (292747) main:   src_ep     = 1[0m
+[0;32mI (292747) main:   dst_ep     = 10[0m
+[0;32mI (292757) main:   payload_len = 4[0m
+[0;32mI (292757) main: Temperature = 24.74 °C[0m
+[0;32mI (292757) main: entered custom cluster client handler[0m
+[0;32mI (292767) main: Custom command received![0m
+[0;32mI (292767) main:   cluster_id = 0xFC00[0m
+[0;32mI (292767) main:   cmd_id     = 0x01[0m
+[0;32mI (292777) main:   src_ep     = 1[0m
+[0;32mI (292777) main:   dst_ep     = 10[0m
+[0;32mI (292777) main:   payload_len = 4[0m
+[0;32mI (292787) main: Humidity = 51.53 [0m
+[0;32mI (302757) main: entered custom cluster client handler[0m
+[0;32mI (302757) main: Custom command received![0m
+[0;32mI (302757) main:   cluster_id = 0xFC00[0m
+[0;32mI (302757) main:   cmd_id     = 0x00[0m
+[0;32mI (302767) main:   src_ep     = 1[0m
+[0;32mI (302767) main:   dst_ep     = 10[0m
+[0;32mI (302767) main:   payload_len = 4[0m
+[0;32mI (302777) main: Temperature = 24.75 °C[0m
+[0;32mI (302777) main: entered custom cluster client handler[0m
+[0;32mI (302787) main: Custom command received![0m
+[0;32mI (302787) main:   cluster_id = 0xFC00[0m
+[0;32mI (302787) main:   cmd_id     = 0x01[0m
+[0;32mI (302797) main:   src_ep     = 1[0m
+[0;32mI (302797) main:   dst_ep     = 10[0m
+[0;32mI (302797) main:   payload_len = 4[0m
+[0;32mI (302807) main: Humidity = 51.51 [0m
+[0;32mI (312737) main: entered custom cluster client handler[0m
+[0;32mI (312737) main: Custom command received![0m
+[0;32mI (312737) main:   cluster_id = 0xFC00[0m
+[0;32mI (312747) main:   cmd_id     = 0x00[0m
+[0;32mI (312747) main:   src_ep     = 1[0m
+[0;32mI (312747) main:   dst_ep     = 10[0m
+[0;32mI (312747) main:   payload_len = 4[0m
+[0;32mI (312757) main: Temperature = 24.76 °C[0m
+[0;32mI (312757) main: entered custom cluster client handler[0m
+[0;32mI (312767) main: Custom command received![0m
+[0;32mI (312767) main:   cluster_id = 0xFC00[0m
+[0;32mI (312767) main:   cmd_id     = 0x01[0m
+[0;32mI (312777) main:   src_ep     = 1[0m
+[0;32mI (312777) main:   dst_ep     = 10[0m
+[0;32mI (312777) main:   payload_len = 4[0m
+[0;32mI (312787) main: Humidity = 51.43 [0m
+[0;32mI (322737) main: entered custom cluster client handler[0m
+[0;32mI (322737) main: Custom command received![0m
+[0;32mI (322737) main:   cluster_id = 0xFC00[0m
+[0;32mI (322747) main:   cmd_id     = 0x00[0m
+[0;32mI (322747) main:   src_ep     = 1[0m
+[0;32mI (322747) main:   dst_ep     = 10[0m
+[0;32mI (322747) main:   payload_len = 4[0m
+[0;32mI (322757) main: Temperature = 24.77 °C[0m
+[0;32mI (322757) main: entered custom cluster client handler[0m
+[0;32mI (322767) main: Custom command received![0m
+[0;32mI (322767) main:   cluster_id = 0xFC00[0m
+[0;32mI (322767) main:   cmd_id     = 0x01[0m
+[0;32mI (322777) main:   src_ep     = 1[0m
+[0;32mI (322777) main:   dst_ep     = 10[0m
+[0;32mI (322777) main:   payload_len = 4[0m
+[0;32mI (322787) main: Humidity = 51.45 [0m
+[0;32mI (332757) main: entered custom cluster client handler[0m
+[0;32mI (332757) main: Custom command received![0m
+[0;32mI (332757) main:   cluster_id = 0xFC00[0m
+[0;32mI (332757) main:   cmd_id     = 0x00[0m
+[0;32mI (332767) main:   src_ep     = 1[0m
+[0;32mI (332767) main:   dst_ep     = 10[0m
+[0;32mI (332767) main:   payload_len = 4[0m
+[0;32mI (332777) main: Temperature = 24.77 °C[0m
+[0;32mI (332777) main: entered custom cluster client handler[0m
+[0;32mI (332777) main: Custom command received![0m
+[0;32mI (332787) main:   cluster_id = 0xFC00[0m
+[0;32mI (332787) main:   cmd_id     = 0x01[0m
+[0;32mI (332797) main:   src_ep     = 1[0m
+[0;32mI (332797) main:   dst_ep     = 10[0m
+[0;32mI (332797) main:   payload_len = 4[0m
+[0;32mI (332797) main: Humidity = 51.36 [0m
+[0;32mI (342757) main: entered custom cluster client handler[0m
+[0;32mI (342757) main: Custom command received![0m
+[0;32mI (342757) main:   cluster_id = 0xFC00[0m
+[0;32mI (342757) main:   cmd_id     = 0x00[0m
+[0;32mI (342767) main:   src_ep     = 1[0m
+[0;32mI (342767) main:   dst_ep     = 10[0m
+[0;32mI (342767) main:   payload_len = 4[0m
+[0;32mI (342777) main: Temperature = 24.76 °C[0m
+[0;32mI (342777) main: entered custom cluster client handler[0m
+[0;32mI (342777) main: Custom command received![0m
+[0;32mI (342787) main:   cluster_id = 0xFC00[0m
+[0;32mI (342787) main:   cmd_id     = 0x01[0m
+[0;32mI (342787) main:   src_ep     = 1[0m
+[0;32mI (342797) main:   dst_ep     = 10[0m
+[0;32mI (342797) main:   payload_len = 4[0m
+[0;32mI (342797) main: Humidity = 51.38 [0m
+[0;32mI (352737) main: entered custom cluster client handler[0m
+[0;32mI (352737) main: Custom command received![0m
+[0;32mI (352737) main:   cluster_id = 0xFC00[0m
+[0;32mI (352737) main:   cmd_id     = 0x00[0m
+[0;32mI (352747) main:   src_ep     = 1[0m
+[0;32mI (352747) main:   dst_ep     = 10[0m
+[0;32mI (352747) main:   payload_len = 4[0m
+[0;32mI (352757) main: Temperature = 24.77 °C[0m
+[0;32mI (352757) main: entered custom cluster client handler[0m
+[0;32mI (352767) main: Custom command received![0m
+[0;32mI (352767) main:   cluster_id = 0xFC00[0m
+[0;32mI (352767) main:   cmd_id     = 0x01[0m
+[0;32mI (352777) main:   src_ep     = 1[0m
+[0;32mI (352777) main:   dst_ep     = 10[0m
+[0;32mI (352777) main:   payload_len = 4[0m
+[0;32mI (352787) main: Humidity = 51.32 [0m
+[0;32mI (362757) main: entered custom cluster client handler[0m
+[0;32mI (362757) main: Custom command received![0m
+[0;32mI (362757) main:   cluster_id = 0xFC00[0m
+[0;32mI (362757) main:   cmd_id     = 0x00[0m
+[0;32mI (362767) main:   src_ep     = 1[0m
+[0;32mI (362767) main:   dst_ep     = 10[0m
+[0;32mI (362767) main:   payload_len = 4[0m
+[0;32mI (362777) main: Temperature = 24.77 °C[0m
+[0;32mI (362777) main: entered custom cluster client handler[0m
+[0;32mI (362777) main: Custom command received![0m
+[0;32mI (362787) main:   cluster_id = 0xFC00[0m
+[0;32mI (362787) main:   cmd_id     = 0x01[0m
+[0;32mI (362787) main:   src_ep     = 1[0m
+[0;32mI (362797) main:   dst_ep     = 10[0m
+[0;32mI (362797) main:   payload_len = 4[0m
+[0;32mI (362797) main: Humidity = 51.32 [0m
+[0;32mI (372747) main: entered custom cluster client handler[0m
+[0;32mI (372747) main: Custom command received![0m
+[0;32mI (372747) main:   cluster_id = 0xFC00[0m
+[0;32mI (372747) main:   cmd_id     = 0x00[0m
+[0;32mI (372757) main:   src_ep     = 1[0m
+[0;32mI (372757) main:   dst_ep     = 10[0m
+[0;32mI (372757) main:   payload_len = 4[0m
+[0;32mI (372767) main: Temperature = 24.76 °C[0m
+[0;32mI (372767) main: entered custom cluster client handler[0m
+[0;32mI (372767) main: Custom command received![0m
+[0;32mI (372777) main:   cluster_id = 0xFC00[0m
+[0;32mI (372777) main:   cmd_id     = 0x01[0m
+[0;32mI (372777) main:   src_ep     = 1[0m
+[0;32mI (372787) main:   dst_ep     = 10[0m
+[0;32mI (372787) main:   payload_len = 4[0m
+[0;32mI (372787) main: Humidity = 51.32 [0m
+[0;32mI (382757) main: entered custom cluster client handler[0m
+[0;32mI (382757) main: Custom command received![0m
+[0;32mI (382757) main:   cluster_id = 0xFC00[0m
+[0;32mI (382757) main:   cmd_id     = 0x00[0m
+[0;32mI (382767) main:   src_ep     = 1[0m
+[0;32mI (382767) main:   dst_ep     = 10[0m
+[0;32mI (382767) main:   payload_len = 4[0m
+[0;32mI (382767) main: Temperature = 24.76 °C[0m
+[0;32mI (382777) main: entered custom cluster client handler[0m
+[0;32mI (382777) main: Custom command received![0m
+[0;32mI (382787) main:   cluster_id = 0xFC00[0m
+[0;32mI (382787) main:   cmd_id     = 0x01[0m
+[0;32mI (382787) main:   src_ep     = 1[0m
+[0;32mI (382797) main:   dst_ep     = 10[0m
+[0;32mI (382797) main:   payload_len = 4[0m
+[0;32mI (382797) main: Humidity = 51.31 [0m
+[0;32mI (392757) main: entered custom cluster client handler[0m
+[0;32mI (392757) main: Custom command received![0m
+[0;32mI (392757) main:   cluster_id = 0xFC00[0m
+[0;32mI (392757) main:   cmd_id     = 0x00[0m
+[0;32mI (392767) main:   src_ep     = 1[0m
+[0;32mI (392767) main:   dst_ep     = 10[0m
+[0;32mI (392767) main:   payload_len = 4[0m
+[0;32mI (392767) main: Temperature = 24.77 °C[0m
+[0;32mI (392777) main: entered custom cluster client handler[0m
+[0;32mI (392777) main: Custom command received![0m
+[0;32mI (392787) main:   cluster_id = 0xFC00[0m
+[0;32mI (392787) main:   cmd_id     = 0x01[0m
+[0;32mI (392787) main:   src_ep     = 1[0m
+[0;32mI (392797) main:   dst_ep     = 10[0m
+[0;32mI (392797) main:   payload_len = 4[0m
+[0;32mI (392797) main: Humidity = 51.33 [0m
+[0;32mI (402757) main: entered custom cluster client handler[0m
+[0;32mI (402757) main: Custom command received![0m
+[0;32mI (402757) main:   cluster_id = 0xFC00[0m
+[0;32mI (402757) main:   cmd_id     = 0x00[0m
+[0;32mI (402767) main:   src_ep     = 1[0m
+[0;32mI (402767) main:   dst_ep     = 10[0m
+[0;32mI (402767) main:   payload_len = 4[0m
+[0;32mI (402767) main: Temperature = 24.76 °C[0m
+[0;32mI (402777) main: entered custom cluster client handler[0m
+[0;32mI (402777) main: Custom command received![0m
+[0;32mI (402787) main:   cluster_id = 0xFC00[0m
+[0;32mI (402787) main:   cmd_id     = 0x01[0m
+[0;32mI (402787) main:   src_ep     = 1[0m
+[0;32mI (402797) main:   dst_ep     = 10[0m
+[0;32mI (402797) main:   payload_len = 4[0m
+[0;32mI (402797) main: Humidity = 51.40 [0m
+[0;32mI (412757) main: entered custom cluster client handler[0m
+[0;32mI (412757) main: Custom command received![0m
+[0;32mI (412757) main:   cluster_id = 0xFC00[0m
+[0;32mI (412757) main:   cmd_id     = 0x00[0m
+[0;32mI (412757) main:   src_ep     = 1[0m
+[0;32mI (412767) main:   dst_ep     = 10[0m
+[0;32mI (412767) main:   payload_len = 4[0m
+[0;32mI (412767) main: Temperature = 24.77 °C[0m
+[0;32mI (412777) main: entered custom cluster client handler[0m
+[0;32mI (412777) main: Custom command received![0m
+[0;32mI (412787) main:   cluster_id = 0xFC00[0m
+[0;32mI (412787) main:   cmd_id     = 0x01[0m
+[0;32mI (412787) main:   src_ep     = 1[0m
+[0;32mI (412797) main:   dst_ep     = 10[0m
+[0;32mI (412797) main:   payload_len = 4[0m
+[0;32mI (412797) main: Humidity = 51.40 [0m
+[0;32mI (422737) main: entered custom cluster client handler[0m
+[0;32mI (422737) main: Custom command received![0m
+[0;32mI (422737) main:   cluster_id = 0xFC00[0m
+[0;32mI (422737) main:   cmd_id     = 0x00[0m
+[0;32mI (422747) main:   src_ep     = 1[0m
+[0;32mI (422747) main:   dst_ep     = 10[0m
+[0;32mI (422747) main:   payload_len = 4[0m
+[0;32mI (422757) main: Temperature = 24.78 °C[0m
+[0;32mI (422757) main: entered custom cluster client handler[0m
+[0;32mI (422757) main: Custom command received![0m
+[0;32mI (422767) main:   cluster_id = 0xFC00[0m
+[0;32mI (422767) main:   cmd_id     = 0x01[0m
+[0;32mI (422767) main:   src_ep     = 1[0m
+[0;32mI (422777) main:   dst_ep     = 10[0m
+[0;32mI (422777) main:   payload_len = 4[0m
+[0;32mI (422777) main: Humidity = 51.38 [0m
+[0;32mI (432757) main: entered custom cluster client handler[0m
+[0;32mI (432757) main: Custom command received![0m
+[0;32mI (432757) main:   cluster_id = 0xFC00[0m
+[0;32mI (432757) main:   cmd_id     = 0x00[0m
+[0;32mI (432757) main:   src_ep     = 1[0m
+[0;32mI (432767) main:   dst_ep     = 10[0m
+[0;32mI (432767) main:   payload_len = 4[0m
+[0;32mI (432767) main: Temperature = 24.78 °C[0m
+[0;32mI (432777) main: entered custom cluster client handler[0m
+[0;32mI (432777) main: Custom command received![0m
+[0;32mI (432787) main:   cluster_id = 0xFC00[0m
+[0;32mI (432787) main:   cmd_id     = 0x01[0m
+[0;32mI (432787) main:   src_ep     = 1[0m
+[0;32mI (432797) main:   dst_ep     = 10[0m
+[0;32mI (432797) main:   payload_len = 4[0m
+[0;32mI (432797) main: Humidity = 51.32 [0m
+[0;32mI (442737) main: entered custom cluster client handler[0m
+[0;32mI (442737) main: Custom command received![0m
+[0;32mI (442737) main:   cluster_id = 0xFC00[0m
+[0;32mI (442737) main:   cmd_id     = 0x00[0m
+[0;32mI (442747) main:   src_ep     = 1[0m
+[0;32mI (442747) main:   dst_ep     = 10[0m
+[0;32mI (442747) main:   payload_len = 4[0m
+[0;32mI (442747) main: Temperature = 24.78 °C[0m
+[0;32mI (442757) main: entered custom cluster client handler[0m
+[0;32mI (442757) main: Custom command received![0m
+[0;32mI (442767) main:   cluster_id = 0xFC00[0m
+[0;32mI (442767) main:   cmd_id     = 0x01[0m
+[0;32mI (442767) main:   src_ep     = 1[0m
+[0;32mI (442777) main:   dst_ep     = 10[0m
+[0;32mI (442777) main:   payload_len = 4[0m
+[0;32mI (442777) main: Humidity = 51.47 [0m
+[0;32mI (452747) main: entered custom cluster client handler[0m
+[0;32mI (452747) main: Custom command received![0m
+[0;32mI (452747) main:   cluster_id = 0xFC00[0m
+[0;32mI (452747) main:   cmd_id     = 0x00[0m
+[0;32mI (452747) main:   src_ep     = 1[0m
+[0;32mI (452757) main:   dst_ep     = 10[0m
+[0;32mI (452757) main:   payload_len = 4[0m
+[0;32mI (452757) main: Temperature = 24.77 °C[0m
+[0;32mI (452767) main: entered custom cluster client handler[0m
+[0;32mI (452767) main: Custom command received![0m
+[0;32mI (452777) main:   cluster_id = 0xFC00[0m
+[0;32mI (452777) main:   cmd_id     = 0x01[0m
+[0;32mI (452777) main:   src_ep     = 1[0m
+[0;32mI (452787) main:   dst_ep     = 10[0m
+[0;32mI (452787) main:   payload_len = 4[0m
+[0;32mI (452787) main: Humidity = 51.42 [0m
+[0;32mI (462737) main: entered custom cluster client handler[0m
+[0;32mI (462737) main: Custom command received![0m
+[0;32mI (462737) main:   cluster_id = 0xFC00[0m
+[0;32mI (462737) main:   cmd_id     = 0x00[0m
+[0;32mI (462747) main:   src_ep     = 1[0m
+[0;32mI (462747) main:   dst_ep     = 10[0m
+[0;32mI (462747) main:   payload_len = 4[0m
+[0;32mI (462747) main: Temperature = 24.77 °C[0m
+[0;32mI (462757) main: entered custom cluster client handler[0m
+[0;32mI (462757) main: Custom command received![0m
+[0;32mI (462767) main:   cluster_id = 0xFC00[0m
+[0;32mI (462767) main:   cmd_id     = 0x01[0m
+[0;32mI (462767) main:   src_ep     = 1[0m
+[0;32mI (462777) main:   dst_ep     = 10[0m
+[0;32mI (462777) main:   payload_len = 4[0m
+[0;32mI (462777) main: Humidity = 51.46 [0m
+[0;32mI (472757) main: entered custom cluster client handler[0m
+[0;32mI (472757) main: Custom command received![0m
+[0;32mI (472757) main:   cluster_id = 0xFC00[0m
+[0;32mI (472757) main:   cmd_id     = 0x00[0m
+[0;32mI (472757) main:   src_ep     = 1[0m
+[0;32mI (472767) main:   dst_ep     = 10[0m
+[0;32mI (472767) main:   payload_len = 4[0m
+[0;32mI (472767) main: Temperature = 24.76 °C[0m
+[0;32mI (472777) main: entered custom cluster client handler[0m
+[0;32mI (472777) main: Custom command received![0m
+[0;32mI (472787) main:   cluster_id = 0xFC00[0m
+[0;32mI (472787) main:   cmd_id     = 0x01[0m
+[0;32mI (472787) main:   src_ep     = 1[0m
+[0;32mI (472787) main:   dst_ep     = 10[0m
+[0;32mI (472797) main:   payload_len = 4[0m
+[0;32mI (472797) main: Humidity = 51.31 [0m
+[0;32mI (482737) main: entered custom cluster client handler[0m
+[0;32mI (482737) main: Custom command received![0m
+[0;32mI (482737) main:   cluster_id = 0xFC00[0m
+[0;32mI (482737) main:   cmd_id     = 0x00[0m
+[0;32mI (482737) main:   src_ep     = 1[0m
+[0;32mI (482747) main:   dst_ep     = 10[0m
+[0;32mI (482747) main:   payload_len = 4[0m
+[0;32mI (482747) main: Temperature = 24.76 °C[0m
+[0;32mI (482767) main: entered custom cluster client handler[0m
+[0;32mI (482767) main: Custom command received![0m
+[0;32mI (482767) main:   cluster_id = 0xFC00[0m
+[0;32mI (482767) main:   cmd_id     = 0x01[0m
+[0;32mI (482777) main:   src_ep     = 1[0m
+[0;32mI (482777) main:   dst_ep     = 10[0m
+[0;32mI (482777) main:   payload_len = 4[0m
+[0;32mI (482787) main: Humidity = 51.35 [0m
+[0;32mI (492737) main: entered custom cluster client handler[0m
+[0;32mI (492737) main: Custom command received![0m
+[0;32mI (492737) main:   cluster_id = 0xFC00[0m
+[0;32mI (492737) main:   cmd_id     = 0x00[0m
+[0;32mI (492737) main:   src_ep     = 1[0m
+[0;32mI (492747) main:   dst_ep     = 10[0m
+[0;32mI (492747) main:   payload_len = 4[0m
+[0;32mI (492747) main: Temperature = 24.76 °C[0m
+[0;32mI (492757) main: entered custom cluster client handler[0m
+[0;32mI (492757) main: Custom command received![0m
+[0;32mI (492767) main:   cluster_id = 0xFC00[0m
+[0;32mI (492767) main:   cmd_id     = 0x01[0m
+[0;32mI (492767) main:   src_ep     = 1[0m
+[0;32mI (492777) main:   dst_ep     = 10[0m
+[0;32mI (492777) main:   payload_len = 4[0m
+[0;32mI (492777) main: Humidity = 51.31 [0m
+[0;32mI (502757) main: entered custom cluster client handler[0m
+[0;32mI (502757) main: Custom command received![0m
+[0;32mI (502757) main:   cluster_id = 0xFC00[0m
+[0;32mI (502757) main:   cmd_id     = 0x00[0m
+[0;32mI (502757) main:   src_ep     = 1[0m
+[0;32mI (502767) main:   dst_ep     = 10[0m
+[0;32mI (502767) main:   payload_len = 4[0m
+[0;32mI (502767) main: Temperature = 24.77 °C[0m
+[0;32mI (502777) main: entered custom cluster client handler[0m
+[0;32mI (502777) main: Custom command received![0m
+[0;32mI (502777) main:   cluster_id = 0xFC00[0m
+[0;32mI (502787) main:   cmd_id     = 0x01[0m
+[0;32mI (502787) main:   src_ep     = 1[0m
+[0;32mI (502787) main:   dst_ep     = 10[0m
+[0;32mI (502797) main:   payload_len = 4[0m
+[0;32mI (502797) main: Humidity = 51.33 [0m
+[0;32mI (512737) main: entered custom cluster client handler[0m
+[0;32mI (512737) main: Custom command received![0m
+[0;32mI (512737) main:   cluster_id = 0xFC00[0m
+[0;32mI (512737) main:   cmd_id     = 0x00[0m
+[0;32mI (512737) main:   src_ep     = 1[0m
+[0;32mI (512747) main:   dst_ep     = 10[0m
+[0;32mI (512747) main:   payload_len = 4[0m
+[0;32mI (512747) main: Temperature = 24.74 °C[0m
+[0;32mI (512757) main: entered custom cluster client handler[0m
+[0;32mI (512757) main: Custom command received![0m
+[0;32mI (512767) main:   cluster_id = 0xFC00[0m
+[0;32mI (512767) main:   cmd_id     = 0x01[0m
+[0;32mI (512767) main:   src_ep     = 1[0m
+[0;32mI (512777) main:   dst_ep     = 10[0m
+[0;32mI (512777) main:   payload_len = 4[0m
+[0;32mI (512777) main: Humidity = 51.53 [0m
+[0;32mI (522737) main: entered custom cluster client handler[0m
+[0;32mI (522737) main: Custom command received![0m
+[0;32mI (522737) main:   cluster_id = 0xFC00[0m
+[0;32mI (522737) main:   cmd_id     = 0x00[0m
+[0;32mI (522737) main:   src_ep     = 1[0m
+[0;32mI (522747) main:   dst_ep     = 10[0m
+[0;32mI (522747) main:   payload_len = 4[0m
+[0;32mI (522747) main: Temperature = 24.73 °C[0m
+[0;32mI (522757) main: entered custom cluster client handler[0m
+[0;32mI (522757) main: Custom command received![0m
+[0;32mI (522767) main:   cluster_id = 0xFC00[0m
+[0;32mI (522767) main:   cmd_id     = 0x01[0m
+[0;32mI (522767) main:   src_ep     = 1[0m
+[0;32mI (522777) main:   dst_ep     = 10[0m
+[0;32mI (522777) main:   payload_len = 4[0m
+[0;32mI (522777) main: Humidity = 51.62 [0m
+[0;32mI (532737) main: entered custom cluster client handler[0m
+[0;32mI (532737) main: Custom command received![0m
+[0;32mI (532737) main:   cluster_id = 0xFC00[0m
+[0;32mI (532737) main:   cmd_id     = 0x00[0m
+[0;32mI (532737) main:   src_ep     = 1[0m
+[0;32mI (532747) main:   dst_ep     = 10[0m
+[0;32mI (532747) main:   payload_len = 4[0m
+[0;32mI (532747) main: Temperature = 24.70 °C[0m
+[0;32mI (532757) main: entered custom cluster client handler[0m
+[0;32mI (532757) main: Custom command received![0m
+[0;32mI (532767) main:   cluster_id = 0xFC00[0m
+[0;32mI (532767) main:   cmd_id     = 0x01[0m
+[0;32mI (532767) main:   src_ep     = 1[0m
+[0;32mI (532767) main:   dst_ep     = 10[0m
+[0;32mI (532777) main:   payload_len = 4[0m
+[0;32mI (532777) main: Humidity = 51.71 [0m
+[0;32mI (542757) main: entered custom cluster client handler[0m
+[0;32mI (542757) main: Custom command received![0m
+[0;32mI (542757) main:   cluster_id = 0xFC00[0m
+[0;32mI (542757) main:   cmd_id     = 0x00[0m
+[0;32mI (542757) main:   src_ep     = 1[0m
+[0;32mI (542757) main:   dst_ep     = 10[0m
+[0;32mI (542767) main:   payload_len = 4[0m
+[0;32mI (542767) main: Temperature = 24.68 °C[0m
+[0;32mI (542777) main: entered custom cluster client handler[0m
+[0;32mI (542777) main: Custom command received![0m
+[0;32mI (542777) main:   cluster_id = 0xFC00[0m
+[0;32mI (542787) main:   cmd_id     = 0x01[0m
+[0;32mI (542787) main:   src_ep     = 1[0m
+[0;32mI (542787) main:   dst_ep     = 10[0m
+[0;32mI (542797) main:   payload_len = 4[0m
+[0;32mI (542797) main: Humidity = 51.64 [0m
+[0;32mI (552757) main: entered custom cluster client handler[0m
+[0;32mI (552757) main: Custom command received![0m
+[0;32mI (552757) main:   cluster_id = 0xFC00[0m
+[0;32mI (552757) main:   cmd_id     = 0x00[0m
+[0;32mI (552757) main:   src_ep     = 1[0m
+[0;32mI (552757) main:   dst_ep     = 10[0m
+[0;32mI (552767) main:   payload_len = 4[0m
+[0;32mI (552767) main: Temperature = 24.66 °C[0m
+[0;32mI (552777) main: entered custom cluster client handler[0m
+[0;32mI (552777) main: Custom command received![0m
+[0;32mI (552777) main:   cluster_id = 0xFC00[0m
+[0;32mI (552787) main:   cmd_id     = 0x01[0m
+[0;32mI (552787) main:   src_ep     = 1[0m
+[0;32mI (552787) main:   dst_ep     = 10[0m
+[0;32mI (552797) main:   payload_len = 4[0m
+[0;32mI (552797) main: Humidity = 51.66 [0m
+[0;32mI (562757) main: entered custom cluster client handler[0m
+[0;32mI (562757) main: Custom command received![0m
+[0;32mI (562757) main:   cluster_id = 0xFC00[0m
+[0;32mI (562757) main:   cmd_id     = 0x00[0m
+[0;32mI (562757) main:   src_ep     = 1[0m
+[0;32mI (562757) main:   dst_ep     = 10[0m
+[0;32mI (562767) main:   payload_len = 4[0m
+[0;32mI (562767) main: Temperature = 24.65 °C[0m
+[0;32mI (562777) main: entered custom cluster client handler[0m
+[0;32mI (562777) main: Custom command received![0m
+[0;32mI (562777) main:   cluster_id = 0xFC00[0m
+[0;32mI (562787) main:   cmd_id     = 0x01[0m
+[0;32mI (562787) main:   src_ep     = 1[0m
+[0;32mI (562787) main:   dst_ep     = 10[0m
+[0;32mI (562797) main:   payload_len = 4[0m
+[0;32mI (562797) main: Humidity = 51.66 [0m
+[0;32mI (572757) main: entered custom cluster client handler[0m
+[0;32mI (572757) main: Custom command received![0m
+[0;32mI (572757) main:   cluster_id = 0xFC00[0m
+[0;32mI (572757) main:   cmd_id     = 0x00[0m
+[0;32mI (572757) main:   src_ep     = 1[0m
+[0;32mI (572757) main:   dst_ep     = 10[0m
+[0;32mI (572767) main:   payload_len = 4[0m
+[0;32mI (572767) main: Temperature = 24.63 °C[0m
+[0;32mI (572777) main: entered custom cluster client handler[0m
+[0;32mI (572777) main: Custom command received![0m
+[0;32mI (572777) main:   cluster_id = 0xFC00[0m
+[0;32mI (572787) main:   cmd_id     = 0x01[0m
+[0;32mI (572787) main:   src_ep     = 1[0m
+[0;32mI (572787) main:   dst_ep     = 10[0m
+[0;32mI (572797) main:   payload_len = 4[0m
+[0;32mI (572797) main: Humidity = 51.74 [0m
+[0;32mI (582757) main: entered custom cluster client handler[0m
+[0;32mI (582757) main: Custom command received![0m
+[0;32mI (582757) main:   cluster_id = 0xFC00[0m
+[0;32mI (582757) main:   cmd_id     = 0x00[0m
+[0;32mI (582757) main:   src_ep     = 1[0m
+[0;32mI (582757) main:   dst_ep     = 10[0m
+[0;32mI (582767) main:   payload_len = 4[0m
+[0;32mI (582767) main: Temperature = 24.61 °C[0m
+[0;32mI (582777) main: entered custom cluster client handler[0m
+[0;32mI (582777) main: Custom command received![0m
+[0;32mI (582777) main:   cluster_id = 0xFC00[0m
+[0;32mI (582787) main:   cmd_id     = 0x01[0m
+[0;32mI (582787) main:   src_ep     = 1[0m
+[0;32mI (582787) main:   dst_ep     = 10[0m
+[0;32mI (582797) main:   payload_len = 4[0m
+[0;32mI (582797) main: Humidity = 51.73 [0m
+[0;32mI (592757) main: entered custom cluster client handler[0m
+[0;32mI (592757) main: Custom command received![0m
+[0;32mI (592757) main:   cluster_id = 0xFC00[0m
+[0;32mI (592757) main:   cmd_id     = 0x00[0m
+[0;32mI (592757) main:   src_ep     = 1[0m
+[0;32mI (592757) main:   dst_ep     = 10[0m
+[0;32mI (592767) main:   payload_len = 4[0m
+[0;32mI (592767) main: Temperature = 24.60 °C[0m
+[0;32mI (592777) main: entered custom cluster client handler[0m
+[0;32mI (592777) main: Custom command received![0m
+[0;32mI (592777) main:   cluster_id = 0xFC00[0m
+[0;32mI (592787) main:   cmd_id     = 0x01[0m
+[0;32mI (592787) main:   src_ep     = 1[0m
+[0;32mI (592787) main:   dst_ep     = 10[0m
+[0;32mI (592797) main:   payload_len = 4[0m
+[0;32mI (592797) main: Humidity = 51.71 [0m
+[0;32mI (602737) main: entered custom cluster client handler[0m
+[0;32mI (602737) main: Custom command received![0m
+[0;32mI (602737) main:   cluster_id = 0xFC00[0m
+[0;32mI (602737) main:   cmd_id     = 0x00[0m
+[0;32mI (602737) main:   src_ep     = 1[0m
+[0;32mI (602737) main:   dst_ep     = 10[0m
+[0;32mI (602747) main:   payload_len = 4[0m
+[0;32mI (602747) main: Temperature = 24.59 °C[0m
+[0;32mI (602757) main: entered custom cluster client handler[0m
+[0;32mI (602757) main: Custom command received![0m
+[0;32mI (602757) main:   cluster_id = 0xFC00[0m
+[0;32mI (602767) main:   cmd_id     = 0x01[0m
+[0;32mI (602767) main:   src_ep     = 1[0m
+[0;32mI (602767) main:   dst_ep     = 10[0m
+[0;32mI (602777) main:   payload_len = 4[0m
+[0;32mI (602777) main: Humidity = 51.91 [0m
+[0;32mI (612737) main: entered custom cluster client handler[0m
+[0;32mI (612737) main: Custom command received![0m
+[0;32mI (612737) main:   cluster_id = 0xFC00[0m
+[0;32mI (612737) main:   cmd_id     = 0x00[0m
+[0;32mI (612737) main:   src_ep     = 1[0m
+[0;32mI (612737) main:   dst_ep     = 10[0m
+[0;32mI (612747) main:   payload_len = 4[0m
+[0;32mI (612747) main: Temperature = 24.57 °C[0m
+[0;32mI (612757) main: entered custom cluster client handler[0m
+[0;32mI (612757) main: Custom command received![0m
+[0;32mI (612757) main:   cluster_id = 0xFC00[0m
+[0;32mI (612767) main:   cmd_id     = 0x01[0m
+[0;32mI (612767) main:   src_ep     = 1[0m
+[0;32mI (612767) main:   dst_ep     = 10[0m
+[0;32mI (612777) main:   payload_len = 4[0m
+[0;32mI (612777) main: Humidity = 51.88 [0m
+[0;32mI (622757) main: entered custom cluster client handler[0m
+[0;32mI (622757) main: Custom command received![0m
+[0;32mI (622757) main:   cluster_id = 0xFC00[0m
+[0;32mI (622757) main:   cmd_id     = 0x00[0m
+[0;32mI (622757) main:   src_ep     = 1[0m
+[0;32mI (622757) main:   dst_ep     = 10[0m
+[0;32mI (622767) main:   payload_len = 4[0m
+[0;32mI (622767) main: Temperature = 24.56 °C[0m
+[0;32mI (622777) main: entered custom cluster client handler[0m
+[0;32mI (622777) main: Custom command received![0m
+[0;32mI (622777) main:   cluster_id = 0xFC00[0m
+[0;32mI (622787) main:   cmd_id     = 0x01[0m
+[0;32mI (622787) main:   src_ep     = 1[0m
+[0;32mI (622787) main:   dst_ep     = 10[0m
+[0;32mI (622787) main:   payload_len = 4[0m
+[0;32mI (622797) main: Humidity = 51.85 [0m
+[0;32mI (632747) main: entered custom cluster client handler[0m
+[0;32mI (632747) main: Custom command received![0m
+[0;32mI (632747) main:   cluster_id = 0xFC00[0m
+[0;32mI (632747) main:   cmd_id     = 0x00[0m
+[0;32mI (632747) main:   src_ep     = 1[0m
+[0;32mI (632747) main:   dst_ep     = 10[0m
+[0;32mI (632757) main:   payload_len = 4[0m
+[0;32mI (632757) main: Temperature = 24.56 °C[0m
+[0;32mI (632767) main: entered custom cluster client handler[0m
+[0;32mI (632767) main: Custom command received![0m
+[0;32mI (632767) main:   cluster_id = 0xFC00[0m
+[0;32mI (632767) main:   cmd_id     = 0x01[0m
+[0;32mI (632777) main:   src_ep     = 1[0m
+[0;32mI (632777) main:   dst_ep     = 10[0m
+[0;32mI (632777) main:   payload_len = 4[0m
+[0;32mI (632787) main: Humidity = 51.82 [0m
+[0;32mI (642737) main: entered custom cluster client handler[0m
+[0;32mI (642737) main: Custom command received![0m
+[0;32mI (642737) main:   cluster_id = 0xFC00[0m
+[0;32mI (642737) main:   cmd_id     = 0x00[0m
+[0;32mI (642737) main:   src_ep     = 1[0m
+[0;32mI (642737) main:   dst_ep     = 10[0m
+[0;32mI (642747) main:   payload_len = 4[0m
+[0;32mI (642747) main: Temperature = 24.56 °C[0m
+[0;32mI (642757) main: entered custom cluster client handler[0m
+[0;32mI (642757) main: Custom command received![0m
+[0;32mI (642757) main:   cluster_id = 0xFC00[0m
+[0;32mI (642767) main:   cmd_id     = 0x01[0m
+[0;32mI (642767) main:   src_ep     = 1[0m
+[0;32mI (642767) main:   dst_ep     = 10[0m
+[0;32mI (642777) main:   payload_len = 4[0m
+[0;32mI (642777) main: Humidity = 51.86 [0m
+[0;32mI (652757) main: entered custom cluster client handler[0m
+[0;32mI (652757) main: Custom command received![0m
+[0;32mI (652757) main:   cluster_id = 0xFC00[0m
+[0;32mI (652757) main:   cmd_id     = 0x00[0m
+[0;32mI (652757) main:   src_ep     = 1[0m
+[0;32mI (652757) main:   dst_ep     = 10[0m
+[0;32mI (652767) main:   payload_len = 4[0m
+[0;32mI (652767) main: Temperature = 24.57 °C[0m
+[0;32mI (652777) main: entered custom cluster client handler[0m
+[0;32mI (652777) main: Custom command received![0m
+[0;32mI (652777) main:   cluster_id = 0xFC00[0m
+[0;32mI (652777) main:   cmd_id     = 0x01[0m
+[0;32mI (652787) main:   src_ep     = 1[0m
+[0;32mI (652787) main:   dst_ep     = 10[0m
+[0;32mI (652787) main:   payload_len = 4[0m
+[0;32mI (652797) main: Humidity = 51.84 [0m
+[0;32mI (662737) main: entered custom cluster client handler[0m
+[0;32mI (662737) main: Custom command received![0m
+[0;32mI (662737) main:   cluster_id = 0xFC00[0m
+[0;32mI (662737) main:   cmd_id     = 0x00[0m
+[0;32mI (662737) main:   src_ep     = 1[0m
+[0;32mI (662737) main:   dst_ep     = 10[0m
+[0;32mI (662747) main:   payload_len = 4[0m
+[0;32mI (662747) main: Temperature = 24.57 °C[0m
+[0;32mI (662757) main: entered custom cluster client handler[0m
+[0;32mI (662757) main: Custom command received![0m
+[0;32mI (662757) main:   cluster_id = 0xFC00[0m
+[0;32mI (662767) main:   cmd_id     = 0x01[0m
+[0;32mI (662767) main:   src_ep     = 1[0m
+[0;32mI (662767) main:   dst_ep     = 10[0m
+[0;32mI (662777) main:   payload_len = 4[0m
+[0;32mI (662777) main: Humidity = 51.87 [0m
+[0;32mI (672737) main: entered custom cluster client handler[0m
+[0;32mI (672737) main: Custom command received![0m
+[0;32mI (672737) main:   cluster_id = 0xFC00[0m
+[0;32mI (672747) main:   cmd_id     = 0x00[0m
+[0;32mI (672747) main:   src_ep     = 1[0m
+[0;32mI (672747) main:   dst_ep     = 10[0m
+[0;32mI (672757) main:   payload_len = 4[0m
+[0;32mI (672757) main: Temperature = 24.56 °C[0m
+[0;32mI (672757) main: entered custom cluster client handler[0m
+[0;32mI (672767) main: Custom command received![0m
+[0;32mI (672767) main:   cluster_id = 0xFC00[0m
+[0;32mI (672767) main:   cmd_id     = 0x01[0m
+[0;32mI (672777) main:   src_ep     = 1[0m
+[0;32mI (672777) main:   dst_ep     = 10[0m
+[0;32mI (672777) main:   payload_len = 4[0m
+[0;32mI (672787) main: Humidity = 51.84 [0m
+[0;32mI (682747) main: entered custom cluster client handler[0m
+[0;32mI (682747) main: Custom command received![0m
+[0;32mI (682747) main:   cluster_id = 0xFC00[0m
+[0;32mI (682757) main:   cmd_id     = 0x00[0m
+[0;32mI (682757) main:   src_ep     = 1[0m
+[0;32mI (682757) main:   dst_ep     = 10[0m
+[0;32mI (682757) main:   payload_len = 4[0m
+[0;32mI (682767) main: Temperature = 24.56 °C[0m
+[0;32mI (682767) main: entered custom cluster client handler[0m
+[0;32mI (682777) main: Custom command received![0m
+[0;32mI (682777) main:   cluster_id = 0xFC00[0m
+[0;32mI (682777) main:   cmd_id     = 0x01[0m
+[0;32mI (682787) main:   src_ep     = 1[0m
+[0;32mI (682787) main:   dst_ep     = 10[0m
+[0;32mI (682787) main:   payload_len = 4[0m
+[0;32mI (682797) main: Humidity = 51.83 [0m
+[0;32mI (692747) main: entered custom cluster client handler[0m
+[0;32mI (692747) main: Custom command received![0m
+[0;32mI (692747) main:   cluster_id = 0xFC00[0m
+[0;32mI (692757) main:   cmd_id     = 0x00[0m
+[0;32mI (692757) main:   src_ep     = 1[0m
+[0;32mI (692757) main:   dst_ep     = 10[0m
+[0;32mI (692757) main:   payload_len = 4[0m
+[0;32mI (692767) main: Temperature = 24.55 °C[0m
+[0;32mI (692767) main: entered custom cluster client handler[0m
+[0;32mI (692777) main: Custom command received![0m
+[0;32mI (692777) main:   cluster_id = 0xFC00[0m
+[0;32mI (692777) main:   cmd_id     = 0x01[0m
+[0;32mI (692787) main:   src_ep     = 1[0m
+[0;32mI (692787) main:   dst_ep     = 10[0m
+[0;32mI (692787) main:   payload_len = 4[0m
+[0;32mI (692797) main: Humidity = 51.83 [0m
+[0;32mI (702747) main: entered custom cluster client handler[0m
+[0;32mI (702747) main: Custom command received![0m
+[0;32mI (702747) main:   cluster_id = 0xFC00[0m
+[0;32mI (702747) main:   cmd_id     = 0x00[0m
+[0;32mI (702757) main:   src_ep     = 1[0m
+[0;32mI (702757) main:   dst_ep     = 10[0m
+[0;32mI (702757) main:   payload_len = 4[0m
+[0;32mI (702767) main: Temperature = 24.55 °C[0m
+[0;32mI (702767) main: entered custom cluster client handler[0m
+[0;32mI (702777) main: Custom command received![0m
+[0;32mI (702777) main:   cluster_id = 0xFC00[0m
+[0;32mI (702777) main:   cmd_id     = 0x01[0m
+[0;32mI (702787) main:   src_ep     = 1[0m
+[0;32mI (702787) main:   dst_ep     = 10[0m
+[0;32mI (702787) main:   payload_len = 4[0m
+[0;32mI (702797) main: Humidity = 51.85 [0m
+[0;32mI (712737) main: entered custom cluster client handler[0m
+[0;32mI (712737) main: Custom command received![0m
+[0;32mI (712737) main:   cluster_id = 0xFC00[0m
+[0;32mI (712737) main:   cmd_id     = 0x00[0m
+[0;32mI (712747) main:   src_ep     = 1[0m
+[0;32mI (712747) main:   dst_ep     = 10[0m
+[0;32mI (712747) main:   payload_len = 4[0m
+[0;32mI (712757) main: Temperature = 24.55 °C[0m
+[0;32mI (712757) main: entered custom cluster client handler[0m
+[0;32mI (712767) main: Custom command received![0m
+[0;32mI (712767) main:   cluster_id = 0xFC00[0m
+[0;32mI (712767) main:   cmd_id     = 0x01[0m
+[0;32mI (712777) main:   src_ep     = 1[0m
+[0;32mI (712777) main:   dst_ep     = 10[0m
+[0;32mI (712777) main:   payload_len = 4[0m
+[0;32mI (712787) main: Humidity = 51.85 [0m
+[0;32mI (722747) main: entered custom cluster client handler[0m
+[0;32mI (722747) main: Custom command received![0m
+[0;32mI (722747) main:   cluster_id = 0xFC00[0m
+[0;32mI (722747) main:   cmd_id     = 0x00[0m
+[0;32mI (722757) main:   src_ep     = 1[0m
+[0;32mI (722757) main:   dst_ep     = 10[0m
+[0;32mI (722757) main:   payload_len = 4[0m
+[0;32mI (722767) main: Temperature = 24.54 °C[0m
+[0;32mI (722767) main: entered custom cluster client handler[0m
+[0;32mI (722777) main: Custom command received![0m
+[0;32mI (722777) main:   cluster_id = 0xFC00[0m
+[0;32mI (722777) main:   cmd_id     = 0x01[0m
+[0;32mI (722787) main:   src_ep     = 1[0m
+[0;32mI (722787) main:   dst_ep     = 10[0m
+[0;32mI (722787) main:   payload_len = 4[0m
+[0;32mI (722797) main: Humidity = 51.88 [0m
+[0;32mI (732747) main: entered custom cluster client handler[0m
+[0;32mI (732747) main: Custom command received![0m
+[0;32mI (732747) main:   cluster_id = 0xFC00[0m
+[0;32mI (732747) main:   cmd_id     = 0x00[0m
+[0;32mI (732757) main:   src_ep     = 1[0m
+[0;32mI (732757) main:   dst_ep     = 10[0m
+[0;32mI (732757) main:   payload_len = 4[0m
+[0;32mI (732767) main: Temperature = 24.55 °C[0m
+[0;32mI (732767) main: entered custom cluster client handler[0m
+[0;32mI (732777) main: Custom command received![0m
+[0;32mI (732777) main:   cluster_id = 0xFC00[0m
+[0;32mI (732777) main:   cmd_id     = 0x01[0m
+[0;32mI (732787) main:   src_ep     = 1[0m
+[0;32mI (732787) main:   dst_ep     = 10[0m
+[0;32mI (732787) main:   payload_len = 4[0m
+[0;32mI (732797) main: Humidity = 51.91 [0m
+[0;32mI (742727) main: entered custom cluster client handler[0m
+[0;32mI (742727) main: Custom command received![0m
+[0;32mI (742727) main:   cluster_id = 0xFC00[0m
+[0;32mI (742737) main:   cmd_id     = 0x00[0m
+[0;32mI (742737) main:   src_ep     = 1[0m
+[0;32mI (742737) main:   dst_ep     = 10[0m
+[0;32mI (742737) main:   payload_len = 4[0m
+[0;32mI (742747) main: Temperature = 24.55 °C[0m
+[0;32mI (742747) main: entered custom cluster client handler[0m
+[0;32mI (742757) main: Custom command received![0m
+[0;32mI (742757) main:   cluster_id = 0xFC00[0m
+[0;32mI (742757) main:   cmd_id     = 0x01[0m
+[0;32mI (742767) main:   src_ep     = 1[0m
+[0;32mI (742767) main:   dst_ep     = 10[0m
+[0;32mI (742767) main:   payload_len = 4[0m
+[0;32mI (742777) main: Humidity = 51.95 [0m
+[0;32mI (752737) main: entered custom cluster client handler[0m
+[0;32mI (752737) main: Custom command received![0m
+[0;32mI (752737) main:   cluster_id = 0xFC00[0m
+[0;32mI (752737) main:   cmd_id     = 0x00[0m
+[0;32mI (752747) main:   src_ep     = 1[0m
+[0;32mI (752747) main:   dst_ep     = 10[0m
+[0;32mI (752747) main:   payload_len = 4[0m
+[0;32mI (752757) main: Temperature = 24.53 °C[0m
+[0;32mI (752757) main: entered custom cluster client handler[0m
+[0;32mI (752757) main: Custom command received![0m
+[0;32mI (752767) main:   cluster_id = 0xFC00[0m
+[0;32mI (752767) main:   cmd_id     = 0x01[0m
+[0;32mI (752777) main:   src_ep     = 1[0m
+[0;32mI (752777) main:   dst_ep     = 10[0m
+[0;32mI (752777) main:   payload_len = 4[0m
+[0;32mI (752777) main: Humidity = 52.00 [0m
+[0;32mI (762747) main: entered custom cluster client handler[0m
+[0;32mI (762747) main: Custom command received![0m
+[0;32mI (762747) main:   cluster_id = 0xFC00[0m
+[0;32mI (762747) main:   cmd_id     = 0x00[0m
+[0;32mI (762757) main:   src_ep     = 1[0m
+[0;32mI (762757) main:   dst_ep     = 10[0m
+[0;32mI (762757) main:   payload_len = 4[0m
+[0;32mI (762767) main: Temperature = 24.52 °C[0m
+[0;32mI (762767) main: entered custom cluster client handler[0m
+[0;32mI (762767) main: Custom command received![0m
+[0;32mI (762777) main:   cluster_id = 0xFC00[0m
+[0;32mI (762777) main:   cmd_id     = 0x01[0m
+[0;32mI (762787) main:   src_ep     = 1[0m
+[0;32mI (762787) main:   dst_ep     = 10[0m
+[0;32mI (762787) main:   payload_len = 4[0m
+[0;32mI (762787) main: Humidity = 53.61 [0m
+[0;32mI (772767) main: entered custom cluster client handler[0m
+[0;32mI (772767) main: Custom command received![0m
+[0;32mI (772767) main:   cluster_id = 0xFC00[0m
+[0;32mI (772767) main:   cmd_id     = 0x00[0m
+[0;32mI (772777) main:   src_ep     = 1[0m
+[0;32mI (772777) main:   dst_ep     = 10[0m
+[0;32mI (772777) main:   payload_len = 4[0m
+[0;32mI (772787) main: Temperature = 24.54 °C[0m
+[0;32mI (772787) main: entered custom cluster client handler[0m
+[0;32mI (772787) main: Custom command received![0m
+[0;32mI (772797) main:   cluster_id = 0xFC00[0m
+[0;32mI (772797) main:   cmd_id     = 0x01[0m
+[0;32mI (772797) main:   src_ep     = 1[0m
+[0;32mI (772807) main:   dst_ep     = 10[0m
+[0;32mI (772807) main:   payload_len = 4[0m
+[0;32mI (772807) main: Humidity = 52.57 [0m
+[0;32mI (782747) main: entered custom cluster client handler[0m
+[0;32mI (782747) main: Custom command received![0m
+[0;32mI (782747) main:   cluster_id = 0xFC00[0m
+[0;32mI (782747) main:   cmd_id     = 0x00[0m
+[0;32mI (782757) main:   src_ep     = 1[0m
+[0;32mI (782757) main:   dst_ep     = 10[0m
+[0;32mI (782757) main:   payload_len = 4[0m
+[0;32mI (782767) main: Temperature = 24.56 °C[0m
+[0;32mI (782767) main: entered custom cluster client handler[0m
+[0;32mI (782767) main: Custom command received![0m
+[0;32mI (782777) main:   cluster_id = 0xFC00[0m
+[0;32mI (782777) main:   cmd_id     = 0x01[0m
+[0;32mI (782777) main:   src_ep     = 1[0m
+[0;32mI (782787) main:   dst_ep     = 10[0m
+[0;32mI (782787) main:   payload_len = 4[0m
+[0;32mI (782787) main: Humidity = 51.98 [0m
+[0;32mI (792747) main: entered custom cluster client handler[0m
+[0;32mI (792747) main: Custom command received![0m
+[0;32mI (792747) main:   cluster_id = 0xFC00[0m
+[0;32mI (792747) main:   cmd_id     = 0x00[0m
+[0;32mI (792757) main:   src_ep     = 1[0m
+[0;32mI (792757) main:   dst_ep     = 10[0m
+[0;32mI (792757) main:   payload_len = 4[0m
+[0;32mI (792767) main: Temperature = 24.58 °C[0m
+[0;32mI (792767) main: entered custom cluster client handler[0m
+[0;32mI (792767) main: Custom command received![0m
+[0;32mI (792777) main:   cluster_id = 0xFC00[0m
+[0;32mI (792777) main:   cmd_id     = 0x01[0m
+[0;32mI (792777) main:   src_ep     = 1[0m
+[0;32mI (792787) main:   dst_ep     = 10[0m
+[0;32mI (792787) main:   payload_len = 4[0m
+[0;32mI (792787) main: Humidity = 51.93 [0m
+[0;32mI (802727) main: entered custom cluster client handler[0m
+[0;32mI (802727) main: Custom command received![0m
+[0;32mI (802727) main:   cluster_id = 0xFC00[0m
+[0;32mI (802727) main:   cmd_id     = 0x00[0m
+[0;32mI (802737) main:   src_ep     = 1[0m
+[0;32mI (802737) main:   dst_ep     = 10[0m
+[0;32mI (802737) main:   payload_len = 4[0m
+[0;32mI (802747) main: Temperature = 24.60 °C[0m
+[0;32mI (802747) main: entered custom cluster client handler[0m
+[0;32mI (802757) main: Custom command received![0m
+[0;32mI (802757) main:   cluster_id = 0xFC00[0m
+[0;32mI (802757) main:   cmd_id     = 0x01[0m
+[0;32mI (802767) main:   src_ep     = 1[0m
+[0;32mI (802767) main:   dst_ep     = 10[0m
+[0;32mI (802767) main:   payload_len = 4[0m
+[0;32mI (802767) main: Humidity = 52.00 [0m
+[0;32mI (812727) main: entered custom cluster client handler[0m
+[0;32mI (812727) main: Custom command received![0m
+[0;32mI (812727) main:   cluster_id = 0xFC00[0m
+[0;32mI (812727) main:   cmd_id     = 0x00[0m
+[0;32mI (812737) main:   src_ep     = 1[0m
+[0;32mI (812737) main:   dst_ep     = 10[0m
+[0;32mI (812737) main:   payload_len = 4[0m
+[0;32mI (812747) main: Temperature = 24.62 °C[0m
+[0;32mI (812747) main: entered custom cluster client handler[0m
+[0;32mI (812747) main: Custom command received![0m
+[0;32mI (812757) main:   cluster_id = 0xFC00[0m
+[0;32mI (812757) main:   cmd_id     = 0x01[0m
+[0;32mI (812767) main:   src_ep     = 1[0m
+[0;32mI (812767) main:   dst_ep     = 10[0m
+[0;32mI (812767) main:   payload_len = 4[0m
+[0;32mI (812767) main: Humidity = 51.96 [0m
+[0;32mI (822747) main: entered custom cluster client handler[0m
+[0;32mI (822747) main: Custom command received![0m
+[0;32mI (822747) main:   cluster_id = 0xFC00[0m
+[0;32mI (822747) main:   cmd_id     = 0x00[0m
+[0;32mI (822757) main:   src_ep     = 1[0m
+[0;32mI (822757) main:   dst_ep     = 10[0m
+[0;32mI (822757) main:   payload_len = 4[0m
+[0;32mI (822757) main: Temperature = 24.63 °C[0m
+[0;32mI (822767) main: entered custom cluster client handler[0m
+[0;32mI (822767) main: Custom command received![0m
+[0;32mI (822777) main:   cluster_id = 0xFC00[0m
+[0;32mI (822777) main:   cmd_id     = 0x01[0m
+[0;32mI (822777) main:   src_ep     = 1[0m
+[0;32mI (822787) main:   dst_ep     = 10[0m
+[0;32mI (822787) main:   payload_len = 4[0m
+[0;32mI (822787) main: Humidity = 51.84 [0m
+[0;32mI (832747) main: entered custom cluster client handler[0m
+[0;32mI (832747) main: Custom command received![0m
+[0;32mI (832747) main:   cluster_id = 0xFC00[0m
+[0;32mI (832747) main:   cmd_id     = 0x00[0m
+[0;32mI (832757) main:   src_ep     = 1[0m
+[0;32mI (832757) main:   dst_ep     = 10[0m
+[0;32mI (832757) main:   payload_len = 4[0m
+[0;32mI (832757) main: Temperature = 24.64 °C[0m
+[0;32mI (832767) main: entered custom cluster client handler[0m
+[0;32mI (832767) main: Custom command received![0m
+[0;32mI (832777) main:   cluster_id = 0xFC00[0m
+[0;32mI (832777) main:   cmd_id     = 0x01[0m
+[0;32mI (832777) main:   src_ep     = 1[0m
+[0;32mI (832787) main:   dst_ep     = 10[0m
+[0;32mI (832787) main:   payload_len = 4[0m
+[0;32mI (832787) main: Humidity = 51.83 [0m
+[0;32mI (842747) main: entered custom cluster client handler[0m
+[0;32mI (842747) main: Custom command received![0m
+[0;32mI (842747) main:   cluster_id = 0xFC00[0m
+[0;32mI (842747) main:   cmd_id     = 0x00[0m
+[0;32mI (842757) main:   src_ep     = 1[0m
+[0;32mI (842757) main:   dst_ep     = 10[0m
+[0;32mI (842757) main:   payload_len = 4[0m
+[0;32mI (842757) main: Temperature = 24.65 °C[0m
+[0;32mI (842767) main: entered custom cluster client handler[0m
+[0;32mI (842767) main: Custom command received![0m
+[0;32mI (842777) main:   cluster_id = 0xFC00[0m
+[0;32mI (842777) main:   cmd_id     = 0x01[0m
+[0;32mI (842777) main:   src_ep     = 1[0m
+[0;32mI (842787) main:   dst_ep     = 10[0m
+[0;32mI (842787) main:   payload_len = 4[0m
+[0;32mI (842787) main: Humidity = 51.81 [0m
+[0;32mI (852727) main: entered custom cluster client handler[0m
+[0;32mI (852727) main: Custom command received![0m
+[0;32mI (852727) main:   cluster_id = 0xFC00[0m
+[0;32mI (852727) main:   cmd_id     = 0x00[0m
+[0;32mI (852737) main:   src_ep     = 1[0m
+[0;32mI (852737) main:   dst_ep     = 10[0m
+[0;32mI (852737) main:   payload_len = 4[0m
+[0;32mI (852747) main: Temperature = 24.66 °C[0m
+[0;32mI (852747) main: entered custom cluster client handler[0m
+[0;32mI (852747) main: Custom command received![0m
+[0;32mI (852757) main:   cluster_id = 0xFC00[0m
+[0;32mI (852757) main:   cmd_id     = 0x01[0m
+[0;32mI (852757) main:   src_ep     = 1[0m
+[0;32mI (852767) main:   dst_ep     = 10[0m
+[0;32mI (852767) main:   payload_len = 4[0m
+[0;32mI (852767) main: Humidity = 51.89 [0m
+[0;32mI (862727) main: entered custom cluster client handler[0m
+[0;32mI (862727) main: Custom command received![0m
+[0;32mI (862727) main:   cluster_id = 0xFC00[0m
+[0;32mI (862727) main:   cmd_id     = 0x00[0m
+[0;32mI (862737) main:   src_ep     = 1[0m
+[0;32mI (862737) main:   dst_ep     = 10[0m
+[0;32mI (862737) main:   payload_len = 4[0m
+[0;32mI (862747) main: Temperature = 24.67 °C[0m
+[0;32mI (862747) main: entered custom cluster client handler[0m
+[0;32mI (862747) main: Custom command received![0m
+[0;32mI (862757) main:   cluster_id = 0xFC00[0m
+[0;32mI (862757) main:   cmd_id     = 0x01[0m
+[0;32mI (862757) main:   src_ep     = 1[0m
+[0;32mI (862767) main:   dst_ep     = 10[0m
+[0;32mI (862767) main:   payload_len = 4[0m
+[0;32mI (862767) main: Humidity = 51.88 [0m
+[0;32mI (872737) main: entered custom cluster client handler[0m
+[0;32mI (872737) main: Custom command received![0m
+[0;32mI (872737) main:   cluster_id = 0xFC00[0m
+[0;32mI (872737) main:   cmd_id     = 0x00[0m
+[0;32mI (872737) main:   src_ep     = 1[0m
+[0;32mI (872747) main:   dst_ep     = 10[0m
+[0;32mI (872747) main:   payload_len = 4[0m
+[0;32mI (872747) main: Temperature = 24.68 °C[0m
+[0;32mI (872757) main: entered custom cluster client handler[0m
+[0;32mI (872757) main: Custom command received![0m
+[0;32mI (872767) main:   cluster_id = 0xFC00[0m
+[0;32mI (872767) main:   cmd_id     = 0x01[0m
+[0;32mI (872767) main:   src_ep     = 1[0m
+[0;32mI (872777) main:   dst_ep     = 10[0m
+[0;32mI (872777) main:   payload_len = 4[0m
+[0;32mI (872777) main: Humidity = 51.87 [0m
+[0;32mI (882747) main: entered custom cluster client handler[0m
+[0;32mI (882747) main: Custom command received![0m
+[0;32mI (882747) main:   cluster_id = 0xFC00[0m
+[0;32mI (882747) main:   cmd_id     = 0x00[0m
+[0;32mI (882747) main:   src_ep     = 1[0m
+[0;32mI (882757) main:   dst_ep     = 10[0m
+[0;32mI (882757) main:   payload_len = 4[0m
+[0;32mI (882757) main: Temperature = 24.68 °C[0m
+[0;32mI (882767) main: entered custom cluster client handler[0m
+[0;32mI (882767) main: Custom command received![0m
+[0;32mI (882777) main:   cluster_id = 0xFC00[0m
+[0;32mI (882777) main:   cmd_id     = 0x01[0m
+[0;32mI (882777) main:   src_ep     = 1[0m
+[0;32mI (882787) main:   dst_ep     = 10[0m
+[0;32mI (882787) main:   payload_len = 4[0m
+[0;32mI (882787) main: Humidity = 51.83 [0m
+[0;32mI (892747) main: entered custom cluster client handler[0m
+[0;32mI (892747) main: Custom command received![0m
+[0;32mI (892747) main:   cluster_id = 0xFC00[0m
+[0;32mI (892747) main:   cmd_id     = 0x00[0m
+[0;32mI (892747) main:   src_ep     = 1[0m
+[0;32mI (892757) main:   dst_ep     = 10[0m
+[0;32mI (892757) main:   payload_len = 4[0m
+[0;32mI (892757) main: Temperature = 24.69 °C[0m
+[0;32mI (892777) main: entered custom cluster client handler[0m
+[0;32mI (892777) main: Custom command received![0m
+[0;32mI (892777) main:   cluster_id = 0xFC00[0m
+[0;32mI (892777) main:   cmd_id     = 0x01[0m
+[0;32mI (892787) main:   src_ep     = 1[0m
+[0;32mI (892787) main:   dst_ep     = 10[0m
+[0;32mI (892787) main:   payload_len = 4[0m
+[0;32mI (892797) main: Humidity = 51.81 [0m
+[0;32mI (902747) main: entered custom cluster client handler[0m
+[0;32mI (902747) main: Custom command received![0m
+[0;32mI (902747) main:   cluster_id = 0xFC00[0m
+[0;32mI (902747) main:   cmd_id     = 0x00[0m
+[0;32mI (902747) main:   src_ep     = 1[0m
+[0;32mI (902757) main:   dst_ep     = 10[0m
+[0;32mI (902757) main:   payload_len = 4[0m
+[0;32mI (902757) main: Temperature = 24.70 °C[0m
+[0;32mI (902767) main: entered custom cluster client handler[0m
+[0;32mI (902767) main: Custom command received![0m
+[0;32mI (902777) main:   cluster_id = 0xFC00[0m
+[0;32mI (902777) main:   cmd_id     = 0x01[0m
+[0;32mI (902777) main:   src_ep     = 1[0m
+[0;32mI (902777) main:   dst_ep     = 10[0m
+[0;32mI (902787) main:   payload_len = 4[0m
+[0;32mI (902787) main: Humidity = 51.86 [0m
+[0;32mI (912747) main: entered custom cluster client handler[0m
+[0;32mI (912747) main: Custom command received![0m
+[0;32mI (912747) main:   cluster_id = 0xFC00[0m
+[0;32mI (912747) main:   cmd_id     = 0x00[0m
+[0;32mI (912747) main:   src_ep     = 1[0m
+[0;32mI (912757) main:   dst_ep     = 10[0m
+[0;32mI (912757) main:   payload_len = 4[0m
+[0;32mI (912757) main: Temperature = 24.70 °C[0m
+[0;32mI (912767) main: entered custom cluster client handler[0m
+[0;32mI (912767) main: Custom command received![0m
+[0;32mI (912767) main:   cluster_id = 0xFC00[0m
+[0;32mI (912777) main:   cmd_id     = 0x01[0m
+[0;32mI (912777) main:   src_ep     = 1[0m
+[0;32mI (912777) main:   dst_ep     = 10[0m
+[0;32mI (912787) main:   payload_len = 4[0m
+[0;32mI (912787) main: Humidity = 51.89 [0m
+[0;32mI (922747) main: entered custom cluster client handler[0m
+[0;32mI (922747) main: Custom command received![0m
+[0;32mI (922747) main:   cluster_id = 0xFC00[0m
+[0;32mI (922747) main:   cmd_id     = 0x00[0m
+[0;32mI (922747) main:   src_ep     = 1[0m
+[0;32mI (922757) main:   dst_ep     = 10[0m
+[0;32mI (922757) main:   payload_len = 4[0m
+[0;32mI (922757) main: Temperature = 24.69 °C[0m
+[0;32mI (922787) main: entered custom cluster client handler[0m
+[0;32mI (922787) main: Custom command received![0m
+[0;32mI (922787) main:   cluster_id = 0xFC00[0m
+[0;32mI (922787) main:   cmd_id     = 0x01[0m
+[0;32mI (922787) main:   src_ep     = 1[0m
+[0;32mI (922797) main:   dst_ep     = 10[0m
+[0;32mI (922797) main:   payload_len = 4[0m
+[0;32mI (922797) main: Humidity = 51.86 [0m
+[0;32mI (932747) main: entered custom cluster client handler[0m
+[0;32mI (932747) main: Custom command received![0m
+[0;32mI (932747) main:   cluster_id = 0xFC00[0m
+[0;32mI (932747) main:   cmd_id     = 0x00[0m
+[0;32mI (932747) main:   src_ep     = 1[0m
+[0;32mI (932757) main:   dst_ep     = 10[0m
+[0;32mI (932757) main:   payload_len = 4[0m
+[0;32mI (932757) main: Temperature = 24.68 °C[0m
+[0;32mI (932767) main: entered custom cluster client handler[0m
+[0;32mI (932767) main: Custom command received![0m
+[0;32mI (932767) main:   cluster_id = 0xFC00[0m
+[0;32mI (932777) main:   cmd_id     = 0x01[0m
+[0;32mI (932777) main:   src_ep     = 1[0m
+[0;32mI (932777) main:   dst_ep     = 10[0m
+[0;32mI (932787) main:   payload_len = 4[0m
+[0;32mI (932787) main: Humidity = 51.95 [0m
+[0;32mI (942747) main: entered custom cluster client handler[0m
+[0;32mI (942747) main: Custom command received![0m
+[0;32mI (942747) main:   cluster_id = 0xFC00[0m
+[0;32mI (942747) main:   cmd_id     = 0x00[0m
+[0;32mI (942747) main:   src_ep     = 1[0m
+[0;32mI (942757) main:   dst_ep     = 10[0m
+[0;32mI (942757) main:   payload_len = 4[0m
+[0;32mI (942757) main: Temperature = 24.67 °C[0m
+[0;32mI (942767) main: entered custom cluster client handler[0m
+[0;32mI (942767) main: Custom command received![0m
+[0;32mI (942767) main:   cluster_id = 0xFC00[0m
+[0;32mI (942777) main:   cmd_id     = 0x01[0m
+[0;32mI (942777) main:   src_ep     = 1[0m
+[0;32mI (942777) main:   dst_ep     = 10[0m
+[0;32mI (942787) main:   payload_len = 4[0m
+[0;32mI (942787) main: Humidity = 51.77 [0m
+[0;32mI (952747) main: entered custom cluster client handler[0m
+[0;32mI (952747) main: Custom command received![0m
+[0;32mI (952747) main:   cluster_id = 0xFC00[0m
+[0;32mI (952747) main:   cmd_id     = 0x00[0m
+[0;32mI (952747) main:   src_ep     = 1[0m
+[0;32mI (952757) main:   dst_ep     = 10[0m
+[0;32mI (952757) main:   payload_len = 4[0m
+[0;32mI (952757) main: Temperature = 24.66 °C[0m
+[0;32mI (952767) main: entered custom cluster client handler[0m
+[0;32mI (952767) main: Custom command received![0m
+[0;32mI (952767) main:   cluster_id = 0xFC00[0m
+[0;32mI (952777) main:   cmd_id     = 0x01[0m
+[0;32mI (952777) main:   src_ep     = 1[0m
+[0;32mI (952777) main:   dst_ep     = 10[0m
+[0;32mI (952787) main:   payload_len = 4[0m
+[0;32mI (952787) main: Humidity = 51.68 [0m
+[0;32mI (962747) main: entered custom cluster client handler[0m
+[0;32mI (962747) main: Custom command received![0m
+[0;32mI (962747) main:   cluster_id = 0xFC00[0m
+[0;32mI (962747) main:   cmd_id     = 0x00[0m
+[0;32mI (962747) main:   src_ep     = 1[0m
+[0;32mI (962757) main:   dst_ep     = 10[0m
+[0;32mI (962757) main:   payload_len = 4[0m
+[0;32mI (962757) main: Temperature = 24.64 °C[0m
+[0;32mI (962767) main: entered custom cluster client handler[0m
+[0;32mI (962767) main: Custom command received![0m
+[0;32mI (962767) main:   cluster_id = 0xFC00[0m
+[0;32mI (962777) main:   cmd_id     = 0x01[0m
+[0;32mI (962777) main:   src_ep     = 1[0m
+[0;32mI (962777) main:   dst_ep     = 10[0m
+[0;32mI (962787) main:   payload_len = 4[0m
+[0;32mI (962787) main: Humidity = 51.87 [0m
+[0;32mI (972727) main: entered custom cluster client handler[0m
+[0;32mI (972727) main: Custom command received![0m
+[0;32mI (972727) main:   cluster_id = 0xFC00[0m
+[0;32mI (972727) main:   cmd_id     = 0x00[0m
+[0;32mI (972727) main:   src_ep     = 1[0m
+[0;32mI (972737) main:   dst_ep     = 10[0m
+[0;32mI (972737) main:   payload_len = 4[0m
+[0;32mI (972737) main: Temperature = 24.63 °C[0m
+[0;32mI (972747) main: entered custom cluster client handler[0m
+[0;32mI (972747) main: Custom command received![0m
+[0;32mI (972747) main:   cluster_id = 0xFC00[0m
+[0;32mI (972757) main:   cmd_id     = 0x01[0m
+[0;32mI (972757) main:   src_ep     = 1[0m
+[0;32mI (972757) main:   dst_ep     = 10[0m
+[0;32mI (972767) main:   payload_len = 4[0m
+[0;32mI (972767) main: Humidity = 51.82 [0m
+[0;32mI (982747) main: entered custom cluster client handler[0m
+[0;32mI (982747) main: Custom command received![0m
+[0;32mI (982747) main:   cluster_id = 0xFC00[0m
+[0;32mI (982747) main:   cmd_id     = 0x00[0m
+[0;32mI (982747) main:   src_ep     = 1[0m
+[0;32mI (982747) main:   dst_ep     = 10[0m
+[0;32mI (982757) main:   payload_len = 4[0m
+[0;32mI (982757) main: Temperature = 24.61 °C[0m
+[0;32mI (982767) main: entered custom cluster client handler[0m
+[0;32mI (982767) main: Custom command received![0m
+[0;32mI (982767) main:   cluster_id = 0xFC00[0m
+[0;32mI (982777) main:   cmd_id     = 0x01[0m
+[0;32mI (982777) main:   src_ep     = 1[0m
+[0;32mI (982777) main:   dst_ep     = 10[0m
+[0;32mI (982787) main:   payload_len = 4[0m
+[0;32mI (982787) main: Humidity = 51.71 [0m
+[0;32mI (992727) main: entered custom cluster client handler[0m
+[0;32mI (992727) main: Custom command received![0m
+[0;32mI (992727) main:   cluster_id = 0xFC00[0m
+[0;32mI (992727) main:   cmd_id     = 0x00[0m
+[0;32mI (992727) main:   src_ep     = 1[0m
+[0;32mI (992737) main:   dst_ep     = 10[0m
+[0;32mI (992737) main:   payload_len = 4[0m
+[0;32mI (992737) main: Temperature = 24.61 °C[0m
+[0;32mI (992747) main: entered custom cluster client handler[0m
+[0;32mI (992747) main: Custom command received![0m
+[0;32mI (992747) main:   cluster_id = 0xFC00[0m
+[0;32mI (992757) main:   cmd_id     = 0x01[0m
+[0;32mI (992757) main:   src_ep     = 1[0m
+[0;32mI (992757) main:   dst_ep     = 10[0m
+[0;32mI (992767) main:   payload_len = 4[0m
+[0;32mI (992767) main: Humidity = 51.84 [0m
+[0;32mI (1002747) main: entered custom cluster client handler[0m
+[0;32mI (1002747) main: Custom command received![0m
+[0;32mI (1002747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1002747) main:   cmd_id     = 0x00[0m
+[0;32mI (1002747) main:   src_ep     = 1[0m
+[0;32mI (1002747) main:   dst_ep     = 10[0m
+[0;32mI (1002757) main:   payload_len = 4[0m
+[0;32mI (1002757) main: Temperature = 24.60 °C[0m
+[0;32mI (1002767) main: entered custom cluster client handler[0m
+[0;32mI (1002767) main: Custom command received![0m
+[0;32mI (1002767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1002777) main:   cmd_id     = 0x01[0m
+[0;32mI (1002777) main:   src_ep     = 1[0m
+[0;32mI (1002777) main:   dst_ep     = 10[0m
+[0;32mI (1002787) main:   payload_len = 4[0m
+[0;32mI (1002787) main: Humidity = 51.88 [0m
+[0;32mI (1012747) main: entered custom cluster client handler[0m
+[0;32mI (1012747) main: Custom command received![0m
+[0;32mI (1012747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1012747) main:   cmd_id     = 0x00[0m
+[0;32mI (1012747) main:   src_ep     = 1[0m
+[0;32mI (1012747) main:   dst_ep     = 10[0m
+[0;32mI (1012757) main:   payload_len = 4[0m
+[0;32mI (1012757) main: Temperature = 24.60 °C[0m
+[0;32mI (1012767) main: entered custom cluster client handler[0m
+[0;32mI (1012767) main: Custom command received![0m
+[0;32mI (1012767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1012777) main:   cmd_id     = 0x01[0m
+[0;32mI (1012777) main:   src_ep     = 1[0m
+[0;32mI (1012777) main:   dst_ep     = 10[0m
+[0;32mI (1012787) main:   payload_len = 4[0m
+[0;32mI (1012787) main: Humidity = 51.93 [0m
+[0;32mI (1022747) main: entered custom cluster client handler[0m
+[0;32mI (1022747) main: Custom command received![0m
+[0;32mI (1022747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1022747) main:   cmd_id     = 0x00[0m
+[0;32mI (1022747) main:   src_ep     = 1[0m
+[0;32mI (1022747) main:   dst_ep     = 10[0m
+[0;32mI (1022757) main:   payload_len = 4[0m
+[0;32mI (1022757) main: Temperature = 24.59 °C[0m
+[0;32mI (1022767) main: entered custom cluster client handler[0m
+[0;32mI (1022767) main: Custom command received![0m
+[0;32mI (1022767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1022777) main:   cmd_id     = 0x01[0m
+[0;32mI (1022777) main:   src_ep     = 1[0m
+[0;32mI (1022777) main:   dst_ep     = 10[0m
+[0;32mI (1022787) main:   payload_len = 4[0m
+[0;32mI (1022787) main: Humidity = 52.02 [0m
+[0;32mI (1032727) main: entered custom cluster client handler[0m
+[0;32mI (1032727) main: Custom command received![0m
+[0;32mI (1032727) main:   cluster_id = 0xFC00[0m
+[0;32mI (1032727) main:   cmd_id     = 0x00[0m
+[0;32mI (1032727) main:   src_ep     = 1[0m
+[0;32mI (1032737) main:   dst_ep     = 10[0m
+[0;32mI (1032737) main:   payload_len = 4[0m
+[0;32mI (1032737) main: Temperature = 24.57 °C[0m
+[0;32mI (1032747) main: entered custom cluster client handler[0m
+[0;32mI (1032747) main: Custom command received![0m
+[0;32mI (1032747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1032757) main:   cmd_id     = 0x01[0m
+[0;32mI (1032757) main:   src_ep     = 1[0m
+[0;32mI (1032757) main:   dst_ep     = 10[0m
+[0;32mI (1032767) main:   payload_len = 4[0m
+[0;32mI (1032767) main: Humidity = 52.36 [0m
+[0;32mI (1042727) main: entered custom cluster client handler[0m
+[0;32mI (1042727) main: Custom command received![0m
+[0;32mI (1042727) main:   cluster_id = 0xFC00[0m
+[0;32mI (1042727) main:   cmd_id     = 0x00[0m
+[0;32mI (1042727) main:   src_ep     = 1[0m
+[0;32mI (1042737) main:   dst_ep     = 10[0m
+[0;32mI (1042737) main:   payload_len = 4[0m
+[0;32mI (1042737) main: Temperature = 24.57 °C[0m
+[0;32mI (1042747) main: entered custom cluster client handler[0m
+[0;32mI (1042747) main: Custom command received![0m
+[0;32mI (1042747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1042757) main:   cmd_id     = 0x01[0m
+[0;32mI (1042757) main:   src_ep     = 1[0m
+[0;32mI (1042757) main:   dst_ep     = 10[0m
+[0;32mI (1042767) main:   payload_len = 4[0m
+[0;32mI (1042767) main: Humidity = 52.26 [0m
+[0;32mI (1052747) main: entered custom cluster client handler[0m
+[0;32mI (1052747) main: Custom command received![0m
+[0;32mI (1052747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1052747) main:   cmd_id     = 0x00[0m
+[0;32mI (1052747) main:   src_ep     = 1[0m
+[0;32mI (1052747) main:   dst_ep     = 10[0m
+[0;32mI (1052757) main:   payload_len = 4[0m
+[0;32mI (1052757) main: Temperature = 24.56 °C[0m
+[0;32mI (1052767) main: entered custom cluster client handler[0m
+[0;32mI (1052767) main: Custom command received![0m
+[0;32mI (1052767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1052777) main:   cmd_id     = 0x01[0m
+[0;32mI (1052777) main:   src_ep     = 1[0m
+[0;32mI (1052777) main:   dst_ep     = 10[0m
+[0;32mI (1052787) main:   payload_len = 4[0m
+[0;32mI (1052787) main: Humidity = 52.28 [0m
+[0;32mI (1062727) main: entered custom cluster client handler[0m
+[0;32mI (1062727) main: Custom command received![0m
+[0;32mI (1062727) main:   cluster_id = 0xFC00[0m
+[0;32mI (1062727) main:   cmd_id     = 0x00[0m
+[0;32mI (1062727) main:   src_ep     = 1[0m
+[0;32mI (1062727) main:   dst_ep     = 10[0m
+[0;32mI (1062737) main:   payload_len = 4[0m
+[0;32mI (1062737) main: Temperature = 24.57 °C[0m
+[0;32mI (1062747) main: entered custom cluster client handler[0m
+[0;32mI (1062747) main: Custom command received![0m
+[0;32mI (1062747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1062757) main:   cmd_id     = 0x01[0m
+[0;32mI (1062757) main:   src_ep     = 1[0m
+[0;32mI (1062757) main:   dst_ep     = 10[0m
+[0;32mI (1062767) main:   payload_len = 4[0m
+[0;32mI (1062767) main: Humidity = 52.35 [0m
+[0;32mI (1072747) main: entered custom cluster client handler[0m
+[0;32mI (1072747) main: Custom command received![0m
+[0;32mI (1072747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1072747) main:   cmd_id     = 0x00[0m
+[0;32mI (1072747) main:   src_ep     = 1[0m
+[0;32mI (1072747) main:   dst_ep     = 10[0m
+[0;32mI (1072757) main:   payload_len = 4[0m
+[0;32mI (1072757) main: Temperature = 24.57 °C[0m
+[0;32mI (1072767) main: entered custom cluster client handler[0m
+[0;32mI (1072767) main: Custom command received![0m
+[0;32mI (1072767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1072777) main:   cmd_id     = 0x01[0m
+[0;32mI (1072777) main:   src_ep     = 1[0m
+[0;32mI (1072777) main:   dst_ep     = 10[0m
+[0;32mI (1072787) main:   payload_len = 4[0m
+[0;32mI (1072787) main: Humidity = 52.31 [0m
+[0;32mI (1082747) main: entered custom cluster client handler[0m
+[0;32mI (1082747) main: Custom command received![0m
+[0;32mI (1082747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1082747) main:   cmd_id     = 0x00[0m
+[0;32mI (1082747) main:   src_ep     = 1[0m
+[0;32mI (1082747) main:   dst_ep     = 10[0m
+[0;32mI (1082757) main:   payload_len = 4[0m
+[0;32mI (1082757) main: Temperature = 24.59 °C[0m
+[0;32mI (1082767) main: entered custom cluster client handler[0m
+[0;32mI (1082767) main: Custom command received![0m
+[0;32mI (1082767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1082777) main:   cmd_id     = 0x01[0m
+[0;32mI (1082777) main:   src_ep     = 1[0m
+[0;32mI (1082777) main:   dst_ep     = 10[0m
+[0;32mI (1082787) main:   payload_len = 4[0m
+[0;32mI (1082787) main: Humidity = 52.06 [0m
+[0;32mI (1092737) main: entered custom cluster client handler[0m
+[0;32mI (1092747) main: Custom command received![0m
+[0;32mI (1092747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1092747) main:   cmd_id     = 0x00[0m
+[0;32mI (1092747) main:   src_ep     = 1[0m
+[0;32mI (1092747) main:   dst_ep     = 10[0m
+[0;32mI (1092757) main:   payload_len = 4[0m
+[0;32mI (1092757) main: Temperature = 24.61 °C[0m
+[0;32mI (1092767) main: entered custom cluster client handler[0m
+[0;32mI (1092767) main: Custom command received![0m
+[0;32mI (1092767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1092777) main:   cmd_id     = 0x01[0m
+[0;32mI (1092777) main:   src_ep     = 1[0m
+[0;32mI (1092777) main:   dst_ep     = 10[0m
+[0;32mI (1092777) main:   payload_len = 4[0m
+[0;32mI (1092787) main: Humidity = 52.01 [0m
+[0;32mI (1102737) main: entered custom cluster client handler[0m
+[0;32mI (1102737) main: Custom command received![0m
+[0;32mI (1102747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1102747) main:   cmd_id     = 0x00[0m
+[0;32mI (1102747) main:   src_ep     = 1[0m
+[0;32mI (1102747) main:   dst_ep     = 10[0m
+[0;32mI (1102757) main:   payload_len = 4[0m
+[0;32mI (1102757) main: Temperature = 24.62 °C[0m
+[0;32mI (1102767) main: entered custom cluster client handler[0m
+[0;32mI (1102767) main: Custom command received![0m
+[0;32mI (1102767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1102767) main:   cmd_id     = 0x01[0m
+[0;32mI (1102777) main:   src_ep     = 1[0m
+[0;32mI (1102777) main:   dst_ep     = 10[0m
+[0;32mI (1102777) main:   payload_len = 4[0m
+[0;32mI (1102787) main: Humidity = 52.03 [0m
+[0;32mI (1112737) main: entered custom cluster client handler[0m
+[0;32mI (1112737) main: Custom command received![0m
+[0;32mI (1112737) main:   cluster_id = 0xFC00[0m
+[0;32mI (1112747) main:   cmd_id     = 0x00[0m
+[0;32mI (1112747) main:   src_ep     = 1[0m
+[0;32mI (1112747) main:   dst_ep     = 10[0m
+[0;32mI (1112757) main:   payload_len = 4[0m
+[0;32mI (1112757) main: Temperature = 24.64 °C[0m
+[0;32mI (1112767) main: entered custom cluster client handler[0m
+[0;32mI (1112767) main: Custom command received![0m
+[0;32mI (1112767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1112767) main:   cmd_id     = 0x01[0m
+[0;32mI (1112777) main:   src_ep     = 1[0m
+[0;32mI (1112777) main:   dst_ep     = 10[0m
+[0;32mI (1112777) main:   payload_len = 4[0m
+[0;32mI (1112787) main: Humidity = 51.98 [0m
+[0;32mI (1122727) main: entered custom cluster client handler[0m
+[0;32mI (1122727) main: Custom command received![0m
+[0;32mI (1122727) main:   cluster_id = 0xFC00[0m
+[0;32mI (1122727) main:   cmd_id     = 0x00[0m
+[0;32mI (1122727) main:   src_ep     = 1[0m
+[0;32mI (1122727) main:   dst_ep     = 10[0m
+[0;32mI (1122737) main:   payload_len = 4[0m
+[0;32mI (1122737) main: Temperature = 24.66 °C[0m
+[0;32mI (1122747) main: entered custom cluster client handler[0m
+[0;32mI (1122747) main: Custom command received![0m
+[0;32mI (1122747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1122757) main:   cmd_id     = 0x01[0m
+[0;32mI (1122757) main:   src_ep     = 1[0m
+[0;32mI (1122757) main:   dst_ep     = 10[0m
+[0;32mI (1122767) main:   payload_len = 4[0m
+[0;32mI (1122767) main: Humidity = 52.01 [0m
+[0;32mI (1132727) main: entered custom cluster client handler[0m
+[0;32mI (1132727) main: Custom command received![0m
+[0;32mI (1132727) main:   cluster_id = 0xFC00[0m
+[0;32mI (1132727) main:   cmd_id     = 0x00[0m
+[0;32mI (1132727) main:   src_ep     = 1[0m
+[0;32mI (1132727) main:   dst_ep     = 10[0m
+[0;32mI (1132737) main:   payload_len = 4[0m
+[0;32mI (1132737) main: Temperature = 24.69 °C[0m
+[0;32mI (1132747) main: entered custom cluster client handler[0m
+[0;32mI (1132747) main: Custom command received![0m
+[0;32mI (1132747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1132757) main:   cmd_id     = 0x01[0m
+[0;32mI (1132757) main:   src_ep     = 1[0m
+[0;32mI (1132757) main:   dst_ep     = 10[0m
+[0;32mI (1132767) main:   payload_len = 4[0m
+[0;32mI (1132767) main: Humidity = 51.98 [0m
+[0;32mI (1142737) main: entered custom cluster client handler[0m
+[0;32mI (1142737) main: Custom command received![0m
+[0;32mI (1142737) main:   cluster_id = 0xFC00[0m
+[0;32mI (1142747) main:   cmd_id     = 0x00[0m
+[0;32mI (1142747) main:   src_ep     = 1[0m
+[0;32mI (1142747) main:   dst_ep     = 10[0m
+[0;32mI (1142747) main:   payload_len = 4[0m
+[0;32mI (1142757) main: Temperature = 24.70 °C[0m
+[0;32mI (1142757) main: entered custom cluster client handler[0m
+[0;32mI (1142767) main: Custom command received![0m
+[0;32mI (1142767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1142767) main:   cmd_id     = 0x01[0m
+[0;32mI (1142777) main:   src_ep     = 1[0m
+[0;32mI (1142777) main:   dst_ep     = 10[0m
+[0;32mI (1142777) main:   payload_len = 4[0m
+[0;32mI (1142787) main: Humidity = 51.96 [0m
+[0;32mI (1152717) main: entered custom cluster client handler[0m
+[0;32mI (1152727) main: Custom command received![0m
+[0;32mI (1152727) main:   cluster_id = 0xFC00[0m
+[0;32mI (1152727) main:   cmd_id     = 0x00[0m
+[0;32mI (1152727) main:   src_ep     = 1[0m
+[0;32mI (1152727) main:   dst_ep     = 10[0m
+[0;32mI (1152737) main:   payload_len = 4[0m
+[0;32mI (1152737) main: Temperature = 24.70 °C[0m
+[0;32mI (1152747) main: entered custom cluster client handler[0m
+[0;32mI (1152747) main: Custom command received![0m
+[0;32mI (1152747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1152757) main:   cmd_id     = 0x01[0m
+[0;32mI (1152757) main:   src_ep     = 1[0m
+[0;32mI (1152757) main:   dst_ep     = 10[0m
+[0;32mI (1152757) main:   payload_len = 4[0m
+[0;32mI (1152767) main: Humidity = 52.00 [0m
+[0;32mI (1162737) main: entered custom cluster client handler[0m
+[0;32mI (1162737) main: Custom command received![0m
+[0;32mI (1162737) main:   cluster_id = 0xFC00[0m
+[0;32mI (1162737) main:   cmd_id     = 0x00[0m
+[0;32mI (1162747) main:   src_ep     = 1[0m
+[0;32mI (1162747) main:   dst_ep     = 10[0m
+[0;32mI (1162747) main:   payload_len = 4[0m
+[0;32mI (1162757) main: Temperature = 24.69 °C[0m
+[0;32mI (1162757) main: entered custom cluster client handler[0m
+[0;32mI (1162767) main: Custom command received![0m
+[0;32mI (1162767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1162767) main:   cmd_id     = 0x01[0m
+[0;32mI (1162777) main:   src_ep     = 1[0m
+[0;32mI (1162777) main:   dst_ep     = 10[0m
+[0;32mI (1162777) main:   payload_len = 4[0m
+[0;32mI (1162787) main: Humidity = 51.91 [0m
+[0;32mI (1172717) main: entered custom cluster client handler[0m
+[0;32mI (1172717) main: Custom command received![0m
+[0;32mI (1172717) main:   cluster_id = 0xFC00[0m
+[0;32mI (1172727) main:   cmd_id     = 0x00[0m
+[0;32mI (1172727) main:   src_ep     = 1[0m
+[0;32mI (1172727) main:   dst_ep     = 10[0m
+[0;32mI (1172737) main:   payload_len = 4[0m
+[0;32mI (1172737) main: Temperature = 24.69 °C[0m
+[0;32mI (1172747) main: entered custom cluster client handler[0m
+[0;32mI (1172747) main: Custom command received![0m
+[0;32mI (1172747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1172747) main:   cmd_id     = 0x01[0m
+[0;32mI (1172757) main:   src_ep     = 1[0m
+[0;32mI (1172757) main:   dst_ep     = 10[0m
+[0;32mI (1172757) main:   payload_len = 4[0m
+[0;32mI (1172767) main: Humidity = 51.98 [0m
+[0;32mI (1182737) main: entered custom cluster client handler[0m
+[0;32mI (1182737) main: Custom command received![0m
+[0;32mI (1182737) main:   cluster_id = 0xFC00[0m
+[0;32mI (1182737) main:   cmd_id     = 0x00[0m
+[0;32mI (1182747) main:   src_ep     = 1[0m
+[0;32mI (1182747) main:   dst_ep     = 10[0m
+[0;32mI (1182747) main:   payload_len = 4[0m
+[0;32mI (1182757) main: Temperature = 24.71 °C[0m
+[0;32mI (1182777) main: entered custom cluster client handler[0m
+[0;32mI (1182777) main: Custom command received![0m
+[0;32mI (1182777) main:   cluster_id = 0xFC00[0m
+[0;32mI (1182777) main:   cmd_id     = 0x01[0m
+[0;32mI (1182787) main:   src_ep     = 1[0m
+[0;32mI (1182787) main:   dst_ep     = 10[0m
+[0;32mI (1182787) main:   payload_len = 4[0m
+[0;32mI (1182797) main: Humidity = 51.91 [0m
+[0;32mI (1192717) main: entered custom cluster client handler[0m
+[0;32mI (1192717) main: Custom command received![0m
+[0;32mI (1192717) main:   cluster_id = 0xFC00[0m
+[0;32mI (1192727) main:   cmd_id     = 0x00[0m
+[0;32mI (1192727) main:   src_ep     = 1[0m
+[0;32mI (1192727) main:   dst_ep     = 10[0m
+[0;32mI (1192727) main:   payload_len = 4[0m
+[0;32mI (1192737) main: Temperature = 24.70 °C[0m
+[0;32mI (1192737) main: entered custom cluster client handler[0m
+[0;32mI (1192747) main: Custom command received![0m
+[0;32mI (1192747) main:   cluster_id = 0xFC00[0m
+[0;32mI (1192747) main:   cmd_id     = 0x01[0m
+[0;32mI (1192757) main:   src_ep     = 1[0m
+[0;32mI (1192757) main:   dst_ep     = 10[0m
+[0;32mI (1192757) main:   payload_len = 4[0m
+[0;32mI (1192767) main: Humidity = 51.89 [0m
+[0;32mI (1202737) main: entered custom cluster client handler[0m
+[0;32mI (1202737) main: Custom command received![0m
+[0;32mI (1202737) main:   cluster_id = 0xFC00[0m
+[0;32mI (1202737) main:   cmd_id     = 0x00[0m
+[0;32mI (1202747) main:   src_ep     = 1[0m
+[0;32mI (1202747) main:   dst_ep     = 10[0m
+[0;32mI (1202747) main:   payload_len = 4[0m
+[0;32mI (1202757) main: Temperature = 24.71 °C[0m
+[0;32mI (1202757) main: entered custom cluster client handler[0m
+[0;32mI (1202767) main: Custom command received![0m
+[0;32mI (1202767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1202767) main:   cmd_id     = 0x01[0m
+[0;32mI (1202777) main:   src_ep     = 1[0m
+[0;32mI (1202777) main:   dst_ep     = 10[0m
+[0;32mI (1202777) main:   payload_len = 4[0m
+[0;32mI (1202787) main: Humidity = 51.95 [0m
+[0;32mI (1212727) main: entered custom cluster client handler[0m
+[0;32mI (1212727) main: Custom command received![0m
+[0;32mI (1212727) main:   cluster_id = 0xFC00[0m
+[0;32mI (1212727) main:   cmd_id     = 0x00[0m
+[0;32mI (1212737) main:   src_ep     = 1[0m
+[0;32mI (1212737) main:   dst_ep     = 10[0m
+[0;32mI (1212737) main:   payload_len = 4[0m
+[0;32mI (1212747) main: Temperature = 24.71 °C[0m
+[0;32mI (1212747) main: entered custom cluster client handler[0m
+[0;32mI (1212757) main: Custom command received![0m
+[0;32mI (1212757) main:   cluster_id = 0xFC00[0m
+[0;32mI (1212757) main:   cmd_id     = 0x01[0m
+[0;32mI (1212767) main:   src_ep     = 1[0m
+[0;32mI (1212767) main:   dst_ep     = 10[0m
+[0;32mI (1212767) main:   payload_len = 4[0m
+[0;32mI (1212777) main: Humidity = 52.04 [0m
+[0;32mI (1222737) main: entered custom cluster client handler[0m
+[0;32mI (1222737) main: Custom command received![0m
+[0;32mI (1222737) main:   cluster_id = 0xFC00[0m
+[0;32mI (1222737) main:   cmd_id     = 0x00[0m
+[0;32mI (1222747) main:   src_ep     = 1[0m
+[0;32mI (1222747) main:   dst_ep     = 10[0m
+[0;32mI (1222747) main:   payload_len = 4[0m
+[0;32mI (1222757) main: Temperature = 24.72 °C[0m
+[0;32mI (1222757) main: entered custom cluster client handler[0m
+[0;32mI (1222757) main: Custom command received![0m
+[0;32mI (1222767) main:   cluster_id = 0xFC00[0m
+[0;32mI (1222767) main:   cmd_id     = 0x01[0m
+[0;32mI (1222777) main:   src_ep     = 1[0m
+[0;32mI (1222777) main:   dst_ep     = 10[0m
+[0;32mI (1222777) main:   payload_len = 4[0m
+[0;32mI (1222787) main: Humidity = 52.00 [0m

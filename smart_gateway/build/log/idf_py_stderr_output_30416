@@ -1,0 +1,700 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpcq___e50"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpcq___e50': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpj4p19wzy"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpj4p19wzy': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpibasu4v2"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpibasu4v2': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp741b0qcn"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp741b0qcn': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpyuc65tho"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpyuc65tho': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpwspe_x3d"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpwspe_x3d': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpkjlxi57f"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpkjlxi57f': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpxlo87b99"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpxlo87b99': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmppnlq18nn"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmppnlq18nn': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp8f0mutxn"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp8f0mutxn': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpzdndg24j"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpzdndg24j': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmporvuv8sk"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmporvuv8sk': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp0aganljr"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp0aganljr': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpamssiphy"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpamssiphy': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpxl9_zkua"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpxl9_zkua': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpe2_04bnw"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpe2_04bnw': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmppq5gkwbj"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmppq5gkwbj': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp5432eh1u"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp5432eh1u': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp1bg61_93"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp1bg61_93': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpq8ytvsoe"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpq8ytvsoe': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpfx1vf_du"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpfx1vf_du': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp9wsm4mhy"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp9wsm4mhy': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp25f9x34s"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp25f9x34s': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpreg_n91x"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpreg_n91x': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpvg8xsh0y"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpvg8xsh0y': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmps8u40c2n"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmps8u40c2n': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpmk40vw_5"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpmk40vw_5': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpun7k08n8"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpun7k08n8': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp_ewnvvt2"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp_ewnvvt2': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpo4em4qdz"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpo4em4qdz': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpekvlakka"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpekvlakka': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpcv7cfydc"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpcv7cfydc': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmps_p0511w"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmps_p0511w': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpb0wj1pb6"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpb0wj1pb6': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp9yndsd4_"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp9yndsd4_': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpq2lv0a90"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpq2lv0a90': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpqfttoelh"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpqfttoelh': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpiw5sed6_"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmpiw5sed6_': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096e: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x40808670: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/ubsan.c:311
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_gateway\\build\\smart_gateway.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c6 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp56oyppce"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c6 C:\\Users\\user\\AppData\\Local\\Temp\\tmp56oyppce': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x4001975a: software_reset_cpu in ROM
+[0m
+[0;33m--- 0x4200eb5e: wifi_init_softap at C:/Espressif/smart_home/smart_gateway/main/main.c:97 (discriminator 1)
+[0m
+[0;33m--- 0x40808665: _esp_error_check_failed at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4080096

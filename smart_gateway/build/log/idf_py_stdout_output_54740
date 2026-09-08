@@ -1,0 +1,82 @@
+[1/5] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_gateway\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/smart_home/smart_gateway/build/partition_table/partition-table.bin C:/Espressif/smart_home/smart_gateway/build/smart_gateway.bin"
+smart_gateway.bin binary size 0x10cde0 bytes. Smallest app partition is 0x15e000 bytes. 0x51220 bytes (23%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_gateway\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_gateway/build/bootloader/bootloader.bin"
+Bootloader binary size 0x55f0 bytes. 0x2a10 bytes (33%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.4.1\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.4.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/esptool/esptool.py;--chip;esp32c6 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Espressif/smart_home/smart_gateway/build -P C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32c6 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 smart_gateway.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.0
+Serial port COM5
+Connecting....
+Chip is ESP32-C6FH4 (QFN32) (revision v0.1)
+Features: WiFi 6, BT 5, IEEE802.15.4
+Crystal is 40MHz
+MAC: e4:b3:23:ff:fe:a2:81:98
+BASE MAC: e4:b3:23:a2:81:98
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0011cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22000 bytes to 13603...
+Writing at 0x00000000... (100 %)
+Wrote 22000 bytes (13603 compressed) at 0x00000000 in 0.7 seconds (effective 255.1 kbit/s)...
+Hash of data verified.
+Compressed 1101280 bytes to 643206...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c676... (5 %)
+Writing at 0x000269ff... (7 %)
+Writing at 0x00030e3b... (10 %)
+Writing at 0x00037600... (12 %)
+Writing at 0x0003e4eb... (15 %)
+Writing at 0x000461a1... (17 %)
+Writing at 0x0004c50a... (20 %)
+Writing at 0x00052486... (22 %)
+Writing at 0x00059092... (25 %)
+Writing at 0x0005f374... (27 %)
+Writing at 0x000654f9... (30 %)
+Writing at 0x0006bbad... (32 %)
+Writing at 0x00072cd2... (35 %)
+Writing at 0x0007999a... (37 %)
+Writing at 0x00080588... (40 %)
+Writing at 0x00087038... (42 %)
+Writing at 0x0008d2ff... (45 %)
+Writing at 0x000940b9... (47 %)
+Writing at 0x0009a0ec... (50 %)
+Writing at 0x0009feca... (52 %)
+Writing at 0x000a5e11... (55 %)
+Writing at 0x000ac5e9... (57 %)
+Writing at 0x000b2968... (60 %)
+Writing at 0x000b877c... (62 %)
+Writing at 0x000be626... (65 %)
+Writing at 0x000c47c0... (67 %)
+Writing at 0x000caee6... (70 %)
+Writing at 0x000d1d70... (72 %)
+Writing at 0x000d8d47... (75 %)
+Writing at 0x000dfe75... (77 %)
+Writing at 0x000e6486... (80 %)
+Writing at 0x000ec421... (82 %)
+Writing at 0x000f2aa6... (85 %)
+Writing at 0x000f9e71... (87 %)
+Writing at 0x000ffbf3... (90 %)
+Writing at 0x00106b36... (92 %)
+Writing at 0x0010d7e5... (95 %)
+Writing at 0x00113106... (97 %)
+Writing at 0x0011984c... (100 %)
+Wrote 1101280 bytes (643206 compressed) at 0x00010000 in 18.3 seconds (effective 481.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 140...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (140 compressed) at 0x00008000 in 0.1 seconds (effective 256.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

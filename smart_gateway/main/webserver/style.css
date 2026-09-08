@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+header {
+    background: #1f2937;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 8px 0 0;
+    opacity: 0.8;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.sensor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.sensor-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.sensor-card h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.value {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.label {
+    color: #666;
+    font-size: 14px;
+}
+
+.status {
+    margin-top: 8px;
+    color: #777;
+    font-size: 14px;
+}
+
+#status {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+}

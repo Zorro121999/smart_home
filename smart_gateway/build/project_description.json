@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "smart_gateway",
-    "project_version":    "4b57d63-dirty",
+    "project_version":    "68e2a2d-dirty",
     "project_path":       "C:/Espressif/smart_home/smart_gateway",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.4.1",
     "build_dir":          "C:/Espressif/smart_home/smart_gateway/build",
@@ -1221,11 +1221,11 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "nvs_flash", "espressif__esp-zigbee-lib", "espressif__led_strip" ],
+            "priv_reqs": [ "nvs_flash", "esp_wifi", "esp_http_server", "espressif__esp-zigbee-lib", "espressif__led_strip" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__esp-zigbee-lib", "espressif__led_strip" ],
             "file": "C:/Espressif/smart_home/smart_gateway/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Espressif/smart_home/smart_gateway/main/main.c" ],
+            "sources": [ "C:/Espressif/smart_home/smart_gateway/main/driver/webserver.c", "C:/Espressif/smart_home/smart_gateway/main/main.c", "C:/Espressif/smart_home/smart_gateway/build/index.html.S", "C:/Espressif/smart_home/smart_gateway/build/script.js.S", "C:/Espressif/smart_home/smart_gateway/build/style.css.S" ],
             "include_dirs": []
         },
         "mbedtls": {
@@ -2857,7 +2857,7 @@
             "dir": "C:/Espressif/smart_home/smart_gateway/main",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "nvs_flash", "espressif__esp-zigbee-lib", "espressif__led_strip" ],
+            "priv_reqs": [ "nvs_flash", "esp_wifi", "esp_http_server", "espressif__esp-zigbee-lib", "espressif__led_strip" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__esp-zigbee-lib", "espressif__led_strip" ],
             "include_dirs": []

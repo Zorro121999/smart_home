@@ -1,0 +1,283 @@
+919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,le�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 29 2026 17:18:01[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=420d0020 size=20c1ch (134172) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=00030c44 vaddr=40800000 size=073d4h ( 29652) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=cddf0h (843248) map[0m
+[0;32mI (283) esp_image: segment 3: paddr=00105e18 vaddr=408073d4 size=136b0h ( 79536) load[0m
+[0;32mI (301) esp_image: segment 4: paddr=001194d0 vaddr=4081aa90 size=03f60h ( 16224) load[0m
+[0;32mI (311) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (312) boot: Disabling RNG early entropy source...[0m
+[0;32mI (322) cpu_start: Unicore app[0m
+[0;32mI (330) cpu_start: Pro cpu start user code[0m
+[0;32mI (330) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (330) app_init: Application information:[0m
+[0;32mI (331) app_init: Project name:     smart_gateway[0m
+[0;32mI (335) app_init: App version:      68e2a2d-dirty[0m
+[0;32mI (339) app_init: Compile time:     Sep  6 2026 21:57:26[0m
+[0;32mI (344) app_init: ELF file SHA256:  f600225ef...[0m
+[0;32mI (348) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (353) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (357) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (361) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (365) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (371) heap_init: At 408253C0 len 00057250 (348 KiB): RAM[0m
+[0;32mI (376) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (381) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (387) spi_flash: detected chip: generic[0m
+[0;32mI (390) spi_flash: flash io: dio[0m
+[0;33mW (393) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (406) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (412) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (418) coexist: coex firmware version: e727207[0m
+[0;32mI (437) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (437) main_task: Started on CPU0[0m
+[0;32mI (437) main_task: Calling app_main()[0m
+[0;32mI (447) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (457) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (467) wifi:wifi driver task: 4082e534, prio:23, stack:6656, core=0[0m
+[0;32mI (467) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (467) wifi:wifi certification version: v7.0[0m
+[0;32mI (467) wifi:config NVS flash: enabled[0m
+[0;32mI (477) wifi:config nano formatting: disabled[0m
+[0;32mI (477) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (487) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (487) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (487) wifi:Init management short buffer num: 32[0m
+[0;32mI (497) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (497) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (507) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (507) wifi:Init static rx buffer num: 10[0m
+[0;32mI (517) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (517) wifi_init: rx ba win: 6[0m
+[0;32mI (517) wifi_init: accept mbox: 6[0m
+[0;32mI (527) wifi_init: tcpip mbox: 32[0m
+[0;32mI (527) wifi_init: udp mbox: 6[0m
+[0;32mI (527) wifi_init: tcp mbox: 6[0m
+[0;32mI (537) wifi_init: tcp tx win: 5760[0m
+[0;32mI (537) wifi_init: tcp rx win: 5760[0m
+[0;32mI (537) wifi_init: tcp mss: 1440[0m
+[0;32mI (537) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (547) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (547) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (557) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;33mW (607) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (607) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (617) wifi:(agc)0x600a7128:0xd201f800, min.avgNF:0xce->0xd2(dB), RCalCount:0x1f, min.RRssi:0x800(-128.00)[0m
+[0;33mW (627) wifi:(TB)WDEV_PWR_TB_MCS0:19[0m
+[0;33mW (627) wifi:(TB)WDEV_PWR_TB_MCS1:19[0m
+[0;33mW (627) wifi:(TB)WDEV_PWR_TB_MCS2:19[0m
+[0;33mW (637) wifi:(TB)WDEV_PWR_TB_MCS3:19[0m
+[0;33mW (637) wifi:(TB)WDEV_PWR_TB_MCS4:19[0m
+[0;33mW (637) wifi:(TB)WDEV_PWR_TB_MCS5:19[0m
+[0;33mW (647) wifi:(TB)WDEV_PWR_TB_MCS6:18[0m
+[0;33mW (647) wifi:(TB)WDEV_PWR_TB_MCS7:18[0m
+[0;33mW (647) wifi:(TB)WDEV_PWR_TB_MCS8:17[0m
+[0;33mW (657) wifi:(TB)WDEV_PWR_TB_MCS9:15[0m
+[0;33mW (657) wifi:(TB)WDEV_PWR_TB_MCS10:15[0m
+[0;33mW (657) wifi:(TB)WDEV_PWR_TB_MCS11:15[0m
+[0;32mI (667) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (677) wifi:mode : sta (e4:b3:23:a2:81:98)[0m
+[0;32mI (677) wifi:enable tsf[0m
+[0;32mI (677) main: wifi_init_sta finished.[0m
+[0;32mI (687) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (687) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (697) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (707) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (707) wifi:Association refused temporarily time 1000, comeback time 1100 (TUs)[0m
+[0;32mI (1837) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (2837) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (2847) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy[0m
+
+[0;32mI (2847) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (2847) main: retry to connect to the AP[0m
+[0;32mI (2847) main: connect to the AP fail[0m
+[0;32mI (3097) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (3097) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (3097) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3117) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3127) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (3127) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3137) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (3137) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3147) wifi:(trc)phytype:CBW20-SGI, snr:54, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3147) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3157) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:54, ampduState:wait operational[0m
+[0;32mI (3167) wifi:ifidx:0, rssi:-44, nf:-98, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3177) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (3207) wifi:connected with devolo Magic, aid = 5, channel 1, BW20, bssid = b8:be:f4:80:9c:d6[0m
+[0;32mI (3207) wifi:security: WPA2-PSK, phy:11bgn, rssi:-44, cipher(pairwise:0x3, group:0x3), pmf:1, [0m
+[0;32mI (3227) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3227) wifi:pm start, type:1, aid:0x5, trans-BSSID:b8:be:f4:80:9c:d6, BSSID[5]:0xd6, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3237) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3237) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3247) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3257) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3267) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3287) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3287) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3297) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3307) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (3387) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100d69c, TALO:0x80f4beb8, (ssn:1, win:64, cur_ssn:1), CONF:0xc0000005[0m
+[0;32mI (4387) esp_netif_handlers: sta ip: 192.168.178.63, mask: 255.255.255.0, gw: 192.168.178.1[0m
+[0;32mI (4387) main: got ip:192.168.178.63[0m
+[0;32mI (4387) main: connected to ap SSID:devolo Magic password:Rotwand-2022[0m
+[0;32mI (4387) webserver: Starting server on port: '80'[0m
+[0;32mI (4397) webserver: Registering URI handlers[0m
+[0;32mI (34397) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[1;31mE (34397) main: ezb_app_signal_add_handler: ret=0x0[0m
+[1;31mE (34407) main: node signal callback[0m
+[1;31mE (34407) main: Initialize Zigbee stack[0m
+[1;31mE (34407) main: start zigbee ok[0m
+[1;31mE (34407) main: hello_zb[0m
+[1;31mE (34407) main: node signal callback[0m
+[1;31mE (34407) main: Device started up in non factory-reset mode[0m
+[1;31mE (34417) main: coordinator node network address:0[0m
+[1;31mE (34417) main: PAN ID: 0xA7F3[0m
+[1;31mE (34427) main: Device reboot[0m
+[1;31mE (35657) main: node signal callback[0m
+[1;31mE (35657) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (35657) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (35657) main:   duration = 4 seconds[0m
+[0;32mI (35657) main:   Network is OPEN for joining[0m
+[0;32mI (35877) main: entered custom cluster client handler[0m
+[0;32mI (35877) main: Custom command received![0m
+[0;32mI (35877) main:   cluster_id = 0xFC00[0m
+[0;32mI (35877) main:   cmd_id     = 0x00[0m
+[0;32mI (35877) main:   src_ep     = 1[0m
+[0;32mI (35877) main:   dst_ep     = 10[0m
+[0;32mI (35887) main:   payload_len = 4[0m
+[0;32mI (35897) main: entered custom cluster client handler[0m
+[0;32mI (35897) main: Custom command received![0m
+[0;32mI (35897) main:   cluster_id = 0xFC00[0m
+[0;32mI (35897) main:   cmd_id     = 0x01[0m
+[0;32mI (35897) main:   src_ep     = 1[0m
+[0;32mI (35907) main:   dst_ep     = 10[0m
+[0;32mI (35907) main:   payload_len = 4[0m
+[0;32mI (45857) main: entered custom cluster client handler[0m
+[0;32mI (45857) main: Custom command received![0m
+[0;32mI (45857) main:   cluster_id = 0xFC00[0m
+[0;32mI (45857) main:   cmd_id     = 0x00[0m
+[0;32mI (45857) main:   src_ep     = 1[0m
+[0;32mI (45857) main:   dst_ep     = 10[0m
+[0;32mI (45867) main:   payload_len = 4[0m
+[0;32mI (45887) main: entered custom cluster client handler[0m
+[0;32mI (45887) main: Custom command received![0m
+[0;32mI (45887) main:   cluster_id = 0xFC00[0m
+[0;32mI (45887) main:   cmd_id     = 0x01[0m
+[0;32mI (45897) main:   src_ep     = 1[0m
+[0;32mI (45897) main:   dst_ep     = 10[0m
+[0;32mI (45897) main:   payload_len = 4[0m
+[0;32mI (55877) main: entered custom cluster client handler[0m
+[0;32mI (55877) main: Custom command received![0m
+[0;32mI (55877) main:   cluster_id = 0xFC00[0m
+[0;32mI (55877) main:   cmd_id     = 0x00[0m
+[0;32mI (55877) main:   src_ep     = 1[0m
+[0;32mI (55877) main:   dst_ep     = 10[0m
+[0;32mI (55887) main:   payload_len = 4[0m
+[0;32mI (55887) main: entered custom cluster client handler[0m
+[0;32mI (55887) main: Custom command received![0m
+[0;32mI (55897) main:   cluster_id = 0xFC00[0m
+[0;32mI (55897) main:   cmd_id     = 0x01[0m
+[0;32mI (55897) main:   src_ep     = 1[0m
+[0;32mI (55907) main:   dst_ep     = 10[0m
+[0;32mI (55907) main:   payload_len = 4[0m
+[0;32mI (65877) main: entered custom cluster client handler[0m
+[0;32mI (65877) main: Custom command received![0m
+[0;32mI (65877) main:   cluster_id = 0xFC00[0m
+[0;32mI (65877) main:   cmd_id     = 0x00[0m
+[0;32mI (65877) main:   src_ep     = 1[0m
+[0;32mI (65877) main:   dst_ep     = 10[0m
+[0;32mI (65887) main:   payload_len = 4[0m
+[0;32mI (65887) main: entered custom cluster client handler[0m
+[0;32mI (65887) main: Custom command received![0m
+[0;32mI (65897) main:   cluster_id = 0xFC00[0m
+[0;32mI (65897) main:   cmd_id     = 0x01[0m
+[0;32mI (65897) main:   src_ep     = 1[0m
+[0;32mI (65907) main:   dst_ep     = 10[0m
+[0;32mI (65907) main:   payload_len = 4[0m
+[0;32mI (75907) main: entered custom cluster client handler[0m
+[0;32mI (75907) main: Custom command received![0m
+[0;32mI (75907) main:   cluster_id = 0xFC00[0m
+[0;32mI (75907) main:   cmd_id     = 0x00[0m
+[0;32mI (75907) main:   src_ep     = 1[0m
+[0;32mI (75907) main:   dst_ep     = 10[0m
+[0;32mI (75917) main:   payload_len = 4[0m
+[0;32mI (75917) main: entered custom cluster client handler[0m
+[0;32mI (75917) main: Custom command received![0m
+[0;32mI (75927) main:   cluster_id = 0xFC00[0m
+[0;32mI (75927) main:   cmd_id     = 0x01[0m
+[0;32mI (75927) main:   src_ep     = 1[0m
+[0;32mI (75937) main:   dst_ep     = 10[0m
+[0;32mI (75937) main:   payload_len = 4[0m
+[0;32mI (85877) main: entered custom cluster client handler[0m
+[0;32mI (85877) main: Custom command received![0m
+[0;32mI (85877) main:   cluster_id = 0xFC00[0m
+[0;32mI (85877) main:   cmd_id     = 0x00[0m
+[0;32mI (85877) main:   src_ep     = 1[0m
+[0;32mI (85877) main:   dst_ep     = 10[0m
+[0;32mI (85887) main:   payload_len = 4[0m
+[0;32mI (85887) main: entered custom cluster client handler[0m
+[0;32mI (85887) main: Custom command received![0m
+[0;32mI (85897) main:   cluster_id = 0xFC00[0m
+[0;32mI (85897) main:   cmd_id     = 0x01[0m
+[0;32mI (85897) main:   src_ep     = 1[0m
+[0;32mI (85907) main:   dst_ep     = 10[0m
+[0;32mI (85907) main:   payload_len = 4[0m
+[0;32mI (95857) main: entered custom cluster client handler[0m
+[0;32mI (95867) main: Custom command received![0m
+[0;32mI (95867) main:   cluster_id = 0xFC00[0m
+[0;32mI (95867) main:   cmd_id     = 0x00[0m
+[0;32mI (95867) main:   src_ep     = 1[0m
+[0;32mI (95867) main:   dst_ep     = 10[0m
+[0;32mI (95867) main:   payload_len = 4[0m
+[0;32mI (95877) main: entered custom cluster client handler[0m
+[0;32mI (95877) main: Custom command received![0m
+[0;32mI (95887) main:   cluster_id = 0xFC00[0m
+[0;32mI (95887) main:   cmd_id     = 0x01[0m
+[0;32mI (95887) main:   src_ep     = 1[0m
+[0;32mI (95897) main:   dst_ep     = 10[0m
+[0;32mI (95897) main:   payload_len = 4[0m
+[0;32mI (105857) main: entered custom cluster client handler[0m
+[0;32mI (105857) main: Custom command received![0m
+[0;32mI (105867) main:   cluster_id = 0xFC00[0m
+[0;32mI (105867) main:   cmd_id     = 0x00[0m
+[0;32mI (105867) main:   src_ep     = 1[0m
+[0;32mI (105867) main:   dst_ep     = 10[0m
+[0;32mI (105877) main:   payload_len = 4[0m
+[0;32mI (105887) main: entered custom cluster client handler[0m
+[0;32mI (105887) main: Custom command received![0m
+[0;32mI (105887) main:   cluster_id = 0xFC00[0m
+[0;32mI (105897) main:   cmd_id     = 0x01[0m
+[0;32mI (105897) main:   src_ep     = 1[0m
+[0;32mI (105897) main:   dst_ep     = 10[0m
+[0;32mI (105897) main:   payload_len = 4[0m

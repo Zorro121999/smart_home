@@ -23,33 +23,51 @@
 #include "nvs_flash.h"
 #include <inttypes.h>
 #include "esp_wifi.h"
+#include "driver/wifi_ap.h"
+#include "driver/webserver.h"
+#include "esp_coexist.h"
 
 #define EXAMPLE_ESP_WIFI_SSID      CONFIG_ESP_WIFI_SSID
 #define EXAMPLE_ESP_WIFI_PASS      CONFIG_ESP_WIFI_PASSWORD
 #define EXAMPLE_ESP_WIFI_CHANNEL   CONFIG_ESP_WIFI_CHANNEL
 #define EXAMPLE_MAX_STA_CONN       CONFIG_ESP_MAX_STA_CONN
 
+#if CONFIG_ESP_STATION_EXAMPLE_WPA3_SAE_PWE_HUNT_AND_PECK
+#define ESP_WIFI_SAE_MODE WPA3_SAE_PWE_HUNT_AND_PECK
+#define EXAMPLE_H2E_IDENTIFIER ""
+#elif CONFIG_ESP_STATION_EXAMPLE_WPA3_SAE_PWE_HASH_TO_ELEMENT
+#define ESP_WIFI_SAE_MODE WPA3_SAE_PWE_HASH_TO_ELEMENT
+#define EXAMPLE_H2E_IDENTIFIER CONFIG_ESP_WIFI_PW_ID
+#elif CONFIG_ESP_STATION_EXAMPLE_WPA3_SAE_PWE_BOTH
+#define ESP_WIFI_SAE_MODE WPA3_SAE_PWE_BOTH
+#define EXAMPLE_H2E_IDENTIFIER CONFIG_ESP_WIFI_PW_ID
+#endif
+
+#if CONFIG_ESP_WIFI_AUTH_WPA2_PSK
+#define ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_WPA2_PSK
+#elif CONFIG_ESP_WIFI_AUTH_WPA_WPA2_PSK
+#define ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_WPA_WPA2_PSK
+#endif
+
+/* FreeRTOS event group to signal when we are connected*/
+static EventGroupHandle_t s_wifi_event_group;
+
+/* The event group allows multiple bits for each event, but we only care about two events:
+ * - we are connected to the AP with an IP
+ * - we failed to connect after the maximum amount of retries */
+#define WIFI_CONNECTED_BIT BIT0
+#define WIFI_FAIL_BIT      BIT1
+
+static int s_retry_num = 0;
+
 
 static const char *TAG = "main";
 
-typedef struct {
-    float moisture;
-    float soc;
-    float humidity;
-    float temp;
-} sensor_data_t;
-
-typedef struct {
-    uint16_t sensor_id;
-    uint16_t network_addr;
-    uint64_t network_addr_ieee;
-    sensor_data_t data;
-} joined_nodes_id_t;
-uint8_t nodes_index = 0;
 uint64_t new_node_addr_long;
 
-joined_nodes_id_t joined_nodes_id[MAX_NODES];
-sensor_data_t data[MAX_NODES];
+joined_nodes_id_t joined_nodes_id[10];
+uint8_t nodes_index = 0;
+
 
 
 esp_err_t ret;
@@ -70,6 +88,98 @@ esp_zigbee_config_t zigbee_config = {
 }
 };
 uint32_t channel_mask = (1UL << 20);
+
+httpd_handle_t httpd_handle;
+
+static void event_handler(void* arg, esp_event_base_t event_base,
+                                int32_t event_id, void* event_data)
+{
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+        esp_wifi_connect();
+    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        if (s_retry_num < EXAMPLE_ESP_MAXIMUM_RETRY) {
+            esp_wifi_connect();
+            s_retry_num++;
+            ESP_LOGI(TAG, "retry to connect to the AP");
+        } else {
+            xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
+        }
+        ESP_LOGI(TAG,"connect to the AP fail");
+    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+        ESP_LOGI(TAG, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
+        s_retry_num = 0;
+        xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
+    }
+}
+
+void wifi_init_sta(void)
+{
+    s_wifi_event_group = xEventGroupCreate();
+
+    ESP_ERROR_CHECK(esp_coex_wifi_i154_enable());
+
+    ESP_ERROR_CHECK(esp_netif_init());
+
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    esp_netif_create_default_wifi_sta();
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+
+    esp_event_handler_instance_t instance_any_id;
+    esp_event_handler_instance_t instance_got_ip;
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
+                                                        ESP_EVENT_ANY_ID,
+                                                        &event_handler,
+                                                        NULL,
+                                                        &instance_any_id));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT,
+                                                        IP_EVENT_STA_GOT_IP,
+                                                        &event_handler,
+                                                        NULL,
+                                                        &instance_got_ip));
+
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = EXAMPLE_ESP_WIFI_SSID,
+            .password = EXAMPLE_ESP_WIFI_PASS,
+            /* Authmode threshold resets to WPA2 as default if auth mode threshold equals WIFI_AUTH_OPEN
+             * and password matches WPA2 standards (password len => 8).
+             * If you want to connect the device to deprecated WEP/WPA networks, Please set the threshold value
+             * to WIFI_AUTH_WEP/WIFI_AUTH_WPA_PSK and set the password with length and format matching to
+             * WIFI_AUTH_WEP/WIFI_AUTH_WPA_PSK standards.
+             */
+            .threshold.authmode = ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD,
+        },
+    };
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA) );
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config) );
+    ESP_ERROR_CHECK(esp_wifi_start() );
+
+    ESP_LOGI(TAG, "wifi_init_sta finished.");
+
+    /* Waiting until either the connection is established (WIFI_CONNECTED_BIT) or connection failed for the maximum
+     * number of re-tries (WIFI_FAIL_BIT). The bits are set by event_handler() (see above) */
+    EventBits_t bits = xEventGroupWaitBits(s_wifi_event_group,
+            WIFI_CONNECTED_BIT | WIFI_FAIL_BIT,
+            pdFALSE,
+            pdFALSE,
+            portMAX_DELAY);
+
+    /* xEventGroupWaitBits() returns the bits before the call returned, hence we can test which event actually
+     * happened. */
+    if (bits & WIFI_CONNECTED_BIT) {
+        ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
+                 EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+    } else if (bits & WIFI_FAIL_BIT) {
+        ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
+                 EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+    } else {
+        ESP_LOGE(TAG, "UNEXPECTED EVENT");
+    }
+    httpd_handle = start_webserver();
+}
 
 static ezb_zcl_status_t receive_custom_cmd(const ezb_zcl_cmd_hdr_t *header,
                                             const uint8_t *payload,
@@ -619,12 +729,11 @@ void esp_zb_task(void *arg) {
     ezb_af_device_desc_t coordinator_device = ezb_af_create_device_desc();
     ezb_af_ep_desc_t coordinator_endpoint = ezb_af_create_endpoint_desc(&coordinator_endpoint_config);
     ezb_zcl_cluster_desc_t coordinator_cluster = ezb_zcl_custom_create_cluster_desc(&coordinator_cluster_config, EZB_ZCL_CLUSTER_CLIENT);
-    ret = ezb_zcl_custom_cluster_desc_add_attr(coordinator_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_WRITE, &(data->temp));
+    //ret = ezb_zcl_custom_cluster_desc_add_attr(coordinator_cluster, ATTR_TEMPERATURE_ID, EZB_ZCL_ATTR_TYPE_SINGLE, EZB_ZCL_ATTR_ACCESS_WRITE, &(data->temp));
     ESP_ERROR_CHECK(ezb_af_endpoint_add_cluster_desc(coordinator_endpoint, coordinator_cluster));
     ESP_ERROR_CHECK(ezb_af_device_add_endpoint_desc(coordinator_device, coordinator_endpoint));
     ESP_ERROR_CHECK(ezb_af_device_desc_register(coordinator_device));
 
-    ezb_zcl_core_action_handler_register(zigbee_zcl_callback);
     ESP_ERROR_CHECK(ezb_bdb_set_primary_channel_set(channel_mask));
     ret = ezb_app_signal_add_handler(node_signal_callback);
     ESP_LOGE(TAG,
@@ -655,10 +764,25 @@ void esp_zb_task(void *arg) {
 
 void app_main(void)
 {
+    // Standard-NVS für Wi-Fi
+    esp_err_t ret = nvs_flash_init();
+
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES ||
+        ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        ret = nvs_flash_init();
+    }
+
+    ESP_ERROR_CHECK(ret);
+
+    // Separate NVS-Partition für Zigbee
     ESP_ERROR_CHECK(
         nvs_flash_init_partition("zb_storage")
     );
 
+    wifi_init_sta();
+    vTaskDelay(pdMS_TO_TICKS(30000));
     xTaskCreate(esp_zb_task, "zigbee_task", 4096, NULL, 10, NULL);
     while(1) {
         vTaskDelay(pdMS_TO_TICKS(10000));
