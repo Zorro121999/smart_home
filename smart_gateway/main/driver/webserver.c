@@ -28,6 +28,25 @@ static esp_err_t root_get_handler(
     );
 }
 
+static const char *get_sensor_name(uint16_t sensor_id)
+{
+    if (sensor_id == 0x0001) {
+        return "Schlafzimmer";
+    }
+    else if (sensor_id == 0x0002) {
+        return "Wohnzimmer";
+    }
+    else if (sensor_id == 0x0003) {
+        return "Kueche";
+    }
+    else if (sensor_id == 0x0004) {
+        return "Bad";
+    }
+    else {
+        return "Unbekannt";
+    }
+}
+
 static esp_err_t sensors_get_handler(httpd_req_t *req)
 {
     char response[1024];
@@ -41,17 +60,28 @@ static esp_err_t sensors_get_handler(httpd_req_t *req)
 
     for (int i = 0; i < nodes_index; i++) {
 
+        const char *name =
+            get_sensor_name(joined_nodes_id[i].sensor_id);
+
         offset += snprintf(
-            response + offset,
-            sizeof(response) - offset,
-            "%s"
-            "{\"node_id\":\"0x%04X\","
-            "\"temperature\":%.2f,"
-            "\"humidity\":%.2f}",
-            (i > 0) ? "," : "",
-            joined_nodes_id[i].sensor_id,
-            joined_nodes_id[i].data.temp,
-            joined_nodes_id[i].data.humidity
+        response + offset,
+        sizeof(response) - offset,
+        "%s"
+        "{\"name\":\"%s\","
+        "\"temperature\":%.2f,"
+        "\"humidity\":%.2f,"
+        "\"moisture\":%.2f}",
+
+        (i > 0) ? "," : "",
+
+
+        name,
+
+        joined_nodes_id[i].data.temp,
+
+        joined_nodes_id[i].data.humidity,
+
+        joined_nodes_id[i].data.moisture
         );
     }
 

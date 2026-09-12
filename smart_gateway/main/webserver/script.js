@@ -23,7 +23,7 @@ async function updateSensors() {
             card.className = "sensor-card";
 
             card.innerHTML = `
-                <h2>Sensor ${sensor.node_id}</h2>
+                <h2>${sensor.name}</h2>
 
                 <div class="label">Temperatur</div>
                 <div class="value">
@@ -33,6 +33,11 @@ async function updateSensors() {
                 <div class="label">Luftfeuchtigkeit</div>
                 <div class="value">
                     ${sensor.humidity.toFixed(2)} %
+                </div>
+
+                <div class="label">Bodenfeuchtigkeit</div>
+                <div class="value">
+                    ${sensor.moisture.toFixed(2)} %
                 </div>
             `;
 

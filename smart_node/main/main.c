@@ -36,6 +36,8 @@
 #define PIN_NUM_CLK  4
 #define PIN_NUM_CS   1
 
+#define BLINK_GPIO   24
+
 #define BME280_HOST    SPI2_HOST
 static const char* TAG = "main";
 
@@ -182,6 +184,9 @@ static void send_custom_data(sensor_data_t *sensor_data, uint8_t sensor_selector
     else if(sensor_selector == ATTR_HUMIDITY_ID) {
         data_send = sensor_data->humidity;
     }
+    else if(sensor_selector == ATTR_SOIL_MOISTURE_ID) {
+        data_send = sensor_data->moisture;
+    }
 
     ezb_zcl_custom_cluster_cmd_t cmd = {
         .cmd_ctrl = {
@@ -242,6 +247,7 @@ void zigbee_send_measurement_callback(void *ctx) {
 
     send_custom_data(sensor_data, ATTR_TEMPERATURE_ID);
     send_custom_data(sensor_data, ATTR_HUMIDITY_ID);
+    send_custom_data(sensor_data, ATTR_SOIL_MOISTURE_ID);
 }
 
 static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, void *message) {
@@ -394,6 +400,7 @@ void meas_task(void *arg) {
         bme280_measure_humidity(spi, (&(bme_cal))->hum_cal1, (&(bme_cal))->hum_cal2, &(bme_cal.t_fine), &(data.humidity));   
         ESP_LOGE(TAG, "temp: %.2f",data.temp);
         ESP_LOGE(TAG, "hum: %.2f",data.humidity);
+        ESP_LOGE(TAG, "soil: %.2f",data.moisture);
         ret = esp_zigbee_task_queue_post(
         &zigbee_send_measurement_callback,
         &data); 
@@ -531,8 +538,24 @@ void app_main(void)
     );
     xTimerStart(timer, pdMS_TO_TICKS(1000));
 
+    gpio_config_t io_conf = {
+    .pin_bit_mask = 1ULL << BLINK_GPIO,
+    .mode = GPIO_MODE_OUTPUT,
+    .pull_up_en = GPIO_PULLUP_DISABLE,
+    .pull_down_en = GPIO_PULLDOWN_DISABLE,
+    .intr_type = GPIO_INTR_DISABLE,
+};
+
+gpio_config(&io_conf);
     
 
     xTaskCreate(esp_zb_task, "zigbee_task", 4096, NULL, 10, NULL);
     xTaskCreate(meas_task, "measurement_task", 4096, NULL, 5, &sensor_task_handle);
+
+    while(1) {
+        gpio_set_level(BLINK_GPIO, 0);
+        vTaskDelay(pdMS_TO_TICKS(1000));
+        gpio_set_level(BLINK_GPIO, 1);
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
 }   

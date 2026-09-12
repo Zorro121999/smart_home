@@ -1,0 +1,156 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe8�ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 29 2026 17:18:01[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=420d0020 size=218ech (137452) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=00031914 vaddr=40800000 size=06704h ( 26372) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=ce0a0h (843936) map[0m
+[0;32mI (284) esp_image: segment 3: paddr=001060c8 vaddr=40806704 size=14380h ( 82816) load[0m
+[0;32mI (302) esp_image: segment 4: paddr=0011a450 vaddr=4081aa90 size=03f90h ( 16272) load[0m
+[0;32mI (312) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (312) boot: Disabling RNG early entropy source...[0m
+[0;32mI (322) cpu_start: Unicore app[0m
+[0;32mI (331) cpu_start: Pro cpu start user code[0m
+[0;32mI (331) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (331) app_init: Application information:[0m
+[0;32mI (331) app_init: Project name:     smart_gateway[0m
+[0;32mI (335) app_init: App version:      827d7c6-dirty[0m
+[0;32mI (340) app_init: Compile time:     Sep  8 2026 13:20:20[0m
+[0;32mI (345) app_init: ELF file SHA256:  cec30e280...[0m
+[0;32mI (349) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (353) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (357) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (361) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (365) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (371) heap_init: At 408253F0 len 00057220 (348 KiB): RAM[0m
+[0;32mI (377) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (382) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (388) spi_flash: detected chip: generic[0m
+[0;32mI (391) spi_flash: flash io: dio[0m
+[0;33mW (394) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (406) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (412) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (419) coexist: coex firmware version: e727207[0m
+[0;32mI (437) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (438) main_task: Started on CPU0[0m
+[0;32mI (438) main_task: Calling app_main()[0m
+[0;32mI (448) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (458) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (468) wifi:wifi driver task: 4082e564, prio:23, stack:6656, core=0[0m
+[0;32mI (468) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (468) wifi:wifi certification version: v7.0[0m
+[0;32mI (468) wifi:config NVS flash: enabled[0m
+[0;32mI (478) wifi:config nano formatting: disabled[0m
+[0;32mI (478) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (488) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (488) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (488) wifi:Init management short buffer num: 32[0m
+[0;32mI (498) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (498) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (508) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (508) wifi:Init static rx buffer num: 10[0m
+[0;32mI (518) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (518) wifi_init: rx ba win: 6[0m
+[0;32mI (518) wifi_init: accept mbox: 6[0m
+[0;32mI (528) wifi_init: tcpip mbox: 32[0m
+[0;32mI (528) wifi_init: udp mbox: 6[0m
+[0;32mI (528) wifi_init: tcp mbox: 6[0m
+[0;32mI (538) wifi_init: tcp tx win: 5760[0m
+[0;32mI (538) wifi_init: tcp rx win: 5760[0m
+[0;32mI (538) wifi_init: tcp mss: 1440[0m
+[0;32mI (538) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (548) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (548) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (558) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;33mW (608) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (608) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (618) wifi:(agc)0x600a7128:0xd21089ec, min.avgNF:0xce->0xd2(dB), RCalCount:0x107, min.RRssi:0x9ec(-97.25)[0m
+[0;33mW (628) wifi:(TB)WDEV_PWR_TB_MCS0:19[0m
+[0;33mW (628) wifi:(TB)WDEV_PWR_TB_MCS1:19[0m
+[0;33mW (628) wifi:(TB)WDEV_PWR_TB_MCS2:19[0m
+[0;33mW (638) wifi:(TB)WDEV_PWR_TB_MCS3:19[0m
+[0;33mW (638) wifi:(TB)WDEV_PWR_TB_MCS4:19[0m
+[0;33mW (638) wifi:(TB)WDEV_PWR_TB_MCS5:19[0m
+[0;33mW (648) wifi:(TB)WDEV_PWR_TB_MCS6:18[0m
+[0;33mW (648) wifi:(TB)WDEV_PWR_TB_MCS7:18[0m
+[0;33mW (648) wifi:(TB)WDEV_PWR_TB_MCS8:17[0m
+[0;33mW (658) wifi:(TB)WDEV_PWR_TB_MCS9:15[0m
+[0;33mW (658) wifi:(TB)WDEV_PWR_TB_MCS10:15[0m
+[0;33mW (658) wifi:(TB)WDEV_PWR_TB_MCS11:15[0m
+[0;32mI (668) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (668) wifi:mode : sta (e4:b3:23:a2:81:98)[0m
+[0;32mI (678) wifi:enable tsf[0m
+[0;32mI (678) main: wifi_init_sta finished.[0m
+[0;32mI (688) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (688) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (698) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (708) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (708) wifi:Association refused temporarily time 1000, comeback time 1100 (TUs)[0m
+[0;32mI (1838) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (2838) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (2848) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy[0m
+
+[0;32mI (2848) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (2848) main: retry to connect to the AP[0m
+[0;32mI (2848) main: connect to the AP fail[0m
+[0;32mI (5268) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (5268) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (5268) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5288) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (5298) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (5298) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (5308) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (5308) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (5318) wifi:(trc)phytype:CBW20-SGI, snr:28, maxRate:144, highestRateIdx:0[0m
+[0;33mW (5318) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (5328) wifi:(trc)band:2G, rate(L-MCS5, rateIdx:3), ampdu(rate:L-MCS5, schedIdx(3, stop:8)), snr:28, ampduState:wait operational[0m
+[0;32mI (5338) wifi:ifidx:0, rssi:-69, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (5348) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (5378) wifi:connected with devolo Magic, aid = 2, channel 11, BW20, bssid = b8:be:f4:81:30:77[0m
+[0;32mI (5378) wifi:security: WPA2-PSK, phy:11bgn, rssi:-69, cipher(pairwise:0x3, group:0x3), pmf:1, [0m
+[0;32mI (5398) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (5398) wifi:pm start, type:1, aid:0x2, trans-BSSID:b8:be:f4:81:30:77, BSSID[5]:0x77, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (5408) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (5408) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (5418) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (5428) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (5438) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (5458) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (5458) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5468) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5478) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (5498) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1007730, TALO:0x81f4beb8, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (6538) esp_netif_handlers: sta ip: 192.168.178.63, mask: 255.255.255.0, gw: 192.168.178.1[0m
+[0;32mI (6538) main: got ip:192.168.178.63[0m
+[0;32mI (6538) main: connected to ap SSID:devolo Magic password:Rotwand-2022[0m
+[0;32mI (6538) webserver: Starting server on port: '80'[0m
+[0;32mI (6548) webserver: Registering URI handlers[0m

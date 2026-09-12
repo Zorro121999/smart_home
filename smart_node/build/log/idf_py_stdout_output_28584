@@ -1,0 +1,327 @@
+[0;33mW(13750) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in RejoESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807410
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=17140h ( 94528) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00027168 vaddr=40800000 size=00eb0h (  3760) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6f17ch (455036) map[0m
+[0;32mI (234) esp_image: segment 3: paddr=000971a4 vaddr=40800eb0 size=10a64h ( 68196) load[0m
+[0;32mI (254) esp_image: segment 4: paddr=000a7c10 vaddr=40811920 size=0217ch (  8572) load[0m
+[0;32mI (258) esp_image: segment 5: paddr=000a9d94 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (264) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (265) boot: Disabling RNG early entropy source...[0m
+[0;32mI (280) cpu_start: Unicore app[0m
+[0;32mI (289) cpu_start: Pro cpu start user code[0m
+[0;32mI (289) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (289) app_init: Application information:[0m
+[0;32mI (290) app_init: Project name:     hello_world[0m
+[0;32mI (293) app_init: App version:      827d7c6-dirty[0m
+[0;32mI (297) app_init: Compile time:     Sep 11 2026 11:08:33[0m
+[0;32mI (302) app_init: ELF file SHA256:  e1ea26f6d...[0m
+[0;32mI (307) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (311) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (315) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (319) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (323) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (329) heap_init: At 408163B0 len 00036FD0 (219 KiB): RAM[0m
+[0;32mI (334) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (339) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (346) spi_flash: detected chip: generic[0m
+[0;32mI (348) spi_flash: flash io: dio[0m
+[0;33mW (351) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (364) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (388) main_task: Calling app_main()[0m
+[1;31mE (398) main: hello[0m
+[1;31mE (398) BME280: device ID: 96[0m
+[0;32mI (398) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (398) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+SDK Version: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTClight sleap enabledI (418) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11
+[0;32mI (428) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (438) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTC[0m
+[0;32mI (448) main_task: Returned from app_main()[0m
+[0;32mI (518) main: Initialize Zigbee stack[0m
+[1;31mE (528) main: hello_zb[0m
+[0;33mW(688) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (688) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(858) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (858) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(1028) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (1028) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(1198) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (1198) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(1368) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (1368) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(1538) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (1538) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(1708) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (1708) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(1868) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (1868) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(2028) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (2028) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(2188) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (2188) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(2358) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (2358) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(2528) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (2528) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(2698) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (2698) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(2858) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (2858) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3028) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (3028) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3198) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (3198) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3368) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (3368) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3528) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (3528) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3698) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (3698) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3868) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (3868) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(4038) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (4038) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(4208) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (4208) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(4378) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (4378) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(4538) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (4538) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(4708) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (4708) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(4878) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (4878) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5038) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5038) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5208) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5208) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5378) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5378) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5538) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5538) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5698) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5698) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5868) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5868) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(6038) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (6038) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(6208) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (6208) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(6378) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (6378) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(6548) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (6548) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(6718) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (6718) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(6878) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (6878) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(7048) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (7048) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(7218) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (7218) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(7378) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (7378) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(7538) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (7538) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(7708) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (7708) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(7878) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (7878) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8048) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8048) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8218) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8218) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8388) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8388) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8558) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8558) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8728) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8728) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8888) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8888) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9058) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9058) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9228) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9228) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9398) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9398) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9568) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9568) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9728) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9728) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9888) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9888) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(10058) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (10058) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(10228) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (10228) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(10398) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (10398) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (10408) main: temp: 21.75[0m
+[1;31mE (10408) main: hum: 52.94[0m
+[1;31mE (10408) main: soil: 20900.00[0m
+[1;31mE (10408) main: end node network address:44351[0m
+[0;33mW(10558) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (10558) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(10728) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (10728) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(10898) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (10898) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(11058) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (11058) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(11228) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (11228) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(11398) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (11398) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(11568) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (11568) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(11738) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (11738) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(11908) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (11908) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(12078) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (12078) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(12248) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (12248) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(12418) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (12418) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(12588) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (12588) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(12748) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (12748) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(12918) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (12918) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(13078) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (13078) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(13248) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (13248) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(13418) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (13418) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(13588) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (13588) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(13758) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (13758) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(13928) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (13928) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(14098) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (14098) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(14268) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (14268) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(14438) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (14438) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(14608) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (14608) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(14778) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (14778) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(14948) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (14948) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(15108) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (15108) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(15268) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (15268) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(15438) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (15438) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(15608) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (15608) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(15778) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (15778) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(15938) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (15938) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(16098) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (16098) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(16268) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (16268) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(16438) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (16438) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(16608) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (16608) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(16778) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (16778) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(16948) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (16948) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(17118) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (17118) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(17288) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (17288) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(17458) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (17458) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(17628) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (17628) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(17788) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (17788) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(17958) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (17958) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(18128) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (18128) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(18298) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (18298) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(18468) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (18468) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(18638) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (18638) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(18808) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (18808) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(18978) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (18978) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(19148) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (19148) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(19318) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (19318) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(19488) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (19488) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(19658) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (19658) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(19828) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (19828) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(19998) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (19998) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(20168) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (20168) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(20338) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (20338) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (20408) main: temp: 21.74[0m
+[1;31mE (20408) main: hum: 52.97[0m
+[1;31mE (20408) main: soil: 29200.00[0m
+[1;31mE (20408) main: end node network address:44351[0m
+[0;33mW(20508) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (20508) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(20678) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (20678) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(20848) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (20848) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(21018) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (21018) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(21188) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (21188) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(21358) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (21358) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(21528) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (21528) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(21698) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (21698) main: BDB Device Reboot failed with status(0x03), please retry[0m

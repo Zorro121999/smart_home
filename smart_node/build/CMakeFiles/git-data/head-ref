@@ -1,9 +1,1 @@
-0000000000000000000000000000000000000000 c6160b62277d1dc49e6206131d3cbc166a34e631 Zorro121999 <nicolas.zorbach@t-online.de> 1786720580 +0200	commit (initial): initial commit
-c6160b62277d1dc49e6206131d3cbc166a34e631 c362506742c9838dc697db4dc300ae90888a6f26 Zorro121999 <nicolas.zorbach@t-online.de> 1786999196 +0200	commit: added zigbee functionality
-c362506742c9838dc697db4dc300ae90888a6f26 fbe1533954f6ae5bf29771fb0148944d3c69df98 Zorro121999 <nicolas.zorbach@t-online.de> 1787066021 +0200	commit: added soil sensor
-fbe1533954f6ae5bf29771fb0148944d3c69df98 6498100dab5a4e282f8019c8abb4a5da1dbfe353 Zorro121999 <nicolas.zorbach@t-online.de> 1787301765 +0200	commit: added zigbee communication with gateway
-6498100dab5a4e282f8019c8abb4a5da1dbfe353 5836d833516a1a609534d5d8988e4439985aec24 Zorro121999 <nicolas.zorbach@t-online.de> 1787904063 +0200	commit: bme280 readout working
-5836d833516a1a609534d5d8988e4439985aec24 c730acb3fb2327d53eb8540f8089a3bf9f3be9c6 Zorro121999 <nicolas.zorbach@t-online.de> 1787998578 +0200	commit: fixed humidity readout
-c730acb3fb2327d53eb8540f8089a3bf9f3be9c6 e3020856e591331e5f91091ee4e24d2a7eae6863 Zorro121999 <nicolas.zorbach@t-online.de> 1788192379 +0200	commit: end node joined zigbee network
-e3020856e591331e5f91091ee4e24d2a7eae6863 a83284f62855ec7b6eedc69f3fc69c831b6a1c7e Zorro121999 <nicolas.zorbach@t-online.de> 1788371533 +0200	commit: end node receives reporing config
-a83284f62855ec7b6eedc69f3fc69c831b6a1c7e 4b57d63e281a040d8d316a5da11e03953e655fbf Zorro121999 <nicolas.zorbach@t-online.de> 1788527749 +0200	commit: successfully sent temperature to coordinator
+827d7c6e1abcfa9560f705ce1f5eb7b702a68e9f

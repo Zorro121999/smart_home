@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "smart_gateway",
-    "project_version":    "68e2a2d-dirty",
+    "project_version":    "827d7c6-dirty",
     "project_path":       "C:/Espressif/smart_home/smart_gateway",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.4.1",
     "build_dir":          "C:/Espressif/smart_home/smart_gateway/build",

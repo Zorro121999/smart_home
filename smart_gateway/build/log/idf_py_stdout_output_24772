@@ -1,0 +1,93 @@
+[1/11] Generating ../../script.js.S
+[2/11] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_gateway\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_gateway/build/bootloader/bootloader.bin"
+Bootloader binary size 0x55f0 bytes. 0x2a10 bytes (33%) free.
+[3/11] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/script.js.S.obj
+[4/11] No install step for 'bootloader'
+[5/11] Linking C static library esp-idf\main\libmain.a
+[6/11] Completed 'bootloader'
+[7/11] Generating ld/sections.ld
+[8/11] Linking CXX executable smart_gateway.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32c6 image...
+Merged 1 ELF section
+Successfully created esp32c6 image.
+Generated C:/Espressif/smart_home/smart_gateway/build/smart_gateway.bin
+[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_gateway\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/smart_home/smart_gateway/build/partition_table/partition-table.bin C:/Espressif/smart_home/smart_gateway/build/smart_gateway.bin"
+smart_gateway.bin binary size 0x10e410 bytes. Smallest app partition is 0x15e000 bytes. 0x4fbf0 bytes (23%) free.
+[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.4.1\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.4.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/esptool/esptool.py;--chip;esp32c6 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Espressif/smart_home/smart_gateway/build -P C:/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32c6 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 smart_gateway.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.0
+Serial port COM5
+Connecting....
+Chip is ESP32-C6FH4 (QFN32) (revision v0.1)
+Features: WiFi 6, BT 5, IEEE802.15.4
+Crystal is 40MHz
+MAC: e4:b3:23:ff:fe:a2:81:98
+BASE MAC: e4:b3:23:a2:81:98
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0011efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22000 bytes to 13603...
+Writing at 0x00000000... (100 %)
+Wrote 22000 bytes (13603 compressed) at 0x00000000 in 0.7 seconds (effective 257.3 kbit/s)...
+Hash of data verified.
+Compressed 1106960 bytes to 646050...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c6ac... (5 %)
+Writing at 0x00027307... (7 %)
+Writing at 0x00030bd4... (10 %)
+Writing at 0x0003799e... (12 %)
+Writing at 0x0003ea5e... (15 %)
+Writing at 0x000466b6... (17 %)
+Writing at 0x0004c8f1... (20 %)
+Writing at 0x00052857... (22 %)
+Writing at 0x00059448... (25 %)
+Writing at 0x0005f726... (27 %)
+Writing at 0x000658b4... (30 %)
+Writing at 0x0006bf75... (32 %)
+Writing at 0x0007310d... (35 %)
+Writing at 0x00079dfd... (37 %)
+Writing at 0x000809f0... (40 %)
+Writing at 0x000874fb... (42 %)
+Writing at 0x0008d79a... (45 %)
+Writing at 0x00094537... (47 %)
+Writing at 0x0009a584... (50 %)
+Writing at 0x000a0391... (52 %)
+Writing at 0x000a62c4... (55 %)
+Writing at 0x000aca86... (57 %)
+Writing at 0x000b2e5d... (60 %)
+Writing at 0x000b8c20... (62 %)
+Writing at 0x000beb04... (65 %)
+Writing at 0x000c4ca1... (67 %)
+Writing at 0x000cb2f8... (70 %)
+Writing at 0x000d21db... (72 %)
+Writing at 0x000d9232... (75 %)
+Writing at 0x000e02ec... (77 %)
+Writing at 0x000e695d... (80 %)
+Writing at 0x000ec8af... (82 %)
+Writing at 0x000f2f65... (85 %)
+Writing at 0x000fa28d... (87 %)
+Writing at 0x001000cd... (90 %)
+Writing at 0x00106f92... (92 %)
+Writing at 0x0010e05b... (95 %)
+Writing at 0x0011380c... (97 %)
+Writing at 0x0011974d... (100 %)
+Wrote 1106960 bytes (646050 compressed) at 0x00010000 in 18.3 seconds (effective 484.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 140...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (140 compressed) at 0x00008000 in 0.1 seconds (effective 257.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
