@@ -215,6 +215,10 @@ static ezb_zcl_status_t receive_custom_cmd(const ezb_zcl_cmd_hdr_t *header,
                 joined_nodes_id[i].data.moisture = *(const float *)payload;
                 ESP_LOGI(TAG, "Soil = %.2f ", joined_nodes_id[i].data.moisture);
             }
+            else if(header->cmd_id == ATTR_SOC_ID) {
+                joined_nodes_id[i].data.soc = *(const float *)payload;
+                ESP_LOGI(TAG, "Soc = %.2f ", joined_nodes_id[i].data.soc);
+            }
         }
     }
     return ret;

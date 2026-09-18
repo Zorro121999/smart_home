@@ -39,6 +39,11 @@ async function updateSensors() {
                 <div class="value">
                     ${sensor.moisture.toFixed(2)} %
                 </div>
+
+                <div class="label">State of Charge</div>
+                <div class="value">
+                    ${sensor.soc.toFixed(2)} %
+                </div>
             `;
 
             container.appendChild(card);

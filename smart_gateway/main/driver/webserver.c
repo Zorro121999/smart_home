@@ -70,7 +70,8 @@ static esp_err_t sensors_get_handler(httpd_req_t *req)
         "{\"name\":\"%s\","
         "\"temperature\":%.2f,"
         "\"humidity\":%.2f,"
-        "\"moisture\":%.2f}",
+        "\"moisture\":%.2f,"
+        "\"soc\":%.2f}",
 
         (i > 0) ? "," : "",
 
@@ -81,7 +82,9 @@ static esp_err_t sensors_get_handler(httpd_req_t *req)
 
         joined_nodes_id[i].data.humidity,
 
-        joined_nodes_id[i].data.moisture
+        joined_nodes_id[i].data.moisture,
+
+        joined_nodes_id[i].data.soc
         );
     }
 

@@ -31,6 +31,7 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 
+
 #define PIN_NUM_MISO 0
 #define PIN_NUM_MOSI 5
 #define PIN_NUM_CLK  4
@@ -48,6 +49,30 @@ TimerHandle_t timer;
 QueueHandle_t sensor_queue;
 
 bool device_connected = false;
+bool channel1_calibrated = false;
+bool channel2_calibrated = false;
+
+esp_err_t esp_pm_entry_light_sleep_cb(int64_t sleep_time_us, void *arg)
+{
+    ESP_EARLY_LOGI(TAG, "Enter Light Sleep");
+    return ESP_OK;
+}
+
+esp_err_t esp_pm_exit_light_sleep_cb(int64_t sleep_time_us, void *arg)
+{
+    ESP_EARLY_LOGI(TAG, "Exit Light Sleep");
+    gpio_set_level(BLINK_GPIO,1);
+    return ESP_OK;
+}
+
+esp_pm_sleep_cbs_register_config_t s_sleep_cbs_config = {
+    .enter_cb          = esp_pm_entry_light_sleep_cb,
+    .exit_cb           = esp_pm_exit_light_sleep_cb,
+    .enter_cb_user_arg = NULL,
+    .exit_cb_user_arg  = NULL,
+    .enter_cb_prior    = 0,
+    .exit_cb_prior     = 0,
+};
 
 typedef struct {
     float moisture;
@@ -84,7 +109,7 @@ adc_oneshot_unit_init_cfg_t init_config1 = {
     .unit_id = ADC_UNIT_1,
 };
 adc_oneshot_chan_cfg_t config = {
-        .atten = ADC_ATTEN_DB_0,
+        .atten = ADC_ATTEN_DB_12,
         .bitwidth = ADC_BITWIDTH_12,
     };
 
@@ -108,6 +133,75 @@ esp_zigbee_config_t zigbee_config = {
 };
 
 uint32_t channel_mask = (1UL << 20);
+
+adc_cali_handle_t adc1_cali_chan1_handle = NULL;
+adc_cali_handle_t adc1_cali_chan2_handle = NULL;
+
+static bool example_adc_calibration_init(adc_unit_t unit, adc_channel_t channel, adc_atten_t atten, adc_cali_handle_t *out_handle)
+{
+    adc_cali_handle_t handle = NULL;
+    esp_err_t ret = ESP_FAIL;
+    bool calibrated = false;
+
+#if ADC_CALI_SCHEME_CURVE_FITTING_SUPPORTED
+    if (!calibrated) {
+        ESP_LOGI(TAG, "calibration scheme version is %s", "Curve Fitting");
+        adc_cali_curve_fitting_config_t cali_config = {
+            .unit_id = unit,
+            .chan = channel,
+            .atten = atten,
+            .bitwidth = ADC_BITWIDTH_DEFAULT,
+        };
+        ret = adc_cali_create_scheme_curve_fitting(&cali_config, &handle);
+        if (ret == ESP_OK) {
+            calibrated = true;
+        }
+    }
+#endif
+
+#if ADC_CALI_SCHEME_LINE_FITTING_SUPPORTED
+    if (!calibrated) {
+        ESP_LOGI(TAG, "calibration scheme version is %s", "Line Fitting");
+        adc_cali_line_fitting_config_t cali_config = {
+            .unit_id = unit,
+            .atten = atten,
+            .bitwidth = ADC_BITWIDTH_DEFAULT,
+        };
+        ret = adc_cali_create_scheme_line_fitting(&cali_config, &handle);
+        if (ret == ESP_OK) {
+            calibrated = true;
+        }
+    }
+#endif
+
+    *out_handle = handle;
+    if (ret == ESP_OK) {
+        ESP_LOGI(TAG, "Calibration Success");
+    } else if (ret == ESP_ERR_NOT_SUPPORTED || !calibrated) {
+        ESP_LOGW(TAG, "eFuse not burnt, skip software calibration");
+    } else {
+        ESP_LOGE(TAG, "Invalid arg or no memory");
+    }
+
+    return calibrated;
+}
+
+
+static esp_err_t esp_pm_light_sleep_config(void)
+{
+    esp_err_t rc = ESP_OK;
+    int             cur_cpu_freq_mhz = CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ;
+    esp_pm_config_t pm_config        = {
+            .max_freq_mhz       = cur_cpu_freq_mhz,
+            .min_freq_mhz       = cur_cpu_freq_mhz,
+            .light_sleep_enable = true,
+    };
+    rc = esp_pm_configure(&pm_config);
+    
+
+    rc == ESP_OK ? esp_pm_light_sleep_register_cbs(&s_sleep_cbs_config) : rc;
+    return rc;
+}
 
 static ezb_zcl_status_t customized_data_stream_server_cmd_handler(const ezb_zcl_cmd_hdr_t *header,
                                                                   const uint8_t           *payload,
@@ -155,24 +249,24 @@ ezb_af_ep_config_t sensor_endpoint_config = {
     .app_device_version = 1
 };
 
-ezb_zcl_report_attr_cmd_t report_cmd = {
-    .cmd_ctrl = {
-        .fc.direction = EZB_ZCL_CMD_DIRECTION_TO_CLI,
+// ezb_zcl_report_attr_cmd_t report_cmd = {
+//     .cmd_ctrl = {
+//         .fc.direction = EZB_ZCL_CMD_DIRECTION_TO_CLI,
 
-        .dst_addr = {
-            .addr_mode = EZB_ADDR_MODE_SHORT,
-            .u.short_addr = 0x0000,
-        },
+//         .dst_addr = {
+//             .addr_mode = EZB_ADDR_MODE_SHORT,
+//             .u.short_addr = 0x0000,
+//         },
 
-        .src_ep = ENDPOINT0,
-        .dst_ep = COORDINATOR_EP,
-        .cluster_id = SENSOR_CLUSTER_ID,
-    },
+//         .src_ep = ENDPOINT0,
+//         .dst_ep = COORDINATOR_EP,
+//         .cluster_id = SENSOR_CLUSTER_ID,
+//     },
 
-    .payload = {
-        .attr_id = ATTR_TEMPERATURE_ID,
-    },
-    };
+//     .payload = {
+//         .attr_id = ATTR_TEMPERATURE_ID,
+//     },
+//    };
 
 
 static void send_custom_data(sensor_data_t *sensor_data, uint8_t sensor_selector)
@@ -186,6 +280,9 @@ static void send_custom_data(sensor_data_t *sensor_data, uint8_t sensor_selector
     }
     else if(sensor_selector == ATTR_SOIL_MOISTURE_ID) {
         data_send = sensor_data->moisture;
+    }
+    else if(sensor_selector == ATTR_SOC_ID) {
+        data_send = sensor_data->soc;
     }
 
     ezb_zcl_custom_cluster_cmd_t cmd = {
@@ -248,6 +345,8 @@ void zigbee_send_measurement_callback(void *ctx) {
     send_custom_data(sensor_data, ATTR_TEMPERATURE_ID);
     send_custom_data(sensor_data, ATTR_HUMIDITY_ID);
     send_custom_data(sensor_data, ATTR_SOIL_MOISTURE_ID);
+    send_custom_data(sensor_data, ATTR_SOC_ID);
+    //esp_light_sleep_start();
 }
 
 static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, void *message) {
@@ -394,13 +493,21 @@ void esp_zb_task(void *arg) {
 void meas_task(void *arg) { 
     while(1) {
         ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-        measure_moisture(adc1_handle, ADC_CHANNEL_1, &(data.moisture));
-        measure_soc(adc1_handle, ADC_CHANNEL_2, &(data.soc));
+        int value_raw;
+        adc_oneshot_read(adc1_handle, ADC_CHANNEL_1, &value_raw);
+        if(channel1_calibrated) {
+            measure_moisture(adc1_cali_chan1_handle, &value_raw, &(data.moisture));
+        }
+        adc_oneshot_read(adc1_handle, ADC_CHANNEL_2, &value_raw);
+        if(channel2_calibrated) {
+            measure_soc(adc1_cali_chan2_handle, &value_raw, &(data.soc));
+        }
         bme280_measure_temp(spi, (&(bme_cal))->temp_cal, &(bme_cal.t_fine), &(data.temp));
         bme280_measure_humidity(spi, (&(bme_cal))->hum_cal1, (&(bme_cal))->hum_cal2, &(bme_cal.t_fine), &(data.humidity));   
         ESP_LOGE(TAG, "temp: %.2f",data.temp);
         ESP_LOGE(TAG, "hum: %.2f",data.humidity);
         ESP_LOGE(TAG, "soil: %.2f",data.moisture);
+        ESP_LOGE(TAG, "soc: %.2f",data.soc);
         ret = esp_zigbee_task_queue_post(
         &zigbee_send_measurement_callback,
         &data); 
@@ -529,6 +636,9 @@ void app_main(void)
     adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL_1, &config);
     adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL_2, &config);
 
+    channel1_calibrated = example_adc_calibration_init(ADC_UNIT_1, ADC_CHANNEL_1, ADC_ATTEN_DB_12, &adc1_cali_chan1_handle);
+    channel2_calibrated = example_adc_calibration_init(ADC_UNIT_1, ADC_CHANNEL_2, ADC_ATTEN_DB_12, &adc1_cali_chan2_handle);
+
     
     timer = xTimerCreate("sensor_timer",
         pdMS_TO_TICKS(10000), // 10 Sekunden
@@ -539,23 +649,18 @@ void app_main(void)
     xTimerStart(timer, pdMS_TO_TICKS(1000));
 
     gpio_config_t io_conf = {
-    .pin_bit_mask = 1ULL << BLINK_GPIO,
-    .mode = GPIO_MODE_OUTPUT,
-    .pull_up_en = GPIO_PULLUP_DISABLE,
-    .pull_down_en = GPIO_PULLDOWN_DISABLE,
-    .intr_type = GPIO_INTR_DISABLE,
-};
-
-gpio_config(&io_conf);
-    
+        .pin_bit_mask = 1ULL << BLINK_GPIO,
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE,
+    };
+    esp_err_t ret = gpio_config(&io_conf);
+    //gpio_set_level(BLINK_GPIO,1);
+    ESP_ERROR_CHECK(esp_pm_light_sleep_config());
+    //ESP_ERROR_CHECK(esp_sleep_enable_timer_wakeup(10000000));
 
     xTaskCreate(esp_zb_task, "zigbee_task", 4096, NULL, 10, NULL);
     xTaskCreate(meas_task, "measurement_task", 4096, NULL, 5, &sensor_task_handle);
 
-    while(1) {
-        gpio_set_level(BLINK_GPIO, 0);
-        vTaskDelay(pdMS_TO_TICKS(1000));
-        gpio_set_level(BLINK_GPIO, 1);
-        vTaskDelay(pdMS_TO_TICKS(1000));
-    }
 }   

@@ -1,11 +1,11 @@
 #include "soil.h"
 
-void measure_moisture(adc_oneshot_unit_handle_t adc, adc_channel_t channel, float *value_moisture) {
+
+void measure_moisture(adc_cali_handle_t adc_cal, int *raw, float *value_moisture) {
     esp_err_t ret;
     //get raw 10bit value
-    int value_raw;
-    float voltage;
-    ret = adc_oneshot_read(adc, channel, &value_raw);
+    int voltage;
+    ret = adc_cali_raw_to_voltage(adc_cal, *raw, &voltage);
     assert(ret == ESP_OK);
-    *value_moisture = ((float)value_raw/4095.0)*100;
+    *value_moisture = ((float)voltage/3300.0)*100;
 }

@@ -1,0 +1,1030 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40807536
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1674
+load:0x4083cad0,len:0xf04
+load:0x4083efd0,len:0x2ef0
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 26 2026 16:38:53[0m
+[0;32mI (25) boot: chip revision: v1.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (72) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=173c0h ( 95168) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=000273e8 vaddr=40800000 size=00c30h (  3120) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6fb3ch (457532) map[0m
+[0;32mI (235) esp_image: segment 3: paddr=00097b64 vaddr=40800c30 size=10e0ch ( 69132) load[0m
+[0;32mI (255) esp_image: segment 4: paddr=000a8978 vaddr=40811a40 size=02194h (  8596) load[0m
+[0;32mI (259) esp_image: segment 5: paddr=000aab14 vaddr=50000000 size=00070h (   112) load[0m
+[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (266) boot: Disabling RNG early entropy source...[0m
+[0;32mI (281) cpu_start: Unicore app[0m
+[0;32mI (290) cpu_start: Pro cpu start user code[0m
+[0;32mI (290) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (290) app_init: Application information:[0m
+[0;32mI (291) app_init: Project name:     hello_world[0m
+[0;32mI (294) app_init: App version:      4f981cc-dirty[0m
+[0;32mI (298) app_init: Compile time:     Sep 15 2026 10:15:53[0m
+[0;32mI (303) app_init: ELF file SHA256:  bdea0b9ce...[0m
+[0;32mI (308) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (312) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (316) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (320) efuse_init: Chip rev:         v1.2[0m
+[0;32mI (324) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (330) heap_init: At 408164F0 len 00036E90 (219 KiB): RAM[0m
+[0;32mI (335) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (340) heap_init: At 50000070 len 00000F78 (3 KiB): RTCRAM[0m
+[0;32mI (347) spi_flash: detected chip: generic[0m
+[0;32mI (349) spi_flash: flash io: dio[0m
+[0;33mW (352) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (365) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (371) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (389) main_task: Calling app_main()[0m
+[1;31mE (399) main: hello[0m
+[1;31mE (399) BME280: device ID: 96[0m
+[0;32mI (399) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (399) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (409) gpio: GPIO[24]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (409) pm: Frequency switching config: CPU_MAX: 96, APB_MAX: 96, APB_MIN: 96, Light sleep: ENABLED[0m
+SDK Version: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTClight sleap enabledI (439) phy: phy_version: 321,5, 632dc08, Feb 13 2025, 16:29:11
+[0;32mI (439) phy: libbtbb version: 509a2a6, Feb 13 2025, 16:29:25[0m
+[1;31mE (459) ZIGBEE: ESP Zigbee SDK: v2.0.3-73550728-170bcb5a; esp32h2; 2026-07-09 08:38:31 UTC[0m
+[0;32mI (469) main_task: Returned from app_main()[0m
+[0;32mI (539) main: Initialize Zigbee stack[0m
+[1;31mE (539) main: hello_zb[0m
+[0;33mW(1589) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (1589) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(2569) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (2569) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(3409) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (3409) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(4319) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (4319) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5129) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5129) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(5999) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (5999) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(6369) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (6369) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(7269) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (7269) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(8129) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (8129) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9049) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9049) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(9869) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (9869) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[1;31mE (10409) lipo: raw value 0x0FFF[0m
+[1;31mE (10409) main: temp: 24.33[0m
+[1;31mE (10409) main: hum: 52.13[0m
+[1;31mE (10409) main: soil: 0.00[0m
+[1;31mE (10409) main: soc: 100.00[0m
+[1;31mE (10409) main: end node network address:44351[0m
+[0;33mW(10789) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (10789) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(11669) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (11669) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(12489) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (12489) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(13439) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (13439) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(14359) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (14359) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(15269) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (15269) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(16149) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[0;33mW (16149) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;33mW(17059) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x1ea)[0m
+[1;31mE (20430) lipo: raw value 0x0FFF[0m
+[1;31mE (20430) main: temp: 24.34[0m
+[1;31mE (20430) main: hum: 52.15[0m
+[1;31mE (20430) main: soil: 0.00[0m
+[1;31mE (20430) main: soc: 100.00[0m
+[1;31mE (20430) main: end node network address:44351[0m
+[1;31mE (30430) lipo: raw value 0x0FFF[0m
+[1;31mE (30430) main: temp: 24.36[0m
+[1;31mE (30430) main: hum: 52.07[0m
+[1;31mE (30430) main: soil: 0.12[0m
+[1;31mE (30430) main: soc: 100.00[0m
+[1;31mE (30430) main: end node network address:44351[0m
+[1;31mE (40430) lipo: raw value 0x0FFF[0m
+[1;31mE (40430) main: temp: 24.36[0m
+[1;31mE (40430) main: hum: 52.03[0m
+[1;31mE (40430) main: soil: 0.00[0m
+[1;31mE (40430) main: soc: 100.00[0m
+[1;31mE (40430) main: end node network address:44351[0m
+[1;31mE (50430) lipo: raw value 0x0FFF[0m
+[1;31mE (50430) main: temp: 24.36[0m
+[1;31mE (50430) main: hum: 52.09[0m
+[1;31mE (50430) main: soil: 0.00[0m
+[1;31mE (50430) main: soc: 100.00[0m
+[1;31mE (50430) main: end node network address:44351[0m
+[1;31mE (60430) lipo: raw value 0x0FFF[0m
+[1;31mE (60430) main: temp: 24.36[0m
+[1;31mE (60430) main: hum: 52.07[0m
+[1;31mE (60430) main: soil: 0.00[0m
+[1;31mE (60430) main: soc: 100.00[0m
+[1;31mE (60430) main: end node network address:44351[0m
+[1;31mE (70430) lipo: raw value 0x0FFF[0m
+[1;31mE (70430) main: temp: 24.38[0m
+[1;31mE (70430) main: hum: 52.24[0m
+[1;31mE (70430) main: soil: 0.12[0m
+[1;31mE (70430) main: soc: 100.00[0m
+[1;31mE (70430) main: end node network address:44351[0m
+[1;31mE (80430) lipo: raw value 0x0FFF[0m
+[1;31mE (80430) main: temp: 24.40[0m
+[1;31mE (80430) main: hum: 52.08[0m
+[1;31mE (80430) main: soil: 0.00[0m
+[1;31mE (80430) main: soc: 100.00[0m
+[1;31mE (80430) main: end node network address:44351[0m
+[1;31mE (90430) lipo: raw value 0x0FFF[0m
+[1;31mE (90430) main: temp: 24.40[0m
+[1;31mE (90430) main: hum: 52.00[0m
+[1;31mE (90430) main: soil: 0.00[0m
+[1;31mE (90430) main: soc: 100.00[0m
+[1;31mE (90430) main: end node network address:44351[0m
+[1;31mE (100430) lipo: raw value 0x0FFF[0m
+[1;31mE (100430) main: temp: 24.40[0m
+[1;31mE (100430) main: hum: 51.96[0m
+[1;31mE (100430) main: soil: 0.00[0m
+[1;31mE (100430) main: soc: 100.00[0m
+[1;31mE (100430) main: end node network address:44351[0m
+[1;31mE (110430) lipo: raw value 0x0FFF[0m
+[1;31mE (110430) main: temp: 24.40[0m
+[1;31mE (110430) main: hum: 51.96[0m
+[1;31mE (110430) main: soil: 0.00[0m
+[1;31mE (110430) main: soc: 100.00[0m
+[1;31mE (110430) main: end node network address:44351[0m
+[1;31mE (120430) lipo: raw value 0x0FFF[0m
+[1;31mE (120430) main: temp: 24.40[0m
+[1;31mE (120430) main: hum: 52.03[0m
+[1;31mE (120430) main: soil: 0.00[0m
+[1;31mE (120430) main: soc: 100.00[0m
+[1;31mE (120430) main: end node network address:44351[0m
+[1;31mE (130430) lipo: raw value 0x0FFF[0m
+[1;31mE (130430) main: temp: 24.38[0m
+[1;31mE (130430) main: hum: 51.94[0m
+[1;31mE (130430) main: soil: 0.00[0m
+[1;31mE (130430) main: soc: 100.00[0m
+[1;31mE (130430) main: end node network address:44351[0m
+[1;31mE (140430) lipo: raw value 0x0FFF[0m
+[1;31mE (140430) main: temp: 24.39[0m
+[1;31mE (140430) main: hum: 51.98[0m
+[1;31mE (140430) main: soil: 0.00[0m
+[1;31mE (140430) main: soc: 100.00[0m
+[1;31mE (140430) main: end node network address:44351[0m
+[1;31mE (150430) lipo: raw value 0x0FFF[0m
+[1;31mE (150430) main: temp: 24.38[0m
+[1;31mE (150430) main: hum: 52.00[0m
+[1;31mE (150430) main: soil: 0.05[0m
+[1;31mE (150430) main: soc: 100.00[0m
+[1;31mE (150430) main: end node network address:44351[0m
+[1;31mE (160430) lipo: raw value 0x0FFF[0m
+[1;31mE (160430) main: temp: 24.38[0m
+[1;31mE (160430) main: hum: 51.97[0m
+[1;31mE (160430) main: soil: 0.00[0m
+[1;31mE (160430) main: soc: 100.00[0m
+[1;31mE (160430) main: end node network address:44351[0m
+[1;31mE (170430) lipo: raw value 0x0FFF[0m
+[1;31mE (170430) main: temp: 24.37[0m
+[1;31mE (170430) main: hum: 52.02[0m
+[1;31mE (170430) main: soil: 0.00[0m
+[1;31mE (170430) main: soc: 100.00[0m
+[1;31mE (170430) main: end node network address:44351[0m
+[1;31mE (180430) lipo: raw value 0x0FFF[0m
+[1;31mE (180430) main: temp: 24.39[0m
+[1;31mE (180430) main: hum: 52.06[0m
+[1;31mE (180430) main: soil: 0.05[0m
+[1;31mE (180430) main: soc: 100.00[0m
+[1;31mE (180430) main: end node network address:44351[0m
+[1;31mE (190430) lipo: raw value 0x0FFF[0m
+[1;31mE (190430) main: temp: 24.40[0m
+[1;31mE (190430) main: hum: 52.00[0m
+[1;31mE (190430) main: soil: 0.00[0m
+[1;31mE (190430) main: soc: 100.00[0m
+[1;31mE (190430) main: end node network address:44351[0m
+[1;31mE (200430) lipo: raw value 0x0FFF[0m
+[1;31mE (200430) main: temp: 24.40[0m
+[1;31mE (200430) main: hum: 52.04[0m
+[1;31mE (200430) main: soil: 0.00[0m
+[1;31mE (200430) main: soc: 100.00[0m
+[1;31mE (200430) main: end node network address:44351[0m
+[1;31mE (210430) lipo: raw value 0x0FFF[0m
+[1;31mE (210430) main: temp: 24.40[0m
+[1;31mE (210430) main: hum: 52.05[0m
+[1;31mE (210430) main: soil: 0.00[0m
+[1;31mE (210430) main: soc: 100.00[0m
+[1;31mE (210430) main: end node network address:44351[0m
+[1;31mE (220430) lipo: raw value 0x0FFF[0m
+[1;31mE (220430) main: temp: 24.42[0m
+[1;31mE (220430) main: hum: 52.02[0m
+[1;31mE (220430) main: soil: 0.00[0m
+[1;31mE (220430) main: soc: 100.00[0m
+[1;31mE (220430) main: end node network address:44351[0m
+[1;31mE (230430) lipo: raw value 0x0FFF[0m
+[1;31mE (230430) main: temp: 24.43[0m
+[1;31mE (230430) main: hum: 51.99[0m
+[1;31mE (230430) main: soil: 0.00[0m
+[1;31mE (230430) main: soc: 100.00[0m
+[1;31mE (230430) main: end node network address:44351[0m
+[1;31mE (240430) lipo: raw value 0x0FFF[0m
+[1;31mE (240430) main: temp: 24.41[0m
+[1;31mE (240430) main: hum: 51.96[0m
+[1;31mE (240430) main: soil: 0.00[0m
+[1;31mE (240430) main: soc: 100.00[0m
+[1;31mE (240430) main: end node network address:44351[0m
+[1;31mE (250430) lipo: raw value 0x0FFF[0m
+[1;31mE (250430) main: temp: 24.40[0m
+[1;31mE (250430) main: hum: 51.93[0m
+[1;31mE (250430) main: soil: 0.00[0m
+[1;31mE (250430) main: soc: 100.00[0m
+[1;31mE (250430) main: end node network address:44351[0m
+[1;31mE (260430) lipo: raw value 0x0FFF[0m
+[1;31mE (260430) main: temp: 24.40[0m
+[1;31mE (260430) main: hum: 52.04[0m
+[1;31mE (260430) main: soil: 0.00[0m
+[1;31mE (260430) main: soc: 100.00[0m
+[1;31mE (260430) main: end node network address:44351[0m
+[1;31mE (270430) lipo: raw value 0x09B4[0m
+[1;31mE (270430) main: temp: 24.39[0m
+[1;31mE (270430) main: hum: 52.02[0m
+[1;31mE (270430) main: soil: 0.00[0m
+[1;31mE (270430) main: soc: 100.00[0m
+[1;31mE (270430) main: end node network address:44351[0m
+[1;31mE (280430) lipo: raw value 0x09B8[0m
+[1;31mE (280430) main: temp: 24.41[0m
+[1;31mE (280430) main: hum: 52.05[0m
+[1;31mE (280430) main: soil: 0.00[0m
+[1;31mE (280430) main: soc: 100.00[0m
+[1;31mE (280430) main: end node network address:44351[0m
+[1;31mE (290430) lipo: raw value 0x0A03[0m
+[1;31mE (290430) main: temp: 24.41[0m
+[1;31mE (290430) main: hum: 52.03[0m
+[1;31mE (290430) main: soil: 0.00[0m
+[1;31mE (290430) main: soc: 100.00[0m
+[1;31mE (290430) main: end node network address:44351[0m
+[1;31mE (300430) lipo: raw value 0x09DE[0m
+[1;31mE (300430) main: temp: 24.40[0m
+[1;31mE (300430) main: hum: 51.97[0m
+[1;31mE (300430) main: soil: 0.00[0m
+[1;31mE (300430) main: soc: 100.00[0m
+[1;31mE (300430) main: end node network address:44351[0m
+[1;31mE (310430) lipo: raw value 0x097E[0m
+[1;31mE (310430) main: temp: 24.43[0m
+[1;31mE (310430) main: hum: 51.97[0m
+[1;31mE (310430) main: soil: 0.00[0m
+[1;31mE (310430) main: soc: 100.00[0m
+[1;31mE (310430) main: end node network address:44351[0m
+[1;31mE (320430) lipo: raw value 0x0000[0m
+[1;31mE (320430) main: temp: 24.44[0m
+[1;31mE (320430) main: hum: 52.00[0m
+[1;31mE (320430) main: soil: 0.00[0m
+[1;31mE (320430) main: soc: 100.00[0m
+[1;31mE (320430) main: end node network address:44351[0m
+[1;31mE (330430) lipo: raw value 0x09D4[0m
+[1;31mE (330430) main: temp: 24.43[0m
+[1;31mE (330430) main: hum: 51.97[0m
+[1;31mE (330430) main: soil: 0.00[0m
+[1;31mE (330430) main: soc: 100.00[0m
+[1;31mE (330430) main: end node network address:44351[0m
+[1;31mE (340430) lipo: raw value 0x09CD[0m
+[1;31mE (340430) main: temp: 24.46[0m
+[1;31mE (340430) main: hum: 51.94[0m
+[1;31mE (340430) main: soil: 0.00[0m
+[1;31mE (340430) main: soc: 100.00[0m
+[1;31mE (340430) main: end node network address:44351[0m
+[1;31mE (350430) lipo: raw value 0x09AF[0m
+[1;31mE (350430) main: temp: 24.45[0m
+[1;31mE (350430) main: hum: 53.24[0m
+[1;31mE (350430) main: soil: 0.00[0m
+[1;31mE (350430) main: soc: 100.00[0m
+[1;31mE (350430) main: end node network address:44351[0m
+[1;31mE (360430) lipo: raw value 0x09B7[0m
+[1;31mE (360430) main: temp: 24.49[0m
+[1;31mE (360430) main: hum: 52.32[0m
+[1;31mE (360430) main: soil: 0.02[0m
+[1;31mE (360430) main: soc: 100.00[0m
+[1;31mE (360430) main: end node network address:44351[0m
+[1;31mE (370430) lipo: raw value 0x09D2[0m
+[1;31mE (370430) main: temp: 24.49[0m
+[1;31mE (370430) main: hum: 52.00[0m
+[1;31mE (370430) main: soil: 0.00[0m
+[1;31mE (370430) main: soc: 100.00[0m
+[1;31mE (370430) main: end node network address:44351[0m
+[1;31mE (380430) lipo: raw value 0x09D2[0m
+[1;31mE (380430) main: temp: 24.50[0m
+[1;31mE (380430) main: hum: 52.02[0m
+[1;31mE (380430) main: soil: 0.00[0m
+[1;31mE (380430) main: soc: 100.00[0m
+[1;31mE (380430) main: end node network address:44351[0m
+[1;31mE (390430) lipo: raw value 0x09CC[0m
+[1;31mE (390430) main: temp: 24.47[0m
+[1;31mE (390430) main: hum: 51.90[0m
+[1;31mE (390430) main: soil: 0.00[0m
+[1;31mE (390430) main: soc: 100.00[0m
+[1;31mE (390430) main: end node network address:44351[0m
+[1;31mE (400430) lipo: raw value 0x09AB[0m
+[1;31mE (400430) main: temp: 24.47[0m
+[1;31mE (400430) main: hum: 51.95[0m
+[1;31mE (400430) main: soil: 0.00[0m
+[1;31mE (400430) main: soc: 100.00[0m
+[1;31mE (400430) main: end node network address:44351[0m
+[1;31mE (410430) lipo: raw value 0x09B7[0m
+[1;31mE (410430) main: temp: 24.47[0m
+[1;31mE (410430) main: hum: 52.03[0m
+[1;31mE (410430) main: soil: 0.00[0m
+[1;31mE (410430) main: soc: 100.00[0m
+[1;31mE (410430) main: end node network address:44351[0m
+[1;31mE (420430) lipo: raw value 0x09E3[0m
+[1;31mE (420430) main: temp: 24.47[0m
+[1;31mE (420430) main: hum: 52.04[0m
+[1;31mE (420430) main: soil: 0.00[0m
+[1;31mE (420430) main: soc: 100.00[0m
+[1;31mE (420430) main: end node network address:44351[0m
+[1;31mE (430430) lipo: raw value 0x09E2[0m
+[1;31mE (430430) main: temp: 24.47[0m
+[1;31mE (430430) main: hum: 52.03[0m
+[1;31mE (430430) main: soil: 0.00[0m
+[1;31mE (430430) main: soc: 100.00[0m
+[1;31mE (430430) main: end node network address:44351[0m
+[1;31mE (440430) lipo: raw value 0x09CD[0m
+[1;31mE (440430) main: temp: 24.46[0m
+[1;31mE (440430) main: hum: 52.00[0m
+[1;31mE (440430) main: soil: 0.00[0m
+[1;31mE (440430) main: soc: 100.00[0m
+[1;31mE (440430) main: end node network address:44351[0m
+[1;31mE (450430) lipo: raw value 0x09BD[0m
+[1;31mE (450430) main: temp: 24.47[0m
+[1;31mE (450430) main: hum: 52.06[0m
+[1;31mE (450430) main: soil: 0.00[0m
+[1;31mE (450430) main: soc: 100.00[0m
+[1;31mE (450430) main: end node network address:44351[0m
+[1;31mE (460430) lipo: raw value 0x0000[0m
+[1;31mE (460430) main: temp: 24.45[0m
+[1;31mE (460430) main: hum: 51.99[0m
+[1;31mE (460430) main: soil: 0.00[0m
+[1;31mE (460430) main: soc: 100.00[0m
+[1;31mE (460430) main: end node network address:44351[0m
+[1;31mE (470430) lipo: raw value 0x0798[0m
+[1;31mE (470430) main: temp: 24.45[0m
+[1;31mE (470430) main: hum: 52.35[0m
+[1;31mE (470430) main: soil: 0.00[0m
+[1;31mE (470430) main: soc: 100.00[0m
+[1;31mE (470430) main: end node network address:44351[0m
+[1;31mE (480430) lipo: raw value 0x09C1[0m
+[1;31mE (480430) main: temp: 24.45[0m
+[1;31mE (480430) main: hum: 52.04[0m
+[1;31mE (480430) main: soil: 0.00[0m
+[1;31mE (480430) main: soc: 100.00[0m
+[1;31mE (480430) main: end node network address:44351[0m
+[1;31mE (490430) lipo: raw value 0x09B1[0m
+[1;31mE (490430) main: temp: 24.47[0m
+[1;31mE (490430) main: hum: 52.01[0m
+[1;31mE (490430) main: soil: 0.00[0m
+[1;31mE (490430) main: soc: 100.00[0m
+[1;31mE (490430) main: end node network address:44351[0m
+[1;31mE (500430) lipo: raw value 0x09C0[0m
+[1;31mE (500430) main: temp: 24.45[0m
+[1;31mE (500430) main: hum: 51.94[0m
+[1;31mE (500430) main: soil: 0.00[0m
+[1;31mE (500430) main: soc: 100.00[0m
+[1;31mE (500430) main: end node network address:44351[0m
+[1;31mE (510430) lipo: raw value 0x09B9[0m
+[1;31mE (510430) main: temp: 24.47[0m
+[1;31mE (510430) main: hum: 51.98[0m
+[1;31mE (510430) main: soil: 0.00[0m
+[1;31mE (510430) main: soc: 100.00[0m
+[1;31mE (510430) main: end node network address:44351[0m
+[1;31mE (520430) lipo: raw value 0x09E0[0m
+[1;31mE (520430) main: temp: 24.45[0m
+[1;31mE (520430) main: hum: 51.95[0m
+[1;31mE (520430) main: soil: 0.00[0m
+[1;31mE (520430) main: soc: 100.00[0m
+[1;31mE (520430) main: end node network address:44351[0m
+[1;31mE (530430) lipo: raw value 0x0A30[0m
+[1;31mE (530430) main: temp: 24.47[0m
+[1;31mE (530430) main: hum: 51.95[0m
+[1;31mE (530430) main: soil: 0.00[0m
+[1;31mE (530430) main: soc: 100.00[0m
+[1;31mE (530430) main: end node network address:44351[0m
+[1;31mE (540430) lipo: raw value 0x09E7[0m
+[1;31mE (540430) main: temp: 24.47[0m
+[1;31mE (540430) main: hum: 51.97[0m
+[1;31mE (540430) main: soil: 0.95[0m
+[1;31mE (540430) main: soc: 100.00[0m
+[1;31mE (540430) main: end node network address:44351[0m
+[1;31mE (550430) lipo: raw value 0x09E6[0m
+[1;31mE (550430) main: temp: 24.46[0m
+[1;31mE (550430) main: hum: 51.94[0m
+[1;31mE (550430) main: soil: 0.00[0m
+[1;31mE (550430) main: soc: 100.00[0m
+[1;31mE (550430) main: end node network address:44351[0m
+[1;31mE (560430) lipo: raw value 0x09CB[0m
+[1;31mE (560430) main: temp: 24.48[0m
+[1;31mE (560430) main: hum: 51.99[0m
+[1;31mE (560430) main: soil: 0.00[0m
+[1;31mE (560430) main: soc: 100.00[0m
+[1;31mE (560430) main: end node network address:44351[0m
+[1;31mE (570430) lipo: raw value 0x09BD[0m
+[1;31mE (570430) main: temp: 24.49[0m
+[1;31mE (570430) main: hum: 54.57[0m
+[1;31mE (570430) main: soil: 0.00[0m
+[1;31mE (570430) main: soc: 100.00[0m
+[1;31mE (570430) main: end node network address:44351[0m
+[1;31mE (580430) lipo: raw value 0x09B9[0m
+[1;31mE (580430) main: temp: 24.50[0m
+[1;31mE (580430) main: hum: 52.48[0m
+[1;31mE (580430) main: soil: 0.00[0m
+[1;31mE (580430) main: soc: 100.00[0m
+[1;31mE (580430) main: end node network address:44351[0m
+[1;31mE (590430) lipo: raw value 0x09CE[0m
+[1;31mE (590430) main: temp: 24.51[0m
+[1;31mE (590430) main: hum: 52.07[0m
+[1;31mE (590430) main: soil: 0.00[0m
+[1;31mE (590430) main: soc: 100.00[0m
+[1;31mE (590430) main: end node network address:44351[0m
+[1;31mE (600430) lipo: raw value 0x09E3[0m
+[1;31mE (600430) main: temp: 24.51[0m
+[1;31mE (600430) main: hum: 51.96[0m
+[1;31mE (600430) main: soil: 0.00[0m
+[1;31mE (600430) main: soc: 100.00[0m
+[1;31mE (600430) main: end node network address:44351[0m
+[1;31mE (610430) lipo: raw value 0x09D6[0m
+[1;31mE (610430) main: temp: 24.52[0m
+[1;31mE (610430) main: hum: 51.90[0m
+[1;31mE (610430) main: soil: 0.00[0m
+[1;31mE (610430) main: soc: 100.00[0m
+[1;31mE (610430) main: end node network address:44351[0m
+[1;31mE (620430) lipo: raw value 0x09C6[0m
+[1;31mE (620430) main: temp: 24.53[0m
+[1;31mE (620430) main: hum: 51.98[0m
+[1;31mE (620430) main: soil: 0.00[0m
+[1;31mE (620430) main: soc: 100.00[0m
+[1;31mE (620430) main: end node network address:44351[0m
+[1;31mE (630430) lipo: raw value 0x09AD[0m
+[1;31mE (630430) main: temp: 24.54[0m
+[1;31mE (630430) main: hum: 51.94[0m
+[1;31mE (630430) main: soil: 0.00[0m
+[1;31mE (630430) main: soc: 100.00[0m
+[1;31mE (630430) main: end node network address:44351[0m
+[1;31mE (640430) lipo: raw value 0x09BC[0m
+[1;31mE (640430) main: temp: 24.54[0m
+[1;31mE (640430) main: hum: 51.96[0m
+[1;31mE (640430) main: soil: 0.00[0m
+[1;31mE (640430) main: soc: 100.00[0m
+[1;31mE (640430) main: end node network address:44351[0m
+[1;31mE (650430) lipo: raw value 0x09E9[0m
+[1;31mE (650430) main: temp: 24.54[0m
+[1;31mE (650430) main: hum: 51.93[0m
+[1;31mE (650430) main: soil: 0.00[0m
+[1;31mE (650430) main: soc: 100.00[0m
+[1;31mE (650430) main: end node network address:44351[0m
+[1;31mE (660430) lipo: raw value 0x09DA[0m
+[1;31mE (660430) main: temp: 24.53[0m
+[1;31mE (660430) main: hum: 51.94[0m
+[1;31mE (660430) main: soil: 0.00[0m
+[1;31mE (660430) main: soc: 100.00[0m
+[1;31mE (660430) main: end node network address:44351[0m
+[1;31mE (670430) lipo: raw value 0x09C1[0m
+[1;31mE (670430) main: temp: 24.54[0m
+[1;31mE (670430) main: hum: 51.96[0m
+[1;31mE (670430) main: soil: 0.00[0m
+[1;31mE (670430) main: soc: 100.00[0m
+[1;31mE (670430) main: end node network address:44351[0m
+[1;31mE (680430) lipo: raw value 0x09BF[0m
+[1;31mE (680430) main: temp: 24.54[0m
+[1;31mE (680430) main: hum: 51.94[0m
+[1;31mE (680430) main: soil: 0.00[0m
+[1;31mE (680430) main: soc: 100.00[0m
+[1;31mE (680430) main: end node network address:44351[0m
+[1;31mE (690430) lipo: raw value 0x09A4[0m
+[1;31mE (690430) main: temp: 24.52[0m
+[1;31mE (690430) main: hum: 51.85[0m
+[1;31mE (690430) main: soil: 0.00[0m
+[1;31mE (690430) main: soc: 100.00[0m
+[1;31mE (690430) main: end node network address:44351[0m
+[1;31mE (700430) lipo: raw value 0x09BD[0m
+[1;31mE (700430) main: temp: 24.52[0m
+[1;31mE (700430) main: hum: 51.92[0m
+[1;31mE (700430) main: soil: 0.00[0m
+[1;31mE (700430) main: soc: 100.00[0m
+[1;31mE (700430) main: end node network address:44351[0m
+[1;31mE (710430) lipo: raw value 0x09C9[0m
+[1;31mE (710430) main: temp: 24.52[0m
+[1;31mE (710430) main: hum: 51.98[0m
+[1;31mE (710430) main: soil: 0.00[0m
+[1;31mE (710430) main: soc: 100.00[0m
+[1;31mE (710430) main: end node network address:44351[0m
+[1;31mE (720430) lipo: raw value 0x09E1[0m
+[1;31mE (720430) main: temp: 24.53[0m
+[1;31mE (720430) main: hum: 51.99[0m
+[1;31mE (720430) main: soil: 0.00[0m
+[1;31mE (720430) main: soc: 100.00[0m
+[1;31mE (720430) main: end node network address:44351[0m
+[1;31mE (730430) lipo: raw value 0x09D7[0m
+[1;31mE (730430) main: temp: 24.53[0m
+[1;31mE (730430) main: hum: 51.97[0m
+[1;31mE (730430) main: soil: 0.00[0m
+[1;31mE (730430) main: soc: 100.00[0m
+[1;31mE (730430) main: end node network address:44351[0m
+[1;31mE (740430) lipo: raw value 0x09AF[0m
+[1;31mE (740430) main: temp: 24.52[0m
+[1;31mE (740430) main: hum: 51.90[0m
+[1;31mE (740430) main: soil: 0.00[0m
+[1;31mE (740430) main: soc: 100.00[0m
+[1;31mE (740430) main: end node network address:44351[0m
+[1;31mE (750430) lipo: raw value 0x09C8[0m
+[1;31mE (750430) main: temp: 24.51[0m
+[1;31mE (750430) main: hum: 51.88[0m
+[1;31mE (750430) main: soil: 0.00[0m
+[1;31mE (750430) main: soc: 100.00[0m
+[1;31mE (750430) main: end node network address:44351[0m
+[1;31mE (760430) lipo: raw value 0x09B9[0m
+[1;31mE (760430) main: temp: 24.52[0m
+[1;31mE (760430) main: hum: 51.93[0m
+[1;31mE (760430) main: soil: 0.00[0m
+[1;31mE (760430) main: soc: 100.00[0m
+[1;31mE (760430) main: end node network address:44351[0m
+[1;31mE (770430) lipo: raw value 0x09B1[0m
+[1;31mE (770430) main: temp: 24.51[0m
+[1;31mE (770430) main: hum: 51.95[0m
+[1;31mE (770430) main: soil: 0.00[0m
+[1;31mE (770430) main: soc: 100.00[0m
+[1;31mE (770430) main: end node network address:44351[0m
+[1;31mE (780430) lipo: raw value 0x09AF[0m
+[1;31mE (780430) main: temp: 24.52[0m
+[1;31mE (780430) main: hum: 51.89[0m
+[1;31mE (780430) main: soil: 0.00[0m
+[1;31mE (780430) main: soc: 100.00[0m
+[1;31mE (780430) main: end node network address:44351[0m
+[1;31mE (790430) lipo: raw value 0x09BC[0m
+[1;31mE (790430) main: temp: 24.50[0m
+[1;31mE (790430) main: hum: 51.97[0m
+[1;31mE (790430) main: soil: 0.00[0m
+[1;31mE (790430) main: soc: 100.00[0m
+[1;31mE (790430) main: end node network address:44351[0m
+[1;31mE (800430) lipo: raw value 0x09AD[0m
+[1;31mE (800430) main: temp: 24.50[0m
+[1;31mE (800430) main: hum: 51.92[0m
+[1;31mE (800430) main: soil: 0.00[0m
+[1;31mE (800430) main: soc: 100.00[0m
+[1;31mE (800430) main: end node network address:44351[0m
+[1;31mE (810430) lipo: raw value 0x09AC[0m
+[1;31mE (810430) main: temp: 24.49[0m
+[1;31mE (810430) main: hum: 51.93[0m
+[1;31mE (810430) main: soil: 0.00[0m
+[1;31mE (810430) main: soc: 100.00[0m
+[1;31mE (810430) main: end node network address:44351[0m
+[1;31mE (820430) lipo: raw value 0x09D3[0m
+[1;31mE (820430) main: temp: 24.51[0m
+[1;31mE (820430) main: hum: 51.94[0m
+[1;31mE (820430) main: soil: 0.00[0m
+[1;31mE (820430) main: soc: 100.00[0m
+[1;31mE (820430) main: end node network address:44351[0m
+[1;31mE (830430) lipo: raw value 0x09D2[0m
+[1;31mE (830430) main: temp: 24.51[0m
+[1;31mE (830430) main: hum: 51.96[0m
+[1;31mE (830430) main: soil: 0.00[0m
+[1;31mE (830430) main: soc: 100.00[0m
+[1;31mE (830430) main: end node network address:44351[0m
+[1;31mE (840430) lipo: raw value 0x09EE[0m
+[1;31mE (840430) main: temp: 24.52[0m
+[1;31mE (840430) main: hum: 51.91[0m
+[1;31mE (840430) main: soil: 0.00[0m
+[1;31mE (840430) main: soc: 100.00[0m
+[1;31mE (840430) main: end node network address:44351[0m
+[1;31mE (850430) lipo: raw value 0x09D8[0m
+[1;31mE (850430) main: temp: 24.52[0m
+[1;31mE (850430) main: hum: 51.93[0m
+[1;31mE (850430) main: soil: 0.00[0m
+[1;31mE (850430) main: soc: 100.00[0m
+[1;31mE (850430) main: end node network address:44351[0m
+[1;31mE (860430) lipo: raw value 0x09C0[0m
+[1;31mE (860430) main: temp: 24.54[0m
+[1;31mE (860430) main: hum: 51.91[0m
+[1;31mE (860430) main: soil: 0.00[0m
+[1;31mE (860430) main: soc: 100.00[0m
+[1;31mE (860430) main: end node network address:44351[0m
+[1;31mE (870430) lipo: raw value 0x09C3[0m
+[1;31mE (870430) main: temp: 24.54[0m
+[1;31mE (870430) main: hum: 51.97[0m
+[1;31mE (870430) main: soil: 0.00[0m
+[1;31mE (870430) main: soc: 100.00[0m
+[1;31mE (870430) main: end node network address:44351[0m
+[1;31mE (880430) lipo: raw value 0x09E3[0m
+[1;31mE (880430) main: temp: 24.56[0m
+[1;31mE (880430) main: hum: 51.93[0m
+[1;31mE (880430) main: soil: 0.00[0m
+[1;31mE (880430) main: soc: 100.00[0m
+[1;31mE (880430) main: end node network address:44351[0m
+[1;31mE (890430) lipo: raw value 0x09EB[0m
+[1;31mE (890430) main: temp: 24.56[0m
+[1;31mE (890430) main: hum: 51.86[0m
+[1;31mE (890430) main: soil: 0.00[0m
+[1;31mE (890430) main: soc: 100.00[0m
+[1;31mE (890430) main: end node network address:44351[0m
+[1;31mE (900430) lipo: raw value 0x09C5[0m
+[1;31mE (900430) main: temp: 24.57[0m
+[1;31mE (900430) main: hum: 51.89[0m
+[1;31mE (900430) main: soil: 0.00[0m
+[1;31mE (900430) main: soc: 100.00[0m
+[1;31mE (900430) main: end node network address:44351[0m
+[1;31mE (910430) lipo: raw value 0x09A8[0m
+[1;31mE (910430) main: temp: 24.57[0m
+[1;31mE (910430) main: hum: 51.82[0m
+[1;31mE (910430) main: soil: 0.00[0m
+[1;31mE (910430) main: soc: 100.00[0m
+[1;31mE (910430) main: end node network address:44351[0m
+[1;31mE (920430) lipo: raw value 0x09B1[0m
+[1;31mE (920430) main: temp: 24.58[0m
+[1;31mE (920430) main: hum: 51.79[0m
+[1;31mE (920430) main: soil: 0.00[0m
+[1;31mE (920430) main: soc: 100.00[0m
+[1;31mE (920430) main: end node network address:44351[0m
+[1;31mE (930430) lipo: raw value 0x09D0[0m
+[1;31mE (930430) main: temp: 24.58[0m
+[1;31mE (930430) main: hum: 51.80[0m
+[1;31mE (930430) main: soil: 0.00[0m
+[1;31mE (930430) main: soc: 100.00[0m
+[1;31mE (930430) main: end node network address:44351[0m
+[1;31mE (940430) lipo: raw value 0x09E2[0m
+[1;31mE (940430) main: temp: 24.59[0m
+[1;31mE (940430) main: hum: 51.84[0m
+[1;31mE (940430) main: soil: 0.00[0m
+[1;31mE (940430) main: soc: 100.00[0m
+[1;31mE (940430) main: end node network address:44351[0m
+[1;31mE (950430) lipo: raw value 0x09BE[0m
+[1;31mE (950430) main: temp: 24.58[0m
+[1;31mE (950430) main: hum: 51.83[0m
+[1;31mE (950430) main: soil: 0.00[0m
+[1;31mE (950430) main: soc: 100.00[0m
+[1;31mE (950430) main: end node network address:44351[0m
+[1;31mE (960430) lipo: raw value 0x09CD[0m
+[1;31mE (960430) main: temp: 24.58[0m
+[1;31mE (960430) main: hum: 51.80[0m
+[1;31mE (960430) main: soil: 0.02[0m
+[1;31mE (960430) main: soc: 100.00[0m
+[1;31mE (960430) main: end node network address:44351[0m
+[1;31mE (970430) lipo: raw value 0x09D4[0m
+[1;31mE (970430) main: temp: 24.59[0m
+[1;31mE (970430) main: hum: 51.82[0m
+[1;31mE (970430) main: soil: 0.10[0m
+[1;31mE (970430) main: soc: 100.00[0m
+[1;31mE (970430) main: end node network address:44351[0m
+[1;31mE (980430) lipo: raw value 0x0A09[0m
+[1;31mE (980430) main: temp: 24.59[0m
+[1;31mE (980430) main: hum: 51.84[0m
+[1;31mE (980430) main: soil: 0.00[0m
+[1;31mE (980430) main: soc: 100.00[0m
+[1;31mE (980430) main: end node network address:44351[0m
+[1;31mE (990430) lipo: raw value 0x09AD[0m
+[1;31mE (990430) main: temp: 24.61[0m
+[1;31mE (990430) main: hum: 51.76[0m
+[1;31mE (990430) main: soil: 0.00[0m
+[1;31mE (990430) main: soc: 100.00[0m
+[1;31mE (990430) main: end node network address:44351[0m
+[1;31mE (1000430) lipo: raw value 0x09D5[0m
+[1;31mE (1000430) main: temp: 24.60[0m
+[1;31mE (1000430) main: hum: 51.79[0m
+[1;31mE (1000430) main: soil: 0.00[0m
+[1;31mE (1000430) main: soc: 100.00[0m
+[1;31mE (1000430) main: end node network address:44351[0m
+[1;31mE (1010430) lipo: raw value 0x09DC[0m
+[1;31mE (1010430) main: temp: 24.58[0m
+[1;31mE (1010430) main: hum: 51.88[0m
+[1;31mE (1010430) main: soil: 0.00[0m
+[1;31mE (1010430) main: soc: 100.00[0m
+[1;31mE (1010430) main: end node network address:44351[0m
+[1;31mE (1020430) lipo: raw value 0x09A4[0m
+[1;31mE (1020430) main: temp: 24.57[0m
+[1;31mE (1020430) main: hum: 51.85[0m
+[1;31mE (1020430) main: soil: 0.00[0m
+[1;31mE (1020430) main: soc: 100.00[0m
+[1;31mE (1020430) main: end node network address:44351[0m
+[1;31mE (1030430) lipo: raw value 0x09D0[0m
+[1;31mE (1030430) main: temp: 24.56[0m
+[1;31mE (1030430) main: hum: 51.76[0m
+[1;31mE (1030430) main: soil: 0.07[0m
+[1;31mE (1030430) main: soc: 100.00[0m
+[1;31mE (1030430) main: end node network address:44351[0m
+[1;31mE (1040430) lipo: raw value 0x09DB[0m
+[1;31mE (1040430) main: temp: 24.54[0m
+[1;31mE (1040430) main: hum: 51.86[0m
+[1;31mE (1040430) main: soil: 0.00[0m
+[1;31mE (1040430) main: soc: 100.00[0m
+[1;31mE (1040430) main: end node network address:44351[0m
+[1;31mE (1050430) lipo: raw value 0x09AE[0m
+[1;31mE (1050430) main: temp: 24.54[0m
+[1;31mE (1050430) main: hum: 51.90[0m
+[1;31mE (1050430) main: soil: 0.00[0m
+[1;31mE (1050430) main: soc: 100.00[0m
+[1;31mE (1050430) main: end node network address:44351[0m
+[1;31mE (1060430) lipo: raw value 0x09E7[0m
+[1;31mE (1060430) main: temp: 24.56[0m
+[1;31mE (1060430) main: hum: 51.93[0m
+[1;31mE (1060430) main: soil: 0.00[0m
+[1;31mE (1060430) main: soc: 100.00[0m
+[1;31mE (1060430) main: end node network address:44351[0m
+[1;31mE (1070430) lipo: raw value 0x09D7[0m
+[1;31mE (1070430) main: temp: 24.55[0m
+[1;31mE (1070430) main: hum: 51.92[0m
+[1;31mE (1070430) main: soil: 0.00[0m
+[1;31mE (1070430) main: soc: 100.00[0m
+[1;31mE (1070430) main: end node network address:44351[0m
+[1;31mE (1080430) lipo: raw value 0x09AE[0m
+[1;31mE (1080430) main: temp: 24.55[0m
+[1;31mE (1080430) main: hum: 51.93[0m
+[1;31mE (1080430) main: soil: 0.00[0m
+[1;31mE (1080430) main: soc: 100.00[0m
+[1;31mE (1080430) main: end node network address:44351[0m
+[1;31mE (1090430) lipo: raw value 0x09CE[0m
+[1;31mE (1090430) main: temp: 24.56[0m
+[1;31mE (1090430) main: hum: 51.95[0m
+[1;31mE (1090430) main: soil: 0.00[0m
+[1;31mE (1090430) main: soc: 100.00[0m
+[1;31mE (1090430) main: end node network address:44351[0m
+[1;31mE (1100430) lipo: raw value 0x09E7[0m
+[1;31mE (1100430) main: temp: 24.55[0m
+[1;31mE (1100430) main: hum: 51.87[0m
+[1;31mE (1100430) main: soil: 0.00[0m
+[1;31mE (1100430) main: soc: 100.00[0m
+[1;31mE (1100430) main: end node network address:44351[0m
+[1;31mE (1110430) lipo: raw value 0x09CC[0m
+[1;31mE (1110430) main: temp: 24.54[0m
+[1;31mE (1110430) main: hum: 51.93[0m
+[1;31mE (1110430) main: soil: 0.00[0m
+[1;31mE (1110430) main: soc: 100.00[0m
+[1;31mE (1110430) main: end node network address:44351[0m
+[1;31mE (1120430) lipo: raw value 0x09B8[0m
+[1;31mE (1120430) main: temp: 24.55[0m
+[1;31mE (1120430) main: hum: 51.87[0m
+[1;31mE (1120430) main: soil: 0.00[0m
+[1;31mE (1120430) main: soc: 100.00[0m
+[1;31mE (1120430) main: end node network address:44351[0m
+[1;31mE (1130430) lipo: raw value 0x09DF[0m
+[1;31mE (1130430) main: temp: 24.56[0m
+[1;31mE (1130430) main: hum: 51.92[0m
+[1;31mE (1130430) main: soil: 0.00[0m
+[1;31mE (1130430) main: soc: 100.00[0m
+[1;31mE (1130430) main: end node network address:44351[0m
+[1;31mE (1140430) lipo: raw value 0x09BC[0m
+[1;31mE (1140430) main: temp: 24.57[0m
+[1;31mE (1140430) main: hum: 51.90[0m
+[1;31mE (1140430) main: soil: 0.00[0m
+[1;31mE (1140430) main: soc: 100.00[0m
+[1;31mE (1140430) main: end node network address:44351[0m
+[1;31mE (1150430) lipo: raw value 0x09B6[0m
+[1;31mE (1150430) main: temp: 24.58[0m
+[1;31mE (1150430) main: hum: 51.93[0m
+[1;31mE (1150430) main: soil: 0.00[0m
+[1;31mE (1150430) main: soc: 100.00[0m
+[1;31mE (1150430) main: end node network address:44351[0m
+[1;31mE (1160430) lipo: raw value 0x09D9[0m
+[1;31mE (1160430) main: temp: 24.58[0m
+[1;31mE (1160430) main: hum: 51.88[0m
+[1;31mE (1160430) main: soil: 0.00[0m
+[1;31mE (1160430) main: soc: 100.00[0m
+[1;31mE (1160430) main: end node network address:44351[0m
+[1;31mE (1170430) lipo: raw value 0x09D4[0m
+[1;31mE (1170430) main: temp: 24.57[0m
+[1;31mE (1170430) main: hum: 51.97[0m
+[1;31mE (1170430) main: soil: 0.05[0m
+[1;31mE (1170430) main: soc: 100.00[0m
+[1;31mE (1170430) main: end node network address:44351[0m
+[1;31mE (1180430) lipo: raw value 0x09B0[0m
+[1;31mE (1180430) main: temp: 24.58[0m
+[1;31mE (1180430) main: hum: 52.01[0m
+[1;31mE (1180430) main: soil: 0.00[0m
+[1;31mE (1180430) main: soc: 100.00[0m
+[1;31mE (1180430) main: end node network address:44351[0m
+[1;31mE (1190430) lipo: raw value 0x09D3[0m
+[1;31mE (1190430) main: temp: 24.58[0m
+[1;31mE (1190430) main: hum: 52.03[0m
+[1;31mE (1190430) main: soil: 0.00[0m
+[1;31mE (1190430) main: soc: 100.00[0m
+[1;31mE (1190430) main: end node network address:44351[0m
+[1;31mE (1200430) lipo: raw value 0x0A1A[0m
+[1;31mE (1200430) main: temp: 24.59[0m
+[1;31mE (1200430) main: hum: 51.99[0m
+[1;31mE (1200430) main: soil: 0.00[0m
+[1;31mE (1200430) main: soc: 100.00[0m
+[1;31mE (1200430) main: end node network address:44351[0m
+[1;31mE (1210430) lipo: raw value 0x09CC[0m
+[1;31mE (1210430) main: temp: 24.60[0m
+[1;31mE (1210430) main: hum: 51.94[0m
+[1;31mE (1210430) main: soil: 0.00[0m
+[1;31mE (1210430) main: soc: 100.00[0m
+[1;31mE (1210430) main: end node network address:44351[0m
+[1;31mE (1220430) lipo: raw value 0x09CA[0m
+[1;31mE (1220430) main: temp: 24.62[0m
+[1;31mE (1220430) main: hum: 51.88[0m
+[1;31mE (1220430) main: soil: 0.00[0m
+[1;31mE (1220430) main: soc: 100.00[0m
+[1;31mE (1220430) main: end node network address:44351[0m
+[1;31mE (1230430) lipo: raw value 0x0A04[0m
+[1;31mE (1230430) main: temp: 24.65[0m
+[1;31mE (1230430) main: hum: 51.86[0m
+[1;31mE (1230430) main: soil: 0.02[0m
+[1;31mE (1230430) main: soc: 100.00[0m
+[1;31mE (1230430) main: end node network address:44351[0m
+[1;31mE (1240430) lipo: raw value 0x09D9[0m
+[1;31mE (1240430) main: temp: 24.65[0m
+[1;31mE (1240430) main: hum: 51.77[0m
+[1;31mE (1240430) main: soil: 0.00[0m
+[1;31mE (1240430) main: soc: 100.00[0m
+[1;31mE (1240430) main: end node network address:44351[0m
+[1;31mE (1250430) lipo: raw value 0x09E7[0m
+[1;31mE (1250430) main: temp: 24.68[0m
+[1;31mE (1250430) main: hum: 51.78[0m
+[1;31mE (1250430) main: soil: 0.00[0m
+[1;31mE (1250430) main: soc: 100.00[0m
+[1;31mE (1250430) main: end node network address:44351[0m
+[1;31mE (1260430) lipo: raw value 0x09CB[0m
+[1;31mE (1260430) main: temp: 24.68[0m
+[1;31mE (1260430) main: hum: 51.76[0m
+[1;31mE (1260430) main: soil: 0.20[0m
+[1;31mE (1260430) main: soc: 100.00[0m
+[1;31mE (1260430) main: end node network address:44351[0m
+[1;31mE (1270430) lipo: raw value 0x09B5[0m
+[1;31mE (1270430) main: temp: 24.69[0m
+[1;31mE (1270430) main: hum: 51.76[0m
+[1;31mE (1270430) main: soil: 0.00[0m
+[1;31mE (1270430) main: soc: 100.00[0m
+[1;31mE (1270430) main: end node network address:44351[0m
+[1;31mE (1280430) lipo: raw value 0x09C6[0m
+[1;31mE (1280430) main: temp: 24.70[0m
+[1;31mE (1280430) main: hum: 51.76[0m
+[1;31mE (1280430) main: soil: 0.00[0m
+[1;31mE (1280430) main: soc: 100.00[0m
+[1;31mE (1280430) main: end node network address:44351[0m
+[1;31mE (1290430) lipo: raw value 0x09E9[0m
+[1;31mE (1290430) main: temp: 24.71[0m
+[1;31mE (1290430) main: hum: 51.63[0m
+[1;31mE (1290430) main: soil: 0.00[0m
+[1;31mE (1290430) main: soc: 100.00[0m
+[1;31mE (1290430) main: end node network address:44351[0m
+[1;31mE (1300430) lipo: raw value 0x09D1[0m
+[1;31mE (1300430) main: temp: 24.71[0m
+[1;31mE (1300430) main: hum: 51.63[0m
+[1;31mE (1300430) main: soil: 0.00[0m
+[1;31mE (1300430) main: soc: 100.00[0m
+[1;31mE (1300430) main: end node network address:44351[0m
+[1;31mE (1310430) lipo: raw value 0x09B9[0m
+[1;31mE (1310430) main: temp: 24.71[0m
+[1;31mE (1310430) main: hum: 51.67[0m
+[1;31mE (1310430) main: soil: 0.00[0m
+[1;31mE (1310430) main: soc: 100.00[0m
+[1;31mE (1310430) main: end node network address:44351[0m
+[1;31mE (1320430) lipo: raw value 0x09AD[0m
+[1;31mE (1320430) main: temp: 24.71[0m
+[1;31mE (1320430) main: hum: 51.60[0m
+[1;31mE (1320430) main: soil: 0.02[0m
+[1;31mE (1320430) main: soc: 100.00[0m
+[1;31mE (1320430) main: end node network address:44351[0m
+[1;31mE (1330430) lipo: raw value 0x09D1[0m
+[1;31mE (1330430) main: temp: 24.71[0m
+[1;31mE (1330430) main: hum: 51.64[0m
+[1;31mE (1330430) main: soil: 0.00[0m
+[1;31mE (1330430) main: soc: 100.00[0m
+[1;31mE (1330430) main: end node network address:44351[0m
+[1;31mE (1340430) lipo: raw value 0x09CF[0m
+[1;31mE (1340430) main: temp: 24.73[0m
+[1;31mE (1340430) main: hum: 51.65[0m
+[1;31mE (1340430) main: soil: 0.00[0m
+[1;31mE (1340430) main: soc: 100.00[0m
+[1;31mE (1340430) main: end node network address:44351[0m
+[1;31mE (1350430) lipo: raw value 0x09B7[0m
+[1;31mE (1350430) main: temp: 24.72[0m
+[1;31mE (1350430) main: hum: 51.66[0m
+[1;31mE (1350430) main: soil: 0.00[0m
+[1;31mE (1350430) main: soc: 100.00[0m
+[1;31mE (1350430) main: end node network address:44351[0m
+[1;31mE (1360430) lipo: raw value 0x09D5[0m
+[1;31mE (1360430) main: temp: 24.73[0m
+[1;31mE (1360430) main: hum: 51.64[0m
+[1;31mE (1360430) main: soil: 0.00[0m
+[1;31mE (1360430) main: soc: 100.00[0m
+[1;31mE (1360430) main: end node network address:44351[0m
+[1;31mE (1370430) lipo: raw value 0x09C0[0m
+[1;31mE (1370430) main: temp: 24.74[0m
+[1;31mE (1370430) main: hum: 51.59[0m
+[1;31mE (1370430) main: soil: 0.00[0m
+[1;31mE (1370430) main: soc: 100.00[0m
+[1;31mE (1370430) main: end node network address:44351[0m
+[1;31mE (1380430) lipo: raw value 0x09C8[0m
+[1;31mE (1380430) main: temp: 24.73[0m
+[1;31mE (1380430) main: hum: 51.58[0m
+[1;31mE (1380430) main: soil: 0.00[0m
+[1;31mE (1380430) main: soc: 100.00[0m
+[1;31mE (1380430) main: end node network address:44351[0m
+[1;31mE (1390430) lipo: raw value 0x09D8[0m
+[1;31mE (1390430) main: temp: 24.73[0m
+[1;31mE (1390430) main: hum: 51.60[0m
+[1;31mE (1390430) main: soil: 0.00[0m
+[1;31mE (1390430) main: soc: 100.00[0m
+[1;31mE (1390430) main: end node network address:44351[0m
+[1;31mE (1400430) lipo: raw value 0x09DD[0m
+[1;31mE (1400430) main: temp: 24.74[0m
+[1;31mE (1400430) main: hum: 51.53[0m
+[1;31mE (1400430) main: soil: 0.00[0m
+[1;31mE (1400430) main: soc: 100.00[0m
+[1;31mE (1400430) main: end node network address:44351[0m
+[1;31mE (1410430) lipo: raw value 0x09BD[0m
+[1;31mE (1410430) main: temp: 24.74[0m
+[1;31mE (1410430) main: hum: 51.57[0m
+[1;31mE (1410430) main: soil: 0.00[0m
+[1;31mE (1410430) main: soc: 100.00[0m
+[1;31mE (1410430) main: end node network address:44351[0m
+[1;31mE (1420430) lipo: raw value 0x09B0[0m
+[1;31mE (1420430) main: temp: 24.73[0m
+[1;31mE (1420430) main: hum: 51.63[0m
+[1;31mE (1420430) main: soil: 0.00[0m
+[1;31mE (1420430) main: soc: 100.00[0m
+[1;31mE (1420430) main: end node network address:44351[0m
+[1;31mE (1430430) lipo: raw value 0x09BF[0m
+[1;31mE (1430430) main: temp: 24.73[0m
+[1;31mE (1430430) main: hum: 51.57[0m
+[1;31mE (1430430) main: soil: 0.02[0m
+[1;31mE (1430430) main: soc: 100.00[0m
+[1;31mE (1430430) main: end node network address:44351[0m
+[1;31mE (1440430) lipo: raw value 0x09C6[0m
+[1;31mE (1440430) main: temp: 24.73[0m
+[1;31mE (1440430) main: hum: 51.61[0m
+[1;31mE (1440430) main: soil: 0.00[0m
+[1;31mE (1440430) main: soc: 100.00[0m
+[1;31mE (1440430) main: end node network address:44351[0m
+[1;31mE (1450430) lipo: raw value 0x09D0[0m
+[1;31mE (1450430) main: temp: 24.74[0m
+[1;31mE (1450430) main: hum: 51.58[0m
+[1;31mE (1450430) main: soil: 0.00[0m
+[1;31mE (1450430) main: soc: 100.00[0m
+[1;31mE (1450430) main: end node network address:44351[0m
+[1;31mE (1460430) lipo: raw value 0x09D1[0m
+[1;31mE (1460430) main: temp: 24.75[0m
+[1;31mE (1460430) main: hum: 51.62[0m
+[1;31mE (1460430) main: soil: 0.00[0m
+[1;31mE (1460430) main: soc: 100.00[0m
+[1;31mE (1460430) main: end node network address:44351[0m
+[1;31mE (1470430) lipo: raw value 0x09EA[0m
+[1;31mE (1470430) main: temp: 24.72[0m
+[1;31mE (1470430) main: hum: 51.62[0m
+[1;31mE (1470430) main: soil: 0.00[0m
+[1;31mE (1470430) main: soc: 100.00[0m
+[1;31mE (1470430) main: end node network address:44351[0m
+[1;31mE (1480430) lipo: raw value 0x09EA[0m
+[1;31mE (1480430) main: temp: 24.72[0m
+[1;31mE (1480430) main: hum: 51.80[0m
+[1;31mE (1480430) main: soil: 0.00[0m
+[1;31mE (1480430) main: soc: 100.00[0m
+[1;31mE (1480430) main: end node network address:44351[0m
+[1;31mE (1490430) lipo: raw value 0x09C8[0m
+[1;31mE (1490430) main: temp: 24.73[0m
+[1;31mE (1490430) main: hum: 51.70[0m
+[1;31mE (1490430) main: soil: 0.00[0m
+[1;31mE (1490430) main: soc: 100.00[0m
+[1;31mE (1490430) main: end node network address:44351[0m
+[1;31mE (1500430) lipo: raw value 0x09C8[0m
+[1;31mE (1500430) main: temp: 24.74[0m
+[1;31mE (1500430) main: hum: 51.68[0m
+[1;31mE (1500430) main: soil: 0.00[0m
+[1;31mE (1500430) main: soc: 100.00[0m
+[1;31mE (1500430) main: end node network address:44351[0m
+[1;31mE (1510430) lipo: raw value 0x09E9[0m
+[1;31mE (1510430) main: temp: 24.75[0m
+[1;31mE (1510430) main: hum: 51.64[0m
+[1;31mE (1510430) main: soil: 0.00[0m
+[1;31mE (1510430) main: soc: 100.00[0m
+[1;31mE (1510430) main: end node network address:44351[0m
+[1;31mE (1520430) lipo: raw value 0x09BA[0m
+[1;31mE (1520430) main: temp: 24.74[0m
+[1;31mE (1520430) main: hum: 51.67[0m
+[1;31mE (1520430) main: soil: 0.00[0m
+[1;31mE (1520430) main: soc: 100.00[0m
+[1;31mE (1520430) main: end node network address:44351[0m
+[1;31mE (1530430) lipo: raw value 0x09FC[0m
+[1;31mE (1530430) main: temp: 24.74[0m
+[1;31mE (1530430) main: hum: 51.68[0m
+[1;31mE (1530430) main: soil: 0.00[0m
+[1;31mE (1530430) main: soc: 100.00[0m
+[1;31mE (1530430) main: end node network address:44351[0m
+[1;31mE (1540430) lipo: raw value 0x09A3[0m
+[1;31mE (1540430) main: temp: 24.73[0m
+[1;31mE (1540430) main: hum: 51.59[0m
+[1;31mE (1540430) main: soil: 0.00[0m
+[1;31mE (1540430) main: soc: 100.00[0m
+[1;31mE (1540430) main: end node network address:44351[0m

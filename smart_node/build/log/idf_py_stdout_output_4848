@@ -1,0 +1,35 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_node/build/bootloader/bootloader.bin"
+Bootloader binary size 0x54c0 bytes. 0x2b40 bytes (34%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Espressif/smart_home/smart_node/main/main.c: In function 'send_custom_data':
+C:/Espressif/smart_home/smart_node/main/main.c:263:15: warning: unused variable 'err' [-Wunused-variable]
+  263 |     ezb_err_t err = ezb_zcl_custom_cluster_cmd_req(&cmd);
+      |               ^~~
+C:/Espressif/smart_home/smart_node/main/main.c: At top level:
+C:/Espressif/smart_home/smart_node/main/main.c:543:13: warning: 'esp_zigbee_zcl_core_action_handler' defined but not used [-Wunused-function]
+  543 | static void esp_zigbee_zcl_core_action_handler(ezb_zcl_core_action_callback_id_t callback_id, void *message)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/main.c:89:14: warning: 'soc' defined but not used [-Wunused-variable]
+   89 | static float soc = 0;
+      |              ^~~
+C:/Espressif/smart_home/smart_node/main/main.c:88:14: warning: 'soil_moisture' defined but not used [-Wunused-variable]
+   88 | static float soil_moisture = 0;
+      |              ^~~~~~~~~~~~~
+C:/Espressif/smart_home/smart_node/main/main.c:87:14: warning: 'humidity' defined but not used [-Wunused-variable]
+   87 | static float humidity = 0;
+      |              ^~~~~~~~
+C:/Espressif/smart_home/smart_node/main/main.c:86:14: warning: 'temperature' defined but not used [-Wunused-variable]
+   86 | static float temperature = 0;
+      |              ^~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable hello_world.elf
+FAILED: hello_world.elf 
+C:\WINDOWS\system32\cmd.exe /C "cd . && C:\Espressif\tools\riscv32-esp-elf\esp-14.2.0_20241119\riscv32-esp-elf\bin\riscv32-esp-elf-g++.exe -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32H2=0 -Wl,--Map=C:/Espressif/smart_home/smart_node/build/hello_world.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T rom.api.ld -T esp32h2.peripherals.ld -T esp32h2.rom.ld -T esp32h2.rom.api.ld -T esp32h2.rom.libgcc.ld -T esp32h2.rom.wdt.ld -T esp32h2.rom.systimer.ld -T esp32h2.rom.version.ld -T esp32h2.rom.newlib.ld -T esp32h2.rom.heap.ld -T memory.ld -T sections.ld @CMakeFiles\hello_world.elf.rsp -o hello_world.elf && cd ."
+C:/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.c.obj): in function `esp_pm_light_sleep_config':
+C:/Espressif/smart_home/smart_node/main/main.c:537:(.text.esp_pm_light_sleep_config+0x2c): undefined reference to `esp_pm_light_sleep_register_cbs'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

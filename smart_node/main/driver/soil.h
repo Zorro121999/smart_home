@@ -2,4 +2,4 @@
 #include "esp_adc/adc_cali.h"
 #include "esp_adc/adc_cali_scheme.h"
 
-void measure_moisture(adc_oneshot_unit_handle_t adc, adc_channel_t channel, float *value_moisture);
+void measure_moisture(adc_cali_handle_t adc_cal, int *raw, float *value_moisture);
