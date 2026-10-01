@@ -1,45 +1,381 @@
-[1/10] Performing build step for 'bootloader'
-[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/smart_home/smart_node/build/bootloader/bootloader.bin"
-Bootloader binary size 0x54c0 bytes. 0x2b40 bytes (34%) free.
-[2/10] No install step for 'bootloader'
-[3/10] Completed 'bootloader'
-[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/driver/bme280.c.obj
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'bme280_measure_temp':
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c:56:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
-   56 |     esp_err_t ret;
-      |               ^~~
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'bme280_measure_humidity':
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c:69:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
-   69 |     esp_err_t ret;
-      |               ^~~
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'get_temperature_calib':
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c:97:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
-   97 |     esp_err_t ret;
-      |               ^~~
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c: In function 'get_humidity_calib':
-C:/Espressif/smart_home/smart_node/main/driver/bme280.c:108:15: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
-  108 |     esp_err_t ret;
-      |               ^~~
-[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
-C:/Espressif/smart_home/smart_node/main/main.c: In function 'zigbee_send_measurement_callback':
-C:/Espressif/smart_home/smart_node/main/main.c:123:22: warning: variable 'state' set but not used [-Wunused-but-set-variable]
-  123 |     ezb_zcl_status_t state;
-      |                      ^~~~~
-C:/Espressif/smart_home/smart_node/main/main.c: In function 'esp_zb_task':
-C:/Espressif/smart_home/smart_node/main/main.c:139:22: warning: unused variable 'sensor_endpoint' [-Wunused-variable]
-  139 |     ezb_af_ep_desc_t sensor_endpoint = ezb_af_create_endpoint_desc(&sensor_endpoint_config);
-      |                      ^~~~~~~~~~~~~~~
-C:/Espressif/smart_home/smart_node/main/main.c:138:26: warning: unused variable 'sensor_device' [-Wunused-variable]
-  138 |     ezb_af_device_desc_t sensor_device = ezb_af_create_device_desc();
-      |                          ^~~~~~~~~~~~~
-[6/10] Linking C static library esp-idf\main\libmain.a
-[7/10] Generating ld/sections.ld
-[8/10] Linking CXX executable hello_world.elf
-[9/10] Generating binary image from built executable
-esptool.py v4.9.0
-Creating esp32h2 image...
-Merged 2 ELF sections
-Successfully created esp32h2 image.
-Generated C:/Espressif/smart_home/smart_node/build/hello_world.bin
-[10/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\smart_home\smart_node\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/smart_home/smart_node/build/partition_table/partition-table.bin C:/Espressif/smart_home/smart_node/build/hello_world.bin"
-hello_world.bin binary size 0x88280 bytes. Smallest app partition is 0x15e000 bytes. 0xd5d80 bytes (61%) free.
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40806906
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3058
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Aug 29 2026 17:18:01[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 0015e000[0m
+[0;32mI (71) boot:  3 zb_storage       WiFi data        01 02 0016e000 00004000[0m
+[0;32mI (78) boot:  4 zb_fct           Unknown data     01 81 00172000 00000400[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=420d0020 size=21a94h (137876) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=00031abc vaddr=40800000 size=0655ch ( 25948) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=ce178h (844152) map[0m
+[0;32mI (283) esp_image: segment 3: paddr=001061a0 vaddr=4080655c size=14528h ( 83240) load[0m
+[0;32mI (302) esp_image: segment 4: paddr=0011a6d0 vaddr=4081aa90 size=03f90h ( 16272) load[0m
+[0;32mI (312) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (313) boot: Disabling RNG early entropy source...[0m
+[0;32mI (322) cpu_start: Unicore app[0m
+[0;32mI (331) cpu_start: Pro cpu start user code[0m
+[0;32mI (331) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (331) app_init: Application information:[0m
+[0;32mI (332) app_init: Project name:     smart_gateway[0m
+[0;32mI (336) app_init: App version:      4f981cc-dirty[0m
+[0;32mI (340) app_init: Compile time:     Sep 16 2026 11:52:25[0m
+[0;32mI (345) app_init: ELF file SHA256:  68477c1dc...[0m
+[0;32mI (349) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (354) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (357) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (361) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (365) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (372) heap_init: At 408253F0 len 00057220 (348 KiB): RAM[0m
+[0;32mI (377) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (382) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (388) spi_flash: detected chip: generic[0m
+[0;32mI (391) spi_flash: flash io: dio[0m
+[0;33mW (394) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (406) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (412) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (419) coexist: coex firmware version: e727207[0m
+[0;32mI (423) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (428) main_task: Started on CPU0[0m
+[0;32mI (428) main_task: Calling app_main()[0m
+[0;32mI (448) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (448) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (458) wifi:wifi driver task: 4082e564, prio:23, stack:6656, core=0[0m
+[0;32mI (458) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (458) wifi:wifi certification version: v7.0[0m
+[0;32mI (458) wifi:config NVS flash: enabled[0m
+[0;32mI (468) wifi:config nano formatting: disabled[0m
+[0;32mI (468) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (478) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (478) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (478) wifi:Init management short buffer num: 32[0m
+[0;32mI (488) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (488) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (498) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (498) wifi:Init static rx buffer num: 10[0m
+[0;32mI (508) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (508) wifi_init: rx ba win: 6[0m
+[0;32mI (508) wifi_init: accept mbox: 6[0m
+[0;32mI (518) wifi_init: tcpip mbox: 32[0m
+[0;32mI (518) wifi_init: udp mbox: 6[0m
+[0;32mI (518) wifi_init: tcp mbox: 6[0m
+[0;32mI (528) wifi_init: tcp tx win: 5760[0m
+[0;32mI (528) wifi_init: tcp rx win: 5760[0m
+[0;32mI (528) wifi_init: tcp mss: 1440[0m
+[0;32mI (528) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (538) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (538) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (548) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;33mW (598) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (598) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (598) wifi:(agc)0x600a7128:0xd218ea18, min.avgNF:0xce->0xd2(dB), RCalCount:0x18e, min.RRssi:0xa18(-94.50)[0m
+[0;33mW (608) wifi:(TB)WDEV_PWR_TB_MCS0:19[0m
+[0;33mW (608) wifi:(TB)WDEV_PWR_TB_MCS1:19[0m
+[0;33mW (618) wifi:(TB)WDEV_PWR_TB_MCS2:19[0m
+[0;33mW (618) wifi:(TB)WDEV_PWR_TB_MCS3:19[0m
+[0;33mW (618) wifi:(TB)WDEV_PWR_TB_MCS4:19[0m
+[0;33mW (628) wifi:(TB)WDEV_PWR_TB_MCS5:19[0m
+[0;33mW (628) wifi:(TB)WDEV_PWR_TB_MCS6:18[0m
+[0;33mW (628) wifi:(TB)WDEV_PWR_TB_MCS7:18[0m
+[0;33mW (638) wifi:(TB)WDEV_PWR_TB_MCS8:17[0m
+[0;33mW (638) wifi:(TB)WDEV_PWR_TB_MCS9:15[0m
+[0;33mW (638) wifi:(TB)WDEV_PWR_TB_MCS10:15[0m
+[0;33mW (648) wifi:(TB)WDEV_PWR_TB_MCS11:15[0m
+[0;32mI (648) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (658) wifi:mode : sta (e4:b3:23:a2:81:98)[0m
+[0;32mI (658) wifi:enable tsf[0m
+[0;32mI (668) main: wifi_init_sta finished.[0m
+[0;32mI (668) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (678) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (678) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (688) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (698) wifi:Association refused temporarily time 1000, comeback time 1100 (TUs)[0m
+[0;32mI (1828) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (2828) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (2838) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy[0m
+
+[0;32mI (2838) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (2838) main: retry to connect to the AP[0m
+[0;32mI (2838) main: connect to the AP fail[0m
+[0;32mI (4288) wifi:new:<6,0>, old:<11,0>, ap:<255,255>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (4288) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (4298) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4308) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4318) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (4318) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (4328) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (4338) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4338) wifi:(trc)phytype:CBW20-SGI, snr:51, maxRate:144, highestRateIdx:0[0m
+[0;33mW (4348) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (4348) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:51, ampduState:wait operational[0m
+[0;32mI (4368) wifi:ifidx:0, rssi:-48, nf:-99, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (4378) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (4398) wifi:connected with devolo Magic, aid = 5, channel 6, BW20, bssid = b8:be:f4:80:9c:d6[0m
+[0;32mI (4398) wifi:security: WPA2-PSK, phy:11bgn, rssi:-48, cipher(pairwise:0x3, group:0x3), pmf:1, [0m
+[0;32mI (4418) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (4418) wifi:pm start, type:1, aid:0x5, trans-BSSID:b8:be:f4:80:9c:d6, BSSID[5]:0xd6, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (4428) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4428) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (4438) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (4448) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (4458) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (4478) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4478) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (4488) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (4498) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (4518) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100d69c, TALO:0x80f4beb8, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (5528) esp_netif_handlers: sta ip: 192.168.178.63, mask: 255.255.255.0, gw: 192.168.178.1[0m
+[0;32mI (5528) main: got ip:192.168.178.63[0m
+[0;32mI (5528) main: connected to ap SSID:devolo Magic password:Rotwand-2022[0m
+[0;32mI (5528) webserver: Starting server on port: '80'[0m
+[0;32mI (5538) webserver: Registering URI handlers[0m
+[0;32mI (35538) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[1;31mE (35538) main: ezb_app_signal_add_handler: ret=0x0[0m
+[1;31mE (35548) main: node signal callback[0m
+[1;31mE (35548) main: Initialize Zigbee stack[0m
+[1;31mE (35548) main: start zigbee ok[0m
+[1;31mE (35548) main: hello_zb[0m
+[1;31mE (35548) main: node signal callback[0m
+[1;31mE (35548) main: Device started up in non factory-reset mode[0m
+[1;31mE (35558) main: coordinator node network address:0[0m
+[1;31mE (35558) main: PAN ID: 0xA7F3[0m
+[1;31mE (35568) main: Device reboot[0m
+[1;31mE (36688) main: node signal callback[0m
+[1;31mE (36688) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (36688) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (36688) main:   duration = 4 seconds[0m
+[0;32mI (36688) main:   Network is OPEN for joining[0m
+[1;31mE (216738) main: node signal callback[0m
+[1;31mE (216738) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (216738) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (216738) main:   duration = 4 seconds[0m
+[0;32mI (216738) main:   Network is OPEN for joining[0m
+[0;32mI (1843) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (2843) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (2853) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy[0m
+
+[0;32mI (2853) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (2853) main: retry to connect to the AP[0m
+[0;32mI (2853) main: connect to the AP fail[0m
+[0;32mI (5263) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (5263) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (5273) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5283) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (5293) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (5293) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (5293) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (5303) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (5303) wifi:(trc)phytype:CBW20-SGI, snr:22, maxRate:144, highestRateIdx:0[0m
+[0;33mW (5313) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (5323) wifi:(trc)band:2G, rate(L-MCS4, rateIdx:4), ampdu(rate:L-MCS4, schedIdx(4, stop:8)), snr:22, ampduState:wait operational[0m
+[0;32mI (5333) wifi:ifidx:0, rssi:-75, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (5343) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (5373) wifi:connected with devolo Magic, aid = 2, channel 11, BW20, bssid = b8:be:f4:81:30:77[0m
+[0;32mI (5373) wifi:security: WPA2-PSK, phy:11bgn, rssi:-75, cipher(pairwise:0x3, group:0x3), pmf:1, [0m
+[0;32mI (5393) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (5393) wifi:pm start, type:1, aid:0x2, trans-BSSID:b8:be:f4:81:30:77, BSSID[5]:0x77, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (5403) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (5403) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (5413) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (5423) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (5433) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (5453) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (5453) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5463) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5473) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (5493) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1007730, TALO:0x81f4beb8, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (6543) esp_netif_handlers: sta ip: 192.168.178.63, mask: 255.255.255.0, gw: 192.168.178.1[0m
+[0;32mI (6543) main: got ip:192.168.178.63[0m
+[0;32mI (6543) main: connected to ap SSID:devolo Magic password:Rotwand-2022[0m
+[0;32mI (6543) webserver: Starting server on port: '80'[0m
+[0;32mI (6553) webserver: Registering URI handlers[0m
+[0;32mI (36553) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[1;31mE (36553) main: ezb_app_signal_add_handler: ret=0x0[0m
+[1;31mE (36563) main: node signal callback[0m
+[1;31mE (36563) main: Initialize Zigbee stack[0m
+[1;31mE (36563) main: start zigbee ok[0m
+[1;31mE (36563) main: hello_zb[0m
+[1;31mE (36563) main: node signal callback[0m
+[1;31mE (36563) main: Device started up in non factory-reset mode[0m
+[1;31mE (36573) main: coordinator node network address:0[0m
+[1;31mE (36573) main: PAN ID: 0xA7F3[0m
+[1;31mE (36583) main: Device reboot[0m
+[1;31mE (37743) main: node signal callback[0m
+[1;31mE (37743) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (37743) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (37743) main:   duration = 4 seconds[0m
+[0;32mI (37743) main:   Network is OPEN for joining[0m
+[1;31mE (79683) main: node signal callback[0m
+[0;32mI (79683) main: 0x40839070   07 00 f0 11 69 fe ff db  51 10 3f ad 00 00        |....i...Q.?...|[0m
+[0;32mI (79683) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (79683) main:   short_addr  = 0x1051[0m
+[0;32mI (79683) main:   ieee_addr   = 0xDBFFFE6911F00007[0m
+[0;32mI (79693) main:   status      = 0x3F[0m
+[0;32mI (79693) main:   tc_action   = 0xAD[0m
+[0;32mI (79703) main:   parent      = 0x0000[0m
+[0;33mW (79703) main:   unknown update status: 0x3F[0m
+[1;31mE (79713) main: node signal callback[0m
+[1;31mE (79713) main: new node joined[0m
+[1;31mE (79843) main: set node report config[0m
+[1;31mE (79843) main: end node device ID:1[0m
+[1;31mE (79843) main: end node network address:44351[0m
+[1;31mE (79843) main: end node network address ieee:1175962870251852272[0m
+[1;31mE (79853) main: node index:0[0m
+[1;31mE (79853) main: ep id:1[0m
+[1;31mE (79853) main: app profile id:260[0m
+[1;31mE (89003) main: node signal callback[0m
+[0;32mI (89003) main: 0x40839070   07 00 f0 11 69 fe ff db  51 10 3f ad 00 00        |....i...Q.?...|[0m
+[0;32mI (89003) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (89003) main:   short_addr  = 0x1051[0m
+[0;32mI (89013) main:   ieee_addr   = 0xDBFFFE6911F00007[0m
+[0;32mI (89013) main:   status      = 0x3F[0m
+[0;32mI (89013) main:   tc_action   = 0xAD[0m
+[0;32mI (89023) main:   parent      = 0x0000[0m
+[0;33mW (89023) main:   unknown update status: 0x3F[0m
+[1;31mE (89033) main: node signal callback[0m
+[1;31mE (89033) main: new node joined[0m
+[1;31mE (206123) main: node signal callback[0m
+[0;32mI (206123) main: 0x40839110   07 00 0f 14 69 fe ff db  51 10 ee e7 01 00        |....i...Q.....|[0m
+[0;32mI (206123) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (206123) main:   short_addr  = 0x1051[0m
+[0;32mI (206133) main:   ieee_addr   = 0xDBFFFE69140F0007[0m
+[0;32mI (206133) main:   status      = 0xEE[0m
+[0;32mI (206143) main:   tc_action   = 0xE7[0m
+[0;32mI (206143) main:   parent      = 0x0001[0m
+[0;33mW (206143) main:   unknown update status: 0xEE[0m
+[1;31mE (206453) main: node signal callback[0m
+[1;31mE (206453) main: new node joined[0m
+[1;31mE (206663) main: set node report config[0m
+[1;31mE (206663) main: end node device ID:1[0m
+[1;31mE (206663) main: end node network address:59374[0m
+[1;31mE (206663) main: end node network address ieee:1175962870251852815[0m
+[1;31mE (206673) main: node index:1[0m
+[1;31mE (206673) main: ep id:1[0m
+[1;31mE (206673) main: app profile id:260[0m
+[1;31mE (207713) main: node signal callback[0m
+[0;32mI (207713) main: 0x4083907c   08 00 0f 14 69 fe ff db  51 10 ee e7              |....i...Q...|[0m
+[0;32mI (207713) main: EZB_ZDO_SIGNAL_DEVICE_AUTHORIZED[0m
+[0;32mI (207713) main:   short_addr = 0x1051[0m
+[0;32mI (207723) main:   ieee_addr  = 0xDBFFFE69140F0008[0m
+[0;32mI (207723) main:   type       = 0xEE[0m
+[0;32mI (207723) main:   status     = 0xE7[0m
+[0;33mW (207733) main:   unknown authorization status[0m
+[1;31mE (207923) main: node signal callback[0m
+[1;31mE (207923) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (207923) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (207923) main:   duration = 4 seconds[0m
+[0;32mI (207933) main:   Network is OPEN for joining[0m
+[1;31mE (213443) main: node signal callback[0m
+[0;32mI (213443) main: 0x40839070   07 00 0f 14 69 fe ff db  51 10 ee e7 00 00        |....i...Q.....|[0m
+[0;32mI (213443) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (213443) main:   short_addr  = 0x1051[0m
+[0;32mI (213453) main:   ieee_addr   = 0xDBFFFE69140F0007[0m
+[0;32mI (213453) main:   status      = 0xEE[0m
+[0;32mI (213453) main:   tc_action   = 0xE7[0m
+[0;32mI (213463) main:   parent      = 0x0000[0m
+[0;33mW (213463) main:   unknown update status: 0xEE[0m
+[1;31mE (213473) main: node signal callback[0m
+[1;31mE (213473) main: new node joined[0m
+[1;31mE (231443) main: node signal callback[0m
+[0;32mI (231443) main: 0x40839070   07 00 0f 14 69 fe ff db  51 10 ee e7 00 00        |....i...Q.....|[0m
+[0;32mI (231443) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (231443) main:   short_addr  = 0x1051[0m
+[0;32mI (231453) main:   ieee_addr   = 0xDBFFFE69140F0007[0m
+[0;32mI (231453) main:   status      = 0xEE[0m
+[0;32mI (231453) main:   tc_action   = 0xE7[0m
+[0;32mI (231463) main:   parent      = 0x0000[0m
+[0;33mW (231463) main:   unknown update status: 0xEE[0m
+[1;31mE (231473) main: node signal callback[0m
+[1;31mE (231473) main: new node joined[0m
+[1;31mE (387453) main: node signal callback[0m
+[1;31mE (387453) main:   ieee_addr  = 0xE4B323FFFEA28198[0m
+[0;32mI (387453) main: EZB_NWK_SIGNAL_PERMIT_JOIN_STATUS[0m
+[0;32mI (387453) main:   duration = 4 seconds[0m
+[0;32mI (387453) main:   Network is OPEN for joining[0m
+[1;31mE (799763) main: node signal callback[0m
+[0;32mI (799763) main: 0x40839070   07 00 0f 14 69 fe ff db  51 10 ee e7 00 00        |....i...Q.....|[0m
+[0;32mI (799763) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (799763) main:   short_addr  = 0x1051[0m
+[0;32mI (799773) main:   ieee_addr   = 0xDBFFFE69140F0007[0m
+[0;32mI (799773) main:   status      = 0xEE[0m
+[0;32mI (799773) main:   tc_action   = 0xE7[0m
+[0;32mI (799783) main:   parent      = 0x0000[0m
+[0;33mW (799783) main:   unknown update status: 0xEE[0m
+[1;31mE (799793) main: node signal callback[0m
+[1;31mE (799793) main: new node joined[0m
+[1;31mE (825393) main: node signal callback[0m
+[0;32mI (825393) main: 0x40839070   07 00 0f 14 69 fe ff db  51 10 ee e7 00 00        |....i...Q.....|[0m
+[0;32mI (825393) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (825393) main:   short_addr  = 0x1051[0m
+[0;32mI (825403) main:   ieee_addr   = 0xDBFFFE69140F0007[0m
+[0;32mI (825403) main:   status      = 0xEE[0m
+[0;32mI (825403) main:   tc_action   = 0xE7[0m
+[0;32mI (825413) main:   parent      = 0x0000[0m
+[0;33mW (825413) main:   unknown update status: 0xEE[0m
+[1;31mE (825423) main: node signal callback[0m
+[1;31mE (825423) main: new node joined[0m
+[1;31mE (1027633) main: node signal callback[0m
+[0;32mI (1027633) main: 0x40839070   07 00 0f 14 69 fe ff db  51 10 ee e7 00 00        |....i...Q.....|[0m
+[0;32mI (1027633) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (1027633) main:   short_addr  = 0x1051[0m
+[0;32mI (1027643) main:   ieee_addr   = 0xDBFFFE69140F0007[0m
+[0;32mI (1027643) main:   status      = 0xEE[0m
+[0;32mI (1027643) main:   tc_action   = 0xE7[0m
+[0;32mI (1027653) main:   parent      = 0x0000[0m
+[0;33mW (1027653) main:   unknown update status: 0xEE[0m
+[1;31mE (1027663) main: node signal callback[0m
+[1;31mE (1027663) main: new node joined[0m
+[1;31mE (1040823) main: node signal callback[0m
+[0;32mI (1040823) main: 0x40839070   07 00 0f 14 69 fe ff db  51 10 ee e7 00 00        |....i...Q.....|[0m
+[0;32mI (1040823) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (1040823) main:   short_addr  = 0x1051[0m
+[0;32mI (1040833) main:   ieee_addr   = 0xDBFFFE69140F0007[0m
+[0;32mI (1040833) main:   status      = 0xEE[0m
+[0;32mI (1040833) main:   tc_action   = 0xE7[0m
+[0;32mI (1040843) main:   parent      = 0x0000[0m
+[0;33mW (1040843) main:   unknown update status: 0xEE[0m
+[1;31mE (1040883) main: node signal callback[0m
+[1;31mE (1040883) main: new node joined[0m
+[1;31mE (2485933) main: node signal callback[0m
+[0;32mI (2485933) main: 0x40839070   07 00 f0 11 69 fe ff db  51 10 3f ad 00 00        |....i...Q.?...|[0m
+[0;32mI (2485933) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (2485933) main:   short_addr  = 0x1051[0m
+[0;32mI (2485943) main:   ieee_addr   = 0xDBFFFE6911F00007[0m
+[0;32mI (2485943) main:   status      = 0x3F[0m
+[0;32mI (2485943) main:   tc_action   = 0xAD[0m
+[0;32mI (2485953) main:   parent      = 0x0000[0m
+[0;33mW (2485953) main:   unknown update status: 0x3F[0m
+[1;31mE (2485963) main: node signal callback[0m
+[1;31mE (2485963) main: new node joined[0m
+[1;31mE (2497403) main: node signal callback[0m
+[0;32mI (2497403) main: 0x40839070   07 00 f0 11 69 fe ff db  51 10 3f ad 00 00        |....i...Q.?...|[0m
+[0;32mI (2497403) main: EZB_ZDO_SIGNAL_DEVICE_UPDATE[0m
+[0;32mI (2497403) main:   short_addr  = 0x1051[0m
+[0;32mI (2497413) main:   ieee_addr   = 0xDBFFFE6911F00007[0m
+[0;32mI (2497413) main:   status      = 0x3F[0m
+[0;32mI (2497413) main:   tc_action   = 0xAD[0m
+[0;32mI (2497423) main:   parent      = 0x0000[0m
+[0;33mW (2497423) main:   unknown update status: 0x3F[0m
+[1;31mE (2497433) main: node signal callback[0m
+[1;31mE (2497433) main: new node joined[0m

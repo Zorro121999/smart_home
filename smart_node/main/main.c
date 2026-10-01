@@ -30,6 +30,7 @@
 #include "esp_zigbee.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
+#include "esp_rom_sys.h"
 
 
 #define PIN_NUM_MISO 0
@@ -55,13 +56,15 @@ bool channel2_calibrated = false;
 esp_err_t esp_pm_entry_light_sleep_cb(int64_t sleep_time_us, void *arg)
 {
     ESP_EARLY_LOGI(TAG, "Enter Light Sleep");
+    //gpio_set_level(BLINK_GPIO,0);
     return ESP_OK;
 }
 
 esp_err_t esp_pm_exit_light_sleep_cb(int64_t sleep_time_us, void *arg)
 {
     ESP_EARLY_LOGI(TAG, "Exit Light Sleep");
-    gpio_set_level(BLINK_GPIO,1);
+    //xTaskNotifyGive(sensor_task_handle);
+    //gpio_set_level(BLINK_GPIO,1);
     return ESP_OK;
 }
 
@@ -120,8 +123,8 @@ esp_zigbee_config_t zigbee_config = {
     .install_code_policy = false,
 
     .zed_config = {
-        .ed_timeout = EZB_NWK_ED_TIMEOUT_2MIN,
-        .keep_alive = 10000,
+        .ed_timeout = EZB_NWK_ED_TIMEOUT_4MIN,
+        .keep_alive = 100000,
     },
 },
 .platform_config = {
@@ -341,12 +344,15 @@ void zigbee_send_measurement_callback(void *ctx) {
     // ezb_err_t ret = ezb_zcl_report_attr_cmd_req(&report_cmd);
     // ESP_LOGI(TAG, "manual report ret = 0x%04X", ret);
     // esp_zigbee_lock_release();
-
+    static int counter_zb = 0;
     send_custom_data(sensor_data, ATTR_TEMPERATURE_ID);
     send_custom_data(sensor_data, ATTR_HUMIDITY_ID);
     send_custom_data(sensor_data, ATTR_SOIL_MOISTURE_ID);
     send_custom_data(sensor_data, ATTR_SOC_ID);
-    //esp_light_sleep_start();
+    // vTaskDelay(pdMS_TO_TICKS(3000));
+    // esp_err_t ret;
+    
+    //xTaskNotifyGive(sensor_task_handle);
 }
 
 static void zigbee_zcl_callback(ezb_zcl_core_action_callback_id_t callback_id, void *message) {
@@ -476,6 +482,11 @@ void esp_zb_task(void *arg) {
     
 
     ESP_ERROR_CHECK(ezb_bdb_set_primary_channel_set(channel_mask));
+    ezb_nwk_set_rx_on_when_idle(false);
+
+    bool rx_on = ezb_nwk_get_rx_on_when_idle();
+
+    ESP_LOGI(TAG, "rx_on_when_idle = %d", rx_on);
     ezb_app_signal_add_handler(zigbee_signal_callback);
     ezb_zcl_core_action_handler_register(zigbee_zcl_callback);
   
@@ -486,13 +497,18 @@ void esp_zb_task(void *arg) {
         esp_restart();    
     }
     ESP_LOGE(TAG, "hello_zb");
+    //vTaskDelay(pdMS_TO_TICKS(100000));
 
     esp_zigbee_launch_mainloop();
+    esp_zigbee_deinit();
+
+    vTaskDelete(NULL);
 }
 
 void meas_task(void *arg) { 
     while(1) {
         ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+        gpio_set_level(BLINK_GPIO, !gpio_get_level(BLINK_GPIO));
         int value_raw;
         adc_oneshot_read(adc1_handle, ADC_CHANNEL_1, &value_raw);
         if(channel1_calibrated) {
@@ -508,6 +524,9 @@ void meas_task(void *arg) {
         ESP_LOGE(TAG, "hum: %.2f",data.humidity);
         ESP_LOGE(TAG, "soil: %.2f",data.moisture);
         ESP_LOGE(TAG, "soc: %.2f",data.soc);
+        // if(data.soc == 0.0) {
+        //     esp_light_sleep_start();
+        // }
         ret = esp_zigbee_task_queue_post(
         &zigbee_send_measurement_callback,
         &data); 
@@ -516,6 +535,10 @@ void meas_task(void *arg) {
 
 void timer_callback(TimerHandle_t timer){
     xTaskNotifyGive(sensor_task_handle);
+}
+
+void sleep_timer_callback(TimerHandle_t timer){
+    esp_deep_sleep_start();
 }
 
 bool zigbee_signal_callback(const ezb_app_signal_t *app_signal) {
@@ -562,6 +585,8 @@ bool zigbee_signal_callback(const ezb_app_signal_t *app_signal) {
                 ezb_bdb_start_top_level_commissioning(EZB_BDB_MODE_NETWORK_STEERING);
             } else {
                 ESP_LOGI(TAG, "Device reboot");
+                //ESP_ERROR_CHECK(esp_pm_light_sleep_config());
+                //xTaskNotifyGive(sensor_task_handle);
             }
         } else {
             ESP_LOGW(TAG, "%s failed with status(0x%02x), please retry", ezb_app_signal_to_string(signal_type), status);
@@ -641,10 +666,18 @@ void app_main(void)
 
     
     timer = xTimerCreate("sensor_timer",
-        pdMS_TO_TICKS(10000), // 10 Sekunden
+        pdMS_TO_TICKS(3000), // 30 Sekunden
         pdTRUE,                // Auto-reload
         NULL,
         timer_callback
+    );
+    xTimerStart(timer, pdMS_TO_TICKS(1000));
+
+    timer = xTimerCreate("sleep_timer",
+        pdMS_TO_TICKS(5000), // 30 Sekunden
+        pdTRUE,                // Auto-reload
+        NULL,
+        sleep_timer_callback
     );
     xTimerStart(timer, pdMS_TO_TICKS(1000));
 
@@ -656,9 +689,8 @@ void app_main(void)
         .intr_type = GPIO_INTR_DISABLE,
     };
     esp_err_t ret = gpio_config(&io_conf);
-    //gpio_set_level(BLINK_GPIO,1);
-    ESP_ERROR_CHECK(esp_pm_light_sleep_config());
-    //ESP_ERROR_CHECK(esp_sleep_enable_timer_wakeup(10000000));
+    gpio_set_level(BLINK_GPIO,1);
+    ESP_ERROR_CHECK(esp_sleep_enable_timer_wakeup(30000000));
 
     xTaskCreate(esp_zb_task, "zigbee_task", 4096, NULL, 10, NULL);
     xTaskCreate(meas_task, "measurement_task", 4096, NULL, 5, &sensor_task_handle);

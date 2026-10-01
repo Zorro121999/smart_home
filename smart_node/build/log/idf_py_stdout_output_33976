@@ -1,0 +1,21 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0x6 (DOWNLOAD(USB/UART0))
+Saved PC:0x400010e2
+waiting for download
+[0;32mI (791) main: Device started up in non factory-reset mode[0m
+[0;32mI (791) main: Device reboot[0m
+[1;31mE (791) lipo: voltage: 2322[0m
+[1;31mE (791) main: temp: 0.00[0m
+[1;31mE (791) main: hum: 1.92[0m
+[1;31mE (791) main: soil: 0.00[0m
+[1;31mE (791) main: soc: 0.00[0m
+[1;31mE (801) main: end node network address:44351[0m
+[0;32mI (802) main: Device started up in non factory-reset mode[0m
+[0;32mI (802) main: Device reboot[0m
+[1;31mE (812) lipo: voltage: 2319[0m
+[1;31mE (812) main: temp: 0.00[0m
+[1;31mE (812) main: hum: 1.92[0m
+[1;31mE (812) main: soil: 0.00[0m
+[1;31mE (812) main: soc: 0.00[0m
+[1;31mE (812) main: end node network address:44351[0m

@@ -1,0 +1,12 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40806906: check_trans_valid at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_driver_spi/src/gpspi/spi_master.c:1073
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e91c70a36ac20ab96de7401d8ab49503d1d8d8febd3b2502f3bc8d40ae2777f6[0m
+[1;31m--- Error: ClearCommError failed (PermissionError(13, 'Das Gerät erkennt den Befehl nicht.', None, 22))[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[1;31m--- Error: ClearCommError failed (PermissionError(13, 'Das Gerät erkennt den Befehl nicht.', None, 22))[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

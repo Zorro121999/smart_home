@@ -1,0 +1,6 @@
+esptool.py v4.9.0
+Serial port COM6
+
+A fatal error occurred: Could not open COM6, the port is busy or doesn't exist.
+(Cannot configure port, something went wrong. Original message: PermissionError(13, 'Ein an das System angeschlossenes Gert funktioniert nicht.', None, 31))
+

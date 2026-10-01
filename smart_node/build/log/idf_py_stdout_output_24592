@@ -1,0 +1,33 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0x6 (DOWNLOAD(USB/UART0))
+Saved PC:0x400010e2
+waiting for download
+[0;32mI (961) main: Device started up in non factory-reset mode[0m
+[0;32mI (961) main: Device reboot[0m
+[1;31mE (961) lipo: voltage: 2325[0m
+[1;31mE (961) main: temp: 0.00[0m
+[1;31mE (961) main: hum: 1.92[0m
+[1;31mE (961) main: soil: 0.00[0m
+[1;31mE (961) main: soc: 0.00[0m
+[1;31mE (961) main: end node network address:44351[0m
+[1;31mE (30971) lipo: voltage: 2325[0m
+[1;31mE (30971) main: temp: 0.00[0m
+[1;31mE (30971) main: hum: 1.92[0m
+[1;31mE (30971) main: soil: 0.00[0m
+[1;31mE (30971) main: soc: 0.00[0m
+[1;31mE (30971) main: end node network address:44351[0m
+[0;32mI (791) main: Device started up in non factory-reset mode[0m
+[0;32mI (791) main: Device reboot[0m
+[1;31mE (791) lipo: voltage: 2317[0m
+[1;31mE (801) main: temp: 0.00[0m
+[1;31mE (801) main: hum: 1.92[0m
+[1;31mE (801) main: soil: 0.00[0m
+[1;31mE (801) main: soc: 0.00[0m
+[1;31mE (801) main: end node network address:44351[0m
+[1;31mE (30793) lipo: voltage: 2323[0m
+[1;31mE (30793) main: temp: 0.00[0m
+[1;31mE (30793) main: hum: 1.92[0m
+[1;31mE (30793) main: soil: 0.00[0m
+[1;31mE (30793) main: soc: 0.00[0m
+[1;31mE (30793) main: end node network address:44351[0m

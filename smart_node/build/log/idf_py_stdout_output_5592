@@ -1,0 +1,24 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0x16 (DOWNLOAD(USB/UART0))
+Saved PC:0x400010e2
+waiting for download
+[0;32mI (571) main: rx_on_when_idle = 0[0m
+[0;32mI (581) main: Initialize Zigbee stack[0m
+[1;31mE (581) main: hello_zb[0m
+[0;32mI (811) main: Device started up in non factory-reset mode[0m
+[0;32mI (811) main: Device reboot[0m
+[1;31mE (821) lipo: voltage: 2325[0m
+[1;31mE (821) main: temp: 0.00[0m
+[1;31mE (821) main: hum: 1.92[0m
+[1;31mE (821) main: soil: 0.00[0m
+[1;31mE (821) main: soc: 0.00[0m
+[1;31mE (821) main: end node network address:44351[0m
+[0;32mI (823) main: Device started up in non factory-reset mode[0m
+[0;32mI (823) main: Device reboot[0m
+[1;31mE (823) lipo: voltage: 2332[0m
+[1;31mE (823) main: temp: 0.00[0m
+[1;31mE (823) main: hum: 1.92[0m
+[1;31mE (823) main: soil: 0.00[0m
+[1;31mE (823) main: soc: 0.00[0m
+[1;31mE (833) main: end node network address:44351[0m

@@ -1,0 +1,69 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x4080ad62: vPortTLSPointersDelCb at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:700
+[0m
+[0;33m--- 0x400117f6: spi_slave_rom_init_hw in ROM
+--- 0x50000000: esp_wake_stub_entry at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/sleep_modes.c:336
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_node\\build\\hello_world.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32h2 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpbzsgs0bx"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32h2 C:\\Users\\user\\AppData\\Local\\Temp\\tmpbzsgs0bx': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x4080ad62: vPortTLSPointersDelCb at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:700
+[0m
+[0;33m--- 0x400117f6: spi_slave_rom_init_hw in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_node\\build\\hello_world.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32h2 "C:\\Users\\user\\AppData\\Local\\Temp\\tmp42fk_6k5"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32h2 C:\\Users\\user\\AppData\\Local\\Temp\\tmp42fk_6k5': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x4080ad62: vPortTLSPointersDelCb at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:700
+[0m
+[0;33m--- 0x400117f6: spi_slave_rom_init_hw in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_node\\build\\hello_world.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32h2 "C:\\Users\\user\\AppData\\Local\\Temp\\tmprsnnqbm1"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32h2 C:\\Users\\user\\AppData\\Local\\Temp\\tmprsnnqbm1': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x4080ad62: vPortTLSPointersDelCb at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:700
+[0m
+[0;33m--- 0x400117f6: spi_slave_rom_init_hw in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Espressif\\smart_home\\smart_node\\build\\hello_world.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32h2 "C:\\Users\\user\\AppData\\Local\\Temp\\tmpq3sr_0rh"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b"\r\nwarning: could not convert 'main' from the host encoding (CP1252) to UTF-32.\r\nThis normally should not happen, please file a bug report.\r\nerror starting child process 'C:\\Espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32h2 C:\\Users\\user\\AppData\\Local\\Temp\\tmpq3sr_0rh': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m--- 0x40003318: check_condCOUNTER.3706 in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x408008ac: panic_abort at C:/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/panic.c:468
+--- 0x4080ad62: vPortTLSPointersDelCb at C:/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:700
+[0m
+[0;33m--- 0x400117f6: spi_slave_rom_init_hw in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at C:/Espressif/frameworks/esp-idf-v5.4.1/components/riscv/vectors_intc.S:54
+[0m

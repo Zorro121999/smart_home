@@ -1,0 +1,27 @@
+ESP-ROM:esp32h2-eco5-20240613
+Build:Jun 13 2024
+rst:0x15 (USB_UART_HPSYS),boot:0x16 (DOWNLOAD(USB/UART0))
+Saved PC:0x400010e4
+waiting for download
+[0;33mW(911) ESP-ZIGBEE: [zdo_app_join.c] Comm failed in Rejoin (0x2c3)[0m
+[0;33mW (911) main: BDB Device Reboot failed with status(0x03), please retry[0m
+[0;32mI (1121) main: Device started up in non factory-reset mode[0m
+[0;32mI (1121) main: Device reboot[0m
+[1;31mE (1131) lipo: voltage: 2321[0m
+[1;31mE (1131) main: temp: 0.00[0m
+[1;31mE (1131) main: hum: 1.92[0m
+[1;31mE (1131) main: soil: 0.00[0m
+[1;31mE (1131) main: soc: 0.00[0m
+[1;31mE (1131) main: end node network address:44351[0m
+[1;31mE (31131) lipo: voltage: 2322[0m
+[1;31mE (31131) main: temp: 0.00[0m
+[1;31mE (31131) main: hum: 1.92[0m
+[1;31mE (31131) main: soil: 0.00[0m
+[1;31mE (31131) main: soc: 0.00[0m
+[1;31mE (31131) main: end node network address:44351[0m
+[1;31mE (61171) lipo: voltage: 2322[0m
+[1;31mE (61171) main: temp: 0.00[0m
+[1;31mE (61171) main: hum: 1.92[0m
+[1;31mE (61171) main: soil: 0.00[0m
+[1;31mE (61171) main: soc: 0.00[0m
+[1;31mE (61171) main: end node network address:44351[0m
