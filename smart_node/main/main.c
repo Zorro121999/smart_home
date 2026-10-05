@@ -666,7 +666,7 @@ void app_main(void)
 
     
     timer = xTimerCreate("sensor_timer",
-        pdMS_TO_TICKS(3000), // 30 Sekunden
+        pdMS_TO_TICKS(2000), // 30 Sekunden
         pdTRUE,                // Auto-reload
         NULL,
         timer_callback
@@ -674,7 +674,7 @@ void app_main(void)
     xTimerStart(timer, pdMS_TO_TICKS(1000));
 
     timer = xTimerCreate("sleep_timer",
-        pdMS_TO_TICKS(5000), // 30 Sekunden
+        pdMS_TO_TICKS(3000), // 30 Sekunden
         pdTRUE,                // Auto-reload
         NULL,
         sleep_timer_callback
